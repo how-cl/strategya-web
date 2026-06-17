@@ -1,0 +1,118 @@
+:root {
+  --bg: #0a0e17;
+  --panel: #121826;
+  --panel-2: #0f1521;
+  --border: #1f2738;
+  --border-soft: #18202e;
+  --text: #e7eaf2;
+  --muted: #8b93a7;
+  --muted-2: #5d667d;
+  --green: #3fb950;
+  --green-soft: rgba(63, 185, 80, .14);
+  --red: #f0563f;
+  --red-soft: rgba(240, 86, 63, .14);
+  --gold: #c9a84c;
+  --amber: #e3a008;
+
+  --c-btc: #f7931a;
+  --c-eth: #9b7be0;
+  --c-sol: #19d3c5;
+  --c-sui: #4cc38a;
+  --c-gold: #c9a84c;
+  --c-cash: #6b7280;
+
+  --radius: 14px;
+  --gap: 16px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: radial-gradient(1200px 600px at 70% -10%, #131b2e 0%, var(--bg) 55%);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+  padding: 28px 20px 48px;
+}
+
+#app { max-width: 1180px; margin: 0 auto; }
+.loading { color: var(--muted); padding: 80px 0; text-align: center; }
+
+/* ── Header ─────────────────────────────────────────── */
+.head { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; margin-bottom: 26px; }
+.head .title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.head h1 { font-size: 27px; font-weight: 800; letter-spacing: -.4px; }
+.head .subtitle { color: var(--muted); font-size: 14px; margin-top: 5px; }
+.badge-sim {
+  background: rgba(227, 160, 8, .12); color: var(--amber);
+  border: 1px solid rgba(227, 160, 8, .35);
+  font-size: 12px; font-weight: 600; padding: 5px 11px; border-radius: 999px; white-space: nowrap;
+}
+.head .meta { color: var(--muted-2); font-size: 13px; text-align: right; line-height: 1.7; }
+.head .meta b { color: var(--muted); font-weight: 600; }
+
+/* ── KPI cards ──────────────────────────────────────── */
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--gap); margin-bottom: 28px; }
+.kpi {
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 18px 16px;
+}
+.kpi .lbl { color: var(--muted); font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 7px; }
+.kpi .lbl .ic { opacity: .8; font-size: 14px; }
+.kpi .val { font-size: 30px; font-weight: 800; letter-spacing: -.5px; margin-top: 10px; }
+.kpi .sub { color: var(--muted-2); font-size: 12.5px; margin-top: 6px; }
+.pos { color: var(--green); }
+.neg { color: var(--red); }
+.neu { color: var(--text); }
+
+/* ── Section ────────────────────────────────────────── */
+.section { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 24px; }
+.section .s-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
+.section h2 { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.section .s-note { color: var(--muted-2); font-size: 13px; }
+
+/* ── Monthly heatmap ────────────────────────────────── */
+.heat { width: 100%; border-collapse: separate; border-spacing: 4px; font-size: 13px; }
+.heat th { color: var(--muted); font-weight: 600; font-size: 12px; padding: 4px 0; text-align: center; }
+.heat th.yr, .heat td.yr { text-align: left; color: var(--muted); font-weight: 700; width: 52px; }
+.heat td { text-align: center; padding: 9px 2px; border-radius: 7px; font-weight: 600; font-variant-numeric: tabular-nums; color: #d7dbe6; }
+.heat td.tot { background: transparent; font-weight: 800; text-align: right; padding-right: 6px; }
+.heat td.tot .ratio { display: block; color: var(--muted-2); font-size: 11px; font-weight: 600; }
+.heat th.tot { text-align: right; padding-right: 6px; }
+
+/* ── Trades ─────────────────────────────────────────── */
+.trades { display: flex; flex-direction: column; gap: 8px; max-height: 460px; overflow-y: auto; padding-right: 4px; }
+.trade {
+  display: flex; justify-content: space-between; align-items: center;
+  background: var(--panel-2); border: 1px solid var(--border-soft);
+  border-left: 4px solid var(--c-cash); border-radius: 10px; padding: 13px 16px;
+}
+.trade .t-left { display: flex; flex-direction: column; gap: 3px; }
+.trade .t-asset { font-weight: 700; font-size: 14.5px; display: flex; align-items: center; gap: 9px; }
+.trade .t-dates { color: var(--muted-2); font-size: 12.5px; font-variant-numeric: tabular-nums; }
+.trade .t-ret { font-size: 17px; font-weight: 800; font-variant-numeric: tabular-nums; }
+.badge-open { background: rgba(63, 185, 80, .14); color: var(--green); border: 1px solid rgba(63,185,80,.3); font-size: 10.5px; font-weight: 700; letter-spacing: .4px; padding: 2px 8px; border-radius: 999px; }
+
+/* ── Footer ─────────────────────────────────────────── */
+.foot { color: var(--muted-2); font-size: 12.5px; text-align: center; margin-top: 8px; line-height: 1.7; }
+.foot .dot { margin: 0 8px; opacity: .5; }
+
+/* ── Scrollbar ──────────────────────────────────────── */
+.trades::-webkit-scrollbar { width: 8px; }
+.trades::-webkit-scrollbar-thumb { background: #232c3e; border-radius: 8px; }
+.trades::-webkit-scrollbar-track { background: transparent; }
+
+/* ── Responsive ─────────────────────────────────────── */
+@media (max-width: 860px) {
+  .kpis { grid-template-columns: repeat(2, 1fr); }
+  .head .meta { text-align: left; }
+  .heat { font-size: 11.5px; }
+  .heat td { padding: 7px 1px; }
+}
+@media (max-width: 480px) {
+  .kpis { grid-template-columns: 1fr 1fr; }
+  .kpi .val { font-size: 24px; }
+  body { padding: 18px 12px 36px; }
+}
