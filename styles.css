@@ -95,6 +95,31 @@ body {
 .trade .t-ret { font-size: 17px; font-weight: 800; font-variant-numeric: tabular-nums; }
 .badge-open { background: rgba(63, 185, 80, .14); color: var(--green); border: 1px solid rgba(63,185,80,.3); font-size: 10.5px; font-weight: 700; letter-spacing: .4px; padding: 2px 8px; border-radius: 999px; }
 
+/* ── Banner de rotación ─────────────────────────────── */
+.banner {
+  background: linear-gradient(180deg, var(--panel) 0%, var(--panel-2) 100%);
+  border: 1px solid var(--border); border-left: 4px solid var(--c-cash);
+  border-radius: var(--radius); padding: 16px 20px; margin-bottom: 24px;
+}
+.banner.today { border-left-color: var(--green); background: linear-gradient(180deg, var(--green-soft) 0%, var(--panel-2) 70%); }
+.banner .b-main { font-size: 18px; font-weight: 800; letter-spacing: -.3px; display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.banner .b-asset { display: inline-flex; align-items: center; gap: 7px; }
+.banner .b-arrow { color: var(--muted); font-weight: 600; }
+.banner .b-sub { color: var(--muted-2); font-size: 13px; margin-top: 6px; font-variant-numeric: tabular-nums; }
+.banner .b-tag { background: rgba(63,185,80,.18); color: var(--green); border: 1px solid rgba(63,185,80,.4); font-size: 11px; font-weight: 700; letter-spacing: .5px; padding: 2px 9px; border-radius: 999px; }
+.asset-dot { display: inline-block; width: 9px; height: 9px; border-radius: 999px; flex: 0 0 auto; }
+
+/* ── Tabla de precios ───────────────────────────────── */
+.prices { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13.5px; }
+.prices th { color: var(--muted); font-weight: 600; font-size: 12px; padding: 6px 10px; text-align: right; border-bottom: 1px solid var(--border); }
+.prices th.p-asset { text-align: left; }
+.prices td { padding: 11px 10px; text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; border-bottom: 1px solid var(--border-soft); }
+.prices tbody tr:last-child td { border-bottom: none; }
+.prices td.p-asset { text-align: left; font-weight: 700; display: flex; align-items: center; gap: 9px; }
+.prices td.p-close { color: var(--text); font-weight: 700; }
+.p-asof { color: var(--muted-2); font-size: 12.5px; margin-top: 12px; }
+.p-asof b { color: var(--muted); font-weight: 600; }
+
 /* ── Footer ─────────────────────────────────────────── */
 .foot { color: var(--muted-2); font-size: 12.5px; text-align: center; margin-top: 8px; line-height: 1.7; }
 .foot .dot { margin: 0 8px; opacity: .5; }

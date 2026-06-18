@@ -11,6 +11,8 @@ function fmtPct(v, { sign = true, dec = 1 } = {}) {
 }
 function sgn(v) { return v > 0 ? 'pos' : v < 0 ? 'neg' : 'neu'; }
 function assetColor(a) { return `var(${ASSET_VAR[a] || '--c-cash'})`; }
+function fmtPrice(v) { return Number(v).toLocaleString('en-US', { maximumFractionDigits: Math.abs(Number(v)) < 10 ? 4 : 2 }); }
+function dot(a) { return `<span class="asset-dot" style="background:${assetColor(a)}"></span>`; }
 
 function heatStyle(v) {
   if (v === 0) return 'background:rgba(255,255,255,.025);color:#5a6478;';
@@ -62,7 +64,49 @@ function render(d) {
     </div>`;
   }).join('');
 
+  // Banner de rotación (primer elemento) — persiste hasta una nueva rotación.
+  const r = d.rotation;
+  let banner = '';
+  if (r) {
+    if (r.from) {
+      const label = r.today ? '<span class="b-tag">HOY</span> Nuevo trade:' : 'Último cambio:';
+      const sub = r.today ? `ejecutado ${r.since}` : `sin cambios hoy · hace ${r.days_ago}d (${r.since})`;
+      banner = `<div class="banner${r.today ? ' today' : ''}">
+        <div class="b-main">🔄 ${label}
+          <span class="b-asset">${dot(r.from)}${r.from}</span> <span class="b-arrow">→</span> <span class="b-asset">${dot(r.to)}${r.to}</span></div>
+        <div class="b-sub">${sub}</div>
+      </div>`;
+    } else {
+      banner = `<div class="banner">
+        <div class="b-main">Posición vigente: <span class="b-asset">${dot(r.to)}${r.to}</span></div>
+        <div class="b-sub">desde ${r.since} · ${r.days_ago}d</div>
+      </div>`;
+    }
+  }
+
+  // Tabla de precios por activo (último cierre + % vs día/semana/mes/año).
+  let pricesBlock = '';
+  if (d.prices && d.prices.assets) {
+    const refCell = ref => ref ? `<td class="${sgn(ref.change_pct)}">${fmtPct(ref.change_pct, { dec: 2 })}</td>` : '<td class="neu">—</td>';
+    const rows = Object.entries(d.prices.assets).map(([a, p]) =>
+      `<tr>
+        <td class="p-asset">${dot(a)}${a}</td>
+        <td class="p-close">${fmtPrice(p.close)}</td>
+        ${refCell(p.refs['1d'])}${refCell(p.refs['1w'])}${refCell(p.refs['1m'])}${refCell(p.refs['1y'])}
+      </tr>`).join('');
+    pricesBlock = `<div class="section">
+      <div class="s-head"><h2>💹 Precios</h2></div>
+      <table class="prices">
+        <thead><tr><th class="p-asset">Activo</th><th>Último cierre</th><th>Día</th><th>Semana</th><th>Mes</th><th>Año</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <div class="p-asof">Último cierre: <b>${d.prices.as_of}</b></div>
+    </div>`;
+  }
+
   document.getElementById('app').innerHTML = `
+    ${banner}
+    ${pricesBlock}
     <div class="head">
       <div>
         <div class="title-row"><h1>${d.strategy}</h1><span class="badge-sim">Backtest simulado — no es performance real</span></div>
