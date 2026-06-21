@@ -64,24 +64,27 @@ function render(d) {
     </div>`;
   }).join('');
 
-  // Banner de rotación (primer elemento) — persiste hasta una nueva rotación.
+  // Banner de POSICIÓN ACTUAL — modo ESTADO (descriptivo), no es una orden de trade.
+  // Lidera con el activo que la estrategia mantiene; el lector de un dashboard (pull)
+  // siempre llega tarde al cierre, así que NO se presenta como señal accionable.
   const r = d.rotation;
   let banner = '';
   if (r) {
-    if (r.from) {
-      const label = r.today ? '<span class="b-tag">HOY</span> Nuevo trade:' : 'Último cambio:';
-      const sub = r.today ? `ejecutado ${r.since}` : `sin cambios hoy · hace ${r.days_ago}d (${r.since})`;
-      banner = `<div class="banner${r.today ? ' today' : ''}">
-        <div class="b-main">🔄 ${label}
-          <span class="b-asset">${dot(r.from)}${r.from}</span> <span class="b-arrow">→</span> <span class="b-asset">${dot(r.to)}${r.to}</span></div>
-        <div class="b-sub">${sub}</div>
-      </div>`;
+    const held = `<span class="b-asset">${dot(r.to)}${r.to}</span>`;
+    const chip = r.today ? ' <span class="b-tag">CAMBIÓ HOY</span>' : '';
+    let ctx;
+    if (r.from && r.today) {
+      ctx = `Rotó hoy desde <span class="b-asset">${dot(r.from)}${r.from}</span> · al cierre del ${r.since} (00:00 UTC)`;
+    } else if (r.from) {
+      ctx = `Sin cambios desde ${r.since} · ${r.days_ago}d en posición`;
     } else {
-      banner = `<div class="banner">
-        <div class="b-main">Posición vigente: <span class="b-asset">${dot(r.to)}${r.to}</span></div>
-        <div class="b-sub">desde ${r.since} · ${r.days_ago}d</div>
-      </div>`;
+      ctx = `Desde ${r.since} · ${r.days_ago}d en posición`;
     }
+    banner = `<div class="banner${r.today ? ' today' : ''}">
+      <div class="b-main">📍 Posición actual: ${held}${chip}</div>
+      <div class="b-sub">${ctx}</div>
+      <div class="b-sub">Estado al cierre diario (00:00 UTC) · informativo, no es una orden ni recomendación.</div>
+    </div>`;
   }
 
   // Tabla de precios por activo (último cierre + % vs día/semana/mes/año).
