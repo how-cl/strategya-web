@@ -1,7 +1,7 @@
 {
   "strategy": "EVOL Conductor v1.3",
   "subtitle": "Rotación EVOL soberana · BTC/ETH/SOL/SUI/GOLD/CASH",
-  "updated": "2026-08-16",
+  "updated": "2026-08-17",
   "go_live": "2026-06-15",
   "disclaimer": "Histórico = BACKTEST simulado (in-sample, no es performance real). FORWARD desde go_live.",
   "summary": {
@@ -30,18 +30,18 @@
   "current_state": {
     "asset": "CASH",
     "since": "2026-03-19",
-    "days": 150,
+    "days": 151,
     "open": true
   },
   "rotation": {
     "from": "GOLD",
     "to": "CASH",
     "since": "2026-03-19",
-    "days_ago": 150,
+    "days_ago": 151,
     "today": false
   },
   "signal": {
-    "as_of": "2026-08-16",
+    "as_of": "2026-08-17",
     "position": "CASH",
     "act_today": false,
     "action": "HOLD",
@@ -164,8 +164,8 @@
     {
       "asset": "CASH",
       "entry": "2026-03-19",
-      "exit": "2026-08-16",
-      "days": 150,
+      "exit": "2026-08-17",
+      "days": 151,
       "return_pct": 0.0
     },
     {
@@ -807,135 +807,135 @@
     }
   ],
   "prices": {
-    "as_of": "2026-08-16",
+    "as_of": "2026-08-17",
     "assets": {
       "BTC": {
-        "date": "2026-08-16",
-        "close": 62900.0,
+        "date": "2026-08-17",
+        "close": 64532.1,
         "refs": {
           "1d": {
-            "date": "2026-08-15",
-            "close": 63086.01,
-            "change_pct": -0.29
+            "date": "2026-08-16",
+            "close": 62900.0,
+            "change_pct": 2.59
           },
           "1w": {
-            "date": "2026-08-09",
-            "close": 64901.59,
-            "change_pct": -3.08
+            "date": "2026-08-10",
+            "close": 63970.01,
+            "change_pct": 0.88
           },
           "1m": {
-            "date": "2026-07-17",
-            "close": 63931.67,
-            "change_pct": -1.61
+            "date": "2026-07-18",
+            "close": 64834.22,
+            "change_pct": -0.47
           },
           "1y": {
-            "date": "2025-08-16",
-            "close": 117380.66,
-            "change_pct": -46.41
+            "date": "2025-08-17",
+            "close": 117405.01,
+            "change_pct": -45.03
           }
         }
       },
       "ETH": {
-        "date": "2026-08-16",
-        "close": 1876.0,
+        "date": "2026-08-17",
+        "close": 1913.6,
         "refs": {
           "1d": {
-            "date": "2026-08-15",
-            "close": 1882.64,
-            "change_pct": -0.35
+            "date": "2026-08-16",
+            "close": 1876.0,
+            "change_pct": 2.0
           },
           "1w": {
-            "date": "2026-08-09",
-            "close": 1910.65,
-            "change_pct": -1.81
+            "date": "2026-08-10",
+            "close": 1873.16,
+            "change_pct": 2.16
           },
           "1m": {
-            "date": "2026-07-17",
-            "close": 1841.93,
-            "change_pct": 1.85
+            "date": "2026-07-18",
+            "close": 1862.61,
+            "change_pct": 2.74
           },
           "1y": {
-            "date": "2025-08-16",
-            "close": 4421.99,
-            "change_pct": -57.58
+            "date": "2025-08-17",
+            "close": 4472.33,
+            "change_pct": -57.21
           }
         }
       },
       "SOL": {
-        "date": "2026-08-16",
-        "close": 74.61,
+        "date": "2026-08-17",
+        "close": 76.02,
         "refs": {
           "1d": {
-            "date": "2026-08-15",
-            "close": 75.35,
-            "change_pct": -0.98
+            "date": "2026-08-16",
+            "close": 74.61,
+            "change_pct": 1.89
           },
           "1w": {
-            "date": "2026-08-09",
-            "close": 76.27,
-            "change_pct": -2.18
+            "date": "2026-08-10",
+            "close": 75.99,
+            "change_pct": 0.04
           },
           "1m": {
-            "date": "2026-07-17",
-            "close": 75.04,
-            "change_pct": -0.57
+            "date": "2026-07-18",
+            "close": 75.52,
+            "change_pct": 0.66
           },
           "1y": {
-            "date": "2025-08-16",
-            "close": 189.6,
-            "change_pct": -60.65
+            "date": "2025-08-17",
+            "close": 190.99,
+            "change_pct": -60.2
           }
         }
       },
       "SUI": {
-        "date": "2026-08-16",
-        "close": 0.6712,
+        "date": "2026-08-17",
+        "close": 0.6751,
         "refs": {
           "1d": {
-            "date": "2026-08-15",
-            "close": 0.6775,
-            "change_pct": -0.93
+            "date": "2026-08-16",
+            "close": 0.6712,
+            "change_pct": 0.58
           },
           "1w": {
-            "date": "2026-08-09",
-            "close": 0.6866,
-            "change_pct": -2.24
+            "date": "2026-08-10",
+            "close": 0.6844,
+            "change_pct": -1.36
           },
           "1m": {
-            "date": "2026-07-17",
-            "close": 0.74,
-            "change_pct": -9.3
+            "date": "2026-07-18",
+            "close": 0.7434,
+            "change_pct": -9.19
           },
           "1y": {
-            "date": "2025-08-16",
-            "close": 3.7734,
-            "change_pct": -82.21
+            "date": "2025-08-17",
+            "close": 3.7639,
+            "change_pct": -82.06
           }
         }
       },
       "GOLD": {
-        "date": "2026-08-16",
-        "close": 4368.81,
+        "date": "2026-08-17",
+        "close": 4419.51,
         "refs": {
           "1d": {
-            "date": "2026-08-15",
-            "close": 4378.94,
-            "change_pct": -0.23
+            "date": "2026-08-16",
+            "close": 4368.81,
+            "change_pct": 1.16
           },
           "1w": {
-            "date": "2026-08-09",
-            "close": 4330.07,
-            "change_pct": 0.89
+            "date": "2026-08-10",
+            "close": 4397.13,
+            "change_pct": 0.51
           },
           "1m": {
-            "date": "2026-07-17",
-            "close": 4006.1,
-            "change_pct": 9.05
+            "date": "2026-07-18",
+            "close": 4012.29,
+            "change_pct": 10.15
           },
           "1y": {
-            "date": "2025-08-16",
-            "close": 3329.49,
-            "change_pct": 31.22
+            "date": "2025-08-17",
+            "close": 3323.69,
+            "change_pct": 32.97
           }
         }
       }
