@@ -1,0 +1,162 @@
+{
+  "schema": "strategya.catalog/0.1",
+  "generated_at_utc": "2026-08-30T21:50:00Z",
+  "base_url": "https://how-cl.github.io/strategya-web/latest/",
+  "disclaimer": "All figures are simulated backtest, not real performance.",
+  "products": [
+    {
+      "slug": "btc-1d",
+      "name": "BTC 1D",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "BTC"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-1d.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-1d.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "btc-1d-ls",
+      "name": "BTC 1D L+S",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long-short",
+      "assets": [
+        "BTC"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-1d-ls.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-1d-ls.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "btc-12h",
+      "name": "BTC 12H",
+      "kind": "sovereign",
+      "timeframe": "12H",
+      "sleeve": "long",
+      "assets": [
+        "BTC"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-12h.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-12h.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "btc-12h-ls",
+      "name": "BTC 12H L+S",
+      "kind": "sovereign",
+      "timeframe": "12H",
+      "sleeve": "long-short",
+      "assets": [
+        "BTC"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-12h-ls.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-12h-ls.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "eth-1d",
+      "name": "ETH 1D",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "ETH"
+      ],
+      "accent": "#7b8ff0",
+      "glyph": "Ξ",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/eth-1d.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/eth-1d.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "sol-1d",
+      "name": "SOL 1D",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "SOL"
+      ],
+      "accent": "#a55cff",
+      "glyph": "◎",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/sol-1d.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/sol-1d.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "sol-12h",
+      "name": "SOL 12H",
+      "kind": "sovereign",
+      "timeframe": "12H",
+      "sleeve": "long",
+      "assets": [
+        "SOL"
+      ],
+      "accent": "#a55cff",
+      "glyph": "◎",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/sol-12h.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/sol-12h.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "sui-1d",
+      "name": "SUI 1D",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "SUI"
+      ],
+      "accent": "#4da2ff",
+      "glyph": "◈",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/sui-1d.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/sui-1d.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "sui-1d-ls",
+      "name": "SUI 1D L+S",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long-short",
+      "assets": [
+        "SUI"
+      ],
+      "accent": "#4da2ff",
+      "glyph": "◈",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/sui-1d-ls.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/sui-1d-ls.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "rotation-1d",
+      "name": "Rotation 1D",
+      "kind": "rotation",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SUI",
+        "PAXG"
+      ],
+      "accent": "#7b8ff0",
+      "glyph": "≈",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d.signal.json",
+      "tier": "free"
+    }
+  ]
+}
