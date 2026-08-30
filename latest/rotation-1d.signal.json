@@ -1,0 +1,49 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "rotation-1d",
+  "kind": "rotation",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
+    "preset": "Winner (v1.1) · Aggressive",
+    "symbol": "BINANCE:ETHUSDT",
+    "md5": "cb7f941d20b2614f00d7fe605563165a"
+  },
+  "decision_bar_label": "2026-08-30T00:00Z",
+  "decision_close_utc": "2026-08-30T00:00:00Z",
+  "valid_until_utc": "2026-08-31T00:00:00Z",
+  "generated_at_utc": "2026-08-30T18:30:00Z",
+  "data_as_of": {
+    "ETH": "2026-08-30"
+  },
+  "cash_asset": "USDT",
+  "reference_price": 2523.83,
+  "action": "HOLD",
+  "positions": [
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-08-28",
+      "entry_price": 2510.94
+    }
+  ],
+  "previous_positions": [
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
+  "last_trade": {
+    "asset": "SOL",
+    "side": "long",
+    "entry_date": "2023-01-04",
+    "exit_date": "2023-01-15",
+    "days": 11,
+    "return_pct": 80.86
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:429cb7f8209dbb6322ec1a72850daefc5b71f7a3d8d821c4dbcc16228f6418df"
+}

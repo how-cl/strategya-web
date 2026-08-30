@@ -1,0 +1,49 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "btc-1d",
+  "kind": "sovereign",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL BTC 1D Short v3.8 2026-08-28.pine",
+    "preset": "U",
+    "symbol": "BINANCE:BTCUSDT",
+    "md5": "d358e3a2e813e83d9eb821ae181dba0f"
+  },
+  "decision_bar_label": "2026-08-30T00:00Z",
+  "decision_close_utc": "2026-08-30T00:00:00Z",
+  "valid_until_utc": "2026-08-31T00:00:00Z",
+  "generated_at_utc": "2026-08-30T16:20:00Z",
+  "data_as_of": {
+    "BTC": "2026-08-29"
+  },
+  "cash_asset": "USDT",
+  "reference_price": 78062.01,
+  "action": "HOLD",
+  "positions": [
+    {
+      "asset": "BTC",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-08-20",
+      "entry_price": 69334.78
+    }
+  ],
+  "previous_positions": [
+    {
+      "asset": "BTC",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
+  "last_trade": {
+    "asset": "BTC",
+    "side": "long",
+    "entry_date": "2026-04-08",
+    "exit_date": "2026-05-19",
+    "days": 41,
+    "return_pct": 6.85
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:8ddfe749170dc6b9a54f2422d9968939e30db0b092985718044af6ef9e7a2afe"
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "sol-12h",
+  "kind": "sovereign",
+  "timeframe": "12H",
+  "strategy": {
+    "file": "EVOL SOL 12H Short v3.9 2026-08-24.pine",
+    "preset": "U",
+    "symbol": "BINANCE:SOLUSDT",
+    "md5": "7bb9fa8ae7b41eecb45b37660ee5496b"
+  },
+  "decision_bar_label": "2026-08-30T12:00Z",
+  "decision_close_utc": "2026-08-30T12:00:00Z",
+  "valid_until_utc": "2026-08-31T00:00:00Z",
+  "generated_at_utc": "2026-08-30T16:20:00Z",
+  "data_as_of": {
+    "SOL": "2026-08-30"
+  },
+  "cash_asset": "USDT",
+  "reference_price": 106.58,
+  "action": "HOLD",
+  "positions": [],
+  "previous_positions": [],
+  "last_trade": {
+    "asset": "SOL",
+    "side": "long",
+    "entry_date": "2026-08-17",
+    "exit_date": "2026-08-24",
+    "days": 7,
+    "return_pct": 26.35
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:12390f3703882d017caca2a1e381cfb6f9a68f526c52fd41d4321507310b0e0f"
+}

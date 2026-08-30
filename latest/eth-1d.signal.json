@@ -1,0 +1,49 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "eth-1d",
+  "kind": "sovereign",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL ETH 1D Short v4.8 2026-08-30.pine",
+    "preset": "V",
+    "symbol": "BINANCE:ETHUSDT",
+    "md5": "cc22daf4404a6d02a5804172c9474a07"
+  },
+  "decision_bar_label": "2026-08-30T00:00Z",
+  "decision_close_utc": "2026-08-30T00:00:00Z",
+  "valid_until_utc": "2026-08-31T00:00:00Z",
+  "generated_at_utc": "2026-08-30T17:57:00Z",
+  "data_as_of": {
+    "ETH": "2026-08-30"
+  },
+  "cash_asset": "USDT",
+  "reference_price": 2523.83,
+  "action": "HOLD",
+  "positions": [
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-07-05",
+      "entry_price": 1780.64
+    }
+  ],
+  "previous_positions": [
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
+  "last_trade": {
+    "asset": "ETH",
+    "side": "long",
+    "entry_date": "2026-04-08",
+    "exit_date": "2026-04-20",
+    "days": 12,
+    "return_pct": 0.84
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:31c5c3ff6be012ef0547b5f5fbebc30de89c23565f9525c864f8a49fbd753461"
+}

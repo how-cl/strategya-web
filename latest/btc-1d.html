@@ -1,0 +1,1628 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BTC 1D — Strategya.pro</title>
+<meta name="description" content="BTC 1D: one decision a day. It holds bitcoin, or it holds nothing.">
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  color-scheme: dark;
+  --bg:#0b0e13;
+  --bg-elev:#12161d;
+  --card:#151a22;
+  --card-2:#1a2029;
+  --line:#232b36;
+  --line-soft:#1c232c;
+  --tx:#e6edf3;
+  --tx-dim:#9aa6b2;
+  --tx-faint:#6b7681;
+  --up:#3fd77f;
+  --dn:#f0616d;
+  --flat:#7d8794;
+  --accent:#f7931a;   /* el acento es el color del activo que opera esta ficha */
+  --warn:#e3b341;
+  --radius:14px;
+  --radius-sm:10px;
+  --shadow:0 1px 0 rgba(255,255,255,.03) inset, 0 8px 24px -12px rgba(0,0,0,.6);
+  --ff: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+  --fn: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+
+  --a-btc:#f7931a; --a-eth:#7b8ff0; --a-sol:#a55cff;
+  --a-sui:#4da2ff; --a-gold:#e0b544; --a-cash:#2fb37e;
+}
+/* light: from system preference (Auto mode) or forced by the toggle */
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    color-scheme: light;
+    --bg:#f6f7f9; --bg-elev:#ffffff; --card:#ffffff; --card-2:#f4f6f8;
+    --line:#e2e6ea; --line-soft:#edf0f3;
+    --tx:#131820; --tx-dim:#5a6572; --tx-faint:#8b959f;
+    --up:#12a15a; --dn:#d63b48; --flat:#8b959f; --accent:#d97706;
+    --shadow:0 1px 2px rgba(16,24,40,.06), 0 8px 24px -14px rgba(16,24,40,.24);
+  }
+}
+:root[data-theme="light"]{
+  color-scheme: light;
+  --bg:#f6f7f9;
+  --bg-elev:#ffffff;
+  --card:#ffffff;
+  --card-2:#f4f6f8;
+  --line:#e2e6ea;
+  --line-soft:#edf0f3;
+  --tx:#131820;
+  --tx-dim:#5a6572;
+  --tx-faint:#8b959f;
+  --up:#12a15a;
+  --dn:#d63b48;
+  --flat:#8b959f;
+  --accent:#d97706;
+  --shadow:0 1px 2px rgba(16,24,40,.06), 0 8px 24px -14px rgba(16,24,40,.24);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--tx);
+  font-family:var(--ff);
+  font-size:15px;
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust:100%;
+}
+.num{font-variant-numeric:tabular-nums; font-feature-settings:"tnum" 1}
+.up{color:var(--up)} .dn{color:var(--dn)} .flat{color:var(--flat)}
+
+.wrap{max-width:1240px;margin:0 auto;padding:20px 16px 64px}
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+.topbar{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:8px 0 18px;
+}
+.brand{display:flex;align-items:baseline;gap:10px;min-width:0}
+.brand b{font-size:19px;letter-spacing:-.02em}
+.brand span{font-size:12.5px;color:var(--tx-faint)}
+
+.theme{display:flex;gap:2px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:3px}
+.theme button{
+  appearance:none;border:0;background:transparent;color:var(--tx-dim);
+  font:inherit;font-size:12.5px;padding:5px 13px;border-radius:999px;cursor:pointer;
+}
+.theme button[aria-pressed="true"]{background:var(--card-2);color:var(--tx);box-shadow:0 0 0 1px var(--line)}
+
+@media(max-width:560px){
+  .brand span{display:none}
+}
+
+/* ============================================================
+   HOW TO READ THIS BOARD  (one global explainer, not one per card)
+   ============================================================ */
+.howto{border:1px solid var(--line);border-radius:var(--radius-sm);
+  background:var(--card);margin:30px 0 0;overflow:hidden}
+.howto summary{cursor:pointer;padding:11px 14px;font-size:13px;font-weight:600;
+  color:var(--tx-dim);list-style:none;display:flex;align-items:center;gap:8px}
+.howto summary::-webkit-details-marker{display:none}
+.howto summary::after{content:'+';margin-left:auto;font-size:16px;color:var(--tx-faint)}
+.howto[open] summary::after{content:'\2212'}
+.howto[open] summary{color:var(--tx);border-bottom:1px solid var(--line-soft)}
+.howto .body{padding:2px 14px 15px;font-size:13px;color:var(--tx-dim);line-height:1.65;
+  max-width:70ch}
+.howto.wide .body{max-width:none;padding-top:12px}
+.howto.wide .body .lede{margin:0 0 12px}
+.howto .body p{margin:11px 0 0}
+.howto .body b{color:var(--tx);font-weight:600}
+
+/* inline definitions */
+.hint{appearance:none;border:0;background:transparent;padding:0 0 0 3px;margin:0;
+  color:var(--tx-faint);font:inherit;font-size:11px;cursor:pointer;line-height:1}
+.hint:hover{color:var(--tx-dim)}
+.hint-note{margin-top:10px;font-size:12px;color:var(--tx-dim);min-height:17px;line-height:1.5;
+  /* los tooltips largos traen saltos de párrafo: sin esto se leen como un bloque */
+  white-space:pre-line}
+
+/* collapsible trade list — the timeline already tells this story */
+.tsum{margin-top:10px;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  background:var(--card-2);overflow:hidden}
+.tsum summary{cursor:pointer;padding:10px 13px;font-size:12.5px;color:var(--tx-dim);
+  list-style:none;display:flex;align-items:center;gap:8px}
+.tsum summary::-webkit-details-marker{display:none}
+.tsum summary::after{content:'+';margin-left:auto;font-size:15px;color:var(--tx-faint)}
+.tsum[open] summary::after{content:'\2212'}
+.tsum[open] summary{color:var(--tx);border-bottom:1px solid var(--line-soft)}
+.tsum .trades{padding:10px}
+
+/* ============================================================
+   HERO / SECTIONS  (this page is a landing, not a dashboard)
+   ============================================================ */
+.block{margin:38px 0 0;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);padding:22px 22px 24px}
+.block h2{margin:0 0 4px;font-size:19px;letter-spacing:-.02em}
+.block .lede{margin:0 0 16px;font-size:13px;color:var(--tx-faint)}
+.qa{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:720px){ .qa{grid-template-columns:1fr 1fr;gap:16px 30px} }
+.qa h3{margin:0 0 5px;font-size:14px;letter-spacing:-.01em;display:flex;gap:8px;align-items:baseline}
+.qa h3 span{color:var(--accent);font-size:12px;font-weight:700}
+.qa p{margin:0;font-size:13.5px;line-height:1.62;color:var(--tx-dim);max-width:56ch}
+
+@media(min-width:720px){ .price{grid-template-columns:1.3fr 1fr} }
+/* ============================================================
+   GRID
+   ============================================================ */
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:860px){ .grid{grid-template-columns:repeat(2,1fr)} }
+
+/* ============================================================
+   STRATEGY CARD
+   ============================================================ */
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:border-color .15s;
+}
+.card:hover{border-color:color-mix(in srgb, var(--tx-faint) 55%, var(--line))}
+.card.open{grid-column:1/-1;border-color:color-mix(in srgb, var(--accent) 45%, var(--line))}
+
+/* head (clickable) */
+.card-head{
+  appearance:none;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer;
+  background:transparent;border:0;border-bottom:1px solid var(--line-soft);
+  padding:14px 15px 13px;
+  display:flex;align-items:flex-start;gap:12px;
+}
+.card-head:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.card-head .ttl{flex:1;min-width:0}
+.card-head h3{margin:0;font-size:15.5px;letter-spacing:-.01em;line-height:1.3}
+.card-head .meta{margin-top:3px;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+
+.chip{
+  font-size:10.5px;line-height:1;letter-spacing:.04em;text-transform:uppercase;
+  padding:4px 7px;border-radius:5px;border:1px solid var(--line);
+  color:var(--tx-dim);background:var(--card-2);white-space:nowrap;
+}
+.chip.tf{color:var(--tx);border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+.chip.long{color:var(--up);border-color:color-mix(in srgb,var(--up) 35%,var(--line))}
+.chip.ls{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,var(--line))}
+.chip.demo{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 45%,var(--line));text-transform:none;letter-spacing:0}
+
+.toggle{
+  flex:none;width:28px;height:28px;border-radius:8px;
+  border:1px solid var(--line);background:var(--card-2);color:var(--tx-dim);
+  display:grid;place-items:center;font-size:16px;line-height:1;
+  transition:transform .18s ease, color .15s;
+}
+.card.open .toggle{color:var(--tx)}
+
+/* ------------------------------------------------------------
+   SIGNAL BOX  (the /rotation-style panel)
+   ------------------------------------------------------------ */
+.signal{padding:14px 15px 15px;border-left:3px solid var(--sig,var(--flat));margin:12px 15px 14px 12px;
+  background:var(--card-2);border-radius:0 var(--radius-sm) var(--radius-sm) 0}
+.signal-alloc{display:flex;flex-direction:column;gap:7px}
+/* precio en vivo: dato de MERCADO, separado de la señal a propósito */
+.signal{display:flex;gap:16px;align-items:flex-start;flex-wrap:wrap}
+.signal-main{flex:1;min-width:0}
+.livebox{flex:none;min-width:150px;text-align:right;padding-left:20px;
+  border-left:1px solid var(--line);align-self:stretch}
+.livebox .l{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--tx-faint);
+  display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.livebox .dot{width:6px;height:6px;border-radius:50%;background:var(--up);flex:none;
+  box-shadow:0 0 0 3px color-mix(in srgb,var(--up) 22%,transparent)}
+.livebox .dot.off{background:var(--flat);box-shadow:none}
+.livebox .v{font-size:27px;font-weight:600;letter-spacing:-.02em;margin-top:6px;line-height:1.1}
+.livebox .c{font-size:12px;margin-top:3px;font-variant-numeric:tabular-nums}
+.livebox .s{font-size:10.5px;color:var(--tx-faint);margin-top:6px;font-style:italic}
+@media(max-width:620px){
+  .livebox{min-width:0;width:100%;text-align:left;padding:14px 0 0;
+    border-left:0;border-top:1px solid var(--line)}
+  .livebox .l{justify-content:flex-start}
+}
+.alloc-row{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.dot{
+  flex:none;width:22px;height:22px;border-radius:50%;
+  display:grid;place-items:center;font-size:12px;font-weight:700;color:#0b0e13;
+}
+.alloc-pct{font-size:19px;font-weight:650;letter-spacing:-.02em}
+.alloc-name{font-size:19px;font-weight:650;letter-spacing:-.02em}
+.alloc-close{font-size:12.5px;color:var(--tx-faint)}
+.alloc-close b{color:var(--tx-dim);font-weight:600}
+
+.dirbadge{
+  font-size:10px;letter-spacing:.06em;text-transform:uppercase;font-weight:700;
+  padding:3px 6px;border-radius:5px;
+  color:var(--dn);border:1px solid color-mix(in srgb,var(--dn) 45%,transparent);
+  background:color-mix(in srgb,var(--dn) 12%,transparent);
+}
+.dirbadge.long{color:var(--up);border-color:color-mix(in srgb,var(--up) 45%,transparent);
+  background:color-mix(in srgb,var(--up) 12%,transparent)}
+.signal-preset{
+  margin-top:9px;font-size:11.5px;color:var(--tx-faint);
+  display:flex;align-items:center;gap:6px;
+  border-top:1px dashed var(--line);padding-top:9px;
+}
+.signal-status{margin-top:12px;font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px}
+.signal-sub{margin-top:4px;font-size:12.5px;color:var(--tx-faint);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.signal-sub .mini{display:inline-flex;align-items:center;gap:5px}
+.chgline{margin-top:5px;font-size:12.5px;color:var(--tx-dim);display:flex;gap:8px;
+  align-items:baseline;flex-wrap:wrap}
+.chgline .num{color:var(--tx)}
+.chgline .mv{font-variant-numeric:tabular-nums}
+.dot-sm{width:15px;height:15px;border-radius:50%;display:inline-grid;place-items:center;font-size:9px;font-weight:700;color:#0b0e13}
+
+/* variant switch (1D | 12H) inside the card */
+.variant{display:flex;gap:2px;margin:0 15px 12px;background:var(--card-2);border:1px solid var(--line);border-radius:8px;padding:3px;width:fit-content}
+.variant button{appearance:none;border:0;background:transparent;color:var(--tx-dim);font:inherit;font-size:12px;padding:4px 12px;border-radius:6px;cursor:pointer}
+.variant button[aria-pressed="true"]{background:var(--card);color:var(--tx);box-shadow:0 0 0 1px var(--line)}
+
+/* ------------------------------------------------------------
+   DETAIL (expandable)
+   ------------------------------------------------------------ */
+.detail{border-top:1px solid var(--line-soft);padding:16px 15px 18px;display:none}
+.card.open .detail{display:block;animation:fade .22s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+.detail-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+.detail-bar h4{margin:0;font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--tx-faint);font-weight:600}
+.detail-bar .stamp{font-size:12px;color:var(--tx-faint);text-align:right}
+
+.kwin{font-size:11.5px;color:var(--tx-faint);margin:0 0 8px}
+.kwin b{color:var(--tx-dim);font-weight:500}
+.kpis{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+@media(min-width:700px){ .kpis{grid-template-columns:repeat(3,1fr)} }
+.kpi.wide{grid-column:1/-1;background:color-mix(in srgb, var(--accent) 7%, var(--card-2));
+  border-color:color-mix(in srgb, var(--accent) 32%, var(--line))}
+.kpi.wide .val{font-size:34px}
+@media(max-width:520px){ .kpi.wide .val{font-size:28px} }
+.kpi{background:var(--card-2);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:12px 13px}
+/* los dos que resumen la calidad de las operaciones: mismo tratamiento que el
+   tile de Total P&L, para que no se pierdan entre los promedios */
+.kpi.key{background:color-mix(in srgb, var(--accent) 7%, var(--card-2));
+  border-color:color-mix(in srgb, var(--accent) 30%, var(--line))}
+.kpi.key .val{font-size:27px}
+.kpi .lab{font-size:12px;color:var(--tx-dim);display:flex;align-items:center;gap:6px}
+.kpi.wide .lab{flex-wrap:wrap}
+.kpi .val{font-size:24px;font-weight:650;letter-spacing:-.025em;margin-top:5px;line-height:1.1}
+.kpi .sub{font-size:11.5px;color:var(--tx-faint);margin-top:4px}
+@media(max-width:520px){ .kpi .val{font-size:21px} }
+
+.sect{margin-top:18px}
+.sect > h5{
+  margin:0 0 9px;font-size:13px;font-weight:600;color:var(--tx-dim);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.sect > h5 span{font-size:11.5px;color:var(--tx-faint);font-weight:400}
+
+/* monthly heatmap */
+.hm-scroll{overflow-x:auto;border:1px solid var(--line-soft);border-radius:var(--radius-sm);background:var(--card-2)}
+table.hm{border-collapse:separate;border-spacing:3px;width:100%;min-width:660px;padding:6px}
+table.hm th{font-size:11px;font-weight:500;color:var(--tx-faint);padding:2px 0;text-align:center}
+table.hm th.y,table.hm td.y{text-align:left;padding-left:6px;font-size:12px;color:var(--tx-dim);width:52px}
+table.hm td{
+  text-align:center;font-size:12.5px;padding:7px 2px;border-radius:6px;
+  background:var(--line-soft);color:var(--tx-faint);
+  font-variant-numeric:tabular-nums;
+}
+table.hm td.tot{background:transparent;text-align:right;padding-right:6px;font-weight:600;font-size:12.5px;white-space:nowrap}
+table.hm td.tot small{display:block;font-weight:400;font-size:10.5px;color:var(--tx-faint)}
+
+/* ------------------------------------------------------------
+   POSITION TIMELINE — one coloured band per holding period.
+   Reads at a glance: which asset, how long, long or short.
+   ------------------------------------------------------------ */
+.ribbon-wrap{border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  background:var(--card-2);padding:12px 13px 11px}
+.ribbon{position:relative;height:34px;border-radius:7px;overflow:hidden;background:var(--line-soft)}
+.rseg{position:absolute;top:0;bottom:0;cursor:pointer;
+  box-shadow:inset 1px 0 0 color-mix(in srgb,var(--card-2) 65%,transparent)}
+.rseg.short::after{content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg, rgba(0,0,0,.34) 0 3px, transparent 3px 7px)}
+.rseg.gap{box-shadow:none;cursor:default;
+  background-image:repeating-linear-gradient(45deg, var(--line) 0 2px, transparent 2px 7px)}
+.raxis{position:relative;height:15px;margin-top:6px}
+.rtick{position:absolute;top:0;font-size:10px;color:var(--tx-faint);
+  transform:translateX(-50%);white-space:nowrap;font-variant-numeric:tabular-nums}
+.rtick::before{content:'';position:absolute;left:50%;top:-5px;width:1px;height:4px;background:var(--line)}
+.rlegend{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:9px;font-size:11.5px;color:var(--tx-faint)}
+.rlegend span{display:inline-flex;align-items:center;gap:5px}
+.rkey{width:11px;height:11px;border-radius:3px;flex:none}
+.rkey.k-short{background:var(--tx-faint);
+  background-image:repeating-linear-gradient(45deg, rgba(0,0,0,.45) 0 2px, transparent 2px 5px)}
+.rkey.k-gap{background-image:repeating-linear-gradient(45deg, var(--line) 0 2px, transparent 2px 6px)}
+.rinfo{margin-top:9px;font-size:12px;color:var(--tx-dim);min-height:18px;font-variant-numeric:tabular-nums}
+
+/* timeline range chips */
+.rhead{display:flex;align-items:center;gap:10px}
+.rrange{display:flex;gap:2px;background:var(--card);border:1px solid var(--line);
+  border-radius:7px;padding:2px}
+.rrange button{appearance:none;border:0;background:transparent;color:var(--tx-faint);
+  font:inherit;font-size:11px;font-weight:500;padding:3px 8px;border-radius:5px;cursor:pointer}
+.rrange button:hover{color:var(--tx-dim)}
+.rrange button[aria-pressed="true"]{background:var(--card-2);color:var(--tx);
+  box-shadow:0 0 0 1px var(--line)}
+/* on a phone the title and its controls need a line each */
+@media(max-width:560px){
+  .sect > h5{flex-wrap:wrap}
+  .rhead{width:100%;justify-content:space-between;margin-top:7px}
+}
+
+/* ------------------------------------------------------------
+   STRATEGY vs BUY & HOLD
+   ------------------------------------------------------------ */
+.bq{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:620px){ .bq{grid-template-columns:1fr 1fr} }
+.bqcard{background:var(--card-2);border:1px solid var(--line-soft);
+  border-left:3px solid var(--bqc);border-radius:var(--radius-sm);padding:13px 14px}
+.bqcard .lab{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--tx-dim);display:flex;align-items:center;gap:7px}
+.bqcard .grow{display:flex;align-items:baseline;gap:9px;margin-top:9px;flex-wrap:wrap}
+.bqcard .from{font-size:14px;color:var(--tx-faint);font-variant-numeric:tabular-nums}
+.bqcard .to{font-size:27px;font-weight:650;letter-spacing:-.025em;color:var(--bqc);
+  font-variant-numeric:tabular-nums}
+.bqchips{display:flex;gap:7px;margin-top:10px;flex-wrap:wrap}
+.bqchip{font-size:11px;padding:4px 8px;border-radius:6px;border:1px solid var(--line);
+  color:var(--tx-dim);background:var(--card);white-space:nowrap}
+/* el multiplicador toma el color de su serie y dos puntos de tamaño: es la
+   comparación que define el producto y estaba con el mismo peso que el resto */
+.bqchip.mult{font-size:13px;font-weight:600;padding:4px 10px;
+  color:var(--bqc);border-color:color-mix(in srgb,var(--bqc) 38%,transparent);
+  background:color-mix(in srgb,var(--bqc) 10%,transparent)}
+.bqchip.mult b{font-size:14.5px;font-weight:700;letter-spacing:-.01em}
+.bqchip.mult .hint{color:color-mix(in srgb,var(--bqc) 65%,var(--tx-faint))}
+.bqwin{font-size:9.5px;font-weight:700;letter-spacing:.06em;padding:3px 6px;border-radius:5px;
+  background:color-mix(in srgb,var(--up) 18%,transparent);color:var(--up);
+  border:1px solid color-mix(in srgb,var(--up) 40%,transparent)}
+.bqflag{font-size:11.5px;color:var(--warn);margin:-2px 0 9px}
+.calib{font-size:12px;color:var(--tx-dim);margin:-2px 0 10px;max-width:78ch;line-height:1.55;
+  border-left:2px solid var(--warn);padding-left:10px}
+.calib b{color:var(--tx)}
+.bqnote{font-size:12px;color:var(--tx-dim);margin:-2px 0 10px;max-width:74ch;line-height:1.55;
+  border-left:2px solid var(--accent);padding-left:10px}
+.bqnote b{color:var(--tx)}
+/* la lectura larga, SIEMPRE visible. Si vive detrás de un clic, el número que
+   decide la comparación es el de la ventana corta, que favorece a cualquiera. */
+.bqstress{font-size:12.5px;color:var(--tx-dim);margin:10px 0 2px;line-height:1.55;
+  display:flex;flex-wrap:wrap;gap:3px 9px;align-items:baseline}
+.bqstress b{color:var(--tx);font-variant-numeric:tabular-nums}
+.bqstress .sw{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--tx-faint)}
+.bqchart{position:relative;margin-top:10px;border:1px solid var(--line-soft);border-radius:var(--radius-sm);
+  background:var(--card-2);padding:12px 12px 9px}
+.bqchart svg{width:100%;height:auto;display:block;overflow:visible}
+.bqhit{fill:transparent;cursor:crosshair}
+.bqtip{position:absolute;z-index:3;pointer-events:none;background:var(--bg-elev);
+  border:1px solid var(--line);border-radius:var(--radius-sm);padding:9px 11px;
+  box-shadow:0 8px 24px -10px rgba(0,0,0,.6);min-width:150px;font-size:12px}
+.bqtip[hidden]{display:none}
+.bqtip .t{color:var(--tx-faint);font-size:11px;margin-bottom:6px}
+.bqtip .r{display:flex;align-items:center;gap:7px;line-height:1.7;white-space:nowrap}
+.bqtip .r i{width:8px;height:8px;border-radius:50%;flex:none}
+.bqtip .r span{color:var(--tx-dim)}
+.bqtip .r b{margin-left:auto;font-variant-numeric:tabular-nums;color:var(--tx)}
+.bqread{margin-top:9px;font-size:12px;color:var(--tx-dim);min-height:18px;
+  font-variant-numeric:tabular-nums}
+.bqlegend{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:9px;font-size:11.5px;color:var(--tx-faint)}
+.bqlegend span{display:inline-flex;align-items:center;gap:6px}
+.bqlegend i{width:14px;height:3px;border-radius:2px;flex:none}
+
+/* trade history */
+.trades{max-height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:7px;padding-right:3px}
+.trade{
+  display:flex;align-items:center;gap:11px;
+  background:var(--card-2);border:1px solid var(--line-soft);border-left-width:3px;
+  border-radius:var(--radius-sm);padding:9px 12px;
+}
+.trade .who{flex:1;min-width:0}
+.trade .who b{font-size:13.5px;font-weight:600;display:block}
+.trade .who small{font-size:11.5px;color:var(--tx-faint)}
+.trade .ret{font-size:15px;font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
+.trade .side{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--tx-faint);border:1px solid var(--line);border-radius:4px;padding:2px 5px}
+
+.disclaimer{
+  margin-top:14px;font-size:11.5px;color:var(--tx-faint);
+  border-top:1px dashed var(--line);padding-top:10px;
+}
+.banner{
+  display:flex;gap:9px;align-items:flex-start;
+  font-size:12px;color:var(--warn);
+  background:color-mix(in srgb,var(--warn) 10%,transparent);
+  border:1px solid color-mix(in srgb,var(--warn) 30%,transparent);
+  border-radius:var(--radius-sm);padding:9px 11px;margin-bottom:14px;
+}
+footer.legal{margin-top:34px;font-size:11.5px;color:var(--tx-faint);text-align:center;line-height:1.7}
+
+/* ── expired signal · regla 4 del CLAUDE.md ──────────────────────────
+   La página se marca sola pasado el valid_until. Existe porque latest/
+   sirve una URL de nombre estable: si el pipeline muere, esa URL seguiría
+   mostrando la corrida vieja con cara de actual. Portado de la ficha
+   anterior; lo único que cambia es que el instante se DERIVA del cierre
+   de vela declarado en la señal, en vez de escribirse a mano. */
+#stale{display:none;border:1px solid var(--dn);border-left:3px solid var(--dn);
+  background:color-mix(in srgb,var(--dn) 12%,var(--card));border-radius:var(--radius-sm);
+  padding:15px 18px;margin:0 0 18px;font-size:13.5px;color:var(--tx);line-height:1.6}
+#stale .tag{display:block;font-family:var(--fn);font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--dn);margin-bottom:6px}
+html.is-stale #stale{display:block}
+
+/* sellos de la corrida — clase propia: `.stamp` ya existe en la tarjeta
+   (`.detail-bar .stamp`) y una regla global la habría convertido en flex */
+.runstamp{margin-top:12px;font-family:var(--fn);font-size:10.5px;color:var(--tx-faint);
+  display:flex;gap:5px 16px;flex-wrap:wrap;justify-content:center}
+
+/* botón [Signal]: abre el .signal.json de esta misma corrida. El href se arma
+   del nombre del propio archivo, así sirve igual en latest/ y en la carpeta
+   fechada, sin que la plantilla tenga que saber en cuál está. */
+.signal-btn{display:inline-block;margin-left:14px;padding:5px 11px;cursor:pointer;
+  border:1px solid var(--bd);border-radius:var(--radius-sm,6px);background:transparent;
+  font-family:var(--fn);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--tx-faint);text-decoration:none;transition:color .15s,border-color .15s}
+.signal-btn:hover{color:var(--tx);border-color:var(--tx-faint)}
+.signal-btn[hidden]{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="topbar">
+    <div class="brand"><b>Strategya</b><span>Live signal board</span></div>
+    <div class="theme" role="group" aria-label="Theme">
+      <button data-theme-set="light" aria-pressed="false">Light</button>
+      <button data-theme-set="dark"  aria-pressed="false">Dark</button>
+      <button data-theme-set="auto"  aria-pressed="true">Auto</button>
+    </div>
+      <a class="signal-btn" id="signal-link" target="_blank" rel="noopener"
+         title="Ver la señal en JSON">Signal</a>
+  </header>
+
+  <div class="grid" id="grid"></div>
+
+  <div id="stale" role="alert">
+    <span class="tag">⚠ Signal expired</span>
+    This page shows the run of <b>2026-08-30 16:20 UTC</b>, which was valid until
+    <b>2026-08-31 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    If you are seeing this, the next run was not published: do not act on this page and tell the team.
+  </div>
+
+
+  <details class="howto wide">
+    <summary>What this strategy does — and what it doesn’t</summary>
+    <div class="body">
+      <p class="lede">Four things worth knowing about how it behaves. If you are a maximalist, three of them will matter to you.</p>
+    <div class="qa">
+      <div>
+        <h3><span>01</span> Yes, it sells.</h3>
+        <p>In a downtrend this strategy moves to cash and buys back lower. That is the whole
+        mechanism. If you will never sell a single sat under any circumstance, this is not the
+        strategy for you, and no backtest should change your mind.</p>
+      </div>
+      <div>
+        <h3><span>02</span> The goal is more BTC, not more dollars.</h3>
+        <p>Judge it the way you judge everything: did the round trip end with more bitcoin than
+        simply holding? That is the only comparison that matters, and it is the one printed on
+        the card below.</p>
+      </div>
+      <div>
+        <h3><span>03</span> It will underperform in a straight bull run.</h3>
+        <p>When BTC only goes up, holding wins — you cannot beat a rocket by stepping off it.
+        The edge shows up across a full cycle, and above all in the drawdown you never had to sit
+        through. Use the range buttons on each chart and check the bad years yourself.</p>
+      </div>
+      <div>
+        <h3><span>04</span> Nothing here is custody.</h3>
+        <p>You get the signal. Your coins stay where you keep them, on your exchange or in your
+        own hands. We never touch them and never ask for a withdrawal key.</p>
+      </div>
+    </div>
+    </div>
+  </details>
+
+  <details class="howto">
+    <summary>How to read this board</summary>
+    <div class="body">
+      <p><b>The card tells you what the strategy holds right now.</b>
+      “100% on BTC” means fully in bitcoin today; “100% in CASH” means fully out. Click the card
+      to open its full record.</p>
+      <p><b>One decision a day.</b> It reads the market at the daily close and either stays put or
+      switches side. That is the whole cadence: no intraday moves, nothing to watch in between.</p>
+      <p><b>Orange means you are in bitcoin, green means you are in cash.</b> The position
+      history inside the card paints one band per holding period, so a whole year of decisions
+      reads at a glance — and you can see exactly which crashes it sat out.</p>
+      <p><b>History is a simulated backtest, not money that was made.</b> It shows how the
+      rules would have behaved on past prices, which is useful and is not a promise. Only the
+      part after the <b>go-live</b> date is a live, forward record. None of this is investment
+      advice.</p>
+    </div>
+  </details>
+
+  <footer class="legal">
+    History = <b>simulated BACKTEST</b> (in-sample, not real performance). FORWARD from go-live.<br>
+    None of this is investment advice.
+    <div class="runstamp">
+      <span>product: btc-1d</span>
+      <span>run: 2026-08-30 16:20 UTC</span>
+      <span>decision close: 2026-08-30 00:00 U C</span>
+      <span>valid until: 2026-08-31 00:00 UTC</span>
+      <span>source: EVOL BTC 1D Short v3.8 · preset U</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════════════════════════
+   IDENTIDAD DEL PRODUCTO — lo único que cambia entre fichas.
+   Todo lo de abajo lee de acá. Antes esto vivía repartido en 98 líneas del
+   archivo, y construir SOL destapó que el activo estaba escrito a mano hasta
+   en la prosa del cliente ("el objetivo es más BTC"). Una ficha nueva ya no
+   se edita: se genera.
+   ══════════════════════════════════════════════════════════════════════ */
+const PRODUCTO = {
+  "slug": "btc-1d",
+  "nombre": "BTC 1D",
+  "tf": "1D",
+  "lado": "LONG",
+  "preset": "U",
+  "pine": "EVOL BTC 1D Short v3.8",
+  "abre": "SINCE 2023",
+  "exportado": "2026-08-29",
+  "actualizado": "2026-08-29",
+  "cierre": "2026-08-30T00:00Z",
+  "validoHasta": "2026-08-31T00:00:00Z",
+  "activo": "BTC",
+  "enProsa": "bitcoin",
+  "par": "BTCUSDT",
+  "glifo": "₿",
+  "colorVar": "--a-btc",
+  "acento": "#f7931a",
+  "colorPalabra": "orange",
+  "goLive": "2026-06-15",
+  "corrida": "2026-08-30 16:20 UTC"
+};
+
+/* derivados: se calculan, no se repiten */
+const P = PRODUCTO;
+const ES_LS    = P.lado === "LONG+SHORT";
+const ES_12H   = P.tf === "12H";
+const CADENCIA = ES_12H ? "two decisions a day (00:00 and 12:00 UTC)"
+                        : "one decision a day (00:00 UTC)";
+
+/* ==================================================================
+   1) DATA  —  the only block to swap for your real JSON.
+      Each strategy: { id, tier, name, universe, variants:{ "1D":V, "12H":V } }
+      Each variant V: { side, signal, kpis, monthly, trades, updated, goLive, demo }
+   ================================================================== */
+
+/* Regla 4 del CLAUDE.md — la página se marca VENCIDA por sí sola.
+   El instante se DERIVA del cierre de vela de la señal: para 1D, el cierre
+   siguiente. Así el runner no tiene que mantener dos campos sincronizados. */
+const VALID_UNTIL = PRODUCTO.validoHasta;
+(function(){
+  function check(){
+    if(Date.now() >= Date.parse(VALID_UNTIL)){
+      document.documentElement.classList.add("is-stale");
+      var t = document.querySelector("title");
+      if(t && t.textContent.indexOf("EXPIRED") === -1) t.textContent = "\u26A0 EXPIRED \u00B7 " + t.textContent;
+      return true;
+    }
+    return false;
+  }
+  if(!check()) setInterval(check, 60000);
+})();
+
+/* Precio en vivo. Se usa el mismo par que opera el producto y no un índice en USD porque es
+   EXACTAMENTE el par que opera el producto: el número que se muestra es de
+   la misma serie con la que se calculó todo lo demás.
+   Es dato de MERCADO, no de la señal: se actualiza aunque la señal esté
+   vencida, y por eso va rotulado aparte. Si el fetch falla, cae al último
+   cierre que trae la propia señal — la página nunca queda sin número. */
+(function(){
+  const API = "https://api.binance.com/api/v3/ticker/24hr?symbol=" + PRODUCTO.par;
+  const $$ = (id) => document.getElementById(id);
+  const money = (n) => "$" + Number(n).toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2});
+  let timer = null;
+  async function tick(){
+    const dot = $$("livedot"), txt = $$("livetxt"), val = $$("liveprice"), chg = $$("livechg");
+    if(!val) return;
+    try{
+      const r = await fetch(API, {cache:"no-store"});
+      if(!r.ok) throw new Error("http " + r.status);
+      const j = await r.json();
+      val.textContent = money(j.lastPrice);
+      const p = parseFloat(j.priceChangePercent);
+      chg.innerHTML = `<span class="${p >= 0 ? "up" : "dn"}">${p >= 0 ? "▲" : "▼"} ${Math.abs(p).toFixed(2)}% <span style="opacity:.6">24h</span></span>`;
+      dot.classList.remove("off"); txt.textContent = "live";
+      paintMove(parseFloat(j.lastPrice));
+    }catch(e){
+      dot.classList.add("off"); txt.textContent = "last close";
+      const st = STRATEGIES[0].variants["12H"].signal;
+      val.textContent = money(st.alloc[0].close);
+      chg.innerHTML = `<span style="color:var(--tx-faint)">${st.closeDate}</span>`;
+      paintMove(st.alloc[0].close);
+    }
+  }
+  /* Movimiento desde el último cambio de posición, contra el precio en vivo.
+     ⚠ El COLOR sigue el beneficio del usuario, no la dirección del activo:
+     estando en CASH, que SOL baje es a favor. Pintarlo al revés le mostraría
+     rojo a alguien a quien la salida le acaba de salvar una caída. */
+  function paintMove(live){
+    const el = $$("chgmove"); if(!el) return;
+    const box = el.closest("#lastchg") ? null : document.getElementById("lastchg");
+    const p = parseFloat((box && box.dataset.price) || "");
+    const to = (box && box.dataset.to) || "";
+    if(!p || !live){ el.textContent = ""; return; }
+    const move = (live / p - 1) * 100;            // cuánto se movió SOL
+    /* En corto la posición gana cuando el activo baja: mostrar su movimiento
+       tal cual diría "▲ 13,70 %" mientras el cliente PIERDE 13,70 %. */
+    const isShort = to.indexOf("SHORT") >= 0;
+    const gain = isShort ? -move : move;         // lo que gana la POSICIÓN
+    const good = to === "CASH" ? move < 0 : gain > 0;
+    const arrow = (to === "CASH" ? move : gain) >= 0 ? "▲" : "▼";
+    el.className = "mv " + (Math.abs(gain) < 0.05 ? "flat" : good ? "up" : "dn");
+    el.innerHTML = to === "CASH"
+      ? `${P.activo} ${arrow} ${Math.abs(move).toFixed(2)}% since you left`
+      : isShort
+        ? `${arrow} ${Math.abs(gain).toFixed(2)}% on the short`
+        : `${arrow} ${Math.abs(move).toFixed(2)}% since`;
+  }
+  window.__liveStart = () => { tick(); clearInterval(timer); timer = setInterval(tick, 60000); };
+})();
+
+const ASSETS = {
+  [P.activo]: {sym:P.glifo, color:"var(" + P.colorVar + ")"},
+  CASH:       {sym:"$",     color:"var(--a-cash)"},
+};
+
+const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const TODAY = "2026-08-30";   /* fecha de la corrida, UTC */
+const ymd = (t) => new Date(t).toISOString().slice(0,10);
+
+/* ======================================================================
+   btc-1d — DATOS REALES desde el export de TradingView
+   EVOL BTC 1D Short v3.8 · BINANCE:BTCUSDT · 1D · preset U
+   Rango: 2018-07-20 → 2026-08-30 · capital inicial $1.000
+   comisión 0,1 % · slippage 0 · sin trailing.
+   Las ventanas cortas son REBANADAS de este mismo dataset.
+   Delta contra el export de TV: net -0.01 pp · PF 0.0
+
+   ⚠ El nombre de este bloque es FIJO —`DATOS`— a propósito. Antes llevaba el
+   producto como prefijo (BTC_1D_MONTHLY, SOL_12H_KPIS…) y eso obligaba a tocar
+   24 líneas del HTML por cada ficha nueva. Una ficha es un producto: no hace
+   falta que el dato se apellide.
+   ====================================================================== */
+const DATOS = {
+
+  /* rendimiento mensual de la estrategia, compuesto desde $1.000 */
+  monthly: [
+  {year:2026, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:6.0,May:0.8,Jun:0.0,Jul:0.0,Aug:12.5,Sep:null,Oct:null,Nov:null,Dec:null}, total:20.2, positive:"3/8"},
+  {year:2025, months:{Jan:1.8,Feb:-4.9,Mar:0.0,Apr:7.5,May:11.1,Jun:-3.0,Jul:6.2,Aug:-2.2,Sep:0.0,Oct:0.0,Nov:0.0,Dec:0.0}, total:16.5, positive:"4/12"},
+  {year:2024, months:{Jan:1.1,Feb:37.7,Mar:16.6,Apr:-10.4,May:-3.2,Jun:0.0,Jul:0.0,Aug:0.0,Sep:2.4,Oct:0.4,Nov:40.5,Dec:0.0}, total:103.4, positive:"6/12"},
+  {year:2023, months:{Jan:32.1,Feb:0.0,Mar:17.9,Apr:-4.3,May:0.0,Jun:7.5,Jul:-1.4,Aug:0.0,Sep:0.0,Oct:17.5,Nov:8.9,Dec:12.1}, total:126.6, positive:"6/12"},
+  {year:2022, months:{Jan:0.0,Feb:0.0,Mar:-3.2,Apr:0.0,May:0.0,Jun:0.0,Jul:0.0,Aug:0.0,Sep:0.0,Oct:-3.2,Nov:0.0,Dec:0.0}, total:-6.3, positive:"0/12"},
+  {year:2021, months:{Jan:6.6,Feb:-3.2,Mar:0.0,Apr:0.0,May:-3.2,Jun:0.0,Jul:11.2,Aug:13.6,Sep:-4.9,Oct:26.2,Nov:0.0,Dec:0.0}, total:51.4, positive:"4/12"},
+  {year:2020, months:{Jan:-3.2,Feb:0.0,Mar:0.0,Apr:11.9,May:10.6,Jun:0.0,Jul:17.9,Aug:2.8,Sep:-13.1,Oct:19.5,Nov:42.8,Dec:46.9}, total:216.3, positive:"7/12"},
+  {year:2019, months:{Jan:0.0,Feb:-3.2,Mar:0.0,Apr:9.4,May:60.8,Jun:26.9,Jul:-6.4,Aug:-3.2,Sep:0.0,Oct:0.0,Nov:0.0,Dec:0.0}, total:95.8, positive:"3/12"},
+  {year:2018, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:0.0,May:0.0,Jun:0.0,Jul:-3.2,Aug:0.0,Sep:0.0,Oct:-3.2,Nov:-2.6,Dec:0.0}, total:-8.7, positive:"0/12"},
+  ],
+
+  /* buy & hold mensual, cierres reales de BINANCE:BTCUSDT del mismo CSV */
+  bench: [
+  {year:2026, months:{Jan:-10.2,Feb:-14.9,Mar:2.0,Apr:11.8,May:-3.5,Jun:-20.4,Jul:7.3,Aug:24.1,Sep:null,Oct:null,Nov:null,Dec:null}, total:-10.9, positive:"4/8"},
+  {year:2025, months:{Jan:9.5,Feb:-17.7,Mar:-2.1,Apr:14.1,May:11.1,Jun:2.4,Jul:8.0,Aug:-6.5,Sep:5.4,Oct:-3.9,Nov:-17.6,Dec:-3.0}, total:-6.4, positive:"6/12"},
+  {year:2024, months:{Jan:0.7,Feb:43.6,Mar:16.6,Apr:-14.9,May:11.3,Jun:-7.1,Jul:3.0,Aug:-8.7,Sep:7.4,Oct:11.0,Nov:37.2,Dec:-2.9}, total:121.6, positive:"8/12"},
+  {year:2023, months:{Jan:39.8,Feb:0.1,Mar:23.0,Apr:2.7,May:-6.9,Jun:12.0,Jul:-4.1,Aug:-11.3,Sep:3.9,Oct:28.5,Nov:8.9,Dec:12.1}, total:155.6, positive:"9/12"},
+  {year:2022, months:{Jan:-16.8,Feb:12.2,Mar:5.4,Apr:-17.3,May:-15.5,Jun:-37.3,Jul:16.8,Aug:-13.9,Sep:-3.1,Oct:5.5,Nov:-16.2,Dec:-3.6}, total:-64.2, positive:"4/12"},
+  {year:2021, months:{Jan:14.4,Feb:36.4,Mar:30.1,Apr:-1.8,May:-35.4,Jun:-5.9,Jul:18.3,Aug:13.6,Sep:-7.0,Oct:39.9,Nov:-7.1,Dec:-18.8}, total:59.8, positive:"6/12"},
+  {year:2020, months:{Jan:30.0,Feb:-8.9,Mar:-24.8,Apr:34.5,May:9.6,Jun:-3.3,Jul:24.0,Aug:2.8,Sep:-7.5,Oct:28.0,Nov:42.8,Dec:46.9}, total:301.9, positive:"8/12"},
+  {year:2019, months:{Jan:-7.3,Feb:11.1,Mar:7.6,Apr:29.7,May:60.8,Jun:26.9,Jul:-7.1,Aug:-4.9,Sep:-13.5,Oct:10.3,Nov:-17.5,Dec:-4.6}, total:94.6, positive:"6/12"},
+  {year:2018, months:{Jan:-25.0,Feb:0.4,Mar:-33.0,Apr:33.5,May:-19.0,Jun:-14.6,Jul:21.0,Aug:-9.3,Sep:-5.5,Oct:-3.8,Nov:-36.6,Dec:-8.4}, total:-73.0, positive:"3/12"},
+  ],
+
+  trades: [
+  {asset:"BTC", side:"LONG", entry:"2026-08-20", exit:null, days:10, ret:null, open:true},
+  {asset:"CASH", side:"CASH", entry:"2026-05-19", exit:"2026-08-20", days:93, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2026-04-08", exit:"2026-05-19", days:41, ret:6.85},
+  {asset:"CASH", side:"CASH", entry:"2025-08-02", exit:"2026-04-08", days:249, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2025-07-03", exit:"2025-08-02", days:30, ret:3.88},
+  {asset:"CASH", side:"CASH", entry:"2025-06-06", exit:"2025-07-03", days:27, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2025-04-22", exit:"2025-06-06", days:45, ret:15.76},
+  {asset:"CASH", side:"CASH", entry:"2025-02-02", exit:"2025-04-22", days:79, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2025-01-16", exit:"2025-02-02", days:17, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2024-11-23", exit:"2025-01-16", days:54, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2024-10-16", exit:"2024-11-23", days:38, ret:47.14},
+  {asset:"CASH", side:"CASH", entry:"2024-10-02", exit:"2024-10-16", days:14, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2024-09-19", exit:"2024-10-02", days:13, ret:-1.74},
+  {asset:"CASH", side:"CASH", entry:"2024-05-22", exit:"2024-09-19", days:120, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2024-05-21", exit:"2024-05-22", days:1, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2024-04-14", exit:"2024-05-21", days:37, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2024-02-08", exit:"2024-04-14", days:66, ret:43.85},
+  {asset:"CASH", side:"CASH", entry:"2024-01-13", exit:"2024-02-08", days:26, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2023-10-17", exit:"2024-01-13", days:88, ret:49.81},
+  {asset:"CASH", side:"CASH", entry:"2023-10-11", exit:"2023-10-17", days:6, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2023-10-02", exit:"2023-10-11", days:9, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2023-07-24", exit:"2023-10-02", days:70, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2023-06-21", exit:"2023-07-24", days:33, ret:6.06},
+  {asset:"CASH", side:"CASH", entry:"2023-04-22", exit:"2023-06-21", days:60, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2023-03-14", exit:"2023-04-22", days:39, ret:12.84},
+  {asset:"CASH", side:"CASH", entry:"2023-01-21", exit:"2023-03-14", days:52, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2023-01-09", exit:"2023-01-21", days:12, ret:32.07},
+  {asset:"CASH", side:"CASH", entry:"2022-10-28", exit:"2023-01-09", days:73, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2022-10-27", exit:"2022-10-28", days:1, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2022-03-21", exit:"2022-10-27", days:220, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2022-03-19", exit:"2022-03-21", days:2, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2021-10-17", exit:"2022-03-19", days:153, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2021-10-02", exit:"2021-10-17", days:15, ret:26.2},
+  {asset:"CASH", side:"CASH", entry:"2021-09-11", exit:"2021-10-02", days:21, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2021-07-27", exit:"2021-09-11", days:46, ret:20.17},
+  {asset:"CASH", side:"CASH", entry:"2021-05-10", exit:"2021-07-27", days:78, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2021-05-09", exit:"2021-05-10", days:1, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2021-02-10", exit:"2021-05-09", days:88, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2021-02-09", exit:"2021-02-10", days:1, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2021-01-22", exit:"2021-02-09", days:18, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2020-10-13", exit:"2021-01-22", days:101, ret:167.09},
+  {asset:"CASH", side:"CASH", entry:"2020-09-04", exit:"2020-10-13", days:39, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2020-07-24", exit:"2020-09-04", days:42, ret:5.36},
+  {asset:"CASH", side:"CASH", entry:"2020-05-10", exit:"2020-07-24", days:75, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2020-04-27", exit:"2020-05-10", days:13, ret:23.75},
+  {asset:"CASH", side:"CASH", entry:"2020-01-09", exit:"2020-04-27", days:109, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2020-01-08", exit:"2020-01-09", days:1, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2019-08-07", exit:"2020-01-08", days:154, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2019-08-06", exit:"2019-08-07", days:1, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2019-07-15", exit:"2019-08-06", days:22, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2019-04-03", exit:"2019-07-15", days:103, ret:109.05},
+  {asset:"CASH", side:"CASH", entry:"2019-02-24", exit:"2019-04-03", days:38, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2019-02-19", exit:"2019-02-24", days:5, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2018-11-10", exit:"2019-02-19", days:101, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2018-11-08", exit:"2018-11-10", days:2, ret:-2.6},
+  {asset:"CASH", side:"CASH", entry:"2018-10-19", exit:"2018-11-08", days:20, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2018-10-18", exit:"2018-10-19", days:1, ret:-3.19},
+  {asset:"CASH", side:"CASH", entry:"2018-07-21", exit:"2018-10-18", days:89, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2018-07-20", exit:"2018-07-21", days:1, ret:-3.19},
+  ],
+
+  /* qué tiene el producto HOY: el activo, o efectivo si está fuera */
+  hoy: {asset:"BTC", dir:"LONG", close:78062.01},
+
+  /* último cambio de posición, con el precio al que ocurrió */
+  lastChange: {frm:"CASH", to:"BTC", date:"2026-08-20", price:69334.78, daysAgo:10},
+
+  /* ventanas disponibles, derivadas de los datos del producto */
+  windows: [{"k": "SINCE 2023", "y": 2023}, {"k": "SINCE 2018", "y": 2018}],
+
+  /* ventana para la que se calibró el preset; null = ninguna privilegiada */
+  calibrado: null,
+
+  /* drawdown medido por TradingView, por ventana. La ficha publica el MÁS DURO
+     entre este y el de su curva: la curva es mensual y no ve las caídas de
+     dentro del mes, así que puede quedar corta. Nunca se publica el más suave. */
+  ddTv: {"since-2018": 13.61, "since-2023": 7.55},
+
+  /* KPIs por ventana. CALCULADOS desde la lista de operaciones, no copiados. */
+  kpis: {
+    "since-2018": {totalPnl:4503.21, openPnl:12.59, openSide:"LONG", openSince:"2026-08-20", openPrice:69334.78, todayPnl:5082.61, ytd:20.2, winRate:51.72, wins:15, losses:14, trades:29, longs:29, shorts:0, profitFactor:12.047, avgMonthly:4.45, avgTrade:18.18, avgHoldBars:27.5, avgHold:27.5, cagr:55.61, avgWin:37.99, avgLoss:-3.04, since:"2018-07-20"},
+    "since-2023": {totalPnl:473.41, openPnl:12.59, openSide:"LONG", openSince:"2026-08-20", openPrice:69334.78, todayPnl:545.59, ytd:20.2, winRate:69.23, wins:9, losses:4, trades:13, longs:13, shorts:0, profitFactor:13.986, avgMonthly:4.8, avgTrade:15.92, avgHoldBars:34.2, avgHold:34.2, cagr:61.14, avgWin:24.25, avgLoss:-2.83, since:"2023-01-09"},
+  },
+};
+
+/* withDefaults — rellena con null las claves que un producto no reporta.
+   (En la maqueta se llamaba demoKpis; el nombre mentía en un archivo de producción.) */
+const withDefaults = (o) => Object.assign({
+  ytd:null, allTime:null, winRate:null, wins:null, losses:null, trades:null,
+  avgMonthly:null, maxDD:null, avgHold:null,
+  bestMonth:null, worstMonth:null, avgWin:null, avgLoss:null, mar:null,
+}, o);
+
+/* El descriptor se ARMA desde PRODUCTO y DATOS. Cada campo que antes se
+   escribía a mano acá era una oportunidad de que la ficha dijera una cosa y
+   el dato otra — pasó con la cadencia ("one decision a day" en un producto de
+   12 horas) y con la asignación, que decía BTC cuando el producto estaba en
+   efectivo. */
+const STRATEGIES = [
+  {id:P.slug, tier:"all", name:P.nombre,
+   /* la cadencia va acá y no como línea aparte: traduce el TF del nombre sin
+      repetir la sigla, y responde la pregunta práctica de cuándo mirar */
+   universe:`${P.par} · ${ES_LS ? "long, short or cash" : "long or cash"} · ${CADENCIA}`,
+   blurb:`It holds ${P.activo}, or it holds nothing. ${ES_12H
+     ? "Two decisions a day, at each 12-hour close."
+     : "One decision a day, at the daily close."}`,
+   variants:{[P.tf]:{
+     side:P.lado, updated:P.actualizado, goLive:P.goLive, demo:false,
+     source:`${P.pine} · preset ${P.preset} · TradingView export ${P.exportado}`,
+     /* la asignación sale del DATO, no escrita a mano: puede estar en efectivo */
+     signal:{alloc:[{asset:DATOS.hoy.asset, w:1, close:DATOS.hoy.close, dir:DATOS.hoy.dir}],
+             closeDate:P.cierre,
+             changedToday:DATOS.lastChange.daysAgo === 0,
+             lastChange:{from:DATOS.lastChange.frm, to:DATOS.lastChange.to,
+                         date:DATOS.lastChange.date, daysAgo:DATOS.lastChange.daysAgo,
+                         price:DATOS.lastChange.price}},
+     monthly:DATOS.monthly, trades:DATOS.trades,
+     bench:{asset:P.activo, demo:false, monthly:DATOS.bench},
+     kpis:withDefaults(DATOS.kpis),
+   }}},
+];
+
+/* ==================================================================
+   2) RENDER
+   ================================================================== */
+const $ = (s,r=document) => r.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cls = (v) => v > 0 ? "up" : v < 0 ? "dn" : "flat";
+/* con separador de miles: un +5075.53% se lee mal de un vistazo, y la página
+   ya agrupa los montos ($51,755) — las cifras deben leerse igual en todas partes */
+const sign = (v,d=1) => (v > 0 ? "+" : v < 0 ? "−" : "")
+  + Math.abs(v).toLocaleString("en-US", {minimumFractionDigits:d, maximumFractionDigits:d});
+const price = (v) => v >= 1000 ? v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2})
+                   : v >= 1 ? v.toFixed(2) : v.toFixed(4);
+const dash = "—";
+
+function assetDot(a, small){
+  const A = ASSETS[a] || {sym:"?", color:"var(--flat)"};
+  return `<span class="${small?"dot-sm":"dot"}" style="background:${A.color}">${A.sym}</span>`;
+}
+
+/* ---------- signal box ---------- */
+function signalBox(v){
+  const s = v.signal;
+  const lead = s.alloc[0];
+  const leadColor = (ASSETS[lead.asset]||{}).color || "var(--flat)";
+  const multi = s.alloc.length > 1;
+
+  const rows = s.alloc.map(a => `
+    <div class="alloc-row">
+      ${assetDot(a.asset)}
+      <span class="alloc-pct num">${(a.w*100).toFixed(a.w === 1 ? 0 : 1)}%</span>
+      <span class="alloc-name">${a.asset === "CASH" ? "in CASH" : "on " + a.asset}</span>
+      ${v.side === "LONG+SHORT" && a.dir
+        ? `<span class="dirbadge ${a.dir === "SHORT" ? "" : "long"}">${a.dir.toLowerCase()}</span>`
+        : ""}
+      ${"" /* el cierre de la vela vive en el sello del pie: acá competía con el precio en vivo */}
+    </div>`).join("");
+
+  const shortLine = s.short ? `
+    <div class="signal-sub" style="margin-top:6px">
+      <span class="mini">🔻 Short leg: ${assetDot(s.short.asset,1)} <b style="color:var(--dn)">${s.short.asset}</b> since ${s.short.since}</span>
+    </div>` : "";
+
+  const st = s.changedToday
+    ? `<div class="signal-status">🔁 <span>Changed today</span></div>`
+    : `<div class="signal-status">😴 <span>No changes today</span></div>`;
+
+  const lc = s.lastChange ? `
+    <div class="signal-sub" id="lastchg"
+         data-price="${s.lastChange.price || ""}" data-to="${esc(String(s.lastChange.to))}">
+      <span>Last change:</span>
+      <span class="mini">${assetDot(String(s.lastChange.from).split(" ")[0],1)} ${esc(s.lastChange.from)}</span>
+      <span>→</span>
+      <span class="mini">${assetDot(String(s.lastChange.to).split(" ")[0],1)} ${esc(s.lastChange.to)}</span>
+      <span>·</span>
+      <span>${s.lastChange.daysAgo === 0 ? "today" : s.lastChange.daysAgo + "d ago"} (${s.lastChange.date})</span>
+    </div>
+    ${s.lastChange.price ? `
+    <div class="chgline">
+      <span>${s.lastChange.to === "CASH" ? "Sold at" : s.lastChange.to.indexOf("SHORT") >= 0 ? "Shorted at" : "Bought at"}
+        <b class="num">${price(s.lastChange.price)}</b></span>
+      <span id="chgmove" class="mv">·</span>
+    </div>` : ""}` : "";
+
+  return `<div class="signal" style="--sig:${leadColor}">
+   <div class="signal-main">
+    <div class="signal-alloc">${rows}</div>
+    ${multi && !s.preset ? `<div class="signal-sub" style="margin-top:8px">Proportional allocation · rebalanced at every bar close</div>` : ""}
+    ${shortLine}${st}${lc}
+    ${s.preset ? `<div class="signal-preset"><span>&#9881;&#65039;</span><span>${esc(s.preset)}</span></div>` : ""}
+   </div>
+   <div class="livebox" id="livebox">
+     <div class="l">BTC price <span class="dot" id="livedot"></span><span id="livetxt">live</span></div>
+     <div class="v num" id="liveprice">—</div>
+     <div class="c" id="livechg">&nbsp;</div>
+     <div class="s">market price, not the signal</div>
+   </div>
+  </div>`;
+}
+
+/* ---------- KPI grid ---------- */
+/* ---------- plain-English definitions ---------- */
+const TERMS = {
+  ytd:      "Year to date — what the strategy has returned since January 1st of this year.",
+  winrate:  "Win rate — the share of closed trades that ended in profit. On its own it means little: a strategy can win 40% of the time and still do well if the winners are much bigger than the losers.",
+  monthly:  "Average monthly return — the typical month, compounded. A handful of explosive months pull this well above what a normal month looks like.",
+  hold:     "Average holding period — how long a position stays open. Longer holds mean fewer trades, fewer fees and less to watch.",
+  avgwin:   "Average win — the mean return of the trades that made money.",
+  avgloss:  "Average loss — the mean return of the trades that lost money. Keeping this small is what a stop-loss buys you.",
+  maxdd:    "Max drawdown \u2014 the deepest fall from a peak before a new high, measured as a PERCENTAGE of that peak. At -10%, every $100 was worth $90 at the worst moment. Two readings exist for the same window and they do not always agree: this page's own equity curve, which is built from MONTHLY returns and so cannot see a dip that opened and closed inside a single month, and TradingView's own measurement of the strategy over that window. We publish whichever of the two is HARSHER \u2014 never the flattering one, and never an average. Short windows (6M / 1Y / 2Y) have no TradingView figure, so they show the curve alone. \n\nFor this product there is something specific worth knowing: almost all of that fall happened in 2023. Measured from 2024 onward the worst drawdown is 8.2%; measured from 2023 it is 25.7%. It is one bad year rather than the way the strategy usually behaves \u2014 which is useful to know, and is also why we do not let you see only the years after it.",
+  mult:     "Multiplier — how many times the starting capital grew. 322× turns $1,000 into $322,000.",
+  unit:     "USD vs BTC — the same two curves, same trades, same dates: only the ruler changes. In dollars the question is how much money you ended up with. In coins it is the one a holder actually cares about — did you end up with MORE BITCOIN than if you had never sold? In BTC the orange line goes flat at 1 \u20BF, and that is not a glitch: holding always returns exactly the stack you started with, so it stops being a curve to beat and becomes the bar to clear. Every point on the green line is your stack at that moment. Above 1 \u20BF means the strategy bought back more coins than it sold; below means it sold and re-entered higher.",
+  total:    "Total P&L — everything the strategy made over the measured period, compounded, including the trade that is still open right now. TradingView splits the two: +473.38% closed (its Net profit) plus +12.76% on the open position (its Open PnL), which together are the +546.52% shown here.",
+  stratval: "Strategy result — what $1,000 would be worth today if you had followed every signal in this window, compounding, after 0.1% commission on each side of every trade. It is a simulated backtest on past prices, not money that was made.",
+  bhval:    "Buy & hold result — what the same $1,000 would be worth if you had bought bitcoin at the start of the window and never touched it. This is the benchmark: beating it is the only reason to run a strategy instead of just holding.",
+  poshist:  "Position history — one band per holding period, in order. Orange means the strategy was holding bitcoin; green means it was in cash and out of the market. A long green stretch is a fall it did not sit through.",
+  tradehist:"Trade history — every completed round trip: when it bought, when it sold, and what that one trade returned. These are individual trade returns, not compounded; the compounded result is the figure at the top.",
+  pf:       "Profit factor — every dollar the losing trades gave away against every dollar the winners brought in. Above 1 the strategy makes money; at 13.99 the winners bring in fourteen dollars for each one the losers cost. It is the honest companion to the win rate: a strategy can win most of its trades and still lose money if the few losses are huge, and this is the number that catches that.",
+  mar:      "MAR \u2014 how much annual return the strategy produced for each point of drawdown it made you sit through. It is simply the CAGR divided by the worst fall, both of which are on this card. A MAR of 10 means ten points of yearly gain per point of pain; buying and holding the asset usually lands near 1. We put it here because return alone says nothing about what it cost you to earn it \u2014 two strategies can end at the same number with completely different rides, and this is the figure that separates them. It is also the metric this shop ranks its own products by.",
+  cagr:     "Annualised return — the yearly rate that would produce the same result, compounded. It is the only figure that compares fairly across windows of different length: 52× over eight years and 6.5× over three and a half look very different as multipliers, yet annualised they are 52.8%/yr and 61.1%/yr. Use the multiplier to see how much it grew, and this to see how fast.",
+  calib:    "Calibrated window — this preset was tuned on the market from that year onward, so that is the window it was built for and the one shown first. The longer window is still here, one click away, and it is the harder read: the same rules over earlier bear markets they were never fitted to. Expect it to look weaker. A preset calibrated for one regime is not the best preset for every regime, and there is a real difference between that and overfitting: overfitting falls apart outside the sample it was tuned on, while this one also held up in a stress window it was never optimised for. Showing you both is the point; hiding the gap would be the actual red flag.",
+  ranges:   "Time window \u2014 every figure on this card is measured over the window you pick here, and both curves are re-based to the same starting capital at its beginning. 6M / 1Y / 2Y are simply the last months up to today.\n\nWHY IT OPENS ON SINCE 2023. Every product on this board opens on the same window, deliberately. Each one used to open on its own \u2014 and, without anyone choosing it that way, each one opened on the window that happened to flatter it. Comparing them then meant reading eight years of one against three and a half of another, and the bigger number won for the wrong reason. SINCE 2023 is the one window all of them share, counted from the bottom of the previous bear market, and it is the regime most of these presets were tuned for.\n\nShort windows flatter almost any strategy, because they tend to hold no crash at all. That is exactly why the longer reading is not hidden behind this control: it sits under the cards, always visible, with its own result and its own worst drawdown. Use this control to explore; use that line to keep yourself honest.",
+  hold2:    "Strategy vs buy & hold — the same $1,000, the same start date, two different decisions. GREEN is what the strategy would have turned it into by following every signal, compounding, after 0.1% commission on each side of every trade. Orange is what simply buying bitcoin on day one and never selling would have left you. Beating that orange number is the only reason to run a strategy instead of just holding — and the multiplier under each figure says by how much, while the drawdown chip says what you had to sit through to get there. Both are simulated on past prices, not money that was made.",
+};
+const hint = (k) => `<button class="hint" type="button" data-term="${k}" aria-label="What is this?">\u24D8</button>`;
+
+/* ---------- KPI grid ---------- */
+function kpiGrid(v, id){
+  const kpick = state.brange[id] || LONGEST;
+  const k = KSET(v, kpick);
+  const pct = (x,d=1) => x == null ? dash : sign(x,d) + "%";
+  const tile = (lab, term, val, sub, color, key) =>
+    `<div class="kpi${key ? " key" : ""}"><div class="lab">${lab}${hint(term)}</div>
+       <div class="val num ${color || ""}">${val}</div>
+       <div class="sub">${sub || "&nbsp;"}</div></div>`;
+
+  const pick = state.brange[id] || LONGEST;
+  let head = "";
+  /* el CAGR del tile sale del MISMO recorte que el gráfico: si el tile y el
+     chip anualizaran ventanas distintas, la página se contradiría sola */
+  if(k.totalPnl != null){
+    /* el mismo recorte que usa el gráfico de arriba, así que el número
+       del tile y el de la curva son siempre el mismo número */
+    const full = equity(v.monthly, 1000);
+    const win  = slice1(full, RANGES[pick], 1000);
+    const ret  = win[win.length-1].v/1000*100 - 100;
+    const all  = WINS.some(w => w.k === pick);
+    head = `
+    <div class="kpi wide">
+      <div class="lab">💰 Total P&amp;L${hint("total")}
+        <span class="rrange" style="margin-left:auto">${Object.keys(RANGES).map(r =>
+          `<button type="button" data-brange="${r}" aria-pressed="${pick === r}">${r}</button>`).join("")}</span>
+      </div>
+      <div class="val num ${cls(ret)}">${sign(ret,2)}%</div>
+      <div class="sub">$1,000 &rarr; ${money(1000*(1+ret/100))}
+        · ${periodLabel(win[0].t)} &rarr; today
+        ${all && k.totalPnl != null ? ` · closed ${sign(k.totalPnl,2)}% plus an open trade at ${sign(k.openPnl,2)}%` : ""}
+        ${(() => { const c = cagrOf(win); return c == null ? "" : ` · ${sign(c,1)}%/yr`; })()}
+</div>
+    </div>`;
+  }
+  return `<div class="sect">
+    <div class="kwin">Statistics — <b>${KLABEL(kpick)}</b>${WINS.some(w => w.k === kpick) ? "" : " · the chart above is showing a shorter window"}</div>
+    <div class="kpis">${head}
+    ${tile("📈 YTD 2026", "ytd", pct(k.ytd), "", k.ytd == null ? "flat" : cls(k.ytd))}
+    ${tile("🎯 Win rate", "winrate", k.winRate == null ? dash : k.winRate.toFixed(1) + "%",
+           k.trades ? `${k.trades} trades · ${k.wins}W / ${k.losses}L` : "", "", true)}
+    ${tile("⚖️ Profit factor", "pf", k.profitFactor == null ? dash : k.profitFactor.toFixed(2),
+           k.profitFactor == null ? "" : `$${k.profitFactor.toFixed(0)} won per $1 lost`, "", true)}
+    ${tile("📊 Avg. monthly", "monthly", pct(k.avgMonthly,2),
+           k.avgTrade != null ? `Avg. trade ${pct(k.avgTrade,2)}` : "",
+           k.avgMonthly == null ? "flat" : cls(k.avgMonthly))}
+    ${tile("⏱ Avg. hold", "hold", k.avgHold == null ? dash : k.avgHold.toFixed(1) + "d",
+           k.mar != null ? `MAR ${k.mar}` : "")}
+    ${tile("✓✕ Avg. win / loss", "avgwin",
+           `<span class="up">${pct(k.avgWin,2)}</span> <span style="color:var(--tx-faint)">/</span> <span class="dn">${pct(k.avgLoss,2)}</span>`,
+           "Typical winner against typical loser")}
+  </div>
+  <div class="hint-note">Tap \u24D8 on any metric for a plain-English definition.</div></div>`;
+}
+/* ---------- monthly heatmap ---------- */
+function heatCell(v){
+  if(v == null) return `<td>·</td>`;
+  if(v === 0)   return `<td class="num">0.0</td>`;
+  const up = v > 0;
+  const a = Math.min(1, Math.abs(v) / (up ? 45 : 14));
+  const bg = up ? `color-mix(in srgb, var(--up) ${12+a*52}%, transparent)`
+                : `color-mix(in srgb, var(--dn) ${14+a*50}%, transparent)`;
+  return `<td class="num" style="background:${bg};color:var(--tx)">${v.toFixed(1)}</td>`;
+}
+function heatmap(v){
+  const head = `<tr><th class="y"></th>${M.map(m => `<th>${m}</th>`).join("")}<th style="text-align:right;padding-right:6px">Year %</th></tr>`;
+  const rows = v.monthly.map(r => `
+    <tr><td class="y">${r.year}</td>
+      ${M.map(m => heatCell(r.months[m])).join("")}
+      <td class="tot ${cls(r.total)} num">${sign(r.total)}%<small>${r.positive}</small></td>
+    </tr>`).join("");
+  return `<div class="hm-scroll"><table class="hm">${head}${rows}</table></div>`;
+}
+
+/* ---------- position timeline ---------- */
+const ribbonBg = (a) => {
+  const c = (ASSETS[a] || {}).color || "var(--flat)";
+  /* CASH = out of the market: same hue, drained, so time-in-market pops */
+  return a === "CASH" ? `color-mix(in srgb, ${c} 30%, var(--card-2))` : c;
+};
+/* ymd() is declared once, up in the data block */
+
+/* ventanas. Las dos "SINCE" son absolutas: se calculan contra la fecha de
+   la corrida para que no haya que tocarlas cada mes. SINCE 2018 = todo el
+   dataset, que arranca en enero de 2018. */
+const monthsSince = (y) => {
+  const e = new Date(TODAY + "T00:00:00Z");
+  return (e.getUTCFullYear() - y) * 12 + e.getUTCMonth() + 1;
+};
+/* las ventanas largas las emite el conversor a partir de los datos del
+   producto: un activo listado en 2023 no puede ofrecer "SINCE 2018". La
+   última de la lista es siempre "todo el histórico". */
+const WINS   = DATOS.windows;
+/* por defecto se muestra la ventana para la que el preset fue calibrado; si no
+   hay ninguna declarada, la más larga. La otra queda a un clic y sin atenuar:
+   apagarla insinuaría que vale menos, y es la lectura más exigente. */
+const CALIBRADO = DATOS.calibrado;
+const DDTV = DATOS.ddTv;
+/* Ventana en la que ABRE la ficha. Es la misma en los cuatro productos BTC a
+   propósito (decisión del 30-ago). Antes cada uno abría en la suya y, sin que
+   nadie lo eligiera así, cada uno abría en la que mejor lo dejaba: el cliente
+   comparaba $51.755 de ocho años contra $9.931 de tres y medio y concluía que
+   uno rendía cinco veces más. 2023 es la única ventana donde los cuatro son
+   comparables. La larga no se esconde: va en `.bqstress`, sin clic. */
+const OPENWIN = P.abre;
+const LONGWIN = WINS[WINS.length - 1].k;
+const FIJAS   = ["6M", "1Y", "2Y"];
+const LONGEST = (WINS.some(w => w.k === OPENWIN) || FIJAS.indexOf(OPENWIN) >= 0) ? OPENWIN
+  : (CALIBRADO && WINS.some(w => w.k === CALIBRADO) ? CALIBRADO : LONGWIN);
+const RANGES = Object.assign({"6M":6, "1Y":12, "2Y":24},
+  ...WINS.map((w, i) => ({[w.k]: i === WINS.length - 1 ? 9999 : monthsSince(w.y)})));
+/* para 6M/1Y/2Y se muestran las estadísticas de la ventana larga más corta:
+   un profit factor sobre dos operaciones no dice nada, y la etiqueta lo aclara */
+const KSET   = (v, pick) => v.kpis["since-" + ((WINS.find(w => w.k === pick) || WINS[0]).y)];
+const KLABEL = (pick) => "since Jan " + ((WINS.find(w => w.k === pick) || WINS[0]).y);
+
+function ribbon(v, id, tradesHTML){
+  /* mismo default que el gráfico y que las estadísticas: la ventana calibrada
+     si el producto declara una, y si no la más larga. Antes arrancaba vacío y
+     caía a 24 meses, así que los tres bloques de la misma ficha abrían en
+     ventanas distintas y ningún chip salía marcado. */
+  const pick   = state.range[id] || LONGEST;
+  const months = RANGES[pick] || (window.innerWidth >= 760 ? 24 : 12);
+  const end = Date.parse(TODAY);
+  const w0 = new Date(end); w0.setUTCMonth(w0.getUTCMonth() - months);
+
+  const ts = v.trades.filter(t => t.entry).map(t => ({
+    asset:t.asset, side:t.side, ret:t.ret, open:!!t.open,
+    a:Date.parse(t.entry), b:Date.parse(t.exit || TODAY),
+  })).sort((x,y) => x.a - y.a);
+  if(!ts.length) return "";
+
+  /* nunca dibujamos un hueco delante del primer trade conocido */
+  const start = Math.max(w0.getTime(), ts[0].a);
+  const span  = end - start;
+  if(span <= 0) return "";
+
+  const segs = []; let cur = start;
+  ts.forEach(t => {
+    const a = Math.max(t.a, start), b = Math.min(t.b, end);
+    if(b <= a) return;
+    if(a > cur + 864e5) segs.push({gap:true, a:cur, b:a});
+    segs.push({...t, a, b});
+    cur = Math.max(cur, b);
+  });
+  if(cur < end - 864e5) segs.push({gap:true, a:cur, b:end});
+
+  const bars = segs.map(g => {
+    const l = (g.a - start) / span * 100, w = (g.b - g.a) / span * 100;
+    if(g.gap) return `<div class="rseg gap" style="left:${l}%;width:${w}%"></div>`;
+    const info = `${g.asset}${g.side === "SHORT" ? " short" : ""} · ${ymd(g.a)} → `
+               + `${g.open ? "now" : ymd(g.b)} · ${Math.round((g.b-g.a)/864e5)}d`
+               + `${g.ret != null ? " · " + sign(g.ret,2) + "%" : ""}`;
+    return `<div class="rseg${g.side === "SHORT" ? " short" : ""}"`
+         + ` style="left:${l}%;width:${w}%;background:${ribbonBg(g.asset)}"`
+         + ` title="${esc(info)}" data-info="${esc(info)}"></div>`;
+  }).join("");
+
+  const step = months > 18 ? 3 : months > 9 ? 2 : 1;
+  const ticks = []; const d = new Date(start);
+  d.setUTCDate(1); d.setUTCHours(0,0,0,0);
+  while(d.getTime() < start) d.setUTCMonth(d.getUTCMonth() + 1);
+  for(; d.getTime() <= end; d.setUTCMonth(d.getUTCMonth() + step)){
+    const x = (d.getTime() - start) / span * 100;
+    if(x < 3 || x > 97) continue;
+    ticks.push(`<span class="rtick" style="left:${x}%">${M[d.getUTCMonth()]} `
+             + `${String(d.getUTCFullYear()).slice(2)}</span>`);
+  }
+
+  const seen = [];
+  segs.forEach(g => { if(!g.gap && !seen.includes(g.asset)) seen.push(g.asset); });
+  const legend = seen.map(a =>
+    `<span><i class="rkey" style="background:${ribbonBg(a)}"></i>${a}</span>`).join("");
+
+  return `<div class="sect">
+    <h5>🎞 Position history${hint("poshist")}
+      <span class="rhead">
+        <span>${M[new Date(start).getUTCMonth()]} ${new Date(start).getUTCFullYear()} &rarr; now</span>
+        <span class="rrange">${Object.keys(RANGES).map(k =>
+          `<button type="button" data-range="${k}" aria-pressed="${pick === k}">${k}</button>`).join("")}</span>
+      </span>
+    </h5>
+    <div class="ribbon-wrap">
+      <div class="ribbon">${bars}</div>
+      <div class="raxis">${ticks.join("")}</div>
+      <div class="rlegend">${legend}
+        ${segs.some(g => g.side === "SHORT") ? `<span><i class="rkey k-short"></i>short</span>` : ""}
+        ${segs.some(g => g.gap) ? `<span><i class="rkey k-gap"></i>not in this excerpt</span>` : ""}
+      </div>
+      <div class="rinfo">Tap a band to read the trade.</div>
+    </div>
+    ${tradesHTML || ""}
+    <div class="hint-note"></div>
+  </div>`;
+}
+
+/* ---------- trade history ---------- */
+function tradeList(v){
+  const rows = v.trades.map(t => {
+    const A = ASSETS[t.asset] || {color:"var(--flat)"};
+    const ret = t.open ? `<span class="ret flat">open</span>`
+                       : `<span class="ret ${cls(t.ret)} num">${sign(t.ret,2)}%</span>`;
+    return `<div class="trade" style="border-left-color:${A.color}">
+      ${assetDot(t.asset)}
+      <div class="who">
+        <b>${t.asset}</b>
+        <small class="num">${t.entry} → ${t.exit || "now"} · ${t.days}d</small>
+      </div>
+      ${t.side === "SHORT" ? `<span class="side" style="color:var(--dn)">short</span>` : ""}
+      ${ret}
+    </div>`;
+  }).join("");
+  return `<div class="trades">${rows}</div>`;
+}
+
+/* ---------- strategy vs buy & hold ---------- */
+const money = (v) => "$" + Math.round(v).toLocaleString("en-US");
+const kfmt  = (v) => v >= 1000 ? "$" + (v/1000).toFixed(v >= 10000 ? 0 : 1) + "K"
+                   : "$" + Math.round(v);
+
+/* compounds a monthly table into an equity curve starting at `initial` */
+function equity(monthly, initial){
+  const rows = monthly.slice().sort((a,b) => a.year - b.year);
+  const pts = []; let v = initial, open = false;
+  rows.forEach(r => M.forEach((m, i) => {
+    const x = r.months[m];
+    if(x == null) return;
+    if(!open){ open = true; pts.push({t:Date.UTC(r.year, i, 1), v}); }
+    v *= 1 + x/100;
+    pts.push({t:Date.UTC(r.year, i + 1, 1), v});
+  }));
+  return pts;
+}
+/* anualizado de la curva visible: se calcula sobre la ventana en pantalla,
+   así el chip nunca contradice al gráfico que tiene encima */
+function cagrOf(pts){
+  if(!pts || pts.length < 2) return null;
+  const years = (pts[pts.length-1].t - pts[0].t) / 31557600000;   // 365,25 días
+  if(years <= 0.08) return null;                                   // < 1 mes: no anualizar
+  return (Math.pow(pts[pts.length-1].v / pts[0].v, 1/years) - 1) * 100;
+}
+/* Drawdown que se PUBLICA: el más duro entre la curva de esta página y el que
+   midió TradingView para la misma ventana. La curva se compone de retornos
+   mensuales, así que no ve una caída que se abre y se cierra dentro del mes —
+   en btc-1d quedaba por encima de TV y en btc-12h por debajo, o sea que ninguna
+   de las dos fuentes domina siempre. Se comparan y gana la peor; publicar la
+   favorable sería justo lo que la regla de la casa prohíbe.
+   Las ventanas cortas (6M/1Y/2Y) no tienen medición de TV: van con la curva. */
+function ddPub(pts, pick){
+  const c = maxDD(pts);
+  const w = WINS.find(x => x.k === pick);
+  const t = w ? DDTV["since-" + w.y] : null;
+  return (t != null && Math.abs(t) > Math.abs(c)) ? -Math.abs(t) : c;
+}
+function maxDD(pts){
+  let peak = -Infinity, dd = 0;
+  pts.forEach(p => { if(p.v > peak) peak = p.v; const d = (p.v/peak - 1)*100; if(d < dd) dd = d; });
+  return dd;
+}
+
+/* Recorta una curva de equity a la ventana elegida y la re-basa a INIT.
+   Lo usan el gráfico y el tile de Total P&L, así que no pueden discrepar. */
+function slice1(pts, months, INIT){
+  const endT = pts[pts.length-1].t;
+  const w0 = new Date(endT); w0.setUTCMonth(w0.getUTCMonth() - months);
+  let i0 = 0; while(i0 < pts.length - 3 && pts[i0].t < w0.getTime()) i0++;
+  const base = pts[i0].v;
+  return pts.slice(i0).map(q => ({t:q.t, v:q.v / base * INIT}));
+}
+const periodLabel = (t) => M[new Date(t).getUTCMonth()] + " " + new Date(t).getUTCFullYear();
+
+function benchmark(v, id){
+  if(!v.bench) return "";
+  const INIT = 1000;
+  const fullA = equity(v.monthly, INIT);
+  const fullB = equity(v.bench.monthly, INIT);
+  const n0 = Math.min(fullA.length, fullB.length);
+  if(n0 < 3) return "";
+
+  /* the window is selectable; both curves are re-based to $1,000 at
+     its first month, so the multiplier always answers "over this period" */
+  const pick   = state.brange[id] || LONGEST;
+  const unit   = state.unit[id]   || "USD";
+  const inCoin = unit === P.activo;
+  const months = RANGES[pick];
+  const endT = fullA[n0-1].t;
+  const w0 = new Date(endT); w0.setUTCMonth(w0.getUTCMonth() - months);
+  let i0 = 0; while(i0 < n0 - 3 && fullA[i0].t < w0.getTime()) i0++;
+
+  const base = fullA[i0].v, baseB = fullB[i0].v;
+  let A = fullA.slice(i0, n0).map(q => ({t:q.t, v:q.v / base  * INIT}));
+  let B = fullB.slice(i0, n0).map(q => ({t:q.t, v:q.v / baseB * INIT}));
+  const n = A.length;
+
+  /* In coin terms the question changes from "how many dollars" to "how many
+     coins". Holding is then flat by definition — it returns exactly the stack
+     you started with — so the orange line becomes the bar to clear. */
+  if(inCoin){
+    const inCoins = A.map((q,i) => ({t:q.t, v:q.v * INIT / B[i].v}));
+    B = B.map(q => ({t:q.t, v:INIT}));
+    A = inCoins;
+  }
+
+  const f  = (v) => inCoin ? (v/INIT).toFixed(2) + " ₿" : money(v);
+  /* one decimal on every tick, so the axis reads as one scale and not five */
+  const fk = (v) => inCoin ? (v/INIT).toFixed(1) + "₿" : kfmt(v);
+
+  const aEnd = A[n-1].v, bEnd = B[n-1].v;
+  const mult = (x) => (x/INIT >= 10 ? (x/INIT).toFixed(0) : (x/INIT).toFixed(1));
+  const hue  = (ASSETS[v.bench.asset] || {}).color || "var(--flat)";
+  const top  = Math.max(aEnd, ...A.map(p=>p.v), ...B.map(p=>p.v)) * 1.06;
+
+  /* geometry — a 4:1 strip works on desktop but collapses on a phone,
+     so the phone gets its own, near-square viewBox and bigger type */
+  const wide = window.innerWidth >= 760;
+  const W  = wide ? 1000 : 380, H  = wide ? 280 : 300;
+  const PL = wide ? 58 : 52,    PR = wide ? 10 : 8;
+  const PT = 8,                 PB = wide ? 24 : 26;
+  const FS = wide ? 11 : 13;
+  const x = (i) => PL + i/(n-1) * (W - PL - PR);
+  const y = (val) => PT + (1 - val/top) * (H - PT - PB);
+  const line = (S) => S.slice(0,n).map((p,i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.v).toFixed(1)}`).join("");
+  const area = (S) => line(S) + `L${x(n-1).toFixed(1)},${y(0)}L${x(0).toFixed(1)},${y(0)}Z`;
+
+  /* lectura larga: fullA ya arranca en INIT, así que no hay que rebasarla */
+  const stress = (pick === LONGWIN || inCoin) ? "" : (() => {
+    const sv = fullA[n0-1].v, sdd = ddPub(fullA, LONGWIN);
+    const y0 = (WINS.find(w => w.k === LONGWIN) || {}).y;
+    return `<div class="bqstress"><span class="sw">${esc(LONGWIN)}</span>
+      <span>the longer and harder read \u2014 same $1,000 from Jan ${y0}:
+      <b>${money(sv)}</b> \u00b7 max drawdown <b>${sign(sdd,1)}%</b>.
+      It contains bear markets this shorter window leaves out.</span></div>`;
+  })();
+
+  const grid = [0, .25, .5, .75, 1].map(f => {
+    const val = top*f, yy = y(val);
+    return `<line x1="${PL}" x2="${W-PR}" y1="${yy}" y2="${yy}" stroke="var(--line)"
+      stroke-dasharray="2 4" stroke-width="1" vector-effect="non-scaling-stroke"/>`
+      + `<text x="${PL-7}" y="${yy+FS*.36}" text-anchor="end" font-size="${FS}"
+        fill="var(--tx-faint)">${fk(val)}</text>`;
+  }).join("");
+
+  const years = []; let lastY = null;
+  A.slice(0,n).forEach((p,i) => {
+    const yr = new Date(p.t).getUTCFullYear();
+    if(yr !== lastY){ lastY = yr; years.push(`<text x="${x(i)}" y="${H-7}" text-anchor="middle"
+      font-size="${FS}" fill="var(--tx-faint)">${yr}</text>`); }
+  });
+
+  const hits = A.slice(0,n).map((p,i) => {
+    /* equity() estampa cada punto al INICIO del mes siguiente al que lo produjo:
+       el valor tras el retorno de agosto queda con fecha 1-sep. Para rotular hay
+       que retroceder un mes, o el gráfico muestra un mes que aún no ocurre.
+       El punto 0 es la semilla (capital inicial) y sí lleva su propio mes. */
+    const d = new Date(p.t);
+    if(i > 0) d.setUTCMonth(d.getUTCMonth() - 1);
+    const lbl  = `${M[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
+    const info = `${lbl} · strategy ${f(p.v)} · buy &amp; hold ${f(B[i].v)}`;
+    const w = (W - PL - PR)/(n-1);
+    /* las coordenadas viajan en el rect: la cruz no recalcula nada, solo se mueve */
+    return `<rect class="bqhit" x="${(x(i)-w/2).toFixed(1)}" y="${PT}" width="${w.toFixed(1)}"
+      height="${H-PT-PB}" data-info="${info}" data-lbl="${lbl}"
+      data-cx="${x(i).toFixed(1)}" data-ya="${y(p.v).toFixed(1)}" data-yb="${y(B[i].v).toFixed(1)}"
+      data-va="${f(p.v)}" data-vb="${f(B[i].v)}"></rect>`;
+  }).join("");
+
+  /* cruz: se dibuja una vez y solo se reposiciona */
+  const cross = `<g class="bqcross" style="display:none" pointer-events="none">
+      <line class="cxline" y1="${PT}" y2="${H-PB}" stroke="var(--tx-faint)"
+        stroke-width="1" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"/>
+      <circle class="cdb" r="4" fill="${hue}" stroke="var(--card)" stroke-width="1.5"/>
+      <circle class="cda" r="4" fill="var(--up)" stroke="var(--card)" stroke-width="1.5"/>
+    </g>`;
+
+  const card = (lab, val, color, m, dd, win, term, cg) => {
+    /* MAR = retorno anualizado por cada punto de caída. Va en la tarjeta y no
+       en las estadísticas porque cumple la regla: es lo que AMBOS lados tienen
+       —sale de dos cifras que ya están acá— y es la métrica que la casa declaró
+       prioritaria. Además es el contraste más duro de la tarjeta: en BTC 12H L+S
+       la estrategia saca 10,1× al buy & hold por MAR, contra 2,9× por
+       multiplicador. Se omite si la caída es ~0 (en modo BTC el hold es plano). */
+    /* sin retorno no hay "retorno por unidad de caída": un MAR negativo no
+       informa, confunde. El SOL 12H lo destapó — su buy & hold cae 11,3 %
+       anual en la ventana de 2 años y el chip decía "MAR -0.2". */
+    const mar = (cg != null && cg > 0 && Math.abs(dd) > 0.05) ? cg / Math.abs(dd) : null;
+    return `
+    <div class="bqcard" style="--bqc:${color}">
+      <div class="lab">${lab}${hint(term)}${win ? `<span class="bqwin">WINNER</span>` : ""}</div>
+      <div class="grow"><span class="from">${f(INIT)}</span><span class="from">&rarr;</span>
+        <span class="to">${f(val)}</span></div>
+      <div class="bqchips"><span class="bqchip mult"><b>${m}×</b> multiplier${hint("mult")}</span>
+        <span class="bqchip">Max DD ${sign(dd,1)}%${hint("maxdd")}</span>${
+          cg == null ? "" : `<span class="bqchip">CAGR ${sign(cg,1)}%${hint("cagr")}</span>`}${
+          mar == null ? "" : `<span class="bqchip">MAR ${mar.toFixed(1)}${hint("mar")}</span>`}</div>
+    </div>`;
+  };
+
+  return `<div class="sect">
+    <h5>📈 Strategy vs buy &amp; hold${hint(inCoin ? "unit" : "hold2")}
+      <span class="rhead">
+        <span>${f(INIT)} from ${M[new Date(A[0].t).getUTCMonth()]} ${new Date(A[0].t).getUTCFullYear()}</span>
+        <span class="rrange">${["USD",P.activo].map(u =>
+          `<button type="button" data-unit="${u}" aria-pressed="${unit === u}">${u}</button>`).join("")}</span>
+        <span class="rrange">${Object.keys(RANGES).map(k =>
+          `<button type="button" data-brange="${k}" aria-pressed="${pick === k}">${k}</button>`).join("")}</span>${hint("ranges")}
+      </span></h5>
+    ${CALIBRADO ? `<div class="calib">⚙︎ <b>Calibrated for the ${CALIBRADO.replace("SINCE ","")} cycle.</b>
+      ${LONGEST === CALIBRADO
+        ? "Shown by default because it is the regime this preset was built for."
+        : "That is the window this preset was tuned and validated on \u2014 the card opens on a different one, so read this figure knowing where it came from."}${hint("calib")}</div>` : ""}
+    ${inCoin ? `<div class="bqnote">Measured in coins, not dollars. Holding is a flat line by
+      definition — it hands back exactly the stack you started with. Green above it means the
+      strategy ended the period with <b>more bitcoin</b> than doing nothing.</div>` : ""}
+    ${v.demo ? `<div class="bqflag">Sample data — this card is a layout placeholder until its engine output is wired in.</div>` : ""}
+    <div class="bq">
+      ${card("Strategy", aEnd, "var(--up)", mult(aEnd), ddPub(A, pick), aEnd > bEnd, "stratval", cagrOf(A))}
+      ${card(esc(v.bench.asset) + " buy &amp; hold", bEnd, hue, mult(bEnd), maxDD(B), bEnd > aEnd, "bhval", cagrOf(B))}
+    </div>
+    ${stress}
+    <div class="bqchart">
+      <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Equity curve comparison">
+        <defs>
+          <linearGradient id="ga-${v.gid}" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--up)" stop-opacity=".28"/>
+            <stop offset="100%" stop-color="var(--up)" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        ${grid}
+        <path d="${area(B)}" fill="${hue}" fill-opacity=".10"/>
+        <path d="${line(B)}" fill="none" stroke="${hue}" stroke-width="2"
+          vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+        <path d="${area(A)}" fill="url(#ga-${v.gid})"/>
+        <path d="${line(A)}" fill="none" stroke="var(--up)" stroke-width="2.2"
+          vector-effect="non-scaling-stroke" stroke-linejoin="round"/>
+        <circle cx="${x(n-1)}" cy="${y(bEnd)}" r="3.5" fill="${hue}"/>
+        <circle cx="${x(n-1)}" cy="${y(aEnd)}" r="3.5" fill="var(--up)"/>
+        ${years}${cross}${hits}
+      </svg>
+      <div class="bqlegend">
+        <span><i style="background:var(--up)"></i>Strategy</span>
+        <span><i style="background:${hue}"></i>${esc(v.bench.asset)} buy &amp; hold${inCoin ? " — flat by definition" : ""}</span>
+      </div>
+      <div class="bqtip" hidden>
+        <div class="t"></div>
+        <div class="r"><i style="background:var(--up)"></i><span>Strategy</span><b class="va"></b></div>
+        <div class="r"><i style="background:${hue}"></i><span>${esc(v.bench.asset)} buy &amp; hold</span><b class="vb"></b></div>
+      </div>
+      <div class="bqread">Hover the chart to read any month.</div>
+    </div>
+    <div class="hint-note"></div>
+  </div>`;
+}
+
+/* ---------- card ---------- */
+function cardHTML(st, tfKey){
+  const v = st.variants[tfKey];
+  v.gid = st.id + "-" + tfKey;
+  const tfs = Object.keys(st.variants);
+  /* the tier tab already says the timeframe and the side, so the only chip
+     worth repeating per card is the one that actually varies */
+  const sideChip = tfs.length > 1 ? `<span class="chip ls">Long + Short</span>` : "";
+
+  const variantSwitch = tfs.length > 1 ? `
+    <div class="variant" role="group" aria-label="Timeframe">
+      ${tfs.map(t => `<button type="button" data-tf="${t}" aria-pressed="${t === tfKey}">${t}</button>`).join("")}
+    </div>` : "";
+
+  return `
+    <button class="card-head" type="button" aria-expanded="false">
+      <div class="ttl">
+        <h3>${esc(st.name)}</h3>
+        <div class="meta">
+          ${sideChip}${v.demo ? `<span class="chip demo">sample data</span>` : ""}
+        </div>
+        <div style="font-size:11.5px;color:var(--tx-faint);margin-top:5px">${esc(st.universe)}</div>
+      </div>
+      <span class="toggle" aria-hidden="true">+</span>
+    </button>
+    ${variantSwitch}
+    ${signalBox(v)}
+    <div class="detail">
+      ${v.demo ? `<div class="banner"><span>⚠️</span><span>The <b>BTC buy &amp; hold</b> figures are real. Everything describing the <b>strategy</b> is <b>sample data</b>, shaped from the real BTC series to validate the layout — replaced once the engine output is wired in.</span></div>` : ""}
+      <div class="detail-bar">
+        <h4>Performance</h4>
+        <div class="stamp">Updated <b class="num">${v.updated}</b><br>go-live forward: <b class="num">${v.goLive}</b></div>
+      </div>
+      ${benchmark(v, st.id)}
+      ${ribbon(v, st.id, `
+        <details class="tsum">
+          <summary>⚡ Trade history — ${v.trades.length} trades${v.tradesNote ? " · " + esc(v.tradesNote) : ""}${hint("tradehist")}</summary>
+          ${tradeList(v)}
+        </details>`)}
+      ${kpiGrid(v, st.id)}
+      <div class="sect"><h5>🗓 Monthly performance</h5>${heatmap(v)}</div>
+      <p class="disclaimer">History = simulated backtest (in-sample). Not real performance, and not investment advice.</p>
+    </div>`;
+}
+
+/* ---------- state ---------- */
+const state = { tf:{}, open:new Set(), range:{}, brange:{}, unit:{} };
+STRATEGIES.forEach(s => state.tf[s.id] = Object.keys(s.variants)[0]);
+/* un solo producto: la tarjeta abre desplegada. El plegado existía para
+   elegir entre varias en una grilla; acá solo escondería el contenido. */
+STRATEGIES.forEach(s => state.open.add(s.id));
+
+function renderGrid(){
+  const list = STRATEGIES;
+  const grid = $("#grid");
+  grid.innerHTML = list.map(s => {
+    const open = state.open.has(s.id);
+    const held = s.variants[state.tf[s.id]].signal.alloc[0].asset;
+    const acc  = (ASSETS[held] || {}).color || "var(--flat)";
+    return `<article class="card${s.featured ? " featured" : ""}${open ? " open" : ""}"
+      data-id="${s.id}" style="--acc:${acc}">${cardHTML(s, state.tf[s.id])}</article>`;
+  }).join("");
+  /* cada repintado destruye la caja del precio: hay que volver a llenarla */
+  if(window.__liveStart) window.__liveStart();
+  grid.querySelectorAll(".card").forEach(c => {
+    if(c.classList.contains("open")){
+      c.querySelector(".card-head").setAttribute("aria-expanded","true");
+      c.querySelector(".toggle").textContent = "−";
+    }
+  });
+}
+
+/* Cruz + globo sobre el gráfico.
+   El globo NO sigue al cursor en vertical: se ancla arriba del área del
+   gráfico y solo se desplaza en horizontal. Así el dedo nunca lo tapa en
+   móvil, que es el defecto clásico de un tooltip pegado al puntero.
+   Cerca del borde derecho cambia de lado para no salirse. */
+function bqShow(hit){
+  const box  = hit.closest(".bqchart");
+  const svg  = box.querySelector("svg");
+  const g    = svg.querySelector(".bqcross");
+  const tip  = box.querySelector(".bqtip");
+  const d    = hit.dataset;
+  g.querySelector(".cxline").setAttribute("x1", d.cx);
+  g.querySelector(".cxline").setAttribute("x2", d.cx);
+  g.querySelector(".cda").setAttribute("cx", d.cx);
+  g.querySelector(".cda").setAttribute("cy", d.ya);
+  g.querySelector(".cdb").setAttribute("cx", d.cx);
+  g.querySelector(".cdb").setAttribute("cy", d.yb);
+  g.style.display = "";
+  box.querySelector(".bqread").textContent = d.info;
+  tip.querySelector(".t").textContent  = d.lbl;
+  tip.querySelector(".va").textContent = d.va;
+  tip.querySelector(".vb").textContent = d.vb;
+  tip.hidden = false;
+  const vb    = svg.viewBox.baseVal;
+  const scale = svg.getBoundingClientRect().width / vb.width;
+  const px    = parseFloat(d.cx) * scale;
+  const w     = tip.offsetWidth;
+  let left = px + 14;
+  if(left + w > box.clientWidth - 6) left = px - w - 14;   // cambia de lado
+  tip.style.left = Math.max(6, left) + "px";
+  tip.style.top  = "10px";
+}
+function bqHide(box){
+  const g = box.querySelector(".bqcross"); if(g) g.style.display = "none";
+  const t = box.querySelector(".bqtip");   if(t) t.hidden = true;
+}
+document.addEventListener("pointermove", (e) => {
+  const hit = e.target.closest(".bqhit");
+  if(hit) bqShow(hit);
+});
+document.addEventListener("pointerdown", (e) => {
+  const hit = e.target.closest(".bqhit");
+  if(hit) bqShow(hit);
+});
+document.addEventListener("pointerout", (e) => {
+  const box = e.target.closest(".bqchart");
+  if(box && !box.contains(e.relatedTarget)) bqHide(box);
+});
+
+document.addEventListener("click", (e) => {
+  const h = e.target.closest(".hint");
+  if(h){
+    const sect = h.closest(".sect") || h.closest(".detail");
+    const note = sect.querySelector(".hint-note")
+              || h.closest(".detail").querySelector(".hint-note");
+    if(note) note.textContent = TERMS[h.dataset.term] || "";
+    return;
+  }
+
+  const rBtn = e.target.closest(".rrange button");
+  if(rBtn){
+    const id = rBtn.closest(".card").dataset.id;
+    if(rBtn.dataset.unit)        state.unit[id]   = rBtn.dataset.unit;
+    else if(rBtn.dataset.brange) state.brange[id] = rBtn.dataset.brange;
+    else                         state.range[id]  = rBtn.dataset.range;
+    renderGrid();
+    return;
+  }
+
+  const hit = e.target.closest(".bqhit");
+  if(hit){
+    hit.closest(".bqchart").querySelector(".bqread").textContent = hit.dataset.info;
+    return;
+  }
+
+  const seg = e.target.closest(".rseg");
+  if(seg){
+    const out = seg.closest(".ribbon-wrap").querySelector(".rinfo");
+    out.textContent = seg.dataset.info || "No data in this excerpt.";
+    return;
+  }
+
+  const tfBtn = e.target.closest(".variant button");
+  if(tfBtn){
+    const card = tfBtn.closest(".card");
+    state.tf[card.dataset.id] = tfBtn.dataset.tf;
+    renderGrid();
+    return;
+  }
+
+  const head = e.target.closest(".card-head");
+  if(head){
+    const card = head.closest(".card");
+    const id = card.dataset.id;
+    state.open.has(id) ? state.open.delete(id) : state.open.add(id);
+    renderGrid();
+    if(state.open.has(id)){
+      const el = $(`.card[data-id="${id}"]`);
+      el.scrollIntoView({behavior:"smooth", block:"nearest"});
+    }
+  }
+});
+
+/* ---------- theme ---------- */
+const store = {
+  get(k){ try{ return localStorage.getItem(k); }catch(e){ return null; } },
+  set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} },
+};
+function applyTheme(mode){
+  store.set("sg-theme", mode);
+  if(mode === "auto") document.documentElement.removeAttribute("data-theme");
+  else document.documentElement.setAttribute("data-theme", mode);
+  document.querySelectorAll("[data-theme-set]").forEach(b =>
+    b.setAttribute("aria-pressed", String(b.dataset.themeSet === mode)));
+}
+document.querySelectorAll("[data-theme-set]").forEach(b =>
+  b.addEventListener("click", () => applyTheme(b.dataset.themeSet)));
+applyTheme(store.get("sg-theme") || "auto");
+
+renderGrid();
+
+/* the timeline window is 12 months on phones and 24 on wider screens,
+   so re-render only when the breakpoint is actually crossed */
+let wide = window.innerWidth >= 760, rzT;
+window.addEventListener("resize", () => {
+  clearTimeout(rzT);
+  rzT = setTimeout(() => {
+    const now = window.innerWidth >= 760;
+    if(now !== wide){ wide = now; renderGrid(); }
+  }, 160);
+});
+</script>
+<script>
+/* El JSON comparte stem con la página (btc-1d.html ↔ btc-1d.signal.json), que es
+   justamente para lo que la convención de nombres los emparejó. Si el archivo no
+   está publicado, el botón no se muestra: mejor ausente que roto. */
+(function(){
+  var a = document.getElementById("signal-link");
+  if (!a) return;
+  var url = location.pathname.replace(/\.html$/, ".signal.json");
+  a.href = url;
+  /* Abierta como archivo local (file://), fetch la bloquea CORS y el botón
+     desaparecería justo cuando se revisa la ficha a mano. Ahí se muestra sin
+     verificar; servida por HTTP sí se comprueba que el JSON exista. */
+  if (location.protocol === "file:") { a.hidden = false; return; }
+  a.hidden = true;
+  fetch(url, {method:"HEAD"}).then(function(r){ a.hidden = !r.ok; })
+                             .catch(function(){ a.hidden = true; });
+})();
+</script>
+</body>
+</html>

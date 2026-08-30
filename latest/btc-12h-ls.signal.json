@@ -1,0 +1,49 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "btc-12h-ls",
+  "kind": "sovereign",
+  "timeframe": "12H",
+  "strategy": {
+    "file": "EVOL BTC 12H Short v4.1 2026-08-30.pine",
+    "preset": "W",
+    "symbol": "BINANCE:BTCUSDT",
+    "md5": "7fd9b024003abe3296c96746aef2550e"
+  },
+  "decision_bar_label": "2026-08-30T12:00Z",
+  "decision_close_utc": "2026-08-30T12:00:00Z",
+  "valid_until_utc": "2026-08-31T00:00:00Z",
+  "generated_at_utc": "2026-08-30T16:20:00Z",
+  "data_as_of": {
+    "BTC": "2026-08-30"
+  },
+  "cash_asset": "USDT",
+  "reference_price": 78678.46,
+  "action": "HOLD",
+  "positions": [
+    {
+      "asset": "BTC",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-08-18",
+      "entry_price": 64351.18
+    }
+  ],
+  "previous_positions": [
+    {
+      "asset": "BTC",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
+  "last_trade": {
+    "asset": "BTC",
+    "side": "short",
+    "entry_date": "2026-08-12",
+    "exit_date": "2026-08-18",
+    "days": 6,
+    "return_pct": -1.67
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:c19db2143cab22365d14c45298387cc0faafc8ebf27b5d71bc23279ae9a587d9"
+}
