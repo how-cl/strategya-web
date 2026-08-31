@@ -1,6 +1,6 @@
 {
   "schema": "strategya.catalog/0.1",
-  "generated_at_utc": "2026-08-31T18:13:00Z",
+  "generated_at_utc": "2026-08-31T21:10:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -175,6 +175,25 @@
       "glyph": "₿",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "rotation-12h-ls",
+      "name": "Rotation 12H L+S",
+      "kind": "rotation",
+      "timeframe": "12H",
+      "sleeve": "long-short",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SUI",
+        "PAXG"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h-ls.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h-ls.signal.json",
       "tier": "free"
     }
   ]
