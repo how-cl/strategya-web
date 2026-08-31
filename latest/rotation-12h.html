@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>SUI 1D — Strategya.pro</title>
-<meta name="description" content="SUI 1D: one decision a day. It holds SUI, or it holds nothing.">
+<title>Rotation 12H — Strategya.pro</title>
+<meta name="description" content="Rotation 12H: two decisions a day. It holds one of five assets, or it holds nothing.">
 <style>
 /* ============================================================
    TOKENS
@@ -23,7 +23,7 @@
   --up:#3fd77f;
   --dn:#f0616d;
   --flat:#7d8794;
-  --accent:#4da2ff;   /* el acento es el color del activo que opera esta ficha */
+  --accent:#f7931a;   /* el acento es el color del activo que opera esta ficha */
   --warn:#e3b341;
   --radius:14px;
   --radius-sm:10px;
@@ -513,14 +513,14 @@ html.is-stale #stale{display:block}
         strategy for you, and no backtest should change your mind.</p>
       </div>
       <div>
-        <h3><span>02</span> The goal is more SUI, not more dollars.</h3>
-        <p>Judge it the way you judge everything: did the round trip end with more SUI than
+        <h3><span>02</span> The goal is more BTC, not more dollars.</h3>
+        <p>Judge it the way you judge everything: did the round trip end with more one of five assets than
         simply holding? That is the only comparison that matters, and it is the one printed on
         the card below.</p>
       </div>
       <div>
         <h3><span>03</span> It will underperform in a straight bull run.</h3>
-        <p>When SUI only goes up, holding wins — you cannot beat a rocket by stepping off it.
+        <p>When BTC only goes up, holding wins — you cannot beat a rocket by stepping off it.
         The edge shows up across a full cycle, and above all in the drawdown you never had to sit
         through. Use the range buttons on each chart and check the bad years yourself.</p>
       </div>
@@ -537,11 +537,12 @@ html.is-stale #stale{display:block}
     <summary>How to read this board</summary>
     <div class="body">
       <p><b>The card tells you what the strategy holds right now.</b>
-      “100% on SUI” means fully in SUI today; “100% in CASH” means fully out. Click the card
+      “100% on BTC” means fully in one of five assets today; “100% in CASH” means fully out. Click the card
       to open its full record.</p>
-      <p><b>One decision a day.</b> It reads the market at the daily close and either stays put or
-      switches side. That is the whole cadence: no intraday moves, nothing to watch in between.</p>
-      <p><b>Blue means you are in SUI, green means you are in cash.</b> The position
+      <p><b>Two decisions a day.</b> It reads the market at each 12-hour close — 00:00 and 12:00
+      UTC — and either stays put or switches side. Twice the cadence of the daily line, and the
+      reason this one reacts faster to a turn.</p>
+      <p><b>Orange means you are in one of five assets, green means you are in cash.</b> The position
       history inside the card paints one band per holding period, so a whole year of decisions
       reads at a glance — and you can see exactly which crashes it sat out.</p>
       <p><b>History is a simulated backtest, not money that was made.</b> It shows how the
@@ -555,11 +556,11 @@ html.is-stale #stale{display:block}
     History = <b>simulated BACKTEST</b> (in-sample, not real performance). FORWARD from go-live.<br>
     None of this is investment advice.
     <div class="runstamp">
-      <span>product: sui-1d</span>
+      <span>product: rotation-12h</span>
       <span>run: 2026-08-31 17:41 UTC</span>
-      <span>decision close: 2026-08-31 00:00 U C</span>
+      <span>decision close: 2026-08-31 12:00 U C</span>
       <span>valid until: 2026-09-01 00:00 UTC</span>
-      <span>source: EVOL SUI 1D Short v3.5 · preset A</span>
+      <span>source: EVOL Rotation 12H v0.5 Strategy.pro USDT LS · preset Winner (v1.1) · Aggressive · leg C</span>
     </div>
   </footer>
 </div>
@@ -573,26 +574,61 @@ html.is-stale #stale{display:block}
    se edita: se genera.
    ══════════════════════════════════════════════════════════════════════ */
 const PRODUCTO = {
-  "slug": "sui-1d",
-  "nombre": "SUI 1D",
-  "tf": "1D",
+  "slug": "rotation-12h",
+  "nombre": "Rotation 12H",
+  "tf": "12H",
   "lado": "LONG",
-  "preset": "A",
-  "pine": "EVOL SUI 1D Short v3.5",
+  "tipo": "rotation",
+  "preset": "Winner (v1.1) · Aggressive · leg C",
+  "pine": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS",
   "abre": "SINCE 2023",
   "exportado": "2026-08-31",
   "actualizado": "2026-08-31",
-  "cierre": "2026-08-31T00:00Z",
+  "cierre": "2026-08-31T12:00Z",
   "validoHasta": "2026-09-01T00:00:00Z",
-  "activo": "SUI",
-  "enProsa": "SUI",
-  "par": "SUIUSDT",
-  "glifo": "◈",
-  "colorVar": "--a-sui",
-  "acento": "#4da2ff",
-  "colorPalabra": "blue",
+  "activo": "BTC",
+  "enProsa": "one of five assets",
+  "par": "BTCUSDT",
+  "glifo": "₿",
+  "colorVar": "--a-btc",
+  "acento": "#f7931a",
+  "colorPalabra": "orange",
   "goLive": "2026-06-15",
-  "corrida": "2026-08-31 17:41 UTC"
+  "corrida": "2026-08-31 17:41 UTC",
+  "benchLabel": "Equal-weight basket",
+  "benchAsset": "BASKET",
+  "universo": [
+    {
+      "a": "BTC",
+      "sym": "₿",
+      "color": "--a-btc",
+      "par": "BTCUSDT"
+    },
+    {
+      "a": "ETH",
+      "sym": "Ξ",
+      "color": "--a-eth",
+      "par": "ETHUSDT"
+    },
+    {
+      "a": "SOL",
+      "sym": "◎",
+      "color": "--a-sol",
+      "par": "SOLUSDT"
+    },
+    {
+      "a": "SUI",
+      "sym": "◈",
+      "color": "--a-sui",
+      "par": "SUIUSDT"
+    },
+    {
+      "a": "PAXG",
+      "sym": "◆",
+      "color": "--a-gold",
+      "par": "PAXGUSDT"
+    }
+  ]
 };
 
 /* derivados: se calculan, no se repiten */
@@ -712,52 +748,203 @@ const TODAY = "2026-08-31";   /* fecha de la corrida, UTC */
 const ymd = (t) => new Date(t).toISOString().slice(0,10);
 
 /* ======================================================================
-   sui-1d — DATOS emitidos por el MOTOR, no por un export de TradingView.
-   EVOL SUI 1D Short v3.5 2026-08-30.pine · preset A · velas BINANCE_SUIUSDT_1D.csv
-   Corrida 2026-08-31 17:41 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   rotation-12h — DATOS emitidos por el MOTOR, no por un export de TradingView.
+   EVOL Rotation 12Hrs v0.5 · Winner (v1.1) · Aggressive · Leg C · shorts OFF ·
+   oro ON · breakers OFF · BINANCE BTC/ETH/SOL/SUI + PAXG · $1.000 ·
+   comision 0,1 % por lado · slippage 0.
 
-   ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2023 con Δ 0.08 %
-   (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
+   ⚠ EL 12H ES HIBRIDO, no es el 1D con otras velas (.pine linea 192):
+      BTC · SOL · PAXG   senal nativa en 12h
+      ETH · SUI          senal DIARIA, comprometida solo en la vela de 12h cuya
+                         clausura ES el cierre diario (la que abre 12:00 UTC) y
+                         sostenida hasta el cierre siguiente
+      precios            SIEMPRE 12h, para fills y valorizacion
+      Correr las cinco patas en 12h daba 168 trades y +497 % contra 125 y
+      +12.687 % de la vara. No era un dial mal copiado: era la temporalidad.
+
+   VARA contra la tabla Analyzer, ventana 2023 (Winner-Aggressive-Leg C, oro ON):
+      Trades         126 vs 125          0,80 %  ✅
+      Max DD      25,75 % vs 25,75 %     0,01 %  ✅
+      Net       +12.809 % vs +12.688 %   0,96 %  ✅ (tol declarada 1,0 %)
+      Win Rate    59,52 % vs 61,60 %     3,37 %  ⚠ declarado
+      Profit Factor  2,54 vs 2,80        9,20 %  ⚠ declarado — es la MISMA firma
+        que quedo abierta en el Rotation 1D (7,17 vs 7,96, 9,89 %): aparece
+        identica en las dos ventanas del 12h, asi que es del computo del
+        Analyzer, no de esta portacion.
+
+   ⚠ Aca el "Synthetic Max DD" del Analyzer es el de MARCA A MERCADO: coincide
+   al centavo en las DOS ventanas y el realizado da 19,54 %. Se publica el mas
+   duro, que es la regla 19.
+   ⚠ La posicion abierta se valua al ULTIMO CIERRE REAL, nunca con vela en curso.
+   ⚠ Backtest simulado, no performance real. No es asesoria de inversion.
    ====================================================================== */
 
 const DATOS = {
 
   monthly: [
-  {year:2026, months:{Jan:-6.1,Feb:0.0,Mar:0.0,Apr:0.0,May:0.0,Jun:0.0,Jul:0.0,Aug:-3.3,Sep:null,Oct:null,Nov:null,Dec:null}, total:-9.1, positive:"0/8"},
-  {year:2025, months:{Jan:7.2,Feb:0.0,Mar:0.0,Apr:31.2,May:-0.4,Jun:0.0,Jul:3.3,Aug:-4.3,Sep:0.0,Oct:0.0,Nov:0.0,Dec:0.0}, total:38.4, positive:"3/12"},
-  {year:2024, months:{Jan:95.9,Feb:10.4,Mar:-11.3,Apr:0.0,May:0.0,Jun:0.0,Jul:0.0,Aug:0.0,Sep:98.6,Oct:11.1,Nov:76.3,Dec:18.6}, total:785.3, positive:"6/12"},
-  {year:2023, months:{Jan:null,Feb:null,Mar:null,Apr:null,May:0.0,Jun:0.0,Jul:-5.2,Aug:0.0,Sep:0.0,Oct:-5.4,Nov:34.8,Dec:29.8}, total:56.9, positive:"2/8"},
+  {year:2026, months:{Jan:11.7,Feb:10.9,Mar:-8.3,Apr:-0.9,May:0.5,Jun:0.0,Jul:4.4,Aug:21.4,Sep:null,Oct:null,Nov:null,Dec:null}, total:43.5, positive:"5/8"},
+  {year:2025, months:{Jan:25.6,Feb:-6.9,Mar:10.1,Apr:44.1,May:10.8,Jun:-5.1,Jul:16.5,Aug:16.8,Sep:12.0,Oct:-7.3,Nov:6.0,Dec:2.3}, total:198.7, positive:"9/12"},
+  {year:2024, months:{Jan:72.5,Feb:18.1,Mar:7.2,Apr:3.6,May:14.2,Jun:-10.9,Jul:25.1,Aug:2.5,Sep:98.4,Oct:21.6,Nov:56.4,Dec:-1.7}, total:995.9, positive:"10/12"},
+  {year:2023, months:{Jan:46.2,Feb:-0.7,Mar:21.2,Apr:3.2,May:-2.3,Jun:-0.0,Jul:-11.1,Aug:0.0,Sep:-0.4,Oct:19.6,Nov:7.6,Dec:37.0}, total:176.5, positive:"6/12"},
   ],
 
   bench: [
-  {year:2026, months:{Jan:-17.9,Feb:-21.6,Mar:-2.8,Apr:3.4,May:-1.4,Jun:-22.9,Jul:-1.2,Aug:4.3,Sep:null,Oct:null,Nov:null,Dec:null}, total:-49.4, positive:"2/8"},
-  {year:2025, months:{Jan:-0.8,Feb:-30.8,Mar:-19.9,Apr:54.6,May:-7.4,Jun:-14.4,Jul:30.1,Aug:-10.1,Sep:0.3,Oct:-27.5,Nov:-36.7,Dec:-6.2}, total:-65.9, positive:"3/12"},
-  {year:2024, months:{Jan:95.9,Feb:10.4,Mar:14.1,Apr:-40.2,May:-10.5,Jun:-19.9,Jul:-13.8,Aug:12.6,Sep:122.8,Oct:11.1,Nov:76.3,Dec:18.6}, total:431.8, positive:"8/12"},
-  {year:2023, months:{Jan:null,Feb:null,Mar:null,Apr:null,May:-30.5,Jun:-29.3,Jul:-8.3,Aug:-20.8,Sep:-6.0,Oct:-5.8,Nov:34.8,Dec:29.8}, total:-44.7, positive:"2/8"},
+  {year:2026, months:{Jan:-11.8,Feb:-15.0,Mar:-1.8,Apr:3.4,May:-2.7,Jun:-14.8,Jul:2.9,Aug:30.8,Sep:null,Oct:null,Nov:null,Dec:null}, total:-15.0, positive:"3/8"},
+  {year:2025, months:{Jan:15.2,Feb:-30.6,Mar:-12.1,Apr:17.6,May:7.5,Jun:-1.3,Jul:13.9,Aug:8.8,Sep:3.4,Oct:-9.1,Nov:-23.9,Dec:-4.4}, total:-25.6, positive:"6/12"},
+  {year:2024, months:{Jan:0.4,Feb:30.4,Mar:41.4,Apr:-30.6,May:23.2,Jun:-10.2,Jul:10.5,Aug:-17.5,Sep:13.4,Oct:9.1,Nov:40.1,Dec:-13.3}, total:94.8, positive:"8/12"},
+  {year:2023, months:{Jan:43.3,Feb:-3.3,Mar:7.5,Apr:3.5,May:-8.2,Jun:-2.7,Jul:4.9,Aug:-12.3,Sep:3.1,Oct:35.6,Nov:29.6,Dec:42.3}, total:226.7, positive:"8/12"},
   ],
 
   trades: [
-  {asset:"SUI", side:"LONG", entry:"2026-08-21", exit:null, days:9, ret:null, open:true},
-  {asset:"SUI", side:"LONG", entry:"2026-01-04", exit:"2026-01-20", days:16, ret:-6.06},
-  {asset:"CASH", side:"CASH", entry:"2025-08-02", exit:"2026-01-04", days:155, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2025-07-11", exit:"2025-08-02", days:22, ret:-1.11},
-  {asset:"CASH", side:"CASH", entry:"2025-05-27", exit:"2025-07-11", days:45, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2025-04-23", exit:"2025-05-27", days:34, ret:30.59},
-  {asset:"CASH", side:"CASH", entry:"2025-01-21", exit:"2025-04-23", days:92, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2024-09-08", exit:"2025-01-21", days:135, ret:394.65},
-  {asset:"CASH", side:"CASH", entry:"2024-03-05", exit:"2024-09-08", days:187, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2023-10-29", exit:"2024-03-05", days:128, ret:217.55},
-  {asset:"CASH", side:"CASH", entry:"2023-07-22", exit:"2023-10-29", days:99, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2026-08-31", exit:null, days:1, ret:null, open:true},
+  {asset:"ETH", side:"LONG", entry:"2026-08-25", exit:"2026-08-31", days:6, ret:-2.83},
+  {asset:"SUI", side:"LONG", entry:"2026-08-24", exit:"2026-08-25", days:1, ret:-6.13},
+  {asset:"ETH", side:"LONG", entry:"2026-07-05", exit:"2026-08-24", days:50, ret:38.07},
+  {asset:"CASH", side:"CASH", entry:"2026-05-19", exit:"2026-07-05", days:46, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2026-04-19", exit:"2026-05-19", days:30, ret:1.27},
+  {asset:"ETH", side:"LONG", entry:"2026-04-18", exit:"2026-04-19", days:1, ret:-3.9},
+  {asset:"SOL", side:"LONG", entry:"2026-04-17", exit:"2026-04-18", days:1, ret:0.42},
+  {asset:"ETH", side:"LONG", entry:"2026-04-12", exit:"2026-04-17", days:5, ret:2.86},
+  {asset:"BTC", side:"LONG", entry:"2026-04-10", exit:"2026-04-12", days:2, ret:1.55},
+  {asset:"ETH", side:"LONG", entry:"2026-04-08", exit:"2026-04-10", days:2, ret:-2.42},
+  {asset:"CASH", side:"CASH", entry:"2026-03-18", exit:"2026-04-08", days:20, ret:0.0},
+  {asset:"PAXG", side:"LONG", entry:"2026-01-20", exit:"2026-03-18", days:57, ret:4.95},
+  {asset:"ETH", side:"LONG", entry:"2026-01-14", exit:"2026-01-20", days:6, ret:-4.29},
+  {asset:"SUI", side:"LONG", entry:"2026-01-04", exit:"2026-01-14", days:10, ret:12.7},
+  {asset:"PAXG", side:"LONG", entry:"2025-10-11", exit:"2026-01-04", days:85, ret:9.14},
+  {asset:"BTC", side:"LONG", entry:"2025-10-08", exit:"2025-10-11", days:2, ret:-8.41},
+  {asset:"ETH", side:"LONG", entry:"2025-10-07", exit:"2025-10-08", days:1, ret:-4.39},
+  {asset:"BTC", side:"LONG", entry:"2025-10-05", exit:"2025-10-07", days:1, ret:0.77},
+  {asset:"ETH", side:"LONG", entry:"2025-10-03", exit:"2025-10-05", days:2, ret:1.42},
+  {asset:"BTC", side:"LONG", entry:"2025-10-01", exit:"2025-10-03", days:2, ret:2.83},
+  {asset:"PAXG", side:"LONG", entry:"2025-08-27", exit:"2025-10-01", days:35, ret:15.05},
+  {asset:"CASH", side:"CASH", entry:"2025-08-18", exit:"2025-08-27", days:8, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2025-08-15", exit:"2025-08-18", days:3, ret:-3.02},
+  {asset:"ETH", side:"LONG", entry:"2025-08-05", exit:"2025-08-15", days:9, ret:23.52},
+  {asset:"BTC", side:"LONG", entry:"2025-08-02", exit:"2025-08-05", days:3, ret:1.15},
+  {asset:"ETH", side:"LONG", entry:"2025-07-29", exit:"2025-08-02", days:3, ret:-9.01},
+  {asset:"SUI", side:"LONG", entry:"2025-07-27", exit:"2025-07-29", days:2, ret:-6.52},
+  {asset:"ETH", side:"LONG", entry:"2025-07-24", exit:"2025-07-27", days:3, ret:2.9},
+  {asset:"SOL", side:"LONG", entry:"2025-07-22", exit:"2025-07-24", days:1, ret:-5.45},
+  {asset:"ETH", side:"LONG", entry:"2025-07-18", exit:"2025-07-22", days:4, ret:6.36},
+  {asset:"SUI", side:"LONG", entry:"2025-07-11", exit:"2025-07-18", days:7, ret:14.57},
+  {asset:"ETH", side:"LONG", entry:"2025-07-10", exit:"2025-07-11", days:1, ret:6.38},
+  {asset:"SOL", side:"LONG", entry:"2025-07-08", exit:"2025-07-10", days:1, ret:3.59},
+  {asset:"BTC", side:"LONG", entry:"2025-07-08", exit:"2025-07-08", days:1, ret:0.25},
+  {asset:"SOL", side:"LONG", entry:"2025-07-07", exit:"2025-07-08", days:1, ret:-2.75},
+  {asset:"BTC", side:"LONG", entry:"2025-06-25", exit:"2025-07-07", days:12, ret:2.21},
+  {asset:"CASH", side:"CASH", entry:"2025-06-19", exit:"2025-06-25", days:6, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2025-06-14", exit:"2025-06-19", days:5, ret:-1.31},
+  {asset:"ETH", side:"LONG", entry:"2025-06-10", exit:"2025-06-14", days:3, ret:-7.2},
+  {asset:"BTC", side:"LONG", entry:"2025-06-06", exit:"2025-06-10", days:4, ret:7.7},
+  {asset:"ETH", side:"LONG", entry:"2025-05-28", exit:"2025-06-06", days:9, ret:-9.46},
+  {asset:"BTC", side:"LONG", entry:"2025-05-27", exit:"2025-05-28", days:1, ret:-0.65},
+  {asset:"SOL", side:"LONG", entry:"2025-05-24", exit:"2025-05-27", days:3, ret:0.33},
+  {asset:"ETH", side:"LONG", entry:"2025-05-23", exit:"2025-05-24", days:1, ret:-1.77},
+  {asset:"BTC", side:"LONG", entry:"2025-05-19", exit:"2025-05-23", days:4, ret:2.26},
+  {asset:"ETH", side:"LONG", entry:"2025-05-09", exit:"2025-05-19", days:10, ret:12.93},
+  {asset:"BTC", side:"LONG", entry:"2025-05-07", exit:"2025-05-09", days:2, ret:6.42},
+  {asset:"SUI", side:"LONG", entry:"2025-05-06", exit:"2025-05-07", days:1, ret:4.45},
+  {asset:"BTC", side:"LONG", entry:"2025-05-04", exit:"2025-05-06", days:2, ret:-2.33},
+  {asset:"SUI", side:"LONG", entry:"2025-04-23", exit:"2025-05-04", days:11, ret:24.8},
+  {asset:"SOL", side:"LONG", entry:"2025-04-19", exit:"2025-04-23", days:3, ret:7.0},
+  {asset:"BTC", side:"LONG", entry:"2025-04-13", exit:"2025-04-19", days:6, ret:-0.27},
+  {asset:"PAXG", side:"LONG", entry:"2025-02-02", exit:"2025-04-13", days:70, ret:14.81},
+  {asset:"SOL", side:"LONG", entry:"2025-01-16", exit:"2025-02-02", days:16, ret:-0.08},
+  {asset:"BTC", side:"LONG", entry:"2025-01-16", exit:"2025-01-16", days:1, ret:-1.53},
+  {asset:"SUI", side:"LONG", entry:"2024-12-20", exit:"2025-01-16", days:26, ret:37.74},
+  {asset:"BTC", side:"LONG", entry:"2024-12-19", exit:"2024-12-20", days:1, ret:-7.65},
+  {asset:"SUI", side:"LONG", entry:"2024-12-12", exit:"2024-12-19", days:7, ret:-1.04},
+  {asset:"BTC", side:"LONG", entry:"2024-12-11", exit:"2024-12-12", days:1, ret:4.48},
+  {asset:"SUI", side:"LONG", entry:"2024-12-06", exit:"2024-12-11", days:5, ret:-12.32},
+  {asset:"ETH", side:"LONG", entry:"2024-12-05", exit:"2024-12-06", days:1, ret:-3.9},
+  {asset:"SUI", side:"LONG", entry:"2024-12-04", exit:"2024-12-05", days:1, ret:3.32},
+  {asset:"ETH", side:"LONG", entry:"2024-11-24", exit:"2024-12-04", days:10, ret:9.66},
+  {asset:"BTC", side:"LONG", entry:"2024-11-21", exit:"2024-11-24", days:3, ret:3.38},
+  {asset:"SUI", side:"LONG", entry:"2024-11-10", exit:"2024-11-21", days:11, ret:28.02},
+  {asset:"SOL", side:"LONG", entry:"2024-11-09", exit:"2024-11-10", days:1, ret:-0.18},
+  {asset:"SUI", side:"LONG", entry:"2024-11-07", exit:"2024-11-09", days:2, ret:-0.87},
+  {asset:"SOL", side:"LONG", entry:"2024-11-06", exit:"2024-11-07", days:1, ret:-0.27},
+  {asset:"SUI", side:"LONG", entry:"2024-11-06", exit:"2024-11-06", days:1, ret:14.86},
+  {asset:"BTC", side:"LONG", entry:"2024-11-05", exit:"2024-11-06", days:1, ret:2.04},
+  {asset:"SUI", side:"LONG", entry:"2024-10-31", exit:"2024-11-05", days:5, ret:-11.38},
+  {asset:"BTC", side:"LONG", entry:"2024-10-30", exit:"2024-10-31", days:1, ret:0.3},
+  {asset:"SOL", side:"LONG", entry:"2024-10-20", exit:"2024-10-30", days:10, ret:10.15},
+  {asset:"BTC", side:"LONG", entry:"2024-10-16", exit:"2024-10-20", days:4, ret:0.57},
+  {asset:"SUI", side:"LONG", entry:"2024-09-08", exit:"2024-10-16", days:38, ret:130.12},
+  {asset:"PAXG", side:"LONG", entry:"2024-07-30", exit:"2024-09-08", days:39, ret:4.01},
+  {asset:"BTC", side:"LONG", entry:"2024-07-22", exit:"2024-07-30", days:8, ret:-2.53},
+  {asset:"SOL", side:"LONG", entry:"2024-07-15", exit:"2024-07-22", days:7, ret:24.69},
+  {asset:"PAXG", side:"LONG", entry:"2024-07-06", exit:"2024-07-15", days:9, ret:1.37},
+  {asset:"CASH", side:"CASH", entry:"2024-06-25", exit:"2024-07-06", days:11, ret:0.0},
+  {asset:"ETH", side:"LONG", entry:"2024-05-21", exit:"2024-06-25", days:35, ret:-8.62},
+  {asset:"BTC", side:"LONG", entry:"2024-05-16", exit:"2024-05-21", days:5, ret:7.7},
+  {asset:"PAXG", side:"LONG", entry:"2024-03-21", exit:"2024-05-16", days:56, ret:8.71},
+  {asset:"BTC", side:"LONG", entry:"2024-03-16", exit:"2024-03-21", days:5, ret:-2.58},
+  {asset:"ETH", side:"LONG", entry:"2024-03-15", exit:"2024-03-16", days:1, ret:1.23},
+  {asset:"BTC", side:"LONG", entry:"2024-03-13", exit:"2024-03-15", days:2, ret:-5.36},
+  {asset:"ETH", side:"LONG", entry:"2024-03-12", exit:"2024-03-13", days:1, ret:-1.21},
+  {asset:"BTC", side:"LONG", entry:"2024-03-11", exit:"2024-03-12", days:1, ret:0.55},
+  {asset:"ETH", side:"LONG", entry:"2024-03-07", exit:"2024-03-11", days:4, ret:5.44},
+  {asset:"BTC", side:"LONG", entry:"2024-02-28", exit:"2024-03-07", days:8, ret:15.61},
+  {asset:"ETH", side:"LONG", entry:"2024-02-16", exit:"2024-02-28", days:11, ret:14.6},
+  {asset:"SUI", side:"LONG", entry:"2024-02-10", exit:"2024-02-16", days:6, ret:2.71},
+  {asset:"BTC", side:"LONG", entry:"2024-02-09", exit:"2024-02-10", days:1, ret:3.86},
+  {asset:"SUI", side:"LONG", entry:"2024-02-06", exit:"2024-02-09", days:3, ret:-3.35},
+  {asset:"BTC", side:"LONG", entry:"2024-02-04", exit:"2024-02-06", days:1, ret:-1.01},
+  {asset:"SOL", side:"LONG", entry:"2024-02-04", exit:"2024-02-04", days:1, ret:-0.24},
+  {asset:"SUI", side:"LONG", entry:"2024-01-12", exit:"2024-02-04", days:23, ret:31.29},
+  {asset:"ETH", side:"LONG", entry:"2024-01-09", exit:"2024-01-12", days:3, ret:12.12},
+  {asset:"SUI", side:"LONG", entry:"2023-12-18", exit:"2024-01-09", days:21, ret:47.17},
+  {asset:"BTC", side:"LONG", entry:"2023-12-14", exit:"2023-12-18", days:4, ret:-5.19},
+  {asset:"SUI", side:"LONG", entry:"2023-12-09", exit:"2023-12-14", days:5, ret:-5.06},
+  {asset:"BTC", side:"LONG", entry:"2023-12-04", exit:"2023-12-09", days:4, ret:5.98},
+  {asset:"ETH", side:"LONG", entry:"2023-12-03", exit:"2023-12-04", days:1, ret:3.42},
+  {asset:"BTC", side:"LONG", entry:"2023-11-30", exit:"2023-12-03", days:3, ret:4.0},
+  {asset:"SUI", side:"LONG", entry:"2023-11-24", exit:"2023-11-30", days:6, ret:-2.91},
+  {asset:"ETH", side:"LONG", entry:"2023-11-23", exit:"2023-11-24", days:1, ret:1.43},
+  {asset:"BTC", side:"LONG", entry:"2023-11-17", exit:"2023-11-23", days:5, ret:2.64},
+  {asset:"SUI", side:"LONG", entry:"2023-11-05", exit:"2023-11-17", days:12, ret:9.1},
+  {asset:"ETH", side:"LONG", entry:"2023-11-04", exit:"2023-11-05", days:1, ret:0.78},
+  {asset:"SUI", side:"LONG", entry:"2023-11-02", exit:"2023-11-04", days:2, ret:-3.12},
+  {asset:"BTC", side:"LONG", entry:"2023-11-01", exit:"2023-11-02", days:1, ret:2.55},
+  {asset:"SUI", side:"LONG", entry:"2023-10-29", exit:"2023-11-01", days:3, ret:-7.25},
+  {asset:"BTC", side:"LONG", entry:"2023-09-29", exit:"2023-10-29", days:30, ret:25.87},
+  {asset:"CASH", side:"CASH", entry:"2023-07-22", exit:"2023-09-29", days:69, ret:0.0},
   {asset:"SUI", side:"LONG", entry:"2023-07-18", exit:"2023-07-22", days:4, ret:-5.21},
+  {asset:"BTC", side:"LONG", entry:"2023-07-07", exit:"2023-07-18", days:11, ret:0.61},
+  {asset:"ETH", side:"LONG", entry:"2023-07-01", exit:"2023-07-07", days:5, ret:-4.17},
+  {asset:"SOL", side:"LONG", entry:"2023-06-30", exit:"2023-07-01", days:1, ret:-3.05},
+  {asset:"BTC", side:"LONG", entry:"2023-06-21", exit:"2023-06-30", days:9, ret:8.97},
+  {asset:"CASH", side:"CASH", entry:"2023-06-06", exit:"2023-06-21", days:15, ret:0.0},
+  {asset:"SOL", side:"LONG", entry:"2023-06-04", exit:"2023-06-06", days:1, ret:-7.97},
+  {asset:"CASH", side:"CASH", entry:"2023-05-01", exit:"2023-06-04", days:34, ret:0.0},
+  {asset:"SOL", side:"LONG", entry:"2023-04-29", exit:"2023-05-01", days:2, ret:-5.03},
+  {asset:"CASH", side:"CASH", entry:"2023-04-20", exit:"2023-04-29", days:9, ret:0.0},
+  {asset:"ETH", side:"LONG", entry:"2023-03-31", exit:"2023-04-20", days:19, ret:7.64},
+  {asset:"BTC", side:"LONG", entry:"2023-03-29", exit:"2023-03-31", days:2, ret:-1.7},
+  {asset:"ETH", side:"LONG", entry:"2023-03-29", exit:"2023-03-29", days:1, ret:1.95},
+  {asset:"BTC", side:"LONG", entry:"2023-03-14", exit:"2023-03-29", days:15, ret:12.83},
+  {asset:"ETH", side:"LONG", entry:"2023-03-13", exit:"2023-03-14", days:1, ret:5.68},
+  {asset:"CASH", side:"CASH", entry:"2023-02-28", exit:"2023-03-13", days:12, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2023-02-16", exit:"2023-02-28", days:12, ret:-4.98},
+  {asset:"SOL", side:"LONG", entry:"2023-02-16", exit:"2023-02-16", days:1, ret:-1.41},
+  {asset:"BTC", side:"LONG", entry:"2023-02-10", exit:"2023-02-16", days:6, ret:11.36},
+  {asset:"ETH", side:"LONG", entry:"2023-02-03", exit:"2023-02-10", days:6, ret:-6.48},
+  {asset:"BTC", side:"LONG", entry:"2023-01-14", exit:"2023-02-03", days:20, ret:17.84},
+  {asset:"SOL", side:"LONG", entry:"2023-01-09", exit:"2023-01-14", days:5, ret:26.23},
   ],
 
-  hoy: {asset:"SUI", dir:"LONG", close:0.7111},
-  lastChange: {frm:"CASH", to:"SUI", date:"2026-08-21", price:0.7336, daysAgo:9},
+  hoy: {asset:"BTC", dir:"LONG", close:78315.43},
+  lastChange: {frm:"ETH", to:"BTC", date:"2026-08-31", price:77682.0, daysAgo:0},
   windows: [{"k": "SINCE 2023", "y": 2023}],
   calibrado: null,
-  ddTv: {"since-2023": 14.89},
+  ddTv: {"since-2023": 25.75},
+
+  metrics: {estrategia:{net:12888.7, cagr:277.5, dd:25.75, mar:10.78, sharpe:1.68, sortino:3.03, omega:1.4, exp:82.5}, canasta:{net:302.3, cagr:46.2, dd:66.8, mar:0.69, sharpe:0.65, sortino:0.96, omega:1.1, exp:100.0}},
+
   kpis: {
-    "since-2023": {totalPnl:1706.21, openPnl:-3.26, openSide:"LONG", openSince:"2026-08-21", openPrice:0.7336, todayPnl:1647.31, ytd:-9.1, winRate:50.0, wins:3, losses:3, trades:6, longs:6, shorts:0, profitFactor:12.895, avgMonthly:9.5, avgTrade:105.07, avgHoldBars:56.5, avgHold:56.5, cagr:118.47, avgWin:214.26, avgLoss:-4.13, since:"2023-07-18"},
+    "since-2023": {totalPnl:12809.49, openPnl:0.61, openSide:"LONG", openSince:"2026-08-31", openPrice:77682.0, todayPnl:12888.74, ytd:43.5, winRate:59.5, wins:75, losses:51, trades:126, longs:126, shorts:0, profitFactor:2.542, avgMonthly:13.5, avgTrade:4.74, avgHoldBars:8.6, avgHold:8.6, cagr:277.54, avgWin:10.76, avgLoss:-4.11, since:"2023-01-09"},
   },
 };
 
@@ -880,7 +1067,7 @@ function signalBox(v){
     ${s.preset ? `<div class="signal-preset"><span>&#9881;&#65039;</span><span>${esc(s.preset)}</span></div>` : ""}
    </div>
    <div class="livebox" id="livebox">
-     <div class="l">SUI price <span class="dot" id="livedot"></span><span id="livetxt">live</span></div>
+     <div class="l">BTC price <span class="dot" id="livedot"></span><span id="livetxt">live</span></div>
      <div class="v num" id="liveprice">—</div>
      <div class="c" id="livechg">&nbsp;</div>
      <div class="s">market price, not the signal</div>
@@ -899,19 +1086,19 @@ const TERMS = {
   avgloss:  "Average loss — the mean return of the trades that lost money. Keeping this small is what a stop-loss buys you.",
   maxdd:    "Max drawdown \u2014 the deepest fall from a peak before a new high, measured as a PERCENTAGE of that peak. At -10%, every $100 was worth $90 at the worst moment. Two readings exist for the same window and they do not always agree: this page's own equity curve, which is built from MONTHLY returns and so cannot see a dip that opened and closed inside a single month, and TradingView's own measurement of the strategy over that window. We publish whichever of the two is HARSHER \u2014 never the flattering one, and never an average. Short windows (6M / 1Y / 2Y) have no TradingView figure, so they show the curve alone. \n\nFor this product there is something specific worth knowing: almost all of that fall happened in 2023. Measured from 2024 onward the worst drawdown is 8.2%; measured from 2023 it is 25.7%. It is one bad year rather than the way the strategy usually behaves \u2014 which is useful to know, and is also why we do not let you see only the years after it.",
   mult:     "Multiplier — how many times the starting capital grew. 322× turns $1,000 into $322,000.",
-  unit:     "USD vs SUI — the same two curves, same trades, same dates: only the ruler changes. In dollars the question is how much money you ended up with. In coins it is the one a holder actually cares about — did you end up with MORE BITCOIN than if you had never sold? In BTC the orange line goes flat at 1 \u20BF, and that is not a glitch: holding always returns exactly the stack you started with, so it stops being a curve to beat and becomes the bar to clear. Every point on the green line is your stack at that moment. Above 1 \u20BF means the strategy bought back more coins than it sold; below means it sold and re-entered higher.",
+  unit:     "USD vs BTC — the same two curves, same trades, same dates: only the ruler changes. In dollars the question is how much money you ended up with. In coins it is the one a holder actually cares about — did you end up with MORE BITCOIN than if you had never sold? In BTC the orange line goes flat at 1 \u20BF, and that is not a glitch: holding always returns exactly the stack you started with, so it stops being a curve to beat and becomes the bar to clear. Every point on the green line is your stack at that moment. Above 1 \u20BF means the strategy bought back more coins than it sold; below means it sold and re-entered higher.",
   total:    "Total P&L — everything the strategy made over the measured period, compounded, including the trade that is still open right now. TradingView splits the two: +473.38% closed (its Net profit) plus +12.76% on the open position (its Open PnL), which together are the +546.52% shown here.",
   stratval: "Strategy result — what $1,000 would be worth today if you had followed every signal in this window, compounding, after 0.1% commission on each side of every trade. It is a simulated backtest on past prices, not money that was made.",
-  bhval:    "Buy & hold result — what the same $1,000 would be worth if you had bought SUI at the start of the window and never touched it. This is the benchmark: beating it is the only reason to run a strategy instead of just holding.",
+  bhval:    "Buy & hold result — what the same $1,000 would be worth if you had bought one of five assets at the start of the window and never touched it. This is the benchmark: beating it is the only reason to run a strategy instead of just holding.",
   mx:       "Risk-adjusted, side by side — the same numbers a fund would be judged on. MAR is return divided by the worst drop; Sharpe and Sortino measure return per unit of wobble, and Sortino only counts the wobble that hurts. Omega is total gains over total losses, day by day. Exposure is how much of the time the money was actually in the market. \u26a0 Both rows use the SAME drawdown definition — daily equity, marked to market — because a table where each row measures differently compares nothing.",
-  poshist:  "Position history — one band per holding period, in order. Blue means the strategy was holding SUI; green means it was in cash and out of the market. A long green stretch is a fall it did not sit through.",
+  poshist:  "Position history — one band per holding period, in order. Orange means the strategy was holding one of five assets; green means it was in cash and out of the market. A long green stretch is a fall it did not sit through.",
   tradehist:"Trade history — every completed round trip: when it bought, when it sold, and what that one trade returned. These are individual trade returns, not compounded; the compounded result is the figure at the top.",
   pf:       "Profit factor — every dollar the losing trades gave away against every dollar the winners brought in. Above 1 the strategy makes money; at 13.99 the winners bring in fourteen dollars for each one the losers cost. It is the honest companion to the win rate: a strategy can win most of its trades and still lose money if the few losses are huge, and this is the number that catches that.",
   mar:      "MAR \u2014 how much annual return the strategy produced for each point of drawdown it made you sit through. It is simply the CAGR divided by the worst fall, both of which are on this card. A MAR of 10 means ten points of yearly gain per point of pain; buying and holding the asset usually lands near 1. We put it here because return alone says nothing about what it cost you to earn it \u2014 two strategies can end at the same number with completely different rides, and this is the figure that separates them. It is also the metric this shop ranks its own products by.",
   cagr:     "Annualised return — the yearly rate that would produce the same result, compounded. It is the only figure that compares fairly across windows of different length: 52× over eight years and 6.5× over three and a half look very different as multipliers, yet annualised they are 52.8%/yr and 61.1%/yr. Use the multiplier to see how much it grew, and this to see how fast.",
   calib:    "Calibrated window — this preset was tuned on the market from that year onward, so that is the window it was built for and the one shown first. The longer window is still here, one click away, and it is the harder read: the same rules over earlier bear markets they were never fitted to. Expect it to look weaker. A preset calibrated for one regime is not the best preset for every regime, and there is a real difference between that and overfitting: overfitting falls apart outside the sample it was tuned on, while this one also held up in a stress window it was never optimised for. Showing you both is the point; hiding the gap would be the actual red flag.",
   ranges:   "Time window \u2014 every figure on this card is measured over the window you pick here, and both curves are re-based to the same starting capital at its beginning. 6M / 1Y / 2Y are simply the last months up to today.\n\nWHY IT OPENS ON SINCE 2023. Every product on this board opens on the same window, deliberately. Each one used to open on its own \u2014 and, without anyone choosing it that way, each one opened on the window that happened to flatter it. Comparing them then meant reading eight years of one against three and a half of another, and the bigger number won for the wrong reason. SINCE 2023 is the one window all of them share, counted from the bottom of the previous bear market, and it is the regime most of these presets were tuned for.\n\nShort windows flatter almost any strategy, because they tend to hold no crash at all. That is exactly why the longer reading is not hidden behind this control: it sits under the cards, always visible, with its own result and its own worst drawdown. Use this control to explore; use that line to keep yourself honest.",
-  hold2:    "Strategy vs buy & hold — the same $1,000, the same start date, two different decisions. GREEN is what the strategy would have turned it into by following every signal, compounding, after 0.1% commission on each side of every trade. Blue is what simply buying SUI on day one and never selling would have left you. Beating that blue number is the only reason to run a strategy instead of just holding — and the multiplier under each figure says by how much, while the drawdown chip says what you had to sit through to get there. Both are simulated on past prices, not money that was made.",
+  hold2:    "Strategy vs buy & hold — the same $1,000, the same start date, two different decisions. GREEN is what the strategy would have turned it into by following every signal, compounding, after 0.1% commission on each side of every trade. Orange is what simply buying one of five assets on day one and never selling would have left you. Beating that orange number is the only reason to run a strategy instead of just holding — and the multiplier under each figure says by how much, while the drawdown chip says what you had to sit through to get there. Both are simulated on past prices, not money that was made.",
 };
 const hint = (k) => `<button class="hint" type="button" data-term="${k}" aria-label="What is this?">\u24D8</button>`;
 
@@ -1393,7 +1580,7 @@ function benchmark(v, id){
         : "That is the window this preset was tuned and validated on \u2014 the card opens on a different one, so read this figure knowing where it came from."}${hint("calib")}</div>` : ""}
     ${inCoin ? `<div class="bqnote">Measured in coins, not dollars. Holding is a flat line by
       definition — it hands back exactly the stack you started with. Green above it means the
-      strategy ended the period with <b>more SUI</b> than doing nothing.</div>` : ""}
+      strategy ended the period with <b>more one of five assets</b> than doing nothing.</div>` : ""}
     ${v.demo ? `<div class="bqflag">Sample data — this card is a layout placeholder until its engine output is wired in.</div>` : ""}
     <div class="bq">
       ${card("Strategy", aEnd, "var(--up)", mult(aEnd), ddPub(A, pick), aEnd > bEnd, "stratval", cagrOf(A))}

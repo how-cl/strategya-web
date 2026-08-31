@@ -302,6 +302,18 @@ body{
 /* monthly heatmap */
 .hm-scroll{overflow-x:auto;border:1px solid var(--line-soft);border-radius:var(--radius-sm);background:var(--card-2)}
 table.hm{border-collapse:separate;border-spacing:3px;width:100%;min-width:660px;padding:6px}
+/* Tabla de métricas de riesgo: sólo la emiten los productos que traen
+   DATOS.metrics (hoy, el conductor). Dos filas — la estrategia y su
+   comparable — medidas con LA MISMA definición, que es lo que la hace
+   leerse; una tabla donde cada fila usa otro drawdown no compara nada. */
+table.mx{border-collapse:collapse;width:100%;min-width:620px;font-variant-numeric:tabular-nums}
+table.mx th{font-size:11px;font-weight:500;color:var(--tx-faint);padding:6px 8px;text-align:right;
+  border-bottom:1px solid var(--line)}
+table.mx th:first-child{text-align:left}
+table.mx td{padding:9px 8px;text-align:right;font-size:13px;border-bottom:1px solid var(--line-soft)}
+table.mx td:first-child{text-align:left;font-weight:600}
+table.mx tr:last-child td{border-bottom:0;color:var(--tx-dim)}
+table.mx .win{color:var(--up);font-weight:600}
 table.hm th{font-size:11px;font-weight:500;color:var(--tx-faint);padding:2px 0;text-align:center}
 table.hm th.y,table.hm td.y{text-align:left;padding-left:6px;font-size:12px;color:var(--tx-dim);width:52px}
 table.hm td{
@@ -483,8 +495,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-08-30 16:20 UTC</b>, which was valid until
-    <b>2026-08-31 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-08-31 17:40 UTC</b>, which was valid until
+    <b>2026-09-01 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -545,9 +557,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: btc-12h</span>
-      <span>run: 2026-08-30 16:20 UTC</span>
-      <span>decision close: 2026-08-30 00:00 U C</span>
-      <span>valid until: 2026-08-31 00:00 UTC</span>
+      <span>run: 2026-08-31 17:40 UTC</span>
+      <span>decision close: 2026-08-31 12:00 U C</span>
+      <span>valid until: 2026-09-01 00:00 UTC</span>
       <span>source: EVOL BTC 12H Short v4.1 · preset U</span>
     </div>
   </footer>
@@ -569,10 +581,10 @@ const PRODUCTO = {
   "preset": "U",
   "pine": "EVOL BTC 12H Short v4.1",
   "abre": "SINCE 2023",
-  "exportado": "2026-08-29",
-  "actualizado": "2026-08-30",
-  "cierre": "2026-08-30T00:00Z",
-  "validoHasta": "2026-08-31T00:00:00Z",
+  "exportado": "2026-08-31",
+  "actualizado": "2026-08-31",
+  "cierre": "2026-08-31T12:00Z",
+  "validoHasta": "2026-09-01T00:00:00Z",
   "activo": "BTC",
   "enProsa": "bitcoin",
   "par": "BTCUSDT",
@@ -581,7 +593,7 @@ const PRODUCTO = {
   "acento": "#f7931a",
   "colorPalabra": "orange",
   "goLive": "2026-06-15",
-  "corrida": "2026-08-30 16:20 UTC"
+  "corrida": "2026-08-31 17:40 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -621,7 +633,22 @@ const VALID_UNTIL = PRODUCTO.validoHasta;
    vencida, y por eso va rotulado aparte. Si el fetch falla, cae al último
    cierre que trae la propia señal — la página nunca queda sin número. */
 (function(){
-  const API = "https://api.binance.com/api/v3/ticker/24hr?symbol=" + PRODUCTO.par;
+  /* El par se resuelve AL CONSULTAR, no al cargar. Dos razones: en un Rotation
+     el activo cambia con cada rotación, así que el par fijo del producto sería
+     el equivocado; y `DATOS` se declara DESPUÉS de este bloque, así que leerlo
+     acá arriba lo tocaría en zona muerta temporal — el mismo fallo que ya dejó
+     una ficha en blanco. */
+  const parVivo = () => {
+    /* ⚠ `typeof DATOS` NO protege: leer un `const` en zona muerta temporal
+       lanza igual. Esta función solo se invoca desde tick(), o sea después de
+       que el script terminó — pero el try la deja a salvo si eso cambia. */
+    try {
+      if (PRODUCTO.universo && DATOS.hoy && DATOS.hoy.asset !== "CASH")
+        return (PRODUCTO.universo.find(x => x.a === DATOS.hoy.asset) || {}).par || PRODUCTO.par;
+    } catch (e) {}
+    return PRODUCTO.par;
+  };
+  const API = () => "https://api.binance.com/api/v3/ticker/24hr?symbol=" + parVivo();
   const $$ = (id) => document.getElementById(id);
   const money = (n) => "$" + Number(n).toLocaleString("en-US",{minimumFractionDigits:2, maximumFractionDigits:2});
   let timer = null;
@@ -629,7 +656,7 @@ const VALID_UNTIL = PRODUCTO.validoHasta;
     const dot = $$("livedot"), txt = $$("livetxt"), val = $$("liveprice"), chg = $$("livechg");
     if(!val) return;
     try{
-      const r = await fetch(API, {cache:"no-store"});
+      const r = await fetch(API(), {cache:"no-store"});
       if(!r.ok) throw new Error("http " + r.status);
       const j = await r.json();
       val.textContent = money(j.lastPrice);
@@ -672,59 +699,56 @@ const VALID_UNTIL = PRODUCTO.validoHasta;
   window.__liveStart = () => { tick(); clearInterval(timer); timer = setInterval(tick, 60000); };
 })();
 
-const ASSETS = {
-  [P.activo]: {sym:P.glifo, color:"var(" + P.colorVar + ")"},
-  CASH:       {sym:"$",     color:"var(--a-cash)"},
-};
+/* Un soberano tiene UN activo; un Rotation tiene su universo. La cinta de
+   posiciones ya pinta por `g.asset` y arma su leyenda sola, así que para
+   soportar el conductor basta con poblar este mapa desde P.universo. */
+const ASSETS = Object.assign({},
+  ...(P.universo || [{a:P.activo, sym:P.glifo, color:P.colorVar}])
+     .map(x => ({[x.a]: {sym:x.sym, color:"var(" + x.color + ")"}})),
+  {CASH: {sym:"$", color:"var(--a-cash)"}});
+const ES_ROT = !!P.universo;
 
 const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const TODAY = "2026-08-30";   /* fecha de la corrida, UTC */
+const TODAY = "2026-08-31";   /* fecha de la corrida, UTC */
 const ymd = (t) => new Date(t).toISOString().slice(0,10);
 
 /* ======================================================================
-   btc-12h — DATOS REALES desde el export de TradingView
-   EVOL BTC 12H Short v4.1 · BINANCE:BTCUSDT · 12H · preset U
-   Rango: 2018-04-21 → 2026-08-30 · capital inicial $1.000
-   comisión 0,1 % · slippage 0 · sin trailing.
-   Las ventanas cortas son REBANADAS de este mismo dataset.
-   Delta contra el export de TV: net 0.0 pp · PF 0.0
+   btc-12h — DATOS emitidos por el MOTOR, no por un export de TradingView.
+   EVOL BTC 12H Short v4.1 2026-08-30.pine · preset U · velas BINANCE_BTCUSDT_12h.csv
+   Corrida 2026-08-31 17:40 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
-   ⚠ El nombre de este bloque es FIJO —`DATOS`— a propósito. Antes llevaba el
-   producto como prefijo (BTC_1D_MONTHLY, SOL_12H_KPIS…) y eso obligaba a tocar
-   24 líneas del HTML por cada ficha nueva. Una ficha es un producto: no hace
-   falta que el dato se apellide.
+   ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2018 con Δ 0.11 %
+   (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
    ====================================================================== */
+
 const DATOS = {
 
-  /* rendimiento mensual de la estrategia, compuesto desde $1.000 */
   monthly: [
-  {year:2026, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:6.0,May:0.4,Jun:0.0,Jul:-3.7,Aug:21.1,Sep:null,Oct:null,Nov:null,Dec:null}, total:24.1, positive:"3/8"},
-  {year:2025, months:{Jan:-1.9,Feb:0.0,Mar:0.0,Apr:10.3,May:11.1,Jun:1.1,Jul:8.0,Aug:-0.8,Sep:0.0,Oct:-5.2,Nov:0.0,Dec:0.0}, total:23.4, positive:"4/12"},
-  {year:2024, months:{Jan:-0.9,Feb:43.6,Mar:10.9,Apr:0.0,May:2.1,Jun:0.0,Jul:2.7,Aug:0.0,Sep:4.6,Oct:11.0,Nov:37.2,Dec:-3.9}, total:153.3, positive:"7/12"},
-  {year:2023, months:{Jan:34.9,Feb:0.1,Mar:19.1,Apr:-0.6,May:0.0,Jun:7.5,Jul:-2.0,Aug:0.0,Sep:-0.3,Oct:28.5,Nov:8.9,Dec:8.9}, total:155.9, positive:"7/12"},
-  {year:2022, months:{Jan:0.0,Feb:-5.2,Mar:4.8,Apr:-13.2,May:0.0,Jun:0.0,Jul:-5.2,Aug:0.0,Sep:0.0,Oct:4.6,Nov:-4.0,Dec:-5.2}, total:-22.2, positive:"2/12"},
-  {year:2021, months:{Jan:24.3,Feb:0.0,Mar:0.0,Apr:0.0,May:-5.2,Jun:0.0,Jul:20.9,Aug:-2.4,Sep:0.0,Oct:27.3,Nov:0.0,Dec:0.0}, total:77.0, positive:"3/12"},
-  {year:2020, months:{Jan:12.2,Feb:0.0,Mar:0.0,Apr:21.2,May:9.6,Jun:-3.6,Jul:20.6,Aug:-2.4,Sep:0.0,Oct:26.1,Nov:42.8,Dec:46.9}, total:347.3, positive:"7/12"},
-  {year:2019, months:{Jan:0.0,Feb:4.1,Mar:-0.3,Apr:0.0,May:0.0,Jun:0.0,Jul:0.0,Aug:0.0,Sep:-5.2,Oct:-1.0,Nov:-4.2,Dec:0.0}, total:-6.7, positive:"1/12"},
-  {year:2018, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:4.3,May:-9.1,Jun:0.0,Jul:0.0,Aug:0.0,Sep:-5.2,Oct:-5.2,Nov:-3.2,Dec:0.0}, total:-17.5, positive:"1/12"},
+  {year:2026, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:5.9,May:0.5,Jun:0.0,Jul:-3.8,Aug:21.5,Sep:null,Oct:null,Nov:null,Dec:null}, total:24.3, positive:"3/8"},
+  {year:2025, months:{Jan:-1.9,Feb:0.0,Mar:0.0,Apr:10.2,May:11.1,Jun:1.1,Jul:8.0,Aug:-0.7,Sep:0.0,Oct:-5.2,Nov:0.0,Dec:0.0}, total:23.4, positive:"4/12"},
+  {year:2024, months:{Jan:-1.0,Feb:43.6,Mar:11.0,Apr:0.0,May:2.1,Jun:0.0,Jul:2.7,Aug:0.0,Sep:4.5,Oct:11.0,Nov:37.2,Dec:-3.8}, total:152.9, positive:"7/12"},
+  {year:2023, months:{Jan:34.7,Feb:1.2,Mar:17.8,Apr:-0.5,May:0.0,Jun:7.4,Jul:-1.9,Aug:0.0,Sep:-0.4,Oct:28.5,Nov:8.9,Dec:9.0}, total:155.7, positive:"7/12"},
+  {year:2022, months:{Jan:0.0,Feb:-5.2,Mar:4.7,Apr:-13.1,May:0.0,Jun:0.0,Jul:-5.2,Aug:0.0,Sep:0.0,Oct:4.5,Nov:-3.9,Dec:-5.2}, total:-22.1, positive:"2/12"},
+  {year:2021, months:{Jan:24.4,Feb:0.0,Mar:0.0,Apr:0.0,May:-5.2,Jun:0.0,Jul:20.8,Aug:-2.3,Sep:0.0,Oct:27.3,Nov:0.0,Dec:0.0}, total:77.2, positive:"3/12"},
+  {year:2020, months:{Jan:12.2,Feb:0.0,Mar:0.0,Apr:21.1,May:9.6,Jun:-3.5,Jul:20.5,Aug:-2.3,Sep:0.0,Oct:26.0,Nov:42.8,Dec:46.9}, total:346.8, positive:"7/12"},
+  {year:2019, months:{Jan:0.0,Feb:4.0,Mar:-0.2,Apr:0.0,May:0.0,Jun:0.0,Jul:0.0,Aug:0.0,Sep:-5.2,Oct:-1.1,Nov:-4.1,Dec:0.0}, total:-6.7, positive:"1/12"},
+  {year:2018, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:4.2,May:-9.0,Jun:0.0,Jul:0.0,Aug:0.0,Sep:-5.2,Oct:-5.2,Nov:-3.2,Dec:0.0}, total:-17.5, positive:"1/12"},
   ],
 
-  /* buy & hold mensual, cierres reales de BINANCE:BTCUSDT del mismo CSV */
   bench: [
-  {year:2026, months:{Jan:-10.2,Feb:-14.9,Mar:2.0,Apr:11.8,May:-3.5,Jun:-20.4,Jul:7.3,Aug:24.2,Sep:null,Oct:null,Nov:null,Dec:null}, total:-10.8, positive:"4/8"},
-  {year:2025, months:{Jan:9.5,Feb:-17.7,Mar:-2.1,Apr:14.1,May:11.1,Jun:2.4,Jul:8.0,Aug:-6.5,Sep:5.4,Oct:-3.9,Nov:-17.6,Dec:-3.0}, total:-6.4, positive:"6/12"},
-  {year:2024, months:{Jan:0.7,Feb:43.6,Mar:16.6,Apr:-14.9,May:11.3,Jun:-7.1,Jul:3.0,Aug:-8.7,Sep:7.4,Oct:11.0,Nov:37.2,Dec:-2.9}, total:121.6, positive:"8/12"},
+  {year:2026, months:{Jan:-10.2,Feb:-14.9,Mar:2.0,Apr:11.8,May:-3.5,Jun:-20.4,Jul:7.3,Aug:24.5,Sep:null,Oct:null,Nov:null,Dec:null}, total:-10.6, positive:"4/8"},
+  {year:2025, months:{Jan:9.5,Feb:-17.7,Mar:-2.1,Apr:14.1,May:11.1,Jun:2.4,Jul:8.0,Aug:-6.5,Sep:5.4,Oct:-3.9,Nov:-17.6,Dec:-3.0}, total:-6.3, positive:"6/12"},
+  {year:2024, months:{Jan:0.7,Feb:43.6,Mar:16.6,Apr:-14.9,May:11.3,Jun:-7.1,Jul:3.0,Aug:-8.7,Sep:7.4,Oct:11.0,Nov:37.2,Dec:-2.9}, total:121.3, positive:"8/12"},
   {year:2023, months:{Jan:39.8,Feb:0.1,Mar:23.0,Apr:2.7,May:-6.9,Jun:12.0,Jul:-4.1,Aug:-11.3,Sep:3.9,Oct:28.5,Nov:8.9,Dec:12.1}, total:155.6, positive:"9/12"},
   {year:2022, months:{Jan:-16.8,Feb:12.2,Mar:5.4,Apr:-17.3,May:-15.5,Jun:-37.3,Jul:16.8,Aug:-13.9,Sep:-3.1,Oct:5.5,Nov:-16.2,Dec:-3.6}, total:-64.2, positive:"4/12"},
   {year:2021, months:{Jan:14.4,Feb:36.4,Mar:30.1,Apr:-1.8,May:-35.4,Jun:-5.9,Jul:18.3,Aug:13.6,Sep:-7.0,Oct:39.9,Nov:-7.1,Dec:-18.8}, total:59.8, positive:"6/12"},
-  {year:2020, months:{Jan:30.0,Feb:-8.9,Mar:-24.8,Apr:34.5,May:9.6,Jun:-3.3,Jul:24.0,Aug:2.8,Sep:-7.5,Oct:28.0,Nov:42.8,Dec:46.9}, total:301.9, positive:"8/12"},
-  {year:2019, months:{Jan:-7.3,Feb:11.1,Mar:7.6,Apr:29.7,May:60.8,Jun:26.9,Jul:-7.1,Aug:-4.9,Sep:-13.5,Oct:10.3,Nov:-17.5,Dec:-4.6}, total:94.6, positive:"6/12"},
-  {year:2018, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:33.5,May:-19.0,Jun:-14.6,Jul:21.0,Aug:-9.3,Sep:-5.5,Oct:-3.8,Nov:-36.6,Dec:-8.4}, total:-46.5, positive:"2/12"},
+  {year:2020, months:{Jan:30.0,Feb:-8.9,Mar:-24.8,Apr:34.5,May:9.6,Jun:-3.3,Jul:24.0,Aug:2.8,Sep:-7.5,Oct:28.0,Nov:42.8,Dec:46.9}, total:302.0, positive:"8/12"},
+  {year:2019, months:{Jan:-7.3,Feb:11.1,Mar:7.6,Apr:29.7,May:60.8,Jun:26.9,Jul:-7.1,Aug:-4.9,Sep:-13.5,Oct:10.3,Nov:-17.5,Dec:-4.6}, total:94.3, positive:"6/12"},
+  {year:2018, months:{Jan:-22.2,Feb:0.4,Mar:-33.0,Apr:33.5,May:-19.0,Jun:-14.6,Jul:21.0,Aug:-9.3,Sep:-5.5,Oct:-3.8,Nov:-36.6,Dec:-8.4}, total:-72.0, positive:"3/12"},
   ],
 
   trades: [
-  {asset:"BTC", side:"LONG", entry:"2026-08-18", exit:null, days:11, ret:null, open:true},
-  {asset:"CASH", side:"CASH", entry:"2026-08-01", exit:"2026-08-18", days:17, ret:0.0},
+  {asset:"BTC", side:"LONG", entry:"2026-08-18", exit:null, days:12, ret:null, open:true},
   {asset:"BTC", side:"LONG", entry:"2026-07-21", exit:"2026-08-01", days:11, ret:-3.82},
   {asset:"CASH", side:"CASH", entry:"2026-05-19", exit:"2026-07-21", days:62, ret:0.0},
   {asset:"BTC", side:"LONG", entry:"2026-04-08", exit:"2026-05-19", days:41, ret:6.45},
@@ -781,7 +805,7 @@ const DATOS = {
   {asset:"CASH", side:"CASH", entry:"2019-11-08", exit:"2020-01-06", days:59, ret:0.0},
   {asset:"BTC", side:"LONG", entry:"2019-10-26", exit:"2019-11-08", days:13, ret:-5.19},
   {asset:"CASH", side:"CASH", entry:"2019-09-07", exit:"2019-10-26", days:49, ret:0.0},
-  {asset:"BTC", side:"LONG", entry:"2019-09-06", exit:"2019-09-07", days:0, ret:-5.19},
+  {asset:"BTC", side:"LONG", entry:"2019-09-06", exit:"2019-09-07", days:1, ret:-5.19},
   {asset:"CASH", side:"CASH", entry:"2019-03-04", exit:"2019-09-06", days:186, ret:0.0},
   {asset:"BTC", side:"LONG", entry:"2019-02-09", exit:"2019-03-04", days:23, ret:3.81},
   {asset:"CASH", side:"CASH", entry:"2018-11-14", exit:"2019-02-09", days:86, ret:0.0},
@@ -794,27 +818,14 @@ const DATOS = {
   {asset:"BTC", side:"LONG", entry:"2018-04-21", exit:"2018-05-11", days:20, ret:-5.19},
   ],
 
-  /* qué tiene el producto HOY: el activo, o efectivo si está fuera */
-  hoy: {asset:"BTC", dir:"LONG", close:78097.99},
-
-  /* último cambio de posición, con el precio al que ocurrió */
-  lastChange: {frm:"CASH", to:"BTC", date:"2026-08-18", price:64351.18, daysAgo:11},
-
-  /* ventanas disponibles, derivadas de los datos del producto */
+  hoy: {asset:"BTC", dir:"LONG", close:78315.43},
+  lastChange: {frm:"CASH", to:"BTC", date:"2026-08-18", price:64351.18, daysAgo:12},
   windows: [{"k": "SINCE 2023", "y": 2023}, {"k": "SINCE 2018", "y": 2018}],
-
-  /* ventana para la que se calibró el preset; null = ninguna privilegiada */
-  calibrado: "SINCE 2023",
-
-  /* drawdown medido por TradingView, por ventana. La ficha publica el MÁS DURO
-     entre este y el de su curva: la curva es mensual y no ve las caídas de
-     dentro del mes, así que puede quedar corta. Nunca se publica el más suave. */
+  calibrado: null,
   ddTv: {"since-2018": 23.88, "since-2023": 7.2},
-
-  /* KPIs por ventana. CALCULADOS desde la lista de operaciones, no copiados. */
   kpis: {
-    "since-2018": {totalPnl:3777.18, openPnl:21.36, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:4605.4, ytd:24.1, winRate:55.88, wins:19, losses:15, trades:34, longs:34, shorts:0, profitFactor:7.191, avgMonthly:4.31, avgTrade:15.58, avgHoldBars:54.7, avgHold:27.4, cagr:52.56, avgWin:31.57, avgLoss:-4.67, since:"2018-04-21"},
-    "since-2023": {totalPnl:716.38, openPnl:21.36, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:890.77, ytd:24.1, winRate:78.57, wins:11, losses:3, trades:14, longs:14, shorts:0, profitFactor:9.012, avgMonthly:5.88, avgTrade:18.04, avgHoldBars:80.9, avgHold:40.4, cagr:77.47, avgWin:23.96, avgLoss:-3.64, since:"2023-01-09"},
+    "since-2023": {totalPnl:717.22, openPnl:21.46, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:892.57, ytd:24.3, winRate:78.6, wins:11, losses:3, trades:14, longs:14, shorts:0, profitFactor:9.095, avgMonthly:5.9, avgTrade:18.04, avgHoldBars:39.6, avgHold:39.6, cagr:87.11, avgWin:23.96, avgLoss:-3.64, since:"2023-01-09"},
+    "since-2018": {totalPnl:3781.17, openPnl:21.46, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:4613.95, ytd:24.3, winRate:55.9, wins:19, losses:15, trades:34, longs:34, shorts:0, profitFactor:7.237, avgMonthly:4.3, avgTrade:15.58, avgHoldBars:26.6, avgHold:26.6, cagr:56.02, avgWin:31.57, avgLoss:-4.67, since:"2018-04-21"},
   },
 };
 
@@ -835,10 +846,18 @@ const STRATEGIES = [
   {id:P.slug, tier:"all", name:P.nombre,
    /* la cadencia va acá y no como línea aparte: traduce el TF del nombre sin
       repetir la sigla, y responde la pregunta práctica de cuándo mirar */
-   universe:`${P.par} · ${ES_LS ? "long, short or cash" : "long or cash"} · ${CADENCIA}`,
-   blurb:`It holds ${P.activo}, or it holds nothing. ${ES_12H
-     ? "Two decisions a day, at each 12-hour close."
-     : "One decision a day, at the daily close."}`,
+   universe: ES_ROT
+     ? `${P.universo.map(x => x.a).join(" · ")} · CASH · ${CADENCIA}`
+     : `${P.par} · ${ES_LS ? "long, short or cash" : "long or cash"} · ${CADENCIA}`,
+   /* Un conductor SIEMPRE tiene algo puesto y va rotando: decir "lo tiene o no
+      lo tiene" sería falso, que es la frase de un soberano. */
+   blurb: ES_ROT
+     ? `It holds one of ${P.universo.length} assets at a time, and moves between them. ${ES_12H
+         ? "Two decisions a day, at each 12-hour close."
+         : "One decision a day, at the daily close."}`
+     : `It holds ${P.activo}, or it holds nothing. ${ES_12H
+         ? "Two decisions a day, at each 12-hour close."
+         : "One decision a day, at the daily close."}`,
    variants:{[P.tf]:{
      side:P.lado, updated:P.actualizado, goLive:P.goLive, demo:false,
      source:`${P.pine} · preset ${P.preset} · TradingView export ${P.exportado}`,
@@ -850,7 +869,10 @@ const STRATEGIES = [
                          date:DATOS.lastChange.date, daysAgo:DATOS.lastChange.daysAgo,
                          price:DATOS.lastChange.price}},
      monthly:DATOS.monthly, trades:DATOS.trades,
-     bench:{asset:P.activo, demo:false, monthly:DATOS.bench},
+     /* En un soberano el comparable es tener el activo. En un Rotation no hay
+        "el activo": el comparable honesto es la canasta del mismo universo. */
+     bench:{asset:P.benchAsset || P.activo, label:P.benchLabel || null,
+            demo:false, monthly:DATOS.bench},
      kpis:withDefaults(DATOS.kpis),
    }}},
 ];
@@ -949,6 +971,7 @@ const TERMS = {
   total:    "Total P&L — everything the strategy made over the measured period, compounded, including the trade that is still open right now. TradingView splits the two: +473.38% closed (its Net profit) plus +12.76% on the open position (its Open PnL), which together are the +546.52% shown here.",
   stratval: "Strategy result — what $1,000 would be worth today if you had followed every signal in this window, compounding, after 0.1% commission on each side of every trade. It is a simulated backtest on past prices, not money that was made.",
   bhval:    "Buy & hold result — what the same $1,000 would be worth if you had bought bitcoin at the start of the window and never touched it. This is the benchmark: beating it is the only reason to run a strategy instead of just holding.",
+  mx:       "Risk-adjusted, side by side — the same numbers a fund would be judged on. MAR is return divided by the worst drop; Sharpe and Sortino measure return per unit of wobble, and Sortino only counts the wobble that hurts. Omega is total gains over total losses, day by day. Exposure is how much of the time the money was actually in the market. \u26a0 Both rows use the SAME drawdown definition — daily equity, marked to market — because a table where each row measures differently compares nothing.",
   poshist:  "Position history — one band per holding period, in order. Orange means the strategy was holding bitcoin; green means it was in cash and out of the market. A long green stretch is a fall it did not sit through.",
   tradehist:"Trade history — every completed round trip: when it bought, when it sold, and what that one trade returned. These are individual trade returns, not compounded; the compounded result is the figure at the top.",
   pf:       "Profit factor — every dollar the losing trades gave away against every dollar the winners brought in. Above 1 the strategy makes money; at 13.99 the winners bring in fourteen dollars for each one the losers cost. It is the honest companion to the win rate: a strategy can win most of its trades and still lose money if the few losses are huge, and this is the number that catches that.",
@@ -1097,6 +1120,8 @@ function ribbon(v, id, tradesHTML){
   const span  = end - start;
   if(span <= 0) return "";
 
+  /* La lista viene completa salvo que el producto declare lo contrario. */
+  const COMPLETA = !v.tradesNote;
   const segs = []; let cur = start;
   ts.forEach(t => {
     const a = Math.max(t.a, start), b = Math.min(t.b, end);
@@ -1109,7 +1134,21 @@ function ribbon(v, id, tradesHTML){
 
   const bars = segs.map(g => {
     const l = (g.a - start) / span * 100, w = (g.b - g.a) / span * 100;
-    if(g.gap) return `<div class="rseg gap" style="left:${l}%;width:${w}%"></div>`;
+    if(g.gap){
+      /* ⚠ Un hueco entre operaciones NO es un dato faltante cuando la lista está
+         COMPLETA: es la estrategia EN EFECTIVO, fuera del mercado. Rotularlo
+         "not in this excerpt" le decía al cliente "no sabemos qué pasó acá"
+         justo donde la respuesta es un argumento del producto — el Rotation 1D
+         pasa 216 días así, el 16 % del tiempo, y su Exposure de 83,6 % sale de
+         ahí. El rayado se reserva para cuando la lista SÍ viene recortada
+         (`tradesNote` presente), que era el caso original de la maqueta. */
+      if(COMPLETA){
+        const ic = `CASH · ${ymd(g.a)} → ${ymd(g.b)} · ${Math.round((g.b-g.a)/864e5)}d · out of the market`;
+        return `<div class="rseg" style="left:${l}%;width:${w}%;background:${ribbonBg("CASH")}"`
+             + ` title="${esc(ic)}" data-info="${esc(ic)}"></div>`;
+      }
+      return `<div class="rseg gap" style="left:${l}%;width:${w}%"></div>`;
+    }
     const info = `${g.asset}${g.side === "SHORT" ? " short" : ""} · ${ymd(g.a)} → `
                + `${g.open ? "now" : ymd(g.b)} · ${Math.round((g.b-g.a)/864e5)}d`
                + `${g.ret != null ? " · " + sign(g.ret,2) + "%" : ""}`;
@@ -1147,7 +1186,16 @@ function ribbon(v, id, tradesHTML){
       <div class="raxis">${ticks.join("")}</div>
       <div class="rlegend">${legend}
         ${segs.some(g => g.side === "SHORT") ? `<span><i class="rkey k-short"></i>short</span>` : ""}
-        ${segs.some(g => g.gap) ? `<span><i class="rkey k-gap"></i>not in this excerpt</span>` : ""}
+        ${segs.some(g => g.gap) ? (COMPLETA
+            /* ⚠ Solo si CASH no vino YA como tramo propio. Hay DOS fuentes de
+               efectivo en la cinta y se solapan: los tramos CASH que emite el
+               generador (hueco > 1 dia) y los huecos que calcula esta funcion
+               (hueco > 864e5 ms). Un hueco de exactamente un dia cae en las dos,
+               y la leyenda salia con CASH DUPLICADO. Las BANDAS estan bien —no
+               se pisan, cubren tramos distintos—; lo que duplicaba era el chip. */
+            ? (seen.includes("CASH") ? ""
+               : `<span><i class="rkey" style="background:${ribbonBg("CASH")}"></i>CASH</span>`)
+            : `<span><i class="rkey k-gap"></i>not in this excerpt</span>`) : ""}
       </div>
       <div class="rinfo">Tap a band to read the trade.</div>
     </div>
@@ -1175,7 +1223,48 @@ function tradeList(v){
   return `<div class="trades">${rows}</div>`;
 }
 
+/* ---------- métricas de riesgo, estrategia vs su comparable ----------
+   Sólo aparece si el producto trae DATOS.metrics. Los soberanos no la traen y
+   la ficha sale idéntica a antes: agregarla no toca las otras nueve.
+   Las dos filas se miden con la MISMA definición de drawdown (equity diaria
+   marcada a mercado) — comparar 24,33 % contra un 65,19 % calculado de otra
+   forma no diría nada. */
+const MXCOLS = [
+  ["net",     "Net %",   v => fmtPct(v)],
+  ["cagr",    "CAGR %",  v => fmtPct(v)],
+  ["dd",      "Max DD %",v => v.toFixed(2)],
+  ["mar",     "MAR",     v => v.toFixed(2)],
+  ["sharpe",  "Sharpe",  v => v.toFixed(2)],
+  ["sortino", "Sortino", v => v.toFixed(2)],
+  ["omega",   "Omega Ω", v => v.toFixed(2)],
+  ["exp",     "Exposure %", v => v.toFixed(1)],
+];
+const fmtPct = (x) => x >= 1000 ? Math.round(x).toLocaleString("en-US") : x.toFixed(1);
+function metricsTable(v){
+  const m = DATOS.metrics; if(!m) return "";
+  const fila = (nombre, d, esEstrategia) => `<tr><td>${esc(nombre)}</td>` + MXCOLS.map(([k,,f]) => {
+    /* En MAR y drawdown "mejor" no es "más alto": menos caída es mejor. */
+    const mejor = k === "dd" ? d[k] < m[esEstrategia ? "canasta" : "estrategia"][k]
+                             : d[k] > m[esEstrategia ? "canasta" : "estrategia"][k];
+    return `<td${esEstrategia && mejor ? ' class="win"' : ""}>${f(d[k])}</td>`;
+  }).join("") + "</tr>";
+  return `<div class="sect">
+    <h5>📐 Risk-adjusted, side by side${hint("mx")}</h5>
+    <div class="hm-scroll"><table class="mx">
+      <thead><tr><th></th>${MXCOLS.map(c => `<th>${c[1]}</th>`).join("")}</tr></thead>
+      <tbody>
+        ${fila("Strategy", m.estrategia, true)}
+        ${fila(BLBL({bench:{label:P.benchLabel, asset:P.benchAsset || P.activo}}), m.canasta, false)}
+      </tbody>
+    </table></div>
+  </div>`;
+}
+
 /* ---------- strategy vs buy & hold ---------- */
+/* El comparable de un soberano es tener el activo ("BTC buy & hold"). El de un
+   Rotation no puede serlo: no hay UN activo. Por eso el rótulo es un dato, no
+   una concatenación fija. */
+const BLBL = (v) => esc(v.bench.label || (v.bench.asset + " buy & hold"));
 const money = (v) => "$" + Math.round(v).toLocaleString("en-US");
 const kfmt  = (v) => v >= 1000 ? "$" + (v/1000).toFixed(v >= 10000 ? 0 : 1) + "K"
                    : "$" + Math.round(v);
@@ -1317,7 +1406,7 @@ function benchmark(v, id){
     const d = new Date(p.t);
     if(i > 0) d.setUTCMonth(d.getUTCMonth() - 1);
     const lbl  = `${M[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
-    const info = `${lbl} · strategy ${f(p.v)} · buy &amp; hold ${f(B[i].v)}`;
+    const info = `${lbl} · strategy ${f(p.v)} · ${BLBL(v)} ${f(B[i].v)}`;
     const w = (W - PL - PR)/(n-1);
     /* las coordenadas viajan en el rect: la cruz no recalcula nada, solo se mueve */
     return `<rect class="bqhit" x="${(x(i)-w/2).toFixed(1)}" y="${PT}" width="${w.toFixed(1)}"
@@ -1361,7 +1450,7 @@ function benchmark(v, id){
     <h5>📈 Strategy vs buy &amp; hold${hint(inCoin ? "unit" : "hold2")}
       <span class="rhead">
         <span>${f(INIT)} from ${M[new Date(A[0].t).getUTCMonth()]} ${new Date(A[0].t).getUTCFullYear()}</span>
-        <span class="rrange">${["USD",P.activo].map(u =>
+        <span class="rrange"${ES_ROT ? ' hidden' : ''}>${["USD",P.activo].map(u =>
           `<button type="button" data-unit="${u}" aria-pressed="${unit === u}">${u}</button>`).join("")}</span>
         <span class="rrange">${Object.keys(RANGES).map(k =>
           `<button type="button" data-brange="${k}" aria-pressed="${pick === k}">${k}</button>`).join("")}</span>${hint("ranges")}
@@ -1376,7 +1465,7 @@ function benchmark(v, id){
     ${v.demo ? `<div class="bqflag">Sample data — this card is a layout placeholder until its engine output is wired in.</div>` : ""}
     <div class="bq">
       ${card("Strategy", aEnd, "var(--up)", mult(aEnd), ddPub(A, pick), aEnd > bEnd, "stratval", cagrOf(A))}
-      ${card(esc(v.bench.asset) + " buy &amp; hold", bEnd, hue, mult(bEnd), maxDD(B), bEnd > aEnd, "bhval", cagrOf(B))}
+      ${card(BLBL(v), bEnd, hue, mult(bEnd), maxDD(B), bEnd > aEnd, "bhval", cagrOf(B))}
     </div>
     ${stress}
     <div class="bqchart">
@@ -1400,12 +1489,12 @@ function benchmark(v, id){
       </svg>
       <div class="bqlegend">
         <span><i style="background:var(--up)"></i>Strategy</span>
-        <span><i style="background:${hue}"></i>${esc(v.bench.asset)} buy &amp; hold${inCoin ? " — flat by definition" : ""}</span>
+        <span><i style="background:${hue}"></i>${BLBL(v)}${inCoin ? " — flat by definition" : ""}</span>
       </div>
       <div class="bqtip" hidden>
         <div class="t"></div>
         <div class="r"><i style="background:var(--up)"></i><span>Strategy</span><b class="va"></b></div>
-        <div class="r"><i style="background:${hue}"></i><span>${esc(v.bench.asset)} buy &amp; hold</span><b class="vb"></b></div>
+        <div class="r"><i style="background:${hue}"></i><span>${BLBL(v)}</span><b class="vb"></b></div>
       </div>
       <div class="bqread">Hover the chart to read any month.</div>
     </div>
@@ -1441,12 +1530,13 @@ function cardHTML(st, tfKey){
     ${variantSwitch}
     ${signalBox(v)}
     <div class="detail">
-      ${v.demo ? `<div class="banner"><span>⚠️</span><span>The <b>BTC buy &amp; hold</b> figures are real. Everything describing the <b>strategy</b> is <b>sample data</b>, shaped from the real BTC series to validate the layout — replaced once the engine output is wired in.</span></div>` : ""}
+      ${v.demo ? `<div class="banner"><span>⚠️</span><span>The <b>${BLBL(v)}</b> figures are real. Everything describing the <b>strategy</b> is <b>sample data</b>, shaped from the real series to validate the layout — replaced once the engine output is wired in.</span></div>` : ""}
       <div class="detail-bar">
         <h4>Performance</h4>
         <div class="stamp">Updated <b class="num">${v.updated}</b><br>go-live forward: <b class="num">${v.goLive}</b></div>
       </div>
       ${benchmark(v, st.id)}
+      ${metricsTable(v)}
       ${ribbon(v, st.id, `
         <details class="tsum">
           <summary>⚡ Trade history — ${v.trades.length} trades${v.tradesNote ? " · " + esc(v.tradesNote) : ""}${hint("tradehist")}</summary>
@@ -1618,6 +1708,9 @@ window.addEventListener("resize", () => {
 });
 </script>
 <script>
+/* ⚠ Esto vivía en `boton-signal.py`, que había que acordarse de correr DESPUÉS
+   de generar cada ficha. Portado a la plantilla el 31-ago: ahora una ficha nueva
+   nace con el botón. El script sigue existiendo para parchar HTML ya publicados. */
 /* El JSON comparte stem con la página (btc-1d.html ↔ btc-1d.signal.json), que es
    justamente para lo que la convención de nombres los emparejó. Si el archivo no
    está publicado, el botón no se muestra: mejor ausente que roto. */

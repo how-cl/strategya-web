@@ -1,6 +1,6 @@
 {
   "schema": "strategya.catalog/0.1",
-  "generated_at_utc": "2026-08-30T21:50:00Z",
+  "generated_at_utc": "2026-08-31T18:13:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -153,9 +153,28 @@
         "PAXG"
       ],
       "accent": "#7b8ff0",
-      "glyph": "≈",
+      "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "rotation-12h",
+      "name": "Rotation 12H",
+      "kind": "rotation",
+      "timeframe": "12H",
+      "sleeve": "long",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SUI",
+        "PAXG"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h.signal.json",
       "tier": "free"
     }
   ]

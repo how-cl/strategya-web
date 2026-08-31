@@ -1,13 +1,13 @@
 {
   "schema": "strategya.signal/0.2",
-  "product": "btc-12h-ls",
-  "kind": "sovereign",
+  "product": "rotation-12h",
+  "kind": "rotation",
   "timeframe": "12H",
   "strategy": {
-    "file": "EVOL BTC 12H Short v4.1 2026-08-30.pine",
-    "preset": "W",
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "preset": "Winner (v1.1) · Aggressive · leg C",
     "symbol": "BINANCE:BTCUSDT",
-    "md5": "7fd9b024003abe3296c96746aef2550e"
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
   },
   "decision_bar_label": "2026-08-31T12:00Z",
   "decision_close_utc": "2026-08-31T12:00:00Z",
@@ -18,32 +18,32 @@
   },
   "cash_asset": "USDT",
   "reference_price": 78315.43,
-  "action": "HOLD",
+  "action": "BUY",
   "positions": [
     {
       "asset": "BTC",
       "side": "long",
       "weight": 1.0,
-      "since": "2026-08-18",
-      "entry_price": 64351.18
+      "since": "2026-08-31",
+      "entry_price": 77682.0
     }
   ],
   "previous_positions": [
     {
-      "asset": "BTC",
+      "asset": "ETH",
       "side": "long",
       "weight": 1.0
     }
   ],
   "last_trade": {
-    "asset": "BTC",
-    "side": "short",
-    "entry_date": "2026-08-12",
-    "exit_date": "2026-08-18",
+    "asset": "ETH",
+    "side": "long",
+    "entry_date": "2026-08-25",
+    "exit_date": "2026-08-31",
     "days": 6,
-    "return_pct": -1.66
+    "return_pct": -2.83
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:18ebb2009b55e274e9d8f1a2275b60bab59ef432e2397894adf686b1c0fad8c1"
+  "checksum": "sha256:534fdc9f7d37de5ec452cdafe72bb2d935ed42ba2b09a55b118ae8c851379d83"
 }
