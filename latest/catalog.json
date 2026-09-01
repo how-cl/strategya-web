@@ -1,6 +1,6 @@
 {
   "schema": "strategya.catalog/0.1",
-  "generated_at_utc": "2026-08-31T21:10:00Z",
+  "generated_at_utc": "2026-09-01T00:05:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -159,6 +159,21 @@
       "tier": "free"
     },
     {
+      "slug": "eth-1d-ls",
+      "name": "ETH 1D L+S",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long-short",
+      "assets": [
+        "ETH"
+      ],
+      "accent": "#7b8ff0",
+      "glyph": "Ξ",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/eth-1d-ls.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/eth-1d-ls.signal.json",
+      "tier": "free"
+    },
+    {
       "slug": "rotation-12h",
       "name": "Rotation 12H",
       "kind": "rotation",
@@ -194,6 +209,25 @@
       "glyph": "₿",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h-ls.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "rotation-1d-ls",
+      "name": "Rotation 1D L+S",
+      "kind": "rotation",
+      "timeframe": "1D",
+      "sleeve": "long-short",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SUI",
+        "PAXG"
+      ],
+      "accent": "#7b8ff0",
+      "glyph": "Ξ",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls.signal.json",
       "tier": "free"
     }
   ]

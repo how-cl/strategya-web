@@ -1,13 +1,13 @@
 {
   "schema": "strategya.signal/0.2",
-  "product": "rotation-1d",
-  "kind": "rotation",
+  "product": "eth-1d-ls",
+  "kind": "sovereign",
   "timeframe": "1D",
   "strategy": {
-    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
-    "preset": "Winner (v1.1) · Aggressive",
+    "file": "EVOL ETH 1D Short v4.8 2026-08-30.pine",
+    "preset": "U",
     "symbol": "BINANCE:ETHUSDT",
-    "md5": "cb7f941d20b2614f00d7fe605563165a"
+    "md5": "cc22daf4404a6d02a5804172c9474a07"
   },
   "decision_bar_label": "2026-09-01T00:00Z",
   "decision_close_utc": "2026-09-01T00:00:00Z",
@@ -24,8 +24,8 @@
       "asset": "ETH",
       "side": "long",
       "weight": 1.0,
-      "since": "2026-08-28",
-      "entry_price": 2510.94
+      "since": "2026-07-05",
+      "entry_price": 1780.64
     }
   ],
   "previous_positions": [
@@ -36,14 +36,14 @@
     }
   ],
   "last_trade": {
-    "asset": "SOL",
-    "side": "long",
-    "entry_date": "2026-08-26",
-    "exit_date": "2026-08-28",
-    "days": 2,
-    "return_pct": 12.77
+    "asset": "ETH",
+    "side": "short",
+    "entry_date": "2026-04-20",
+    "exit_date": "2026-04-21",
+    "days": 1,
+    "return_pct": -2.43
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:5fb20e563a1545a41da349a20488c349653ae297d0a60c51427f4960b57067f3"
+  "checksum": "sha256:4563fadf91035d9e88fc8448214029d00992f8478380a01cef02859e6164e34c"
 }
