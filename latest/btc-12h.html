@@ -495,8 +495,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-01 05:03 UTC</b>, which was valid until
-    <b>2026-09-01 12:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-09-01 12:05 UTC</b>, which was valid until
+    <b>2026-09-02 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -557,9 +557,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: btc-12h</span>
-      <span>run: 2026-09-01 05:03 UTC</span>
-      <span>decision close: 2026-09-01 00:00 U C</span>
-      <span>valid until: 2026-09-01 12:00 UTC</span>
+      <span>run: 2026-09-01 12:05 UTC</span>
+      <span>decision close: 2026-09-01 12:00 U C</span>
+      <span>valid until: 2026-09-02 00:00 UTC</span>
       <span>source: EVOL BTC 12H Short v4.1 · preset U</span>
     </div>
   </footer>
@@ -583,8 +583,8 @@ const PRODUCTO = {
   "abre": "SINCE 2023",
   "exportado": "2026-09-01",
   "actualizado": "2026-09-01",
-  "cierre": "2026-09-01T00:00Z",
-  "validoHasta": "2026-09-01T12:00:00Z",
+  "cierre": "2026-09-01T12:00Z",
+  "validoHasta": "2026-09-02T00:00:00Z",
   "activo": "BTC",
   "enProsa": "bitcoin",
   "par": "BTCUSDT",
@@ -593,7 +593,7 @@ const PRODUCTO = {
   "acento": "#f7931a",
   "colorPalabra": "orange",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-01 05:03 UTC"
+  "corrida": "2026-09-01 12:05 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -715,7 +715,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 /* ======================================================================
    btc-12h — DATOS emitidos por el MOTOR, no por un export de TradingView.
    EVOL BTC 12H Short v4.1 2026-08-30.pine · preset U · velas BINANCE_BTCUSDT_12h.csv
-   Corrida 2026-09-01 05:03 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-09-01 12:05 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2018 con Δ 0.11 %
    (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
@@ -724,7 +724,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 const DATOS = {
 
   monthly: [
-  {year:2026, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:5.9,May:0.5,Jun:0.0,Jul:-3.8,Aug:21.9,Sep:null,Oct:null,Nov:null,Dec:null}, total:24.8, positive:"3/8"},
+  {year:2026, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:5.9,May:0.5,Jun:0.0,Jul:-3.8,Aug:21.9,Sep:-0.6,Oct:null,Nov:null,Dec:null}, total:24.0, positive:"3/9"},
   {year:2025, months:{Jan:-1.9,Feb:0.0,Mar:0.0,Apr:10.2,May:11.1,Jun:1.1,Jul:8.0,Aug:-0.7,Sep:0.0,Oct:-5.2,Nov:0.0,Dec:0.0}, total:23.4, positive:"4/12"},
   {year:2024, months:{Jan:-1.0,Feb:43.6,Mar:11.0,Apr:0.0,May:2.1,Jun:0.0,Jul:2.7,Aug:0.0,Sep:4.5,Oct:11.0,Nov:37.2,Dec:-3.8}, total:152.9, positive:"7/12"},
   {year:2023, months:{Jan:34.7,Feb:1.2,Mar:17.8,Apr:-0.5,May:0.0,Jun:7.4,Jul:-1.9,Aug:0.0,Sep:-0.4,Oct:28.5,Nov:8.9,Dec:9.0}, total:155.7, positive:"7/12"},
@@ -736,7 +736,7 @@ const DATOS = {
   ],
 
   bench: [
-  {year:2026, months:{Jan:-10.2,Feb:-14.9,Mar:2.0,Apr:11.8,May:-3.5,Jun:-20.4,Jul:7.3,Aug:25.0,Sep:null,Oct:null,Nov:null,Dec:null}, total:-10.3, positive:"4/8"},
+  {year:2026, months:{Jan:-10.2,Feb:-14.9,Mar:2.0,Apr:11.8,May:-3.5,Jun:-20.4,Jul:7.3,Aug:25.0,Sep:-0.6,Oct:null,Nov:null,Dec:null}, total:-10.9, positive:"4/9"},
   {year:2025, months:{Jan:9.5,Feb:-17.7,Mar:-2.1,Apr:14.1,May:11.1,Jun:2.4,Jul:8.0,Aug:-6.5,Sep:5.4,Oct:-3.9,Nov:-17.6,Dec:-3.0}, total:-6.3, positive:"6/12"},
   {year:2024, months:{Jan:0.7,Feb:43.6,Mar:16.6,Apr:-14.9,May:11.3,Jun:-7.1,Jul:3.0,Aug:-8.7,Sep:7.4,Oct:11.0,Nov:37.2,Dec:-2.9}, total:121.3, positive:"8/12"},
   {year:2023, months:{Jan:39.8,Feb:0.1,Mar:23.0,Apr:2.7,May:-6.9,Jun:12.0,Jul:-4.1,Aug:-11.3,Sep:3.9,Oct:28.5,Nov:8.9,Dec:12.1}, total:155.6, positive:"9/12"},
@@ -818,14 +818,14 @@ const DATOS = {
   {asset:"BTC", side:"LONG", entry:"2018-04-21", exit:"2018-05-11", days:20, ret:-5.19},
   ],
 
-  hoy: {asset:"BTC", dir:"LONG", close:78581.29},
+  hoy: {asset:"BTC", dir:"LONG", close:78098.97},
   lastChange: {frm:"CASH", to:"BTC", date:"2026-08-18", price:64351.18, daysAgo:13},
   windows: [{"k": "SINCE 2023", "y": 2023}, {"k": "SINCE 2018", "y": 2018}],
   calibrado: null,
   ddTv: {"since-2018": 23.88, "since-2023": 7.2},
   kpis: {
-    "since-2023": {totalPnl:717.22, openPnl:21.87, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:895.94, ytd:24.8, winRate:78.6, wins:11, losses:3, trades:14, longs:14, shorts:0, profitFactor:9.095, avgMonthly:5.9, avgTrade:18.04, avgHoldBars:39.6, avgHold:39.6, cagr:87.28, avgWin:23.96, avgLoss:-3.64, since:"2023-01-09"},
-    "since-2018": {totalPnl:3781.17, openPnl:21.87, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:4629.95, ytd:24.8, winRate:55.9, wins:19, losses:15, trades:34, longs:34, shorts:0, profitFactor:7.237, avgMonthly:4.3, avgTrade:15.58, avgHoldBars:26.6, avgHold:26.6, cagr:56.08, avgWin:31.57, avgLoss:-4.67, since:"2018-04-21"},
+    "since-2023": {totalPnl:717.22, openPnl:21.12, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:889.82, ytd:24.0, winRate:78.6, wins:11, losses:3, trades:14, longs:14, shorts:0, profitFactor:9.095, avgMonthly:5.7, avgTrade:18.04, avgHoldBars:39.6, avgHold:39.6, cagr:86.88, avgWin:23.96, avgLoss:-3.64, since:"2023-01-09"},
+    "since-2018": {totalPnl:3781.17, openPnl:21.12, openSide:"LONG", openSince:"2026-08-18", openPrice:64351.18, todayPnl:4600.92, ytd:24.0, winRate:55.9, wins:19, losses:15, trades:34, longs:34, shorts:0, profitFactor:7.237, avgMonthly:4.3, avgTrade:15.58, avgHoldBars:26.6, avgHold:26.6, cagr:55.95, avgWin:31.57, avgLoss:-4.67, since:"2018-04-21"},
   },
 };
 
