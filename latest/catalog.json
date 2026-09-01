@@ -1,6 +1,6 @@
 {
   "schema": "strategya.catalog/0.1",
-  "generated_at_utc": "2026-09-01T00:05:00Z",
+  "generated_at_utc": "2026-09-01T19:27:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -171,6 +171,36 @@
       "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/eth-1d-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/eth-1d-ls.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "paxg-12h",
+      "name": "PAXG 12H",
+      "kind": "sovereign",
+      "timeframe": "12H",
+      "sleeve": "long",
+      "assets": [
+        "PAXG"
+      ],
+      "accent": "#e0b544",
+      "glyph": "◆",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/paxg-12h.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/paxg-12h.signal.json",
+      "tier": "free"
+    },
+    {
+      "slug": "paxg-1d",
+      "name": "PAXG 1D",
+      "kind": "sovereign",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "PAXG"
+      ],
+      "accent": "#e0b544",
+      "glyph": "◆",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/paxg-1d.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/paxg-1d.signal.json",
       "tier": "free"
     },
     {

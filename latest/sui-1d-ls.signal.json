@@ -4,46 +4,40 @@
   "kind": "sovereign",
   "timeframe": "1D",
   "strategy": {
-    "file": "EVOL SUI 1D Short v3.4 2026-08-24.pine",
+    "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
     "preset": "U",
     "symbol": "BINANCE:SUIUSDT",
-    "md5": "6ebdace5602bab37a6503169ca349afe"
+    "md5": "bbf216851d2c1cf8a9e175966ed523fb"
   },
-  "decision_bar_label": "2026-08-31T00:00Z",
-  "decision_close_utc": "2026-08-31T00:00:00Z",
-  "valid_until_utc": "2026-09-01T00:00:00Z",
-  "generated_at_utc": "2026-08-31T17:41:00Z",
+  "decision_bar_label": "2026-09-01T00:00Z",
+  "decision_close_utc": "2026-09-01T00:00:00Z",
+  "valid_until_utc": "2026-09-02T00:00:00Z",
+  "generated_at_utc": "2026-09-01T19:27:00Z",
   "data_as_of": {
-    "SUI": "2026-08-31"
+    "SUI": "2026-09-01"
   },
   "cash_asset": "USDT",
-  "reference_price": 0.7111,
-  "action": "HOLD",
+  "reference_price": 0.727,
+  "action": "SHORT",
   "positions": [
     {
       "asset": "SUI",
-      "side": "long",
+      "side": "short",
       "weight": 1.0,
-      "since": "2026-08-21",
-      "entry_price": 0.7336
+      "since": "2026-08-31",
+      "entry_price": 0.7111
     }
   ],
-  "previous_positions": [
-    {
-      "asset": "SUI",
-      "side": "long",
-      "weight": 1.0
-    }
-  ],
+  "previous_positions": [],
   "last_trade": {
     "asset": "SUI",
-    "side": "short",
-    "entry_date": "2026-05-28",
-    "exit_date": "2026-07-12",
-    "days": 45,
-    "return_pct": 23.81
+    "side": "long",
+    "entry_date": "2026-08-21",
+    "exit_date": "2026-08-31",
+    "days": 10,
+    "return_pct": -3.26
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:b4bd6edd1a67dc177ebb18a262539a7550fe3b235b216b718eb9d21b87c4c983"
+  "checksum": "sha256:d7c7495f4c08f294a78c879fe7a69c116e27aa307b16e44cdd51007644da4b64"
 }

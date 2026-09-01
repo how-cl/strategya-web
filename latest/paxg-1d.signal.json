@@ -1,41 +1,41 @@
 {
   "schema": "strategya.signal/0.2",
-  "product": "sui-1d",
+  "product": "paxg-1d",
   "kind": "sovereign",
   "timeframe": "1D",
   "strategy": {
-    "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
+    "file": "EVOL PAXG 1D from-2023 v4.1 2026-08-07.pine",
     "preset": "A",
-    "symbol": "BINANCE:SUIUSDT",
-    "md5": "bbf216851d2c1cf8a9e175966ed523fb"
+    "symbol": "BINANCE:PAXGUSDT",
+    "md5": "02597d3888fb1cfb1e5686afb78d6706"
   },
   "decision_bar_label": "2026-09-01T00:00Z",
   "decision_close_utc": "2026-09-01T00:00:00Z",
   "valid_until_utc": "2026-09-02T00:00:00Z",
   "generated_at_utc": "2026-09-01T19:27:00Z",
   "data_as_of": {
-    "SUI": "2026-09-01"
+    "PAXG": "2026-09-01"
   },
   "cash_asset": "USDT",
-  "reference_price": 0.727,
+  "reference_price": 4451.13,
   "action": "SELL",
   "positions": [],
   "previous_positions": [
     {
-      "asset": "SUI",
+      "asset": "PAXG",
       "side": "long",
       "weight": 1.0
     }
   ],
   "last_trade": {
-    "asset": "SUI",
+    "asset": "PAXG",
     "side": "long",
-    "entry_date": "2026-08-21",
+    "entry_date": "2026-08-20",
     "exit_date": "2026-08-31",
-    "days": 10,
-    "return_pct": -3.26
+    "days": 11,
+    "return_pct": -2.2
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:a520b5b5e94458e454d6f7e57ec3cea1fd0922a5c7ecb694e65d377011d5bb9e"
+  "checksum": "sha256:76238710d377fc90c4c63db879c2ee77a9f3115cda1565369bf3b823ec4236a7"
 }

@@ -378,6 +378,7 @@ table.hm td.tot small{display:block;font-weight:400;font-size:10.5px;color:var(-
 .bqcard .to{font-size:27px;font-weight:650;letter-spacing:-.025em;color:var(--bqc);
   font-variant-numeric:tabular-nums}
 .bqchips{display:flex;gap:7px;margin-top:10px;flex-wrap:wrap}
+.bqchip.na{color:var(--tx-faint);border-style:dashed}
 .bqchip{font-size:11px;padding:4px 8px;border-radius:6px;border:1px solid var(--line);
   color:var(--tx-dim);background:var(--card);white-space:nowrap}
 /* el multiplicador toma el color de su serie y dos puntos de tamaño: es la
@@ -495,7 +496,7 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-01 05:03 UTC</b>, which was valid until
+    This page shows the run of <b>2026-09-01 19:27 UTC</b>, which was valid until
     <b>2026-09-02 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
@@ -571,7 +572,7 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: eth-1d-ls</span>
-      <span>run: 2026-09-01 05:03 UTC</span>
+      <span>run: 2026-09-01 19:27 UTC</span>
       <span>decision close: 2026-09-01 00:00 U C</span>
       <span>valid until: 2026-09-02 00:00 UTC</span>
       <span>source: EVOL ETH 1D Short v4.8 · preset U</span>
@@ -607,7 +608,7 @@ const PRODUCTO = {
   "acento": "#7b8ff0",
   "colorPalabra": "blue",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-01 05:03 UTC"
+  "corrida": "2026-09-01 19:27 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -729,7 +730,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 /* ======================================================================
    eth-1d-ls — DATOS emitidos por el MOTOR, no por un export de TradingView.
    EVOL ETH 1D Short v4.8 2026-08-30.pine · preset U · velas BINANCE_ETHUSDT_1D.csv
-   Corrida 2026-09-01 05:03 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-09-01 19:27 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2023 con Δ 0.02 %
    (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
@@ -947,6 +948,8 @@ const TERMS = {
   poshist:  "Position history — one band per holding period, in order. Blue means the strategy was holding ethereum; green means it was in cash and out of the market. A long green stretch is a fall it did not sit through.",
   tradehist:"Trade history — every completed round trip: when it bought, when it sold, and what that one trade returned. These are individual trade returns, not compounded; the compounded result is the figure at the top.",
   pf:       "Profit factor — every dollar the losing trades gave away against every dollar the winners brought in. Above 1 the strategy makes money; at 13.99 the winners bring in fourteen dollars for each one the losers cost. It is the honest companion to the win rate: a strategy can win most of its trades and still lose money if the few losses are huge, and this is the number that catches that.",
+  marneg:   "MAR \u2014 not available for this window, and the dash is the honest answer. MAR is annual return divided by the worst fall, so it only means something when the return is positive. Over this stretch this line LOST money, and a negative MAR would read like a small number when what it describes is a loss. The two figures it is built from \u2014 CAGR and Max DD \u2014 are right here on the card, unhidden. Switch to a longer window to see the ratio.",
+  marplano: "MAR \u2014 not available here because there was almost no drawdown to divide by, which makes the ratio explode into a number that means nothing. It happens when the comparison is denominated in the asset itself and holding it is flat by definition. The CAGR and the Max DD on this card are the real figures.",
   mar:      "MAR \u2014 how much annual return the strategy produced for each point of drawdown it made you sit through. It is simply the CAGR divided by the worst fall, both of which are on this card. A MAR of 10 means ten points of yearly gain per point of pain; buying and holding the asset usually lands near 1. We put it here because return alone says nothing about what it cost you to earn it \u2014 two strategies can end at the same number with completely different rides, and this is the figure that separates them. It is also the metric this shop ranks its own products by.",
   cagr:     "Annualised return — the yearly rate that would produce the same result, compounded. It is the only figure that compares fairly across windows of different length: 52× over eight years and 6.5× over three and a half look very different as multipliers, yet annualised they are 52.8%/yr and 61.1%/yr. Use the multiplier to see how much it grew, and this to see how fast.",
   calib:    "Calibrated window — this preset was tuned on the market from that year onward, so that is the window it was built for and the one shown first. The longer window is still here, one click away, and it is the harder read: the same rules over earlier bear markets they were never fitted to. Expect it to look weaker. A preset calibrated for one regime is not the best preset for every regime, and there is a real difference between that and overfitting: overfitting falls apart outside the sample it was tuned on, while this one also held up in a stress window it was never optimised for. Showing you both is the point; hiding the gap would be the actual red flag.",
@@ -1405,7 +1408,14 @@ function benchmark(v, id){
     /* sin retorno no hay "retorno por unidad de caída": un MAR negativo no
        informa, confunde. El SOL 12H lo destapó — su buy & hold cae 11,3 %
        anual en la ventana de 2 años y el chip decía "MAR -0.2". */
-    const mar = (cg != null && cg > 0 && Math.abs(dd) > 0.05) ? cg / Math.abs(dd) : null;
+    /* El chip se dibuja SIEMPRE que haya CAGR. Cuando el ratio no existe va con
+       un GUION y su propia explicación, en vez de desaparecer: esconderlo dejaba
+       la ficha sin su métrica principal justo cuando la noticia es mala —el 6M
+       de los dos PAXG y el 6M/1Y de SUI 1D perdían plata y el chip se esfumaba—,
+       y el lector no distingue "no aplica" de "se me olvidó". (Felipe, 31-ago.)
+       Publicar el MAR negativo tampoco: la casa ya lo juzgó engañoso. */
+    const marOK = (cg != null && cg > 0 && Math.abs(dd) > 0.05);
+    const mar = marOK ? cg / Math.abs(dd) : null;
     return `
     <div class="bqcard" style="--bqc:${color}">
       <div class="lab">${lab}${hint(term)}${win ? `<span class="bqwin">WINNER</span>` : ""}</div>
@@ -1414,7 +1424,9 @@ function benchmark(v, id){
       <div class="bqchips"><span class="bqchip mult"><b>${m}×</b> multiplier${hint("mult")}</span>
         <span class="bqchip">Max DD ${sign(dd,1)}%${hint("maxdd")}</span>${
           cg == null ? "" : `<span class="bqchip">CAGR ${sign(cg,1)}%${hint("cagr")}</span>`}${
-          mar == null ? "" : `<span class="bqchip">MAR ${mar.toFixed(1)}${hint("mar")}</span>`}</div>
+          cg == null ? "" : `<span class="bqchip${marOK ? "" : " na"}">MAR ${
+            marOK ? mar.toFixed(1) : "&mdash;"}${
+            hint(marOK ? "mar" : (cg <= 0 ? "marneg" : "marplano"))}</span>`}</div>
     </div>`;
   };
 

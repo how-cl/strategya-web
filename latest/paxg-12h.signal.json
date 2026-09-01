@@ -1,49 +1,49 @@
 {
   "schema": "strategya.signal/0.2",
-  "product": "btc-12h-ls",
+  "product": "paxg-12h",
   "kind": "sovereign",
   "timeframe": "12H",
   "strategy": {
-    "file": "EVOL BTC 12H Short v4.1 2026-08-30.pine",
-    "preset": "W",
-    "symbol": "BINANCE:BTCUSDT",
-    "md5": "7fd9b024003abe3296c96746aef2550e"
+    "file": "EVOL PAXG 12H v4.1 2026-08-07.pine",
+    "preset": "A",
+    "symbol": "BINANCE:PAXGUSDT",
+    "md5": "04df5d77227e022eed6f803cc33ee4c6"
   },
   "decision_bar_label": "2026-09-01T12:00Z",
   "decision_close_utc": "2026-09-01T12:00:00Z",
   "valid_until_utc": "2026-09-02T00:00:00Z",
   "generated_at_utc": "2026-09-01T19:27:00Z",
   "data_as_of": {
-    "BTC": "2026-09-01"
+    "PAXG": "2026-09-01"
   },
   "cash_asset": "USDT",
-  "reference_price": 78098.97,
+  "reference_price": 4381.52,
   "action": "HOLD",
   "positions": [
     {
-      "asset": "BTC",
+      "asset": "PAXG",
       "side": "long",
       "weight": 1.0,
-      "since": "2026-08-18",
-      "entry_price": 64351.18
+      "since": "2026-08-05",
+      "entry_price": 4181.31
     }
   ],
   "previous_positions": [
     {
-      "asset": "BTC",
+      "asset": "PAXG",
       "side": "long",
       "weight": 1.0
     }
   ],
   "last_trade": {
-    "asset": "BTC",
-    "side": "short",
-    "entry_date": "2026-08-12",
-    "exit_date": "2026-08-18",
-    "days": 6,
-    "return_pct": -1.66
+    "asset": "PAXG",
+    "side": "long",
+    "entry_date": "2025-08-27",
+    "exit_date": "2026-03-18",
+    "days": 203,
+    "return_pct": 45.52
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:131c6e6adc8b72e0cfd7f4837777995dcf1e25a13ff8533706286463faf052d4"
+  "checksum": "sha256:3c09be86f426b44d671db1fbcfa351315f53d7c64dce80dd0c2ae3d560ce049c"
 }
