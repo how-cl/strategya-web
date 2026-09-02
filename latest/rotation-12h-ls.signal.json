@@ -6,26 +6,26 @@
   "strategy": {
     "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
     "preset": "Winner (v1.1) · Aggressive · manga corta ON",
-    "symbol": "BINANCE:BTCUSDT",
+    "symbol": "BINANCE:ETHUSDT",
     "md5": "b5cea50750735c62c2138cddb488f1f2"
   },
-  "decision_bar_label": "2026-09-01T12:00Z",
-  "decision_close_utc": "2026-09-01T12:00:00Z",
-  "valid_until_utc": "2026-09-02T00:00:00Z",
-  "generated_at_utc": "2026-09-01T19:27:00Z",
+  "decision_bar_label": "2026-09-02T00:00Z",
+  "decision_close_utc": "2026-09-02T00:00:00Z",
+  "valid_until_utc": "2026-09-02T12:00:00Z",
+  "generated_at_utc": "2026-09-02T00:06:00Z",
   "data_as_of": {
-    "BTC": "2026-09-01"
+    "ETH": "2026-09-02"
   },
   "cash_asset": "USDT",
-  "reference_price": 78098.97,
-  "action": "HOLD",
+  "reference_price": 2418.57,
+  "action": "BUY",
   "positions": [
     {
-      "asset": "BTC",
+      "asset": "ETH",
       "side": "long",
       "weight": 1.0,
-      "since": "2026-08-31",
-      "entry_price": 77682.0
+      "since": "2026-09-01",
+      "entry_price": 2459.18
     }
   ],
   "previous_positions": [
@@ -36,14 +36,14 @@
     }
   ],
   "last_trade": {
-    "asset": "ETH",
+    "asset": "BTC",
     "side": "long",
-    "entry_date": "2026-08-25",
-    "exit_date": "2026-08-31",
-    "days": 6,
-    "return_pct": -2.83
+    "entry_date": "2026-08-31",
+    "exit_date": "2026-09-01",
+    "days": 1,
+    "return_pct": 0.34
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:17000f18de62c429e21f7e8c27947cc272fc02c0ad18f77bc84313a771f3d35d"
+  "checksum": "sha256:157eb58bdab97c11b682154d32eaf8d044bbd06307911cfdd8960ece67bdc074"
 }
