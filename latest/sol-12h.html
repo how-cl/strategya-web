@@ -496,8 +496,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-02 04:28 UTC</b>, which was valid until
-    <b>2026-09-02 12:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-09-02 12:05 UTC</b>, which was valid until
+    <b>2026-09-03 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -558,9 +558,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: sol-12h</span>
-      <span>run: 2026-09-02 04:28 UTC</span>
-      <span>decision close: 2026-09-02 00:00 U C</span>
-      <span>valid until: 2026-09-02 12:00 UTC</span>
+      <span>run: 2026-09-02 12:05 UTC</span>
+      <span>decision close: 2026-09-02 12:00 U C</span>
+      <span>valid until: 2026-09-03 00:00 UTC</span>
       <span>source: EVOL SOL 12H Short v3.9 · preset U</span>
     </div>
   </footer>
@@ -584,8 +584,8 @@ const PRODUCTO = {
   "abre": "2Y",
   "exportado": "2026-09-02",
   "actualizado": "2026-09-02",
-  "cierre": "2026-09-02T00:00Z",
-  "validoHasta": "2026-09-02T12:00:00Z",
+  "cierre": "2026-09-02T12:00Z",
+  "validoHasta": "2026-09-03T00:00:00Z",
   "activo": "SOL",
   "enProsa": "solana",
   "par": "SOLUSDT",
@@ -594,7 +594,7 @@ const PRODUCTO = {
   "acento": "#a55cff",
   "colorPalabra": "purple",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-02 04:28 UTC"
+  "corrida": "2026-09-02 12:05 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -716,7 +716,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 /* ======================================================================
    sol-12h — DATOS emitidos por el MOTOR, no por un export de TradingView.
    EVOL SOL 12H Short v3.9 2026-08-24.pine · preset U · velas BINANCE_SOLUSDT_12h.csv
-   Corrida 2026-09-02 04:28 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-09-02 12:05 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2020 con Δ 0.53 %
    (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
@@ -735,7 +735,7 @@ const DATOS = {
   ],
 
   bench: [
-  {year:2026, months:{Jan:-15.3,Feb:-20.1,Mar:-1.4,Apr:-0.1,May:-0.8,Jun:-10.6,Jul:-1.1,Aug:41.4,Sep:-3.0,Oct:null,Nov:null,Dec:null}, total:-19.8, positive:"1/9"},
+  {year:2026, months:{Jan:-15.3,Feb:-20.1,Mar:-1.4,Apr:-0.1,May:-0.8,Jun:-10.6,Jul:-1.1,Aug:41.4,Sep:-4.8,Oct:null,Nov:null,Dec:null}, total:-21.3, positive:"1/9"},
   {year:2025, months:{Jan:22.4,Feb:-36.1,Mar:-16.0,Apr:18.5,May:6.0,Jun:-1.0,Jul:11.2,Aug:16.5,Sep:4.0,Oct:-10.3,Nov:-28.7,Dec:-6.6}, total:-34.2, positive:"6/12"},
   {year:2024, months:{Jan:-4.7,Feb:29.6,Mar:61.1,Apr:-37.4,May:30.7,Jun:-11.5,Jul:17.1,Aug:-21.2,Sep:12.7,Oct:10.6,Nov:40.9,Dec:-20.3}, total:86.1, positive:"7/12"},
   {year:2023, months:{Jan:139.9,Feb:-8.5,Mar:-3.3,Apr:7.5,May:-8.5,Jun:-9.4,Jul:25.8,Aug:-16.8,Sep:8.3,Oct:79.7,Nov:54.4,Dec:71.5}, total:920.3, positive:"7/12"},
@@ -814,14 +814,14 @@ const DATOS = {
   {asset:"SOL", side:"LONG", entry:"2020-11-07", exit:"2020-11-08", days:1, ret:-15.68},
   ],
 
-  hoy: {asset:"CASH", dir:"CASH", close:100.0},
+  hoy: {asset:"CASH", dir:"CASH", close:98.12},
   lastChange: {frm:"SOL", to:"CASH", date:"2026-08-24", price:95.84, daysAgo:8},
   windows: [{"k": "SINCE 2023", "y": 2023}, {"k": "SINCE 2020", "y": 2020}],
   calibrado: null,
   ddTv: {"since-2020": 33.61, "since-2023": 27.0},
   kpis: {
-    "since-2023": {totalPnl:705.35, openPnl:0.0, openSide:"CASH", openSince:"2026-08-24", openPrice:95.84, todayPnl:705.35, ytd:25.8, winRate:50.0, wins:12, losses:12, trades:24, longs:24, shorts:0, profitFactor:7.906, avgMonthly:5.5, avgTrade:10.71, avgHoldBars:9.4, avgHold:9.4, cagr:76.66, avgWin:25.4, avgLoss:-3.98, since:"2023-01-09"},
-    "since-2020": {totalPnl:931.21, openPnl:0.0, openSide:"CASH", openSince:"2026-08-24", openPrice:95.84, todayPnl:931.21, ytd:25.8, winRate:38.2, wins:13, losses:21, trades:34, longs:34, shorts:0, profitFactor:5.847, avgMonthly:4.2, avgTrade:9.75, avgHoldBars:7.5, avgHold:7.5, cagr:41.91, avgWin:33.54, avgLoss:-4.97, since:"2020-11-07"},
+    "since-2023": {totalPnl:705.35, openPnl:0.0, openSide:"CASH", openSince:"2026-08-24", openPrice:95.84, todayPnl:705.35, ytd:25.8, winRate:50.0, wins:12, losses:12, trades:24, longs:24, shorts:0, profitFactor:7.906, avgMonthly:5.5, avgTrade:10.71, avgHoldBars:9.4, avgHold:9.4, cagr:76.58, avgWin:25.4, avgLoss:-3.98, since:"2023-01-09"},
+    "since-2020": {totalPnl:931.21, openPnl:0.0, openSide:"CASH", openSince:"2026-08-24", openPrice:95.84, todayPnl:931.21, ytd:25.8, winRate:38.2, wins:13, losses:21, trades:34, longs:34, shorts:0, profitFactor:5.847, avgMonthly:4.2, avgTrade:9.75, avgHoldBars:7.5, avgHold:7.5, cagr:41.89, avgWin:33.54, avgLoss:-4.97, since:"2020-11-07"},
   },
 };
 
