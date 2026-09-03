@@ -6,44 +6,44 @@
   "strategy": {
     "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
     "preset": "Winner (v1.1) · Aggressive · leg C",
-    "symbol": "BINANCE:BTCUSDT",
+    "symbol": "BINANCE:ETHUSDT",
     "md5": "b5cea50750735c62c2138cddb488f1f2"
   },
-  "decision_bar_label": "2026-09-02T12:00Z",
-  "decision_close_utc": "2026-09-02T12:00:00Z",
-  "valid_until_utc": "2026-09-03T00:00:00Z",
-  "generated_at_utc": "2026-09-02T16:31:00Z",
+  "decision_bar_label": "2026-09-03T00:00Z",
+  "decision_close_utc": "2026-09-03T00:00:00Z",
+  "valid_until_utc": "2026-09-03T12:00:00Z",
+  "generated_at_utc": "2026-09-03T00:05:00Z",
   "data_as_of": {
-    "BTC": "2026-09-02"
+    "ETH": "2026-09-03"
   },
   "cash_asset": "USDT",
-  "reference_price": 76828.76,
+  "reference_price": 2391.92,
   "action": "BUY",
   "positions": [
     {
-      "asset": "BTC",
+      "asset": "ETH",
       "side": "long",
       "weight": 1.0,
       "since": "2026-09-02",
-      "entry_price": 77439.01
+      "entry_price": 2381.87
     }
   ],
   "previous_positions": [
     {
-      "asset": "ETH",
+      "asset": "BTC",
       "side": "long",
       "weight": 1.0
     }
   ],
   "last_trade": {
-    "asset": "ETH",
+    "asset": "BTC",
     "side": "long",
-    "entry_date": "2026-09-01",
+    "entry_date": "2026-09-02",
     "exit_date": "2026-09-02",
     "days": 1,
-    "return_pct": -1.85
+    "return_pct": -0.99
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:b687dcb250097d3e0bd0e7520f88e110490b39309ebd5537df38bc6522ec50cd"
+  "checksum": "sha256:7a71309225593ce8fe0916b020875bf8a02d2a428d76e1d41999f522e7b05f48"
 }

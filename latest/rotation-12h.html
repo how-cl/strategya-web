@@ -23,7 +23,7 @@
   --up:#3fd77f;
   --dn:#f0616d;
   --flat:#7d8794;
-  --accent:#f7931a;   /* el acento es el color del activo que opera esta ficha */
+  --accent:#7b8ff0;   /* el acento es el color del activo que opera esta ficha */
   --warn:#e3b341;
   --radius:14px;
   --radius-sm:10px;
@@ -496,8 +496,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-02 16:31 UTC</b>, which was valid until
-    <b>2026-09-03 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-09-03 00:05 UTC</b>, which was valid until
+    <b>2026-09-03 12:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -514,14 +514,14 @@ html.is-stale #stale{display:block}
         strategy for you, and no backtest should change your mind.</p>
       </div>
       <div>
-        <h3><span>02</span> The goal is more BTC, not more dollars.</h3>
+        <h3><span>02</span> The goal is more ETH, not more dollars.</h3>
         <p>Judge it the way you judge everything: did the round trip end with more one of five assets than
         simply holding? That is the only comparison that matters, and it is the one printed on
         the card below.</p>
       </div>
       <div>
         <h3><span>03</span> It will underperform in a straight bull run.</h3>
-        <p>When BTC only goes up, holding wins — you cannot beat a rocket by stepping off it.
+        <p>When ETH only goes up, holding wins — you cannot beat a rocket by stepping off it.
         The edge shows up across a full cycle, and above all in the drawdown you never had to sit
         through. Use the range buttons on each chart and check the bad years yourself.</p>
       </div>
@@ -538,12 +538,12 @@ html.is-stale #stale{display:block}
     <summary>How to read this board</summary>
     <div class="body">
       <p><b>The card tells you what the strategy holds right now.</b>
-      “100% on BTC” means fully in one of five assets today; “100% in CASH” means fully out. Click the card
+      “100% on ETH” means fully in one of five assets today; “100% in CASH” means fully out. Click the card
       to open its full record.</p>
       <p><b>Two decisions a day.</b> It reads the market at each 12-hour close — 00:00 and 12:00
       UTC — and either stays put or switches side. Twice the cadence of the daily line, and the
       reason this one reacts faster to a turn.</p>
-      <p><b>Orange means you are in one of five assets, green means you are in cash.</b> The position
+      <p><b>Blue means you are in one of five assets, green means you are in cash.</b> The position
       history inside the card paints one band per holding period, so a whole year of decisions
       reads at a glance — and you can see exactly which crashes it sat out.</p>
       <p><b>History is a simulated backtest, not money that was made.</b> It shows how the
@@ -558,9 +558,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: rotation-12h</span>
-      <span>run: 2026-09-02 16:31 UTC</span>
-      <span>decision close: 2026-09-02 12:00 U C</span>
-      <span>valid until: 2026-09-03 00:00 UTC</span>
+      <span>run: 2026-09-03 00:05 UTC</span>
+      <span>decision close: 2026-09-03 00:00 U C</span>
+      <span>valid until: 2026-09-03 12:00 UTC</span>
       <span>source: EVOL Rotation 12H v0.5 Strategy.pro USDT LS · preset Winner (v1.1) · Aggressive · leg C</span>
     </div>
   </footer>
@@ -583,19 +583,19 @@ const PRODUCTO = {
   "preset": "Winner (v1.1) · Aggressive · leg C",
   "pine": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS",
   "abre": "SINCE 2023",
-  "exportado": "2026-09-02",
-  "actualizado": "2026-09-02",
-  "cierre": "2026-09-02T12:00Z",
-  "validoHasta": "2026-09-03T00:00:00Z",
-  "activo": "BTC",
+  "exportado": "2026-09-03",
+  "actualizado": "2026-09-03",
+  "cierre": "2026-09-03T00:00Z",
+  "validoHasta": "2026-09-03T12:00:00Z",
+  "activo": "ETH",
   "enProsa": "one of five assets",
-  "par": "BTCUSDT",
-  "glifo": "₿",
-  "colorVar": "--a-btc",
-  "acento": "#f7931a",
-  "colorPalabra": "orange",
+  "par": "ETHUSDT",
+  "glifo": "Ξ",
+  "colorVar": "--a-eth",
+  "acento": "#7b8ff0",
+  "colorPalabra": "blue",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-02 16:31 UTC",
+  "corrida": "2026-09-03 00:05 UTC",
   "benchLabel": "Equal-weight basket",
   "benchAsset": "BASKET",
   "universo": [
@@ -745,7 +745,7 @@ const ASSETS = Object.assign({},
 const ES_ROT = !!P.universo;
 
 const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const TODAY = "2026-09-02";   /* fecha de la corrida, UTC */
+const TODAY = "2026-09-03";   /* fecha de la corrida, UTC */
 const ymd = (t) => new Date(t).toISOString().slice(0,10);
 
 /* ======================================================================
@@ -783,21 +783,22 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 const DATOS = {
 
   monthly: [
-  {year:2026, months:{Jan:11.7,Feb:10.9,Mar:-8.3,Apr:-0.9,May:0.5,Jun:0.0,Jul:4.4,Aug:21.8,Sep:-3.4,Oct:null,Nov:null,Dec:null}, total:39.1, positive:"5/9"},
+  {year:2026, months:{Jan:11.7,Feb:10.9,Mar:-8.3,Apr:-0.9,May:0.5,Jun:0.0,Jul:4.4,Aug:21.8,Sep:-3.2,Oct:null,Nov:null,Dec:null}, total:39.4, positive:"5/9"},
   {year:2025, months:{Jan:25.6,Feb:-6.9,Mar:10.1,Apr:44.1,May:10.8,Jun:-5.1,Jul:16.5,Aug:16.8,Sep:12.0,Oct:-7.3,Nov:6.0,Dec:2.3}, total:198.7, positive:"9/12"},
   {year:2024, months:{Jan:72.5,Feb:18.1,Mar:7.2,Apr:3.6,May:14.2,Jun:-10.9,Jul:25.1,Aug:2.5,Sep:98.4,Oct:21.6,Nov:56.4,Dec:-1.7}, total:995.9, positive:"10/12"},
   {year:2023, months:{Jan:46.2,Feb:-0.7,Mar:21.2,Apr:3.2,May:-2.3,Jun:-0.0,Jul:-11.1,Aug:0.0,Sep:-0.4,Oct:19.6,Nov:7.6,Dec:37.0}, total:176.5, positive:"6/12"},
   ],
 
   bench: [
-  {year:2026, months:{Jan:-11.8,Feb:-15.0,Mar:-1.8,Apr:3.4,May:-2.7,Jun:-14.8,Jul:2.9,Aug:30.8,Sep:-3.7,Oct:null,Nov:null,Dec:null}, total:-18.2, positive:"3/9"},
+  {year:2026, months:{Jan:-11.8,Feb:-15.0,Mar:-1.8,Apr:3.4,May:-2.7,Jun:-14.8,Jul:2.9,Aug:30.8,Sep:-2.1,Oct:null,Nov:null,Dec:null}, total:-16.8, positive:"3/9"},
   {year:2025, months:{Jan:15.2,Feb:-30.6,Mar:-12.1,Apr:17.6,May:7.5,Jun:-1.3,Jul:13.9,Aug:8.8,Sep:3.4,Oct:-9.1,Nov:-23.9,Dec:-4.4}, total:-25.6, positive:"6/12"},
   {year:2024, months:{Jan:0.4,Feb:30.4,Mar:41.4,Apr:-30.6,May:23.2,Jun:-10.2,Jul:10.5,Aug:-17.5,Sep:13.4,Oct:9.1,Nov:40.1,Dec:-13.3}, total:94.8, positive:"8/12"},
   {year:2023, months:{Jan:43.3,Feb:-3.3,Mar:7.5,Apr:3.5,May:-8.2,Jun:-2.7,Jul:4.9,Aug:-12.3,Sep:3.1,Oct:35.6,Nov:29.6,Dec:42.3}, total:226.7, positive:"8/12"},
   ],
 
   trades: [
-  {asset:"BTC", side:"LONG", entry:"2026-09-02", exit:null, days:1, ret:null, open:true},
+  {asset:"ETH", side:"LONG", entry:"2026-09-02", exit:null, days:1, ret:null, open:true},
+  {asset:"BTC", side:"LONG", entry:"2026-09-02", exit:"2026-09-02", days:1, ret:-0.99},
   {asset:"ETH", side:"LONG", entry:"2026-09-01", exit:"2026-09-02", days:1, ret:-1.85},
   {asset:"BTC", side:"LONG", entry:"2026-08-31", exit:"2026-09-01", days:1, ret:0.34},
   {asset:"ETH", side:"LONG", entry:"2026-08-25", exit:"2026-08-31", days:6, ret:-2.83},
@@ -938,16 +939,16 @@ const DATOS = {
   {asset:"SOL", side:"LONG", entry:"2023-01-09", exit:"2023-01-14", days:5, ret:26.23},
   ],
 
-  hoy: {asset:"BTC", dir:"LONG", close:76828.76},
-  lastChange: {frm:"ETH", to:"BTC", date:"2026-09-02", price:77439.01, daysAgo:0},
+  hoy: {asset:"ETH", dir:"LONG", close:2391.92},
+  lastChange: {frm:"BTC", to:"ETH", date:"2026-09-02", price:2381.87, daysAgo:0},
   windows: [{"k": "SINCE 2023", "y": 2023}],
   calibrado: null,
   ddTv: {"since-2023": 25.75},
 
-  metrics: {estrategia:{net:12488.1, cagr:273.6, dd:25.75, mar:10.62, sharpe:2.36, sortino:4.26, omega:1.39, exp:82.5}, canasta:{net:287.4, cagr:44.7, dd:66.8, mar:0.67, sharpe:0.91, sortino:1.33, omega:1.1, exp:100.0}},
+  metrics: {estrategia:{net:12516.0, cagr:273.8, dd:25.75, mar:10.63, sharpe:2.36, sortino:4.26, omega:1.39, exp:82.5}, canasta:{net:293.9, cagr:45.3, dd:66.8, mar:0.68, sharpe:0.91, sortino:1.35, omega:1.1, exp:100.0}},
 
   kpis: {
-    "since-2023": {totalPnl:12613.53, openPnl:-0.99, openSide:"LONG", openSince:"2026-09-02", openPrice:77439.01, todayPnl:12488.12, ytd:39.1, winRate:59.4, wins:76, losses:52, trades:128, longs:128, shorts:0, profitFactor:2.476, avgMonthly:13.1, avgTrade:4.66, avgHoldBars:8.5, avgHold:8.5, cagr:273.59, avgWin:10.63, avgLoss:-4.07, since:"2023-01-09"},
+    "since-2023": {totalPnl:12488.12, openPnl:0.22, openSide:"LONG", openSince:"2026-09-02", openPrice:2381.87, todayPnl:12515.97, ytd:39.4, winRate:58.9, wins:76, losses:53, trades:129, longs:129, shorts:0, profitFactor:2.44, avgMonthly:13.1, avgTrade:4.61, avgHoldBars:8.4, avgHold:8.4, cagr:273.82, avgWin:10.63, avgLoss:-4.01, since:"2023-01-09"},
   },
 };
 
@@ -1070,7 +1071,7 @@ function signalBox(v){
     ${s.preset ? `<div class="signal-preset"><span>&#9881;&#65039;</span><span>${esc(s.preset)}</span></div>` : ""}
    </div>
    <div class="livebox" id="livebox">
-     <div class="l">BTC price <span class="dot" id="livedot"></span><span id="livetxt">live</span></div>
+     <div class="l">ETH price <span class="dot" id="livedot"></span><span id="livetxt">live</span></div>
      <div class="v num" id="liveprice">—</div>
      <div class="c" id="livechg">&nbsp;</div>
      <div class="s">market price, not the signal</div>
@@ -1089,12 +1090,12 @@ const TERMS = {
   avgloss:  "Average loss — the mean return of the trades that lost money. Keeping this small is what a stop-loss buys you.",
   maxdd:    "Max drawdown \u2014 the deepest fall from a peak before a new high, measured as a PERCENTAGE of that peak. At -10%, every $100 was worth $90 at the worst moment. Two readings exist for the same window and they do not always agree: this page's own equity curve, which is built from MONTHLY returns and so cannot see a dip that opened and closed inside a single month, and TradingView's own measurement of the strategy over that window. We publish whichever of the two is HARSHER \u2014 never the flattering one, and never an average. Short windows (6M / 1Y / 2Y) have no TradingView figure, so they show the curve alone. \n\nFor this product there is something specific worth knowing: almost all of that fall happened in 2023. Measured from 2024 onward the worst drawdown is 8.2%; measured from 2023 it is 25.7%. It is one bad year rather than the way the strategy usually behaves \u2014 which is useful to know, and is also why we do not let you see only the years after it.",
   mult:     "Multiplier — how many times the starting capital grew. 322× turns $1,000 into $322,000.",
-  unit:     "USD vs BTC — the same two curves, same trades, same dates: only the ruler changes. In dollars the question is how much money you ended up with. In coins it is the one a holder actually cares about — did you end up with MORE BITCOIN than if you had never sold? In BTC the orange line goes flat at 1 \u20BF, and that is not a glitch: holding always returns exactly the stack you started with, so it stops being a curve to beat and becomes the bar to clear. Every point on the green line is your stack at that moment. Above 1 \u20BF means the strategy bought back more coins than it sold; below means it sold and re-entered higher.",
+  unit:     "USD vs ETH — the same two curves, same trades, same dates: only the ruler changes. In dollars the question is how much money you ended up with. In coins it is the one a holder actually cares about — did you end up with MORE BITCOIN than if you had never sold? In BTC the orange line goes flat at 1 \u20BF, and that is not a glitch: holding always returns exactly the stack you started with, so it stops being a curve to beat and becomes the bar to clear. Every point on the green line is your stack at that moment. Above 1 \u20BF means the strategy bought back more coins than it sold; below means it sold and re-entered higher.",
   total:    "Total P&L — everything the strategy made over the measured period, compounded, including the trade that is still open right now. TradingView splits the two: +473.38% closed (its Net profit) plus +12.76% on the open position (its Open PnL), which together are the +546.52% shown here.",
   stratval: "Strategy result — what $1,000 would be worth today if you had followed every signal in this window, compounding, after 0.1% commission on each side of every trade. It is a simulated backtest on past prices, not money that was made.",
   bhval:    "Buy & hold result — what the same $1,000 would be worth if you had bought one of five assets at the start of the window and never touched it. This is the benchmark: beating it is the only reason to run a strategy instead of just holding.",
   mx:       "Risk-adjusted, side by side — the same numbers a fund would be judged on. MAR is return divided by the worst drop; Sharpe and Sortino measure return per unit of wobble, and Sortino only counts the wobble that hurts. Omega is total gains over total losses, day by day. Exposure is how much of the time the money was actually in the market. \u26a0 Both rows use the SAME drawdown definition — daily equity, marked to market — because a table where each row measures differently compares nothing.",
-  poshist:  "Position history — one band per holding period, in order. Orange means the strategy was holding one of five assets; green means it was in cash and out of the market. A long green stretch is a fall it did not sit through.",
+  poshist:  "Position history — one band per holding period, in order. Blue means the strategy was holding one of five assets; green means it was in cash and out of the market. A long green stretch is a fall it did not sit through.",
   tradehist:"Trade history — every completed round trip: when it bought, when it sold, and what that one trade returned. These are individual trade returns, not compounded; the compounded result is the figure at the top.",
   pf:       "Profit factor — every dollar the losing trades gave away against every dollar the winners brought in. Above 1 the strategy makes money; at 13.99 the winners bring in fourteen dollars for each one the losers cost. It is the honest companion to the win rate: a strategy can win most of its trades and still lose money if the few losses are huge, and this is the number that catches that.",
   marneg:   "MAR \u2014 not available for this window, and the dash is the honest answer. MAR is annual return divided by the worst fall, so it only means something when the return is positive. Over this stretch this line LOST money, and a negative MAR would read like a small number when what it describes is a loss. The two figures it is built from \u2014 CAGR and Max DD \u2014 are right here on the card, unhidden. Switch to a longer window to see the ratio.",
@@ -1103,7 +1104,7 @@ const TERMS = {
   cagr:     "Annualised return — the yearly rate that would produce the same result, compounded. It is the only figure that compares fairly across windows of different length: 52× over eight years and 6.5× over three and a half look very different as multipliers, yet annualised they are 52.8%/yr and 61.1%/yr. Use the multiplier to see how much it grew, and this to see how fast.",
   calib:    "Calibrated window — this preset was tuned on the market from that year onward, so that is the window it was built for and the one shown first. The longer window is still here, one click away, and it is the harder read: the same rules over earlier bear markets they were never fitted to. Expect it to look weaker. A preset calibrated for one regime is not the best preset for every regime, and there is a real difference between that and overfitting: overfitting falls apart outside the sample it was tuned on, while this one also held up in a stress window it was never optimised for. Showing you both is the point; hiding the gap would be the actual red flag.",
   ranges:   "Time window \u2014 every figure on this card is measured over the window you pick here, and both curves are re-based to the same starting capital at its beginning. 6M / 1Y / 2Y are simply the last months up to today.\n\nWHY IT OPENS ON SINCE 2023. Every product on this board opens on the same window, deliberately. Each one used to open on its own \u2014 and, without anyone choosing it that way, each one opened on the window that happened to flatter it. Comparing them then meant reading eight years of one against three and a half of another, and the bigger number won for the wrong reason. SINCE 2023 is the one window all of them share, counted from the bottom of the previous bear market, and it is the regime most of these presets were tuned for.\n\nShort windows flatter almost any strategy, because they tend to hold no crash at all. That is exactly why the longer reading is not hidden behind this control: it sits under the cards, always visible, with its own result and its own worst drawdown. Use this control to explore; use that line to keep yourself honest.",
-  hold2:    "Strategy vs buy & hold — the same $1,000, the same start date, two different decisions. GREEN is what the strategy would have turned it into by following every signal, compounding, after 0.1% commission on each side of every trade. Orange is what simply buying one of five assets on day one and never selling would have left you. Beating that orange number is the only reason to run a strategy instead of just holding — and the multiplier under each figure says by how much, while the drawdown chip says what you had to sit through to get there. Both are simulated on past prices, not money that was made.",
+  hold2:    "Strategy vs buy & hold — the same $1,000, the same start date, two different decisions. GREEN is what the strategy would have turned it into by following every signal, compounding, after 0.1% commission on each side of every trade. Blue is what simply buying one of five assets on day one and never selling would have left you. Beating that blue number is the only reason to run a strategy instead of just holding — and the multiplier under each figure says by how much, while the drawdown chip says what you had to sit through to get there. Both are simulated on past prices, not money that was made.",
 };
 const hint = (k) => `<button class="hint" type="button" data-term="${k}" aria-label="What is this?">\u24D8</button>`;
 

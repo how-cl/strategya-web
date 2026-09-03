@@ -496,8 +496,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-02 04:28 UTC</b>, which was valid until
-    <b>2026-09-03 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-09-03 00:05 UTC</b>, which was valid until
+    <b>2026-09-04 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -557,9 +557,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: eth-1d</span>
-      <span>run: 2026-09-02 04:28 UTC</span>
-      <span>decision close: 2026-09-02 00:00 U C</span>
-      <span>valid until: 2026-09-03 00:00 UTC</span>
+      <span>run: 2026-09-03 00:05 UTC</span>
+      <span>decision close: 2026-09-03 00:00 U C</span>
+      <span>valid until: 2026-09-04 00:00 UTC</span>
       <span>source: EVOL ETH 1D Short v4.8 · preset V</span>
     </div>
   </footer>
@@ -581,10 +581,10 @@ const PRODUCTO = {
   "preset": "V",
   "pine": "EVOL ETH 1D Short v4.8",
   "abre": "SINCE 2023",
-  "exportado": "2026-09-02",
-  "actualizado": "2026-09-02",
-  "cierre": "2026-09-02T00:00Z",
-  "validoHasta": "2026-09-03T00:00:00Z",
+  "exportado": "2026-09-03",
+  "actualizado": "2026-09-03",
+  "cierre": "2026-09-03T00:00Z",
+  "validoHasta": "2026-09-04T00:00:00Z",
   "activo": "ETH",
   "enProsa": "ethereum",
   "par": "ETHUSDT",
@@ -593,7 +593,7 @@ const PRODUCTO = {
   "acento": "#7b8ff0",
   "colorPalabra": "blue",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-02 04:28 UTC"
+  "corrida": "2026-09-03 00:05 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -709,13 +709,13 @@ const ASSETS = Object.assign({},
 const ES_ROT = !!P.universo;
 
 const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const TODAY = "2026-09-02";   /* fecha de la corrida, UTC */
+const TODAY = "2026-09-03";   /* fecha de la corrida, UTC */
 const ymd = (t) => new Date(t).toISOString().slice(0,10);
 
 /* ======================================================================
    eth-1d — DATOS emitidos por el MOTOR, no por un export de TradingView.
    EVOL ETH 1D Short v4.8 2026-08-30.pine · preset V · velas BINANCE_ETHUSDT_1D.csv
-   Corrida 2026-09-02 04:28 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-09-03 00:05 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2018 con Δ 0.11 %
    (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
@@ -724,7 +724,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 const DATOS = {
 
   monthly: [
-  {year:2026, months:{Jan:-4.3,Feb:0.0,Mar:0.0,Apr:0.8,May:0.0,Jun:0.0,Jul:4.4,Aug:32.5,Sep:-2.0,Oct:null,Nov:null,Dec:null}, total:30.8, positive:"3/9"},
+  {year:2026, months:{Jan:-4.3,Feb:0.0,Mar:0.0,Apr:0.8,May:0.0,Jun:0.0,Jul:4.4,Aug:32.5,Sep:-3.1,Oct:null,Nov:null,Dec:null}, total:29.4, positive:"3/9"},
   {year:2025, months:{Jan:0.0,Feb:0.0,Mar:0.0,Apr:0.0,May:14.3,Jun:2.0,Jul:33.3,Aug:22.9,Sep:0.0,Oct:-2.8,Nov:0.0,Dec:0.0}, total:85.8, positive:"4/12"},
   {year:2024, months:{Jan:5.8,Feb:25.3,Mar:5.5,Apr:0.0,May:21.4,Jun:-10.9,Jul:0.0,Aug:0.0,Sep:0.0,Oct:0.0,Nov:35.8,Dec:-2.0}, total:101.4, positive:"5/12"},
   {year:2023, months:{Jan:19.8,Feb:-2.5,Mar:15.0,Apr:6.2,May:0.0,Jun:2.2,Jul:-4.5,Aug:0.0,Sep:0.9,Oct:7.3,Nov:13.1,Dec:8.4}, total:84.6, positive:"8/12"},
@@ -736,7 +736,7 @@ const DATOS = {
   ],
 
   bench: [
-  {year:2026, months:{Jan:-17.5,Feb:-19.9,Mar:7.2,Apr:7.2,May:-11.1,Jun:-21.7,Jul:18.5,Aug:32.5,Sep:-2.0,Oct:null,Nov:null,Dec:null}, total:-18.6, positive:"4/9"},
+  {year:2026, months:{Jan:-17.5,Feb:-19.9,Mar:7.2,Apr:7.2,May:-11.1,Jun:-21.7,Jul:18.5,Aug:32.5,Sep:-3.1,Oct:null,Nov:null,Dec:null}, total:-19.5, positive:"4/9"},
   {year:2025, months:{Jan:-1.1,Feb:-32.2,Mar:-18.6,Apr:-1.6,May:40.9,Jun:-1.7,Jul:48.8,Aug:18.7,Sep:-5.6,Oct:-7.2,Nov:-22.3,Dec:-0.7}, total:-11.0, positive:"3/12"},
   {year:2024, months:{Jan:0.1,Feb:46.3,Mar:9.1,Apr:-17.3,May:24.8,Jun:-8.6,Jul:-6.0,Aug:-22.3,Sep:3.6,Oct:-3.2,Nov:47.0,Dec:-9.9}, total:46.3, positive:"6/12"},
   {year:2023, months:{Jan:32.5,Feb:1.3,Mar:13.5,Apr:2.7,May:0.2,Jun:3.2,Jul:-4.0,Aug:-11.3,Sep:1.5,Oct:8.6,Nov:13.1,Dec:11.2}, total:90.8, positive:"10/12"},
@@ -748,7 +748,7 @@ const DATOS = {
   ],
 
   trades: [
-  {asset:"ETH", side:"LONG", entry:"2026-07-05", exit:null, days:58, ret:null, open:true},
+  {asset:"ETH", side:"LONG", entry:"2026-07-05", exit:null, days:59, ret:null, open:true},
   {asset:"ETH", side:"LONG", entry:"2026-04-08", exit:"2026-04-20", days:12, ret:0.84},
   {asset:"CASH", side:"CASH", entry:"2026-01-20", exit:"2026-04-08", days:78, ret:0.0},
   {asset:"ETH", side:"LONG", entry:"2026-01-14", exit:"2026-01-20", days:6, ret:-4.29},
@@ -814,14 +814,14 @@ const DATOS = {
   {asset:"ETH", side:"LONG", entry:"2018-07-18", exit:"2018-07-31", days:13, ret:-8.74},
   ],
 
-  hoy: {asset:"ETH", dir:"LONG", close:2418.57},
-  lastChange: {frm:"CASH", to:"ETH", date:"2026-07-05", price:1780.64, daysAgo:58},
+  hoy: {asset:"ETH", dir:"LONG", close:2391.92},
+  lastChange: {frm:"CASH", to:"ETH", date:"2026-07-05", price:1780.64, daysAgo:59},
   windows: [{"k": "SINCE 2023", "y": 2023}, {"k": "SINCE 2018", "y": 2018}],
   calibrado: null,
   ddTv: {"since-2018": 30.31, "since-2023": 10.48},
   kpis: {
-    "since-2023": {totalPnl:566.48, openPnl:35.55, openSide:"LONG", openSince:"2026-07-05", openPrice:1780.64, todayPnl:803.45, ytd:30.8, winRate:71.4, wins:10, losses:4, trades:14, longs:14, shorts:0, profitFactor:11.538, avgMonthly:5.5, avgTrade:15.92, avgHoldBars:25.1, avgHold:25.1, cagr:82.28, avgWin:23.3, avgLoss:-2.53, since:"2023-01-10"},
-    "since-2018": {totalPnl:4265.24, openPnl:35.55, openSide:"LONG", openSince:"2026-07-05", openPrice:1780.64, todayPnl:5817.28, ytd:30.8, winRate:56.2, wins:18, losses:14, trades:32, longs:32, shorts:0, profitFactor:9.455, avgMonthly:4.6, avgTrade:14.68, avgHoldBars:22.5, avgHold:22.5, cagr:60.14, avgWin:29.75, avgLoss:-4.68, since:"2018-07-18"},
+    "since-2023": {totalPnl:566.48, openPnl:34.06, openSide:"LONG", openSince:"2026-07-05", openPrice:1780.64, todayPnl:793.49, ytd:29.4, winRate:71.4, wins:10, losses:4, trades:14, longs:14, shorts:0, profitFactor:11.538, avgMonthly:5.5, avgTrade:15.92, avgHoldBars:25.1, avgHold:25.1, cagr:81.65, avgWin:23.3, avgLoss:-2.53, since:"2023-01-10"},
+    "since-2018": {totalPnl:4265.24, openPnl:34.06, openSide:"LONG", openSince:"2026-07-05", openPrice:1780.64, todayPnl:5752.08, ytd:29.4, winRate:56.2, wins:18, losses:14, trades:32, longs:32, shorts:0, profitFactor:9.455, avgMonthly:4.6, avgTrade:14.68, avgHoldBars:22.5, avgHold:22.5, cagr:59.91, avgWin:29.75, avgLoss:-4.68, since:"2018-07-18"},
   },
 };
 
