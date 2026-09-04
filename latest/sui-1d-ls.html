@@ -496,8 +496,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-03 04:19 UTC</b>, which was valid until
-    <b>2026-09-04 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-09-04 00:06 UTC</b>, which was valid until
+    <b>2026-09-05 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -569,9 +569,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: sui-1d-ls</span>
-      <span>run: 2026-09-03 04:19 UTC</span>
-      <span>decision close: 2026-09-03 00:00 U C</span>
-      <span>valid until: 2026-09-04 00:00 UTC</span>
+      <span>run: 2026-09-04 00:06 UTC</span>
+      <span>decision close: 2026-09-04 00:00 U C</span>
+      <span>valid until: 2026-09-05 00:00 UTC</span>
       <span>source: EVOL SUI 1D Short v3.5 · preset U</span>
     </div>
   </footer>
@@ -593,10 +593,10 @@ const PRODUCTO = {
   "preset": "U",
   "pine": "EVOL SUI 1D Short v3.5",
   "abre": "SINCE 2023",
-  "exportado": "2026-09-03",
-  "actualizado": "2026-09-03",
-  "cierre": "2026-09-03T00:00Z",
-  "validoHasta": "2026-09-04T00:00:00Z",
+  "exportado": "2026-09-04",
+  "actualizado": "2026-09-04",
+  "cierre": "2026-09-04T00:00Z",
+  "validoHasta": "2026-09-05T00:00:00Z",
   "activo": "SUI",
   "enProsa": "SUI",
   "par": "SUIUSDT",
@@ -605,7 +605,7 @@ const PRODUCTO = {
   "acento": "#4da2ff",
   "colorPalabra": "blue",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-03 04:19 UTC"
+  "corrida": "2026-09-04 00:06 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -721,13 +721,13 @@ const ASSETS = Object.assign({},
 const ES_ROT = !!P.universo;
 
 const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const TODAY = "2026-09-03";   /* fecha de la corrida, UTC */
+const TODAY = "2026-09-04";   /* fecha de la corrida, UTC */
 const ymd = (t) => new Date(t).toISOString().slice(0,10);
 
 /* ======================================================================
    sui-1d-ls — DATOS emitidos por el MOTOR, no por un export de TradingView.
    EVOL SUI 1D Short v3.5 2026-08-30.pine · preset U · velas BINANCE_SUIUSDT_1D.csv
-   Corrida 2026-09-03 04:19 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-09-04 00:06 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2023 con Δ 0.14 %
    (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
@@ -743,14 +743,14 @@ const DATOS = {
   ],
 
   bench: [
-  {year:2026, months:{Jan:-17.9,Feb:-21.6,Mar:-2.8,Apr:3.4,May:-1.4,Jun:-22.9,Jul:-1.2,Aug:6.6,Sep:2.6,Oct:null,Nov:null,Dec:null}, total:-46.9, positive:"3/9"},
+  {year:2026, months:{Jan:-17.9,Feb:-21.6,Mar:-2.8,Apr:3.4,May:-1.4,Jun:-22.9,Jul:-1.2,Aug:6.6,Sep:7.7,Oct:null,Nov:null,Dec:null}, total:-44.2, positive:"3/9"},
   {year:2025, months:{Jan:-0.8,Feb:-30.8,Mar:-19.9,Apr:54.6,May:-7.4,Jun:-14.4,Jul:30.1,Aug:-10.1,Sep:0.3,Oct:-27.5,Nov:-36.7,Dec:-6.2}, total:-65.9, positive:"3/12"},
   {year:2024, months:{Jan:95.9,Feb:10.4,Mar:14.1,Apr:-40.2,May:-10.5,Jun:-19.9,Jul:-13.8,Aug:12.6,Sep:122.8,Oct:11.1,Nov:76.3,Dec:18.6}, total:431.8, positive:"8/12"},
   {year:2023, months:{Jan:null,Feb:null,Mar:null,Apr:null,May:-30.5,Jun:-29.3,Jul:-8.3,Aug:-20.8,Sep:-6.0,Oct:-5.8,Nov:34.8,Dec:29.8}, total:-44.7, positive:"2/8"},
   ],
 
   trades: [
-  {asset:"CASH", side:"CASH", entry:"2026-09-01", exit:null, days:1, ret:null, open:true},
+  {asset:"CASH", side:"CASH", entry:"2026-09-01", exit:null, days:2, ret:null, open:true},
   {asset:"SUI", side:"SHORT", entry:"2026-08-31", exit:"2026-09-01", days:1, ret:-3.69},
   {asset:"SUI", side:"LONG", entry:"2026-08-21", exit:"2026-08-31", days:10, ret:-3.26},
   {asset:"CASH", side:"CASH", entry:"2026-07-12", exit:"2026-08-21", days:40, ret:0.0},
@@ -785,13 +785,13 @@ const DATOS = {
   {asset:"SUI", side:"SHORT", entry:"2023-08-07", exit:"2023-08-09", days:2, ret:-3.69},
   ],
 
-  hoy: {asset:"CASH", dir:"CASH", close:0.7462},
-  lastChange: {frm:"SUI", to:"CASH", date:"2026-09-01", price:0.735988, daysAgo:1},
+  hoy: {asset:"CASH", dir:"CASH", close:0.7833},
+  lastChange: {frm:"SUI", to:"CASH", date:"2026-09-01", price:0.735988, daysAgo:2},
   windows: [{"k": "SINCE 2023", "y": 2023}],
   calibrado: null,
   ddTv: {"since-2023": 14.05},
   kpis: {
-    "since-2023": {totalPnl:8537.97, openPnl:0.0, openSide:"CASH", openSince:"2026-09-01", openPrice:0.735988, todayPnl:8537.97, ytd:60.2, winRate:47.1, wins:8, losses:9, trades:17, longs:6, shorts:11, profitFactor:8.507, avgMonthly:13.6, avgTrade:48.57, avgHoldBars:33.2, avgHold:33.2, cagr:237.14, avgWin:107.45, avgLoss:-3.77, since:"2023-08-07"},
+    "since-2023": {totalPnl:8537.97, openPnl:0.0, openSide:"CASH", openSince:"2026-09-01", openPrice:0.735988, todayPnl:8537.97, ytd:60.2, winRate:47.1, wins:8, losses:9, trades:17, longs:6, shorts:11, profitFactor:8.507, avgMonthly:13.6, avgTrade:48.57, avgHoldBars:33.2, avgHold:33.2, cagr:236.84, avgWin:107.45, avgLoss:-3.77, since:"2023-08-07"},
   },
 };
 

@@ -496,8 +496,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-03 16:22 UTC</b>, which was valid until
-    <b>2026-09-04 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-09-04 00:06 UTC</b>, which was valid until
+    <b>2026-09-04 12:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -558,9 +558,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: rotation-12h</span>
-      <span>run: 2026-09-03 16:22 UTC</span>
-      <span>decision close: 2026-09-03 12:00 U C</span>
-      <span>valid until: 2026-09-04 00:00 UTC</span>
+      <span>run: 2026-09-04 00:06 UTC</span>
+      <span>decision close: 2026-09-04 00:00 U C</span>
+      <span>valid until: 2026-09-04 12:00 UTC</span>
       <span>source: EVOL Rotation 12H v0.5 Strategy.pro USDT LS · preset Winner (v1.1) · Aggressive · leg C</span>
     </div>
   </footer>
@@ -583,10 +583,10 @@ const PRODUCTO = {
   "preset": "Winner (v1.1) · Aggressive · leg C",
   "pine": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS",
   "abre": "SINCE 2023",
-  "exportado": "2026-09-03",
-  "actualizado": "2026-09-03",
-  "cierre": "2026-09-03T12:00Z",
-  "validoHasta": "2026-09-04T00:00:00Z",
+  "exportado": "2026-09-04",
+  "actualizado": "2026-09-04",
+  "cierre": "2026-09-04T00:00Z",
+  "validoHasta": "2026-09-04T12:00:00Z",
   "activo": "BTC",
   "enProsa": "one of five assets",
   "par": "BTCUSDT",
@@ -595,7 +595,7 @@ const PRODUCTO = {
   "acento": "#f7931a",
   "colorPalabra": "orange",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-03 16:22 UTC",
+  "corrida": "2026-09-04 00:06 UTC",
   "benchLabel": "Equal-weight basket",
   "benchAsset": "BASKET",
   "universo": [
@@ -745,7 +745,7 @@ const ASSETS = Object.assign({},
 const ES_ROT = !!P.universo;
 
 const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const TODAY = "2026-09-03";   /* fecha de la corrida, UTC */
+const TODAY = "2026-09-04";   /* fecha de la corrida, UTC */
 const ymd = (t) => new Date(t).toISOString().slice(0,10);
 
 /* ======================================================================
@@ -783,14 +783,14 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 const DATOS = {
 
   monthly: [
-  {year:2026, months:{Jan:11.7,Feb:10.9,Mar:-8.3,Apr:-0.9,May:0.5,Jun:0.0,Jul:4.4,Aug:21.8,Sep:-2.6,Oct:null,Nov:null,Dec:null}, total:40.2, positive:"5/9"},
+  {year:2026, months:{Jan:11.7,Feb:10.9,Mar:-8.3,Apr:-0.9,May:0.5,Jun:0.0,Jul:4.4,Aug:21.8,Sep:1.5,Oct:null,Nov:null,Dec:null}, total:46.2, positive:"6/9"},
   {year:2025, months:{Jan:25.6,Feb:-6.9,Mar:10.1,Apr:44.1,May:10.8,Jun:-5.1,Jul:16.5,Aug:16.8,Sep:12.0,Oct:-7.3,Nov:6.0,Dec:2.3}, total:198.7, positive:"9/12"},
   {year:2024, months:{Jan:72.5,Feb:18.1,Mar:7.2,Apr:3.6,May:14.2,Jun:-10.9,Jul:25.1,Aug:2.5,Sep:98.4,Oct:21.6,Nov:56.4,Dec:-1.7}, total:995.9, positive:"10/12"},
   {year:2023, months:{Jan:46.2,Feb:-0.7,Mar:21.2,Apr:3.2,May:-2.3,Jun:-0.0,Jul:-11.1,Aug:0.0,Sep:-0.4,Oct:19.6,Nov:7.6,Dec:37.0}, total:176.5, positive:"6/12"},
   ],
 
   bench: [
-  {year:2026, months:{Jan:-11.8,Feb:-15.0,Mar:-1.8,Apr:3.4,May:-2.7,Jun:-14.8,Jul:2.9,Aug:30.8,Sep:-1.4,Oct:null,Nov:null,Dec:null}, total:-16.2, positive:"3/9"},
+  {year:2026, months:{Jan:-11.8,Feb:-15.0,Mar:-1.8,Apr:3.4,May:-2.7,Jun:-14.8,Jul:2.9,Aug:30.8,Sep:1.7,Oct:null,Nov:null,Dec:null}, total:-13.6, positive:"4/9"},
   {year:2025, months:{Jan:15.2,Feb:-30.6,Mar:-12.1,Apr:17.6,May:7.5,Jun:-1.3,Jul:13.9,Aug:8.8,Sep:3.4,Oct:-9.1,Nov:-23.9,Dec:-4.4}, total:-25.6, positive:"6/12"},
   {year:2024, months:{Jan:0.4,Feb:30.4,Mar:41.4,Apr:-30.6,May:23.2,Jun:-10.2,Jul:10.5,Aug:-17.5,Sep:13.4,Oct:9.1,Nov:40.1,Dec:-13.3}, total:94.8, positive:"8/12"},
   {year:2023, months:{Jan:43.3,Feb:-3.3,Mar:7.5,Apr:3.5,May:-8.2,Jun:-2.7,Jul:4.9,Aug:-12.3,Sep:3.1,Oct:35.6,Nov:29.6,Dec:42.3}, total:226.7, positive:"8/12"},
@@ -940,16 +940,16 @@ const DATOS = {
   {asset:"SOL", side:"LONG", entry:"2023-01-09", exit:"2023-01-14", days:5, ret:26.23},
   ],
 
-  hoy: {asset:"BTC", dir:"LONG", close:77948.39},
+  hoy: {asset:"BTC", dir:"LONG", close:81270.37},
   lastChange: {frm:"ETH", to:"BTC", date:"2026-09-03", price:77340.01, daysAgo:0},
   windows: [{"k": "SINCE 2023", "y": 2023}],
   calibrado: null,
   ddTv: {"since-2023": 25.75},
 
-  metrics: {estrategia:{net:12589.7, cagr:274.0, dd:25.75, mar:10.64, sharpe:2.37, sortino:4.26, omega:1.4, exp:82.5}, canasta:{net:296.5, cagr:45.5, dd:66.8, mar:0.68, sharpe:0.92, sortino:1.35, omega:1.1, exp:100.0}},
+  metrics: {estrategia:{net:13130.5, cagr:278.3, dd:25.75, mar:10.81, sharpe:2.38, sortino:4.29, omega:1.4, exp:82.5}, canasta:{net:309.1, cagr:46.8, dd:66.8, mar:0.7, sharpe:0.93, sortino:1.37, omega:1.1, exp:100.0}},
 
   kpis: {
-    "since-2023": {totalPnl:12515.91, openPnl:0.59, openSide:"LONG", openSince:"2026-09-03", openPrice:77340.01, todayPnl:12589.74, ytd:40.2, winRate:59.2, wins:77, losses:53, trades:130, longs:130, shorts:0, profitFactor:2.444, avgMonthly:13.1, avgTrade:4.58, avgHoldBars:8.4, avgHold:8.4, cagr:274.04, avgWin:10.49, avgLoss:-4.01, since:"2023-01-09"},
+    "since-2023": {totalPnl:12515.91, openPnl:4.87, openSide:"LONG", openSince:"2026-09-03", openPrice:77340.01, todayPnl:13130.54, ytd:46.2, winRate:59.2, wins:77, losses:53, trades:130, longs:130, shorts:0, profitFactor:2.444, avgMonthly:13.2, avgTrade:4.58, avgHoldBars:8.4, avgHold:8.4, cagr:278.32, avgWin:10.49, avgLoss:-4.01, since:"2023-01-09"},
   },
 };
 

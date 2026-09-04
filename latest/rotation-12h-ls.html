@@ -496,8 +496,8 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-03 16:22 UTC</b>, which was valid until
-    <b>2026-09-04 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
+    This page shows the run of <b>2026-09-04 00:06 UTC</b>, which was valid until
+    <b>2026-09-04 12:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
 
@@ -575,9 +575,9 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: rotation-12h-ls</span>
-      <span>run: 2026-09-03 16:22 UTC</span>
-      <span>decision close: 2026-09-03 12:00 U C</span>
-      <span>valid until: 2026-09-04 00:00 UTC</span>
+      <span>run: 2026-09-04 00:06 UTC</span>
+      <span>decision close: 2026-09-04 00:00 U C</span>
+      <span>valid until: 2026-09-04 12:00 UTC</span>
       <span>source: EVOL Rotation 12H v0.5 Strategy.pro USDT LS · preset Winner (v1.1) · Aggressive · manga corta ON</span>
     </div>
   </footer>
@@ -642,11 +642,11 @@ const PRODUCTO = {
       "par": "PAXGUSDT"
     }
   ],
-  "exportado": "2026-09-03",
-  "actualizado": "2026-09-03",
-  "cierre": "2026-09-03T12:00Z",
-  "validoHasta": "2026-09-04T00:00:00Z",
-  "corrida": "2026-09-03 16:22 UTC"
+  "exportado": "2026-09-04",
+  "actualizado": "2026-09-04",
+  "cierre": "2026-09-04T00:00Z",
+  "validoHasta": "2026-09-04T12:00:00Z",
+  "corrida": "2026-09-04 00:06 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -762,7 +762,7 @@ const ASSETS = Object.assign({},
 const ES_ROT = !!P.universo;
 
 const M = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const TODAY = "2026-09-03";   /* fecha de la corrida, UTC */
+const TODAY = "2026-09-04";   /* fecha de la corrida, UTC */
 const ymd = (t) => new Date(t).toISOString().slice(0,10);
 
 /* ======================================================================
@@ -790,14 +790,14 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 const DATOS = {
 
   monthly: [
-  {year:2026, months:{Jan:36.7,Feb:12.6,Mar:-5.4,Apr:-0.9,May:7.0,Jun:20.0,Jul:-1.7,Aug:21.8,Sep:-2.6,Oct:null,Nov:null,Dec:null}, total:116.2, positive:"5/9"},
+  {year:2026, months:{Jan:36.7,Feb:12.6,Mar:-5.4,Apr:-0.9,May:7.0,Jun:20.0,Jul:-1.7,Aug:21.8,Sep:1.5,Oct:null,Nov:null,Dec:null}, total:125.4, positive:"6/9"},
   {year:2025, months:{Jan:25.6,Feb:14.0,Mar:21.4,Apr:44.1,May:10.8,Jun:-5.1,Jul:16.5,Aug:12.0,Sep:12.0,Oct:-0.8,Nov:40.4,Dec:2.3}, total:448.2, positive:"10/12"},
   {year:2024, months:{Jan:72.5,Feb:18.1,Mar:7.2,Apr:3.6,May:14.2,Jun:-12.2,Jul:26.7,Aug:20.9,Sep:110.1,Oct:21.6,Nov:56.4,Dec:-1.7}, total:1265.9, positive:"10/12"},
   {year:2023, months:{Jan:46.2,Feb:-0.7,Mar:21.2,Apr:3.2,May:-2.5,Jun:3.0,Jul:-13.1,Aug:-3.7,Sep:-0.4,Oct:19.6,Nov:7.6,Dec:37.0}, total:167.8, positive:"7/12"},
   ],
 
   bench: [
-  {year:2026, months:{Jan:-11.8,Feb:-15.0,Mar:-1.8,Apr:3.4,May:-2.7,Jun:-14.8,Jul:2.9,Aug:30.8,Sep:-1.4,Oct:null,Nov:null,Dec:null}, total:-16.2, positive:"3/9"},
+  {year:2026, months:{Jan:-11.8,Feb:-15.0,Mar:-1.8,Apr:3.4,May:-2.7,Jun:-14.8,Jul:2.9,Aug:30.8,Sep:1.7,Oct:null,Nov:null,Dec:null}, total:-13.6, positive:"4/9"},
   {year:2025, months:{Jan:15.2,Feb:-30.7,Mar:-12.1,Apr:17.6,May:7.4,Jun:-1.3,Jul:13.9,Aug:8.8,Sep:3.4,Oct:-9.1,Nov:-23.9,Dec:-4.4}, total:-25.6, positive:"6/12"},
   {year:2024, months:{Jan:0.4,Feb:30.4,Mar:41.5,Apr:-30.6,May:23.2,Jun:-10.2,Jul:10.5,Aug:-17.5,Sep:13.4,Oct:9.1,Nov:40.1,Dec:-13.3}, total:94.9, positive:"8/12"},
   {year:2023, months:{Jan:43.0,Feb:-3.3,Mar:7.5,Apr:3.5,May:-8.2,Jun:-2.7,Jul:4.9,Aug:-12.3,Sep:3.1,Oct:35.6,Nov:29.6,Dec:42.3}, total:225.9, positive:"8/12"},
@@ -961,16 +961,16 @@ const DATOS = {
   {asset:"SOL", side:"LONG", entry:"2023-01-09", exit:"2023-01-14", days:5, ret:26.23},
   ],
 
-  hoy: {asset:"BTC", dir:"LONG", close:77948.39},
+  hoy: {asset:"BTC", dir:"LONG", close:81270.37},
   lastChange: {frm:"ETH", to:"BTC", date:"2026-09-03", price:77340.01, daysAgo:0},
   windows: [{"k": "SINCE 2023", "y": 2023}],
   calibrado: null,
   ddTv: {"since-2023": 26.98},
 
-  metrics: {estrategia:{net:43260.7, cagr:423.4, dd:26.98, mar:15.69, sharpe:2.73, sortino:4.87, omega:1.43, exp:86.1}, canasta:{net:295.5, cagr:45.5, dd:66.81, mar:0.68, sharpe:0.91, sortino:1.33, omega:1.1, exp:100.0}},
+  metrics: {estrategia:{net:45108.6, cagr:429.4, dd:26.98, mar:15.91, sharpe:2.75, sortino:4.9, omega:1.43, exp:86.1}, canasta:{net:308.0, cagr:46.7, dd:66.81, mar:0.7, sharpe:0.92, sortino:1.35, omega:1.1, exp:100.0}},
 
   kpis: {
-    "since-2023": {totalPnl:43008.45, openPnl:0.59, openSide:"LONG", openSince:"2026-09-03", openPrice:77340.01, todayPnl:43260.7, ytd:116.2, winRate:58.3, wins:81, losses:58, trades:139, longs:129, shorts:10, profitFactor:3.11, avgMonthly:16.3, avgTrade:5.36, avgHoldBars:8.1, avgHold:8.1, cagr:423.37, avgWin:12.04, avgLoss:-3.97, since:"2023-01-09"},
+    "since-2023": {totalPnl:43008.45, openPnl:4.87, openSide:"LONG", openSince:"2026-09-03", openPrice:77340.01, todayPnl:45108.64, ytd:125.4, winRate:58.3, wins:81, losses:58, trades:139, longs:129, shorts:10, profitFactor:3.11, avgMonthly:16.4, avgTrade:5.36, avgHoldBars:8.1, avgHold:8.1, cagr:429.35, avgWin:12.04, avgLoss:-3.97, since:"2023-01-09"},
   },
 };
 
