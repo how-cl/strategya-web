@@ -9,17 +9,25 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "bbf216851d2c1cf8a9e175966ed523fb"
   },
-  "decision_bar_label": "2026-09-04T00:00Z",
-  "decision_close_utc": "2026-09-04T00:00:00Z",
-  "valid_until_utc": "2026-09-05T00:00:00Z",
-  "generated_at_utc": "2026-09-04T00:06:00Z",
+  "decision_bar_label": "2026-09-05T00:00Z",
+  "decision_close_utc": "2026-09-05T00:00:00Z",
+  "valid_until_utc": "2026-09-06T00:00:00Z",
+  "generated_at_utc": "2026-09-05T00:05:00Z",
   "data_as_of": {
-    "SUI": "2026-09-04"
+    "SUI": "2026-09-05"
   },
   "cash_asset": "USDT",
-  "reference_price": 0.7833,
-  "action": "HOLD",
-  "positions": [],
+  "reference_price": 0.7555,
+  "action": "BUY",
+  "positions": [
+    {
+      "asset": "SUI",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-09-04",
+      "entry_price": 0.7832
+    }
+  ],
   "previous_positions": [],
   "last_trade": {
     "asset": "SUI",
@@ -31,5 +39,5 @@
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:ff4d99b13bb2e58b8afd53e1a43299949e0a546b7b5f58b0658a4823a3d2d3ff"
+  "checksum": "sha256:ee4a8e657c4845865a74c919412f550f29695003247a13ac25087b1ad22c5dd6"
 }

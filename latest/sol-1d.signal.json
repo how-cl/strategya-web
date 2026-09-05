@@ -9,17 +9,25 @@
     "symbol": "BINANCE:SOLUSDT",
     "md5": "9646381ca23f29ca9641178c57fc5bd1"
   },
-  "decision_bar_label": "2026-09-04T00:00Z",
-  "decision_close_utc": "2026-09-04T00:00:00Z",
-  "valid_until_utc": "2026-09-05T00:00:00Z",
-  "generated_at_utc": "2026-09-04T00:06:00Z",
+  "decision_bar_label": "2026-09-05T00:00Z",
+  "decision_close_utc": "2026-09-05T00:00:00Z",
+  "valid_until_utc": "2026-09-06T00:00:00Z",
+  "generated_at_utc": "2026-09-05T00:05:00Z",
   "data_as_of": {
-    "SOL": "2026-09-04"
+    "SOL": "2026-09-05"
   },
   "cash_asset": "USDT",
-  "reference_price": 103.94,
-  "action": "HOLD",
-  "positions": [],
+  "reference_price": 101.93,
+  "action": "BUY",
+  "positions": [
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-09-04",
+      "entry_price": 103.95
+    }
+  ],
   "previous_positions": [],
   "last_trade": {
     "asset": "SOL",
@@ -31,5 +39,5 @@
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:be0fbfc4b46eefabad8ef64dd06c8898ad45267ffc2cdf9936999a5fa25b5f5a"
+  "checksum": "sha256:85b1769a87dc904876361132a42f787092402cea838b2edb4eed422238dafeaa"
 }
