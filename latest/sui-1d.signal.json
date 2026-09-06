@@ -7,18 +7,18 @@
     "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
     "preset": "A",
     "symbol": "BINANCE:SUIUSDT",
-    "md5": "bbf216851d2c1cf8a9e175966ed523fb"
+    "md5": "6b9b741033369002ffa690ad9c8c537f"
   },
-  "decision_bar_label": "2026-09-05T00:00Z",
-  "decision_close_utc": "2026-09-05T00:00:00Z",
-  "valid_until_utc": "2026-09-06T00:00:00Z",
-  "generated_at_utc": "2026-09-05T00:05:00Z",
+  "decision_bar_label": "2026-09-06T00:00Z",
+  "decision_close_utc": "2026-09-06T00:00:00Z",
+  "valid_until_utc": "2026-09-07T00:00:00Z",
+  "generated_at_utc": "2026-09-06T00:05:00Z",
   "data_as_of": {
-    "SUI": "2026-09-05"
+    "SUI": "2026-09-06"
   },
   "cash_asset": "USDT",
-  "reference_price": 0.7555,
-  "action": "BUY",
+  "reference_price": 0.7951,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
@@ -28,7 +28,13 @@
       "entry_price": 0.7832
     }
   ],
-  "previous_positions": [],
+  "previous_positions": [
+    {
+      "asset": "SUI",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
   "last_trade": {
     "asset": "SUI",
     "side": "long",
@@ -39,5 +45,5 @@
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:ee4a8e657c4845865a74c919412f550f29695003247a13ac25087b1ad22c5dd6"
+  "checksum": "sha256:2e114805143050453469f4e141731677b59b78d2e0d5560f9dcf21694fc28436"
 }

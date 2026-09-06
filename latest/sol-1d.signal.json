@@ -7,18 +7,18 @@
     "file": "EVOL SOL 1D Short v3.9 2026-08-25.pine",
     "preset": "U",
     "symbol": "BINANCE:SOLUSDT",
-    "md5": "9646381ca23f29ca9641178c57fc5bd1"
+    "md5": "063575ef09167bd7fee1ded0e84e4503"
   },
-  "decision_bar_label": "2026-09-05T00:00Z",
-  "decision_close_utc": "2026-09-05T00:00:00Z",
-  "valid_until_utc": "2026-09-06T00:00:00Z",
-  "generated_at_utc": "2026-09-05T00:05:00Z",
+  "decision_bar_label": "2026-09-06T00:00Z",
+  "decision_close_utc": "2026-09-06T00:00:00Z",
+  "valid_until_utc": "2026-09-07T00:00:00Z",
+  "generated_at_utc": "2026-09-06T00:05:00Z",
   "data_as_of": {
-    "SOL": "2026-09-05"
+    "SOL": "2026-09-06"
   },
   "cash_asset": "USDT",
-  "reference_price": 101.93,
-  "action": "BUY",
+  "reference_price": 103.18,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "SOL",
@@ -28,7 +28,13 @@
       "entry_price": 103.95
     }
   ],
-  "previous_positions": [],
+  "previous_positions": [
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
   "last_trade": {
     "asset": "SOL",
     "side": "long",
@@ -39,5 +45,5 @@
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:85b1769a87dc904876361132a42f787092402cea838b2edb4eed422238dafeaa"
+  "checksum": "sha256:b8f7c6de4219be994a271108815582ddd0e198ade74581c8618f59e63717c969"
 }
