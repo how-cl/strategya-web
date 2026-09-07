@@ -5,7 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PREVIEW · Rotation 1D L +Stocks — Strategya.pro</title>
+<title>PRELIMINARY · Rotation 1D L +Stocks — Strategya.pro</title>
 <meta name="description" content="Rotation 1D L +Stocks: one decision a day. It holds a mix of seven assets, or it holds nothing.">
 <style>
 /* ============================================================
@@ -544,9 +544,8 @@ html.is-stale #stale{display:block}
 </style>
 </head>
 <body>
-<div id="preview-banner" style="position:sticky;top:0;z-index:9999;background:#7a4a00;color:#ffe9c2;font:600 13px/1.4 system-ui,sans-serif;padding:10px 16px;text-align:center;border-bottom:2px solid #ffb84d">
-  STATIC PREVIEW · PRELIMINARY FIGURES · generated 2026-09-06 23:28 UTC · this is <u>not</u> a live signal: it is not refreshed daily, it is not in the catalog nor in the MCP, and nothing here is a recommendation. Simulated backtest, not real performance.
-  &nbsp;<a href="./" style="color:#ffe9c2">← all previews</a>
+<div id="preliminary-banner" style="position:sticky;top:0;z-index:9999;background:#7a4a00;color:#ffe9c2;font:600 13px/1.4 system-ui,sans-serif;padding:10px 16px;text-align:center;border-bottom:2px solid #ffb84d">
+  PRELIMINARY · STATIC PAGE · generated 2026-09-06 23:28 UTC · position as of the 2026-09-06T00:00Z close · this page is <u>not</u> refreshed daily yet (no production engine runs these products); nothing here is a recommendation. Simulated backtest, in-sample, not real performance.
 </div>
 
 <div class="wrap">
@@ -729,7 +728,7 @@ const CADENCIA = ES_12H ? "two decisions a day (00:00 and 12:00 UTC)"
 /* Regla 4 del CLAUDE.md — la página se marca VENCIDA por sí sola.
    El instante se DERIVA del cierre de vela de la señal: para 1D, el cierre
    siguiente. Así el runner no tiene que mantener dos campos sincronizados. */
-const VALID_UNTIL = null; /* vista estática: no vence, no es señal viva */
+const VALID_UNTIL = null; /* ficha estática preliminar: el banner declara la fecha; no hay corrida diaria que la renueve */
 (function(){
   function check(){
     if(VALID_UNTIL && Date.now() >= Date.parse(VALID_UNTIL)){

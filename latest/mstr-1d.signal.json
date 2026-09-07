@@ -1,0 +1,49 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "mstr-1d",
+  "kind": "sovereign",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL MacroMomentum MSTR 1D v4.7 2026-09-03.pine",
+    "preset": "F3",
+    "symbol": "NASDAQ:MSTR",
+    "md5": "2ac78c144187b7cfc0a9336718e9b9e7"
+  },
+  "decision_bar_label": "2026-09-02T20:00Z",
+  "decision_close_utc": "2026-09-02T20:00:00Z",
+  "valid_until_utc": "2026-09-03T20:00:00Z",
+  "generated_at_utc": "2026-09-07T00:13:00Z",
+  "data_as_of": {
+    "MSTR": "2026-09-02"
+  },
+  "cash_asset": "USD",
+  "reference_price": 123.19,
+  "action": "HOLD",
+  "positions": [
+    {
+      "asset": "MSTR",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-08-31",
+      "entry_price": 128.57
+    }
+  ],
+  "previous_positions": [
+    {
+      "asset": "MSTR",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
+  "last_trade": {
+    "asset": "MSTR",
+    "side": "long",
+    "entry_date": "2026-04-20",
+    "exit_date": "2026-05-19",
+    "days": 29,
+    "return_pct": 0.85
+  },
+  "status": "stale",
+  "notes": "PRELIMINAR. Ficha estática generada el 2026-09-03 18:00 UTC por el laboratorio de Felipe, no por la corrida diaria: no se recalcula hasta que exista el conductor de producción de acciones. Posición al cierre de la vela 2026-09-02T20:00Z; cifras in-sample. status=stale por eso, no por falla.",
+  "checksum": "sha256:6d55319abc0d59a5a76841bfa1901dc1ef012c642800bac4167d91d40246c616"
+}
