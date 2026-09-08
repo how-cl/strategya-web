@@ -559,7 +559,7 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-08 21:26 UTC</b>, which was valid until
+    This page shows the run of <b>2026-09-08 21:33 UTC</b>, which was valid until
     <b>2026-09-09 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
@@ -620,7 +620,7 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: rotation-1d-stocks</span>
-      <span>run: 2026-09-08 21:26 UTC</span>
+      <span>run: 2026-09-08 21:33 UTC</span>
       <span>decision close: 2026-09-08 00:00 U C</span>
       <span>valid until: 2026-09-09 00:00 UTC</span>
       <span>source: EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard · preset Proportional (T=2) · gold ON · short sleeve OFF · MSTR F3 + TSLA A·W22 · NYSE holidays ON</span>
@@ -703,7 +703,7 @@ const PRODUCTO = {
   "actualizado": "2026-09-08",
   "cierre": "2026-09-08T00:00Z",
   "validoHasta": "2026-09-09T00:00:00Z",
-  "corrida": "2026-09-08 21:26 UTC"
+  "corrida": "2026-09-08 21:33 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -993,6 +993,7 @@ const DATOS = {
 
   hoy: {asset:"MSTR", dir:"LONG", close:142.8},
   hoyAlloc: [{"asset": "MSTR", "w": 0.605, "close": 142.8, "dir": "LONG"}, {"asset": "SOL", "w": 0.21, "close": 103.8, "dir": "LONG"}, {"asset": "ETH", "w": 0.124, "close": 2490.16, "dir": "LONG"}, {"asset": "SUI", "w": 0.06, "close": 0.8185, "dir": "LONG"}],
+  prevAlloc: [{"asset": "MSTR", "w": 0.601, "close": 142.8, "dir": "LONG"}, {"asset": "SOL", "w": 0.215, "close": 106.55, "dir": "LONG"}, {"asset": "ETH", "w": 0.125, "close": 2514.48, "dir": "LONG"}, {"asset": "SUI", "w": 0.059, "close": 0.8118, "dir": "LONG"}],
   lastChange: {frm:"MSTR", to:"MSTR", date:"2026-09-04", price:142.8, daysAgo:3, changedNow:false},
   windows: [{"k": "SINCE 2021", "y": 2021}],
   calibrado: null,
