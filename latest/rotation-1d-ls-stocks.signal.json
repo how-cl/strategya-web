@@ -9,39 +9,39 @@
     "symbol": "BINANCE:MSTR",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-08T00:00Z",
-  "decision_close_utc": "2026-09-08T00:00:00Z",
-  "valid_until_utc": "2026-09-09T00:00:00Z",
-  "generated_at_utc": "2026-09-08T21:33:00Z",
+  "decision_bar_label": "2026-09-09T00:00Z",
+  "decision_close_utc": "2026-09-09T00:00:00Z",
+  "valid_until_utc": "2026-09-10T00:00:00Z",
+  "generated_at_utc": "2026-09-09T01:13:00Z",
   "data_as_of": {
-    "MSTR": "2026-09-08"
+    "MSTR": "2026-09-09"
   },
   "cash_asset": "USDT",
-  "reference_price": 142.8,
+  "reference_price": 136.54,
   "action": "HOLD",
   "positions": [
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.605,
+      "weight": 0.595,
       "since": "2026-08-31"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.21,
+      "weight": 0.216,
       "since": "2026-09-04"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.124,
+      "weight": 0.128,
       "since": "2026-07-05"
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.06,
+      "weight": 0.061,
       "since": "2026-09-04"
     }
   ],
@@ -49,22 +49,22 @@
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.601
+      "weight": 0.605
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.215
+      "weight": 0.21
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.125
+      "weight": 0.124
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.059
+      "weight": 0.06
     }
   ],
   "last_trade": {
@@ -77,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:712893e305bb27d89ab1f21e782a6e8111ee47c8bf3425f90e25d68a9b55fb6d"
+  "checksum": "sha256:66f441863fd6517dde07e817aaf71fddd92abb8e78bf60d286ef490bf6de8e10"
 }
