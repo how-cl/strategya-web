@@ -9,25 +9,17 @@
     "symbol": "BINANCE:PAXGUSDT",
     "md5": "b4e43fcb183d970a660c7b4f39872d0c"
   },
-  "decision_bar_label": "2026-09-09T12:00Z",
-  "decision_close_utc": "2026-09-09T12:00:00Z",
-  "valid_until_utc": "2026-09-10T00:00:00Z",
-  "generated_at_utc": "2026-09-09T12:05:00Z",
+  "decision_bar_label": "2026-09-10T00:00Z",
+  "decision_close_utc": "2026-09-10T00:00:00Z",
+  "valid_until_utc": "2026-09-10T12:00:00Z",
+  "generated_at_utc": "2026-09-10T00:06:00Z",
   "data_as_of": {
-    "PAXG": "2026-09-09"
+    "PAXG": "2026-09-10"
   },
   "cash_asset": "USDT",
-  "reference_price": 4409.57,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "PAXG",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-08-05",
-      "entry_price": 4181.31
-    }
-  ],
+  "reference_price": 4395.04,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "PAXG",
@@ -38,12 +30,12 @@
   "last_trade": {
     "asset": "PAXG",
     "side": "long",
-    "entry_date": "2025-08-27",
-    "exit_date": "2026-03-18",
-    "days": 203,
-    "return_pct": 45.52
+    "entry_date": "2026-08-05",
+    "exit_date": "2026-09-10",
+    "days": 35,
+    "return_pct": 4.9
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:bfc92aeb9f6e71d7297e5daf3f52fb1b8ae7134de87b0095cac19464385db2c7"
+  "notes": "fill pendiente: la última vela decidió y la orden va a la apertura de la próxima; entry_price = cierre de decisión (provisional)",
+  "checksum": "sha256:52069808b8b5926fe3b73b8207b1bc93fb01997665b9d310b594bcd22f825d52"
 }

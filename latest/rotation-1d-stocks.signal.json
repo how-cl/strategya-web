@@ -9,39 +9,39 @@
     "symbol": "BINANCE:MSTR",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-09T00:00Z",
-  "decision_close_utc": "2026-09-09T00:00:00Z",
-  "valid_until_utc": "2026-09-10T00:00:00Z",
-  "generated_at_utc": "2026-09-09T01:13:00Z",
+  "decision_bar_label": "2026-09-10T00:00Z",
+  "decision_close_utc": "2026-09-10T00:00:00Z",
+  "valid_until_utc": "2026-09-11T00:00:00Z",
+  "generated_at_utc": "2026-09-10T00:06:00Z",
   "data_as_of": {
-    "MSTR": "2026-09-09"
+    "MSTR": "2026-09-10"
   },
   "cash_asset": "USDT",
-  "reference_price": 136.54,
+  "reference_price": 132.69,
   "action": "HOLD",
   "positions": [
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.595,
+      "weight": 0.593,
       "since": "2026-08-31"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.216,
+      "weight": 0.217,
       "since": "2026-09-04"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.128,
+      "weight": 0.13,
       "since": "2026-07-05"
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.061,
+      "weight": 0.06,
       "since": "2026-09-04"
     }
   ],
@@ -49,22 +49,22 @@
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.605
+      "weight": 0.595
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.21
+      "weight": 0.216
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.124
+      "weight": 0.128
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.06
+      "weight": 0.061
     }
   ],
   "last_trade": {
@@ -77,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:a62e3bce9545dcab611537515b2306d1370117b3c91843a87c557c8222ccb229"
+  "checksum": "sha256:88447561fad47b4c50905e2ec18b4980fc1358bcf18b7f90acfbfc9fa124d48f"
 }
