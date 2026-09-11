@@ -9,25 +9,17 @@
     "symbol": "BINANCE:SOLUSDT",
     "md5": "063575ef09167bd7fee1ded0e84e4503"
   },
-  "decision_bar_label": "2026-09-10T00:00Z",
-  "decision_close_utc": "2026-09-10T00:00:00Z",
-  "valid_until_utc": "2026-09-11T00:00:00Z",
-  "generated_at_utc": "2026-09-10T00:06:00Z",
+  "decision_bar_label": "2026-09-11T00:00Z",
+  "decision_close_utc": "2026-09-11T00:00:00Z",
+  "valid_until_utc": "2026-09-12T00:00:00Z",
+  "generated_at_utc": "2026-09-11T00:06:00Z",
   "data_as_of": {
-    "SOL": "2026-09-10"
+    "SOL": "2026-09-11"
   },
   "cash_asset": "USDT",
-  "reference_price": 101.57,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-09-04",
-      "entry_price": 103.95
-    }
-  ],
+  "reference_price": 98.67,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "SOL",
@@ -38,12 +30,12 @@
   "last_trade": {
     "asset": "SOL",
     "side": "long",
-    "entry_date": "2026-08-19",
-    "exit_date": "2026-08-28",
-    "days": 9,
-    "return_pct": 41.38
+    "entry_date": "2026-09-04",
+    "exit_date": "2026-09-11",
+    "days": 7,
+    "return_pct": -5.27
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:8629d599b78f26a77dd6da044fd53611b34ff458630974117679990c55850ac9"
+  "notes": "fill pendiente: la última vela decidió y la orden va a la apertura de la próxima; entry_price = cierre de decisión (provisional)",
+  "checksum": "sha256:304690ac1c01f4d63a0b681a41610c2485b1012a27f2e08ae063028cc4d7e50f"
 }
