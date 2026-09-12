@@ -9,17 +9,25 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "6b9b741033369002ffa690ad9c8c537f"
   },
-  "decision_bar_label": "2026-09-11T00:00Z",
-  "decision_close_utc": "2026-09-11T00:00:00Z",
-  "valid_until_utc": "2026-09-12T00:00:00Z",
-  "generated_at_utc": "2026-09-11T00:06:00Z",
+  "decision_bar_label": "2026-09-12T00:00Z",
+  "decision_close_utc": "2026-09-12T00:00:00Z",
+  "valid_until_utc": "2026-09-13T00:00:00Z",
+  "generated_at_utc": "2026-09-12T00:06:00Z",
   "data_as_of": {
-    "SUI": "2026-09-11"
+    "SUI": "2026-09-12"
   },
   "cash_asset": "USDT",
-  "reference_price": 0.7276,
-  "action": "HOLD",
-  "positions": [],
+  "reference_price": 0.7257,
+  "action": "SHORT",
+  "positions": [
+    {
+      "asset": "SUI",
+      "side": "short",
+      "weight": 1.0,
+      "since": "2026-09-12",
+      "entry_price": 0.7257
+    }
+  ],
   "previous_positions": [],
   "last_trade": {
     "asset": "SUI",
@@ -30,6 +38,6 @@
     "return_pct": -3.69
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:e74cca8cb91505ef15b761d87f2599cdf889c15759db209af2eb8ef45862f284"
+  "notes": "fill pendiente: la última vela decidió y la orden va a la apertura de la próxima; entry_price = cierre de decisión (provisional)",
+  "checksum": "sha256:45872f6f76175644dba37136d757d56d56dcadfc7146fc382e8e8e5dd2a0d941"
 }

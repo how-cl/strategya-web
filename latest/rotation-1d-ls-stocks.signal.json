@@ -9,39 +9,33 @@
     "symbol": "BINANCE:MSTR",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-11T00:00Z",
-  "decision_close_utc": "2026-09-11T00:00:00Z",
-  "valid_until_utc": "2026-09-12T00:00:00Z",
-  "generated_at_utc": "2026-09-11T00:07:00Z",
+  "decision_bar_label": "2026-09-12T00:00Z",
+  "decision_close_utc": "2026-09-12T00:00:00Z",
+  "valid_until_utc": "2026-09-13T00:00:00Z",
+  "generated_at_utc": "2026-09-12T00:07:00Z",
   "data_as_of": {
-    "MSTR": "2026-09-11"
+    "MSTR": "2026-09-12"
   },
   "cash_asset": "USDT",
-  "reference_price": 128.65,
-  "action": "HOLD",
+  "reference_price": 130.98,
+  "action": "SELL",
   "positions": [
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.592,
+      "weight": 0.369,
       "since": "2026-08-31"
-    },
-    {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 0.217,
-      "since": "2026-09-04"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.132,
+      "weight": 0.343,
       "since": "2026-07-05"
     },
     {
-      "asset": "SUI",
+      "asset": "SOL",
       "side": "long",
-      "weight": 0.058,
+      "weight": 0.288,
       "since": "2026-09-04"
     }
   ],
@@ -49,7 +43,7 @@
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.593
+      "weight": 0.592
     },
     {
       "asset": "SOL",
@@ -59,23 +53,23 @@
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.13
+      "weight": 0.132
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.06
+      "weight": 0.058
     }
   ],
   "last_trade": {
     "asset": "SUI",
     "side": "long",
-    "entry_date": "2026-08-21",
-    "exit_date": "2026-08-31",
-    "days": 10,
-    "return_pct": -3.26
+    "entry_date": "2026-09-04",
+    "exit_date": "2026-09-11",
+    "days": 7,
+    "return_pct": -7.3
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:32ae00f23ef3645f880cadd4929265b0e355c247b73734ef20c4e4966b7a162d"
+  "checksum": "sha256:40df8b7bbe63f49a18975935b66c7ae4229985cdd0d040093baa7970d608ae46"
 }
