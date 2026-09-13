@@ -9,33 +9,33 @@
     "symbol": "BINANCE:MSTR",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-12T00:00Z",
-  "decision_close_utc": "2026-09-12T00:00:00Z",
-  "valid_until_utc": "2026-09-13T00:00:00Z",
-  "generated_at_utc": "2026-09-12T00:06:00Z",
+  "decision_bar_label": "2026-09-13T00:00Z",
+  "decision_close_utc": "2026-09-13T00:00:00Z",
+  "valid_until_utc": "2026-09-14T00:00:00Z",
+  "generated_at_utc": "2026-09-13T00:06:00Z",
   "data_as_of": {
-    "MSTR": "2026-09-12"
+    "MSTR": "2026-09-13"
   },
   "cash_asset": "USDT",
   "reference_price": 130.98,
-  "action": "SELL",
+  "action": "HOLD",
   "positions": [
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.369,
+      "weight": 0.37,
       "since": "2026-08-31"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.343,
+      "weight": 0.344,
       "since": "2026-07-05"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.288,
+      "weight": 0.286,
       "since": "2026-09-04"
     }
   ],
@@ -43,22 +43,17 @@
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.592
-    },
-    {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 0.217
+      "weight": 0.369
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.132
+      "weight": 0.343
     },
     {
-      "asset": "SUI",
+      "asset": "SOL",
       "side": "long",
-      "weight": 0.058
+      "weight": 0.288
     }
   ],
   "last_trade": {
@@ -71,5 +66,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:bcbfbd93dd0f9d244cfa08512d384a5f9f4711a42466f04e120a11ee5a725044"
+  "checksum": "sha256:693d13959ae74b2a992626a3573c019dbe1d362d824ce4228c88a76ee8e78f40"
 }
