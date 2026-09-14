@@ -1,6 +1,6 @@
 {
-  "schema": "strategya.catalog/0.1",
-  "generated_at_utc": "2026-09-12T00:07:00Z",
+  "schema": "strategya.catalog/0.2",
+  "generated_at_utc": "2026-09-14T15:01:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -17,7 +17,33 @@
       "glyph": "₿",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 53.8,
+        "max_dd_pct": 17.5,
+        "mar": 3.08,
+        "sharpe": 1.73,
+        "hold": {
+          "cagr_pct": 33.6,
+          "max_dd_pct": 53.0,
+          "mar": 0.63,
+          "sharpe": 0.86
+        },
+        "trades": 11,
+        "win_rate_pct": 63.6,
+        "last_change": {
+          "date": "2026-08-20",
+          "time_utc": "00:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "BTC",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 18
+      }
     },
     {
       "slug": "btc-1d-ls",
@@ -32,7 +58,37 @@
       "glyph": "₿",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-1d-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-1d-ls.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 66.3,
+        "max_dd_pct": 17.5,
+        "mar": 3.8,
+        "sharpe": 1.85,
+        "hold": {
+          "cagr_pct": 33.6,
+          "max_dd_pct": 53.0,
+          "mar": 0.63,
+          "sharpe": 0.86
+        },
+        "trades": 13,
+        "win_rate_pct": 69.2,
+        "last_change": {
+          "date": "2026-08-20",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "BTC",
+            "side": "short",
+            "return_pct": 9.74
+          },
+          "opened": [
+            {
+              "asset": "BTC",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 17
+      }
     },
     {
       "slug": "btc-12h",
@@ -47,7 +103,33 @@
       "glyph": "₿",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-12h.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-12h.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 71.7,
+        "max_dd_pct": 16.7,
+        "mar": 4.3,
+        "sharpe": 2.02,
+        "hold": {
+          "cagr_pct": 34.7,
+          "max_dd_pct": 53.0,
+          "mar": 0.65,
+          "sharpe": 0.87
+        },
+        "trades": 12,
+        "win_rate_pct": 75.0,
+        "last_change": {
+          "date": "2026-08-18",
+          "time_utc": "12:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "BTC",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 14
+      }
     },
     {
       "slug": "btc-12h-ls",
@@ -62,7 +144,37 @@
       "glyph": "₿",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/btc-12h-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/btc-12h-ls.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 87.9,
+        "max_dd_pct": 16.7,
+        "mar": 5.28,
+        "sharpe": 2.19,
+        "hold": {
+          "cagr_pct": 34.7,
+          "max_dd_pct": 53.0,
+          "mar": 0.65,
+          "sharpe": 0.87
+        },
+        "trades": 18,
+        "win_rate_pct": 66.7,
+        "last_change": {
+          "date": "2026-08-18",
+          "time_utc": "12:00",
+          "closed": {
+            "asset": "BTC",
+            "side": "short",
+            "return_pct": -1.66
+          },
+          "opened": [
+            {
+              "asset": "BTC",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 12
+      }
     },
     {
       "slug": "eth-1d",
@@ -77,7 +189,33 @@
       "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/eth-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/eth-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 74.3,
+        "max_dd_pct": 14.1,
+        "mar": 5.28,
+        "sharpe": 1.82,
+        "hold": {
+          "cagr_pct": 8.1,
+          "max_dd_pct": 67.6,
+          "mar": 0.12,
+          "sharpe": 0.44
+        },
+        "trades": 12,
+        "win_rate_pct": 66.7,
+        "last_change": {
+          "date": "2026-07-05",
+          "time_utc": "00:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "ETH",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 11
+      }
     },
     {
       "slug": "sol-1d",
@@ -92,7 +230,32 @@
       "glyph": "◎",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/sol-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/sol-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 92.2,
+        "max_dd_pct": 19.7,
+        "mar": 4.68,
+        "sharpe": 1.89,
+        "hold": {
+          "cagr_pct": 56.0,
+          "max_dd_pct": 76.3,
+          "mar": 0.73,
+          "sharpe": 0.95
+        },
+        "trades": 25,
+        "win_rate_pct": 68.0,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SOL",
+            "side": "long",
+            "return_pct": -5.27
+          },
+          "opened": []
+        },
+        "rank": 13
+      }
     },
     {
       "slug": "sol-12h",
@@ -107,7 +270,32 @@
       "glyph": "◎",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/sol-12h.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/sol-12h.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 77.7,
+        "max_dd_pct": 27.0,
+        "mar": 2.88,
+        "sharpe": 1.95,
+        "hold": {
+          "cagr_pct": 58.7,
+          "max_dd_pct": 78.3,
+          "mar": 0.75,
+          "sharpe": 0.95
+        },
+        "trades": 19,
+        "win_rate_pct": 52.6,
+        "last_change": {
+          "date": "2026-08-24",
+          "time_utc": "12:00",
+          "closed": {
+            "asset": "SOL",
+            "side": "long",
+            "return_pct": 26.35
+          },
+          "opened": []
+        },
+        "rank": 19
+      }
     },
     {
       "slug": "sui-1d",
@@ -122,7 +310,32 @@
       "glyph": "◈",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/sui-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/sui-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 128.8,
+        "max_dd_pct": 32.6,
+        "mar": 3.95,
+        "sharpe": 1.64,
+        "hold": {
+          "cagr_pct": -18.6,
+          "max_dd_pct": 87.7,
+          "mar": -0.21,
+          "sharpe": 0.3
+        },
+        "trades": 8,
+        "win_rate_pct": 37.5,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SUI",
+            "side": "long",
+            "return_pct": -7.3
+          },
+          "opened": []
+        },
+        "rank": 16
+      }
     },
     {
       "slug": "sui-1d-ls",
@@ -137,7 +350,33 @@
       "glyph": "◈",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/sui-1d-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/sui-1d-ls.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 279.7,
+        "max_dd_pct": 27.4,
+        "mar": 10.21,
+        "sharpe": 2.29,
+        "hold": {
+          "cagr_pct": -18.6,
+          "max_dd_pct": 87.7,
+          "mar": -0.21,
+          "sharpe": 0.3
+        },
+        "trades": 17,
+        "win_rate_pct": 47.1,
+        "last_change": {
+          "date": "2026-09-12",
+          "time_utc": "00:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "SUI",
+              "side": "short"
+            }
+          ]
+        },
+        "rank": 6
+      }
     },
     {
       "slug": "rotation-1d",
@@ -156,7 +395,32 @@
       "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 408.2,
+        "max_dd_pct": 24.3,
+        "mar": 16.78,
+        "sharpe": 2.62,
+        "hold": null,
+        "trades": 71,
+        "win_rate_pct": 66.2,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SUI",
+            "side": "long",
+            "return_pct": -11.31
+          },
+          "opened": [
+            {
+              "asset": "ETH",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 4
+      }
     },
     {
       "slug": "eth-1d-ls",
@@ -171,7 +435,33 @@
       "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/eth-1d-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/eth-1d-ls.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 100.8,
+        "max_dd_pct": 15.2,
+        "mar": 6.65,
+        "sharpe": 2.07,
+        "hold": {
+          "cagr_pct": 8.1,
+          "max_dd_pct": 67.6,
+          "mar": 0.12,
+          "sharpe": 0.44
+        },
+        "trades": 19,
+        "win_rate_pct": 52.6,
+        "last_change": {
+          "date": "2026-07-05",
+          "time_utc": "00:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "ETH",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 10
+      }
     },
     {
       "slug": "paxg-12h",
@@ -186,7 +476,32 @@
       "glyph": "◆",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/paxg-12h.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/paxg-12h.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 28.4,
+        "max_dd_pct": 15.4,
+        "mar": 1.84,
+        "sharpe": 1.55,
+        "hold": {
+          "cagr_pct": 25.1,
+          "max_dd_pct": 28.4,
+          "mar": 0.89,
+          "sharpe": 1.17
+        },
+        "trades": 8,
+        "win_rate_pct": 75.0,
+        "last_change": {
+          "date": "2026-09-10",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "PAXG",
+            "side": "long",
+            "return_pct": 4.88
+          },
+          "opened": []
+        },
+        "rank": 20
+      }
     },
     {
       "slug": "paxg-1d",
@@ -201,7 +516,32 @@
       "glyph": "◆",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/paxg-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/paxg-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 27.0,
+        "max_dd_pct": 15.2,
+        "mar": 1.78,
+        "sharpe": 1.49,
+        "hold": {
+          "cagr_pct": 25.1,
+          "max_dd_pct": 28.1,
+          "mar": 0.89,
+          "sharpe": 1.18
+        },
+        "trades": 7,
+        "win_rate_pct": 71.4,
+        "last_change": {
+          "date": "2026-08-31",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "PAXG",
+            "side": "long",
+            "return_pct": -2.2
+          },
+          "opened": []
+        },
+        "rank": 21
+      }
     },
     {
       "slug": "rotation-12h",
@@ -220,7 +560,32 @@
       "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 253.1,
+        "max_dd_pct": 25.8,
+        "mar": 9.83,
+        "sharpe": 2.34,
+        "hold": null,
+        "trades": 122,
+        "win_rate_pct": 59.0,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SUI",
+            "side": "long",
+            "return_pct": -8.7
+          },
+          "opened": [
+            {
+              "asset": "ETH",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 7
+      }
     },
     {
       "slug": "rotation-12h-ls",
@@ -239,7 +604,32 @@
       "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h-ls.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 408.9,
+        "max_dd_pct": 27.0,
+        "mar": 15.15,
+        "sharpe": 2.77,
+        "hold": null,
+        "trades": 131,
+        "win_rate_pct": 58.0,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SUI",
+            "side": "long",
+            "return_pct": -8.7
+          },
+          "opened": [
+            {
+              "asset": "ETH",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 5
+      }
     },
     {
       "slug": "rotation-1d-ls",
@@ -258,7 +648,32 @@
       "glyph": "Ξ",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 638.8,
+        "max_dd_pct": 24.3,
+        "mar": 26.26,
+        "sharpe": 3.01,
+        "hold": null,
+        "trades": 81,
+        "win_rate_pct": 65.4,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SUI",
+            "side": "long",
+            "return_pct": -11.31
+          },
+          "opened": [
+            {
+              "asset": "ETH",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 3
+      }
     },
     {
       "slug": "tsla-1d",
@@ -273,7 +688,32 @@
       "glyph": "T",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/tsla-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/tsla-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 58.5,
+        "max_dd_pct": 14.7,
+        "mar": 3.97,
+        "sharpe": 1.92,
+        "hold": {
+          "cagr_pct": 27.7,
+          "max_dd_pct": 53.8,
+          "mar": 0.52,
+          "sharpe": 0.71
+        },
+        "trades": 9,
+        "win_rate_pct": 66.7,
+        "last_change": {
+          "date": "2025-11-05",
+          "time_utc": "21:00",
+          "closed": {
+            "asset": "TSLA",
+            "side": "long",
+            "return_pct": -0.73
+          },
+          "opened": []
+        },
+        "rank": 15
+      }
     },
     {
       "slug": "mstr-1d",
@@ -288,7 +728,33 @@
       "glyph": "S",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/mstr-1d.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/mstr-1d.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 187.3,
+        "max_dd_pct": 25.4,
+        "mar": 7.39,
+        "sharpe": 2.28,
+        "hold": {
+          "cagr_pct": 54.4,
+          "max_dd_pct": 82.6,
+          "mar": 0.66,
+          "sharpe": 0.93
+        },
+        "trades": 13,
+        "win_rate_pct": 84.6,
+        "last_change": {
+          "date": "2026-08-31",
+          "time_utc": "20:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "MSTR",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 9
+      }
     },
     {
       "slug": "mstr-1d-ls",
@@ -303,7 +769,33 @@
       "glyph": "S",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/mstr-1d-ls.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/mstr-1d-ls.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 212.1,
+        "max_dd_pct": 25.4,
+        "mar": 8.36,
+        "sharpe": 2.4,
+        "hold": {
+          "cagr_pct": 54.4,
+          "max_dd_pct": 82.6,
+          "mar": 0.66,
+          "sharpe": 0.93
+        },
+        "trades": 16,
+        "win_rate_pct": 75.0,
+        "last_change": {
+          "date": "2026-08-31",
+          "time_utc": "20:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "MSTR",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 8
+      }
     },
     {
       "slug": "rotation-1d-stocks",
@@ -324,7 +816,27 @@
       "glyph": "S",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-stocks.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-stocks.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 654.5,
+        "max_dd_pct": 22.6,
+        "mar": 28.93,
+        "sharpe": 3.16,
+        "hold": null,
+        "trades": 87,
+        "win_rate_pct": 65.5,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SUI",
+            "side": "long",
+            "return_pct": -7.3
+          },
+          "opened": []
+        },
+        "rank": 2
+      }
     },
     {
       "slug": "rotation-1d-ls-stocks",
@@ -345,7 +857,33 @@
       "glyph": "S",
       "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls-stocks.html",
       "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls-stocks.signal.json",
-      "tier": "free"
+      "tier": "free",
+      "summary": {
+        "cagr_pct": 1063.1,
+        "max_dd_pct": 22.6,
+        "mar": 46.99,
+        "sharpe": 3.56,
+        "hold": null,
+        "trades": 97,
+        "win_rate_pct": 68.0,
+        "last_change": {
+          "date": "2026-09-11",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "SUI",
+            "side": "long",
+            "return_pct": -7.3
+          },
+          "opened": []
+        },
+        "rank": 1
+      }
     }
-  ]
+  ],
+  "summary_window": {
+    "since": "2023-05-03",
+    "until": "2026-09-14",
+    "ranked_by": "mar",
+    "note": "KPIs recomputed on a common window so products are comparable; they differ from each ficha, which uses its own window."
+  }
 }
