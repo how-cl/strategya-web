@@ -495,6 +495,7 @@ table.hm td.tot small{display:block;font-weight:400;font-size:10.5px;color:var(-
 }
 .trade .who{flex:1;min-width:0}
 .trade .who b{font-size:13.5px;font-weight:600;display:block}
+.trade .who small.px{display:block;color:var(--tx-dim);opacity:.85}
 .trade .who small{font-size:11.5px;color:var(--tx-faint)}
 .trade .ret{font-size:15px;font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
 .trade .side{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--tx-faint);border:1px solid var(--line);border-radius:4px;padding:2px 5px}
@@ -559,7 +560,7 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-14 00:06 UTC</b>, which was valid until
+    This page shows the run of <b>2026-09-14 21:02 UTC</b>, which was valid until
     <b>2026-09-15 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
@@ -620,7 +621,7 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: sui-1d</span>
-      <span>run: 2026-09-14 00:06 UTC</span>
+      <span>run: 2026-09-14 21:02 UTC</span>
       <span>decision close: 2026-09-14 00:00 U C</span>
       <span>valid until: 2026-09-15 00:00 UTC</span>
       <span>source: EVOL SUI 1D Short v3.5 · preset A</span>
@@ -656,7 +657,7 @@ const PRODUCTO = {
   "acento": "#4da2ff",
   "colorPalabra": "blue",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-14 00:06 UTC"
+  "corrida": "2026-09-14 21:02 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -781,7 +782,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 /* ======================================================================
    sui-1d — DATOS emitidos por el MOTOR, no por un export de TradingView.
    EVOL SUI 1D Short v3.5 2026-08-30.pine · preset A · velas BINANCE_SUIUSDT_1D.csv
-   Corrida 2026-09-14 00:06 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-09-14 21:02 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2023 con Δ 0.08 %
    (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
@@ -805,21 +806,21 @@ const DATOS = {
 
   trades: [
   {asset:"CASH", side:"CASH", entry:"2026-09-11", exit:null, days:2, ret:null, open:true},
-  {asset:"SUI", side:"LONG", entry:"2026-09-04", exit:"2026-09-11", days:7, ret:-7.3},
-  {asset:"CASH", side:"CASH", entry:"2026-08-31", exit:"2026-09-04", days:4, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2026-08-21", exit:"2026-08-31", days:10, ret:-3.26},
-  {asset:"CASH", side:"CASH", entry:"2026-01-20", exit:"2026-08-21", days:213, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2026-01-04", exit:"2026-01-20", days:16, ret:-6.06},
-  {asset:"CASH", side:"CASH", entry:"2025-08-02", exit:"2026-01-04", days:155, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2025-07-11", exit:"2025-08-02", days:22, ret:-1.11},
-  {asset:"CASH", side:"CASH", entry:"2025-05-27", exit:"2025-07-11", days:45, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2025-04-23", exit:"2025-05-27", days:34, ret:30.59},
-  {asset:"CASH", side:"CASH", entry:"2025-01-21", exit:"2025-04-23", days:92, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2024-09-08", exit:"2025-01-21", days:135, ret:394.65},
-  {asset:"CASH", side:"CASH", entry:"2024-03-05", exit:"2024-09-08", days:187, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2023-10-29", exit:"2024-03-05", days:128, ret:217.55},
-  {asset:"CASH", side:"CASH", entry:"2023-07-22", exit:"2023-10-29", days:99, ret:0.0},
-  {asset:"SUI", side:"LONG", entry:"2023-07-18", exit:"2023-07-22", days:4, ret:-5.21},
+  {asset:"SUI", side:"LONG", entry:"2026-09-04", exit:"2026-09-11", days:7, ret:-7.3, ep:0.7832, xp:0.7275},
+  {asset:"CASH", side:"CASH", entry:"2026-08-31", exit:"2026-09-04", days:4, ret:0.0, ep:null, xp:null},
+  {asset:"SUI", side:"LONG", entry:"2026-08-21", exit:"2026-08-31", days:10, ret:-3.26, ep:0.7336, xp:0.7111},
+  {asset:"CASH", side:"CASH", entry:"2026-01-20", exit:"2026-08-21", days:213, ret:0.0, ep:null, xp:null},
+  {asset:"SUI", side:"LONG", entry:"2026-01-04", exit:"2026-01-20", days:16, ret:-6.06, ep:1.666, xp:1.5681},
+  {asset:"CASH", side:"CASH", entry:"2025-08-02", exit:"2026-01-04", days:155, ret:0.0, ep:null, xp:null},
+  {asset:"SUI", side:"LONG", entry:"2025-07-11", exit:"2025-08-02", days:22, ret:-1.11, ep:3.491, xp:3.4591},
+  {asset:"CASH", side:"CASH", entry:"2025-05-27", exit:"2025-07-11", days:45, ret:0.0, ep:null, xp:null},
+  {asset:"SUI", side:"LONG", entry:"2025-04-23", exit:"2025-05-27", days:34, ret:30.59, ep:2.6672, xp:3.49},
+  {asset:"CASH", side:"CASH", entry:"2025-01-21", exit:"2025-04-23", days:92, ret:0.0, ep:null, xp:null},
+  {asset:"SUI", side:"LONG", entry:"2024-09-08", exit:"2025-01-21", days:135, ret:394.65, ep:0.8914, xp:4.4181},
+  {asset:"CASH", side:"CASH", entry:"2024-03-05", exit:"2024-09-08", days:187, ret:0.0, ep:null, xp:null},
+  {asset:"SUI", side:"LONG", entry:"2023-10-29", exit:"2024-03-05", days:128, ret:217.55, ep:0.4673, xp:1.4869},
+  {asset:"CASH", side:"CASH", entry:"2023-07-22", exit:"2023-10-29", days:99, ret:0.0, ep:null, xp:null},
+  {asset:"SUI", side:"LONG", entry:"2023-07-18", exit:"2023-07-22", days:4, ret:-5.21, ep:0.7197, xp:0.6836},
   ],
 
   hoy: {asset:"CASH", dir:"CASH", close:0.7018, pendiente:false},
@@ -876,7 +877,11 @@ const STRATEGIES = [
              changedToday:("changedNow" in DATOS.lastChange) ? DATOS.lastChange.changedNow
                                                              : DATOS.lastChange.daysAgo === 0,
              pending:!!DATOS.hoy.pendiente,
-             lastChange:{from:DATOS.lastChange.frm, to:DATOS.lastChange.to,
+             /* 13-sep-2026: si el emisor no puso " SHORT" en `to` pero hoy.dir es SHORT y el
+                activo coincide, la ficha lo trata como corto (rótulo y signo del «since»). */
+             lastChange:{from:DATOS.lastChange.frm,
+                         to:(DATOS.hoy && DATOS.hoy.dir === "SHORT" && DATOS.lastChange.to === DATOS.hoy.asset)
+                              ? DATOS.lastChange.to + " SHORT" : DATOS.lastChange.to,
                          date:DATOS.lastChange.date, daysAgo:DATOS.lastChange.daysAgo,
                          price:DATOS.lastChange.price}},
      monthly:DATOS.monthly, trades:DATOS.trades,
@@ -1397,6 +1402,22 @@ function ribbon(v, id, tradesHTML){
 }
 
 /* ---------- trade history ---------- */
+/* Precios de la operación (14-sep-2026, Felipe): el retorno no se puede verificar contra nada;
+   los precios sí, contra cualquier gráfico, y dejan a la vista la regla del fill al open
+   siguiente. Los emite el motor (ep = entrada, xp = salida); si faltan, no se muestra nada.
+   En corto se nombra la dirección para que nadie lea el par de precios al revés. */
+function tradePx(t){
+  if(t.side === "CASH" || t.ep == null) return "";
+  let xp = t.xp;
+  if(t.open && xp == null){
+    const a = (DATOS.hoyAlloc || []).find(z => z.asset === t.asset);
+    xp = a ? a.close : (DATOS.hoy && DATOS.hoy.asset === t.asset ? DATOS.hoy.close : null);
+  }
+  const sh = t.side === "SHORT";
+  const lhs = `${sh ? "shorted " : "bought "}${price(t.ep)}`;
+  const rhs = xp == null ? "" : ` → ${sh ? "covered " : "sold "}${t.open ? "now " : ""}${price(xp)}`;
+  return `<small class="num px">${lhs}${rhs}</small>`;
+}
 function tradeList(v){
   const rows = v.trades.map(t => {
     const A = ASSETS[t.asset] || {color:"var(--flat)"};
@@ -1407,6 +1428,7 @@ function tradeList(v){
       <div class="who">
         <b>${t.asset}</b>
         <small class="num">${t.entry} → ${t.exit || "now"} · ${t.days}d</small>
+        ${tradePx(t)}
       </div>
       ${t.side === "SHORT" ? `<span class="side" style="color:var(--dn)">short</span>` : ""}
       ${ret}

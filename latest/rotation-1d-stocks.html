@@ -495,6 +495,7 @@ table.hm td.tot small{display:block;font-weight:400;font-size:10.5px;color:var(-
 }
 .trade .who{flex:1;min-width:0}
 .trade .who b{font-size:13.5px;font-weight:600;display:block}
+.trade .who small.px{display:block;color:var(--tx-dim);opacity:.85}
 .trade .who small{font-size:11.5px;color:var(--tx-faint)}
 .trade .ret{font-size:15px;font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
 .trade .side{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--tx-faint);border:1px solid var(--line);border-radius:4px;padding:2px 5px}
@@ -559,7 +560,7 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-14 00:06 UTC</b>, which was valid until
+    This page shows the run of <b>2026-09-14 21:03 UTC</b>, which was valid until
     <b>2026-09-15 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
@@ -620,7 +621,7 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: rotation-1d-stocks</span>
-      <span>run: 2026-09-14 00:06 UTC</span>
+      <span>run: 2026-09-14 21:03 UTC</span>
       <span>decision close: 2026-09-14 00:00 U C</span>
       <span>valid until: 2026-09-15 00:00 UTC</span>
       <span>source: EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard · preset Proportional (T=2) · gold ON · short sleeve OFF · MSTR F3 + TSLA A·W22 · NYSE holidays ON</span>
@@ -703,7 +704,7 @@ const PRODUCTO = {
   "actualizado": "2026-09-14",
   "cierre": "2026-09-14T00:00Z",
   "validoHasta": "2026-09-15T00:00:00Z",
-  "corrida": "2026-09-14 00:06 UTC"
+  "corrida": "2026-09-14 21:03 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -863,132 +864,132 @@ const DATOS = {
   ],
 
   trades: [
-  {asset:"MSTR", side:"LONG", entry:"2026-08-31", exit:null, days:13, ret:null, open:true},
-  {asset:"ETH", side:"LONG", entry:"2026-07-05", exit:null, days:70, ret:null, open:true},
-  {asset:"SOL", side:"LONG", entry:"2026-09-04", exit:null, days:9, ret:null, open:true},
-  {asset:"SUI", side:"LONG", entry:"2026-09-04", exit:"2026-09-11", days:7, ret:-7.3},
-  {asset:"SUI", side:"LONG", entry:"2026-08-21", exit:"2026-08-31", days:10, ret:-3.26},
-  {asset:"SOL", side:"LONG", entry:"2026-08-19", exit:"2026-08-28", days:9, ret:41.38},
-  {asset:"SOL", side:"LONG", entry:"2026-06-30", exit:"2026-07-17", days:17, ret:0.01},
-  {asset:"MSTR", side:"LONG", entry:"2026-04-20", exit:"2026-05-19", days:29, ret:0.84},
-  {asset:"SOL", side:"LONG", entry:"2026-04-17", exit:"2026-04-29", days:12, ret:-5.8},
-  {asset:"ETH", side:"LONG", entry:"2026-04-08", exit:"2026-04-20", days:12, ret:0.84},
-  {asset:"BTC", side:"LONG", entry:"2026-04-08", exit:"2026-05-23", days:45, ret:4.82},
-  {asset:"MSTR", side:"LONG", entry:"2026-03-19", exit:"2026-03-20", days:1, ret:3.09},
-  {asset:"SOL", side:"LONG", entry:"2026-03-11", exit:"2026-03-28", days:17, ret:-3.42},
-  {asset:"PAXG", side:"LONG", entry:"2026-01-21", exit:"2026-03-11", days:49, ret:7.92},
-  {asset:"MSTR", side:"LONG", entry:"2026-01-20", exit:"2026-01-21", days:1, ret:-2.56},
-  {asset:"ETH", side:"LONG", entry:"2026-01-14", exit:"2026-01-20", days:6, ret:-4.29},
-  {asset:"BTC", side:"LONG", entry:"2026-01-06", exit:"2026-01-08", days:2, ret:-4.19},
-  {asset:"SUI", side:"LONG", entry:"2026-01-04", exit:"2026-01-20", days:16, ret:-6.06},
-  {asset:"SOL", side:"LONG", entry:"2026-01-03", exit:"2026-01-20", days:17, ret:0.68},
-  {asset:"PAXG", side:"LONG", entry:"2025-11-05", exit:"2026-01-03", days:59, ret:10.25},
-  {asset:"TSLA", side:"LONG", entry:"2025-11-04", exit:"2025-11-05", days:1, ret:-0.73},
-  {asset:"PAXG", side:"LONG", entry:"2025-10-31", exit:"2025-11-04", days:4, ret:-1.24},
-  {asset:"TSLA", side:"LONG", entry:"2025-10-29", exit:"2025-10-31", days:2, ret:-3.6},
-  {asset:"PAXG", side:"LONG", entry:"2025-10-13", exit:"2025-10-29", days:16, ret:-1.88},
-  {asset:"MSTR", side:"LONG", entry:"2025-10-09", exit:"2025-10-10", days:1, ret:-1.49},
-  {asset:"ETH", side:"LONG", entry:"2025-10-03", exit:"2025-10-10", days:7, ret:-2.79},
-  {asset:"BTC", side:"LONG", entry:"2025-10-02", exit:"2025-10-10", days:8, ret:-4.19},
-  {asset:"TSLA", side:"LONG", entry:"2025-09-12", exit:"2025-10-13", days:31, ret:13.95},
-  {asset:"SOL", side:"LONG", entry:"2025-08-23", exit:"2025-09-18", days:26, ret:21.76},
-  {asset:"SOL", side:"LONG", entry:"2025-07-28", exit:"2025-08-01", days:4, ret:-8.89},
-  {asset:"SUI", side:"LONG", entry:"2025-07-11", exit:"2025-08-02", days:22, ret:-1.11},
-  {asset:"SOL", side:"LONG", entry:"2025-07-10", exit:"2025-07-18", days:8, ret:11.76},
-  {asset:"ETH", side:"LONG", entry:"2025-07-10", exit:"2025-08-15", days:36, ret:63.89},
-  {asset:"MSTR", side:"LONG", entry:"2025-07-09", exit:"2025-07-24", days:15, ret:3.03},
-  {asset:"BTC", side:"LONG", entry:"2025-06-30", exit:"2025-08-03", days:34, ret:3.66},
-  {asset:"PAXG", side:"LONG", entry:"2025-06-21", exit:"2025-06-27", days:6, ret:-2.01},
-  {asset:"ETH", side:"LONG", entry:"2025-05-09", exit:"2025-06-14", days:36, ret:16.61},
-  {asset:"SOL", side:"LONG", entry:"2025-05-02", exit:"2025-05-19", days:17, ret:14.65},
-  {asset:"TSLA", side:"LONG", entry:"2025-04-25", exit:"2025-06-05", days:41, ret:22.99},
-  {asset:"SUI", side:"LONG", entry:"2025-04-23", exit:"2025-05-27", days:34, ret:30.59},
-  {asset:"BTC", side:"LONG", entry:"2025-04-22", exit:"2025-06-21", days:60, ret:17.8},
-  {asset:"MSTR", side:"LONG", entry:"2025-04-10", exit:"2025-06-04", days:55, ret:36.29},
-  {asset:"PAXG", side:"LONG", entry:"2025-02-02", exit:"2025-04-10", days:67, ret:9.75},
-  {asset:"SOL", side:"LONG", entry:"2025-01-16", exit:"2025-02-02", days:17, ret:3.28},
-  {asset:"MSTR", side:"LONG", entry:"2025-01-13", exit:"2025-01-14", days:1, ret:10.44},
-  {asset:"SOL", side:"LONG", entry:"2024-11-07", exit:"2024-12-03", days:26, ret:20.73},
-  {asset:"ETH", side:"LONG", entry:"2024-11-07", exit:"2024-12-11", days:34, ret:33.03},
-  {asset:"TSLA", side:"LONG", entry:"2024-10-25", exit:"2024-12-23", days:59, ret:68.02},
-  {asset:"BTC", side:"LONG", entry:"2024-10-17", exit:"2024-12-28", days:72, ret:39.18},
-  {asset:"SOL", side:"LONG", entry:"2024-10-15", exit:"2024-10-22", days:7, ret:5.23},
-  {asset:"MSTR", side:"LONG", entry:"2024-10-02", exit:"2024-12-05", days:64, ret:173.65},
-  {asset:"SOL", side:"LONG", entry:"2024-09-20", exit:"2024-10-03", days:13, ret:-2.09},
-  {asset:"BTC", side:"LONG", entry:"2024-09-19", exit:"2024-10-02", days:13, ret:-1.74},
-  {asset:"SUI", side:"LONG", entry:"2024-09-08", exit:"2025-01-21", days:135, ret:394.65},
-  {asset:"PAXG", side:"LONG", entry:"2024-08-03", exit:"2024-09-08", days:36, ret:1.22},
-  {asset:"MSTR", side:"LONG", entry:"2024-07-16", exit:"2024-07-26", days:10, ret:5.05},
-  {asset:"SOL", side:"LONG", entry:"2024-07-15", exit:"2024-08-03", days:19, ret:3.26},
-  {asset:"PAXG", side:"LONG", entry:"2024-07-11", exit:"2024-07-15", days:4, ret:1.41},
-  {asset:"TSLA", side:"LONG", entry:"2024-06-14", exit:"2024-07-11", days:27, ret:41.43},
-  {asset:"BTC", side:"LONG", entry:"2024-05-21", exit:"2024-05-23", days:2, ret:-4.19},
-  {asset:"ETH", side:"LONG", entry:"2024-05-18", exit:"2024-06-25", days:38, ret:8.22},
-  {asset:"SOL", side:"LONG", entry:"2024-05-16", exit:"2024-05-29", days:13, ret:6.2},
-  {asset:"MSTR", side:"LONG", entry:"2024-05-13", exit:"2024-06-03", days:21, ret:31.19},
-  {asset:"TSLA", side:"LONG", entry:"2024-04-26", exit:"2024-05-10", days:14, ret:2.28},
-  {asset:"PAXG", side:"LONG", entry:"2024-04-05", exit:"2024-04-26", days:21, ret:2.4},
-  {asset:"SOL", side:"LONG", entry:"2024-03-28", exit:"2024-04-05", days:8, ret:-1.45},
-  {asset:"PAXG", side:"LONG", entry:"2024-03-21", exit:"2024-03-28", days:7, ret:-0.79},
-  {asset:"SOL", side:"LONG", entry:"2024-02-29", exit:"2024-03-21", days:21, ret:60.78},
-  {asset:"ETH", side:"LONG", entry:"2024-02-13", exit:"2024-03-17", days:33, ret:32.18},
-  {asset:"MSTR", side:"LONG", entry:"2024-02-09", exit:"2024-03-13", days:33, ret:164.06},
-  {asset:"BTC", side:"LONG", entry:"2024-02-08", exit:"2024-02-22", days:14, ret:16.68},
-  {asset:"SOL", side:"LONG", entry:"2024-01-30", exit:"2024-02-21", days:22, ret:6.33},
-  {asset:"SOL", side:"LONG", entry:"2023-12-15", exit:"2023-12-28", days:13, ret:41.0},
-  {asset:"SOL", side:"LONG", entry:"2023-11-03", exit:"2023-12-08", days:35, ret:68.0},
-  {asset:"SUI", side:"LONG", entry:"2023-10-29", exit:"2024-03-05", days:128, ret:217.55},
-  {asset:"ETH", side:"LONG", entry:"2023-10-23", exit:"2023-12-12", days:50, ret:33.48},
-  {asset:"MSTR", side:"LONG", entry:"2023-10-23", exit:"2024-01-10", days:79, ret:59.15},
-  {asset:"SOL", side:"LONG", entry:"2023-10-16", exit:"2023-10-25", days:9, ret:37.34},
-  {asset:"PAXG", side:"LONG", entry:"2023-10-14", exit:"2023-10-16", days:2, ret:-0.25},
-  {asset:"BTC", side:"LONG", entry:"2023-10-02", exit:"2023-10-11", days:9, ret:-4.19},
-  {asset:"SOL", side:"LONG", entry:"2023-09-29", exit:"2023-10-09", days:10, ret:15.99},
-  {asset:"TSLA", side:"LONG", entry:"2023-09-12", exit:"2023-09-22", days:10, ret:-5.12},
-  {asset:"SUI", side:"LONG", entry:"2023-07-18", exit:"2023-07-22", days:4, ret:-5.21},
-  {asset:"SOL", side:"LONG", entry:"2023-07-17", exit:"2023-07-31", days:14, ret:-11.71},
-  {asset:"SOL", side:"LONG", entry:"2023-07-01", exit:"2023-07-10", days:9, ret:12.88},
-  {asset:"ETH", side:"LONG", entry:"2023-06-22", exit:"2023-07-07", days:15, ret:-2.47},
-  {asset:"BTC", side:"LONG", entry:"2023-06-21", exit:"2023-07-13", days:22, ret:7.1},
-  {asset:"MSTR", side:"LONG", entry:"2023-06-21", exit:"2023-07-18", days:27, ret:38.45},
-  {asset:"SOL", side:"LONG", entry:"2023-06-05", exit:"2023-06-06", days:1, ret:-8.52},
-  {asset:"TSLA", side:"LONG", entry:"2023-05-22", exit:"2023-06-21", days:30, ret:51.95},
-  {asset:"PAXG", side:"LONG", entry:"2023-04-21", exit:"2023-05-03", days:12, ret:0.15},
-  {asset:"SOL", side:"LONG", entry:"2023-04-11", exit:"2023-04-19", days:8, ret:18.58},
-  {asset:"SOL", side:"LONG", entry:"2023-04-06", exit:"2023-04-07", days:1, ret:-1.82},
-  {asset:"SOL", side:"LONG", entry:"2023-04-01", exit:"2023-04-03", days:2, ret:-3.17},
-  {asset:"MSTR", side:"LONG", entry:"2023-03-17", exit:"2023-04-21", days:35, ret:16.13},
-  {asset:"ETH", side:"LONG", entry:"2023-03-13", exit:"2023-04-20", days:38, ret:22.12},
-  {asset:"PAXG", side:"LONG", entry:"2023-03-12", exit:"2023-03-13", days:1, ret:0.7},
-  {asset:"TSLA", side:"LONG", entry:"2023-01-27", exit:"2023-03-03", days:35, ret:19.69},
-  {asset:"SOL", side:"LONG", entry:"2023-01-26", exit:"2023-02-07", days:12, ret:-7.85},
-  {asset:"ETH", side:"LONG", entry:"2023-01-10", exit:"2023-02-10", days:31, ret:16.8},
-  {asset:"MSTR", side:"LONG", entry:"2023-01-10", exit:"2023-02-27", days:48, ret:50.88},
-  {asset:"BTC", side:"LONG", entry:"2023-01-09", exit:"2023-02-15", days:37, ret:29.35},
-  {asset:"SOL", side:"LONG", entry:"2023-01-04", exit:"2023-01-15", days:11, ret:80.86},
-  {asset:"PAXG", side:"LONG", entry:"2022-11-11", exit:"2022-11-12", days:1, ret:-2.2},
-  {asset:"SOL", side:"LONG", entry:"2022-10-30", exit:"2022-11-08", days:9, ret:-10.07},
-  {asset:"ETH", side:"LONG", entry:"2022-10-24", exit:"2022-11-09", days:16, ret:-2.35},
-  {asset:"SOL", side:"LONG", entry:"2022-09-24", exit:"2022-09-26", days:2, ret:-4.17},
-  {asset:"SOL", side:"LONG", entry:"2022-08-12", exit:"2022-08-18", days:6, ret:-5.43},
-  {asset:"SOL", side:"LONG", entry:"2022-07-29", exit:"2022-08-04", days:6, ret:-10.38},
-  {asset:"ETH", side:"LONG", entry:"2022-07-17", exit:"2022-08-20", days:34, ret:18.43},
-  {asset:"SOL", side:"LONG", entry:"2022-06-25", exit:"2022-07-04", days:9, ret:-20.46},
-  {asset:"PAXG", side:"LONG", entry:"2022-04-12", exit:"2022-04-26", days:14, ret:-2.5},
-  {asset:"SOL", side:"LONG", entry:"2022-04-10", exit:"2022-04-12", days:2, ret:-11.98},
-  {asset:"PAXG", side:"LONG", entry:"2022-04-07", exit:"2022-04-10", days:3, ret:0.99},
-  {asset:"TSLA", side:"LONG", entry:"2022-03-18", exit:"2022-04-01", days:14, ret:23.38},
-  {asset:"PAXG", side:"LONG", entry:"2022-02-12", exit:"2022-03-18", days:34, ret:4.18},
-  {asset:"SOL", side:"LONG", entry:"2021-12-03", exit:"2021-12-04", days:1, ret:-9.57},
-  {asset:"SOL", side:"LONG", entry:"2021-10-16", exit:"2021-10-19", days:3, ret:-3.89},
-  {asset:"SOL", side:"LONG", entry:"2021-10-03", exit:"2021-10-07", days:4, ret:-9.12},
-  {asset:"BTC", side:"LONG", entry:"2021-10-02", exit:"2021-11-04", days:33, ret:30.39},
-  {asset:"BTC", side:"LONG", entry:"2021-07-27", exit:"2021-09-11", days:46, ret:20.17},
-  {asset:"ETH", side:"LONG", entry:"2021-07-24", exit:"2021-09-08", days:46, ret:61.37},
-  {asset:"SOL", side:"LONG", entry:"2021-06-17", exit:"2021-06-19", days:2, ret:-7.55},
-  {asset:"SOL", side:"LONG", entry:"2021-04-19", exit:"2021-05-10", days:21, ret:36.83},
-  {asset:"ETH", side:"LONG", entry:"2021-04-03", exit:"2021-04-08", days:5, ret:-8.16},
-  {asset:"SOL", side:"LONG", entry:"2021-03-28", exit:"2021-04-10", days:13, ret:67.55},
+  {asset:"MSTR", side:"LONG", entry:"2026-08-31", exit:null, days:13, ret:null, open:true, ep:128.56},
+  {asset:"ETH", side:"LONG", entry:"2026-07-05", exit:null, days:70, ret:null, open:true, ep:1780.64},
+  {asset:"SOL", side:"LONG", entry:"2026-09-04", exit:null, days:9, ret:null, open:true, ep:103.95},
+  {asset:"SUI", side:"LONG", entry:"2026-09-04", exit:"2026-09-11", days:7, ret:-7.3, ep:0.7832, xp:0.7275},
+  {asset:"SUI", side:"LONG", entry:"2026-08-21", exit:"2026-08-31", days:10, ret:-3.26, ep:0.7336, xp:0.7111},
+  {asset:"SOL", side:"LONG", entry:"2026-08-19", exit:"2026-08-28", days:9, ret:41.38, ep:77.05, xp:109.15},
+  {asset:"SOL", side:"LONG", entry:"2026-06-30", exit:"2026-07-17", days:17, ret:0.01, ep:75.17, xp:75.33},
+  {asset:"MSTR", side:"LONG", entry:"2026-04-20", exit:"2026-05-19", days:29, ret:0.84, ep:162.29, xp:163.99},
+  {asset:"SOL", side:"LONG", entry:"2026-04-17", exit:"2026-04-29", days:12, ret:-5.8, ep:89.06, xp:84.06},
+  {asset:"ETH", side:"LONG", entry:"2026-04-08", exit:"2026-04-20", days:12, ret:0.84, ep:2240.01, xp:2263.28},
+  {asset:"BTC", side:"LONG", entry:"2026-04-08", exit:"2026-05-23", days:45, ret:4.82, ep:71924.22, xp:75539.5},
+  {asset:"MSTR", side:"LONG", entry:"2026-03-19", exit:"2026-03-20", days:1, ret:3.09, ep:135.02, xp:139.47},
+  {asset:"SOL", side:"LONG", entry:"2026-03-11", exit:"2026-03-28", days:17, ret:-3.42, ep:85.88, xp:83.11},
+  {asset:"PAXG", side:"LONG", entry:"2026-01-21", exit:"2026-03-11", days:49, ret:7.92, ep:4806.79, xp:5197.87},
+  {asset:"MSTR", side:"LONG", entry:"2026-01-20", exit:"2026-01-21", days:1, ret:-2.56, ep:165.17, xp:161.27},
+  {asset:"ETH", side:"LONG", entry:"2026-01-14", exit:"2026-01-20", days:6, ret:-4.29, ep:3325.83, xp:3189.56},
+  {asset:"BTC", side:"LONG", entry:"2026-01-06", exit:"2026-01-08", days:2, ret:-4.19, ep:93859.71, xp:90105.32},
+  {asset:"SUI", side:"LONG", entry:"2026-01-04", exit:"2026-01-20", days:16, ret:-6.06, ep:1.666, xp:1.5681},
+  {asset:"SOL", side:"LONG", entry:"2026-01-03", exit:"2026-01-20", days:17, ret:0.68, ep:132.28, xp:133.44},
+  {asset:"PAXG", side:"LONG", entry:"2025-11-05", exit:"2026-01-03", days:59, ret:10.25, ep:3929.45, xp:4340.85},
+  {asset:"TSLA", side:"LONG", entry:"2025-11-04", exit:"2025-11-05", days:1, ret:-0.73, ep:454.46, xp:452.05},
+  {asset:"PAXG", side:"LONG", entry:"2025-10-31", exit:"2025-11-04", days:4, ret:-1.24, ep:4034.26, xp:3992.02},
+  {asset:"TSLA", side:"LONG", entry:"2025-10-29", exit:"2025-10-31", days:2, ret:-3.6, ep:462.5, xp:446.75},
+  {asset:"PAXG", side:"LONG", entry:"2025-10-13", exit:"2025-10-29", days:16, ret:-1.88, ep:4036.57, xp:3968.42},
+  {asset:"MSTR", side:"LONG", entry:"2025-10-09", exit:"2025-10-10", days:1, ret:-1.49, ep:327.4, xp:323.18},
+  {asset:"ETH", side:"LONG", entry:"2025-10-03", exit:"2025-10-10", days:7, ret:-2.79, ep:4484.35, xp:4368.09},
+  {asset:"BTC", side:"LONG", entry:"2025-10-02", exit:"2025-10-10", days:8, ret:-4.19, ep:118594.99, xp:113851.19},
+  {asset:"TSLA", side:"LONG", entry:"2025-09-12", exit:"2025-10-13", days:31, ret:13.95, ep:370.94, xp:423.53},
+  {asset:"SOL", side:"LONG", entry:"2025-08-23", exit:"2025-09-18", days:26, ret:21.76, ep:200.69, xp:244.84},
+  {asset:"SOL", side:"LONG", entry:"2025-07-28", exit:"2025-08-01", days:4, ret:-8.89, ep:188.64, xp:172.22},
+  {asset:"SUI", side:"LONG", entry:"2025-07-11", exit:"2025-08-02", days:22, ret:-1.11, ep:3.491, xp:3.4591},
+  {asset:"SOL", side:"LONG", entry:"2025-07-10", exit:"2025-07-18", days:8, ret:11.76, ep:157.06, xp:175.88},
+  {asset:"ETH", side:"LONG", entry:"2025-07-10", exit:"2025-08-15", days:36, ret:63.89, ep:2768.74, xp:4546.84},
+  {asset:"MSTR", side:"LONG", entry:"2025-07-09", exit:"2025-07-24", days:15, ret:3.03, ep:401.6, xp:414.58},
+  {asset:"BTC", side:"LONG", entry:"2025-06-30", exit:"2025-08-03", days:34, ret:3.66, ep:108356.93, xp:112546.35},
+  {asset:"PAXG", side:"LONG", entry:"2025-06-21", exit:"2025-06-27", days:6, ret:-2.01, ep:3394.69, xp:3333.0},
+  {asset:"ETH", side:"LONG", entry:"2025-05-09", exit:"2025-06-14", days:36, ret:16.61, ep:2207.39, xp:2579.19},
+  {asset:"SOL", side:"LONG", entry:"2025-05-02", exit:"2025-05-19", days:17, ret:14.65, ep:150.85, xp:173.3},
+  {asset:"TSLA", side:"LONG", entry:"2025-04-25", exit:"2025-06-05", days:41, ret:22.99, ep:261.69, xp:322.49},
+  {asset:"SUI", side:"LONG", entry:"2025-04-23", exit:"2025-05-27", days:34, ret:30.59, ep:2.6672, xp:3.49},
+  {asset:"BTC", side:"LONG", entry:"2025-04-22", exit:"2025-06-21", days:60, ret:17.8, ep:87516.22, xp:103297.98},
+  {asset:"MSTR", side:"LONG", entry:"2025-04-10", exit:"2025-06-04", days:55, ret:36.29, ep:282.5, xp:385.8},
+  {asset:"PAXG", side:"LONG", entry:"2025-02-02", exit:"2025-04-10", days:67, ret:9.75, ep:2819.0, xp:3100.0},
+  {asset:"SOL", side:"LONG", entry:"2025-01-16", exit:"2025-02-02", days:17, ret:3.28, ep:205.86, xp:213.03},
+  {asset:"MSTR", side:"LONG", entry:"2025-01-13", exit:"2025-01-14", days:1, ret:10.44, ep:309.95, xp:343.0},
+  {asset:"SOL", side:"LONG", entry:"2024-11-07", exit:"2024-12-03", days:26, ret:20.73, ep:186.59, xp:225.73},
+  {asset:"ETH", side:"LONG", entry:"2024-11-07", exit:"2024-12-11", days:34, ret:33.03, ep:2721.88, xp:3628.24},
+  {asset:"TSLA", side:"LONG", entry:"2024-10-25", exit:"2024-12-23", days:59, ret:68.02, ep:256.01, xp:431.0},
+  {asset:"BTC", side:"LONG", entry:"2024-10-17", exit:"2024-12-28", days:72, ret:39.18, ep:67620.0, xp:94299.03},
+  {asset:"SOL", side:"LONG", entry:"2024-10-15", exit:"2024-10-22", days:7, ret:5.23, ep:157.59, xp:166.16},
+  {asset:"MSTR", side:"LONG", entry:"2024-10-02", exit:"2024-12-05", days:64, ret:173.65, ep:160.51, xp:440.12},
+  {asset:"SOL", side:"LONG", entry:"2024-09-20", exit:"2024-10-03", days:13, ret:-2.09, ep:142.88, xp:140.18},
+  {asset:"BTC", side:"LONG", entry:"2024-09-19", exit:"2024-10-02", days:13, ret:-1.74, ep:61759.98, xp:60804.92},
+  {asset:"SUI", side:"LONG", entry:"2024-09-08", exit:"2025-01-21", days:135, ret:394.65, ep:0.8914, xp:4.4181},
+  {asset:"PAXG", side:"LONG", entry:"2024-08-03", exit:"2024-09-08", days:36, ret:1.22, ep:2458.0, xp:2493.0},
+  {asset:"MSTR", side:"LONG", entry:"2024-07-16", exit:"2024-07-26", days:10, ret:5.05, ep:161.5, xp:170.0},
+  {asset:"SOL", side:"LONG", entry:"2024-07-15", exit:"2024-08-03", days:19, ret:3.26, ep:147.66, xp:152.78},
+  {asset:"PAXG", side:"LONG", entry:"2024-07-11", exit:"2024-07-15", days:4, ret:1.41, ep:2354.0, xp:2392.0},
+  {asset:"TSLA", side:"LONG", entry:"2024-06-14", exit:"2024-07-11", days:27, ret:41.43, ep:185.8, xp:263.3},
+  {asset:"BTC", side:"LONG", entry:"2024-05-21", exit:"2024-05-23", days:2, ret:-4.19, ep:71446.62, xp:68588.76},
+  {asset:"ETH", side:"LONG", entry:"2024-05-18", exit:"2024-06-25", days:38, ret:8.22, ep:3092.0, xp:3352.74},
+  {asset:"SOL", side:"LONG", entry:"2024-05-16", exit:"2024-05-29", days:13, ret:6.2, ep:158.52, xp:168.68},
+  {asset:"MSTR", side:"LONG", entry:"2024-05-13", exit:"2024-06-03", days:21, ret:31.19, ep:121.79, xp:160.1},
+  {asset:"TSLA", side:"LONG", entry:"2024-04-26", exit:"2024-05-10", days:14, ret:2.28, ep:168.85, xp:173.05},
+  {asset:"PAXG", side:"LONG", entry:"2024-04-05", exit:"2024-04-26", days:21, ret:2.4, ep:2268.0, xp:2327.0},
+  {asset:"SOL", side:"LONG", entry:"2024-03-28", exit:"2024-04-05", days:8, ret:-1.45, ep:186.34, xp:184.0},
+  {asset:"PAXG", side:"LONG", entry:"2024-03-21", exit:"2024-03-28", days:7, ret:-0.79, ep:2185.0, xp:2172.0},
+  {asset:"SOL", side:"LONG", entry:"2024-02-29", exit:"2024-03-21", days:21, ret:60.78, ep:119.03, xp:191.76},
+  {asset:"ETH", side:"LONG", entry:"2024-02-13", exit:"2024-03-17", days:33, ret:32.18, ep:2659.99, xp:3523.09},
+  {asset:"MSTR", side:"LONG", entry:"2024-02-09", exit:"2024-03-13", days:33, ret:164.06, ep:62.74, xp:166.0},
+  {asset:"BTC", side:"LONG", entry:"2024-02-08", exit:"2024-02-22", days:14, ret:16.68, ep:44349.6, xp:51849.38},
+  {asset:"SOL", side:"LONG", entry:"2024-01-30", exit:"2024-02-21", days:22, ret:6.33, ep:101.67, xp:108.32},
+  {asset:"SOL", side:"LONG", entry:"2023-12-15", exit:"2023-12-28", days:13, ret:41.0, ep:75.68, xp:106.92},
+  {asset:"SOL", side:"LONG", entry:"2023-11-03", exit:"2023-12-08", days:35, ret:68.0, ep:40.24, xp:67.74},
+  {asset:"SUI", side:"LONG", entry:"2023-10-29", exit:"2024-03-05", days:128, ret:217.55, ep:0.4673, xp:1.4869},
+  {asset:"ETH", side:"LONG", entry:"2023-10-23", exit:"2023-12-12", days:50, ret:33.48, ep:1663.69, xp:2225.11},
+  {asset:"MSTR", side:"LONG", entry:"2023-10-23", exit:"2024-01-10", days:79, ret:59.15, ep:35.535, xp:56.668},
+  {asset:"SOL", side:"LONG", entry:"2023-10-16", exit:"2023-10-25", days:9, ret:37.34, ep:21.93, xp:30.18},
+  {asset:"PAXG", side:"LONG", entry:"2023-10-14", exit:"2023-10-16", days:2, ret:-0.25, ep:1917.0, xp:1916.0},
+  {asset:"BTC", side:"LONG", entry:"2023-10-02", exit:"2023-10-11", days:9, ret:-4.19, ep:27992.58, xp:26872.88},
+  {asset:"SOL", side:"LONG", entry:"2023-09-29", exit:"2023-10-09", days:10, ret:15.99, ep:19.97, xp:23.21},
+  {asset:"TSLA", side:"LONG", entry:"2023-09-12", exit:"2023-09-22", days:10, ret:-5.12, ep:270.76, xp:257.4},
+  {asset:"SUI", side:"LONG", entry:"2023-07-18", exit:"2023-07-22", days:4, ret:-5.21, ep:0.7197, xp:0.6836},
+  {asset:"SOL", side:"LONG", entry:"2023-07-17", exit:"2023-07-31", days:14, ret:-11.71, ep:27.41, xp:24.25},
+  {asset:"SOL", side:"LONG", entry:"2023-07-01", exit:"2023-07-10", days:9, ret:12.88, ep:18.85, xp:21.32},
+  {asset:"ETH", side:"LONG", entry:"2023-06-22", exit:"2023-07-07", days:15, ret:-2.47, ep:1889.1, xp:1846.17},
+  {asset:"BTC", side:"LONG", entry:"2023-06-21", exit:"2023-07-13", days:22, ret:7.1, ep:28308.0, xp:30380.0},
+  {asset:"MSTR", side:"LONG", entry:"2023-06-21", exit:"2023-07-18", days:27, ret:38.45, ep:32.4, xp:44.948},
+  {asset:"SOL", side:"LONG", entry:"2023-06-05", exit:"2023-06-06", days:1, ret:-8.52, ep:21.83, xp:20.01},
+  {asset:"TSLA", side:"LONG", entry:"2023-05-22", exit:"2023-06-21", days:30, ret:51.95, ep:180.7, xp:275.13},
+  {asset:"PAXG", side:"LONG", entry:"2023-04-21", exit:"2023-05-03", days:12, ret:0.15, ep:2006.0, xp:2013.0},
+  {asset:"SOL", side:"LONG", entry:"2023-04-11", exit:"2023-04-19", days:8, ret:18.58, ep:20.89, xp:24.82},
+  {asset:"SOL", side:"LONG", entry:"2023-04-06", exit:"2023-04-07", days:1, ret:-1.82, ep:20.96, xp:20.62},
+  {asset:"SOL", side:"LONG", entry:"2023-04-01", exit:"2023-04-03", days:2, ret:-3.17, ep:21.15, xp:20.52},
+  {asset:"MSTR", side:"LONG", entry:"2023-03-17", exit:"2023-04-21", days:35, ret:16.13, ep:25.553, xp:29.734},
+  {asset:"ETH", side:"LONG", entry:"2023-03-13", exit:"2023-04-20", days:38, ret:22.12, ep:1580.33, xp:1933.74},
+  {asset:"PAXG", side:"LONG", entry:"2023-03-12", exit:"2023-03-13", days:1, ret:0.7, ep:1887.0, xp:1904.0},
+  {asset:"TSLA", side:"LONG", entry:"2023-01-27", exit:"2023-03-03", days:35, ret:19.69, ep:162.43, xp:194.79},
+  {asset:"SOL", side:"LONG", entry:"2023-01-26", exit:"2023-02-07", days:12, ret:-7.85, ep:24.53, xp:22.65},
+  {asset:"ETH", side:"LONG", entry:"2023-01-10", exit:"2023-02-10", days:31, ret:16.8, ep:1320.4, xp:1545.35},
+  {asset:"MSTR", side:"LONG", entry:"2023-01-10", exit:"2023-02-27", days:48, ret:50.88, ep:17.435, xp:26.359},
+  {asset:"BTC", side:"LONG", entry:"2023-01-09", exit:"2023-02-15", days:37, ret:29.35, ep:17127.83, xp:22199.84},
+  {asset:"SOL", side:"LONG", entry:"2023-01-04", exit:"2023-01-15", days:11, ret:80.86, ep:13.37, xp:24.23},
+  {asset:"PAXG", side:"LONG", entry:"2022-11-11", exit:"2022-11-12", days:1, ret:-2.2, ep:1748.0, xp:1713.04},
+  {asset:"SOL", side:"LONG", entry:"2022-10-30", exit:"2022-11-08", days:9, ret:-10.07, ep:32.87, xp:29.62},
+  {asset:"ETH", side:"LONG", entry:"2022-10-24", exit:"2022-11-09", days:16, ret:-2.35, ep:1364.19, xp:1334.78},
+  {asset:"SOL", side:"LONG", entry:"2022-09-24", exit:"2022-09-26", days:2, ret:-4.17, ep:33.67, xp:32.33},
+  {asset:"SOL", side:"LONG", entry:"2022-08-12", exit:"2022-08-18", days:6, ret:-5.43, ep:42.78, xp:40.54},
+  {asset:"SOL", side:"LONG", entry:"2022-07-29", exit:"2022-08-04", days:6, ret:-10.38, ep:42.92, xp:38.54},
+  {asset:"ETH", side:"LONG", entry:"2022-07-17", exit:"2022-08-20", days:34, ret:18.43, ep:1355.84, xp:1609.0},
+  {asset:"SOL", side:"LONG", entry:"2022-06-25", exit:"2022-07-04", days:9, ret:-20.46, ep:41.91, xp:33.4},
+  {asset:"PAXG", side:"LONG", entry:"2022-04-12", exit:"2022-04-26", days:14, ret:-2.5, ep:1953.0, xp:1908.0},
+  {asset:"SOL", side:"LONG", entry:"2022-04-10", exit:"2022-04-12", days:2, ret:-11.98, ep:112.97, xp:99.64},
+  {asset:"PAXG", side:"LONG", entry:"2022-04-07", exit:"2022-04-10", days:3, ret:0.99, ep:1923.0, xp:1946.0},
+  {asset:"TSLA", side:"LONG", entry:"2022-03-18", exit:"2022-04-01", days:14, ret:23.38, ep:291.5, xp:360.38},
+  {asset:"PAXG", side:"LONG", entry:"2022-02-12", exit:"2022-03-18", days:34, ret:4.18, ep:1868.0, xp:1950.0},
+  {asset:"SOL", side:"LONG", entry:"2021-12-03", exit:"2021-12-04", days:1, ret:-9.57, ep:233.59, xp:211.65},
+  {asset:"SOL", side:"LONG", entry:"2021-10-16", exit:"2021-10-19", days:3, ret:-3.89, ep:163.15, xp:157.12},
+  {asset:"SOL", side:"LONG", entry:"2021-10-03", exit:"2021-10-07", days:4, ret:-9.12, ep:169.0, xp:153.9},
+  {asset:"BTC", side:"LONG", entry:"2021-10-02", exit:"2021-11-04", days:33, ret:30.39, ep:48141.6, xp:62896.49},
+  {asset:"BTC", side:"LONG", entry:"2021-07-27", exit:"2021-09-11", days:46, ret:20.17, ep:37241.33, xp:44842.2},
+  {asset:"ETH", side:"LONG", entry:"2021-07-24", exit:"2021-09-08", days:46, ret:61.37, ep:2124.26, xp:3434.84},
+  {asset:"SOL", side:"LONG", entry:"2021-06-17", exit:"2021-06-19", days:2, ret:-7.55, ep:39.73, xp:36.802},
+  {asset:"SOL", side:"LONG", entry:"2021-04-19", exit:"2021-05-10", days:21, ret:36.83, ep:32.3324, xp:44.33},
+  {asset:"ETH", side:"LONG", entry:"2021-04-03", exit:"2021-04-08", days:5, ret:-8.16, ep:2133.69, xp:1963.46},
+  {asset:"SOL", side:"LONG", entry:"2021-03-28", exit:"2021-04-10", days:13, ret:67.55, ep:16.4516, xp:27.6194},
   ],
 
   hoy: {asset:"MSTR", dir:"LONG", close:130.98},
@@ -1051,7 +1052,11 @@ const STRATEGIES = [
              changedToday:("changedNow" in DATOS.lastChange) ? DATOS.lastChange.changedNow
                                                              : DATOS.lastChange.daysAgo === 0,
              pending:!!DATOS.hoy.pendiente,
-             lastChange:{from:DATOS.lastChange.frm, to:DATOS.lastChange.to,
+             /* 13-sep-2026: si el emisor no puso " SHORT" en `to` pero hoy.dir es SHORT y el
+                activo coincide, la ficha lo trata como corto (rótulo y signo del «since»). */
+             lastChange:{from:DATOS.lastChange.frm,
+                         to:(DATOS.hoy && DATOS.hoy.dir === "SHORT" && DATOS.lastChange.to === DATOS.hoy.asset)
+                              ? DATOS.lastChange.to + " SHORT" : DATOS.lastChange.to,
                          date:DATOS.lastChange.date, daysAgo:DATOS.lastChange.daysAgo,
                          price:DATOS.lastChange.price}},
      monthly:DATOS.monthly, trades:DATOS.trades,
@@ -1572,6 +1577,22 @@ function ribbon(v, id, tradesHTML){
 }
 
 /* ---------- trade history ---------- */
+/* Precios de la operación (14-sep-2026, Felipe): el retorno no se puede verificar contra nada;
+   los precios sí, contra cualquier gráfico, y dejan a la vista la regla del fill al open
+   siguiente. Los emite el motor (ep = entrada, xp = salida); si faltan, no se muestra nada.
+   En corto se nombra la dirección para que nadie lea el par de precios al revés. */
+function tradePx(t){
+  if(t.side === "CASH" || t.ep == null) return "";
+  let xp = t.xp;
+  if(t.open && xp == null){
+    const a = (DATOS.hoyAlloc || []).find(z => z.asset === t.asset);
+    xp = a ? a.close : (DATOS.hoy && DATOS.hoy.asset === t.asset ? DATOS.hoy.close : null);
+  }
+  const sh = t.side === "SHORT";
+  const lhs = `${sh ? "shorted " : "bought "}${price(t.ep)}`;
+  const rhs = xp == null ? "" : ` → ${sh ? "covered " : "sold "}${t.open ? "now " : ""}${price(xp)}`;
+  return `<small class="num px">${lhs}${rhs}</small>`;
+}
 function tradeList(v){
   const rows = v.trades.map(t => {
     const A = ASSETS[t.asset] || {color:"var(--flat)"};
@@ -1582,6 +1603,7 @@ function tradeList(v){
       <div class="who">
         <b>${t.asset}</b>
         <small class="num">${t.entry} → ${t.exit || "now"} · ${t.days}d</small>
+        ${tradePx(t)}
       </div>
       ${t.side === "SHORT" ? `<span class="side" style="color:var(--dn)">short</span>` : ""}
       ${ret}

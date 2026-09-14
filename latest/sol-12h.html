@@ -495,6 +495,7 @@ table.hm td.tot small{display:block;font-weight:400;font-size:10.5px;color:var(-
 }
 .trade .who{flex:1;min-width:0}
 .trade .who b{font-size:13.5px;font-weight:600;display:block}
+.trade .who small.px{display:block;color:var(--tx-dim);opacity:.85}
 .trade .who small{font-size:11.5px;color:var(--tx-faint)}
 .trade .ret{font-size:15px;font-weight:650;font-variant-numeric:tabular-nums;white-space:nowrap}
 .trade .side{font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--tx-faint);border:1px solid var(--line);border-radius:4px;padding:2px 5px}
@@ -559,7 +560,7 @@ html.is-stale #stale{display:block}
 
   <div id="stale" role="alert">
     <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-09-14 12:05 UTC</b>, which was valid until
+    This page shows the run of <b>2026-09-14 21:02 UTC</b>, which was valid until
     <b>2026-09-15 00:00 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
   </div>
@@ -621,7 +622,7 @@ html.is-stale #stale{display:block}
     None of this is investment advice.
     <div class="runstamp">
       <span>product: sol-12h</span>
-      <span>run: 2026-09-14 12:05 UTC</span>
+      <span>run: 2026-09-14 21:02 UTC</span>
       <span>decision close: 2026-09-14 12:00 U C</span>
       <span>valid until: 2026-09-15 00:00 UTC</span>
       <span>source: EVOL SOL 12H Short v3.9 · preset U</span>
@@ -657,7 +658,7 @@ const PRODUCTO = {
   "acento": "#a55cff",
   "colorPalabra": "purple",
   "goLive": "2026-06-15",
-  "corrida": "2026-09-14 12:05 UTC"
+  "corrida": "2026-09-14 21:02 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -782,7 +783,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 /* ======================================================================
    sol-12h — DATOS emitidos por el MOTOR, no por un export de TradingView.
    EVOL SOL 12H Short v3.9 2026-08-24.pine · preset U · velas BINANCE_SOLUSDT_12h.csv
-   Corrida 2026-09-14 12:05 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-09-14 21:02 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el XLSX de TV en la ventana 2020 con Δ 0.53 %
    (bar: <0,5 %). Si no la pasa, el script aborta y no emite nada.
@@ -812,73 +813,73 @@ const DATOS = {
 
   trades: [
   {asset:"CASH", side:"CASH", entry:"2026-08-24", exit:null, days:20, ret:null, open:true},
-  {asset:"SOL", side:"LONG", entry:"2026-08-17", exit:"2026-08-24", days:7, ret:26.35},
-  {asset:"CASH", side:"CASH", entry:"2026-07-24", exit:"2026-08-17", days:24, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2026-07-20", exit:"2026-07-24", days:3, ret:-1.83},
-  {asset:"CASH", side:"CASH", entry:"2026-07-08", exit:"2026-07-20", days:12, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2026-06-30", exit:"2026-07-08", days:8, ret:6.98},
-  {asset:"CASH", side:"CASH", entry:"2026-04-19", exit:"2026-06-30", days:72, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2026-04-17", exit:"2026-04-19", days:2, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2025-08-13", exit:"2026-04-17", days:247, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2025-08-08", exit:"2025-08-13", days:5, ret:9.13},
-  {asset:"CASH", side:"CASH", entry:"2025-07-23", exit:"2025-08-08", days:16, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2025-07-08", exit:"2025-07-23", days:14, ret:35.67},
-  {asset:"CASH", side:"CASH", entry:"2025-07-08", exit:"2025-07-08", days:1, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2025-07-07", exit:"2025-07-08", days:1, ret:-2.15},
-  {asset:"CASH", side:"CASH", entry:"2025-05-31", exit:"2025-07-07", days:37, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2025-04-19", exit:"2025-05-31", days:41, ret:12.34},
-  {asset:"CASH", side:"CASH", entry:"2025-02-02", exit:"2025-04-19", days:76, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2025-01-16", exit:"2025-02-02", days:16, ret:-0.08},
-  {asset:"CASH", side:"CASH", entry:"2024-11-11", exit:"2025-01-16", days:66, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2024-10-12", exit:"2024-11-11", days:30, ret:48.49},
-  {asset:"CASH", side:"CASH", entry:"2024-10-03", exit:"2024-10-12", days:9, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2024-09-20", exit:"2024-10-03", days:13, ret:-2.09},
-  {asset:"CASH", side:"CASH", entry:"2024-07-22", exit:"2024-09-20", days:60, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2024-07-15", exit:"2024-07-22", days:7, ret:24.69},
-  {asset:"CASH", side:"CASH", entry:"2024-05-31", exit:"2024-07-15", days:45, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2024-05-16", exit:"2024-05-31", days:15, ret:5.06},
-  {asset:"CASH", side:"CASH", entry:"2024-03-19", exit:"2024-05-16", days:58, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2024-02-27", exit:"2024-03-19", days:21, ret:77.91},
-  {asset:"CASH", side:"CASH", entry:"2024-02-15", exit:"2024-02-27", days:12, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2024-01-28", exit:"2024-02-15", days:18, ret:23.83},
-  {asset:"CASH", side:"CASH", entry:"2023-08-16", exit:"2024-01-28", days:164, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-08-09", exit:"2023-08-16", days:7, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2023-07-01", exit:"2023-08-09", days:39, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-06-30", exit:"2023-07-01", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2023-06-05", exit:"2023-06-30", days:25, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-06-04", exit:"2023-06-05", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2023-05-06", exit:"2023-06-04", days:29, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-05-06", exit:"2023-05-06", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2023-05-01", exit:"2023-05-06", days:5, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-04-29", exit:"2023-05-01", days:2, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2023-04-16", exit:"2023-04-29", days:12, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-04-11", exit:"2023-04-16", days:5, ret:8.06},
-  {asset:"CASH", side:"CASH", entry:"2023-03-21", exit:"2023-04-11", days:21, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-03-20", exit:"2023-03-21", days:1, ret:-5.33},
-  {asset:"CASH", side:"CASH", entry:"2023-02-16", exit:"2023-03-20", days:32, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-02-16", exit:"2023-02-16", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2023-01-14", exit:"2023-02-16", days:33, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2023-01-09", exit:"2023-01-14", days:5, ret:26.23},
-  {asset:"CASH", side:"CASH", entry:"2022-08-01", exit:"2023-01-09", days:160, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2022-07-29", exit:"2022-08-01", days:3, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2022-04-21", exit:"2022-07-29", days:99, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2022-04-20", exit:"2022-04-21", days:1, ret:-4.58},
-  {asset:"CASH", side:"CASH", entry:"2021-12-03", exit:"2022-04-20", days:138, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2021-12-01", exit:"2021-12-03", days:2, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2021-11-22", exit:"2021-12-01", days:9, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2021-11-22", exit:"2021-11-22", days:1, ret:-5.23},
-  {asset:"CASH", side:"CASH", entry:"2021-08-18", exit:"2021-11-22", days:95, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2021-07-31", exit:"2021-08-18", days:18, ret:131.22},
-  {asset:"CASH", side:"CASH", entry:"2021-06-16", exit:"2021-07-31", days:45, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2021-06-15", exit:"2021-06-16", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2021-05-21", exit:"2021-06-15", days:24, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2021-05-21", exit:"2021-05-21", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2020-12-04", exit:"2021-05-21", days:168, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2020-12-03", exit:"2020-12-04", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2020-11-16", exit:"2020-12-03", days:17, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2020-11-15", exit:"2020-11-16", days:1, ret:-5.19},
-  {asset:"CASH", side:"CASH", entry:"2020-11-08", exit:"2020-11-15", days:7, ret:0.0},
-  {asset:"SOL", side:"LONG", entry:"2020-11-07", exit:"2020-11-08", days:1, ret:-15.68},
+  {asset:"SOL", side:"LONG", entry:"2026-08-17", exit:"2026-08-24", days:7, ret:26.35, ep:75.7, xp:95.84},
+  {asset:"CASH", side:"CASH", entry:"2026-07-24", exit:"2026-08-17", days:24, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2026-07-20", exit:"2026-07-24", days:3, ret:-1.83, ep:77.14, xp:75.88},
+  {asset:"CASH", side:"CASH", entry:"2026-07-08", exit:"2026-07-20", days:12, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2026-06-30", exit:"2026-07-08", days:8, ret:6.98, ep:75.17, xp:80.58},
+  {asset:"CASH", side:"CASH", entry:"2026-04-19", exit:"2026-06-30", days:72, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2026-04-17", exit:"2026-04-19", days:2, ret:-5.19, ep:89.06, xp:84.607},
+  {asset:"CASH", side:"CASH", entry:"2025-08-13", exit:"2026-04-17", days:247, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2025-08-08", exit:"2025-08-13", days:5, ret:9.13, ep:175.37, xp:191.77},
+  {asset:"CASH", side:"CASH", entry:"2025-07-23", exit:"2025-08-08", days:16, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2025-07-08", exit:"2025-07-23", days:14, ret:35.67, ep:151.31, xp:205.7},
+  {asset:"CASH", side:"CASH", entry:"2025-07-08", exit:"2025-07-08", days:1, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2025-07-07", exit:"2025-07-08", days:1, ret:-2.15, ep:151.86, xp:148.89},
+  {asset:"CASH", side:"CASH", entry:"2025-05-31", exit:"2025-07-07", days:37, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2025-04-19", exit:"2025-05-31", days:41, ret:12.34, ep:138.77, xp:156.2},
+  {asset:"CASH", side:"CASH", entry:"2025-02-02", exit:"2025-04-19", days:76, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2025-01-16", exit:"2025-02-02", days:16, ret:-0.08, ep:212.77, xp:213.03},
+  {asset:"CASH", side:"CASH", entry:"2024-11-11", exit:"2025-01-16", days:66, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2024-10-12", exit:"2024-11-11", days:30, ret:48.49, ep:146.26, xp:217.62},
+  {asset:"CASH", side:"CASH", entry:"2024-10-03", exit:"2024-10-12", days:9, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2024-09-20", exit:"2024-10-03", days:13, ret:-2.09, ep:142.88, xp:140.18},
+  {asset:"CASH", side:"CASH", entry:"2024-07-22", exit:"2024-09-20", days:60, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2024-07-15", exit:"2024-07-22", days:7, ret:24.69, ep:147.66, xp:184.49},
+  {asset:"CASH", side:"CASH", entry:"2024-05-31", exit:"2024-07-15", days:45, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2024-05-16", exit:"2024-05-31", days:15, ret:5.06, ep:158.52, xp:166.88},
+  {asset:"CASH", side:"CASH", entry:"2024-03-19", exit:"2024-05-16", days:58, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2024-02-27", exit:"2024-03-19", days:21, ret:77.91, ep:109.9, xp:195.92},
+  {asset:"CASH", side:"CASH", entry:"2024-02-15", exit:"2024-02-27", days:12, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2024-01-28", exit:"2024-02-15", days:18, ret:23.83, ep:94.27, xp:116.97},
+  {asset:"CASH", side:"CASH", entry:"2023-08-16", exit:"2024-01-28", days:164, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-08-09", exit:"2023-08-16", days:7, ret:-5.19, ep:24.22, xp:23.009},
+  {asset:"CASH", side:"CASH", entry:"2023-07-01", exit:"2023-08-09", days:39, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-06-30", exit:"2023-07-01", days:1, ret:-5.19, ep:18.88, xp:17.936},
+  {asset:"CASH", side:"CASH", entry:"2023-06-05", exit:"2023-06-30", days:25, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-06-04", exit:"2023-06-05", days:1, ret:-5.19, ep:21.7, xp:20.615},
+  {asset:"CASH", side:"CASH", entry:"2023-05-06", exit:"2023-06-04", days:29, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-05-06", exit:"2023-05-06", days:1, ret:-5.19, ep:22.82, xp:21.679},
+  {asset:"CASH", side:"CASH", entry:"2023-05-01", exit:"2023-05-06", days:5, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-04-29", exit:"2023-05-01", days:2, ret:-5.19, ep:23.34, xp:22.173},
+  {asset:"CASH", side:"CASH", entry:"2023-04-16", exit:"2023-04-29", days:12, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-04-11", exit:"2023-04-16", days:5, ret:8.06, ep:22.22, xp:24.06},
+  {asset:"CASH", side:"CASH", entry:"2023-03-21", exit:"2023-04-11", days:21, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-03-20", exit:"2023-03-21", days:1, ret:-5.33, ep:23.33, xp:22.13},
+  {asset:"CASH", side:"CASH", entry:"2023-02-16", exit:"2023-03-20", days:32, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-02-16", exit:"2023-02-16", days:1, ret:-5.19, ep:23.86, xp:22.667},
+  {asset:"CASH", side:"CASH", entry:"2023-01-14", exit:"2023-02-16", days:33, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2023-01-09", exit:"2023-01-14", days:5, ret:26.23, ep:14.46, xp:18.29},
+  {asset:"CASH", side:"CASH", entry:"2022-08-01", exit:"2023-01-09", days:160, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2022-07-29", exit:"2022-08-01", days:3, ret:-5.19, ep:42.92, xp:40.774},
+  {asset:"CASH", side:"CASH", entry:"2022-04-21", exit:"2022-07-29", days:99, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2022-04-20", exit:"2022-04-21", days:1, ret:-4.58, ep:110.43, xp:105.58},
+  {asset:"CASH", side:"CASH", entry:"2021-12-03", exit:"2022-04-20", days:138, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2021-12-01", exit:"2021-12-03", days:2, ret:-5.19, ep:221.3, xp:210.24},
+  {asset:"CASH", side:"CASH", entry:"2021-11-22", exit:"2021-12-01", days:9, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2021-11-22", exit:"2021-11-22", days:1, ret:-5.23, ep:230.56, xp:218.94},
+  {asset:"CASH", side:"CASH", entry:"2021-08-18", exit:"2021-11-22", days:95, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2021-07-31", exit:"2021-08-18", days:18, ret:131.22, ep:32.354, xp:74.958},
+  {asset:"CASH", side:"CASH", entry:"2021-06-16", exit:"2021-07-31", days:45, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2021-06-15", exit:"2021-06-16", days:1, ret:-5.19, ep:39.7, xp:37.715},
+  {asset:"CASH", side:"CASH", entry:"2021-05-21", exit:"2021-06-15", days:24, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2021-05-21", exit:"2021-05-21", days:1, ret:-5.19, ep:44.367, xp:42.1486},
+  {asset:"CASH", side:"CASH", entry:"2020-12-04", exit:"2021-05-21", days:168, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2020-12-03", exit:"2020-12-04", days:1, ret:-5.19, ep:2.119, xp:2.0131},
+  {asset:"CASH", side:"CASH", entry:"2020-11-16", exit:"2020-12-03", days:17, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2020-11-15", exit:"2020-11-16", days:1, ret:-5.19, ep:2.1223, xp:2.0162},
+  {asset:"CASH", side:"CASH", entry:"2020-11-08", exit:"2020-11-15", days:7, ret:0.0, ep:null, xp:null},
+  {asset:"SOL", side:"LONG", entry:"2020-11-07", exit:"2020-11-08", days:1, ret:-15.68, ep:2.3985, xp:2.0264},
   ],
 
   hoy: {asset:"CASH", dir:"CASH", close:101.38, pendiente:false},
@@ -1461,6 +1462,22 @@ function ribbon(v, id, tradesHTML){
 }
 
 /* ---------- trade history ---------- */
+/* Precios de la operación (14-sep-2026, Felipe): el retorno no se puede verificar contra nada;
+   los precios sí, contra cualquier gráfico, y dejan a la vista la regla del fill al open
+   siguiente. Los emite el motor (ep = entrada, xp = salida); si faltan, no se muestra nada.
+   En corto se nombra la dirección para que nadie lea el par de precios al revés. */
+function tradePx(t){
+  if(t.side === "CASH" || t.ep == null) return "";
+  let xp = t.xp;
+  if(t.open && xp == null){
+    const a = (DATOS.hoyAlloc || []).find(z => z.asset === t.asset);
+    xp = a ? a.close : (DATOS.hoy && DATOS.hoy.asset === t.asset ? DATOS.hoy.close : null);
+  }
+  const sh = t.side === "SHORT";
+  const lhs = `${sh ? "shorted " : "bought "}${price(t.ep)}`;
+  const rhs = xp == null ? "" : ` → ${sh ? "covered " : "sold "}${t.open ? "now " : ""}${price(xp)}`;
+  return `<small class="num px">${lhs}${rhs}</small>`;
+}
 function tradeList(v){
   const rows = v.trades.map(t => {
     const A = ASSETS[t.asset] || {color:"var(--flat)"};
@@ -1471,6 +1488,7 @@ function tradeList(v){
       <div class="who">
         <b>${t.asset}</b>
         <small class="num">${t.entry} → ${t.exit || "now"} · ${t.days}d</small>
+        ${tradePx(t)}
       </div>
       ${t.side === "SHORT" ? `<span class="side" style="color:var(--dn)">short</span>` : ""}
       ${ret}
