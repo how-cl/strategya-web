@@ -2324,8 +2324,14 @@ if(window.__SG_EMBED__){
   window.addEventListener("message", (e) => {
     const d = e.data;
     if(!d || typeof d !== "object") return;
-    if(d.type === "strategya:theme"){
+    if(d.type === "strategya:hello"){
+      /* El padre recién registró su listener: si la ficha estaba en caché y
+         avisó antes de que él escuchara, se vuelve a presentar (15-sep-2026). */
+      sgPostMessage("strategya:ready", {});
+      sgLastHeight = -1; sgSendHeight();
+    } else if(d.type === "strategya:theme"){
       if(d.mode === "light" || d.mode === "dark" || d.mode === "auto") applyTheme(d.mode);
+      sgLastHeight = -1; sgQueueHeight();
     } else if(d.type === "strategya:toggle"){
       const id = P.slug, isOpen = state.open.has(id), wantOpen = !!d.open;
       if(isOpen !== wantOpen){
