@@ -6,54 +6,48 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
     "preset": "Proportional (T=2) · gold ON · short sleeve OFF · MSTR F3 + TSLA A·W22 · NYSE holidays ON",
-    "symbol": "BINANCE:MSTR",
+    "symbol": "BINANCE:ETHUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-14T00:00Z",
-  "decision_close_utc": "2026-09-14T00:00:00Z",
-  "valid_until_utc": "2026-09-15T00:00:00Z",
-  "generated_at_utc": "2026-09-14T21:03:00Z",
+  "decision_bar_label": "2026-09-15T00:00Z",
+  "decision_close_utc": "2026-09-15T00:00:00Z",
+  "valid_until_utc": "2026-09-16T00:00:00Z",
+  "generated_at_utc": "2026-09-15T00:06:00Z",
   "data_as_of": {
-    "MSTR": "2026-09-14"
+    "ETH": "2026-09-15"
   },
   "cash_asset": "USDT",
-  "reference_price": 130.98,
-  "action": "HOLD",
+  "reference_price": 2515.75,
+  "action": "SELL",
   "positions": [
-    {
-      "asset": "MSTR",
-      "side": "long",
-      "weight": 0.375,
-      "since": "2026-08-31"
-    },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.342,
+      "weight": 0.63,
       "since": "2026-07-05"
     },
     {
-      "asset": "SOL",
+      "asset": "MSTR",
       "side": "long",
-      "weight": 0.283,
-      "since": "2026-09-04"
+      "weight": 0.37,
+      "since": "2026-08-31"
     }
   ],
   "previous_positions": [
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.37
+      "weight": 0.375
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.344
+      "weight": 0.342
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.286
+      "weight": 0.283
     }
   ],
   "last_trade": {
@@ -66,5 +60,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:a912d4b5cc8e93e374a411b82de1e64c0835434039a4fe0f315bd22f58982fad"
+  "checksum": "sha256:ed65577774b0c9001f2853a9facf8c53cbbc814fd2807c00b0cbde25cb35c4aa"
 }
