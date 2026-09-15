@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>BTC 1D — Strategya.pro</title>
 <meta name="description" content="BTC 1D: one decision a day. It holds bitcoin, or it holds nothing.">
+<script>
+/* EMBED: modo iframe para strategya.pro/catalog (15-sep-2026) */
+/* Corre ANTES que <style> y el resto de la página para no parpadear: agrega
+   la clase que usan las reglas de abajo, y dos banderas que el script
+   principal lee más abajo (arranque plegado, tema desde el parámetro en vez
+   de localStorage). Contrato completo en embed-protocol.md. */
+(function(){
+  var q = new URLSearchParams(location.search);
+  window.__SG_EMBED__ = q.get("embed") === "1";
+  if(!window.__SG_EMBED__) return;
+  document.documentElement.classList.add("embed");
+  window.__SG_EMBED_OPEN__ = q.get("open") === "1";
+  var theme = q.get("theme");
+  if(theme === "light" || theme === "dark") document.documentElement.setAttribute("data-theme", theme);
+  else document.documentElement.removeAttribute("data-theme");   // auto
+})();
+</script>
 <style>
 /* ============================================================
    TOKENS
@@ -540,6 +557,18 @@ html.is-stale #stale{display:block}
   color:var(--tx-faint);text-decoration:none;transition:color .15s,border-color .15s}
 .signal-btn:hover{color:var(--tx);border-color:var(--tx-faint)}
 .signal-btn[hidden]{display:none}
+
+/* EMBED: modo iframe para strategya.pro/catalog (15-sep-2026) */
+/* Solo pinta cuando <html> trae la clase que agrega el script de arriba;
+   sin ?embed=1 no cambia nada. La tarjeta conserva su borde, radio, sombra y
+   colores tal cual — el iframe la recorta a ella sola, no la rediseña. */
+html.embed .topbar,
+html.embed .howto,
+html.embed footer.legal{display:none}
+html.embed .wrap{padding:0;max-width:none}
+html.embed,
+html.embed body{background:transparent}
+html.embed .grid{display:block}
 </style>
 </head>
 <body>
@@ -1829,8 +1858,13 @@ function cardHTML(st, tfKey){
 const state = { tf:{}, open:new Set(), range:{}, brange:{}, unit:{}, pxwin:{}, pxopen:{} };
 STRATEGIES.forEach(s => state.tf[s.id] = Object.keys(s.variants)[0]);
 /* un solo producto: la tarjeta abre desplegada. El plegado existía para
-   elegir entre varias en una grilla; acá solo escondería el contenido. */
-STRATEGIES.forEach(s => state.open.add(s.id));
+   elegir entre varias en una grilla; acá solo escondería el contenido.
+   EMBED: en el iframe del catálogo arranca plegada salvo ?open=1, porque ahí
+   el padre decide cuánto espacio darle antes de que el visitante haga nada
+   (15-sep-2026). */
+if(!window.__SG_EMBED__ || window.__SG_EMBED_OPEN__){
+  STRATEGIES.forEach(s => state.open.add(s.id));
+}
 
 /* ---------- REPLAY (VB de Felipe, 3-sep-2026) ----------
    Reproduce barra a barra lo que el motor YA calculó: DATOS.daily trae fecha,
@@ -2118,6 +2152,10 @@ document.addEventListener("click", (e) => {
     const id = card.dataset.id;
     state.open.has(id) ? state.open.delete(id) : state.open.add(id);
     renderGrid();
+    /* EMBED: el padre necesita saber que la tarjeta cambió de alto ANTES de
+       que llegue el mensaje de altura, para no dejar un salto sin explicar
+       (15-sep-2026). sgPostMessage no hace nada fuera de modo embed. */
+    sgPostMessage("strategya:open", {open: state.open.has(id)});
     if(state.open.has(id)){
       const el = $(`.card[data-id="${id}"]`);
       el.scrollIntoView({behavior:"smooth", block:"nearest"});
@@ -2131,7 +2169,10 @@ const store = {
   set(k,v){ try{ localStorage.setItem(k,v); }catch(e){} },
 };
 function applyTheme(mode){
-  store.set("sg-theme", mode);
+  /* EMBED: en el iframe el tema lo manda el padre (parámetro o postMessage),
+     nunca localStorage — es el localStorage DEL PADRE el que debería decidir,
+     y el iframe no tiene acceso a esa cuenta (15-sep-2026). */
+  if(!window.__SG_EMBED__) store.set("sg-theme", mode);
   if(mode === "auto") document.documentElement.removeAttribute("data-theme");
   else document.documentElement.setAttribute("data-theme", mode);
   document.querySelectorAll("[data-theme-set]").forEach(b =>
@@ -2139,9 +2180,57 @@ function applyTheme(mode){
 }
 document.querySelectorAll("[data-theme-set]").forEach(b =>
   b.addEventListener("click", () => applyTheme(b.dataset.themeSet)));
-applyTheme(store.get("sg-theme") || "auto");
+applyTheme(window.__SG_EMBED__
+  ? (new URLSearchParams(location.search).get("theme") || "auto")
+  : (store.get("sg-theme") || "auto"));
 
 renderGrid();
+
+/* EMBED: mensajería con el padre (strategya.pro/catalog). Protocolo completo
+   en embed-protocol.md; acá solo lo que la ficha necesita para vivir en un
+   iframe: avisar que está lista, avisar su alto, avisar cuando se abre o
+   cierra, y aceptar tema/toggle que mande el padre (15-sep-2026).
+   `sgPostMessage` está declarada afuera del `if` para que el handler del
+   `.card-head` (más arriba en el archivo, pero se ejecuta después de que todo
+   esto ya corrió) la encuentre siempre; sin modo embed, no hace nada. */
+function sgPostMessage(type, extra){
+  if(!window.__SG_EMBED__) return;
+  try{
+    window.parent.postMessage(Object.assign({type:type, product:P.slug}, extra || {}), "*");
+  }catch(e){}
+}
+if(window.__SG_EMBED__){
+  let sgHeightTimer = null, sgLastHeight = -1;
+  const sgSendHeight = () => {
+    const h = document.body.scrollHeight;
+    if(h === sgLastHeight) return;
+    sgLastHeight = h;
+    sgPostMessage("strategya:height", {height: h});
+  };
+  const sgQueueHeight = () => {
+    clearTimeout(sgHeightTimer);
+    sgHeightTimer = setTimeout(sgSendHeight, 50);
+  };
+  new ResizeObserver(sgQueueHeight).observe(document.body);
+  window.addEventListener("load", sgQueueHeight);
+  sgPostMessage("strategya:ready", {});
+  sgQueueHeight();
+
+  window.addEventListener("message", (e) => {
+    const d = e.data;
+    if(!d || typeof d !== "object") return;
+    if(d.type === "strategya:theme"){
+      if(d.mode === "light" || d.mode === "dark" || d.mode === "auto") applyTheme(d.mode);
+    } else if(d.type === "strategya:toggle"){
+      const id = P.slug, isOpen = state.open.has(id), wantOpen = !!d.open;
+      if(isOpen !== wantOpen){
+        wantOpen ? state.open.add(id) : state.open.delete(id);
+        renderGrid();
+        sgPostMessage("strategya:open", {open: wantOpen});
+      }
+    }
+  });
+}
 
 /* the timeline window is 12 months on phones and 24 on wider screens,
    so re-render only when the breakpoint is actually crossed */
