@@ -2157,7 +2157,13 @@ function sgPostMessage(type, extra){
 if(window.__SG_EMBED__){
   let sgHeightTimer = null, sgLastHeight = -1;
   const sgSendHeight = () => {
-    const h = document.body.scrollHeight;
+    /* El máximo de las tres medidas: en una carga con ancho cero (iframe
+       hidratándose) body.scrollHeight puede dar 0 aunque la tarjeta exista. */
+    const g = document.getElementById("grid");
+    const h = Math.ceil(Math.max(document.body.scrollHeight,
+                                 document.documentElement.scrollHeight,
+                                 g ? g.getBoundingClientRect().bottom : 0));
+    if(h <= 0) return;
     if(h === sgLastHeight) return;
     sgLastHeight = h;
     sgPostMessage("strategya:height", {height: h});
@@ -2166,8 +2172,10 @@ if(window.__SG_EMBED__){
     clearTimeout(sgHeightTimer);
     sgHeightTimer = setTimeout(sgSendHeight, 50);
   };
-  new ResizeObserver(sgQueueHeight).observe(document.body);
+  const sgRO = new ResizeObserver(sgQueueHeight);
+  sgRO.observe(document.body); sgRO.observe(document.documentElement);
   window.addEventListener("load", sgQueueHeight);
+  window.addEventListener("resize", sgQueueHeight);
   sgPostMessage("strategya:ready", {});
   sgQueueHeight();
 
