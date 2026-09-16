@@ -2413,7 +2413,10 @@ if(window.__SG_EMBED__){
   sgPostMessage("strategya:ready", {});
   sgQueueHeight();
 
+  /* ORIGEN: solo el padre legítimo (16-sep-2026): strategya.pro, previews de Lovable, localhost. */
+  const sgOrigenOk = (o) => /^https:\/\/([a-z0-9-]+\.)*(strategya\.pro|lovable\.app|lovableproject\.com)$/.test(o) || /^http:\/\/localhost(:\d+)?$/.test(o);
   window.addEventListener("message", (e) => {
+    if(e.source !== window.parent || !sgOrigenOk(e.origin)) return;
     const d = e.data;
     if(!d || typeof d !== "object") return;
     if(d.type === "strategya:hello"){
