@@ -1246,9 +1246,11 @@ function signalBox(v){
       <span class="mini">🔻 Short leg: ${assetDot(s.short.asset,1)} <b style="color:var(--dn)">${s.short.asset}</b> since ${s.short.since}</span>
     </div>` : "";
 
+  /* PENDIENTE-24x7 (16-sep-2026): en cripto la vela siguiente abre en el instante del cierre. */
+  const esAccion = (a) => P.mercado === "acciones" || /^(TSLA|MSTR)$/.test(String(a || ""));
   const st = s.changedToday
     ? (s.pending
-        ? `<div class="signal-status">🔁 <span>Changed today · order fills at next open</span></div>`
+        ? `<div class="signal-status">🔁 <span>Changed today · ${esAccion(s.alloc && s.alloc[0] ? s.alloc[0].asset : "") ? "order fills at the next session open (NYSE)" : "executes at the next candle open, right after the close (24/7 market)"}</span></div>`
         : `<div class="signal-status">🔁 <span>Changed today</span></div>`)
     : `<div class="signal-status">😴 <span>No changes today</span></div>`;
 
