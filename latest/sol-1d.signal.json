@@ -9,17 +9,25 @@
     "symbol": "BINANCE:SOLUSDT",
     "md5": "063575ef09167bd7fee1ded0e84e4503"
   },
-  "decision_bar_label": "2026-09-18T00:00Z",
-  "decision_close_utc": "2026-09-18T00:00:00Z",
-  "valid_until_utc": "2026-09-19T00:00:00Z",
-  "generated_at_utc": "2026-09-18T00:03:00Z",
+  "decision_bar_label": "2026-09-19T00:00Z",
+  "decision_close_utc": "2026-09-19T00:00:00Z",
+  "valid_until_utc": "2026-09-20T00:00:00Z",
+  "generated_at_utc": "2026-09-19T00:03:00Z",
   "data_as_of": {
-    "SOL": "2026-09-18"
+    "SOL": "2026-09-19"
   },
   "cash_asset": "USDT",
-  "reference_price": 101.64,
-  "action": "HOLD",
-  "positions": [],
+  "reference_price": 112.72,
+  "action": "BUY",
+  "positions": [
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-09-19",
+      "entry_price": 112.72
+    }
+  ],
   "previous_positions": [],
   "last_trade": {
     "asset": "SOL",
@@ -30,6 +38,6 @@
     "return_pct": -5.27
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:139a2a2eeecc209121827d385362852c7337ee61b402ffd43850eb095fc52497"
+  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional).",
+  "checksum": "sha256:593aed923ef95774a6373d02b98ba34bd2921836cf37012fe5ec541f31c8c541"
 }
