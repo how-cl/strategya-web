@@ -6,43 +6,55 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
     "preset": "Proportional (T=2) · gold ON · crypto shorts ON · MSTR F3 + TSLA A·W22 · guard OFF · NYSE holidays ON",
-    "symbol": "BINANCE:ETHUSDT",
+    "symbol": "BINANCE:MSTR",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-19T00:00Z",
-  "decision_close_utc": "2026-09-19T00:00:00Z",
-  "valid_until_utc": "2026-09-20T00:00:00Z",
-  "generated_at_utc": "2026-09-19T00:04:00Z",
+  "decision_bar_label": "2026-09-20T00:00Z",
+  "decision_close_utc": "2026-09-20T00:00:00Z",
+  "valid_until_utc": "2026-09-21T00:00:00Z",
+  "generated_at_utc": "2026-09-20T00:04:00Z",
   "data_as_of": {
-    "ETH": "2026-09-19"
+    "MSTR": "2026-09-20"
   },
   "cash_asset": "USDT",
-  "reference_price": 2612.14,
-  "action": "HOLD",
+  "reference_price": 153.91,
+  "action": "BUY",
   "positions": [
-    {
-      "asset": "ETH",
-      "side": "long",
-      "weight": 0.611,
-      "since": "2026-07-05"
-    },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.389,
+      "weight": 0.387,
       "since": "2026-08-31"
+    },
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 0.271,
+      "since": "2026-09-19"
+    },
+    {
+      "asset": "SUI",
+      "side": "long",
+      "weight": 0.169,
+      "since": "2026-09-19"
+    },
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 0.165,
+      "since": "2026-07-05"
     }
   ],
   "previous_positions": [
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.632
+      "weight": 0.611
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.368
+      "weight": 0.389
     }
   ],
   "last_trade": {
@@ -55,5 +67,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:e7a37d9464dd203e567339e1222c47f78943b6e1e11f15344837403ac3fa005b"
+  "checksum": "sha256:68be6461bd95248be3d76c9c74d42706f73a4744448a3e740bad56202b540964"
 }
