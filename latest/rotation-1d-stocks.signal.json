@@ -9,52 +9,62 @@
     "symbol": "BINANCE:MSTR",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-20T00:00Z",
-  "decision_close_utc": "2026-09-20T00:00:00Z",
-  "valid_until_utc": "2026-09-21T00:00:00Z",
-  "generated_at_utc": "2026-09-20T00:04:00Z",
+  "decision_bar_label": "2026-09-21T00:00Z",
+  "decision_close_utc": "2026-09-21T00:00:00Z",
+  "valid_until_utc": "2026-09-22T00:00:00Z",
+  "generated_at_utc": "2026-09-21T00:03:00Z",
   "data_as_of": {
-    "MSTR": "2026-09-20"
+    "MSTR": "2026-09-21"
   },
   "cash_asset": "USDT",
   "reference_price": 153.91,
-  "action": "BUY",
+  "action": "HOLD",
   "positions": [
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.387,
+      "weight": 0.382,
       "since": "2026-08-31"
-    },
-    {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 0.271,
-      "since": "2026-09-19"
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.169,
+      "weight": 0.263,
+      "since": "2026-09-19"
+    },
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 0.2,
       "since": "2026-09-19"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.165,
+      "weight": 0.115,
       "since": "2026-07-05"
     }
   ],
   "previous_positions": [
     {
-      "asset": "ETH",
-      "side": "long",
-      "weight": 0.611
-    },
-    {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.389
+      "weight": 0.387
+    },
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 0.271
+    },
+    {
+      "asset": "SUI",
+      "side": "long",
+      "weight": 0.169
+    },
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 0.165
     }
   ],
   "last_trade": {
@@ -67,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:1384cfc20a4cdd291f8d94eaf486832a34f1f8dd276500b16da1e6b3bc48390f"
+  "checksum": "sha256:6bd739c6a5aa1173696697e0234949aabea2c7d1d1708c10573a038ef9042c76"
 }
