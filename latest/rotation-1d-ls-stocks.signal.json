@@ -6,42 +6,42 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
     "preset": "Proportional (T=2) · gold ON · crypto shorts ON · MSTR F3 + TSLA A·W22 · guard OFF · NYSE holidays ON",
-    "symbol": "BINANCE:MSTR",
+    "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-21T00:00Z",
-  "decision_close_utc": "2026-09-21T00:00:00Z",
-  "valid_until_utc": "2026-09-22T00:00:00Z",
-  "generated_at_utc": "2026-09-21T00:04:00Z",
+  "decision_bar_label": "2026-09-22T00:00Z",
+  "decision_close_utc": "2026-09-22T00:00:00Z",
+  "valid_until_utc": "2026-09-23T00:00:00Z",
+  "generated_at_utc": "2026-09-22T00:05:00Z",
   "data_as_of": {
-    "MSTR": "2026-09-21"
+    "SUI": "2026-09-22"
   },
   "cash_asset": "USDT",
-  "reference_price": 153.91,
+  "reference_price": 1.0427,
   "action": "HOLD",
   "positions": [
     {
-      "asset": "MSTR",
-      "side": "long",
-      "weight": 0.382,
-      "since": "2026-08-31"
-    },
-    {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.263,
+      "weight": 0.45,
       "since": "2026-09-19"
+    },
+    {
+      "asset": "MSTR",
+      "side": "long",
+      "weight": 0.329,
+      "since": "2026-08-31"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.2,
+      "weight": 0.139,
       "since": "2026-09-19"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.115,
+      "weight": 0.082,
       "since": "2026-07-05"
     }
   ],
@@ -49,22 +49,22 @@
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.387
-    },
-    {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 0.271
+      "weight": 0.382
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.169
+      "weight": 0.263
+    },
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 0.2
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.165
+      "weight": 0.115
     }
   ],
   "last_trade": {
@@ -77,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:744d5aebd00e32739971bbbd9295530761e4f2c692421a0a1a02be5477e879ff"
+  "checksum": "sha256:06d2aaa29afb27075ea2c76d81176fc551a633bea5be957b2394864bbf0e145c"
 }
