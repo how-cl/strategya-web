@@ -9,33 +9,33 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-22T00:00Z",
-  "decision_close_utc": "2026-09-22T00:00:00Z",
-  "valid_until_utc": "2026-09-23T00:00:00Z",
-  "generated_at_utc": "2026-09-22T00:04:00Z",
+  "decision_bar_label": "2026-09-23T00:00Z",
+  "decision_close_utc": "2026-09-23T00:00:00Z",
+  "valid_until_utc": "2026-09-24T00:00:00Z",
+  "generated_at_utc": "2026-09-23T00:04:00Z",
   "data_as_of": {
-    "SUI": "2026-09-22"
+    "SUI": "2026-09-23"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0427,
+  "reference_price": 1.0236,
   "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.45,
+      "weight": 0.447,
       "since": "2026-09-19"
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.329,
+      "weight": 0.33,
       "since": "2026-08-31"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.139,
+      "weight": 0.141,
       "since": "2026-09-19"
     },
     {
@@ -47,24 +47,24 @@
   ],
   "previous_positions": [
     {
-      "asset": "MSTR",
-      "side": "long",
-      "weight": 0.382
-    },
-    {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.263
+      "weight": 0.45
+    },
+    {
+      "asset": "MSTR",
+      "side": "long",
+      "weight": 0.329
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.2
+      "weight": 0.139
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.115
+      "weight": 0.082
     }
   ],
   "last_trade": {
@@ -77,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:d553768eae7492acd6e1ecd63e4008629ada305542b32e196159bf62439d723e"
+  "checksum": "sha256:ddb127753d0dc83c008950e78a090fd1acef57d2b248f19773919231080e6919"
 }
