@@ -2363,12 +2363,13 @@ function sgPostMessage(type, extra){
 if(window.__SG_EMBED__){
   let sgHeightTimer = null, sgLastHeight = -1;
   const sgSendHeight = () => {
-    /* El máximo de las tres medidas: en una carga con ancho cero (iframe
-       hidratándose) body.scrollHeight puede dar 0 aunque la tarjeta exista. */
+    /* ALTO: el contenido, no el viewport (25-sep-2026). documentElement.scrollHeight
+       nunca baja del alto del iframe, así que al plegar la tarjeta el alto quedaba
+       pegado. Se mide el body (alto automático) y el borde de #grid; el máximo de
+       los dos cubre la carga con ancho cero, donde body.scrollHeight puede dar 0. */
     const g = document.getElementById("grid");
     const h = Math.ceil(Math.max(document.body.scrollHeight,
-                                 document.documentElement.scrollHeight,
-                                 g ? g.getBoundingClientRect().bottom : 0));
+                                 g ? g.getBoundingClientRect().bottom + window.scrollY : 0));
     if(h <= 0) return;
     if(h === sgLastHeight) return;
     sgLastHeight = h;
