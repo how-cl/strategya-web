@@ -9,39 +9,39 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-24T00:00Z",
-  "decision_close_utc": "2026-09-24T00:00:00Z",
-  "valid_until_utc": "2026-09-25T00:00:00Z",
-  "generated_at_utc": "2026-09-24T00:04:00Z",
+  "decision_bar_label": "2026-09-25T00:00Z",
+  "decision_close_utc": "2026-09-25T00:00:00Z",
+  "valid_until_utc": "2026-09-26T00:00:00Z",
+  "generated_at_utc": "2026-09-25T00:04:00Z",
   "data_as_of": {
-    "SUI": "2026-09-24"
+    "SUI": "2026-09-25"
   },
   "cash_asset": "USDT",
-  "reference_price": 0.9601,
+  "reference_price": 1.0141,
   "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.439,
+      "weight": 0.452,
       "since": "2026-09-19"
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.335,
+      "weight": 0.325,
       "since": "2026-08-31"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.142,
+      "weight": 0.141,
       "since": "2026-09-19"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.084,
+      "weight": 0.082,
       "since": "2026-07-05"
     }
   ],
@@ -49,22 +49,22 @@
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.447
+      "weight": 0.439
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.33
+      "weight": 0.335
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.141
+      "weight": 0.142
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.082
+      "weight": 0.084
     }
   ],
   "last_trade": {
@@ -77,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:7a59f42d99ef3d437a3595b647717b941d0b61a543fe1a394c04ba23a4f5d15c"
+  "checksum": "sha256:e402e7d4cfefd0328824b6f93a99c471428e13ca25b2dae1ab8ee6ddba9ca943"
 }
