@@ -9,39 +9,39 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-25T00:00Z",
-  "decision_close_utc": "2026-09-25T00:00:00Z",
-  "valid_until_utc": "2026-09-26T00:00:00Z",
-  "generated_at_utc": "2026-09-25T00:04:00Z",
+  "decision_bar_label": "2026-09-26T00:00Z",
+  "decision_close_utc": "2026-09-26T00:00:00Z",
+  "valid_until_utc": "2026-09-27T00:00:00Z",
+  "generated_at_utc": "2026-09-26T00:05:00Z",
   "data_as_of": {
-    "SUI": "2026-09-25"
+    "SUI": "2026-09-26"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0141,
+  "reference_price": 1.1949,
   "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.452,
+      "weight": 0.492,
       "since": "2026-09-19"
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.325,
+      "weight": 0.295,
       "since": "2026-08-31"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.141,
+      "weight": 0.137,
       "since": "2026-09-19"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.082,
+      "weight": 0.076,
       "since": "2026-07-05"
     }
   ],
@@ -49,22 +49,22 @@
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.439
+      "weight": 0.452
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.335
+      "weight": 0.325
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.142
+      "weight": 0.141
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.084
+      "weight": 0.082
     }
   ],
   "last_trade": {
@@ -77,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:7cb4b22e580354de818d82542ec3e81fd38efd5bcd5e70298d05cbcabe87d465"
+  "checksum": "sha256:bff2106c0620fd4299bdf21a6b597fc6445fc0156dad991966777989b3852c5f"
 }
