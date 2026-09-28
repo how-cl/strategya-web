@@ -9,39 +9,39 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-09-27T00:00Z",
-  "decision_close_utc": "2026-09-27T00:00:00Z",
-  "valid_until_utc": "2026-09-28T00:00:00Z",
-  "generated_at_utc": "2026-09-27T00:05:00Z",
+  "decision_bar_label": "2026-09-28T00:00Z",
+  "decision_close_utc": "2026-09-28T00:00:00Z",
+  "valid_until_utc": "2026-09-29T00:00:00Z",
+  "generated_at_utc": "2026-09-28T00:04:00Z",
   "data_as_of": {
-    "SUI": "2026-09-27"
+    "SUI": "2026-09-28"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.1632,
+  "reference_price": 1.264,
   "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.486,
+      "weight": 0.507,
       "since": "2026-09-19"
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.299,
+      "weight": 0.287,
       "since": "2026-08-31"
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.138,
+      "weight": 0.133,
       "since": "2026-09-19"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.077,
+      "weight": 0.073,
       "since": "2026-07-05"
     }
   ],
@@ -49,22 +49,22 @@
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.492
+      "weight": 0.486
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.295
+      "weight": 0.299
     },
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.137
+      "weight": 0.138
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.076
+      "weight": 0.077
     }
   ],
   "last_trade": {
@@ -77,5 +77,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:70d027b00170c680c3fffa6d8f61371a0d554f8b74301bf8c05e2a56b28c05f2"
+  "checksum": "sha256:1fef4c90b28decb7474f49e0759b77d43679c5d07344fc2f6d945c7230af01d8"
 }
