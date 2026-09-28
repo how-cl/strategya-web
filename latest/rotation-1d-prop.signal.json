@@ -1,0 +1,70 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "rotation-1d-prop",
+  "kind": "rotation",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL Rotation 1D v1.4 Strategy.pro USDT 2026-08-25.pine",
+    "preset": "Proportional (T=2) · gold ON · breakers OFF",
+    "symbol": "BINANCE:SOLUSDT",
+    "md5": "4778fd3286119255561f38aada88ec57"
+  },
+  "decision_bar_label": "2026-09-28T00:00Z",
+  "decision_close_utc": "2026-09-28T00:00:00Z",
+  "valid_until_utc": "2026-09-29T00:00:00Z",
+  "generated_at_utc": "2026-09-28T00:21:00Z",
+  "data_as_of": {
+    "SOL": "2026-09-28"
+  },
+  "cash_asset": "USDT",
+  "reference_price": 121.99,
+  "action": "HOLD",
+  "positions": [
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 0.415,
+      "since": "2026-09-19"
+    },
+    {
+      "asset": "SUI",
+      "side": "long",
+      "weight": 0.349,
+      "since": "2026-09-19"
+    },
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 0.236,
+      "since": "2026-07-05"
+    }
+  ],
+  "previous_positions": [
+    {
+      "asset": "SOL",
+      "side": "long",
+      "weight": 0.426
+    },
+    {
+      "asset": "SUI",
+      "side": "long",
+      "weight": 0.331
+    },
+    {
+      "asset": "ETH",
+      "side": "long",
+      "weight": 0.243
+    }
+  ],
+  "last_trade": {
+    "asset": "SUI",
+    "side": "long",
+    "entry_date": "2026-09-04",
+    "exit_date": "2026-09-11",
+    "days": 7,
+    "return_pct": -7.3
+  },
+  "status": "ok",
+  "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG.",
+  "checksum": "sha256:287f485ee15da201d02b1d88bcf067e93f22e55b0fdd2d3e7b5301be90191bcf"
+}

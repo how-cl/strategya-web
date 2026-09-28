@@ -1,6 +1,6 @@
 {
   "schema": "strategya.catalog/0.3",
-  "generated_at_utc": "2026-09-28T00:04:00Z",
+  "generated_at_utc": "2026-09-28T00:21:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -43,7 +43,7 @@
             }
           ]
         },
-        "rank": 18
+        "rank": 19
       },
       "kpis_by_window": {
         "6m": {
@@ -187,7 +187,7 @@
             }
           ]
         },
-        "rank": 16
+        "rank": 17
       },
       "kpis_by_window": {
         "6m": {
@@ -327,7 +327,7 @@
             }
           ]
         },
-        "rank": 15
+        "rank": 16
       },
       "kpis_by_window": {
         "6m": {
@@ -471,7 +471,7 @@
             }
           ]
         },
-        "rank": 12
+        "rank": 13
       },
       "kpis_by_window": {
         "6m": {
@@ -611,7 +611,7 @@
             }
           ]
         },
-        "rank": 11
+        "rank": 12
       },
       "kpis_by_window": {
         "6m": {
@@ -751,7 +751,7 @@
             }
           ]
         },
-        "rank": 13
+        "rank": 14
       },
       "kpis_by_window": {
         "6m": {
@@ -890,7 +890,7 @@
           },
           "opened": []
         },
-        "rank": 19
+        "rank": 20
       },
       "kpis_by_window": {
         "6m": {
@@ -1030,7 +1030,7 @@
             }
           ]
         },
-        "rank": 14
+        "rank": 15
       },
       "kpis_by_window": {
         "6m": {
@@ -1139,7 +1139,7 @@
           },
           "opened": []
         },
-        "rank": 7
+        "rank": 8
       },
       "kpis_by_window": {
         "6m": {
@@ -1314,6 +1314,119 @@
       }
     },
     {
+      "slug": "rotation-1d-prop",
+      "name": "Rotation 1D Proportional",
+      "kind": "rotation",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SUI",
+        "PAXG"
+      ],
+      "accent": "#a55cff",
+      "glyph": "◎",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-prop.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-prop.signal.json",
+      "tier": "free",
+      "series_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-prop.series.json",
+      "summary": {
+        "cagr_pct": 411.7,
+        "max_dd_pct": 22.6,
+        "mar": 18.2,
+        "sharpe": 2.76,
+        "hold": null,
+        "trades": 66,
+        "win_rate_pct": 63.6,
+        "last_change": {
+          "date": "2026-09-19",
+          "time_utc": "00:00",
+          "closed": null,
+          "opened": [
+            {
+              "asset": "SOL",
+              "side": "long"
+            },
+            {
+              "asset": "SUI",
+              "side": "long"
+            }
+          ]
+        },
+        "rank": 5
+      },
+      "kpis_by_window": {
+        "6m": {
+          "since": "2026-03-27",
+          "until": "2026-09-27",
+          "cagr_pct": 186.9,
+          "max_dd_pct": 10.1,
+          "mar": 18.45,
+          "sharpe": 2.64,
+          "hold": null,
+          "trades": 8,
+          "win_rate_pct": 50.0
+        },
+        "1y": {
+          "since": "2025-09-27",
+          "until": "2026-09-27",
+          "cagr_pct": 86.8,
+          "max_dd_pct": 15.5,
+          "mar": 5.62,
+          "sharpe": 1.64,
+          "hold": null,
+          "trades": 17,
+          "win_rate_pct": 41.2
+        },
+        "2y": {
+          "since": "2024-09-27",
+          "until": "2026-09-27",
+          "cagr_pct": 266.9,
+          "max_dd_pct": 20.9,
+          "mar": 12.74,
+          "sharpe": 2.55,
+          "hold": null,
+          "trades": 36,
+          "win_rate_pct": 63.9
+        },
+        "since_2023": {
+          "since": "2023-01-01",
+          "until": "2026-09-27",
+          "cagr_pct": 435.0,
+          "max_dd_pct": 22.6,
+          "mar": 19.23,
+          "sharpe": 2.79,
+          "hold": null,
+          "trades": 77,
+          "win_rate_pct": 63.6
+        },
+        "since_2022": {
+          "since": "2022-01-01",
+          "until": "2026-09-27",
+          "cagr_pct": 258.0,
+          "max_dd_pct": 38.3,
+          "mar": 6.73,
+          "sharpe": 2.3,
+          "hold": null,
+          "trades": 91,
+          "win_rate_pct": 59.3
+        },
+        "full": {
+          "since": "2021-01-01",
+          "until": "2026-09-27",
+          "cagr_pct": 242.1,
+          "max_dd_pct": 38.7,
+          "mar": 6.26,
+          "sharpe": 2.28,
+          "hold": null,
+          "trades": 101,
+          "win_rate_pct": 58.4
+        }
+      }
+    },
+    {
       "slug": "eth-1d-ls",
       "name": "ETH 1D L+S",
       "kind": "sovereign",
@@ -1352,7 +1465,7 @@
             }
           ]
         },
-        "rank": 10
+        "rank": 11
       },
       "kpis_by_window": {
         "6m": {
@@ -1476,7 +1589,7 @@
           },
           "opened": []
         },
-        "rank": 20
+        "rank": 21
       },
       "kpis_by_window": {
         "6m": {
@@ -1600,7 +1713,7 @@
           },
           "opened": []
         },
-        "rank": 21
+        "rank": 22
       },
       "kpis_by_window": {
         "6m": {
@@ -1728,7 +1841,7 @@
             }
           ]
         },
-        "rank": 6
+        "rank": 7
       },
       "kpis_by_window": {
         "6m": {
@@ -1831,7 +1944,7 @@
             }
           ]
         },
-        "rank": 5
+        "rank": 6
       },
       "kpis_by_window": {
         "6m": {
@@ -2033,7 +2146,7 @@
           },
           "opened": []
         },
-        "rank": 17
+        "rank": 18
       },
       "kpis_by_window": {
         "6m": {
@@ -2173,7 +2286,7 @@
             }
           ]
         },
-        "rank": 9
+        "rank": 10
       },
       "kpis_by_window": {
         "6m": {
@@ -2298,7 +2411,7 @@
             }
           ]
         },
-        "rank": 8
+        "rank": 9
       },
       "kpis_by_window": {
         "6m": {
