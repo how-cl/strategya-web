@@ -9,33 +9,33 @@
     "symbol": "BINANCE:SOLUSDT",
     "md5": "4778fd3286119255561f38aada88ec57"
   },
-  "decision_bar_label": "2026-10-01T00:00Z",
-  "decision_close_utc": "2026-10-01T00:00:00Z",
-  "valid_until_utc": "2026-10-02T00:00:00Z",
-  "generated_at_utc": "2026-10-01T00:04:00Z",
+  "decision_bar_label": "2026-10-02T00:00Z",
+  "decision_close_utc": "2026-10-02T00:00:00Z",
+  "valid_until_utc": "2026-10-03T00:00:00Z",
+  "generated_at_utc": "2026-10-02T00:04:00Z",
   "data_as_of": {
-    "SOL": "2026-10-01"
+    "SOL": "2026-10-02"
   },
   "cash_asset": "USDT",
-  "reference_price": 118.12,
+  "reference_price": 118.41,
   "action": "HOLD",
   "positions": [
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.42,
+      "weight": 0.418,
       "since": "2026-09-19"
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.335,
+      "weight": 0.336,
       "since": "2026-09-19"
     },
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.245,
+      "weight": 0.246,
       "since": "2026-07-05"
     }
   ],
@@ -43,12 +43,12 @@
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.423
+      "weight": 0.42
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.332
+      "weight": 0.335
     },
     {
       "asset": "ETH",
@@ -66,5 +66,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG.",
-  "checksum": "sha256:a51cd11c6fc9edeeaf152f64dcf40f152cfd041537e39a2202df381920fd7e05"
+  "checksum": "sha256:e470a6fbb4894e8bf132a1b4de1dbc79cb356923e06a6e4cb4ce29ccf3a111b5"
 }
