@@ -9,17 +9,25 @@
     "symbol": "NASDAQ:TSLA",
     "md5": "61367bb98ff726c01ac10b6c078e2955"
   },
-  "decision_bar_label": "2026-10-02T20:00Z",
-  "decision_close_utc": "2026-10-02T20:00:00Z",
-  "valid_until_utc": "2026-10-05T20:00:00Z",
-  "generated_at_utc": "2026-10-02T20:01:00Z",
+  "decision_bar_label": "2026-10-05T20:00Z",
+  "decision_close_utc": "2026-10-05T20:00:00Z",
+  "valid_until_utc": "2026-10-06T20:00:00Z",
+  "generated_at_utc": "2026-10-06T00:47:00Z",
   "data_as_of": {
-    "TSLA": "2026-10-02"
+    "TSLA": "2026-10-06"
   },
   "cash_asset": "USD",
-  "reference_price": 370.69,
-  "action": "HOLD",
-  "positions": [],
+  "reference_price": 378.9,
+  "action": "BUY",
+  "positions": [
+    {
+      "asset": "TSLA",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-10-06",
+      "entry_price": 378.9
+    }
+  ],
   "previous_positions": [],
   "last_trade": {
     "asset": "TSLA",
@@ -30,6 +38,6 @@
     "return_pct": -0.73
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:0e17630ee0bc317ef0fe50e81695b0d5663970fcd01319cfb2f1b421ef11dfc4"
+  "notes": "Pending fill: the last candle decided; the order fills at the next NYSE session open. entry_price = decision close (provisional).",
+  "checksum": "sha256:65558d5a4548931e02f7643f8d84580ca4eba54f18518b56604f9ebd7a8ee469"
 }
