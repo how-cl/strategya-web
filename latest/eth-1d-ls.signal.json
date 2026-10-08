@@ -9,25 +9,17 @@
     "symbol": "BINANCE:ETHUSDT",
     "md5": "c57cd11178bbe74bbf0420c0e564c153"
   },
-  "decision_bar_label": "2026-10-07T00:00Z",
-  "decision_close_utc": "2026-10-07T00:00:00Z",
-  "valid_until_utc": "2026-10-08T00:00:00Z",
-  "generated_at_utc": "2026-10-07T00:03:00Z",
+  "decision_bar_label": "2026-10-08T00:00Z",
+  "decision_close_utc": "2026-10-08T00:00:00Z",
+  "valid_until_utc": "2026-10-09T00:00:00Z",
+  "generated_at_utc": "2026-10-08T00:03:00Z",
   "data_as_of": {
-    "ETH": "2026-10-07"
+    "ETH": "2026-10-08"
   },
   "cash_asset": "USDT",
-  "reference_price": 2697.49,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "ETH",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-07-05",
-      "entry_price": 1780.64
-    }
-  ],
+  "reference_price": 2574.14,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "ETH",
@@ -37,13 +29,13 @@
   ],
   "last_trade": {
     "asset": "ETH",
-    "side": "short",
-    "entry_date": "2026-04-20",
-    "exit_date": "2026-04-21",
-    "days": 1,
-    "return_pct": -2.43
+    "side": "long",
+    "entry_date": "2026-07-05",
+    "exit_date": "2026-10-08",
+    "days": 95,
+    "return_pct": 44.27
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:b0b691a579e04c28d6bd0d400c768afc37526cc89e300335696d9bf7e1babb04"
+  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional).",
+  "checksum": "sha256:59a3a787b66cb63a6d591b99f45b4e58bf779aa4c525680a4639035bf69caa85"
 }
