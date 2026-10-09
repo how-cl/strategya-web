@@ -9,28 +9,28 @@
     "symbol": "BINANCE:BTCUSDT",
     "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
   },
-  "decision_bar_label": "2026-10-08T12:00Z",
-  "decision_close_utc": "2026-10-08T12:00:00Z",
-  "valid_until_utc": "2026-10-09T00:00:00Z",
-  "generated_at_utc": "2026-10-08T12:03:00Z",
+  "decision_bar_label": "2026-10-09T00:00Z",
+  "decision_close_utc": "2026-10-09T00:00:00Z",
+  "valid_until_utc": "2026-10-09T12:00:00Z",
+  "generated_at_utc": "2026-10-09T00:03:00Z",
   "data_as_of": {
-    "BTC": "2026-10-08"
+    "BTC": "2026-10-09"
   },
   "cash_asset": "USDT",
-  "reference_price": 82506.01,
-  "action": "BUY",
+  "reference_price": 81754.45,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "BTC",
       "side": "long",
       "weight": 1.0,
       "since": "2026-10-08",
-      "entry_price": 82506.01
+      "entry_price": 82506.0
     }
   ],
   "previous_positions": [
     {
-      "asset": "SUI",
+      "asset": "BTC",
       "side": "long",
       "weight": 1.0
     }
@@ -41,9 +41,9 @@
     "entry_date": "2026-09-19",
     "exit_date": "2026-10-08",
     "days": 19,
-    "return_pct": 36.83
+    "return_pct": 36.85
   },
   "status": "ok",
-  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional).",
-  "checksum": "sha256:2edf76421a92e63c20f30720220da223534a8477148a93d35f906dd56d77d41b"
+  "notes": "",
+  "checksum": "sha256:93873e2bfebd599f348694de387623e05c5e0e425db4f2786d0197ec4b3960ad"
 }

@@ -6,44 +6,32 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.4 Strategy.pro USDT 2026-08-25.pine",
     "preset": "Proportional (T=2) · gold ON · breakers OFF",
-    "symbol": "BINANCE:SOLUSDT",
+    "symbol": "BINANCE:SUIUSDT",
     "md5": "4778fd3286119255561f38aada88ec57"
   },
-  "decision_bar_label": "2026-10-08T00:00Z",
-  "decision_close_utc": "2026-10-08T00:00:00Z",
-  "valid_until_utc": "2026-10-09T00:00:00Z",
-  "generated_at_utc": "2026-10-08T00:03:00Z",
+  "decision_bar_label": "2026-10-09T00:00Z",
+  "decision_close_utc": "2026-10-09T00:00:00Z",
+  "valid_until_utc": "2026-10-10T00:00:00Z",
+  "generated_at_utc": "2026-10-09T00:04:00Z",
   "data_as_of": {
-    "SOL": "2026-10-08"
+    "SUI": "2026-10-09"
   },
   "cash_asset": "USDT",
-  "reference_price": 116.3,
-  "action": "HOLD",
+  "reference_price": 1.0408,
+  "action": "SELL",
   "positions": [
-    {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 0.424,
-      "since": "2026-09-19"
-    },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.334,
+      "weight": 1.0,
       "since": "2026-09-19"
-    },
-    {
-      "asset": "ETH",
-      "side": "long",
-      "weight": 0.242,
-      "since": "2026-07-05"
     }
   ],
   "previous_positions": [
     {
       "asset": "SOL",
       "side": "long",
-      "weight": 0.423
+      "weight": 0.424
     },
     {
       "asset": "SUI",
@@ -53,18 +41,18 @@
     {
       "asset": "ETH",
       "side": "long",
-      "weight": 0.243
+      "weight": 0.242
     }
   ],
   "last_trade": {
-    "asset": "SUI",
+    "asset": "SOL",
     "side": "long",
-    "entry_date": "2026-09-04",
-    "exit_date": "2026-09-11",
-    "days": 7,
-    "return_pct": -7.3
+    "entry_date": "2026-09-19",
+    "exit_date": "2026-10-08",
+    "days": 19,
+    "return_pct": 2.97
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG.",
-  "checksum": "sha256:e2645d121e5ff4a3f7e2fa713d1d3acb4c2d515d272a5b3351359c1a97f5daeb"
+  "checksum": "sha256:ba7b0b7f8b0a2c1d644b186f873e6b889fdd177ddc097165e596c307139bb708"
 }
