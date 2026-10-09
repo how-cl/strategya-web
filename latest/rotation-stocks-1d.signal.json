@@ -1,0 +1,53 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "rotation-stocks-1d",
+  "kind": "rotation",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "preset": "Even Split · GLD refuge ON · PLTR OFF",
+    "symbol": "NASDAQ:TSLA",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+  },
+  "decision_bar_label": "2026-10-09T20:00Z",
+  "decision_close_utc": "2026-10-09T20:00:00Z",
+  "valid_until_utc": "2026-10-12T20:00:00Z",
+  "generated_at_utc": "2026-10-09T20:19:00Z",
+  "data_as_of": {
+    "TSLA": "2026-10-09"
+  },
+  "cash_asset": "USD",
+  "reference_price": 382.72,
+  "action": "SELL",
+  "positions": [
+    {
+      "asset": "TSLA",
+      "side": "long",
+      "weight": 1.0,
+      "since": "2026-10-06"
+    }
+  ],
+  "previous_positions": [
+    {
+      "asset": "TSLA",
+      "side": "long",
+      "weight": 0.518
+    },
+    {
+      "asset": "MSTR",
+      "side": "long",
+      "weight": 0.482
+    }
+  ],
+  "last_trade": {
+    "asset": "GLD",
+    "side": "long",
+    "entry_date": "2026-08-24",
+    "exit_date": "2026-08-27",
+    "days": 3,
+    "return_pct": -2.2
+  },
+  "status": "ok",
+  "notes": "Pending fill: the last candle decided; the order fills at the next NYSE session open. entry_price = decision close (provisional). Equal-weight allocation across the active legs; weights rebalance when the set changes. Legs: MSTR, TSLA, GLD.",
+  "checksum": "sha256:e3928decbf089469c9c7fb420ea2ea2b6307300fbf4bbf9fd61b571e87796fc9"
+}
