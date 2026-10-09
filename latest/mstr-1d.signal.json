@@ -9,25 +9,17 @@
     "symbol": "NASDAQ:MSTR",
     "md5": "2ac78c144187b7cfc0a9336718e9b9e7"
   },
-  "decision_bar_label": "2026-10-08T20:00Z",
-  "decision_close_utc": "2026-10-08T20:00:00Z",
-  "valid_until_utc": "2026-10-09T20:00:00Z",
-  "generated_at_utc": "2026-10-08T20:01:00Z",
+  "decision_bar_label": "2026-10-09T20:00Z",
+  "decision_close_utc": "2026-10-09T20:00:00Z",
+  "valid_until_utc": "2026-10-12T20:00:00Z",
+  "generated_at_utc": "2026-10-09T20:01:00Z",
   "data_as_of": {
-    "MSTR": "2026-10-08"
+    "MSTR": "2026-10-09"
   },
   "cash_asset": "USD",
-  "reference_price": 151.42,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "MSTR",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-08-31",
-      "entry_price": 128.56
-    }
-  ],
+  "reference_price": 154.31,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "MSTR",
@@ -38,12 +30,12 @@
   "last_trade": {
     "asset": "MSTR",
     "side": "long",
-    "entry_date": "2026-04-20",
-    "exit_date": "2026-05-19",
-    "days": 29,
-    "return_pct": 0.84
+    "entry_date": "2026-08-31",
+    "exit_date": "2026-10-10",
+    "days": 40,
+    "return_pct": 19.78
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:b9867829371efa451185ed3ca557fc04faf0d7d53ac33fab92c2a49f65bee17f"
+  "notes": "Pending fill: the last candle decided; the order fills at the next NYSE session open. entry_price = decision close (provisional).",
+  "checksum": "sha256:f7dee4d24037432f85e0e58d4f61b7253e8450b9f779cf928eb21d91e887f635"
 }
