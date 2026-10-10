@@ -9,33 +9,33 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-09T00:00Z",
-  "decision_close_utc": "2026-10-09T00:00:00Z",
-  "valid_until_utc": "2026-10-10T00:00:00Z",
-  "generated_at_utc": "2026-10-09T00:06:00Z",
+  "decision_bar_label": "2026-10-10T00:00Z",
+  "decision_close_utc": "2026-10-10T00:00:00Z",
+  "valid_until_utc": "2026-10-11T00:00:00Z",
+  "generated_at_utc": "2026-10-10T00:06:00Z",
   "data_as_of": {
-    "SUI": "2026-10-09"
+    "SUI": "2026-10-10"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0408,
-  "action": "SELL",
+  "reference_price": 1.0698,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.521,
+      "weight": 0.523,
       "since": "2026-09-19"
     },
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.271,
+      "weight": 0.27,
       "since": "2026-10-06"
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.208,
+      "weight": 0.207,
       "since": "2026-08-31"
     }
   ],
@@ -43,27 +43,17 @@
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.637
-    },
-    {
-      "asset": "MSTR",
-      "side": "long",
-      "weight": 0.114
-    },
-    {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 0.107
+      "weight": 0.521
     },
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.073
+      "weight": 0.271
     },
     {
-      "asset": "ETH",
+      "asset": "MSTR",
       "side": "long",
-      "weight": 0.069
+      "weight": 0.208
     }
   ],
   "last_trade": {
@@ -76,5 +66,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:ebc27efef0f1b678af4d7b04bbe8b58d41d1af16cdfdec78764a775fbb591d94"
+  "checksum": "sha256:ca3e883df4e35bc616920ef32bdb8cae2e5667ceea0363aa736226bab34aa962"
 }

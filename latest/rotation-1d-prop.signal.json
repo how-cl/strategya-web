@@ -9,16 +9,16 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "4778fd3286119255561f38aada88ec57"
   },
-  "decision_bar_label": "2026-10-09T00:00Z",
-  "decision_close_utc": "2026-10-09T00:00:00Z",
-  "valid_until_utc": "2026-10-10T00:00:00Z",
-  "generated_at_utc": "2026-10-09T00:04:00Z",
+  "decision_bar_label": "2026-10-10T00:00Z",
+  "decision_close_utc": "2026-10-10T00:00:00Z",
+  "valid_until_utc": "2026-10-11T00:00:00Z",
+  "generated_at_utc": "2026-10-10T00:04:00Z",
   "data_as_of": {
-    "SUI": "2026-10-09"
+    "SUI": "2026-10-10"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0408,
-  "action": "SELL",
+  "reference_price": 1.0698,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
@@ -29,19 +29,9 @@
   ],
   "previous_positions": [
     {
-      "asset": "SOL",
-      "side": "long",
-      "weight": 0.424
-    },
-    {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.334
-    },
-    {
-      "asset": "ETH",
-      "side": "long",
-      "weight": 0.242
+      "weight": 1.0
     }
   ],
   "last_trade": {
@@ -54,5 +44,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG.",
-  "checksum": "sha256:ba7b0b7f8b0a2c1d644b186f873e6b889fdd177ddc097165e596c307139bb708"
+  "checksum": "sha256:bbdf71f4c0fdc72f566235526dc01fa573f71f2a7d9ba08f18ede48e6dd7e927"
 }
