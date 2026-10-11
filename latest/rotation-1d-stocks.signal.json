@@ -9,33 +9,33 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-10T00:00Z",
-  "decision_close_utc": "2026-10-10T00:00:00Z",
-  "valid_until_utc": "2026-10-11T00:00:00Z",
-  "generated_at_utc": "2026-10-10T00:05:00Z",
+  "decision_bar_label": "2026-10-11T00:00Z",
+  "decision_close_utc": "2026-10-11T00:00:00Z",
+  "valid_until_utc": "2026-10-12T00:00:00Z",
+  "generated_at_utc": "2026-10-11T00:05:00Z",
   "data_as_of": {
-    "SUI": "2026-10-10"
+    "SUI": "2026-10-11"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0698,
+  "reference_price": 1.1132,
   "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.523,
+      "weight": 0.533,
       "since": "2026-09-19"
     },
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.27,
+      "weight": 0.264,
       "since": "2026-10-06"
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.207,
+      "weight": 0.203,
       "since": "2026-08-31"
     }
   ],
@@ -43,17 +43,17 @@
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.521
+      "weight": 0.523
     },
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.271
+      "weight": 0.27
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.208
+      "weight": 0.207
     }
   ],
   "last_trade": {
@@ -66,5 +66,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:171be5bae0289ac1ae5af18ea89073af9ca95a2608e721836e1768679278f803"
+  "checksum": "sha256:afbbc2068ea9e98234348365581e93233316767ff4334c68974e1aacbce7cdae"
 }
