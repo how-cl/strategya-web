@@ -6,54 +6,48 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
     "preset": "Proportional (T=2) · gold ON · crypto shorts ON · MSTR F3 + TSLA A·W22 · guard OFF · NYSE holidays ON",
-    "symbol": "BINANCE:SUIUSDT",
+    "symbol": "BINANCE:TSLA",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-11T00:00Z",
-  "decision_close_utc": "2026-10-11T00:00:00Z",
-  "valid_until_utc": "2026-10-12T00:00:00Z",
-  "generated_at_utc": "2026-10-11T00:06:00Z",
+  "decision_bar_label": "2026-10-12T00:00Z",
+  "decision_close_utc": "2026-10-12T00:00:00Z",
+  "valid_until_utc": "2026-10-13T00:00:00Z",
+  "generated_at_utc": "2026-10-12T00:05:00Z",
   "data_as_of": {
-    "SUI": "2026-10-11"
+    "TSLA": "2026-10-12"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.1132,
-  "action": "HOLD",
+  "reference_price": 382.72,
+  "action": "SELL",
   "positions": [
-    {
-      "asset": "SUI",
-      "side": "long",
-      "weight": 0.533,
-      "since": "2026-09-19"
-    },
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.264,
+      "weight": 0.67,
       "since": "2026-10-06"
     },
     {
-      "asset": "MSTR",
+      "asset": "SUI",
       "side": "long",
-      "weight": 0.203,
-      "since": "2026-08-31"
+      "weight": 0.33,
+      "since": "2026-09-19"
     }
   ],
   "previous_positions": [
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.523
+      "weight": 0.537
     },
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.27
+      "weight": 0.262
     },
     {
       "asset": "MSTR",
       "side": "long",
-      "weight": 0.207
+      "weight": 0.201
     }
   ],
   "last_trade": {
@@ -65,6 +59,6 @@
     "return_pct": 2.97
   },
   "status": "ok",
-  "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:e3f7c26b0f79e0a20a369f7259704a0538ecda2914f75a4df0a1da4ca0d1880f"
+  "notes": "Pending fill: the last candle decided; the order fills at the next NYSE session open. entry_price = decision close (provisional). Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
+  "checksum": "sha256:313eecea6a0461e4995b5bbf79ebede889debf9608a537b0971d5f88566cb771"
 }
