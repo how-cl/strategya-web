@@ -9,15 +9,15 @@
     "symbol": "NASDAQ:TSLA",
     "md5": "f755b9c103ddc8c73e89df367155154f"
   },
-  "decision_bar_label": "2026-10-09T20:00Z",
-  "decision_close_utc": "2026-10-09T20:00:00Z",
-  "valid_until_utc": "2026-10-12T20:00:00Z",
-  "generated_at_utc": "2026-10-09T20:19:00Z",
+  "decision_bar_label": "2026-10-12T20:00Z",
+  "decision_close_utc": "2026-10-12T20:00:00Z",
+  "valid_until_utc": "2026-10-13T20:00:00Z",
+  "generated_at_utc": "2026-10-12T20:22:00Z",
   "data_as_of": {
-    "TSLA": "2026-10-09"
+    "TSLA": "2026-10-12"
   },
   "cash_asset": "USD",
-  "reference_price": 382.72,
+  "reference_price": 378.08,
   "action": "SELL",
   "positions": [
     {
@@ -40,14 +40,14 @@
     }
   ],
   "last_trade": {
-    "asset": "GLD",
+    "asset": "MSTR",
     "side": "long",
-    "entry_date": "2026-08-24",
-    "exit_date": "2026-08-27",
-    "days": 3,
-    "return_pct": -2.2
+    "entry_date": "2026-08-31",
+    "exit_date": "2026-10-12",
+    "days": 42,
+    "return_pct": 19.08
   },
   "status": "ok",
-  "notes": "Pending fill: the last candle decided; the order fills at the next NYSE session open. entry_price = decision close (provisional). Equal-weight allocation across the active legs; weights rebalance when the set changes. Legs: MSTR, TSLA, GLD.",
-  "checksum": "sha256:e3928decbf089469c9c7fb420ea2ea2b6307300fbf4bbf9fd61b571e87796fc9"
+  "notes": "Equal-weight allocation across the active legs; weights rebalance when the set changes. Legs: MSTR, TSLA, GLD.",
+  "checksum": "sha256:c3df4883eae98e896b6d906de52c09dd19106379a9620dbf11cfb9279609ecbf"
 }

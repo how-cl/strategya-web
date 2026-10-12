@@ -9,33 +9,27 @@
     "symbol": "NASDAQ:MSTR",
     "md5": "2ac78c144187b7cfc0a9336718e9b9e7"
   },
-  "decision_bar_label": "2026-10-09T20:00Z",
-  "decision_close_utc": "2026-10-09T20:00:00Z",
-  "valid_until_utc": "2026-10-12T20:00:00Z",
-  "generated_at_utc": "2026-10-09T20:01:00Z",
+  "decision_bar_label": "2026-10-12T20:00Z",
+  "decision_close_utc": "2026-10-12T20:00:00Z",
+  "valid_until_utc": "2026-10-13T20:00:00Z",
+  "generated_at_utc": "2026-10-12T20:21:00Z",
   "data_as_of": {
-    "MSTR": "2026-10-09"
+    "MSTR": "2026-10-12"
   },
   "cash_asset": "USD",
-  "reference_price": 154.31,
-  "action": "SELL",
+  "reference_price": 152.7,
+  "action": "HOLD",
   "positions": [],
-  "previous_positions": [
-    {
-      "asset": "MSTR",
-      "side": "long",
-      "weight": 1.0
-    }
-  ],
+  "previous_positions": [],
   "last_trade": {
     "asset": "MSTR",
     "side": "long",
     "entry_date": "2026-08-31",
-    "exit_date": "2026-10-10",
-    "days": 40,
-    "return_pct": 19.78
+    "exit_date": "2026-10-12",
+    "days": 42,
+    "return_pct": 19.1
   },
   "status": "ok",
-  "notes": "Pending fill: the last candle decided; the order fills at the next NYSE session open. entry_price = decision close (provisional).",
-  "checksum": "sha256:f7dee4d24037432f85e0e58d4f61b7253e8450b9f779cf928eb21d91e887f635"
+  "notes": "",
+  "checksum": "sha256:5f9448e7e2076529d1612896c3f986e69a8e2186301557dc4fdf8e616fbc31f4"
 }
