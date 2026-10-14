@@ -9,45 +9,40 @@
     "symbol": "BINANCE:TSLA",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-13T00:00Z",
-  "decision_close_utc": "2026-10-13T00:00:00Z",
-  "valid_until_utc": "2026-10-14T00:00:00Z",
-  "generated_at_utc": "2026-10-13T00:04:00Z",
+  "decision_bar_label": "2026-10-14T00:00Z",
+  "decision_close_utc": "2026-10-14T00:00:00Z",
+  "valid_until_utc": "2026-10-15T00:00:00Z",
+  "generated_at_utc": "2026-10-14T00:05:00Z",
   "data_as_of": {
-    "TSLA": "2026-10-13"
+    "TSLA": "2026-10-14"
   },
   "cash_asset": "USDT",
-  "reference_price": 378.08,
-  "action": "SELL",
+  "reference_price": 375.24,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.688,
+      "weight": 0.682,
       "since": "2026-10-06"
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.312,
+      "weight": 0.318,
       "since": "2026-09-19"
     }
   ],
   "previous_positions": [
     {
-      "asset": "SUI",
-      "side": "long",
-      "weight": 0.537
-    },
-    {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.262
+      "weight": 0.688
     },
     {
-      "asset": "MSTR",
+      "asset": "SUI",
       "side": "long",
-      "weight": 0.201
+      "weight": 0.312
     }
   ],
   "last_trade": {
@@ -60,5 +55,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:353c04b2718ba6aeda106c17e86cfe9da8064275239f5223173ba4546a4cd3a7"
+  "checksum": "sha256:2b66922330ffa0c45b6515bab2adfb411150da91f62c7b1be6bb71cce1119e23"
 }
