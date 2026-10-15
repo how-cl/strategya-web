@@ -6,30 +6,24 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
     "preset": "Proportional (T=2) · gold ON · short sleeve OFF · MSTR F3 + TSLA A·W22 · NYSE holidays ON",
-    "symbol": "BINANCE:TSLA",
+    "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-14T00:00Z",
-  "decision_close_utc": "2026-10-14T00:00:00Z",
-  "valid_until_utc": "2026-10-15T00:00:00Z",
-  "generated_at_utc": "2026-10-14T00:04:00Z",
+  "decision_bar_label": "2026-10-15T00:00Z",
+  "decision_close_utc": "2026-10-15T00:00:00Z",
+  "valid_until_utc": "2026-10-16T00:00:00Z",
+  "generated_at_utc": "2026-10-15T00:04:00Z",
   "data_as_of": {
-    "TSLA": "2026-10-14"
+    "SUI": "2026-10-15"
   },
   "cash_asset": "USDT",
-  "reference_price": 375.24,
-  "action": "HOLD",
+  "reference_price": 1.0227,
+  "action": "SELL",
   "positions": [
-    {
-      "asset": "TSLA",
-      "side": "long",
-      "weight": 0.682,
-      "since": "2026-10-06"
-    },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.318,
+      "weight": 1.0,
       "since": "2026-09-19"
     }
   ],
@@ -37,12 +31,12 @@
     {
       "asset": "TSLA",
       "side": "long",
-      "weight": 0.688
+      "weight": 0.683
     },
     {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.312
+      "weight": 0.317
     }
   ],
   "last_trade": {
@@ -54,6 +48,6 @@
     "return_pct": 2.97
   },
   "status": "ok",
-  "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:ca5c408f535411ea8a11d63d0ce89caf9d0e20f215609980ed170027ad4dfda0"
+  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional). Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
+  "checksum": "sha256:1793a06f70a1920534cfbb899920dc9ceae9da12279f422a26a3cd8cebe9e171"
 }
