@@ -9,24 +9,18 @@
     "symbol": "NASDAQ:MSTR",
     "md5": "f755b9c103ddc8c73e89df367155154f"
   },
-  "decision_bar_label": "2026-10-15T20:00Z",
-  "decision_close_utc": "2026-10-15T20:00:00Z",
-  "valid_until_utc": "2026-10-16T20:00:00Z",
-  "generated_at_utc": "2026-10-15T20:01:00Z",
+  "decision_bar_label": "2026-10-16T20:00Z",
+  "decision_close_utc": "2026-10-16T20:00:00Z",
+  "valid_until_utc": "2026-10-19T20:00:00Z",
+  "generated_at_utc": "2026-10-16T20:02:00Z",
   "data_as_of": {
-    "MSTR": "2026-10-15"
+    "MSTR": "2026-10-16"
   },
   "cash_asset": "USD",
   "reference_price": null,
-  "action": "SELL",
+  "action": "HOLD",
   "positions": [],
-  "previous_positions": [
-    {
-      "asset": "TSLA",
-      "side": "long",
-      "weight": 1.0
-    }
-  ],
+  "previous_positions": [],
   "last_trade": {
     "asset": "TSLA",
     "side": "long",
@@ -37,5 +31,5 @@
   },
   "status": "ok",
   "notes": "Equal-weight allocation across the active legs; weights rebalance when the set changes. Legs: MSTR, TSLA, GLD.",
-  "checksum": "sha256:1df4fc7e00796238e5d6d99c99acfaf1b01dd669597f9e05c99602fdc0c72759"
+  "checksum": "sha256:93dc762285d86946bf1b46c215f2defe91d9cf2e6b86040ccb63ccadc436c389"
 }
