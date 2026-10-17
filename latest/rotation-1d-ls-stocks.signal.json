@@ -9,16 +9,16 @@
     "symbol": "BINANCE:SUIUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-16T00:00Z",
-  "decision_close_utc": "2026-10-16T00:00:00Z",
-  "valid_until_utc": "2026-10-17T00:00:00Z",
-  "generated_at_utc": "2026-10-16T00:05:00Z",
+  "decision_bar_label": "2026-10-17T00:00Z",
+  "decision_close_utc": "2026-10-17T00:00:00Z",
+  "valid_until_utc": "2026-10-18T00:00:00Z",
+  "generated_at_utc": "2026-10-17T00:05:00Z",
   "data_as_of": {
-    "SUI": "2026-10-16"
+    "SUI": "2026-10-17"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0369,
-  "action": "SELL",
+  "reference_price": 1.0211,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "SUI",
@@ -29,14 +29,9 @@
   ],
   "previous_positions": [
     {
-      "asset": "TSLA",
-      "side": "long",
-      "weight": 0.683
-    },
-    {
       "asset": "SUI",
       "side": "long",
-      "weight": 0.317
+      "weight": 1.0
     }
   ],
   "last_trade": {
@@ -49,5 +44,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:54c328075cf9bf73f9aa92afcad6571119308e10c2b9294925d014b50f9510f5"
+  "checksum": "sha256:f2b894e86dcde647d2ff0a2e0518f5e031f4c7e81a3e0b37b848f233b6957f01"
 }
