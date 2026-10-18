@@ -12,7 +12,7 @@
   "decision_bar_label": "2026-10-18T00:00Z",
   "decision_close_utc": "2026-10-18T00:00:00Z",
   "valid_until_utc": "2026-10-19T00:00:00Z",
-  "generated_at_utc": "2026-10-18T00:05:00Z",
+  "generated_at_utc": "2026-10-18T00:38:00Z",
   "data_as_of": {
     "BTC": "2026-10-18"
   },
@@ -37,5 +37,5 @@
   },
   "status": "ok",
   "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional). Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:b9d8c0651fbb75a37eaca087b358cb125495dcfe8bfb0227ad9663563108224a"
+  "checksum": "sha256:e1a88bf9c5a957a0fa8c741d43b720e88e6622960dc11315106c3c62b13cf1ee"
 }
