@@ -6,28 +6,20 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
     "preset": "Winner (v1.1) · Aggressive · manga corta ON",
-    "symbol": "BINANCE:SUIUSDT",
+    "symbol": "BINANCE:BTCUSDT",
     "md5": "2a2ef862631f531cba99f3a86bf626d1"
   },
-  "decision_bar_label": "2026-10-17T00:00Z",
-  "decision_close_utc": "2026-10-17T00:00:00Z",
-  "valid_until_utc": "2026-10-18T00:00:00Z",
-  "generated_at_utc": "2026-10-17T00:03:00Z",
+  "decision_bar_label": "2026-10-18T00:00Z",
+  "decision_close_utc": "2026-10-18T00:00:00Z",
+  "valid_until_utc": "2026-10-19T00:00:00Z",
+  "generated_at_utc": "2026-10-18T00:03:00Z",
   "data_as_of": {
-    "SUI": "2026-10-17"
+    "BTC": "2026-10-18"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0211,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "SUI",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-09-20",
-      "entry_price": 0.8574
-    }
-  ],
+  "reference_price": null,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "SUI",
@@ -36,14 +28,14 @@
     }
   ],
   "last_trade": {
-    "asset": "SOL",
+    "asset": "SUI",
     "side": "long",
-    "entry_date": "2026-09-19",
-    "exit_date": "2026-09-20",
-    "days": 1,
-    "return_pct": -1.67
+    "entry_date": "2026-09-20",
+    "exit_date": "2026-10-18",
+    "days": 28,
+    "return_pct": 13.65
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:6533a6575c4e3e82d5c8f0ca8c4cb4190129390ab9acc8a6ed6a971a5f58e13c"
+  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional).",
+  "checksum": "sha256:b9af9587a2b86be5b800dd19121c64b6c495d5d6597763b1e531d0cffc62b9c5"
 }

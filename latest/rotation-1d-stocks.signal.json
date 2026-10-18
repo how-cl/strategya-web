@@ -6,27 +6,20 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
     "preset": "Proportional (T=2) · gold ON · short sleeve OFF · MSTR F3 + TSLA A·W22 · NYSE holidays ON",
-    "symbol": "BINANCE:SUIUSDT",
+    "symbol": "BINANCE:BTCUSDT",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-17T00:00Z",
-  "decision_close_utc": "2026-10-17T00:00:00Z",
-  "valid_until_utc": "2026-10-18T00:00:00Z",
-  "generated_at_utc": "2026-10-17T00:04:00Z",
+  "decision_bar_label": "2026-10-18T00:00Z",
+  "decision_close_utc": "2026-10-18T00:00:00Z",
+  "valid_until_utc": "2026-10-19T00:00:00Z",
+  "generated_at_utc": "2026-10-18T00:04:00Z",
   "data_as_of": {
-    "SUI": "2026-10-17"
+    "BTC": "2026-10-18"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0211,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "SUI",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-09-19"
-    }
-  ],
+  "reference_price": null,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "SUI",
@@ -43,6 +36,6 @@
     "return_pct": -5.79
   },
   "status": "ok",
-  "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:71cf4e2bd06eaa0fdf080e555e8be9d00eacef8c272cb1a7e09b9b0dfe378a4f"
+  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional). Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
+  "checksum": "sha256:7f186fa32d88ccdbb0952c8c73389780eea66610e5ea4192914397f4161b80f6"
 }

@@ -6,27 +6,20 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.4 Strategy.pro USDT 2026-08-25.pine",
     "preset": "Proportional (T=2) · gold ON · breakers OFF",
-    "symbol": "BINANCE:SUIUSDT",
+    "symbol": "BINANCE:BTCUSDT",
     "md5": "4778fd3286119255561f38aada88ec57"
   },
-  "decision_bar_label": "2026-10-17T00:00Z",
-  "decision_close_utc": "2026-10-17T00:00:00Z",
-  "valid_until_utc": "2026-10-18T00:00:00Z",
-  "generated_at_utc": "2026-10-17T00:04:00Z",
+  "decision_bar_label": "2026-10-18T00:00Z",
+  "decision_close_utc": "2026-10-18T00:00:00Z",
+  "valid_until_utc": "2026-10-19T00:00:00Z",
+  "generated_at_utc": "2026-10-18T00:04:00Z",
   "data_as_of": {
-    "SUI": "2026-10-17"
+    "BTC": "2026-10-18"
   },
   "cash_asset": "USDT",
-  "reference_price": 1.0211,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "SUI",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-09-19"
-    }
-  ],
+  "reference_price": null,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "SUI",
@@ -43,6 +36,6 @@
     "return_pct": 2.97
   },
   "status": "ok",
-  "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG.",
-  "checksum": "sha256:ae6fe823bd6d87762fafe6c92f743719c2121ba2f2e4c421bf6d4ad79c0e0056"
+  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional). Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG.",
+  "checksum": "sha256:3a0837a7e042a06d9a76efd716ef589e539a9575ec370251a3891f42df4149fe"
 }
