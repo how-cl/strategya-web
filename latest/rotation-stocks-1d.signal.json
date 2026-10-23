@@ -9,16 +9,16 @@
     "symbol": "NASDAQ:TSLA",
     "md5": "f755b9c103ddc8c73e89df367155154f"
   },
-  "decision_bar_label": "2026-10-22T20:00Z",
-  "decision_close_utc": "2026-10-22T20:00:00Z",
-  "valid_until_utc": "2026-10-23T20:00:00Z",
-  "generated_at_utc": "2026-10-22T20:02:00Z",
+  "decision_bar_label": "2026-10-23T20:00Z",
+  "decision_close_utc": "2026-10-23T20:00:00Z",
+  "valid_until_utc": "2026-10-26T20:00:00Z",
+  "generated_at_utc": "2026-10-23T20:02:00Z",
   "data_as_of": {
-    "TSLA": "2026-10-22"
+    "TSLA": "2026-10-23"
   },
   "cash_asset": "USD",
-  "reference_price": 374.67,
-  "action": "BUY",
+  "reference_price": 372.12,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "TSLA",
@@ -27,7 +27,13 @@
       "since": "2026-10-22"
     }
   ],
-  "previous_positions": [],
+  "previous_positions": [
+    {
+      "asset": "TSLA",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
   "last_trade": {
     "asset": "TSLA",
     "side": "long",
@@ -38,5 +44,5 @@
   },
   "status": "ok",
   "notes": "Equal-weight allocation across the active legs; weights rebalance when the set changes. Legs: MSTR, TSLA, GLD.",
-  "checksum": "sha256:d2d0b3996366c69df170ca5cbdd23721c45dc9334cda9d6136029debbe1fd9d8"
+  "checksum": "sha256:04ffe4064a78b3a4485fb28986ec7502ffc6d1200f3771302f9578e95efa6786"
 }
