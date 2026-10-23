@@ -9,15 +9,15 @@
     "symbol": "BINANCE:TSLA",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-22T00:00Z",
-  "decision_close_utc": "2026-10-22T00:00:00Z",
-  "valid_until_utc": "2026-10-23T00:00:00Z",
-  "generated_at_utc": "2026-10-22T00:04:00Z",
+  "decision_bar_label": "2026-10-23T00:00Z",
+  "decision_close_utc": "2026-10-23T00:00:00Z",
+  "valid_until_utc": "2026-10-24T00:00:00Z",
+  "generated_at_utc": "2026-10-23T00:04:00Z",
   "data_as_of": {
-    "TSLA": "2026-10-22"
+    "TSLA": "2026-10-23"
   },
   "cash_asset": "USDT",
-  "reference_price": 386.48,
+  "reference_price": 374.67,
   "action": "BUY",
   "positions": [
     {
@@ -37,6 +37,6 @@
     "return_pct": -5.79
   },
   "status": "ok",
-  "notes": "Pending fill: the last candle decided; the order fills at the next NYSE session open. entry_price = decision close (provisional). Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:38e5b30c9f5e110557908e0b3fb0e698357ae2b70fc4f9a927a0f49271a37a97"
+  "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
+  "checksum": "sha256:82e2d17726a514b54017101c6653829901ba4dc6d395c7277286645b6254c2aa"
 }
