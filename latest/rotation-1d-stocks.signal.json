@@ -9,16 +9,16 @@
     "symbol": "BINANCE:TSLA",
     "md5": "84353e3d225fb9936ad25bb1cfef2f71"
   },
-  "decision_bar_label": "2026-10-23T00:00Z",
-  "decision_close_utc": "2026-10-23T00:00:00Z",
-  "valid_until_utc": "2026-10-24T00:00:00Z",
-  "generated_at_utc": "2026-10-23T00:04:00Z",
+  "decision_bar_label": "2026-10-24T00:00Z",
+  "decision_close_utc": "2026-10-24T00:00:00Z",
+  "valid_until_utc": "2026-10-25T00:00:00Z",
+  "generated_at_utc": "2026-10-24T00:04:00Z",
   "data_as_of": {
-    "TSLA": "2026-10-23"
+    "TSLA": "2026-10-24"
   },
   "cash_asset": "USDT",
-  "reference_price": 374.67,
-  "action": "BUY",
+  "reference_price": 372.12,
+  "action": "HOLD",
   "positions": [
     {
       "asset": "TSLA",
@@ -27,7 +27,13 @@
       "since": "2026-10-22"
     }
   ],
-  "previous_positions": [],
+  "previous_positions": [
+    {
+      "asset": "TSLA",
+      "side": "long",
+      "weight": 1.0
+    }
+  ],
   "last_trade": {
     "asset": "TSLA",
     "side": "long",
@@ -38,5 +44,5 @@
   },
   "status": "ok",
   "notes": "Proportional allocation across the active legs (softmax T=2); weights rebalance when the set changes. Legs: BTC, ETH, SOL, SUI, PAXG, MSTR, TSLA.",
-  "checksum": "sha256:82e2d17726a514b54017101c6653829901ba4dc6d395c7277286645b6254c2aa"
+  "checksum": "sha256:5ad2cb9f4b618df119033422491dda1702f4472b67704e30c4bfc118efcbb21c"
 }

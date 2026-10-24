@@ -9,25 +9,17 @@
     "symbol": "BINANCE:BTCUSDT",
     "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
   },
-  "decision_bar_label": "2026-10-23T12:00Z",
-  "decision_close_utc": "2026-10-23T12:00:00Z",
-  "valid_until_utc": "2026-10-24T00:00:00Z",
-  "generated_at_utc": "2026-10-23T12:03:00Z",
+  "decision_bar_label": "2026-10-24T00:00Z",
+  "decision_close_utc": "2026-10-24T00:00:00Z",
+  "valid_until_utc": "2026-10-24T12:00:00Z",
+  "generated_at_utc": "2026-10-24T00:03:00Z",
   "data_as_of": {
-    "BTC": "2026-10-23"
+    "BTC": "2026-10-24"
   },
   "cash_asset": "USDT",
-  "reference_price": 81726.1,
-  "action": "HOLD",
-  "positions": [
-    {
-      "asset": "BTC",
-      "side": "long",
-      "weight": 1.0,
-      "since": "2026-10-08",
-      "entry_price": 82506.0
-    }
-  ],
+  "reference_price": null,
+  "action": "SELL",
+  "positions": [],
   "previous_positions": [
     {
       "asset": "BTC",
@@ -36,14 +28,14 @@
     }
   ],
   "last_trade": {
-    "asset": "SUI",
+    "asset": "BTC",
     "side": "long",
-    "entry_date": "2026-09-19",
-    "exit_date": "2026-10-08",
-    "days": 19,
-    "return_pct": 36.85
+    "entry_date": "2026-10-08",
+    "exit_date": "2026-10-24",
+    "days": 15,
+    "return_pct": -1.79
   },
   "status": "ok",
-  "notes": "",
-  "checksum": "sha256:5483e39e36117b732a5daf211aaca39cf5074654e82395f08c04a08c6a79ba25"
+  "notes": "Pending fill: the last candle decided; the order executes at the next candle open, which in a 24/7 market is right after the decision close. entry_price = decision close (provisional).",
+  "checksum": "sha256:9b2059e9d60314084456a486e8774bf324951bad495a50ceab0759eaacd3c9d5"
 }
