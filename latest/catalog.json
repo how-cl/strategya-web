@@ -1,6 +1,6 @@
 {
   "schema": "strategya.catalog/0.4",
-  "generated_at_utc": "2026-10-29T00:04:00Z",
+  "generated_at_utc": "2026-10-29T12:03:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -329,16 +329,16 @@
       "series_url": "https://how-cl.github.io/strategya-web/latest/btc-12h.series.json",
       "summary": {
         "multiplier": 6.439804181244359,
-        "cagr_pct": 70.6,
+        "cagr_pct": 70.5,
         "max_dd_pct": 16.7,
-        "mar": 4.24,
+        "mar": 4.23,
         "sharpe": 1.99,
         "hold": {
-          "multiplier": 2.849784225893313,
-          "cagr_pct": 35.0,
+          "multiplier": 2.8086725846017377,
+          "cagr_pct": 34.4,
           "max_dd_pct": 53.0,
-          "mar": 0.66,
-          "sharpe": 0.88
+          "mar": 0.65,
+          "sharpe": 0.87
         },
         "trades": 13,
         "win_rate_pct": 76.9,
@@ -357,88 +357,88 @@
       },
       "kpis_by_window": {
         "6m": {
-          "since": "2026-04-28",
-          "until": "2026-10-28",
-          "multiplier": 1.218744396564731,
-          "cagr_pct": 48.4,
+          "since": "2026-04-29",
+          "until": "2026-10-29",
+          "multiplier": 1.1973661063210999,
+          "cagr_pct": 43.3,
           "max_dd_pct": 10.6,
-          "mar": 4.57,
-          "sharpe": 1.52,
+          "mar": 4.09,
+          "sharpe": 1.57,
           "hold": {
-            "multiplier": 1.0670938881528027,
-            "cagr_pct": 13.8,
+            "multiplier": 1.033251565955059,
+            "cagr_pct": 6.7,
             "max_dd_pct": 29.0,
-            "mar": 0.48,
-            "sharpe": 0.53
+            "mar": 0.23,
+            "sharpe": 0.49
           },
           "trades": 2,
           "win_rate_pct": 50.0
         },
         "1y": {
-          "since": "2025-10-28",
-          "until": "2026-10-28",
+          "since": "2025-10-29",
+          "until": "2026-10-29",
           "multiplier": 1.2891061194622777,
           "cagr_pct": 28.9,
           "max_dd_pct": 10.6,
           "mar": 2.73,
           "sharpe": 1.26,
           "hold": {
-            "multiplier": 0.7113074035310075,
-            "cagr_pct": -28.9,
-            "max_dd_pct": 48.7,
-            "mar": -0.59,
-            "sharpe": -0.53
+            "multiplier": 0.7086391550569616,
+            "cagr_pct": -29.2,
+            "max_dd_pct": 48.2,
+            "mar": -0.61,
+            "sharpe": -0.5
           },
           "trades": 3,
           "win_rate_pct": 66.7
         },
         "2y": {
-          "since": "2024-10-28",
-          "until": "2026-10-28",
-          "multiplier": 2.1458793752944745,
-          "cagr_pct": 46.5,
+          "since": "2024-10-29",
+          "until": "2026-10-29",
+          "multiplier": 2.06484457920106,
+          "cagr_pct": 43.7,
           "max_dd_pct": 16.7,
-          "mar": 2.79,
-          "sharpe": 1.51,
+          "mar": 2.63,
+          "sharpe": 1.44,
           "hold": {
-            "multiplier": 1.1831131321070638,
-            "cagr_pct": 8.8,
+            "multiplier": 1.1220121029485386,
+            "cagr_pct": 5.9,
             "max_dd_pct": 53.0,
-            "mar": 0.17,
-            "sharpe": 0.39
+            "mar": 0.11,
+            "sharpe": 0.33
           },
           "trades": 7,
           "win_rate_pct": 57.1
         },
         "since_2023": {
           "since": "2023-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 10.289902005786164,
-          "cagr_pct": 84.0,
+          "cagr_pct": 83.9,
           "max_dd_pct": 16.7,
-          "mar": 5.05,
+          "mar": 5.04,
           "sharpe": 2.16,
           "hold": {
-            "multiplier": 4.913038016121609,
-            "cagr_pct": 51.7,
+            "multiplier": 4.842161402118544,
+            "cagr_pct": 51.0,
             "max_dd_pct": 53.0,
-            "mar": 0.98,
-            "sharpe": 1.13
+            "mar": 0.96,
+            "sharpe": 1.12
           },
           "trades": 15,
           "win_rate_pct": 80.0
         },
         "since_2022": {
           "since": "2022-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 8.01454673075756,
-          "cagr_pct": 54.0,
+          "cagr_pct": 53.9,
           "max_dd_pct": 25.5,
           "mar": 2.12,
           "sharpe": 1.67,
           "hold": {
-            "multiplier": 1.739637848391118,
-            "cagr_pct": 12.2,
+            "multiplier": 1.7145414335290823,
+            "cagr_pct": 11.8,
             "max_dd_pct": 67.1,
             "mar": 0.18,
             "sharpe": 0.47
@@ -448,15 +448,15 @@
         },
         "full": {
           "since": "2018-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 48.86942,
           "cagr_pct": 55.4,
           "max_dd_pct": 31.0,
           "mar": 1.79,
           "sharpe": 1.65,
           "hold": {
-            "multiplier": 6.152802906987299,
-            "cagr_pct": 22.9,
+            "multiplier": 6.0640411601324,
+            "cagr_pct": 22.7,
             "max_dd_pct": 81.2,
             "mar": 0.28,
             "sharpe": 0.64
@@ -483,16 +483,16 @@
       "series_url": "https://how-cl.github.io/strategya-web/latest/btc-12h-ls.series.json",
       "summary": {
         "multiplier": 8.727125310882535,
-        "cagr_pct": 86.1,
+        "cagr_pct": 86.0,
         "max_dd_pct": 16.7,
-        "mar": 5.17,
+        "mar": 5.16,
         "sharpe": 2.15,
         "hold": {
-          "multiplier": 2.849784225893313,
-          "cagr_pct": 35.0,
+          "multiplier": 2.8086725846017377,
+          "cagr_pct": 34.4,
           "max_dd_pct": 53.0,
-          "mar": 0.66,
-          "sharpe": 0.88
+          "mar": 0.65,
+          "sharpe": 0.87
         },
         "trades": 19,
         "win_rate_pct": 68.4,
@@ -511,88 +511,88 @@
       },
       "kpis_by_window": {
         "6m": {
-          "since": "2026-04-28",
-          "until": "2026-10-28",
-          "multiplier": 1.3745520177869868,
-          "cagr_pct": 88.7,
+          "since": "2026-04-29",
+          "until": "2026-10-29",
+          "multiplier": 1.350440497832471,
+          "cagr_pct": 82.1,
           "max_dd_pct": 10.6,
-          "mar": 8.39,
-          "sharpe": 2.18,
+          "mar": 7.77,
+          "sharpe": 2.23,
           "hold": {
-            "multiplier": 1.0670938881528027,
-            "cagr_pct": 13.8,
+            "multiplier": 1.033251565955059,
+            "cagr_pct": 6.7,
             "max_dd_pct": 29.0,
-            "mar": 0.48,
-            "sharpe": 0.53
+            "mar": 0.23,
+            "sharpe": 0.49
           },
           "trades": 5,
           "win_rate_pct": 40.0
         },
         "1y": {
-          "since": "2025-10-28",
-          "until": "2026-10-28",
+          "since": "2025-10-29",
+          "until": "2026-10-29",
           "multiplier": 1.6951719170313055,
           "cagr_pct": 69.6,
           "max_dd_pct": 10.6,
           "mar": 6.58,
           "sharpe": 2.09,
           "hold": {
-            "multiplier": 0.7113074035310075,
-            "cagr_pct": -28.9,
-            "max_dd_pct": 48.7,
-            "mar": -0.59,
-            "sharpe": -0.53
+            "multiplier": 0.7086391550569616,
+            "cagr_pct": -29.2,
+            "max_dd_pct": 48.2,
+            "mar": -0.61,
+            "sharpe": -0.5
           },
           "trades": 8,
           "win_rate_pct": 50.0
         },
         "2y": {
-          "since": "2024-10-28",
-          "until": "2026-10-28",
-          "multiplier": 2.8218265337516004,
-          "cagr_pct": 68.0,
+          "since": "2024-10-29",
+          "until": "2026-10-29",
+          "multiplier": 2.71526648450587,
+          "cagr_pct": 64.8,
           "max_dd_pct": 16.7,
-          "mar": 4.09,
-          "sharpe": 1.88,
+          "mar": 3.89,
+          "sharpe": 1.82,
           "hold": {
-            "multiplier": 1.1831131321070638,
-            "cagr_pct": 8.8,
+            "multiplier": 1.1220121029485386,
+            "cagr_pct": 5.9,
             "max_dd_pct": 53.0,
-            "mar": 0.17,
-            "sharpe": 0.39
+            "mar": 0.11,
+            "sharpe": 0.33
           },
           "trades": 12,
           "win_rate_pct": 50.0
         },
         "since_2023": {
           "since": "2023-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 13.944735922244433,
-          "cagr_pct": 99.3,
+          "cagr_pct": 99.2,
           "max_dd_pct": 16.7,
-          "mar": 5.96,
+          "mar": 5.95,
           "sharpe": 2.31,
           "hold": {
-            "multiplier": 4.913038016121609,
-            "cagr_pct": 51.7,
+            "multiplier": 4.842161402118544,
+            "cagr_pct": 51.0,
             "max_dd_pct": 53.0,
-            "mar": 0.98,
-            "sharpe": 1.13
+            "mar": 0.96,
+            "sharpe": 1.12
           },
           "trades": 21,
           "win_rate_pct": 71.4
         },
         "since_2022": {
           "since": "2022-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 10.946602374974194,
-          "cagr_pct": 64.3,
+          "cagr_pct": 64.2,
           "max_dd_pct": 38.1,
-          "mar": 1.69,
+          "mar": 1.68,
           "sharpe": 1.72,
           "hold": {
-            "multiplier": 1.739637848391118,
-            "cagr_pct": 12.2,
+            "multiplier": 1.7145414335290823,
+            "cagr_pct": 11.8,
             "max_dd_pct": 67.1,
             "mar": 0.18,
             "sharpe": 0.47
@@ -602,18 +602,18 @@
         },
         "full": {
           "since": "2020-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 82.18107,
           "cagr_pct": 90.8,
           "max_dd_pct": 40.2,
           "mar": 2.26,
           "sharpe": 2.05,
           "hold": {
-            "multiplier": 11.302103595842828,
-            "cagr_pct": 42.7,
+            "multiplier": 11.139056855443785,
+            "cagr_pct": 42.4,
             "max_dd_pct": 76.7,
-            "mar": 0.56,
-            "sharpe": 0.9
+            "mar": 0.55,
+            "sharpe": 0.89
           },
           "trades": 42,
           "win_rate_pct": 59.5
@@ -945,16 +945,16 @@
       "series_url": "https://how-cl.github.io/strategya-web/latest/sol-12h.series.json",
       "summary": {
         "multiplier": 6.937761122735255,
-        "cagr_pct": 74.3,
+        "cagr_pct": 74.2,
         "max_dd_pct": 27.0,
         "mar": 2.75,
         "sharpe": 1.92,
         "hold": {
-          "multiplier": 4.784680056048575,
-          "cagr_pct": 56.6,
+          "multiplier": 4.688463334890238,
+          "cagr_pct": 55.7,
           "max_dd_pct": 78.3,
-          "mar": 0.72,
-          "sharpe": 0.94
+          "mar": 0.71,
+          "sharpe": 0.93
         },
         "trades": 19,
         "win_rate_pct": 52.6,
@@ -973,72 +973,72 @@
       },
       "kpis_by_window": {
         "6m": {
-          "since": "2026-04-28",
-          "until": "2026-10-28",
+          "since": "2026-04-29",
+          "until": "2026-10-29",
           "multiplier": 1.3270106075092878,
           "cagr_pct": 75.9,
           "max_dd_pct": 4.0,
           "mar": 19.09,
           "sharpe": 2.71,
           "hold": {
-            "multiplier": 1.2280028770079117,
-            "cagr_pct": 50.7,
+            "multiplier": 1.1821929101401485,
+            "cagr_pct": 39.7,
             "max_dd_pct": 36.1,
-            "mar": 1.4,
-            "sharpe": 0.99
+            "mar": 1.1,
+            "sharpe": 0.96
           },
           "trades": 3,
           "win_rate_pct": 66.7
         },
         "1y": {
-          "since": "2025-10-28",
-          "until": "2026-10-28",
+          "since": "2025-10-29",
+          "until": "2026-10-29",
           "multiplier": 1.25813996332487,
           "cagr_pct": 25.8,
           "max_dd_pct": 7.6,
           "mar": 3.4,
           "sharpe": 1.52,
           "hold": {
-            "multiplier": 0.5128924047464076,
-            "cagr_pct": -48.7,
-            "max_dd_pct": 68.9,
-            "mar": -0.71,
-            "sharpe": -0.69
+            "multiplier": 0.505082016705243,
+            "cagr_pct": -49.5,
+            "max_dd_pct": 68.7,
+            "mar": -0.72,
+            "sharpe": -0.72
           },
           "trades": 4,
           "win_rate_pct": 50.0
         },
         "2y": {
-          "since": "2024-10-28",
-          "until": "2026-10-28",
-          "multiplier": 2.5162952768586573,
-          "cagr_pct": 58.7,
+          "since": "2024-10-29",
+          "until": "2026-10-29",
+          "multiplier": 2.4627156531208807,
+          "cagr_pct": 57.0,
           "max_dd_pct": 27.0,
-          "mar": 2.17,
-          "sharpe": 1.64,
+          "mar": 2.11,
+          "sharpe": 1.63,
           "hold": {
-            "multiplier": 0.5789205990392766,
-            "cagr_pct": -23.9,
+            "multiplier": 0.5551991150442477,
+            "cagr_pct": -25.5,
             "max_dd_pct": 78.3,
-            "mar": -0.31,
-            "sharpe": 0.02
+            "mar": -0.33,
+            "sharpe": -0.0
           },
           "trades": 9,
           "win_rate_pct": 55.6
         },
         "since_2023": {
           "since": "2023-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 8.053481198016321,
-          "cagr_pct": 72.6,
+          "cagr_pct": 72.5,
           "max_dd_pct": 27.0,
           "mar": 2.69,
           "sharpe": 1.88,
           "hold": {
-            "multiplier": 10.316213494461229,
-            "cagr_pct": 84.2,
+            "multiplier": 10.108761329305135,
+            "cagr_pct": 83.1,
             "max_dd_pct": 78.3,
-            "mar": 1.08,
+            "mar": 1.06,
             "sharpe": 1.13
           },
           "trades": 24,
@@ -1046,15 +1046,15 @@
         },
         "since_2022": {
           "since": "2022-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 7.28557803039402,
-          "cagr_pct": 51.0,
+          "cagr_pct": 50.9,
           "max_dd_pct": 27.0,
           "mar": 1.89,
           "sharpe": 1.59,
           "hold": {
-            "multiplier": 0.5972133154550224,
-            "cagr_pct": -10.1,
+            "multiplier": 0.5852037544452865,
+            "cagr_pct": -10.5,
             "max_dd_pct": 94.9,
             "mar": -0.11,
             "sharpe": 0.34
@@ -1064,17 +1064,17 @@
         },
         "full": {
           "since": "2020-08-11",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 10.31208,
           "cagr_pct": 45.6,
           "max_dd_pct": 31.9,
           "mar": 1.43,
           "sharpe": 1.37,
           "hold": {
-            "multiplier": 33.5901891989376,
-            "cagr_pct": 76.1,
+            "multiplier": 32.914712922582545,
+            "cagr_pct": 75.4,
             "max_dd_pct": 96.5,
-            "mar": 0.79,
+            "mar": 0.78,
             "sharpe": 1.05
           },
           "trades": 34,
@@ -1780,11 +1780,11 @@
         "mar": 1.77,
         "sharpe": 1.52,
         "hold": {
-          "multiplier": 2.008831104507182,
-          "cagr_pct": 22.1,
+          "multiplier": 1.9940663694898464,
+          "cagr_pct": 21.9,
           "max_dd_pct": 28.4,
-          "mar": 0.78,
-          "sharpe": 1.06
+          "mar": 0.77,
+          "sharpe": 1.05
         },
         "trades": 8,
         "win_rate_pct": 75.0,
@@ -1803,73 +1803,73 @@
       },
       "kpis_by_window": {
         "6m": {
-          "since": "2026-04-28",
-          "until": "2026-10-28",
+          "since": "2026-04-29",
+          "until": "2026-10-29",
           "multiplier": 1.0487684840275426,
           "cagr_pct": 10.0,
           "max_dd_pct": 7.2,
           "mar": 1.39,
           "sharpe": 0.89,
           "hold": {
-            "multiplier": 0.8895319891830481,
-            "cagr_pct": -20.8,
+            "multiplier": 0.8833718042110251,
+            "cagr_pct": -21.9,
             "max_dd_pct": 16.3,
-            "mar": -1.28,
+            "mar": -1.34,
             "sharpe": -0.96
           },
           "trades": 1,
           "win_rate_pct": 100.0
         },
         "1y": {
-          "since": "2025-10-28",
-          "until": "2026-10-28",
-          "multiplier": 1.314008677992182,
-          "cagr_pct": 31.4,
+          "since": "2025-10-29",
+          "until": "2026-10-29",
+          "multiplier": 1.285622564647538,
+          "cagr_pct": 28.6,
           "max_dd_pct": 15.4,
-          "mar": 2.04,
-          "sharpe": 1.3,
+          "mar": 1.85,
+          "sharpe": 1.31,
           "hold": {
-            "multiplier": 1.0316607993162672,
-            "cagr_pct": 3.2,
+            "multiplier": 1.001956119218747,
+            "cagr_pct": 0.2,
             "max_dd_pct": 28.4,
-            "mar": 0.11,
-            "sharpe": 0.22
+            "mar": 0.01,
+            "sharpe": 0.21
           },
           "trades": 1,
           "win_rate_pct": 100.0
         },
         "2y": {
-          "since": "2024-10-28",
-          "until": "2026-10-28",
-          "multiplier": 1.7246894421467662,
+          "since": "2024-10-29",
+          "until": "2026-10-29",
+          "multiplier": 1.7265739983646773,
           "cagr_pct": 31.4,
           "max_dd_pct": 15.4,
-          "mar": 2.03,
-          "sharpe": 1.47,
+          "mar": 2.04,
+          "sharpe": 1.46,
           "hold": {
-            "multiplier": 1.4721705989110707,
-            "cagr_pct": 21.3,
+            "multiplier": 1.4629433139534884,
+            "cagr_pct": 21.0,
             "max_dd_pct": 28.4,
-            "mar": 0.75,
-            "sharpe": 0.91
+            "mar": 0.74,
+            "sharpe": 0.89
           },
           "trades": 5,
           "win_rate_pct": 60.0
         },
         "since_2023": {
           "since": "2023-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 2.32276,
           "cagr_pct": 24.7,
           "max_dd_pct": 15.4,
           "mar": 1.6,
           "sharpe": 1.45,
           "hold": {
-            "multiplier": 2.2297031335898847,
-            "cagr_pct": 23.3,
+            "multiplier": 2.213315008246289,
+            "cagr_pct": 23.1,
             "max_dd_pct": 28.4,
-            "mar": 0.82,
-            "sharpe": 1.14
+            "mar": 0.81,
+            "sharpe": 1.13
           },
           "trades": 8,
           "win_rate_pct": 75.0
@@ -1877,18 +1877,18 @@
         "since_2022": null,
         "full": {
           "since": "2023-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 2.32276,
           "cagr_pct": 24.7,
           "max_dd_pct": 15.4,
           "mar": 1.6,
           "sharpe": 1.45,
           "hold": {
-            "multiplier": 2.2297031335898847,
-            "cagr_pct": 23.3,
+            "multiplier": 2.213315008246289,
+            "cagr_pct": 23.1,
             "max_dd_pct": 28.4,
-            "mar": 0.82,
-            "sharpe": 1.14
+            "mar": 0.81,
+            "sharpe": 1.13
           },
           "trades": 8,
           "win_rate_pct": 75.0
@@ -2053,15 +2053,15 @@
       "series_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h.series.json",
       "summary": {
         "multiplier": 96.19376836690375,
-        "cagr_pct": 270.3,
+        "cagr_pct": 269.9,
         "max_dd_pct": 25.8,
-        "mar": 10.5,
+        "mar": 10.48,
         "sharpe": 2.38,
         "hold": {
-          "multiplier": 2.6625926441998264,
-          "cagr_pct": 32.4,
+          "multiplier": 2.617791667496069,
+          "cagr_pct": 31.7,
           "max_dd_pct": 66.8,
-          "mar": 0.49,
+          "mar": 0.48,
           "sharpe": 0.75
         },
         "trades": 126,
@@ -2081,72 +2081,72 @@
       },
       "kpis_by_window": {
         "6m": {
-          "since": "2026-04-28",
-          "until": "2026-10-28",
-          "multiplier": 1.6743370187388407,
-          "cagr_pct": 179.7,
+          "since": "2026-04-29",
+          "until": "2026-10-29",
+          "multiplier": 1.644967031398301,
+          "cagr_pct": 170.0,
           "max_dd_pct": 17.9,
-          "mar": 10.03,
-          "sharpe": 2.02,
+          "mar": 9.49,
+          "sharpe": 2.05,
           "hold": {
-            "multiplier": 1.1124719998225732,
-            "cagr_pct": 23.7,
+            "multiplier": 1.0766976142522637,
+            "cagr_pct": 15.9,
             "max_dd_pct": 30.2,
-            "mar": 0.79,
-            "sharpe": 0.68
+            "mar": 0.53,
+            "sharpe": 0.66
           },
           "trades": 15,
           "win_rate_pct": 46.7
         },
         "1y": {
-          "since": "2025-10-28",
-          "until": "2026-10-28",
-          "multiplier": 2.0786008684879858,
-          "cagr_pct": 108.0,
+          "since": "2025-10-29",
+          "until": "2026-10-29",
+          "multiplier": 2.0336989415261812,
+          "cagr_pct": 103.5,
           "max_dd_pct": 17.9,
-          "mar": 6.03,
+          "mar": 5.77,
           "sharpe": 1.68,
           "hold": {
-            "multiplier": 0.5831587024318503,
-            "cagr_pct": -41.7,
-            "max_dd_pct": 59.0,
-            "mar": -0.71,
-            "sharpe": -0.76
+            "multiplier": 0.5778153357664662,
+            "cagr_pct": -42.2,
+            "max_dd_pct": 58.7,
+            "mar": -0.72,
+            "sharpe": -0.78
           },
           "trades": 24,
           "win_rate_pct": 54.2
         },
         "2y": {
-          "since": "2024-10-28",
-          "until": "2026-10-28",
-          "multiplier": 8.139611148922441,
-          "cagr_pct": 185.5,
+          "since": "2024-10-29",
+          "until": "2026-10-29",
+          "multiplier": 7.966285715887263,
+          "cagr_pct": 182.4,
           "max_dd_pct": 25.8,
-          "mar": 7.2,
-          "sharpe": 2.03,
+          "mar": 7.08,
+          "sharpe": 2.02,
           "hold": {
-            "multiplier": 0.750343120206134,
-            "cagr_pct": -13.4,
+            "multiplier": 0.7153204736530062,
+            "cagr_pct": -15.4,
             "max_dd_pct": 66.8,
-            "mar": -0.2,
-            "sharpe": 0.06
+            "mar": -0.23,
+            "sharpe": 0.03
           },
           "trades": 80,
           "win_rate_pct": 56.2
         },
         "since_2023": {
           "since": "2023-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 170.54097,
-          "cagr_pct": 283.7,
+          "cagr_pct": 283.3,
           "max_dd_pct": 25.8,
-          "mar": 11.01,
+          "mar": 11.0,
           "sharpe": 2.46,
           "hold": {
-            "multiplier": 4.01651519397846,
-            "cagr_pct": 43.9,
+            "multiplier": 3.948933018376907,
+            "cagr_pct": 43.2,
             "max_dd_pct": 66.8,
-            "mar": 0.66,
+            "mar": 0.65,
             "sharpe": 0.9
           },
           "trades": 138,
@@ -2155,17 +2155,17 @@
         "since_2022": null,
         "full": {
           "since": "2023-01-01",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 170.54097,
-          "cagr_pct": 283.7,
+          "cagr_pct": 283.3,
           "max_dd_pct": 25.8,
-          "mar": 11.01,
+          "mar": 11.0,
           "sharpe": 2.46,
           "hold": {
-            "multiplier": 4.01651519397846,
-            "cagr_pct": 43.9,
+            "multiplier": 3.948933018376907,
+            "cagr_pct": 43.2,
             "max_dd_pct": 66.8,
-            "mar": 0.66,
+            "mar": 0.65,
             "sharpe": 0.9
           },
           "trades": 138,
@@ -2194,15 +2194,15 @@
       "series_url": "https://how-cl.github.io/strategya-web/latest/rotation-12h-ls.series.json",
       "summary": {
         "multiplier": 317.08243782275105,
-        "cagr_pct": 421.3,
+        "cagr_pct": 420.6,
         "max_dd_pct": 27.0,
-        "mar": 15.61,
+        "mar": 15.59,
         "sharpe": 2.77,
         "hold": {
-          "multiplier": 2.662236943624125,
-          "cagr_pct": 32.4,
+          "multiplier": 2.6174408705137413,
+          "cagr_pct": 31.7,
           "max_dd_pct": 66.8,
-          "mar": 0.49,
+          "mar": 0.48,
           "sharpe": 0.75
         },
         "trades": 136,
@@ -2222,73 +2222,73 @@
       },
       "kpis_by_window": {
         "6m": {
-          "since": "2026-04-28",
-          "until": "2026-10-28",
-          "multiplier": 1.9408957282385086,
-          "cagr_pct": 275.7,
+          "since": "2026-04-29",
+          "until": "2026-10-29",
+          "multiplier": 1.9068498904443738,
+          "cagr_pct": 262.6,
           "max_dd_pct": 17.9,
-          "mar": 15.39,
-          "sharpe": 2.42,
+          "mar": 14.66,
+          "sharpe": 2.44,
           "hold": {
-            "multiplier": 1.11246001239581,
-            "cagr_pct": 23.7,
+            "multiplier": 1.0766959876332098,
+            "cagr_pct": 15.9,
             "max_dd_pct": 30.2,
-            "mar": 0.79,
-            "sharpe": 0.68
+            "mar": 0.53,
+            "sharpe": 0.66
           },
           "trades": 17,
           "win_rate_pct": 47.1
         },
         "1y": {
-          "since": "2025-10-28",
-          "until": "2026-10-28",
-          "multiplier": 4.404870186213187,
-          "cagr_pct": 340.9,
+          "since": "2025-10-29",
+          "until": "2026-10-29",
+          "multiplier": 4.276810841861677,
+          "cagr_pct": 328.1,
           "max_dd_pct": 17.9,
-          "mar": 19.03,
+          "mar": 18.31,
           "sharpe": 2.87,
           "hold": {
-            "multiplier": 0.5831118958544573,
-            "cagr_pct": -41.7,
-            "max_dd_pct": 59.0,
-            "mar": -0.71,
-            "sharpe": -0.76
+            "multiplier": 0.5777654125050101,
+            "cagr_pct": -42.2,
+            "max_dd_pct": 58.7,
+            "mar": -0.72,
+            "sharpe": -0.78
           },
           "trades": 30,
           "win_rate_pct": 53.3
         },
         "2y": {
-          "since": "2024-10-28",
-          "until": "2026-10-28",
-          "multiplier": 22.18480947609137,
-          "cagr_pct": 371.5,
+          "since": "2024-10-29",
+          "until": "2026-10-29",
+          "multiplier": 21.71240784981285,
+          "cagr_pct": 366.5,
           "max_dd_pct": 27.0,
-          "mar": 13.77,
+          "mar": 13.58,
           "sharpe": 2.62,
           "hold": {
-            "multiplier": 0.7501921108957803,
-            "cagr_pct": -13.4,
+            "multiplier": 0.715173356304543,
+            "cagr_pct": -15.4,
             "max_dd_pct": 66.8,
-            "mar": -0.2,
-            "sharpe": 0.06
+            "mar": -0.23,
+            "sharpe": 0.03
           },
           "trades": 88,
           "win_rate_pct": 55.7
         },
         "since_2023": {
           "since": "2023-01-02",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 561.21689,
-          "cagr_pct": 424.6,
+          "cagr_pct": 423.9,
           "max_dd_pct": 27.0,
-          "mar": 15.73,
+          "mar": 15.71,
           "sharpe": 2.82,
           "hold": {
-            "multiplier": 3.9049951219512193,
-            "cagr_pct": 42.9,
+            "multiplier": 3.8392878048780488,
+            "cagr_pct": 42.2,
             "max_dd_pct": 66.8,
-            "mar": 0.64,
-            "sharpe": 0.89
+            "mar": 0.63,
+            "sharpe": 0.88
           },
           "trades": 148,
           "win_rate_pct": 57.4
@@ -2296,18 +2296,18 @@
         "since_2022": null,
         "full": {
           "since": "2023-01-02",
-          "until": "2026-10-28",
+          "until": "2026-10-29",
           "multiplier": 561.21689,
-          "cagr_pct": 424.6,
+          "cagr_pct": 423.9,
           "max_dd_pct": 27.0,
-          "mar": 15.73,
+          "mar": 15.71,
           "sharpe": 2.82,
           "hold": {
-            "multiplier": 3.9049951219512193,
-            "cagr_pct": 42.9,
+            "multiplier": 3.8392878048780488,
+            "cagr_pct": 42.2,
             "max_dd_pct": 66.8,
-            "mar": 0.64,
-            "sharpe": 0.89
+            "mar": 0.63,
+            "sharpe": 0.88
           },
           "trades": 148,
           "win_rate_pct": 57.4
