@@ -6,44 +6,30 @@
   "strategy": {
     "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
     "preset": "Winner (v1.1) · Aggressive · manga corta ON",
-    "symbol": "BINANCE:SUIUSDT",
+    "symbol": "BINANCE:BTCUSDT",
     "md5": "2a2ef862631f531cba99f3a86bf626d1"
   },
-  "decision_bar_label": "2026-10-28T00:00Z",
-  "decision_close_utc": "2026-10-28T00:00:00Z",
-  "valid_until_utc": "2026-10-29T00:00:00Z",
-  "generated_at_utc": "2026-10-28T00:03:00Z",
+  "decision_bar_label": "2026-10-29T00:00Z",
+  "decision_close_utc": "2026-10-29T00:00:00Z",
+  "valid_until_utc": "2026-10-30T00:00:00Z",
+  "generated_at_utc": "2026-10-29T00:03:00Z",
   "data_as_of": {
-    "SUI": "2026-10-28"
+    "BTC": "2026-10-29"
   },
   "cash_asset": "USDT",
-  "reference_price": 0.9334,
+  "reference_price": null,
   "action": "HOLD",
-  "positions": [
-    {
-      "asset": "SUI",
-      "side": "short",
-      "weight": 1.0,
-      "since": "2026-10-26",
-      "entry_price": 0.9205
-    }
-  ],
-  "previous_positions": [
-    {
-      "asset": "SUI",
-      "side": "short",
-      "weight": 1.0
-    }
-  ],
+  "positions": [],
+  "previous_positions": [],
   "last_trade": {
     "asset": "SUI",
-    "side": "long",
-    "entry_date": "2026-09-20",
-    "exit_date": "2026-10-18",
-    "days": 28,
-    "return_pct": 13.64
+    "side": "short",
+    "entry_date": "2026-10-26",
+    "exit_date": "2026-10-28",
+    "days": 2,
+    "return_pct": -3.69
   },
   "status": "ok",
   "notes": "",
-  "checksum": "sha256:9d4bbd4127f4cb2d50f7f1c469f4d610ba8a7f8dfcdccfb39fcfd7b538ec4102"
+  "checksum": "sha256:d7b6e2adebfaaa8267ac310094f1fabb21490f126f267b14e9b439f5e822e60b"
 }
