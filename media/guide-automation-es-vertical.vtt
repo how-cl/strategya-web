@@ -1,0 +1,298 @@
+WEBVTT
+
+1
+00:00:00.070 --> 00:00:04.070
+Cada estrategia de strategya.pro ya tomó su decisión al cierre:
+
+2
+00:00:04.070 --> 00:00:06.470
+en efectivo, long o short.
+
+3
+00:00:06.470 --> 00:00:08.560
+Lo difícil no es la decisión.
+
+4
+00:00:08.560 --> 00:00:09.560
+Es hacer lo que dice la
+
+5
+00:00:09.560 --> 00:00:11.590
+regla cuando no tienes ganas.
+
+6
+00:00:11.590 --> 00:00:13.390
+Para eso sirve automatizar.
+
+7
+00:00:13.390 --> 00:00:16.750
+No necesitas ser trader, y no necesitas TradingView.
+
+8
+00:00:16.750 --> 00:00:19.670
+Necesitas la tarjeta y uno de tres caminos.
+
+9
+00:00:19.670 --> 00:00:21.870
+Elige cuánto quieres automatizar.
+
+10
+00:00:21.870 --> 00:00:22.670
+A mano.
+
+11
+00:00:22.670 --> 00:00:24.980
+Después del cierre, abre el Catálogo, lee
+
+12
+00:00:24.980 --> 00:00:26.770
+la tarjeta y pon tú la orden
+
+13
+00:00:26.770 --> 00:00:28.870
+en tu exchange o en Mercado Pago.
+
+14
+00:00:28.870 --> 00:00:30.510
+No pagas nada extra.
+
+15
+00:00:30.510 --> 00:00:33.870
+Solo nunca actúes con una tarjeta ámbar o roja.
+
+16
+00:00:33.870 --> 00:00:34.950
+Con Signum.
+
+17
+00:00:34.950 --> 00:00:37.840
+Signum es una plataforma de ejecución: conectas
+
+18
+00:00:37.840 --> 00:00:39.480
+tu exchange con llaves de API,
+
+19
+00:00:39.480 --> 00:00:41.370
+que se quedan en Signum, y creas un
+
+20
+00:00:41.370 --> 00:00:43.910
+bot por estrategia con un capital fijo.
+
+21
+00:00:43.910 --> 00:00:45.710
+El bot pone las órdenes.
+
+22
+00:00:45.710 --> 00:00:49.070
+Strategya nunca envía órdenes a ningún exchange.
+
+23
+00:00:49.070 --> 00:00:51.170
+Signum tiene su propio precio mensual
+
+24
+00:00:51.170 --> 00:00:53.230
+y sus propios videos tutoriales.
+
+25
+00:00:53.230 --> 00:00:55.790
+Con tu asistente de inteligencia artificial.
+
+26
+00:00:55.790 --> 00:00:57.990
+Este es el camino que usamos nosotros.
+
+27
+00:00:57.990 --> 00:01:01.550
+Paso uno: conecta el conector de Strategya en tu asistente.
+
+28
+00:01:01.550 --> 00:01:05.040
+En Claude es Configuración, Conectores, agregar un
+
+29
+00:01:05.040 --> 00:01:09.840
+conector personalizado con la dirección strategya.pro/mcp,
+
+30
+00:01:09.840 --> 00:01:12.550
+e iniciar sesión con tu cuenta de Strategya.
+
+31
+00:01:12.550 --> 00:01:14.990
+Lee exactamente lo que incluye tu plan,
+
+32
+00:01:14.990 --> 00:01:18.000
+nada más, y solo puede leer: los productos,
+
+33
+00:01:18.000 --> 00:01:21.670
+el catálogo, el resumen, los indicadores y la señal.
+
+34
+00:01:21.670 --> 00:01:23.180
+Paso dos: pregúntale.
+
+35
+00:01:23.180 --> 00:01:26.150
+¿Cuál es la posición de BTC 1D hoy?
+
+36
+00:01:26.150 --> 00:01:28.790
+Te responde con la misma señal de la tarjeta.
+
+37
+00:01:28.790 --> 00:01:31.520
+Paso tres: para actuar, conecta también el
+
+38
+00:01:31.520 --> 00:01:33.990
+conector de Signum y programa una rutina,
+
+39
+00:01:33.990 --> 00:01:36.670
+una tarea que corre todos los días después del cierre,
+
+40
+00:01:36.670 --> 00:01:37.990
+con esta plantilla.
+
+41
+00:01:37.990 --> 00:01:41.070
+Elige tu estrategia y la plantilla se completa sola.
+
+42
+00:01:41.070 --> 00:01:42.830
+Cópiala, pégala en la rutina y
+
+43
+00:01:42.830 --> 00:01:44.950
+pon el identificador de tu bot.
+
+44
+00:01:44.950 --> 00:01:48.110
+Lee la señal; si está vencida, se detiene.
+
+45
+00:01:48.110 --> 00:01:49.330
+Compara lo que tiene el bot
+
+46
+00:01:49.330 --> 00:01:50.870
+con lo que dice la tarjeta.
+
+47
+00:01:50.870 --> 00:01:52.750
+Si coinciden, no hace nada.
+
+48
+00:01:52.750 --> 00:01:55.850
+Si son distintas, primero cierra, confirma el par
+
+49
+00:01:55.850 --> 00:01:58.310
+y después abre con el capital fijo.
+
+50
+00:01:58.310 --> 00:01:59.470
+Anota una línea.
+
+51
+00:01:59.470 --> 00:02:02.430
+Si algo no está claro, se detiene y avisa.
+
+52
+00:02:02.430 --> 00:02:05.280
+El asistente lee, Signum ejecuta, y tú
+
+53
+00:02:05.280 --> 00:02:07.550
+pones el capital y los stops.
+
+54
+00:02:07.550 --> 00:02:09.640
+Estas son las reglas que usamos nosotros,
+
+55
+00:02:09.640 --> 00:02:11.070
+con nuestra propia plata.
+
+56
+00:02:11.070 --> 00:02:12.750
+Capital fijo por bot.
+
+57
+00:02:12.750 --> 00:02:14.910
+Un stop externo en el exchange.
+
+58
+00:02:14.910 --> 00:02:17.470
+Confirmar el par antes de cada orden.
+
+59
+00:02:17.470 --> 00:02:20.030
+No volver a entrar después de un stop manual.
+
+60
+00:02:20.030 --> 00:02:22.630
+Una tarjeta vencida no es una señal.
+
+61
+00:02:22.630 --> 00:02:23.900
+Y las llaves se quedan en
+
+62
+00:02:23.900 --> 00:02:25.390
+el exchange y en Signum,
+
+63
+00:02:25.390 --> 00:02:28.350
+nunca en el asistente y nunca en Strategya.
+
+64
+00:02:28.350 --> 00:02:29.620
+Probado con Claude.
+
+65
+00:02:29.620 --> 00:02:32.040
+Cualquier asistente que acepte conectores MCP
+
+66
+00:02:32.040 --> 00:02:34.070
+debería poder leer las señales;
+
+67
+00:02:34.070 --> 00:02:35.430
+no hemos probado otros.
+
+68
+00:02:35.430 --> 00:02:37.750
+El conector nunca pone órdenes.
+
+69
+00:02:37.750 --> 00:02:39.230
+La tarjeta decide.
+
+70
+00:02:39.230 --> 00:02:40.710
+Tú ejecutas.
+
+71
+00:02:40.710 --> 00:02:43.630
+Automatizar solo se asegura de que lo hagas.
+
+72
+00:02:43.630 --> 00:02:45.960
+Todo lo que hay aquí es un backtest simulado,
+
+73
+00:02:45.960 --> 00:02:49.320
+no rendimiento real, y no es asesoría de inversión.
+
+74
+00:02:49.320 --> 00:02:52.600
+Pruébalo gratis siete días en strategya.pro.
+
