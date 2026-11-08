@@ -1,0 +1,149 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "halftrend-btc",
+ "benchmark": "halftrend",
+ "name": "HalfTrend",
+ "free_indicator": false,
+ "asset": "BTC",
+ "symbol": "BINANCE:BTCUSDT",
+ "timeframe": "1D",
+ "rule": "Long when HalfTrend (amplitude 2, channel deviation 2) flips up; cash when it flips down.",
+ "credit": "HalfTrend by everget (GPL-3.0): https://www.tradingview.com/script/U1SJ8ubc-HalfTrend-everget/",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
+ "generated_at_utc": "2026-11-08T20:54:00Z",
+ "decision_bar": "2026-11-07",
+ "valid_until_utc": "2026-11-09T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-10-08",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-09-22",
+  "exit_date": "2026-10-09",
+  "return_pct": -5.81
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-07",
+   "until": "2026-11-07",
+   "cagr_pct": -7.6,
+   "max_dd_pct": 11.7,
+   "mar": -0.65,
+   "sharpe": -0.22,
+   "hold": {
+    "cagr_pct": -10.0,
+    "max_dd_pct": 28.7,
+    "mar": -0.35,
+    "sharpe": -0.09,
+    "return_pct": -5.17
+   },
+   "trades": 4,
+   "win_rate_pct": 50.0,
+   "time_in_market_pct": 52.4,
+   "return_pct": -3.89
+  },
+  "1y": {
+   "since": "2025-11-07",
+   "until": "2026-11-07",
+   "cagr_pct": -3.8,
+   "max_dd_pct": 13.4,
+   "mar": -0.28,
+   "sharpe": -0.04,
+   "hold": {
+    "cagr_pct": -26.6,
+    "max_dd_pct": 44.7,
+    "mar": -0.6,
+    "sharpe": -0.48,
+    "return_pct": -26.58
+   },
+   "trades": 8,
+   "win_rate_pct": 37.5,
+   "time_in_market_pct": 45.6,
+   "return_pct": -3.79
+  },
+  "2y": {
+   "since": "2024-11-07",
+   "until": "2026-11-07",
+   "cagr_pct": -2.5,
+   "max_dd_pct": 28.8,
+   "mar": -0.09,
+   "sharpe": 0.05,
+   "hold": {
+    "cagr_pct": 0.0,
+    "max_dd_pct": 53.0,
+    "mar": 0.0,
+    "sharpe": 0.22,
+    "return_pct": 0.01
+   },
+   "trades": 18,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 50.2,
+   "return_pct": -4.85
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-07",
+   "cagr_pct": 20.6,
+   "max_dd_pct": 37.9,
+   "mar": 0.54,
+   "sharpe": 0.74,
+   "hold": {
+    "cagr_pct": 48.4,
+    "max_dd_pct": 53.0,
+    "mar": 0.91,
+    "sharpe": 1.08,
+    "return_pct": 356.57
+   },
+   "trades": 33,
+   "win_rate_pct": 48.5,
+   "time_in_market_pct": 53.7,
+   "return_pct": 105.54
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-07",
+   "cagr_pct": -0.1,
+   "max_dd_pct": 58.1,
+   "mar": -0.0,
+   "sharpe": 0.16,
+   "hold": {
+    "cagr_pct": 10.0,
+    "max_dd_pct": 66.9,
+    "mar": 0.15,
+    "sharpe": 0.44,
+    "return_pct": 58.98
+   },
+   "trades": 42,
+   "win_rate_pct": 42.9,
+   "time_in_market_pct": 49.3,
+   "return_pct": -0.3
+  },
+  "full": {
+   "since": "2018-01-01",
+   "until": "2026-11-07",
+   "cagr_pct": 13.2,
+   "max_dd_pct": 70.0,
+   "mar": 0.19,
+   "sharpe": 0.5,
+   "hold": {
+    "cagr_pct": 21.7,
+    "max_dd_pct": 81.2,
+    "mar": 0.27,
+    "sharpe": 0.63,
+    "return_pct": 467.02
+   },
+   "trades": 75,
+   "win_rate_pct": 41.3,
+   "time_in_market_pct": 51.8,
+   "return_pct": 199.63
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-11-07",
+  "tv_pnl_pct": 199.63,
+  "engine_pnl_pct": 199.63,
+  "deviation_pct": 0.002
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}

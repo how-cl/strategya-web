@@ -1,0 +1,149 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "range-filter-sol",
+ "benchmark": "range-filter",
+ "name": "Range Filter",
+ "free_indicator": false,
+ "asset": "SOL",
+ "symbol": "BINANCE:SOLUSDT",
+ "timeframe": "1D",
+ "rule": "Long on the Range Filter buy signal (sampling period 100, multiplier 3); cash on its sell signal.",
+ "credit": "Range Filter by DonovanWall, buy/sell version by guikroth: https://www.tradingview.com/script/J8GzFGfD-Range-Filter-Buy-and-Sell-5min-guikroth-version/",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
+ "generated_at_utc": "2026-11-08T20:54:00Z",
+ "decision_bar": "2026-11-07",
+ "valid_until_utc": "2026-11-09T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-10-12",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-07-04",
+  "exit_date": "2026-10-13",
+  "return_pct": 28.19
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-07",
+   "until": "2026-11-07",
+   "cagr_pct": 63.6,
+   "max_dd_pct": 13.5,
+   "mar": 4.71,
+   "sharpe": 1.4,
+   "hold": {
+    "cagr_pct": 3.1,
+    "max_dd_pct": 36.1,
+    "mar": 0.09,
+    "sharpe": 0.33,
+    "return_pct": 1.57
+   },
+   "trades": 1,
+   "win_rate_pct": 100.0,
+   "time_in_market_pct": 54.6,
+   "return_pct": 28.16
+  },
+  "1y": {
+   "since": "2025-11-07",
+   "until": "2026-11-07",
+   "cagr_pct": 28.2,
+   "max_dd_pct": 13.5,
+   "mar": 2.09,
+   "sharpe": 0.99,
+   "hold": {
+    "cagr_pct": -44.5,
+    "max_dd_pct": 62.8,
+    "mar": -0.71,
+    "sharpe": -0.64,
+    "return_pct": -44.49
+   },
+   "trades": 1,
+   "win_rate_pct": 100.0,
+   "time_in_market_pct": 27.6,
+   "return_pct": 28.16
+  },
+  "2y": {
+   "since": "2024-11-07",
+   "until": "2026-11-07",
+   "cagr_pct": -6.7,
+   "max_dd_pct": 54.7,
+   "mar": -0.12,
+   "sharpe": 0.06,
+   "hold": {
+    "cagr_pct": -32.4,
+    "max_dd_pct": 76.3,
+    "mar": -0.42,
+    "sharpe": -0.14,
+    "return_pct": -54.26
+   },
+   "trades": 8,
+   "win_rate_pct": 37.5,
+   "time_in_market_pct": 34.7,
+   "return_pct": -12.99
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-07",
+   "cagr_pct": 17.4,
+   "max_dd_pct": 67.8,
+   "mar": 0.26,
+   "sharpe": 0.56,
+   "hold": {
+    "cagr_pct": 76.9,
+    "max_dd_pct": 76.3,
+    "mar": 1.01,
+    "sharpe": 1.09,
+    "return_pct": 799.0
+   },
+   "trades": 27,
+   "win_rate_pct": 44.4,
+   "time_in_market_pct": 49.5,
+   "return_pct": 85.42
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-07",
+   "cagr_pct": 5.8,
+   "max_dd_pct": 67.8,
+   "mar": 0.09,
+   "sharpe": 0.37,
+   "hold": {
+    "cagr_pct": -13.3,
+    "max_dd_pct": 94.6,
+    "mar": -0.14,
+    "sharpe": 0.31,
+    "return_pct": -49.84
+   },
+   "trades": 28,
+   "win_rate_pct": 42.9,
+   "time_in_market_pct": 40.3,
+   "return_pct": 31.53
+  },
+  "full": {
+   "since": "2020-08-11",
+   "until": "2026-11-07",
+   "cagr_pct": 29.1,
+   "max_dd_pct": 70.1,
+   "mar": 0.41,
+   "sharpe": 0.73,
+   "hold": {
+    "cagr_pct": 69.8,
+    "max_dd_pct": 96.3,
+    "mar": 0.73,
+    "sharpe": 1.03,
+    "return_pct": 2622.75
+   },
+   "trades": 38,
+   "win_rate_pct": 39.5,
+   "time_in_market_pct": 35.8,
+   "return_pct": 391.1
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-11-07",
+  "tv_pnl_pct": 391.03,
+  "engine_pnl_pct": 391.1,
+  "deviation_pct": 0.014
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}
