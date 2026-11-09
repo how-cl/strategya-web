@@ -1,0 +1,149 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "ml-adaptive-supertrend-eth",
+ "benchmark": "ml-adaptive-supertrend",
+ "name": "ML Adaptive SuperTrend",
+ "free_indicator": false,
+ "asset": "ETH",
+ "symbol": "BINANCE:ETHUSDT",
+ "timeframe": "1D",
+ "rule": "Long when the Machine Learning Adaptive SuperTrend (ATR 10, factor 3, 100-bar k-means) turns bullish; cash when it turns bearish.",
+ "credit": "Machine Learning Adaptive SuperTrend by AlgoAlpha (MPL-2.0): https://www.tradingview.com/script/CLk71Qgy-Machine-Learning-Adaptive-SuperTrend-AlgoAlpha/",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
+ "generated_at_utc": "2026-11-09T09:44:00Z",
+ "decision_bar": "2026-11-08",
+ "valid_until_utc": "2026-11-10T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-10-08",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-07-07",
+  "exit_date": "2026-10-09",
+  "return_pct": 37.29
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-08",
+   "until": "2026-11-08",
+   "cagr_pct": 50.3,
+   "max_dd_pct": 15.8,
+   "mar": 3.19,
+   "sharpe": 1.21,
+   "hold": {
+    "cagr_pct": -14.9,
+    "max_dd_pct": 33.9,
+    "mar": -0.44,
+    "sharpe": -0.04,
+    "return_pct": -7.78
+   },
+   "trades": 1,
+   "win_rate_pct": 100.0,
+   "time_in_market_pct": 58.9,
+   "return_pct": 22.78
+  },
+  "1y": {
+   "since": "2025-11-08",
+   "until": "2026-11-08",
+   "cagr_pct": 0.5,
+   "max_dd_pct": 29.1,
+   "mar": 0.02,
+   "sharpe": 0.17,
+   "hold": {
+    "cagr_pct": -37.5,
+    "max_dd_pct": 56.2,
+    "mar": -0.67,
+    "sharpe": -0.48,
+    "return_pct": -37.46
+   },
+   "trades": 3,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 39.9,
+   "return_pct": 0.53
+  },
+  "2y": {
+   "since": "2024-11-08",
+   "until": "2026-11-08",
+   "cagr_pct": 22.3,
+   "max_dd_pct": 48.5,
+   "mar": 0.46,
+   "sharpe": 0.72,
+   "hold": {
+    "cagr_pct": -15.3,
+    "max_dd_pct": 67.6,
+    "mar": -0.23,
+    "sharpe": 0.1,
+    "return_pct": -28.17
+   },
+   "trades": 6,
+   "win_rate_pct": 50.0,
+   "time_in_market_pct": 38.3,
+   "return_pct": 49.63
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-08",
+   "cagr_pct": 18.9,
+   "max_dd_pct": 48.5,
+   "mar": 0.39,
+   "sharpe": 0.64,
+   "hold": {
+    "cagr_pct": 16.0,
+    "max_dd_pct": 67.6,
+    "mar": 0.24,
+    "sharpe": 0.55,
+    "return_pct": 77.24
+   },
+   "trades": 15,
+   "win_rate_pct": 53.3,
+   "time_in_market_pct": 47.1,
+   "return_pct": 94.55
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-08",
+   "cagr_pct": 6.4,
+   "max_dd_pct": 48.5,
+   "mar": 0.13,
+   "sharpe": 0.35,
+   "hold": {
+    "cagr_pct": -11.1,
+    "max_dd_pct": 74.0,
+    "mar": -0.15,
+    "sharpe": 0.17,
+    "return_pct": -43.5
+   },
+   "trades": 19,
+   "win_rate_pct": 47.4,
+   "time_in_market_pct": 42.5,
+   "return_pct": 35.01
+  },
+  "full": {
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "cagr_pct": 49.5,
+   "max_dd_pct": 55.2,
+   "mar": 0.9,
+   "sharpe": 1.02,
+   "hold": {
+    "cagr_pct": 12.4,
+    "max_dd_pct": 94.0,
+    "mar": 0.13,
+    "sharpe": 0.57,
+    "return_pct": 181.79
+   },
+   "trades": 31,
+   "win_rate_pct": 58.1,
+   "time_in_market_pct": 46.0,
+   "return_pct": 3423.91
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-11-08",
+  "tv_pnl_pct": 3423.41,
+  "engine_pnl_pct": 3423.91,
+  "deviation_pct": 0.014
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}

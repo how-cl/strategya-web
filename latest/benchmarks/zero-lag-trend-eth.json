@@ -1,0 +1,149 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "zero-lag-trend-eth",
+ "benchmark": "zero-lag-trend",
+ "name": "Zero Lag Trend Signals",
+ "free_indicator": false,
+ "asset": "ETH",
+ "symbol": "BINANCE:ETHUSDT",
+ "timeframe": "1D",
+ "rule": "Long when Zero Lag Trend Signals (ZLEMA 70, band multiplier 1.2) turns bullish; cash when it turns bearish.",
+ "credit": "Zero Lag Trend Signals (MTF) by AlgoAlpha (MPL-2.0): https://www.tradingview.com/script/tHK4O1Fi-Zero-Lag-Trend-Signals-MTF-AlgoAlpha/",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
+ "generated_at_utc": "2026-11-09T09:44:00Z",
+ "decision_bar": "2026-11-08",
+ "valid_until_utc": "2026-11-10T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-10-08",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-07-15",
+  "exit_date": "2026-10-09",
+  "return_pct": 30.59
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-08",
+   "until": "2026-11-08",
+   "cagr_pct": 10.5,
+   "max_dd_pct": 23.8,
+   "mar": 0.44,
+   "sharpe": 0.44,
+   "hold": {
+    "cagr_pct": -14.9,
+    "max_dd_pct": 33.9,
+    "mar": -0.44,
+    "sharpe": -0.04,
+    "return_pct": -7.78
+   },
+   "trades": 1,
+   "win_rate_pct": 100.0,
+   "time_in_market_pct": 60.5,
+   "return_pct": 5.14
+  },
+  "1y": {
+   "since": "2025-11-08",
+   "until": "2026-11-08",
+   "cagr_pct": -3.5,
+   "max_dd_pct": 31.6,
+   "mar": -0.11,
+   "sharpe": 0.12,
+   "hold": {
+    "cagr_pct": -37.5,
+    "max_dd_pct": 56.2,
+    "mar": -0.67,
+    "sharpe": -0.48,
+    "return_pct": -37.46
+   },
+   "trades": 3,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 63.9,
+   "return_pct": -3.47
+  },
+  "2y": {
+   "since": "2024-11-08",
+   "until": "2026-11-08",
+   "cagr_pct": 41.6,
+   "max_dd_pct": 44.5,
+   "mar": 0.94,
+   "sharpe": 1.0,
+   "hold": {
+    "cagr_pct": -15.3,
+    "max_dd_pct": 67.6,
+    "mar": -0.23,
+    "sharpe": 0.1,
+    "return_pct": -28.17
+   },
+   "trades": 6,
+   "win_rate_pct": 50.0,
+   "time_in_market_pct": 52.1,
+   "return_pct": 100.43
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-08",
+   "cagr_pct": 20.5,
+   "max_dd_pct": 44.5,
+   "mar": 0.46,
+   "sharpe": 0.66,
+   "hold": {
+    "cagr_pct": 16.0,
+    "max_dd_pct": 67.6,
+    "mar": 0.24,
+    "sharpe": 0.55,
+    "return_pct": 77.24
+   },
+   "trades": 15,
+   "win_rate_pct": 40.0,
+   "time_in_market_pct": 50.6,
+   "return_pct": 104.94
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-08",
+   "cagr_pct": 10.3,
+   "max_dd_pct": 66.9,
+   "mar": 0.15,
+   "sharpe": 0.44,
+   "hold": {
+    "cagr_pct": -11.1,
+    "max_dd_pct": 74.0,
+    "mar": -0.15,
+    "sharpe": 0.17,
+    "return_pct": -43.5
+   },
+   "trades": 18,
+   "win_rate_pct": 38.9,
+   "time_in_market_pct": 48.1,
+   "return_pct": 60.88
+  },
+  "full": {
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "cagr_pct": 36.5,
+   "max_dd_pct": 66.9,
+   "mar": 0.55,
+   "sharpe": 0.87,
+   "hold": {
+    "cagr_pct": 12.4,
+    "max_dd_pct": 94.0,
+    "mar": 0.13,
+    "sharpe": 0.57,
+    "return_pct": 181.79
+   },
+   "trades": 32,
+   "win_rate_pct": 53.1,
+   "time_in_market_pct": 43.1,
+   "return_pct": 1469.51
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-11-08",
+  "tv_pnl_pct": 1469.43,
+  "engine_pnl_pct": 1469.51,
+  "deviation_pct": 0.005
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}

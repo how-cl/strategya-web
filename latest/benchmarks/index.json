@@ -1,6 +1,6 @@
 {
  "schema": "strategya.benchmark/0.1",
- "generated_at_utc": "2026-11-09T03:22:00Z",
+ "generated_at_utc": "2026-11-09T09:44:00Z",
  "base_url": "https://how-cl.github.io/strategya-web/latest/benchmarks/",
  "disclaimer": "Simulated backtests, not real performance. Not investment advice.",
  "items": [
@@ -200,6 +200,51 @@
    "position_since": "2026-10-11"
   },
   {
+   "id": "ml-adaptive-supertrend-btc",
+   "benchmark": "ml-adaptive-supertrend",
+   "name": "ML Adaptive SuperTrend",
+   "free_indicator": false,
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.2,
+   "cagr_pct": 11.9,
+   "max_dd_pct": 59.1,
+   "hold_mar": 0.26,
+   "position": "cash",
+   "position_since": "2026-10-29"
+  },
+  {
+   "id": "zero-lag-trend-btc",
+   "benchmark": "zero-lag-trend",
+   "name": "Zero Lag Trend Signals",
+   "free_indicator": false,
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.44,
+   "cagr_pct": 25.9,
+   "max_dd_pct": 58.3,
+   "hold_mar": 0.26,
+   "position": "cash",
+   "position_since": "2026-10-16"
+  },
+  {
+   "id": "zero-lag-ma-trend-levels-btc",
+   "benchmark": "zero-lag-ma-trend-levels",
+   "name": "Zero-Lag MA Trend Levels",
+   "free_indicator": false,
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.61,
+   "cagr_pct": 37.6,
+   "max_dd_pct": 61.9,
+   "hold_mar": 0.26,
+   "position": "cash",
+   "position_since": "2026-10-15"
+  },
+  {
    "id": "supertrend-eth",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -395,6 +440,51 @@
    "position_since": "2026-10-08"
   },
   {
+   "id": "ml-adaptive-supertrend-eth",
+   "benchmark": "ml-adaptive-supertrend",
+   "name": "ML Adaptive SuperTrend",
+   "free_indicator": false,
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.9,
+   "cagr_pct": 49.5,
+   "max_dd_pct": 55.2,
+   "hold_mar": 0.13,
+   "position": "cash",
+   "position_since": "2026-10-08"
+  },
+  {
+   "id": "zero-lag-trend-eth",
+   "benchmark": "zero-lag-trend",
+   "name": "Zero Lag Trend Signals",
+   "free_indicator": false,
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.55,
+   "cagr_pct": 36.5,
+   "max_dd_pct": 66.9,
+   "hold_mar": 0.13,
+   "position": "cash",
+   "position_since": "2026-10-08"
+  },
+  {
+   "id": "zero-lag-ma-trend-levels-eth",
+   "benchmark": "zero-lag-ma-trend-levels",
+   "name": "Zero-Lag MA Trend Levels",
+   "free_indicator": false,
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 1.03,
+   "cagr_pct": 54.1,
+   "max_dd_pct": 52.3,
+   "hold_mar": 0.13,
+   "position": "cash",
+   "position_since": "2026-10-09"
+  },
+  {
    "id": "supertrend-sol",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -588,6 +678,51 @@
    "hold_mar": 0.71,
    "position": "cash",
    "position_since": "2026-10-10"
+  },
+  {
+   "id": "ml-adaptive-supertrend-sol",
+   "benchmark": "ml-adaptive-supertrend",
+   "name": "ML Adaptive SuperTrend",
+   "free_indicator": false,
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-08",
+   "mar": 1.83,
+   "cagr_pct": 124.1,
+   "max_dd_pct": 67.9,
+   "hold_mar": 0.71,
+   "position": "cash",
+   "position_since": "2026-10-12"
+  },
+  {
+   "id": "zero-lag-trend-sol",
+   "benchmark": "zero-lag-trend",
+   "name": "Zero Lag Trend Signals",
+   "free_indicator": false,
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-08",
+   "mar": 0.83,
+   "cagr_pct": 52.4,
+   "max_dd_pct": 63.5,
+   "hold_mar": 0.71,
+   "position": "cash",
+   "position_since": "2026-10-08"
+  },
+  {
+   "id": "zero-lag-ma-trend-levels-sol",
+   "benchmark": "zero-lag-ma-trend-levels",
+   "name": "Zero-Lag MA Trend Levels",
+   "free_indicator": false,
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-08",
+   "mar": 2.19,
+   "cagr_pct": 136.9,
+   "max_dd_pct": 62.6,
+   "hold_mar": 0.71,
+   "position": "cash",
+   "position_since": "2026-10-11"
   }
  ]
 }
