@@ -7,10 +7,10 @@
  "asset": "SOL",
  "symbol": "BINANCE:SOLUSDT",
  "timeframe": "1D",
- "rule": "Long when the trend engine (DEMA 7, Gaussian filter, SMMA 11, SD bands 38) turns bullish with VWMA 5 and MFI 47 confirmation; cash after 2 bearish bars or at a 9% stop.",
+ "rule": "Long when our trend engine turns bullish and volume and money flow confirm; cash when the trend weakens or at a protective stop.",
  "credit": "Free indicator by Strategya.pro",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-09T19:54:00Z",
+ "generated_at_utc": "2026-11-09T22:53:00Z",
  "decision_bar": "2026-11-08",
  "valid_until_utc": "2026-11-10T00:45:00Z",
  "position": {
