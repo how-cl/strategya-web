@@ -1,6 +1,6 @@
 {
  "schema": "strategya.benchmark/0.1",
- "generated_at_utc": "2026-11-09T00:07:00Z",
+ "generated_at_utc": "2026-11-09T03:22:00Z",
  "base_url": "https://how-cl.github.io/strategya-web/latest/benchmarks/",
  "disclaimer": "Simulated backtests, not real performance. Not investment advice.",
  "items": [
@@ -155,6 +155,51 @@
    "position_since": "2026-10-22"
   },
   {
+   "id": "pivot-point-supertrend-btc",
+   "benchmark": "pivot-point-supertrend",
+   "name": "Pivot Point SuperTrend",
+   "free_indicator": false,
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.68,
+   "cagr_pct": 32.9,
+   "max_dd_pct": 48.7,
+   "hold_mar": 0.26,
+   "position": "cash",
+   "position_since": "2026-10-29"
+  },
+  {
+   "id": "alphatrend-btc",
+   "benchmark": "alphatrend",
+   "name": "AlphaTrend",
+   "free_indicator": false,
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.83,
+   "cagr_pct": 39.1,
+   "max_dd_pct": 47.0,
+   "hold_mar": 0.26,
+   "position": "cash",
+   "position_since": "2026-10-26"
+  },
+  {
+   "id": "hull-suite-btc",
+   "benchmark": "hull-suite",
+   "name": "Hull Suite",
+   "free_indicator": false,
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.35,
+   "cagr_pct": 26.4,
+   "max_dd_pct": 75.1,
+   "hold_mar": 0.26,
+   "position": "cash",
+   "position_since": "2026-10-11"
+  },
+  {
    "id": "supertrend-eth",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -305,6 +350,51 @@
    "position_since": "2026-10-12"
   },
   {
+   "id": "pivot-point-supertrend-eth",
+   "benchmark": "pivot-point-supertrend",
+   "name": "Pivot Point SuperTrend",
+   "free_indicator": false,
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.33,
+   "cagr_pct": 26.0,
+   "max_dd_pct": 79.3,
+   "hold_mar": 0.13,
+   "position": "cash",
+   "position_since": "2026-10-12"
+  },
+  {
+   "id": "alphatrend-eth",
+   "benchmark": "alphatrend",
+   "name": "AlphaTrend",
+   "free_indicator": false,
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.79,
+   "cagr_pct": 44.0,
+   "max_dd_pct": 55.6,
+   "hold_mar": 0.13,
+   "position": "cash",
+   "position_since": "2026-10-09"
+  },
+  {
+   "id": "hull-suite-eth",
+   "benchmark": "hull-suite",
+   "name": "Hull Suite",
+   "free_indicator": false,
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-08",
+   "mar": 0.6,
+   "cagr_pct": 40.2,
+   "max_dd_pct": 67.2,
+   "hold_mar": 0.13,
+   "position": "cash",
+   "position_since": "2026-10-08"
+  },
+  {
    "id": "supertrend-sol",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -453,6 +543,51 @@
    "hold_mar": 0.71,
    "position": "cash",
    "position_since": "2026-10-12"
+  },
+  {
+   "id": "pivot-point-supertrend-sol",
+   "benchmark": "pivot-point-supertrend",
+   "name": "Pivot Point SuperTrend",
+   "free_indicator": false,
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-08",
+   "mar": 0.76,
+   "cagr_pct": 61.9,
+   "max_dd_pct": 81.9,
+   "hold_mar": 0.71,
+   "position": "cash",
+   "position_since": "2026-10-14"
+  },
+  {
+   "id": "alphatrend-sol",
+   "benchmark": "alphatrend",
+   "name": "AlphaTrend",
+   "free_indicator": false,
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-08",
+   "mar": 1.39,
+   "cagr_pct": 104.5,
+   "max_dd_pct": 75.2,
+   "hold_mar": 0.71,
+   "position": "cash",
+   "position_since": "2026-10-13"
+  },
+  {
+   "id": "hull-suite-sol",
+   "benchmark": "hull-suite",
+   "name": "Hull Suite",
+   "free_indicator": false,
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-08",
+   "mar": 1.23,
+   "cagr_pct": 106.9,
+   "max_dd_pct": 87.2,
+   "hold_mar": 0.71,
+   "position": "cash",
+   "position_since": "2026-10-10"
   }
  ]
 }
