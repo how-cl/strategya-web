@@ -1,6 +1,6 @@
 {
   "schema": "strategya.catalog/0.4",
-  "generated_at_utc": "2026-11-12T12:03:00Z",
+  "generated_at_utc": "2026-11-12T19:40:00Z",
   "base_url": "https://how-cl.github.io/strategya-web/latest/",
   "disclaimer": "All figures are simulated backtest, not real performance.",
   "products": [
@@ -45,7 +45,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 19
+        "rank": 21
       },
       "kpis_by_window": {
         "6m": {
@@ -199,7 +199,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 18
+        "rank": 20
       },
       "kpis_by_window": {
         "6m": {
@@ -353,7 +353,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 16
+        "rank": 18
       },
       "kpis_by_window": {
         "6m": {
@@ -507,7 +507,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 14
+        "rank": 16
       },
       "kpis_by_window": {
         "6m": {
@@ -661,7 +661,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 13
+        "rank": 15
       },
       "kpis_by_window": {
         "6m": {
@@ -815,7 +815,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 15
+        "rank": 17
       },
       "kpis_by_window": {
         "6m": {
@@ -969,7 +969,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 21
+        "rank": 23
       },
       "kpis_by_window": {
         "6m": {
@@ -1123,7 +1123,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 17
+        "rank": 19
       },
       "kpis_by_window": {
         "6m": {
@@ -1243,7 +1243,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 9
+        "rank": 11
       },
       "kpis_by_window": {
         "6m": {
@@ -1367,7 +1367,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 4
+        "rank": 6
       },
       "kpis_by_window": {
         "6m": {
@@ -1508,7 +1508,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 5
+        "rank": 7
       },
       "kpis_by_window": {
         "6m": {
@@ -1622,6 +1622,290 @@
       }
     },
     {
+      "slug": "rotation-1d-zec",
+      "name": "Rotation 1D +ZEC",
+      "kind": "rotation",
+      "timeframe": "1D",
+      "sleeve": "long",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SUI",
+        "ZEC",
+        "PAXG"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-zec.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-zec.signal.json",
+      "tier": "free",
+      "series_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-zec.series.json",
+      "summary": {
+        "multiplier": 4845.062541483659,
+        "cagr_pct": 1009.4,
+        "max_dd_pct": 31.3,
+        "mar": 32.25,
+        "sharpe": 2.81,
+        "hold": {
+          "multiplier": 4.966624328689961,
+          "cagr_pct": 57.5,
+          "max_dd_pct": 52.8,
+          "mar": 1.09,
+          "sharpe": 1.01
+        },
+        "trades": 114,
+        "win_rate_pct": 56.1,
+        "last_change": {
+          "date": "2026-11-02",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "ZEC",
+            "side": "long",
+            "return_pct": -0.09
+          },
+          "opened": []
+        },
+        "open_trade_pct": null,
+        "rank": 3
+      },
+      "kpis_by_window": {
+        "6m": {
+          "since": "2026-05-11",
+          "until": "2026-11-11",
+          "multiplier": 2.441333779263969,
+          "cagr_pct": 488.1,
+          "max_dd_pct": 28.2,
+          "mar": 17.3,
+          "sharpe": 2.29,
+          "hold": {
+            "multiplier": 1.229004712783275,
+            "cagr_pct": 50.6,
+            "max_dd_pct": 35.6,
+            "mar": 1.42,
+            "sharpe": 0.91
+          },
+          "trades": 11,
+          "win_rate_pct": 63.6
+        },
+        "1y": {
+          "since": "2025-11-11",
+          "until": "2026-11-11",
+          "multiplier": 5.981733659485623,
+          "cagr_pct": 498.9,
+          "max_dd_pct": 31.2,
+          "mar": 16.01,
+          "sharpe": 2.33,
+          "hold": {
+            "multiplier": 1.0743140841390122,
+            "cagr_pct": 7.4,
+            "max_dd_pct": 50.5,
+            "mar": 0.15,
+            "sharpe": 0.47
+          },
+          "trades": 29,
+          "win_rate_pct": 58.6
+        },
+        "2y": {
+          "since": "2024-11-11",
+          "until": "2026-11-11",
+          "multiplier": 145.49069872800987,
+          "cagr_pct": 1108.3,
+          "max_dd_pct": 31.3,
+          "mar": 35.41,
+          "sharpe": 2.71,
+          "hold": {
+            "multiplier": 1.2181699049837802,
+            "cagr_pct": 10.4,
+            "max_dd_pct": 52.8,
+            "mar": 0.2,
+            "sharpe": 0.5
+          },
+          "trades": 59,
+          "win_rate_pct": 59.3
+        },
+        "since_2023": {
+          "since": "2023-01-01",
+          "until": "2026-11-11",
+          "multiplier": 8394.60381,
+          "cagr_pct": 938.7,
+          "max_dd_pct": 33.8,
+          "mar": 27.78,
+          "sharpe": 2.78,
+          "hold": {
+            "multiplier": 7.184819404639458,
+            "cagr_pct": 66.7,
+            "max_dd_pct": 52.8,
+            "mar": 1.26,
+            "sharpe": 1.1
+          },
+          "trades": 129,
+          "win_rate_pct": 55.8
+        },
+        "since_2022": null,
+        "full": {
+          "since": "2023-01-01",
+          "until": "2026-11-11",
+          "multiplier": 8394.60381,
+          "cagr_pct": 938.7,
+          "max_dd_pct": 33.8,
+          "mar": 27.78,
+          "sharpe": 2.78,
+          "hold": {
+            "multiplier": 7.184819404639458,
+            "cagr_pct": 66.7,
+            "max_dd_pct": 52.8,
+            "mar": 1.26,
+            "sharpe": 1.1
+          },
+          "trades": 129,
+          "win_rate_pct": 55.8
+        }
+      }
+    },
+    {
+      "slug": "rotation-1d-ls-zec",
+      "name": "Rotation 1D L+S +ZEC",
+      "kind": "rotation",
+      "timeframe": "1D",
+      "sleeve": "long-short",
+      "assets": [
+        "BTC",
+        "ETH",
+        "SOL",
+        "SUI",
+        "ZEC",
+        "PAXG"
+      ],
+      "accent": "#f7931a",
+      "glyph": "₿",
+      "ficha_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls-zec.html",
+      "signal_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls-zec.signal.json",
+      "tier": "free",
+      "series_url": "https://how-cl.github.io/strategya-web/latest/rotation-1d-ls-zec.series.json",
+      "summary": {
+        "multiplier": 14422.470711816279,
+        "cagr_pct": 1411.5,
+        "max_dd_pct": 31.3,
+        "mar": 45.1,
+        "sharpe": 3.07,
+        "hold": {
+          "multiplier": 4.966624328689961,
+          "cagr_pct": 57.5,
+          "max_dd_pct": 52.8,
+          "mar": 1.09,
+          "sharpe": 1.01
+        },
+        "trades": 124,
+        "win_rate_pct": 58.9,
+        "last_change": {
+          "date": "2026-11-02",
+          "time_utc": "00:00",
+          "closed": {
+            "asset": "ZEC",
+            "side": "long",
+            "return_pct": -0.09
+          },
+          "opened": []
+        },
+        "open_trade_pct": null,
+        "rank": 1
+      },
+      "kpis_by_window": {
+        "6m": {
+          "since": "2026-05-11",
+          "until": "2026-11-11",
+          "multiplier": 3.090481244833943,
+          "cagr_pct": 839.1,
+          "max_dd_pct": 28.2,
+          "mar": 29.77,
+          "sharpe": 2.74,
+          "hold": {
+            "multiplier": 1.229004712783275,
+            "cagr_pct": 50.6,
+            "max_dd_pct": 35.6,
+            "mar": 1.42,
+            "sharpe": 0.91
+          },
+          "trades": 13,
+          "win_rate_pct": 69.2
+        },
+        "1y": {
+          "since": "2025-11-11",
+          "until": "2026-11-11",
+          "multiplier": 9.987855174459694,
+          "cagr_pct": 900.4,
+          "max_dd_pct": 29.0,
+          "mar": 31.03,
+          "sharpe": 2.82,
+          "hold": {
+            "multiplier": 1.0743140841390122,
+            "cagr_pct": 7.4,
+            "max_dd_pct": 50.5,
+            "mar": 0.15,
+            "sharpe": 0.47
+          },
+          "trades": 34,
+          "win_rate_pct": 61.8
+        },
+        "2y": {
+          "since": "2024-11-11",
+          "until": "2026-11-11",
+          "multiplier": 316.95086310499636,
+          "cagr_pct": 1683.8,
+          "max_dd_pct": 31.3,
+          "mar": 53.8,
+          "sharpe": 3.01,
+          "hold": {
+            "multiplier": 1.2181699049837802,
+            "cagr_pct": 10.4,
+            "max_dd_pct": 52.8,
+            "mar": 0.2,
+            "sharpe": 0.5
+          },
+          "trades": 66,
+          "win_rate_pct": 60.6
+        },
+        "since_2023": {
+          "since": "2023-01-01",
+          "until": "2026-11-11",
+          "multiplier": 24988.51698,
+          "cagr_pct": 1277.8,
+          "max_dd_pct": 36.2,
+          "mar": 35.27,
+          "sharpe": 3.02,
+          "hold": {
+            "multiplier": 7.184819404639458,
+            "cagr_pct": 66.7,
+            "max_dd_pct": 52.8,
+            "mar": 1.26,
+            "sharpe": 1.1
+          },
+          "trades": 139,
+          "win_rate_pct": 58.3
+        },
+        "since_2022": null,
+        "full": {
+          "since": "2023-01-01",
+          "until": "2026-11-11",
+          "multiplier": 24988.51698,
+          "cagr_pct": 1277.8,
+          "max_dd_pct": 36.2,
+          "mar": 35.27,
+          "sharpe": 3.02,
+          "hold": {
+            "multiplier": 7.184819404639458,
+            "cagr_pct": 66.7,
+            "max_dd_pct": 52.8,
+            "mar": 1.26,
+            "sharpe": 1.1
+          },
+          "trades": 139,
+          "win_rate_pct": 58.3
+        }
+      }
+    },
+    {
       "slug": "eth-1d-ls",
       "name": "ETH 1D L+S",
       "kind": "sovereign",
@@ -1662,7 +1946,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 12
+        "rank": 14
       },
       "kpis_by_window": {
         "6m": {
@@ -1799,7 +2083,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 22
+        "rank": 24
       },
       "kpis_by_window": {
         "6m": {
@@ -1936,7 +2220,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 23
+        "rank": 25
       },
       "kpis_by_window": {
         "6m": {
@@ -2077,7 +2361,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 8
+        "rank": 10
       },
       "kpis_by_window": {
         "6m": {
@@ -2218,7 +2502,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 6
+        "rank": 8
       },
       "kpis_by_window": {
         "6m": {
@@ -2359,7 +2643,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 3
+        "rank": 5
       },
       "kpis_by_window": {
         "6m": {
@@ -2496,7 +2780,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 20
+        "rank": 22
       },
       "kpis_by_window": {
         "6m": {
@@ -2650,7 +2934,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 11
+        "rank": 13
       },
       "kpis_by_window": {
         "6m": {
@@ -2787,7 +3071,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 10
+        "rank": 12
       },
       "kpis_by_window": {
         "6m": {
@@ -2930,7 +3214,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 2
+        "rank": 4
       },
       "kpis_by_window": {
         "6m": {
@@ -3090,7 +3374,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 1
+        "rank": 2
       },
       "kpis_by_window": {
         "6m": {
@@ -3246,7 +3530,7 @@
           "opened": []
         },
         "open_trade_pct": null,
-        "rank": 7
+        "rank": 9
       },
       "kpis_by_window": {
         "6m": {

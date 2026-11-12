@@ -1,0 +1,35 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "rotation-1d-zec",
+  "kind": "rotation",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL Rotation 1D v1.6.3 +ZEC +HYPE +TSLA +stop candidato 2026-11-11.pine",
+    "preset": "Winner (v1.1) · Aggressive · +ZEC (M2, 4h) · TSLA off · fixed stop 25%",
+    "symbol": "BINANCE:BTCUSDT",
+    "md5": "8bccc8b550adc6e66a488a91e95e45df"
+  },
+  "decision_bar_label": "2026-11-12T00:00Z",
+  "decision_close_utc": "2026-11-12T00:00:00Z",
+  "valid_until_utc": "2026-11-13T00:00:00Z",
+  "generated_at_utc": "2026-11-12T19:39:00Z",
+  "data_as_of": {
+    "BTC": "2026-11-12"
+  },
+  "cash_asset": "USDT",
+  "reference_price": null,
+  "action": "HOLD",
+  "positions": [],
+  "previous_positions": [],
+  "last_trade": {
+    "asset": "ZEC",
+    "side": "long",
+    "entry_date": "2026-10-27",
+    "exit_date": "2026-11-02",
+    "days": 6,
+    "return_pct": -0.09
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:4f2dd11b0138d2e1c7765272774668a958eb9e6c1ed3daf97b1efca60573d9d2"
+}
