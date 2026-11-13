@@ -10,9 +10,9 @@
  "rule": "Long on the Range Filter buy signal (sampling period 100, multiplier 3); cash on its sell signal.",
  "credit": "Range Filter by DonovanWall, buy/sell version by guikroth: https://www.tradingview.com/script/J8GzFGfD-Range-Filter-Buy-and-Sell-5min-guikroth-version/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-12T00:05:00Z",
- "decision_bar": "2026-11-11",
- "valid_until_utc": "2026-11-13T00:45:00Z",
+ "generated_at_utc": "2026-11-13T00:05:00Z",
+ "decision_bar": "2026-11-12",
+ "valid_until_utc": "2026-11-14T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-12",
@@ -25,18 +25,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-11",
-   "until": "2026-11-11",
+   "since": "2026-05-12",
+   "until": "2026-11-12",
    "cagr_pct": 63.6,
    "max_dd_pct": 13.5,
    "mar": 4.71,
    "sharpe": 1.4,
    "hold": {
-    "cagr_pct": -26.7,
-    "max_dd_pct": 36.1,
-    "mar": -0.74,
-    "sharpe": -0.28,
-    "return_pct": -14.47
+    "cagr_pct": -24.7,
+    "max_dd_pct": 34.0,
+    "mar": -0.73,
+    "sharpe": -0.23,
+    "return_pct": -13.32
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -44,18 +44,18 @@
    "return_pct": 28.16
   },
   "1y": {
-   "since": "2025-11-11",
-   "until": "2026-11-11",
+   "since": "2025-11-12",
+   "until": "2026-11-12",
    "cagr_pct": 28.2,
    "max_dd_pct": 13.5,
    "mar": 2.09,
    "sharpe": 0.99,
    "hold": {
-    "cagr_pct": -46.2,
-    "max_dd_pct": 59.8,
-    "mar": -0.77,
-    "sharpe": -0.7,
-    "return_pct": -46.14
+    "cagr_pct": -46.8,
+    "max_dd_pct": 59.5,
+    "mar": -0.79,
+    "sharpe": -0.71,
+    "return_pct": -46.73
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -63,37 +63,37 @@
    "return_pct": 28.16
   },
   "2y": {
-   "since": "2024-11-11",
-   "until": "2026-11-11",
-   "cagr_pct": -12.3,
+   "since": "2024-11-12",
+   "until": "2026-11-12",
+   "cagr_pct": -10.2,
    "max_dd_pct": 54.7,
-   "mar": -0.22,
-   "sharpe": -0.08,
+   "mar": -0.19,
+   "sharpe": -0.03,
    "hold": {
-    "cagr_pct": -38.8,
+    "cagr_pct": -37.9,
     "max_dd_pct": 76.3,
-    "mar": -0.51,
-    "sharpe": -0.27,
-    "return_pct": -62.51
+    "mar": -0.5,
+    "sharpe": -0.25,
+    "return_pct": -61.39
    },
    "trades": 8,
    "win_rate_pct": 37.5,
-   "time_in_market_pct": 34.2,
-   "return_pct": -23.09
+   "time_in_market_pct": 34.1,
+   "return_pct": -19.27
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 17.3,
    "max_dd_pct": 67.8,
    "mar": 0.26,
    "sharpe": 0.56,
    "hold": {
-    "cagr_pct": 73.2,
+    "cagr_pct": 72.3,
     "max_dd_pct": 76.3,
-    "mar": 0.96,
+    "mar": 0.95,
     "sharpe": 1.06,
-    "return_pct": 733.63
+    "return_pct": 718.02
    },
    "trades": 27,
    "win_rate_pct": 44.4,
@@ -102,17 +102,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 5.8,
    "max_dd_pct": 67.8,
    "mar": 0.09,
    "sharpe": 0.37,
    "hold": {
-    "cagr_pct": -14.6,
+    "cagr_pct": -14.9,
     "max_dd_pct": 94.6,
-    "mar": -0.15,
+    "mar": -0.16,
     "sharpe": 0.29,
-    "return_pct": -53.49
+    "return_pct": -54.36
    },
    "trades": 28,
    "win_rate_pct": 42.9,
@@ -121,17 +121,17 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 29.0,
    "max_dd_pct": 70.1,
    "mar": 0.41,
    "sharpe": 0.73,
    "hold": {
-    "cagr_pct": 67.6,
+    "cagr_pct": 67.1,
     "max_dd_pct": 96.3,
     "mar": 0.7,
-    "sharpe": 1.02,
-    "return_pct": 2424.78
+    "sharpe": 1.01,
+    "return_pct": 2377.49
    },
    "trades": 38,
    "win_rate_pct": 39.5,

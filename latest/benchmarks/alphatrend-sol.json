@@ -10,9 +10,9 @@
  "rule": "Long on the AlphaTrend BUY signal (multiplier 1, period 14, MFI); cash on its SELL signal.",
  "credit": "AlphaTrend by KivancOzbilgic, open source on TradingView: https://www.tradingview.com/script/o50NYLAZ-AlphaTrend/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-12T00:05:00Z",
- "decision_bar": "2026-11-11",
- "valid_until_utc": "2026-11-13T00:45:00Z",
+ "generated_at_utc": "2026-11-13T00:05:00Z",
+ "decision_bar": "2026-11-12",
+ "valid_until_utc": "2026-11-14T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-13",
@@ -25,37 +25,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-11",
-   "until": "2026-11-11",
-   "cagr_pct": -7.7,
-   "max_dd_pct": 21.1,
-   "mar": -0.37,
-   "sharpe": -0.02,
+   "since": "2026-05-12",
+   "until": "2026-11-12",
+   "cagr_pct": -1.6,
+   "max_dd_pct": 18.5,
+   "mar": -0.09,
+   "sharpe": 0.14,
    "hold": {
-    "cagr_pct": -26.7,
-    "max_dd_pct": 36.1,
-    "mar": -0.74,
-    "sharpe": -0.28,
-    "return_pct": -14.47
+    "cagr_pct": -24.7,
+    "max_dd_pct": 34.0,
+    "mar": -0.73,
+    "sharpe": -0.23,
+    "return_pct": -13.32
    },
    "trades": 2,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 48.1,
-   "return_pct": -3.97
+   "time_in_market_pct": 47.6,
+   "return_pct": -0.82
   },
   "1y": {
-   "since": "2025-11-11",
-   "until": "2026-11-11",
+   "since": "2025-11-12",
+   "until": "2026-11-12",
    "cagr_pct": -27.8,
    "max_dd_pct": 43.6,
    "mar": -0.64,
    "sharpe": -0.86,
    "hold": {
-    "cagr_pct": -46.2,
-    "max_dd_pct": 59.8,
-    "mar": -0.77,
-    "sharpe": -0.7,
-    "return_pct": -46.14
+    "cagr_pct": -46.8,
+    "max_dd_pct": 59.5,
+    "mar": -0.79,
+    "sharpe": -0.71,
+    "return_pct": -46.73
    },
    "trades": 5,
    "win_rate_pct": 20.0,
@@ -63,37 +63,37 @@
    "return_pct": -27.77
   },
   "2y": {
-   "since": "2024-11-11",
-   "until": "2026-11-11",
-   "cagr_pct": -32.3,
+   "since": "2024-11-12",
+   "until": "2026-11-12",
+   "cagr_pct": -30.7,
    "max_dd_pct": 67.4,
-   "mar": -0.48,
-   "sharpe": -0.73,
+   "mar": -0.45,
+   "sharpe": -0.67,
    "hold": {
-    "cagr_pct": -38.8,
+    "cagr_pct": -37.9,
     "max_dd_pct": 76.3,
-    "mar": -0.51,
-    "sharpe": -0.27,
-    "return_pct": -62.51
+    "mar": -0.5,
+    "sharpe": -0.25,
+    "return_pct": -61.39
    },
    "trades": 9,
    "win_rate_pct": 22.2,
-   "time_in_market_pct": 39.0,
-   "return_pct": -54.18
+   "time_in_market_pct": 38.9,
+   "return_pct": -51.91
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 41.2,
    "max_dd_pct": 70.8,
    "mar": 0.58,
    "sharpe": 0.86,
    "hold": {
-    "cagr_pct": 73.2,
+    "cagr_pct": 72.3,
     "max_dd_pct": 76.3,
-    "mar": 0.96,
+    "mar": 0.95,
     "sharpe": 1.06,
-    "return_pct": 733.63
+    "return_pct": 718.02
    },
    "trades": 17,
    "win_rate_pct": 41.2,
@@ -102,17 +102,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 6.1,
    "max_dd_pct": 75.2,
    "mar": 0.08,
    "sharpe": 0.41,
    "hold": {
-    "cagr_pct": -14.6,
+    "cagr_pct": -14.9,
     "max_dd_pct": 94.6,
-    "mar": -0.15,
+    "mar": -0.16,
     "sharpe": 0.29,
-    "return_pct": -53.49
+    "return_pct": -54.36
    },
    "trades": 20,
    "win_rate_pct": 40.0,
@@ -121,17 +121,17 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-11",
-   "cagr_pct": 104.3,
+   "until": "2026-11-12",
+   "cagr_pct": 104.2,
    "max_dd_pct": 75.2,
    "mar": 1.39,
    "sharpe": 1.28,
    "hold": {
-    "cagr_pct": 67.6,
+    "cagr_pct": 67.1,
     "max_dd_pct": 96.3,
     "mar": 0.7,
-    "sharpe": 1.02,
-    "return_pct": 2424.78
+    "sharpe": 1.01,
+    "return_pct": 2377.49
    },
    "trades": 22,
    "win_rate_pct": 45.5,

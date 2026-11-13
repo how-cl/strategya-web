@@ -10,9 +10,9 @@
  "rule": "Long when the Machine Learning Adaptive SuperTrend (ATR 10, factor 3, 100-bar k-means) turns bullish; cash when it turns bearish.",
  "credit": "Machine Learning Adaptive SuperTrend by AlgoAlpha (MPL-2.0): https://www.tradingview.com/script/CLk71Qgy-Machine-Learning-Adaptive-SuperTrend-AlgoAlpha/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-12T00:05:00Z",
- "decision_bar": "2026-11-11",
- "valid_until_utc": "2026-11-13T00:45:00Z",
+ "generated_at_utc": "2026-11-13T00:05:00Z",
+ "decision_bar": "2026-11-12",
+ "valid_until_utc": "2026-11-14T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-12",
@@ -25,37 +25,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-11",
-   "until": "2026-11-11",
-   "cagr_pct": 38.5,
-   "max_dd_pct": 19.7,
-   "mar": 1.95,
-   "sharpe": 0.97,
+   "since": "2026-05-12",
+   "until": "2026-11-12",
+   "cagr_pct": 47.7,
+   "max_dd_pct": 17.1,
+   "mar": 2.79,
+   "sharpe": 1.13,
    "hold": {
-    "cagr_pct": -26.7,
-    "max_dd_pct": 36.1,
-    "mar": -0.74,
-    "sharpe": -0.28,
-    "return_pct": -14.47
+    "cagr_pct": -24.7,
+    "max_dd_pct": 34.0,
+    "mar": -0.73,
+    "sharpe": -0.23,
+    "return_pct": -13.32
    },
    "trades": 1,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 60.5,
-   "return_pct": 17.84
+   "time_in_market_pct": 60.0,
+   "return_pct": 21.7
   },
   "1y": {
-   "since": "2025-11-11",
-   "until": "2026-11-11",
+   "since": "2025-11-12",
+   "until": "2026-11-12",
    "cagr_pct": 19.2,
    "max_dd_pct": 19.7,
    "mar": 0.97,
    "sharpe": 0.66,
    "hold": {
-    "cagr_pct": -46.2,
-    "max_dd_pct": 59.8,
-    "mar": -0.77,
-    "sharpe": -0.7,
-    "return_pct": -46.14
+    "cagr_pct": -46.8,
+    "max_dd_pct": 59.5,
+    "mar": -0.79,
+    "sharpe": -0.71,
+    "return_pct": -46.73
    },
    "trades": 2,
    "win_rate_pct": 50.0,
@@ -63,56 +63,56 @@
    "return_pct": 19.17
   },
   "2y": {
-   "since": "2024-11-11",
-   "until": "2026-11-11",
-   "cagr_pct": -14.0,
+   "since": "2024-11-12",
+   "until": "2026-11-12",
+   "cagr_pct": -11.9,
    "max_dd_pct": 56.4,
-   "mar": -0.25,
-   "sharpe": -0.05,
+   "mar": -0.21,
+   "sharpe": -0.0,
    "hold": {
-    "cagr_pct": -38.8,
+    "cagr_pct": -37.9,
     "max_dd_pct": 76.3,
-    "mar": -0.51,
-    "sharpe": -0.27,
-    "return_pct": -62.51
+    "mar": -0.5,
+    "sharpe": -0.25,
+    "return_pct": -61.39
    },
    "trades": 7,
    "win_rate_pct": 42.9,
-   "time_in_market_pct": 49.0,
-   "return_pct": -25.96
+   "time_in_market_pct": 48.8,
+   "return_pct": -22.29
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 56.5,
    "max_dd_pct": 65.5,
    "mar": 0.86,
    "sharpe": 1.01,
    "hold": {
-    "cagr_pct": 73.2,
+    "cagr_pct": 72.3,
     "max_dd_pct": 76.3,
-    "mar": 0.96,
+    "mar": 0.95,
     "sharpe": 1.06,
-    "return_pct": 733.63
+    "return_pct": 718.02
    },
    "trades": 16,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 56.5,
+   "time_in_market_pct": 56.4,
    "return_pct": 463.54
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 21.5,
    "max_dd_pct": 65.5,
    "mar": 0.33,
    "sharpe": 0.62,
    "hold": {
-    "cagr_pct": -14.6,
+    "cagr_pct": -14.9,
     "max_dd_pct": 94.6,
-    "mar": -0.15,
+    "mar": -0.16,
     "sharpe": 0.29,
-    "return_pct": -53.49
+    "return_pct": -54.36
    },
    "trades": 19,
    "win_rate_pct": 42.1,
@@ -121,17 +121,17 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-11",
-   "cagr_pct": 123.9,
+   "until": "2026-11-12",
+   "cagr_pct": 123.8,
    "max_dd_pct": 67.9,
    "mar": 1.82,
    "sharpe": 1.44,
    "hold": {
-    "cagr_pct": 67.6,
+    "cagr_pct": 67.1,
     "max_dd_pct": 96.3,
     "mar": 0.7,
-    "sharpe": 1.02,
-    "return_pct": 2424.78
+    "sharpe": 1.01,
+    "return_pct": 2377.49
    },
    "trades": 22,
    "win_rate_pct": 50.0,

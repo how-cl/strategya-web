@@ -10,9 +10,9 @@
  "rule": "Long when the zero-lag MA 15 crosses above its EMA 15; cash when it crosses below.",
  "credit": "Zero-Lag MA Trend Levels by ChartPrime (MPL-2.0): https://www.tradingview.com/script/pP2FhzAX-Zero-Lag-MA-Trend-Levels-ChartPrime/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-12T00:05:00Z",
- "decision_bar": "2026-11-11",
- "valid_until_utc": "2026-11-13T00:45:00Z",
+ "generated_at_utc": "2026-11-13T00:05:00Z",
+ "decision_bar": "2026-11-12",
+ "valid_until_utc": "2026-11-14T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-11",
@@ -25,37 +25,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-11",
-   "until": "2026-11-11",
-   "cagr_pct": 58.8,
-   "max_dd_pct": 15.3,
-   "mar": 3.83,
-   "sharpe": 1.32,
+   "since": "2026-05-12",
+   "until": "2026-11-12",
+   "cagr_pct": 69.3,
+   "max_dd_pct": 12.6,
+   "mar": 5.52,
+   "sharpe": 1.48,
    "hold": {
-    "cagr_pct": -26.7,
-    "max_dd_pct": 36.1,
-    "mar": -0.74,
-    "sharpe": -0.28,
-    "return_pct": -14.47
+    "cagr_pct": -24.7,
+    "max_dd_pct": 34.0,
+    "mar": -0.73,
+    "sharpe": -0.23,
+    "return_pct": -13.32
    },
    "trades": 2,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 50.8,
-   "return_pct": 26.23
+   "time_in_market_pct": 50.3,
+   "return_pct": 30.37
   },
   "1y": {
-   "since": "2025-11-11",
-   "until": "2026-11-11",
+   "since": "2025-11-12",
+   "until": "2026-11-12",
    "cagr_pct": 15.4,
    "max_dd_pct": 29.1,
    "mar": 0.53,
    "sharpe": 0.58,
    "hold": {
-    "cagr_pct": -46.2,
-    "max_dd_pct": 59.8,
-    "mar": -0.77,
-    "sharpe": -0.7,
-    "return_pct": -46.14
+    "cagr_pct": -46.8,
+    "max_dd_pct": 59.5,
+    "mar": -0.79,
+    "sharpe": -0.71,
+    "return_pct": -46.73
    },
    "trades": 6,
    "win_rate_pct": 33.3,
@@ -63,37 +63,37 @@
    "return_pct": 15.43
   },
   "2y": {
-   "since": "2024-11-11",
-   "until": "2026-11-11",
-   "cagr_pct": 0.2,
+   "since": "2024-11-12",
+   "until": "2026-11-12",
+   "cagr_pct": 2.7,
    "max_dd_pct": 51.4,
-   "mar": 0.0,
-   "sharpe": 0.24,
+   "mar": 0.05,
+   "sharpe": 0.29,
    "hold": {
-    "cagr_pct": -38.8,
+    "cagr_pct": -37.9,
     "max_dd_pct": 76.3,
-    "mar": -0.51,
-    "sharpe": -0.27,
-    "return_pct": -62.51
+    "mar": -0.5,
+    "sharpe": -0.25,
+    "return_pct": -61.39
    },
    "trades": 13,
    "win_rate_pct": 38.5,
-   "time_in_market_pct": 44.0,
-   "return_pct": 0.46
+   "time_in_market_pct": 43.9,
+   "return_pct": 5.44
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 74.8,
    "max_dd_pct": 52.7,
    "mar": 1.42,
    "sharpe": 1.19,
    "hold": {
-    "cagr_pct": 73.2,
+    "cagr_pct": 72.3,
     "max_dd_pct": 76.3,
-    "mar": 0.96,
+    "mar": 0.95,
     "sharpe": 1.06,
-    "return_pct": 733.63
+    "return_pct": 718.02
    },
    "trades": 29,
    "win_rate_pct": 37.9,
@@ -102,17 +102,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-11",
-   "cagr_pct": 39.9,
+   "until": "2026-11-12",
+   "cagr_pct": 39.8,
    "max_dd_pct": 62.6,
    "mar": 0.64,
    "sharpe": 0.85,
    "hold": {
-    "cagr_pct": -14.6,
+    "cagr_pct": -14.9,
     "max_dd_pct": 94.6,
-    "mar": -0.15,
+    "mar": -0.16,
     "sharpe": 0.29,
-    "return_pct": -53.49
+    "return_pct": -54.36
    },
    "trades": 34,
    "win_rate_pct": 35.3,
@@ -121,21 +121,21 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-11",
+   "until": "2026-11-12",
    "cagr_pct": 136.6,
    "max_dd_pct": 62.6,
    "mar": 2.18,
    "sharpe": 1.47,
    "hold": {
-    "cagr_pct": 67.6,
+    "cagr_pct": 67.1,
     "max_dd_pct": 96.3,
     "mar": 0.7,
-    "sharpe": 1.02,
-    "return_pct": 2424.78
+    "sharpe": 1.01,
+    "return_pct": 2377.49
    },
    "trades": 41,
    "win_rate_pct": 36.6,
-   "time_in_market_pct": 47.2,
+   "time_in_market_pct": 47.1,
    "return_pct": 21690.57
   }
  },
