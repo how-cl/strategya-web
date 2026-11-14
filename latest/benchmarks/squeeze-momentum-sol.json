@@ -1,0 +1,150 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "squeeze-momentum-sol",
+ "benchmark": "squeeze-momentum",
+ "name": "Squeeze Momentum",
+ "free_indicator": false,
+ "family": "community",
+ "asset": "SOL",
+ "symbol": "BINANCE:SOLUSDT",
+ "timeframe": "1D",
+ "rule": "Long when the squeeze momentum histogram crosses above zero; cash when it crosses below.",
+ "credit": "Squeeze Momentum Indicator by LazyBear: https://www.tradingview.com/script/nqQ1DT5a-Squeeze-Momentum-Indicator-LazyBear/",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
+ "generated_at_utc": "2026-11-14T20:54:00Z",
+ "decision_bar": "2026-11-13",
+ "valid_until_utc": "2026-11-15T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-10-10",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-09-22",
+  "exit_date": "2026-10-11",
+  "return_pct": -7.61
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-13",
+   "until": "2026-11-13",
+   "cagr_pct": 36.9,
+   "max_dd_pct": 16.7,
+   "mar": 2.21,
+   "sharpe": 1.02,
+   "hold": {
+    "cagr_pct": -26.3,
+    "max_dd_pct": 36.0,
+    "mar": -0.73,
+    "sharpe": -0.27,
+    "return_pct": -14.24
+   },
+   "trades": 3,
+   "win_rate_pct": 66.7,
+   "time_in_market_pct": 48.1,
+   "return_pct": 17.13
+  },
+  "1y": {
+   "since": "2025-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -7.6,
+   "max_dd_pct": 31.2,
+   "mar": -0.24,
+   "sharpe": -0.04,
+   "hold": {
+    "cagr_pct": -46.0,
+    "max_dd_pct": 57.6,
+    "mar": -0.8,
+    "sharpe": -0.69,
+    "return_pct": -45.98
+   },
+   "trades": 8,
+   "win_rate_pct": 25.0,
+   "time_in_market_pct": 46.2,
+   "return_pct": -7.56
+  },
+  "2y": {
+   "since": "2024-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -18.8,
+   "max_dd_pct": 59.0,
+   "mar": -0.32,
+   "sharpe": -0.22,
+   "hold": {
+    "cagr_pct": -39.7,
+    "max_dd_pct": 76.3,
+    "mar": -0.52,
+    "sharpe": -0.29,
+    "return_pct": -63.65
+   },
+   "trades": 15,
+   "win_rate_pct": 26.7,
+   "time_in_market_pct": 47.5,
+   "return_pct": -34.05
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-13",
+   "cagr_pct": 66.1,
+   "max_dd_pct": 59.0,
+   "mar": 1.12,
+   "sharpe": 1.11,
+   "hold": {
+    "cagr_pct": 70.3,
+    "max_dd_pct": 76.3,
+    "mar": 0.92,
+    "sharpe": 1.04,
+    "return_pct": 682.68
+   },
+   "trades": 31,
+   "win_rate_pct": 41.9,
+   "time_in_market_pct": 52.8,
+   "return_pct": 611.7
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-13",
+   "cagr_pct": 0.1,
+   "max_dd_pct": 86.4,
+   "mar": 0.0,
+   "sharpe": 0.34,
+   "hold": {
+    "cagr_pct": -15.7,
+    "max_dd_pct": 94.6,
+    "mar": -0.17,
+    "sharpe": 0.28,
+    "return_pct": -56.33
+   },
+   "trades": 41,
+   "win_rate_pct": 34.1,
+   "time_in_market_pct": 49.0,
+   "return_pct": 0.65
+  },
+  "full": {
+   "since": "2020-08-11",
+   "until": "2026-11-13",
+   "cagr_pct": 67.6,
+   "max_dd_pct": 90.5,
+   "mar": 0.75,
+   "sharpe": 1.04,
+   "hold": {
+    "cagr_pct": 65.9,
+    "max_dd_pct": 96.3,
+    "mar": 0.68,
+    "sharpe": 1.01,
+    "return_pct": 2270.47
+   },
+   "trades": 53,
+   "win_rate_pct": 35.8,
+   "time_in_market_pct": 50.1,
+   "return_pct": 2425.37
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-10-11",
+  "tv_pnl_pct": 2417.36,
+  "engine_pnl_pct": 2425.37,
+  "deviation_pct": 0.318
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}

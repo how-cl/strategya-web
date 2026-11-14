@@ -1,0 +1,150 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "parabolic-sar-eth",
+ "benchmark": "parabolic-sar",
+ "name": "Parabolic SAR",
+ "free_indicator": false,
+ "family": "classic",
+ "asset": "ETH",
+ "symbol": "BINANCE:ETHUSDT",
+ "timeframe": "1D",
+ "rule": "Long when the SAR dots flip below the price; cash when they flip above (0.02, 0.02, 0.2).",
+ "credit": "Parabolic SAR by J. Welles Wilder (public domain), TradingView default settings",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
+ "generated_at_utc": "2026-11-14T20:54:00Z",
+ "decision_bar": "2026-11-13",
+ "valid_until_utc": "2026-11-15T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-11-08",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-11-04",
+  "exit_date": "2026-11-09",
+  "return_pct": -6.67
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-13",
+   "until": "2026-11-13",
+   "cagr_pct": 20.2,
+   "max_dd_pct": 16.1,
+   "mar": 1.25,
+   "sharpe": 0.64,
+   "hold": {
+    "cagr_pct": -26.8,
+    "max_dd_pct": 31.3,
+    "mar": -0.86,
+    "sharpe": -0.32,
+    "return_pct": -14.56
+   },
+   "trades": 8,
+   "win_rate_pct": 25.0,
+   "time_in_market_pct": 53.0,
+   "return_pct": 9.72
+  },
+  "1y": {
+   "since": "2025-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -20.8,
+   "max_dd_pct": 34.5,
+   "mar": -0.6,
+   "sharpe": -0.35,
+   "hold": {
+    "cagr_pct": -40.3,
+    "max_dd_pct": 53.3,
+    "mar": -0.76,
+    "sharpe": -0.56,
+    "return_pct": -40.28
+   },
+   "trades": 16,
+   "win_rate_pct": 31.2,
+   "time_in_market_pct": 54.6,
+   "return_pct": -20.79
+  },
+  "2y": {
+   "since": "2024-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -33.3,
+   "max_dd_pct": 68.2,
+   "mar": -0.49,
+   "sharpe": -0.68,
+   "hold": {
+    "cagr_pct": -22.2,
+    "max_dd_pct": 67.6,
+    "mar": -0.33,
+    "sharpe": -0.03,
+    "return_pct": -39.45
+   },
+   "trades": 32,
+   "win_rate_pct": 31.2,
+   "time_in_market_pct": 51.0,
+   "return_pct": -55.46
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-13",
+   "cagr_pct": -17.9,
+   "max_dd_pct": 78.0,
+   "mar": -0.23,
+   "sharpe": -0.27,
+   "hold": {
+    "cagr_pct": 13.1,
+    "max_dd_pct": 67.6,
+    "mar": 0.19,
+    "sharpe": 0.51,
+    "return_pct": 60.78
+   },
+   "trades": 61,
+   "win_rate_pct": 32.8,
+   "time_in_market_pct": 51.0,
+   "return_pct": -53.37
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-13",
+   "cagr_pct": -22.9,
+   "max_dd_pct": 78.0,
+   "mar": -0.29,
+   "sharpe": -0.36,
+   "hold": {
+    "cagr_pct": -12.8,
+    "max_dd_pct": 74.0,
+    "mar": -0.17,
+    "sharpe": 0.14,
+    "return_pct": -48.75
+   },
+   "trades": 76,
+   "win_rate_pct": 31.6,
+   "time_in_market_pct": 48.9,
+   "return_pct": -71.79
+  },
+  "full": {
+   "since": "2018-01-01",
+   "until": "2026-11-13",
+   "cagr_pct": 6.0,
+   "max_dd_pct": 82.5,
+   "mar": 0.07,
+   "sharpe": 0.39,
+   "hold": {
+    "cagr_pct": 11.2,
+    "max_dd_pct": 94.0,
+    "mar": 0.12,
+    "sharpe": 0.55,
+    "return_pct": 155.62
+   },
+   "trades": 127,
+   "win_rate_pct": 37.8,
+   "time_in_market_pct": 50.3,
+   "return_pct": 67.09
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-11-09",
+  "tv_pnl_pct": 67.13,
+  "engine_pnl_pct": 67.09,
+  "deviation_pct": 0.023
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}

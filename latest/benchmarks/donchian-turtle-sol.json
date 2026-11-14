@@ -1,0 +1,150 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "donchian-turtle-sol",
+ "benchmark": "donchian-turtle",
+ "name": "Donchian Breakout (Turtle 20/10)",
+ "free_indicator": false,
+ "family": "classic",
+ "asset": "SOL",
+ "symbol": "BINANCE:SOLUSDT",
+ "timeframe": "1D",
+ "rule": "Long when the close breaks the prior 20-day high; cash when it breaks the prior 10-day low.",
+ "credit": "Donchian channel breakout in the style of the Turtle Traders (public domain), on daily closes",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
+ "generated_at_utc": "2026-11-14T20:54:00Z",
+ "decision_bar": "2026-11-13",
+ "valid_until_utc": "2026-11-15T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-10-07",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-09-19",
+  "exit_date": "2026-10-08",
+  "return_pct": 2.97
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-13",
+   "until": "2026-11-13",
+   "cagr_pct": 10.7,
+   "max_dd_pct": 12.7,
+   "mar": 0.84,
+   "sharpe": 0.48,
+   "hold": {
+    "cagr_pct": -26.3,
+    "max_dd_pct": 36.0,
+    "mar": -0.73,
+    "sharpe": -0.27,
+    "return_pct": -14.24
+   },
+   "trades": 3,
+   "win_rate_pct": 66.7,
+   "time_in_market_pct": 34.1,
+   "return_pct": 5.25
+  },
+  "1y": {
+   "since": "2025-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -10.4,
+   "max_dd_pct": 27.7,
+   "mar": -0.38,
+   "sharpe": -0.24,
+   "hold": {
+    "cagr_pct": -46.0,
+    "max_dd_pct": 57.6,
+    "mar": -0.8,
+    "sharpe": -0.69,
+    "return_pct": -45.98
+   },
+   "trades": 6,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 31.1,
+   "return_pct": -10.38
+  },
+  "2y": {
+   "since": "2024-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -11.3,
+   "max_dd_pct": 43.5,
+   "mar": -0.26,
+   "sharpe": -0.12,
+   "hold": {
+    "cagr_pct": -39.7,
+    "max_dd_pct": 76.3,
+    "mar": -0.52,
+    "sharpe": -0.29,
+    "return_pct": -63.65
+   },
+   "trades": 10,
+   "win_rate_pct": 40.0,
+   "time_in_market_pct": 36.7,
+   "return_pct": -21.3
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-13",
+   "cagr_pct": 39.6,
+   "max_dd_pct": 59.9,
+   "mar": 0.66,
+   "sharpe": 0.86,
+   "hold": {
+    "cagr_pct": 70.3,
+    "max_dd_pct": 76.3,
+    "mar": 0.92,
+    "sharpe": 1.04,
+    "return_pct": 682.68
+   },
+   "trades": 23,
+   "win_rate_pct": 39.1,
+   "time_in_market_pct": 43.0,
+   "return_pct": 263.01
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-13",
+   "cagr_pct": 14.7,
+   "max_dd_pct": 71.0,
+   "mar": 0.21,
+   "sharpe": 0.52,
+   "hold": {
+    "cagr_pct": -15.7,
+    "max_dd_pct": 94.6,
+    "mar": -0.17,
+    "sharpe": 0.28,
+    "return_pct": -56.33
+   },
+   "trades": 27,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 36.1,
+   "return_pct": 94.82
+  },
+  "full": {
+   "since": "2020-08-11",
+   "until": "2026-11-13",
+   "cagr_pct": 89.0,
+   "max_dd_pct": 72.5,
+   "mar": 1.23,
+   "sharpe": 1.23,
+   "hold": {
+    "cagr_pct": 65.9,
+    "max_dd_pct": 96.3,
+    "mar": 0.68,
+    "sharpe": 1.01,
+    "return_pct": 2270.47
+   },
+   "trades": 32,
+   "win_rate_pct": 40.6,
+   "time_in_market_pct": 37.6,
+   "return_pct": 5267.6
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-10-08",
+  "tv_pnl_pct": 5274.34,
+  "engine_pnl_pct": 5267.6,
+  "deviation_pct": 0.125
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}
