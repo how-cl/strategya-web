@@ -10,9 +10,9 @@
  "rule": "Long when our trend engine turns bullish and volume and money flow confirm; cash when the trend weakens or at a protective stop.",
  "credit": "Free indicator by Strategya.pro",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-13T10:37:00Z",
- "decision_bar": "2026-11-12",
- "valid_until_utc": "2026-11-14T00:45:00Z",
+ "generated_at_utc": "2026-11-14T00:05:00Z",
+ "decision_bar": "2026-11-13",
+ "valid_until_utc": "2026-11-15T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-09",
@@ -25,37 +25,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-12",
-   "until": "2026-11-12",
-   "cagr_pct": 32.4,
+   "since": "2026-05-13",
+   "until": "2026-11-13",
+   "cagr_pct": 41.5,
    "max_dd_pct": 11.2,
-   "mar": 2.89,
-   "sharpe": 0.98,
+   "mar": 3.7,
+   "sharpe": 1.17,
    "hold": {
-    "cagr_pct": -24.7,
-    "max_dd_pct": 34.0,
+    "cagr_pct": -26.3,
+    "max_dd_pct": 36.0,
     "mar": -0.73,
-    "sharpe": -0.23,
-    "return_pct": -13.32
+    "sharpe": -0.27,
+    "return_pct": -14.24
    },
    "trades": 1,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 30.8,
-   "return_pct": 15.2
+   "time_in_market_pct": 30.3,
+   "return_pct": 19.13
   },
   "1y": {
-   "since": "2025-11-12",
-   "until": "2026-11-12",
+   "since": "2025-11-13",
+   "until": "2026-11-13",
    "cagr_pct": 2.9,
    "max_dd_pct": 19.9,
    "mar": 0.15,
    "sharpe": 0.24,
    "hold": {
-    "cagr_pct": -46.8,
-    "max_dd_pct": 59.5,
-    "mar": -0.79,
-    "sharpe": -0.71,
-    "return_pct": -46.73
+    "cagr_pct": -46.0,
+    "max_dd_pct": 57.6,
+    "mar": -0.8,
+    "sharpe": -0.69,
+    "return_pct": -45.98
    },
    "trades": 4,
    "win_rate_pct": 25.0,
@@ -63,56 +63,56 @@
    "return_pct": 2.9
   },
   "2y": {
-   "since": "2024-11-12",
-   "until": "2026-11-12",
-   "cagr_pct": -14.0,
+   "since": "2024-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -14.7,
    "max_dd_pct": 52.2,
-   "mar": -0.27,
-   "sharpe": -0.31,
+   "mar": -0.28,
+   "sharpe": -0.34,
    "hold": {
-    "cagr_pct": -37.9,
+    "cagr_pct": -39.7,
     "max_dd_pct": 76.3,
-    "mar": -0.5,
-    "sharpe": -0.25,
-    "return_pct": -61.39
+    "mar": -0.52,
+    "sharpe": -0.29,
+    "return_pct": -63.65
    },
    "trades": 8,
    "win_rate_pct": 25.0,
-   "time_in_market_pct": 24.1,
-   "return_pct": -25.99
+   "time_in_market_pct": 23.9,
+   "return_pct": -27.19
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-12",
+   "until": "2026-11-13",
    "cagr_pct": -12.6,
    "max_dd_pct": 71.2,
    "mar": -0.18,
    "sharpe": -0.16,
    "hold": {
-    "cagr_pct": 72.3,
+    "cagr_pct": 70.3,
     "max_dd_pct": 76.3,
-    "mar": 0.95,
-    "sharpe": 1.06,
-    "return_pct": 718.02
+    "mar": 0.92,
+    "sharpe": 1.04,
+    "return_pct": 682.68
    },
    "trades": 19,
    "win_rate_pct": 21.1,
-   "time_in_market_pct": 22.7,
+   "time_in_market_pct": 22.6,
    "return_pct": -40.68
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-12",
+   "until": "2026-11-13",
    "cagr_pct": -18.2,
    "max_dd_pct": 76.9,
    "mar": -0.24,
    "sharpe": -0.36,
    "hold": {
-    "cagr_pct": -14.9,
+    "cagr_pct": -15.7,
     "max_dd_pct": 94.6,
-    "mar": -0.16,
-    "sharpe": 0.29,
-    "return_pct": -54.36
+    "mar": -0.17,
+    "sharpe": 0.28,
+    "return_pct": -56.33
    },
    "trades": 24,
    "win_rate_pct": 16.7,
@@ -121,17 +121,17 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-12",
+   "until": "2026-11-13",
    "cagr_pct": -17.0,
    "max_dd_pct": 78.6,
    "mar": -0.22,
    "sharpe": -0.38,
    "hold": {
-    "cagr_pct": 67.1,
+    "cagr_pct": 65.9,
     "max_dd_pct": 96.3,
-    "mar": 0.7,
+    "mar": 0.68,
     "sharpe": 1.01,
-    "return_pct": 2377.49
+    "return_pct": 2270.47
    },
    "trades": 26,
    "win_rate_pct": 15.4,

@@ -10,9 +10,9 @@
  "rule": "Long on the AlphaTrend BUY signal (multiplier 1, period 14, MFI); cash on its SELL signal.",
  "credit": "AlphaTrend by KivancOzbilgic, open source on TradingView: https://www.tradingview.com/script/o50NYLAZ-AlphaTrend/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-13T10:37:00Z",
- "decision_bar": "2026-11-12",
- "valid_until_utc": "2026-11-14T00:45:00Z",
+ "generated_at_utc": "2026-11-14T00:05:00Z",
+ "decision_bar": "2026-11-13",
+ "valid_until_utc": "2026-11-15T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-13",
@@ -25,37 +25,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-12",
-   "until": "2026-11-12",
-   "cagr_pct": -1.6,
-   "max_dd_pct": 18.5,
-   "mar": -0.09,
-   "sharpe": 0.14,
+   "since": "2026-05-13",
+   "until": "2026-11-13",
+   "cagr_pct": 5.2,
+   "max_dd_pct": 16.6,
+   "mar": 0.31,
+   "sharpe": 0.32,
    "hold": {
-    "cagr_pct": -24.7,
-    "max_dd_pct": 34.0,
+    "cagr_pct": -26.3,
+    "max_dd_pct": 36.0,
     "mar": -0.73,
-    "sharpe": -0.23,
-    "return_pct": -13.32
+    "sharpe": -0.27,
+    "return_pct": -14.24
    },
    "trades": 2,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 47.6,
-   "return_pct": -0.82
+   "time_in_market_pct": 47.0,
+   "return_pct": 2.56
   },
   "1y": {
-   "since": "2025-11-12",
-   "until": "2026-11-12",
+   "since": "2025-11-13",
+   "until": "2026-11-13",
    "cagr_pct": -27.8,
    "max_dd_pct": 43.6,
    "mar": -0.64,
    "sharpe": -0.86,
    "hold": {
-    "cagr_pct": -46.8,
-    "max_dd_pct": 59.5,
-    "mar": -0.79,
-    "sharpe": -0.71,
-    "return_pct": -46.73
+    "cagr_pct": -46.0,
+    "max_dd_pct": 57.6,
+    "mar": -0.8,
+    "sharpe": -0.69,
+    "return_pct": -45.98
    },
    "trades": 5,
    "win_rate_pct": 20.0,
@@ -63,56 +63,56 @@
    "return_pct": -27.77
   },
   "2y": {
-   "since": "2024-11-12",
-   "until": "2026-11-12",
-   "cagr_pct": -30.7,
+   "since": "2024-11-13",
+   "until": "2026-11-13",
+   "cagr_pct": -31.2,
    "max_dd_pct": 67.4,
-   "mar": -0.45,
-   "sharpe": -0.67,
+   "mar": -0.46,
+   "sharpe": -0.69,
    "hold": {
-    "cagr_pct": -37.9,
+    "cagr_pct": -39.7,
     "max_dd_pct": 76.3,
-    "mar": -0.5,
-    "sharpe": -0.25,
-    "return_pct": -61.39
+    "mar": -0.52,
+    "sharpe": -0.29,
+    "return_pct": -63.65
    },
    "trades": 9,
    "win_rate_pct": 22.2,
-   "time_in_market_pct": 38.9,
-   "return_pct": -51.91
+   "time_in_market_pct": 38.7,
+   "return_pct": -52.69
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-12",
-   "cagr_pct": 41.2,
+   "until": "2026-11-13",
+   "cagr_pct": 41.1,
    "max_dd_pct": 70.8,
    "mar": 0.58,
    "sharpe": 0.86,
    "hold": {
-    "cagr_pct": 72.3,
+    "cagr_pct": 70.3,
     "max_dd_pct": 76.3,
-    "mar": 0.95,
-    "sharpe": 1.06,
-    "return_pct": 718.02
+    "mar": 0.92,
+    "sharpe": 1.04,
+    "return_pct": 682.68
    },
    "trades": 17,
    "win_rate_pct": 41.2,
-   "time_in_market_pct": 48.6,
+   "time_in_market_pct": 48.5,
    "return_pct": 278.73
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-12",
+   "until": "2026-11-13",
    "cagr_pct": 6.1,
    "max_dd_pct": 75.2,
    "mar": 0.08,
    "sharpe": 0.41,
    "hold": {
-    "cagr_pct": -14.9,
+    "cagr_pct": -15.7,
     "max_dd_pct": 94.6,
-    "mar": -0.16,
-    "sharpe": 0.29,
-    "return_pct": -54.36
+    "mar": -0.17,
+    "sharpe": 0.28,
+    "return_pct": -56.33
    },
    "trades": 20,
    "win_rate_pct": 40.0,
@@ -121,17 +121,17 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-12",
+   "until": "2026-11-13",
    "cagr_pct": 104.2,
    "max_dd_pct": 75.2,
    "mar": 1.39,
    "sharpe": 1.28,
    "hold": {
-    "cagr_pct": 67.1,
+    "cagr_pct": 65.9,
     "max_dd_pct": 96.3,
-    "mar": 0.7,
+    "mar": 0.68,
     "sharpe": 1.01,
-    "return_pct": 2377.49
+    "return_pct": 2270.47
    },
    "trades": 22,
    "win_rate_pct": 45.5,
