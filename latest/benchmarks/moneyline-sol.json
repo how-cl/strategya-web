@@ -11,9 +11,9 @@
  "rule": "Long when Community MoneyLine (ATR 7, depth 3.5, Heikin Ashi) flips Bullish; cash when it flips Bearish.",
  "credit": "Community MoneyLine by rafstar_kaczmarek, open source on TradingView: https://www.tradingview.com/script/8PKjTIwv-Community-MoneyLine/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-14T20:54:00Z",
- "decision_bar": "2026-11-13",
- "valid_until_utc": "2026-11-15T00:45:00Z",
+ "generated_at_utc": "2026-11-15T00:05:00Z",
+ "decision_bar": "2026-11-14",
+ "valid_until_utc": "2026-11-16T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-08",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-13",
-   "until": "2026-11-13",
-   "cagr_pct": 73.3,
+   "since": "2026-05-14",
+   "until": "2026-11-14",
+   "cagr_pct": 69.6,
    "max_dd_pct": 14.3,
-   "mar": 5.14,
-   "sharpe": 1.53,
+   "mar": 4.88,
+   "sharpe": 1.48,
    "hold": {
-    "cagr_pct": -26.3,
-    "max_dd_pct": 36.0,
-    "mar": -0.73,
-    "sharpe": -0.27,
-    "return_pct": -14.24
+    "cagr_pct": -41.6,
+    "max_dd_pct": 42.5,
+    "mar": -0.98,
+    "sharpe": -0.65,
+    "return_pct": -23.73
    },
    "trades": 1,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 56.2,
-   "return_pct": 31.9
+   "time_in_market_pct": 55.7,
+   "return_pct": 30.5
   },
   "1y": {
-   "since": "2025-11-13",
-   "until": "2026-11-13",
+   "since": "2025-11-14",
+   "until": "2026-11-14",
    "cagr_pct": -4.8,
    "max_dd_pct": 39.8,
    "mar": -0.12,
    "sharpe": 0.02,
    "hold": {
-    "cagr_pct": -46.0,
+    "cagr_pct": -49.4,
     "max_dd_pct": 57.6,
-    "mar": -0.8,
-    "sharpe": -0.69,
-    "return_pct": -45.98
+    "mar": -0.86,
+    "sharpe": -0.78,
+    "return_pct": -49.41
    },
    "trades": 4,
    "win_rate_pct": 25.0,
@@ -64,37 +64,37 @@
    "return_pct": -4.83
   },
   "2y": {
-   "since": "2024-11-13",
-   "until": "2026-11-13",
-   "cagr_pct": -25.3,
+   "since": "2024-11-14",
+   "until": "2026-11-14",
+   "cagr_pct": -24.3,
    "max_dd_pct": 69.3,
-   "mar": -0.36,
-   "sharpe": -0.48,
+   "mar": -0.35,
+   "sharpe": -0.45,
    "hold": {
-    "cagr_pct": -39.7,
+    "cagr_pct": -42.1,
     "max_dd_pct": 76.3,
-    "mar": -0.52,
-    "sharpe": -0.29,
-    "return_pct": -63.65
+    "mar": -0.55,
+    "sharpe": -0.34,
+    "return_pct": -66.46
    },
    "trades": 8,
    "win_rate_pct": 25.0,
-   "time_in_market_pct": 43.0,
-   "return_pct": -44.14
+   "time_in_market_pct": 42.8,
+   "return_pct": -42.66
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-13",
-   "cagr_pct": 55.4,
+   "until": "2026-11-14",
+   "cagr_pct": 55.3,
    "max_dd_pct": 69.9,
    "mar": 0.79,
    "sharpe": 1.01,
    "hold": {
-    "cagr_pct": 70.3,
+    "cagr_pct": 65.6,
     "max_dd_pct": 76.3,
-    "mar": 0.92,
-    "sharpe": 1.04,
-    "return_pct": 682.68
+    "mar": 0.86,
+    "sharpe": 1.01,
+    "return_pct": 603.5
    },
    "trades": 16,
    "win_rate_pct": 37.5,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-13",
+   "until": "2026-11-14",
    "cagr_pct": 22.7,
    "max_dd_pct": 69.9,
    "mar": 0.33,
    "sharpe": 0.63,
    "hold": {
-    "cagr_pct": -15.7,
+    "cagr_pct": -17.5,
     "max_dd_pct": 94.6,
-    "mar": -0.17,
-    "sharpe": 0.28,
-    "return_pct": -56.33
+    "mar": -0.18,
+    "sharpe": 0.26,
+    "return_pct": -60.75
    },
    "trades": 20,
    "win_rate_pct": 30.0,
@@ -122,21 +122,21 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-13",
-   "cagr_pct": 128.3,
+   "until": "2026-11-14",
+   "cagr_pct": 128.2,
    "max_dd_pct": 69.9,
    "mar": 1.83,
    "sharpe": 1.43,
    "hold": {
-    "cagr_pct": 65.9,
+    "cagr_pct": 63.0,
     "max_dd_pct": 96.3,
-    "mar": 0.68,
-    "sharpe": 1.01,
-    "return_pct": 2270.47
+    "mar": 0.65,
+    "sharpe": 0.99,
+    "return_pct": 2030.67
    },
    "trades": 23,
    "win_rate_pct": 34.8,
-   "time_in_market_pct": 50.7,
+   "time_in_market_pct": 50.6,
    "return_pct": 17385.35
   }
  },
