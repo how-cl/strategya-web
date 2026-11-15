@@ -1,0 +1,35 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "spy-1d",
+  "kind": "sovereign",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL Indices 1D v1.1 2026-11-15.pine",
+    "preset": "SPY",
+    "symbol": "AMEX:SPY",
+    "md5": "407993aaf254b10075cc025cf291cbb9"
+  },
+  "decision_bar_label": "2026-11-13T21:00Z",
+  "decision_close_utc": "2026-11-13T21:00:00Z",
+  "valid_until_utc": "2026-11-16T21:00:00Z",
+  "generated_at_utc": "2026-11-15T21:16:00Z",
+  "data_as_of": {
+    "SPY": "2026-11-15"
+  },
+  "cash_asset": "USD",
+  "reference_price": 754.37,
+  "action": "HOLD",
+  "positions": [],
+  "previous_positions": [],
+  "last_trade": {
+    "asset": "SPY",
+    "side": "long",
+    "entry_date": "2026-10-28",
+    "exit_date": "2026-11-02",
+    "days": 5,
+    "return_pct": -1.75
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:5cf34213f89f068f7f3161cbd4d9f4f0bcfb52fba0fe0fc6f2ceedadf9535b00"
+}
