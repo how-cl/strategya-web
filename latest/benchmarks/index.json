@@ -1,6 +1,6 @@
 {
  "schema": "strategya.benchmark/0.1",
- "generated_at_utc": "2026-11-17T00:06:00Z",
+ "generated_at_utc": "2026-11-17T01:40:00Z",
  "base_url": "https://how-cl.github.io/strategya-web/latest/benchmarks/",
  "disclaimer": "Simulated backtests, not real performance. Not investment advice.",
  "items": [
@@ -373,6 +373,38 @@
    "position_since": "2026-10-10"
   },
   {
+   "id": "volumatic-vidya-btc",
+   "benchmark": "volumatic-vidya",
+   "name": "Volumatic VIDYA",
+   "free_indicator": false,
+   "family": "community",
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-16",
+   "mar": 0.28,
+   "cagr_pct": 15.4,
+   "max_dd_pct": 55.7,
+   "hold_mar": 0.24,
+   "position": "cash",
+   "position_since": "2026-11-02"
+  },
+  {
+   "id": "volumatic-trend-btc",
+   "benchmark": "volumatic-trend",
+   "name": "Volumatic Trend",
+   "free_indicator": false,
+   "family": "community",
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-16",
+   "mar": 0.61,
+   "cagr_pct": 34.7,
+   "max_dd_pct": 56.7,
+   "hold_mar": 0.24,
+   "position": "cash",
+   "position_since": "2026-10-24"
+  },
+  {
    "id": "supertrend-eth",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -741,6 +773,38 @@
    "position_since": "2026-10-08"
   },
   {
+   "id": "volumatic-vidya-eth",
+   "benchmark": "volumatic-vidya",
+   "name": "Volumatic VIDYA",
+   "free_indicator": false,
+   "family": "community",
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-16",
+   "mar": 0.59,
+   "cagr_pct": 36.4,
+   "max_dd_pct": 62.2,
+   "hold_mar": 0.11,
+   "position": "cash",
+   "position_since": "2026-10-29"
+  },
+  {
+   "id": "volumatic-trend-eth",
+   "benchmark": "volumatic-trend",
+   "name": "Volumatic Trend",
+   "free_indicator": false,
+   "family": "community",
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-16",
+   "mar": 0.53,
+   "cagr_pct": 39.2,
+   "max_dd_pct": 73.6,
+   "hold_mar": 0.11,
+   "position": "cash",
+   "position_since": "2026-10-09"
+  },
+  {
    "id": "supertrend-sol",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -1107,6 +1171,38 @@
    "hold_mar": 0.66,
    "position": "cash",
    "position_since": "2026-10-10"
+  },
+  {
+   "id": "volumatic-vidya-sol",
+   "benchmark": "volumatic-vidya",
+   "name": "Volumatic VIDYA",
+   "free_indicator": false,
+   "family": "community",
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-16",
+   "mar": 0.4,
+   "cagr_pct": 33.0,
+   "max_dd_pct": 82.5,
+   "hold_mar": 0.66,
+   "position": "cash",
+   "position_since": "2026-10-29"
+  },
+  {
+   "id": "volumatic-trend-sol",
+   "benchmark": "volumatic-trend",
+   "name": "Volumatic Trend",
+   "free_indicator": false,
+   "family": "community",
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-16",
+   "mar": 1.38,
+   "cagr_pct": 105.2,
+   "max_dd_pct": 76.2,
+   "hold_mar": 0.66,
+   "position": "cash",
+   "position_since": "2026-10-12"
   }
  ]
 }
