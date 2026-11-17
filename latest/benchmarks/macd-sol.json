@@ -11,9 +11,9 @@
  "rule": "Long when the MACD line crosses above its signal line; cash when it crosses below.",
  "credit": "MACD by Gerald Appel (public domain), TradingView default settings",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-16T14:33:00Z",
- "decision_bar": "2026-11-15",
- "valid_until_utc": "2026-11-17T00:45:00Z",
+ "generated_at_utc": "2026-11-17T00:06:00Z",
+ "decision_bar": "2026-11-16",
+ "valid_until_utc": "2026-11-18T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-01",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-15",
-   "until": "2026-11-15",
-   "cagr_pct": 119.3,
+   "since": "2026-05-16",
+   "until": "2026-11-16",
+   "cagr_pct": 133.1,
    "max_dd_pct": 8.5,
-   "mar": 14.04,
-   "sharpe": 2.37,
+   "mar": 15.66,
+   "sharpe": 2.56,
    "hold": {
-    "cagr_pct": -33.3,
+    "cagr_pct": -31.4,
     "max_dd_pct": 42.5,
-    "mar": -0.78,
-    "sharpe": -0.42,
-    "return_pct": -18.46
+    "mar": -0.74,
+    "sharpe": -0.37,
+    "return_pct": -17.29
    },
    "trades": 3,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 37.3,
-   "return_pct": 48.52
+   "time_in_market_pct": 36.8,
+   "return_pct": 53.15
   },
   "1y": {
-   "since": "2025-11-15",
-   "until": "2026-11-15",
+   "since": "2025-11-16",
+   "until": "2026-11-16",
    "cagr_pct": 33.7,
    "max_dd_pct": 20.7,
    "mar": 1.63,
    "sharpe": 0.9,
    "hold": {
-    "cagr_pct": -47.9,
+    "cagr_pct": -47.8,
     "max_dd_pct": 57.6,
     "mar": -0.83,
     "sharpe": -0.73,
-    "return_pct": -47.88
+    "return_pct": -47.82
    },
    "trades": 9,
    "win_rate_pct": 55.6,
@@ -64,37 +64,37 @@
    "return_pct": 33.7
   },
   "2y": {
-   "since": "2024-11-15",
-   "until": "2026-11-15",
-   "cagr_pct": -11.5,
+   "since": "2024-11-16",
+   "until": "2026-11-16",
+   "cagr_pct": -10.9,
    "max_dd_pct": 62.5,
-   "mar": -0.18,
-   "sharpe": 0.01,
+   "mar": -0.17,
+   "sharpe": 0.02,
    "hold": {
-    "cagr_pct": -42.3,
+    "cagr_pct": -42.4,
     "max_dd_pct": 76.3,
-    "mar": -0.55,
-    "sharpe": -0.34,
-    "return_pct": -66.69
+    "mar": -0.56,
+    "sharpe": -0.35,
+    "return_pct": -66.82
    },
    "trades": 24,
    "win_rate_pct": 41.7,
-   "time_in_market_pct": 49.2,
-   "return_pct": -21.64
+   "time_in_market_pct": 49.1,
+   "return_pct": -20.64
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-15",
-   "cagr_pct": 75.8,
+   "until": "2026-11-16",
+   "cagr_pct": 75.7,
    "max_dd_pct": 62.5,
    "mar": 1.21,
    "sharpe": 1.21,
    "hold": {
-    "cagr_pct": 67.0,
+    "cagr_pct": 66.2,
     "max_dd_pct": 76.3,
-    "mar": 0.88,
+    "mar": 0.87,
     "sharpe": 1.02,
-    "return_pct": 628.43
+    "return_pct": 616.52
    },
    "trades": 48,
    "win_rate_pct": 47.9,
@@ -103,40 +103,40 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-15",
+   "until": "2026-11-16",
    "cagr_pct": 18.2,
    "max_dd_pct": 75.7,
    "mar": 0.24,
    "sharpe": 0.58,
    "hold": {
-    "cagr_pct": -16.9,
+    "cagr_pct": -17.2,
     "max_dd_pct": 94.6,
     "mar": -0.18,
     "sharpe": 0.26,
-    "return_pct": -59.36
+    "return_pct": -60.02
    },
    "trades": 61,
    "win_rate_pct": 39.3,
-   "time_in_market_pct": 52.4,
+   "time_in_market_pct": 52.3,
    "return_pct": 125.54
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-15",
+   "until": "2026-11-16",
    "cagr_pct": 79.8,
    "max_dd_pct": 81.8,
    "mar": 0.98,
-   "sharpe": 1.13,
+   "sharpe": 1.12,
    "hold": {
-    "cagr_pct": 63.9,
+    "cagr_pct": 63.4,
     "max_dd_pct": 96.3,
     "mar": 0.66,
-    "sharpe": 1.0,
-    "return_pct": 2106.15
+    "sharpe": 0.99,
+    "return_pct": 2070.08
    },
    "trades": 78,
    "win_rate_pct": 41.0,
-   "time_in_market_pct": 51.4,
+   "time_in_market_pct": 51.3,
    "return_pct": 3844.66
   }
  },
