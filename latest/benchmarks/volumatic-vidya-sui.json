@@ -1,0 +1,114 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "volumatic-vidya-sui",
+ "benchmark": "volumatic-vidya",
+ "name": "Volumatic VIDYA",
+ "free_indicator": false,
+ "family": "community",
+ "asset": "SUI",
+ "symbol": "BINANCE:SUIUSDT",
+ "timeframe": "1D",
+ "rule": "Long when the close crosses above the upper band of Volumatic VIDYA (VIDYA 10, momentum 20, bands at 2 \u00d7 ATR 200); cash when it crosses below the lower band. Volume is only drawn, it does not change the signal.",
+ "credit": "Volumatic Variable Index Dynamic Average by BigBeluga (CC BY-NC-SA 4.0): https://www.tradingview.com/script/llhVjhA5-Volumatic-Variable-Index-Dynamic-Average-BigBeluga/",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
+ "generated_at_utc": "2026-11-17T23:41:00Z",
+ "decision_bar": "2026-11-16",
+ "valid_until_utc": "2026-11-18T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-11-14",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-09-22",
+  "exit_date": "2026-11-15",
+  "return_pct": -32.93
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-16",
+   "until": "2026-11-16",
+   "cagr_pct": -76.3,
+   "max_dd_pct": 54.3,
+   "mar": -1.41,
+   "sharpe": -2.38,
+   "hold": {
+    "cagr_pct": -53.7,
+    "max_dd_pct": 44.5,
+    "mar": -1.21,
+    "sharpe": -0.6,
+    "return_pct": -32.15
+   },
+   "trades": 1,
+   "win_rate_pct": 0.0,
+   "time_in_market_pct": 40.0,
+   "return_pct": -51.56
+  },
+  "1y": {
+   "since": "2025-11-16",
+   "until": "2026-11-16",
+   "cagr_pct": -61.5,
+   "max_dd_pct": 61.5,
+   "mar": -1.0,
+   "sharpe": -2.19,
+   "hold": {
+    "cagr_pct": -57.2,
+    "max_dd_pct": 65.8,
+    "mar": -0.87,
+    "sharpe": -0.57,
+    "return_pct": -57.13
+   },
+   "trades": 2,
+   "win_rate_pct": 0.0,
+   "time_in_market_pct": 21.6,
+   "return_pct": -61.47
+  },
+  "2y": {
+   "since": "2024-11-16",
+   "until": "2026-11-16",
+   "cagr_pct": -52.0,
+   "max_dd_pct": 83.6,
+   "mar": -0.62,
+   "sharpe": -0.99,
+   "hold": {
+    "cagr_pct": -56.3,
+    "max_dd_pct": 87.7,
+    "mar": -0.64,
+    "sharpe": -0.38,
+    "return_pct": -80.86
+   },
+   "trades": 4,
+   "win_rate_pct": 0.0,
+   "time_in_market_pct": 38.4,
+   "return_pct": -76.92
+  },
+  "since_2023": null,
+  "since_2022": null,
+  "full": {
+   "since": "2023-05-03",
+   "until": "2026-11-16",
+   "cagr_pct": 14.5,
+   "max_dd_pct": 83.6,
+   "mar": 0.17,
+   "sharpe": 0.53,
+   "hold": {
+    "cagr_pct": -17.2,
+    "max_dd_pct": 87.7,
+    "mar": -0.2,
+    "sharpe": 0.31,
+    "return_pct": -48.64
+   },
+   "trades": 6,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 39.8,
+   "return_pct": 61.36
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-11-15",
+  "tv_pnl_pct": 61.38,
+  "engine_pnl_pct": 61.36,
+  "deviation_pct": 0.015
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}
