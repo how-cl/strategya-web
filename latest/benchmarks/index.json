@@ -1,6 +1,6 @@
 {
  "schema": "strategya.benchmark/0.1",
- "generated_at_utc": "2026-11-18T19:53:00Z",
+ "generated_at_utc": "2026-11-18T21:07:00Z",
  "base_url": "https://how-cl.github.io/strategya-web/latest/benchmarks/",
  "disclaimer": "Simulated backtests, not real performance. Not investment advice.",
  "items": [
@@ -403,6 +403,22 @@
    "hold_mar": 0.24,
    "position": "long",
    "position_since": "2026-11-01"
+  },
+  {
+   "id": "bollinger-breakout-btc",
+   "benchmark": "bollinger-breakout",
+   "name": "Bollinger Bands Breakout",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-17",
+   "mar": 0.32,
+   "cagr_pct": 19.7,
+   "max_dd_pct": 62.5,
+   "hold_mar": 0.24,
+   "position": "cash",
+   "position_since": "2026-10-07"
   },
   {
    "id": "volumatic-vidya-btc",
@@ -837,6 +853,22 @@
    "position_since": "2026-10-10"
   },
   {
+   "id": "bollinger-breakout-eth",
+   "benchmark": "bollinger-breakout",
+   "name": "Bollinger Bands Breakout",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-17",
+   "mar": 0.82,
+   "cagr_pct": 32.9,
+   "max_dd_pct": 40.0,
+   "hold_mar": 0.11,
+   "position": "cash",
+   "position_since": "2026-10-07"
+  },
+  {
    "id": "volumatic-vidya-eth",
    "benchmark": "volumatic-vidya",
    "name": "Volumatic VIDYA",
@@ -1269,6 +1301,22 @@
    "position_since": "2026-10-10"
   },
   {
+   "id": "bollinger-breakout-sol",
+   "benchmark": "bollinger-breakout",
+   "name": "Bollinger Bands Breakout",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-17",
+   "mar": 2.1,
+   "cagr_pct": 123.6,
+   "max_dd_pct": 58.9,
+   "hold_mar": 0.67,
+   "position": "cash",
+   "position_since": "2026-10-07"
+  },
+  {
    "id": "volumatic-vidya-sol",
    "benchmark": "volumatic-vidya",
    "name": "Volumatic VIDYA",
@@ -1699,6 +1747,22 @@
    "hold_mar": -0.19,
    "position": "long",
    "position_since": "2026-11-15"
+  },
+  {
+   "id": "bollinger-breakout-sui",
+   "benchmark": "bollinger-breakout",
+   "name": "Bollinger Bands Breakout",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "SUI",
+   "since": "2023-05-03",
+   "until": "2026-11-17",
+   "mar": 1.03,
+   "cagr_pct": 35.3,
+   "max_dd_pct": 34.4,
+   "hold_mar": -0.19,
+   "position": "cash",
+   "position_since": "2026-10-08"
   },
   {
    "id": "volumatic-vidya-sui",

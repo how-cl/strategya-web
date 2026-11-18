@@ -1,0 +1,150 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "bollinger-breakout-btc",
+ "benchmark": "bollinger-breakout",
+ "name": "Bollinger Bands Breakout",
+ "free_indicator": false,
+ "family": "classic",
+ "asset": "BTC",
+ "symbol": "BINANCE:BTCUSDT",
+ "timeframe": "1D",
+ "rule": "Long when the close breaks above the upper band; cash when the close falls back below the 20-day average (default settings: 20-day SMA, 2 standard deviations).",
+ "credit": "Bollinger Bands by John Bollinger; the classic band breakout reading, long side only",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
+ "generated_at_utc": "2026-11-18T21:07:00Z",
+ "decision_bar": "2026-11-17",
+ "valid_until_utc": "2026-11-19T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-10-07",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-09-22",
+  "exit_date": "2026-10-08",
+  "return_pct": -4.0
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-17",
+   "until": "2026-11-17",
+   "cagr_pct": 8.2,
+   "max_dd_pct": 7.6,
+   "mar": 1.09,
+   "sharpe": 0.53,
+   "hold": {
+    "cagr_pct": -29.5,
+    "max_dd_pct": 25.9,
+    "mar": -1.14,
+    "sharpe": -0.7,
+    "return_pct": -16.15
+   },
+   "trades": 3,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 21.6,
+   "return_pct": 4.07
+  },
+  "1y": {
+   "since": "2025-11-17",
+   "until": "2026-11-17",
+   "cagr_pct": -14.3,
+   "max_dd_pct": 26.4,
+   "mar": -0.54,
+   "sharpe": -0.82,
+   "hold": {
+    "cagr_pct": -29.6,
+    "max_dd_pct": 39.5,
+    "mar": -0.75,
+    "sharpe": -0.57,
+    "return_pct": -29.57
+   },
+   "trades": 7,
+   "win_rate_pct": 14.3,
+   "time_in_market_pct": 20.2,
+   "return_pct": -14.26
+  },
+  "2y": {
+   "since": "2024-11-17",
+   "until": "2026-11-17",
+   "cagr_pct": -13.3,
+   "max_dd_pct": 38.3,
+   "mar": -0.35,
+   "sharpe": -0.64,
+   "hold": {
+    "cagr_pct": -15.0,
+    "max_dd_pct": 53.0,
+    "mar": -0.28,
+    "sharpe": -0.16,
+    "return_pct": -27.72
+   },
+   "trades": 15,
+   "win_rate_pct": 20.0,
+   "time_in_market_pct": 27.2,
+   "return_pct": -24.87
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-17",
+   "cagr_pct": 9.8,
+   "max_dd_pct": 38.3,
+   "mar": 0.26,
+   "sharpe": 0.49,
+   "hold": {
+    "cagr_pct": 42.1,
+    "max_dd_pct": 53.0,
+    "mar": 0.8,
+    "sharpe": 0.99,
+    "return_pct": 290.85
+   },
+   "trades": 34,
+   "win_rate_pct": 32.4,
+   "time_in_market_pct": 32.8,
+   "return_pct": 43.86
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-17",
+   "cagr_pct": -3.5,
+   "max_dd_pct": 42.5,
+   "mar": -0.08,
+   "sharpe": -0.02,
+   "hold": {
+    "cagr_pct": 6.5,
+    "max_dd_pct": 66.9,
+    "mar": 0.1,
+    "sharpe": 0.38,
+    "return_pct": 36.09
+   },
+   "trades": 42,
+   "win_rate_pct": 26.2,
+   "time_in_market_pct": 29.2,
+   "return_pct": -16.11
+  },
+  "full": {
+   "since": "2018-01-01",
+   "until": "2026-11-17",
+   "cagr_pct": 19.7,
+   "max_dd_pct": 62.5,
+   "mar": 0.32,
+   "sharpe": 0.7,
+   "hold": {
+    "cagr_pct": 19.5,
+    "max_dd_pct": 81.2,
+    "mar": 0.24,
+    "sharpe": 0.6,
+    "return_pct": 385.41
+   },
+   "trades": 67,
+   "win_rate_pct": 37.3,
+   "time_in_market_pct": 31.6,
+   "return_pct": 393.24
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-10-08",
+  "tv_pnl_pct": 393.28,
+  "engine_pnl_pct": 393.24,
+  "deviation_pct": 0.008
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}
