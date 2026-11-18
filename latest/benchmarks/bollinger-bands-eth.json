@@ -1,0 +1,152 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "bollinger-bands-eth",
+ "benchmark": "bollinger-bands",
+ "name": "Bollinger Bands (20, 2)",
+ "free_indicator": false,
+ "family": "classic",
+ "asset": "ETH",
+ "symbol": "BINANCE:ETHUSDT",
+ "timeframe": "1D",
+ "rule": "Long when the close crosses back above the lower band; cash when it crosses back below the upper band (20-day SMA, 2 standard deviations).",
+ "credit": "Bollinger Bands by John Bollinger; entry and exit rule of TradingView's built-in Bollinger Bands Strategy, long side only",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
+ "generated_at_utc": "2026-11-18T19:47:00Z",
+ "decision_bar": "2026-11-17",
+ "valid_until_utc": "2026-11-19T00:45:00Z",
+ "position": {
+  "state": "long",
+  "since": "2026-10-10",
+  "action": "HOLD",
+  "entry_price": 2506.52,
+  "open_return_pct": -27.19
+ },
+ "last_trade": {
+  "entry_date": "2026-05-21",
+  "exit_date": "2026-08-24",
+  "return_pct": 15.47
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-17",
+   "until": "2026-11-17",
+   "cagr_pct": -29.3,
+   "max_dd_pct": 31.0,
+   "mar": -0.94,
+   "sharpe": -0.43,
+   "hold": {
+    "cagr_pct": -26.5,
+    "max_dd_pct": 36.3,
+    "mar": -0.73,
+    "sharpe": -0.29,
+    "return_pct": -14.37
+   },
+   "trades": 1,
+   "win_rate_pct": 100.0,
+   "time_in_market_pct": 71.9,
+   "return_pct": -16.03
+  },
+  "1y": {
+   "since": "2025-11-17",
+   "until": "2026-11-17",
+   "cagr_pct": -37.9,
+   "max_dd_pct": 50.4,
+   "mar": -0.75,
+   "sharpe": -0.67,
+   "hold": {
+    "cagr_pct": -39.8,
+    "max_dd_pct": 53.3,
+    "mar": -0.75,
+    "sharpe": -0.54,
+    "return_pct": -39.8
+   },
+   "trades": 2,
+   "win_rate_pct": 50.0,
+   "time_in_market_pct": 54.9,
+   "return_pct": -37.86
+  },
+  "2y": {
+   "since": "2024-11-17",
+   "until": "2026-11-17",
+   "cagr_pct": -32.3,
+   "max_dd_pct": 64.8,
+   "mar": -0.5,
+   "sharpe": -0.42,
+   "hold": {
+    "cagr_pct": -23.0,
+    "max_dd_pct": 67.6,
+    "mar": -0.34,
+    "sharpe": -0.04,
+    "return_pct": -40.67
+   },
+   "trades": 7,
+   "win_rate_pct": 42.9,
+   "time_in_market_pct": 56.6,
+   "return_pct": -54.18
+  },
+  "since_2023": {
+   "since": "2023-01-01",
+   "until": "2026-11-17",
+   "cagr_pct": -17.6,
+   "max_dd_pct": 71.5,
+   "mar": -0.25,
+   "sharpe": -0.16,
+   "hold": {
+    "cagr_pct": 11.4,
+    "max_dd_pct": 67.6,
+    "mar": 0.17,
+    "sharpe": 0.48,
+    "return_pct": 52.03
+   },
+   "trades": 13,
+   "win_rate_pct": 53.8,
+   "time_in_market_pct": 50.5,
+   "return_pct": -52.89
+  },
+  "since_2022": {
+   "since": "2022-01-01",
+   "until": "2026-11-17",
+   "cagr_pct": -25.8,
+   "max_dd_pct": 79.9,
+   "mar": -0.32,
+   "sharpe": -0.29,
+   "hold": {
+    "cagr_pct": -13.8,
+    "max_dd_pct": 74.0,
+    "mar": -0.19,
+    "sharpe": 0.12,
+    "return_pct": -51.54
+   },
+   "trades": 16,
+   "win_rate_pct": 50.0,
+   "time_in_market_pct": 54.9,
+   "return_pct": -76.69
+  },
+  "full": {
+   "since": "2018-01-01",
+   "until": "2026-11-17",
+   "cagr_pct": -19.8,
+   "max_dd_pct": 91.3,
+   "mar": -0.22,
+   "sharpe": -0.08,
+   "hold": {
+    "cagr_pct": 10.5,
+    "max_dd_pct": 94.0,
+    "mar": 0.11,
+    "sharpe": 0.55,
+    "return_pct": 141.71
+   },
+   "trades": 32,
+   "win_rate_pct": 53.1,
+   "time_in_market_pct": 52.0,
+   "return_pct": -85.89
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-08-24",
+  "tv_pnl_pct": -80.61,
+  "engine_pnl_pct": -80.6,
+  "deviation_pct": 0.06
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}
