@@ -7,6 +7,402 @@
 <title>Strategya.pro Line · BTC 1D — Strategya.pro</title>
 <meta name="description" content="Strategya.pro Line · BTC 1D: one decision a day. It holds bitcoin, or it holds nothing.">
 <script>
+/* IDIOMA-ES: la ficha en español con ?lang=es (19-nov-2026) */
+/* Sin el parámetro este bloque sale en la primera línea y la ficha queda igual que siempre. Con ?lang=es pone
+   <html lang="es">, deja lista la traducción de los textos de ayuda (la aplica el gancho que sigue a TERMS) y
+   traduce el texto que la ficha arma en pantalla (nodos de texto y title/aria-label), también el que cambia después.
+   No toca cifras, datos ni lógica; los números conservan su formato. Un texto sin traducción queda en inglés.
+   Para fichas ya publicadas: idioma-parche.py. Contrato con el catálogo: embed-protocol.md. */
+(function(){
+  window.__SG_ES__ = new URLSearchParams(location.search).get("lang") === "es";
+  if(!window.__SG_ES__) return;
+  document.documentElement.lang = "es";
+  /* Textos de ayuda (TERMS). Las claves que dependen del activo leen el nombre desde el texto en inglés;
+     una clave o un párrafo sin traducción queda en inglés, nunca se rompe. */
+  var NOMT = {"bitcoin":"bitcoin","ethereum":"ether","solana":"solana","gold":"oro","Tesla":"Tesla",
+    "one of five assets":"uno de cinco activos","one of six assets":"uno de seis activos",
+    "a mix of five assets":"una mezcla de cinco activos","a mix of seven assets":"una mezcla de siete activos",
+    "two US stocks with a gold refuge":"dos acciones de EE. UU. con refugio en oro"};
+  var COLT = {Orange:"naranja",Blue:"azul",Red:"rojo",Gold:"dorado",Purple:"morado"};
+  var nomT = function(a){ return NOMT[a] || a; };
+  var colT = function(c){ return COLT[c] || c.toLowerCase(); };
+  var may = function(s){ return s.charAt(0).toUpperCase() + s.slice(1); };
+  var FIJO = {
+    ytd: "En lo que va del año: lo que la estrategia ha rendido desde el 1 de enero de este año.",
+    winrate: "Tasa de acierto: la proporción de trades cerrados que terminaron con ganancia. Sola dice poco: una estrategia puede acertar el 40 % de las veces y aun así ir bien si las ganancias son mucho más grandes que las pérdidas.",
+    monthly: "Rendimiento mensual promedio: el mes típico, compuesto. Unos pocos meses explosivos lo suben bastante por encima de lo que se ve en un mes normal.",
+    hold: "Duración promedio: cuánto tiempo queda abierta una posición. Posiciones más largas significan menos trades, menos comisiones y menos que vigilar.",
+    avgwin: "Ganancia promedio: el retorno medio de los trades que ganaron plata.",
+    avgloss: "Pérdida promedio: el retorno medio de los trades que perdieron plata. Mantenerla chica es lo que te da un stop-loss.",
+    maxdd: "Caída máxima: la caída más profunda desde un máximo antes de un máximo nuevo, medida como PORCENTAJE de ese máximo. Con -10 %, cada $100 valía $90 en el peor momento. Hay dos lecturas para la misma ventana y no siempre coinciden: la curva de capital de esta página, que se arma con retornos MENSUALES y por eso no ve una caída que empezó y terminó dentro de un mismo mes, y la medición de TradingView de la estrategia en esa ventana. Publicamos la más DURA de las dos, nunca la favorable ni un promedio. Las ventanas cortas (6M / 1A / 2A) no tienen cifra de TradingView, así que muestran solo la curva.",
+    mult: "Multiplicador: cuántas veces creció el capital inicial. 10× convierte $1,000 en $10,000.",
+    total: "Resultado total: todo lo que ganó la estrategia en el período medido, compuesto, incluido el trade que sigue abierto ahora. TradingView informa las dos partes por separado, como Net profit (trades cerrados) y Open PnL (la posición abierta); en las ventanas largas la línea bajo esta cifra muestra esa misma división.",
+    stratval: "Resultado de la estrategia: cuánto valdrían hoy $1,000 si hubieras seguido cada señal de esta ventana, con interés compuesto y 0,1 % de comisión por lado en cada trade. Es un backtest simulado con precios pasados, no dinero ganado.",
+    mx: "Ajustado por riesgo, lado a lado: los mismos números con que se juzgaría a un fondo. MAR es el retorno dividido por la peor caída; Sharpe y Sortino miden retorno por unidad de vaivén, y Sortino solo cuenta el vaivén que duele. Omega es ganancias totales sobre pérdidas totales, día a día. Exposición es cuánto del tiempo la plata estuvo realmente en el mercado. ⚠ Las dos filas usan la MISMA definición de caída (capital diario, a precio de mercado), porque una tabla donde cada fila mide distinto no compara nada.",
+    tradehist: "Historial de trades: cada ida y vuelta completa, cuándo compró, cuándo vendió y cuánto rindió ese trade. Son retornos de cada trade, sin componer; el resultado compuesto es la cifra de arriba.",
+    pf: "Factor de beneficio: cada dólar que entregaron los trades perdedores contra cada dólar que trajeron los ganadores. Sobre 1 la estrategia gana plata; con 3, los ganadores traen tres dólares por cada uno que cuestan los perdedores. Es el complemento honesto de la tasa de acierto: una estrategia puede ganar la mayoría de sus trades y aun así perder plata si las pocas pérdidas son enormes, y este número lo detecta.",
+    marneg: "MAR: no disponible en esta ventana, y el guion es la respuesta honesta. MAR es el retorno anual dividido por la peor caída, así que solo significa algo cuando el retorno es positivo. En este tramo esta línea PERDIÓ plata, y un MAR negativo se leería como un número chico cuando lo que describe es una pérdida. Las dos cifras con que se arma, CAGR y caída máxima, están aquí mismo en la tarjeta, a la vista. Cambia a una ventana más larga para ver la razón.",
+    marplano: "MAR: no disponible aquí porque casi no hubo caída por la cual dividir, y eso hace que la razón se dispare a un número sin sentido. Pasa cuando la comparación se mide en el mismo activo y mantenerlo es plano por definición. El CAGR y la caída máxima de esta tarjeta son las cifras reales.",
+    mar: "MAR: cuánto retorno anual produjo la estrategia por cada punto de caída que te hizo aguantar. Es simplemente el CAGR dividido por la peor caída, y las dos cifras están en esta tarjeta. Un MAR de 10 significa diez puntos de ganancia anual por cada punto de dolor; comprar y mantener el activo suele quedar cerca de 1. Lo ponemos porque el retorno solo no dice nada de lo que te costó ganarlo: dos estrategias pueden terminar en el mismo número con recorridos completamente distintos, y esta es la cifra que las separa. También es la métrica con que ordenamos nuestros propios productos.",
+    cagr: "Retorno anualizado: la tasa anual que produciría el mismo resultado, compuesta. Es la única cifra que compara de forma justa ventanas de distinto largo: 10× en ocho años y 4× en tres años se ven muy distintos como multiplicadores, pero anualizados son cerca de 33 %/año y 59 %/año. Usa el multiplicador para ver cuánto creció, y esta cifra para ver qué tan rápido.",
+    calib: "Ventana calibrada: este preset se ajustó con el mercado desde ese año en adelante, así que es la ventana para la que se construyó y la que se muestra primero. La ventana más larga sigue aquí, a un clic, y es la lectura más dura: las mismas reglas sobre mercados bajistas anteriores para los que nunca se ajustaron. Espera que se vea más débil. Un preset calibrado para un régimen no es el mejor preset para todos los regímenes, y hay una diferencia real entre eso y el sobreajuste: el sobreajuste se cae fuera de la muestra con que se ajustó, y este también aguantó en una ventana de estrés para la que nunca se optimizó. Mostrarte las dos es el punto; esconder la diferencia sería la verdadera señal de alarma."
+  };
+  /* «ranges» viene por párrafos: los tres comunes y, en algunos productos, uno o dos propios */
+  var PARR = [
+    [/^Time window — every figure on this card is measured over the window you pick here, and both curves are re-based to the same starting capital at its beginning\. 6M \/ 1Y \/ 2Y are simply the last months up to today\.$/,
+     "Ventana de tiempo: cada cifra de esta tarjeta se mide en la ventana que elijas aquí, y las dos curvas parten del mismo capital al inicio. 6M / 1A / 2A son simplemente los últimos meses hasta hoy."],
+    [/^WHY IT OPENS ON SINCE 2023\. Every product on this board opens on the same window, deliberately\.[\s\S]*tuned for\.$/,
+     "POR QUÉ ABRE EN DESDE 2023. Todos los productos de este tablero abren en la misma ventana, a propósito. Antes cada uno abría en la suya y, sin que nadie lo eligiera así, cada uno abría en la ventana que lo favorecía. Compararlos significaba leer ocho años de uno contra tres y medio de otro, y el número más grande ganaba por la razón equivocada. DESDE 2023 es la única ventana que todos comparten, contada desde el piso del mercado bajista anterior, y es el régimen para el que se ajustaron la mayoría de estos presets."],
+    [/^Short windows flatter almost any strategy, because they tend to hold no crash at all\.[\s\S]*keep yourself honest\.$/,
+     "Las ventanas cortas favorecen a casi cualquier estrategia, porque suelen no tener ninguna caída fuerte. Por eso la lectura más larga no queda escondida detrás de este control: está bajo las tarjetas, siempre visible, con su propio resultado y su peor caída. Usa este control para explorar; usa esa línea para no engañarte."],
+    [/^WHY SOLANA OPENS ON 2Y AND NOT ON A “SINCE” WINDOW\. Solana only started trading against USDT in August 2020,[\s\S]*comparable with each other\.$/,
+     "POR QUÉ SOLANA ABRE EN 2A Y NO EN UNA VENTANA «DESDE». Solana empezó a negociarse contra USDT recién en agosto de 2020, y los dos años siguientes fueron extraordinarios en las dos direcciones: un alza de cerca de cien veces y después una caída de cerca de noventa y cinco por ciento. Cualquier ventana que llegue hasta ese tramo queda dominada por él, y dice más de 2021 que de cómo se comporta esta estrategia. La vista de dos años es el régimen actual, y son los mismos dos años para los dos productos de Solana, así que siguen siendo comparables entre sí."],
+    [/^Be aware of what this window leaves out, because it cuts both ways\. It excludes 2023 entirely[\s\S]*Read both\.$/,
+     "Ten presente lo que esta ventana deja afuera, porque corta para los dos lados. Excluye 2023 completo, y para el producto de doce horas 2023 fue el año difícil, el que contiene su peor caída. Abrir aquí muestra entonces a ese producto en su mejor cara. Por eso la lectura más larga está bajo las tarjetas y nunca detrás de un clic: parte en 2020 y contiene todo lo que esta ventana no. Lee las dos."],
+    [/^WHAT THIS STRATEGY IS FOR\. It is built to step aside during the big falls of the index, not to beat it\. Its settings were tuned only on 2018-2022 and then measured once on data they never saw, and it gives up a large part of the good years\. Since 2023 it made ([\d.]+) % a year against ([\d.]+) % for simply holding SPY, with a worst drawdown of ([\d.]+) % against ([\d.]+) %\. From 2008 to 2017, a stretch nobody used to tune it, it made ([\d.]+) % a year against ([\d.]+) %, with a worst fall of ([\d.]+) % against ([\d.]+) %\. If you want the full upside of the index, holding it does that better\. If you want to stay out of most of a crash, that is what this strategy is for\. Simulated backtest, not real performance; not investment advice\.$/,
+     "PARA QUÉ SIRVE ESTA ESTRATEGIA. Está hecha para hacerse a un lado en las grandes caídas del índice, no para ganarle. Sus parámetros se ajustaron solo con 2018-2022 y después se midieron una sola vez con datos que nunca vieron, y entrega una buena parte de los años buenos. Desde 2023 rindió $1 % al año contra $2 % de simplemente mantener SPY, con una peor caída de $3 % contra $4 %. De 2008 a 2017, un tramo que nadie usó para ajustarla, rindió $5 % al año contra $6 %, con una peor caída de $7 % contra $8 %. Si quieres toda la subida del índice, mantenerlo lo hace mejor. Si quieres quedarte fuera de la mayor parte de una caída fuerte, para eso es esta estrategia. Backtest simulado, no es rendimiento real; no es asesoría de inversión."]
+  ];
+  function parrafo(p){ for(var i = 0; i < PARR.length; i++) if(PARR[i][0].test(p)) return p.replace(PARR[i][0], PARR[i][1]); return p; }
+  window.__SG_ES_TERMS__ = function(T){
+    var k, m;
+    for(k in FIJO) if(Object.prototype.hasOwnProperty.call(T, k)) T[k] = FIJO[k];
+    if(typeof T.ranges === "string") T.ranges = T.ranges.split("\n\n").map(parrafo).join("\n\n");
+    if(typeof T.unit === "string" && (m = T.unit.match(/^USD vs (\S+)/))){
+      T.unit = m[1] === "BTC"
+        ? "USD vs BTC: las mismas dos curvas, los mismos trades, las mismas fechas; solo cambia la regla de medir. En dólares la pregunta es cuánta plata terminaste teniendo. En monedas es la que de verdad le importa a quien mantiene: ¿terminaste con MÁS BITCOIN que si nunca hubieras vendido? En BTC la línea naranja queda plana en 1 ₿, y no es un error: mantener siempre te devuelve exactamente lo que tenías al empezar, así que deja de ser una curva a la que ganarle y pasa a ser la vara que hay que superar. Cada punto de la línea verde es lo que tienes en ese momento. Sobre 1 ₿ significa que la estrategia volvió a comprar más monedas de las que vendió; bajo 1, que vendió y volvió a entrar más arriba."
+        : "USD vs " + m[1] + ": las mismas dos curvas, los mismos trades, las mismas fechas; solo cambia la regla de medir. En dólares la pregunta es cuánta plata terminaste teniendo. Medido en " + m[1] + ", la pregunta es ¿terminaste con MÁS " + m[1] + " que si nunca hubieras vendido? Mantener queda plano en 1, y no es un error: mantener siempre te devuelve exactamente lo que tenías al empezar, así que pasa a ser la vara que hay que superar. Sobre 1 significa que la estrategia volvió a comprar más de lo que vendió; bajo 1, que vendió y volvió a entrar más arriba.";
+    }
+    if(typeof T.bhval === "string" && (m = T.bhval.match(/if you had bought (.+?) at the start/)))
+      T.bhval = "Resultado de comprar y mantener: cuánto valdrían los mismos $1,000 si hubieras comprado " + nomT(m[1]) + " al inicio de la ventana y nunca lo hubieras tocado. Es la vara: ganarle es la única razón para seguir una estrategia en vez de solo mantener.";
+    if(typeof T.poshist === "string" && (m = T.poshist.match(/\. (\w+) means the strategy was holding (.+?); green/)))
+      T.poshist = "Historial de posiciones: una banda por cada período con posición, en orden. " + may(colT(m[1])) + " significa que la estrategia tenía " + nomT(m[2]) + "; verde, que estaba en efectivo y fuera del mercado. Un tramo verde largo es una caída que no tuvo que aguantar.";
+    if(typeof T.hold2 === "string" && (m = T.hold2.match(/(\w+) is what simply buying (.+?) on day one/)))
+      T.hold2 = "Estrategia vs comprar y mantener: los mismos $1,000, la misma fecha de inicio, dos decisiones distintas. VERDE es en lo que la estrategia los habría convertido siguiendo cada señal, con interés compuesto y 0,1 % de comisión por lado en cada trade. " + may(colT(m[1])) + " es lo que te habría dejado simplemente comprar " + nomT(m[2]) + " el primer día y nunca vender. Ganarle a ese número " + colT(m[1]) + " es la única razón para seguir una estrategia en vez de solo mantener; el multiplicador bajo cada cifra dice por cuánto, y la etiqueta de caída dice lo que tuviste que aguantar para llegar ahí. Los dos son simulados con precios pasados, no dinero ganado.";
+  };
+/* Traductor del texto en pantalla (nodos de texto y title/aria-label). Nació el 18-nov-2026 con las fichas demo del Home en español. */
+(function(){
+  var M = {Jan:"ene",Feb:"feb",Mar:"mar",Apr:"abr",May:"may",Jun:"jun",Jul:"jul",Aug:"ago",Sep:"sept",Oct:"oct",Nov:"nov",Dec:"dic"};
+  var MES = "(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)";
+  var mes = function(m){ return M[m] || m; };
+  var dias = function(n){ return n === "1" ? "día" : "días"; };
+  var NOM = {"bitcoin":"bitcoin","ethereum":"ether","solana":"solana","gold":"oro","Tesla":"Tesla","one of five assets":"uno de cinco activos","one of six assets":"uno de seis activos","a mix of five assets":"una mezcla de cinco activos","a mix of seven assets":"una mezcla de siete activos","two US stocks with a gold refuge":"dos acciones de EE. UU. con refugio en oro"};
+  var NUMS = {two:"dos",three:"tres",four:"cuatro",five:"cinco",six:"seis",seven:"siete",eight:"ocho"};
+  var MESL = {January:"enero",February:"febrero",March:"marzo",April:"abril",May:"mayo",June:"junio",July:"julio",August:"agosto",September:"septiembre",October:"octubre",November:"noviembre",December:"diciembre"};
+  var nom = function(a){ return NOM[a] || a; };
+  var COLOR = {Orange:"Naranja",Blue:"Azul",Red:"Rojo",Gold:"Dorado",Purple:"Morado",orange:"naranja",blue:"azul",red:"rojo",gold:"dorado",purple:"morado"};
+  var cad = function(t){ return t
+    .replace(/one decision a day/g, "una decisión al día")
+    .replace(/two decisions a day/g, "dos decisiones al día")
+    .replace(/NYSE close, 20:00 UTC in summer \/ 21:00 in winter/g, "cierre de NYSE, 20:00 UTC en verano / 21:00 en invierno")
+    .replace(/00:00 and 12:00 UTC/g, "00:00 y 12:00 UTC"); };
+
+  /* Texto completo del nodo (sin espacios de borde) */
+  var EXACT = {
+    /* Fichas en vivo (19-nov-2026): 12 horas, acciones y Long/Short */
+    "since":"desde entonces","short (whole book)":"en corto (todo el libro)",". The weights change only when the rule changes the set.":". Los pesos cambian solo cuando la regla cambia el grupo.",
+    "It contains bear markets this shorter window leaves out.":"Contiene mercados bajistas que esta ventana más corta deja afuera.",
+    "Changed today · crypto legs execute right after the close; stock legs fill at the next session open (NYSE)":"Cambió hoy · las patas cripto se ejecutan justo después del cierre; las patas de acciones, en la apertura de la sesión siguiente (NYSE)",
+    "Published by":"Publicado por","simulate it":"simularla","live signal board":"tablero de señales en vivo",
+    "Two decisions a day.":"Dos decisiones al día.",
+    "It reads the market at each 12-hour close — 00:00 and 12:00 UTC — and either stays put or switches side. Twice the cadence of the daily line, and the reason this one reacts faster to a turn.":"Lee el mercado en cada cierre de 12 horas, a las 00:00 y a las 12:00 UTC, y se queda donde está o cambia de lado. El doble de ritmo que la línea diaria, y la razón por la que esta reacciona más rápido a un giro.",
+    "Simulated with fractional shares, fully invested. A backtest that can only buy whole shares will show a lower total; each trade's return is the same.":"Simulado con fracciones de acción y todo el capital invertido. Un backtest que solo puede comprar acciones enteras muestra un total menor; el retorno de cada trade es el mismo.",
+    "The short side needs a perpetual futures account, and we measured what that costs.":"El lado corto necesita una cuenta de futuros perpetuos, y medimos lo que eso cuesta.",
+    "The short side needs a margin account.":"El lado corto necesita una cuenta de margen.",
+    "Shorting a stock means borrowing shares through your broker: you pay a borrow fee that changes with demand, you owe any dividend the stock pays while you are short, and the broker can recall the shares.":"Vender una acción en corto significa pedir acciones prestadas a tu corredora: pagas una comisión de préstamo que cambia con la demanda, debes cualquier dividendo que la acción pague mientras estás en corto, y la corredora puede pedirte las acciones de vuelta.",
+    "None of that is simulated here":"Nada de eso está simulado aquí",
+    "Here the venue was never the problem.":"Aquí el mercado donde se opera nunca fue el problema.",
+    "One caveat that does cut the other way.":"Una salvedad que sí corta para el otro lado.",
+    "There was a gap, and no trade falls inside it.":"Hubo un vacío, y ningún trade cae dentro de él.",
+    "backtest reconciled against TradingView trade by trade; perpetual funding measured from Binance's published history and left out of the figures, which makes them slightly conservative.":"backtest cotejado con TradingView trade por trade; el funding de los perpetuos se midió con el historial publicado por Binance y se dejó fuera de las cifras, lo que las hace levemente conservadoras.",
+    "— backtest reconciled against TradingView trade by trade, but stock borrow fees, margin interest and dividends owed while short are not simulated, which makes the short side optimistic. Nothing here is a commercial claim. No forward record yet.":": backtest cotejado con TradingView trade por trade, pero las comisiones de préstamo de acciones, el interés de margen y los dividendos que se deben en corto no están simulados, lo que hace optimista al lado corto. Nada de esto es una afirmación comercial. Todavía no hay registro en vivo.",
+    "No forward record yet.":"Todavía no hay registro en vivo.","preliminary figures":"cifras preliminares",
+    "not simulated":"no simulado","close to zero":"cercano a cero","income":"ingreso",
+    "— preliminary figures, in-sample. It is":": cifras preliminares, dentro de la muestra. Es un",
+    "— small enough to round away. It is":": tan chico que se redondea a cero. Es un",
+    ", not a cost: funding is positive most of the time, and whoever is short collects it. The figures above leave it out, so they are slightly conservative, not optimistic.":", no un costo: el funding es positivo la mayor parte del tiempo, y quien está en corto lo cobra. Las cifras de arriba lo dejan fuera, así que son levemente conservadoras, no optimistas.",
+    "lands in a stretch where the trade would have been impossible to place. That is worth stating rather than assuming: on bitcoin the same gap was two years wide, and cutting the unplaceable trades out of another product in this catalogue cost more than half of its headline figure.":"cae en un tramo donde habría sido imposible poner la orden. Vale la pena decirlo en vez de suponerlo: en bitcoin ese mismo vacío fue de dos años, y sacar los trades imposibles de otro producto de este catálogo le costó más de la mitad de su cifra principal.",
+    "Price chart":"Gráfico de precio","No changes today":"Sin cambios hoy","Changed today":"Cambió hoy",
+    "Last change:":"Último cambio:","Bought at":"Compró a","Sold at":"Vendió a","Shorted at":"Vendió en corto a",
+    "Reference (decision close)":"Referencia (cierre de decisión)","last close":"último cierre","Last close":"Último cierre",
+    "Last trade":"Último trade","Cash to cash":"De efectivo a efectivo","today":"hoy","now":"hoy",
+    "in CASH":"en efectivo","in cash":"en efectivo","cash":"efectivo","CASH":"EFECTIVO","fully in cash":"completamente en efectivo",
+    "What does this mean?":"¿Qué significa esto?",
+    "Simulated from the published rules (backtest), not real performance. Not investment advice.":"Simulado con las reglas publicadas (backtest), no es rendimiento real. No es asesoría de inversión.",
+    "market price, not the signal":"precio de mercado, no la señal","live":"en vivo","Signal":"Señal",
+    "Strategy":"Estrategia","strategy":"estrategia","Performance":"Rendimiento","Statistics —":"Estadísticas —",
+    "Year %":"Año %","Net %":"Neto %","Max DD %":"Caída máx. %","Exposure %":"Exposición %","multiplier":"multiplicador",
+    "basket":"canasta","price":"precio","open":"abierto","simulated BACKTEST":"BACKTEST simulado",
+    "History =":"Historial =",
+    "History = simulated backtest (in-sample). Not real performance, and not investment advice.":"Historial = backtest simulado (dentro de la muestra). No es rendimiento real ni asesoría de inversión.",
+    "History is a simulated backtest, not money that was made.":"El historial es un backtest simulado, no dinero ganado.",
+    "(in-sample, not real performance). FORWARD from go-live.":"(dentro de la muestra, no es rendimiento real). EN VIVO desde la puesta en marcha.",
+    "go-live":"puesta en marcha","go-live forward:":"en vivo desde la puesta en marcha:",
+    "It shows how the rules would have behaved on past prices, which is useful and is not a promise. Only the part after the":"Muestra cómo se habrían comportado las reglas con precios pasados: sirve, pero no es una promesa. Solo lo posterior a la",
+    "date is a live, forward record. None of this is investment advice.":"es un registro en vivo. Nada de esto es asesoría de inversión.",
+    "This page shows the run of":"Esta página muestra la corrida del",
+    "Hover the chart to read any month.":"Pasa el cursor sobre el gráfico para leer cualquier mes.",
+    "Hover to read the split on any day.":"Pasa el cursor para ver el reparto de cualquier día.",
+    "Tap a band to read the trade.":"Toca una banda para leer el trade.",
+    "Tap ⓘ on any metric for a plain-English definition.":"Toca ⓘ en cualquier métrica para ver su definición en palabras simples.",
+    "How to read this board":"Cómo leer este tablero","Live signal board":"Tablero de señales en vivo","Updated":"Actualizado",
+    "WINNER":"GANADOR","Typical winner against typical loser":"Ganador típico contra perdedor típico","joined the set":"entró al grupo",
+    "Equal-weight basket":"Canasta de igual peso","Equal-weight basket — flat by definition":"Canasta de igual peso — plana por definición",
+    "Equal-weight crypto basket (BTC/ETH/SOL/SUI)":"Canasta cripto de igual peso (BTC/ETH/SOL/SUI)",
+    "Equal-weight crypto basket (BTC/ETH/SOL/SUI) — flat by definition":"Canasta cripto de igual peso (BTC/ETH/SOL/SUI) — plana por definición",
+    "holding another asset":"en otro activo",
+    "The card tells you what the strategy holds right now.":"La tarjeta te dice qué tiene la estrategia ahora mismo.",
+    "The position history inside the card paints one band per holding period, so a whole year of decisions reads at a glance — and you can see exactly which crashes it sat out.":"El historial de posiciones de la tarjeta pinta una banda por cada período con posición, así que un año entero de decisiones se lee de un vistazo, y ves exactamente qué caídas se saltó.",
+    "One decision a day.":"Una decisión al día.",
+    "It reads the market at the daily close and either stays put or switches side. That is the whole cadence: no intraday moves, nothing to watch in between.":"Lee el mercado al cierre diario y se queda donde está o cambia de lado. Ese es todo el ritmo: nada de movimientos durante el día, nada que vigilar entremedio.",
+    "It reads the market at the NYSE close and either stays put or switches side; orders fill at the next session open. That is the whole cadence: no intraday moves, nothing to watch in between.":"Lee el mercado al cierre de NYSE y se queda donde está o cambia de lado; las órdenes se ejecutan en la apertura de la sesión siguiente. Ese es todo el ritmo: nada de movimientos durante el día, nada que vigilar entremedio.",
+    "Yes, it sells.":"Sí, vende.",
+    "In a downtrend this strategy moves to cash and buys back lower. That is the whole mechanism. If you will never sell a single sat under any circumstance, this is not the strategy for you, and no backtest should change your mind.":"En una tendencia bajista esta estrategia pasa a efectivo y vuelve a comprar más abajo. Ese es todo el mecanismo. Si nunca vas a vender ni un sat, pase lo que pase, esta no es tu estrategia, y ningún backtest debería hacerte cambiar de opinión.",
+    "It will underperform in a straight bull run.":"En un alza sin pausas va a rendir menos.",
+    "Nothing here is custody.":"Aquí nada es custodia.",
+    "You get the signal. Your coins stay where you keep them, on your exchange or in your own hands. We never touch them and never ask for a withdrawal key.":"Tú recibes la señal. Tus monedas se quedan donde las tienes, en tu exchange o en tus manos. Nunca las tocamos ni te pedimos una clave de retiro.",
+    "What this strategy does — and what it doesn’t":"Qué hace esta estrategia, y qué no",
+    "Four things worth knowing about how it behaves. If you are a maximalist, three of them will matter to you.":"Cuatro cosas que vale la pena saber sobre cómo se comporta. Si eres maximalista, tres te van a importar.",
+    "None of this is investment advice.":"Nada de esto es asesoría de inversión.",
+    "If you are seeing this, the next run was not published: do not act on this page and tell the team.":"Si estás viendo esto, la corrida siguiente no se publicó: no actúes con esta página y avísanos.",
+    "The position above is no longer the current one.":"La posición de arriba ya no es la actual.",
+    ". The next run is being published (it usually takes under 10 minutes after the candle closes) and this page will reload by itself. Until then, the position above is the previous one.":". La corrida siguiente se está publicando (suele tardar menos de 10 minutos después del cierre de la vela) y esta página se va a recargar sola. Hasta entonces, la posición de arriba es la anterior.",
+    ", valid until":", válida hasta",", which was valid until":", que era válida hasta",
+    "⏳ Refreshing signal":"⏳ Actualizando señal","⚠ Signal expired":"⚠ Señal vencida",
+    ". It contains bear markets this shorter window leaves out.":". Incluye mercados bajistas que esta ventana más corta deja fuera.",
+    "· the chart above is showing a shorter window":"· el gráfico de arriba muestra una ventana más corta",
+    "· max drawdown":"· caída máxima","than doing nothing.":"que no hacer nada.",
+    "Measured in coins, not dollars. Holding is a flat line by definition — it hands back exactly the stack you started with. Green above it means the strategy ended the period with":"Medido en monedas, no en dólares. Mantener es una línea plana por definición: te devuelve exactamente lo que tenías al empezar. Verde por encima significa que la estrategia terminó el período con",
+    "🎬 Replay of the":"🎬 Repetición del","🎬 Replay — the backtest, bar by bar":"🎬 Repetición: el backtest, vela por vela",
+    "⏵ Play":"⏵ Reproducir","⏸ Pause":"⏸ Pausa","🎞 Position history":"🎞 Historial de posiciones",
+    "🧩 Allocation history":"🧩 Historial de reparto","🗓 Monthly performance":"🗓 Rendimiento mensual",
+    "📈 Strategy vs buy & hold":"📈 Estrategia vs comprar y mantener","📐 Risk-adjusted, side by side":"📐 Ajustado por riesgo, lado a lado",
+    "💰 Total P&L":"💰 Resultado total","🎯 Win rate":"🎯 Tasa de acierto","⚖️ Profit factor":"⚖️ Factor de beneficio",
+    "⏱ Avg. hold":"⏱ Duración prom.","✓✕ Avg. win / loss":"✓✕ Ganancia / pérdida prom.","📊 Avg. monthly":"📊 Prom. mensual",
+    "Close":"Cerrar","Theme":"Tema","What is this?":"¿Qué es esto?","Equity curve comparison":"Comparación de curvas de capital",
+    "Replay position":"Posición de la repetición","Jump to today":"Ir a hoy","One bar back":"Una vela atrás",
+    "One bar forward":"Una vela adelante","Play / pause":"Reproducir / pausa","Start of the window":"Inicio de la ventana",
+    "Light":"Claro","Dark":"Oscuro","1Y":"1A","2Y":"2A","All":"Todo","ALL":"TODO","On":"El","to":"a","and":"y",
+    "Right now it is split across":"Ahora mismo está repartida entre","the rule said buy":"la regla dijo comprar",
+    "the rule said short":"la regla dijo vender en corto","the rule said exit, so it is":"la regla dijo salir, así que está",
+    "Jan":"ene","Feb":"feb","Mar":"mar","Apr":"abr","May":"may","Jun":"jun","Jul":"jul","Aug":"ago","Sep":"sept","Oct":"oct","Nov":"nov","Dec":"dic",
+    "LONG":"LARGO","SHORT":"CORTO","long":"largo","short":"corto","Long + Short":"Long + Short","trade":"trade","trades":"trades",
+    "Win":"Gana","Loss":"Pierde","Entry":"Entrada","Exit":"Salida","Return":"Retorno","Days":"Días","Side":"Lado"
+  };
+
+  /* Reglas por patrón, en orden. Se aplican sobre el texto del nodo, también dentro de frases. */
+  var R = [
+    /* Fichas en vivo (19-nov-2026): 12 horas, oro, Solana, acciones y Long/Short. Van primero para ganarles a las genéricas. */
+    [/^([▲▼]) (\S+) on the short$/, "$1 $2 en el corto"],
+    [/^(\S+) (\S+%) short$/, "$1 $2 en corto"],
+    [/^(\S+) short (\d+%)$/, "$1 en corto $2"],
+    [/^cash (\d+%)$/, "efectivo $1"],
+    [/^short ([A-Z]{2,6})$/, "en corto $1"],
+    [/^([A-Z]{2,6}) short · (.+)$/, "$1 en corto · $2"],
+    [/^since (\d{4}-\d{2}-\d{2})$/, "desde $1"],
+    [/^(\d{4}-\d{2}-\d{2}) · (.+)$/, function(_,d,p){ return d+" · "+p.replace(/(\S+) short (\d+%)/g, "$1 en corto $2").replace(/\bcash (\d+%)/g, "efectivo $1"); }],
+    [/^(.+) · long, short or cash · (.+)$/, function(_,a,c){ return a+" · comprado, en corto o en efectivo · "+cad(c); }],
+    [/^(Orange|Blue|Red|Gold|Purple) means you are in (.+), green means you are in cash\.$/, function(_,c,a){ return COLOR[c]+" significa que estás en "+nom(a)+"; verde, que estás en efectivo."; }],
+    [/^Daily closes from the engine's series · (orange|blue|red|gold|purple) while the strategy held (\S+), green while it sat in cash$/,
+      function(_,c,a){ return "Cierres diarios de la serie del motor · "+COLOR[c]+" mientras la estrategia tuvo "+a+", verde mientras estuvo en efectivo"; }],
+    [/^A Rotation holds no single asset — it rotates among (\w+)\. This is the price of the last one it held \(today it sits in cash\); the color shows when the strategy actually held it, when it held another asset, and when it sat in cash\.$/,
+      function(_,n){ return "Un Rotation no tiene un solo activo: rota entre "+(NUMS[n]||n)+". Este es el precio del último que tuvo (hoy está en efectivo); el color muestra cuándo la estrategia realmente lo tuvo, cuándo tuvo otro activo y cuándo estuvo en efectivo."; }],
+    [/^(\S+) price · the last asset it held \(today: cash\)$/, "Precio de $1 · el último activo que tuvo (hoy: efectivo)"],
+    [/^Since it exited, (\S+) is (down|up) (\S+)\.$/, function(_,a,d,g){ return "Desde que salió, "+a+(d==="up"?" sube ":" baja ")+g+"."; }],
+    [/^over (\d+) days?\.$/, function(_,n){ return "en "+n+" "+dias(n)+"."; }],
+    [/^replay (.+) in the Lab$/, "repasar $1 en el Lab"],
+    [/^Equal-weight basket \((\w+) assets\)( — flat by definition)?$/, function(_,n,f){ return "Canasta de igual peso ("+(NUMS[n]||n)+" activos)"+(f?" — plana por definición":""); }],
+    [/^Equal-weight (\S+) buy and hold$/, "Comprar y mantener $1 en partes iguales"],
+    [/^Holding a perpetual short means paying or receiving a funding rate every eight hours\. We applied Binance's own published history for (\S+) to every short this strategy took: the effect is$/,
+      "Mantener un corto en perpetuos significa pagar o recibir una tasa de funding cada ocho horas. Aplicamos el historial publicado por la propia Binance para $1 a cada corto que tomó esta estrategia: el efecto es"],
+    [/^Holding a perpetual short means paying or receiving a funding rate every eight hours\. We took Binance's own published funding history for (.+?) — the assets this book actually shorts — and applied it to every short it took: the effect is$/,
+      function(_,l){ return "Mantener un corto en perpetuos significa pagar o recibir una tasa de funding cada ocho horas. Tomamos el historial de funding publicado por la propia Binance para "+
+        l.replace("(crypto only; MSTR and TSLA are long-only legs)", "(solo cripto; MSTR y TSLA son patas que solo compran)").replace(/ and /g, " y ")+
+        ", que son los activos que este libro realmente vende en corto, y lo aplicamos a cada corto que tomó: el efecto es"; }],
+    [/^on the since-(\d{4}) result and$/, "sobre el resultado desde $1 y"],
+    [/^on the since-(\d{4}) one\. It is$/, "sobre el de desde $1. Es un"],
+    [/^on the since-(\d{4}) result\. It is$/, "sobre el resultado desde $1. Es un"],
+    [/^, not a cost — (\S+) funding has been positive (\S+) of the time since (\d{4}), and a short collects it\. The figures above leave it out, so they are slightly conservative, not optimistic\.$/,
+      ", no un costo: el funding de $1 ha sido positivo el $2 del tiempo desde $3, y quien está en corto lo cobra. Las cifras de arriba lo dejan fuera, así que son levemente conservadoras, no optimistas."],
+    [/^on the since-(\d{4}) result \((\S+) on the notional held short\)\. Here it is neither income nor a real cost: this book spent few days short, and what it collected and what it paid nearly cancel out\. The figures above leave funding out\. There are no ZEC shorts: the short side only trades SUI, ETH and BTC\.$/,
+      "sobre el resultado desde $1 ($2 sobre el nocional mantenido en corto). Aquí no es ni un ingreso ni un costo real: este libro pasó pocos días en corto, y lo que cobró y lo que pagó casi se anulan. Las cifras de arriba dejan fuera el funding. No hay cortos en ZEC: el lado corto solo opera SUI, ETH y BTC."],
+    [/^, so the short-side figures are optimistic, not conservative\. And the sample is thin: (\d+) shorts in the whole window — one rode the 2025-26 bear from top to bottom, the other two were stopped out within days\. Treat the long side as the product and the short side as an option on a bear market: it did nothing for two years, then made most of its money in one trade\.$/,
+      ", así que las cifras del lado corto son optimistas, no conservadoras. Y la muestra es chica: $1 cortos en toda la ventana; uno recorrió el mercado bajista de 2025-26 de arriba abajo, y los otros dos salieron por stop a los pocos días. Toma el lado comprado como el producto y el lado corto como una opción sobre un mercado bajista: no hizo nada durante dos años y después ganó la mayor parte de su plata en un solo trade."],
+    [/^Binance opened a perpetual for each asset this book shorts before the book ever shorted it — (.+?) — so not one of its (\d+) shorts falls in a stretch where the trade would have been impossible to place\. That is not the norm: on bitcoin the gap between the spot market and its perpetual was two years, and cutting the unplaceable trades out of another product in this catalogue cost more than half of its headline figure\.$/,
+      function(_,l,n){ return "Binance abrió un perpetuo para cada activo que este libro vende en corto antes de que el libro lo vendiera en corto por primera vez ("+
+        l.replace(new RegExp("(\\S+) on "+MES+" (\\d{1,2}) (\\d{4})","g"), function(_,a,m,d,y){ return a+" el "+d+" "+mes(m)+" "+y; }).replace(/ and /g, " y ")+
+        "), así que ninguno de sus "+n+" cortos cae en un tramo donde habría sido imposible poner la orden. Eso no es lo normal: en bitcoin el vacío entre el mercado spot y su perpetuo fue de dos años, y sacar los trades imposibles de otro producto de este catálogo le costó más de la mitad de su cifra principal."; }],
+    [/^Binance's (\S+) perpetual only started in (\w+) (\d{4}), and (\d+) of its (\d+) shorts happened before that date\. Those trades are in the backtest but could not have been placed on the venue this product assumes\. They are small in dollars and early in the curve, which is exactly where compounding magnifies them\.$/,
+      function(_,p,m,y,a,b){ return "El perpetuo "+p+" de Binance recién partió en "+(MESL[m]||m)+" de "+y+", y "+a+" de sus "+b+" cortos ocurrieron antes de esa fecha. Esos trades están en el backtest, pero no se habrían podido poner en el mercado que este producto supone. Son chicos en dólares y están al comienzo de la curva, que es justo donde el interés compuesto los agranda."; }],
+    [/^(\S+) listed on (\d{1,2}) (\w+) (\d{4}) and Binance opened its perpetual the same day, so there is no stretch of this backtest where the short side would have been impossible to place\. That is not the norm — on bitcoin the gap was two years, and cutting those unplaceable trades out cost more than half of the headline figure\.$/,
+      function(_,a,d,m,y){ return a+" se listó el "+d+" de "+(MESL[m]||m)+" de "+y+" y Binance abrió su perpetuo el mismo día, así que no hay ningún tramo de este backtest donde habría sido imposible operar el lado corto. Eso no es lo normal: en bitcoin el vacío fue de dos años, y sacar esos trades imposibles costó más de la mitad de la cifra principal."; }],
+    [/^(\S+) traded on the spot market long before Binance opened its (\S+) perpetual in (\w+) (\d{4}) — but this product's window starts well after that date, so$/,
+      function(_,a,p,m,y){ return a+" se negoció en el mercado spot mucho antes de que Binance abriera su perpetuo "+p+" en "+(MESL[m]||m)+" de "+y+", pero la ventana de este producto parte bastante después de esa fecha, así que"; }],
+    [/^not one of its (\d+) shorts$/, "ninguno de sus $1 cortos"],
+    [/^(\d+) trades · (\d+)W \/ (\d+)L$/, "$1 trades · $2 ganados / $3 perdidos"],
+    [new RegExp("^(.+?) ₿ from "+MES+" (\\d{4})$"), function(_,a,m,y){ return a+" ₿ desde "+mes(m)+" "+y; }],
+    [new RegExp("^\\$([\\d,]+) from "+MES+" (\\d{4})$"), function(_,a,m,y){ return "$"+a+" desde "+mes(m)+" "+y; }],
+    [new RegExp("^the longer and harder read — same \\$1,000 from "+MES+" (\\d{4}):$"), function(_,m,y){ return "la lectura más larga y más dura, los mismos $1,000 desde "+mes(m)+" "+y+":"; }],
+    [new RegExp("^(\\$\\S+ → \\$\\S+) · "+MES+" (\\d{4}) → today · (.+)$"), function(_,a,m,y,t){
+      return a+" · "+mes(m)+" "+y+" → hoy · "+t.replace(/closed (\S+) plus an open trade at (\S+)/, "cerrado $1 más un trade abierto en $2").replace(/\/yr/g, "/año"); }],
+    [new RegExp("^"+MES+" (\\d{4}) → now$"), function(_,m,y){ return mes(m)+" "+y+" → hoy"; }],
+    [new RegExp("^since "+MES+" (\\d{4})$"), function(_,m,y){ return "desde "+mes(m)+" "+y; }],
+    [new RegExp("^"+MES+" (\\d{2}|\\d{4})$"), function(_,m,y){ return mes(m)+" "+y; }],
+    [new RegExp("^"+MES+" (\\d{1,2}), (\\d{4})$"), function(_,m,d,y){ return d+" "+mes(m)+" "+y; }],
+    [/^(.+) → now · (\d+)d$/, "$1 → hoy · $2 d"],
+    [/^(\d+)d ago \((.+)\)$/, "hace $1 d ($2)"],
+    [/^\$(\S+) won per \$1 lost$/, "$$$1 ganados por cada $$1 perdido"],
+    [/^Avg\. trade (.+)$/, "Trade prom. $1"],
+    [/^Max DD (.+)$/, "Caída máx. $1"],
+    [/^CASH · (.+)$/, "EFECTIVO · $1"],
+    [/^(.+ · \S+ → )now( · .+)$/, "$1hoy$2"],
+    [/ · (\d+)d( · |$)/, " · $1 d$2"],
+    [/ · out of the market$/, " · fuera del mercado"],
+    [/^bought (\S+) → sold now (\S+)$/, "compró $1 → vale hoy $2"],
+    [/^bought (\S+) → sold (\S+)$/, "compró $1 → vendió $2"],
+    [/^shorted (\S+) → covered now (\S+)$/, "vendió en corto $1 → vale hoy $2"],
+    [/^shorted (\S+) → covered (\S+)$/, "vendió en corto $1 → recompró $2"],
+    [/^since (\S+) · (\d+) ?d$/, "desde $1 · $2 d"],
+    [/^since · (\S+)$/, "desde · $1"],
+    [/^· (\S+) since then$/, "· $1 desde entonces"],
+    [/^· since then (.+)$/, "· desde entonces $1"],
+    [/^· bar (\d+) \/ (\d+)$/, "· vela $1 / $2"],
+    [/^([▲▼]) (\S+) since$/, "$1 $2 desde entonces"],
+    [/^(\S+) ([▲▼]) (\S+) since you left$/, "$1 $2 $3 desde que saliste"],
+    [/^Since it sold, (\S+) is down (\S+): staying out has helped so far\.$/, "Desde que vendió, $1 baja $2: estar fuera ha ayudado hasta ahora."],
+    [/^Since it sold, (\S+) is up (\S+): being out has missed that move so far\.$/, "Desde que vendió, $1 sube $2: estar fuera se ha perdido esa subida hasta ahora."],
+    [/^Since then the position is (up|down) (\S+)\.$/, function(_,d,g){ return "Desde entonces la posición "+(d==="up"?"sube":"baja")+" "+g+"."; }],
+    [/^⚡ Trade history — (\d+) trades?$/, "⚡ Historial de trades — $1 trades"],
+    [/^📈 YTD (\d{4})$/, "📈 En lo que va de $1"],
+    [/^on (\S+) · (\S+) (\S+) over this window · held (\S+) (\S+) of the bars, in position (\S+) · built from the engine's daily series, not a live feed$/,
+      "al $1 · $2 $3 en esta ventana · tuvo $4 el $5 de las velas, en posición el $6 · armado con la serie diaria del motor, no con datos en vivo"],
+    [/^on (\S+) · (\S+) (\S+) over this window · in position (\S+) of the bars · built from the engine's daily series, not a live feed$/,
+      "al $1 · $2 $3 en esta ventana · en posición el $4 de las velas · armado con la serie diaria del motor, no con datos en vivo"],
+    [/^Daily closes from the engine's series · (orange|blue|red) while the strategy held (\S+), green while it sat in cash$/,
+      function(_,c,a){ return "Cierres diarios de la serie del motor · "+COLOR[c]+" mientras la estrategia tuvo "+a+", verde mientras estuvo en efectivo"; }],
+    [/^, not of live signals: every state on this strip comes from the engine's data file, and this page only plays it back\. Green = strategy equity, orange = (.+); both start at \$1,000 at the left edge of the window \(log scale\)\.$/,
+      function(_,b){ return ", no de señales en vivo: cada estado de esta franja sale del archivo de datos del motor, y esta página solo lo reproduce. Verde = capital de la estrategia, naranja = "+
+        b.replace(/^holding (\S+)$/, "mantener $1").replace("the equal-weight basket of the same assets", "la canasta de igual peso de los mismos activos")+"; ambos parten en $1,000 en el borde izquierdo de la ventana (escala logarítmica)."; }],
+    [/^EXAMPLE · AS OF (.+)$/, "EJEMPLO · AL $1"],
+    [/^decision close: (.+)$/, "cierre de decisión: $1"],
+    [/^run: (.+)$/, "corrida: $1"],
+    [/^valid until: (.+)$/, "válida hasta: $1"],
+    [/^product: (.+)$/, "producto: $1"],
+    [/^source: (.+)$/, "fuente: $1"],
+    [/^(.+) · long or cash · (.+)$/, function(_,a,c){ return a+" · comprado o en efectivo · "+cad(c); }],
+    [/^(.+) · long or short · (.+)$/, function(_,a,c){ return a+" · comprado o en corto · "+cad(c); }],
+    [/^(.+) · CASH · (.+)$/, function(_,a,c){ return a+" · EFECTIVO · "+cad(c); }],
+    [/^on (\S+)$/, "en $1"],
+    [/^The goal is more (\S+), not more dollars\.$/, "La meta es tener más $1, no más dólares."],
+    [/^When (\S+) only goes up, holding wins — you cannot beat a rocket by stepping off it\. The edge shows up across a full cycle, and above all in the drawdown you never had to sit through\. Use the range buttons on each chart and check the bad years yourself\.$/,
+      "Cuando $1 solo sube, mantener gana: no le ganas a un cohete bajándote de él. La ventaja aparece en un ciclo completo y, sobre todo, en la caída que nunca tuviste que aguantar. Usa los botones de rango de cada gráfico y revisa tú mismo los años malos."],
+    [/^Judge it the way you judge everything: did the round trip end with more (.+) than simply holding\? That is the only comparison that matters, and it is the one printed on the card below\.$/,
+      function(_,a){ return "Júzgala como juzgas todo: ¿la ida y vuelta terminó con más "+nom(a)+" que simplemente mantener? Es la única comparación que importa, y es la que aparece en la tarjeta de abajo."; }],
+    [/^more (.+)$/, function(_,a){ return NOM[a] ? "más "+nom(a) : _; }],
+    [/^(Orange|Blue|Red) means you are in (.+), green means you are in cash\.$/, function(_,c,a){ return COLOR[c]+" significa que estás en "+nom(a)+"; verde, que estás en efectivo."; }],
+    [/^“100% on (\S+)” means fully in (.+) today; “100% in CASH” means fully out\. Click the card to open its full record\.$/,
+      function(_,t,a){ return "«100 % en "+t+"» significa completamente en "+nom(a)+" hoy; «100 % en efectivo», completamente fuera. Haz clic en la tarjeta para abrir su registro completo."; }],
+    [/^A Rotation holds no single asset — it rotates among five\. This is the price of the one it holds today; the color shows when the strategy actually held it, when it held another asset, and when it sat in cash\.$/,
+      "Un Rotation no tiene un solo activo: rota entre cinco. Este es el precio del que tiene hoy; el color muestra cuándo la estrategia realmente lo tuvo, cuándo tuvo otro activo y cuándo estuvo en efectivo."],
+    [/^Market price, not the signal\. Click for the (\S+) chart, colored by what the strategy was doing\.$/, "Precio de mercado, no la señal. Haz clic para ver el gráfico de $1, coloreado según lo que hacía la estrategia."],
+    [/^(\S+) price · what it holds today$/, "Precio de $1 · lo que tiene hoy"],
+    [/^(\S+) price chart$/, "Gráfico de precio de $1"],
+    [/^(\S+) price$/, "Precio de $1"],
+    [/^(\S+) buy & hold — flat by definition$/, "$1 comprar y mantener — plano por definición"],
+    [/^(\S+) buy & hold$/, "$1 comprar y mantener"],
+    [/^holding (\S+)$/, "en $1"],
+    [/^hold (\S+)$/, "mantener $1"],
+    [/^SINCE (\d{4})$/, "DESDE $1"],
+    [/^How the book was split between the legs, day by day\. Stacked areas are the long weights; the red hatch is a short taking the whole book; the green gap at the top is cash\. (Equal weight|Proportional \(softmax T=2\)) over the active legs\. Simulated backtest, not real performance\.$/,
+      function(_,w){ return "Cómo se repartió la cartera entre las patas, día a día. Las áreas apiladas son los pesos largos; el achurado rojo es un corto que toma toda la cartera; el hueco verde de arriba es efectivo. "+(w==="Equal weight"?"Igual peso":"Proporcional (softmax T=2)")+" entre las patas activas. Backtest simulado, no es rendimiento real."; }],
+    [/^Bought (\S+) at$/, "Compró $1 a"],
+    [/^Sold (\S+) at$/, "Vendió $1 a"],
+    [/^Shorted (\S+) at$/, "Vendió en corto $1 a"],
+    [/^Calibrated for the (\d{4}) cycle\.$/, "Calibrado para el ciclo desde $1."],
+    [/^in (\d+) days? · (\d+) trades?$/, function(_,n,t){ return "en "+n+" "+dias(n)+" · "+t+" trades"; }],
+    [/^in (\d+) days?(\.?)$/, function(_,n,p){ return "en "+n+" "+dias(n)+p; }],
+    [/^in total over (\d+) days?\. The final leg, (.+?), closed (\S+)\.$/, function(_,n,a,r){ return "en total en "+n+" "+dias(n)+". El último tramo, "+a.replace(" (short)"," (corto)")+", cerró "+r+"."; }],
+    [/^in total over (\d+) days?\.$/, function(_,n){ return "en total en "+n+" "+dias(n)+"."; }],
+    [/^at (\S+), and it holds that position until the rule says exit\.$/, "a $1, y mantiene esa posición hasta que la regla diga salir."],
+    [/^, and it holds that position until the rule says exit\.$/, ", y mantiene esa posición hasta que la regla diga salir."],
+    [/^This strategy follows a fixed rule on (.+?)\. It makes (.+?)\.( Besides buying, it can short, which gains when the price falls\.)?$/,
+      function(_,a,c,ls){ return "Esta estrategia sigue una regla fija sobre "+a.replace("gold (PAXG)","oro (PAXG)")+". Toma "+cad(c)+"."+(ls?" Además de comprar, puede vender en corto, lo que gana cuando el precio cae.":""); }],
+    [/^This portfolio follows fixed rules that compare (.+) and hold the strongest one, or cash\. It makes (.+?)\.$/,
+      function(_,l,c){ return "Esta cartera sigue reglas fijas que comparan "+l.replace("gold (PAXG)","oro (PAXG)")+" y se queda con el más fuerte, o en efectivo. Toma "+cad(c)+"."; }],
+    [/^This portfolio follows one fixed rule: it holds (.+?) while its signal says buy; if not, (.+?) while its own signal says buy; if not, cash\. It makes (.+?)\.$/,
+      function(_,a,b,c){ return "Esta cartera sigue una sola regla fija: tiene "+a.replace("gold (PAXG)","oro (PAXG)")+" mientras su señal dice comprar; si no, "+b.replace("gold (PAXG)","oro (PAXG)")+" mientras la suya dice comprar; si no, efectivo. Toma "+cad(c)+"."; }],
+    [/^This portfolio follows fixed rules that spread it across the strongest of (.+), each with its own weight, or hold cash\. It makes (.+?)\.$/,
+      function(_,l,c){ return "Esta cartera sigue reglas fijas que la reparten entre los más fuertes de "+l.replace("gold (PAXG)","oro (PAXG)")+", cada uno con su propio peso, o quedan en efectivo. Toma "+cad(c)+"."; }],
+    [/^At today's close the rule changed the position from$/, "Al cierre de hoy la regla cambió la posición de"],
+    [/^\. The order fills at the next open, so the result of the trade it closed becomes final once that happens\.$/, ". La orden se ejecuta en la apertura siguiente, así que el resultado del trade que cerró queda firme cuando eso pase."],
+    [/^\(US dollars\)\. It stays out until the rule's conditions say buy again\.(.*)$/, function(_,t){ return "(dólares). Se queda fuera hasta que las condiciones de la regla digan comprar otra vez."+traza(t); }],
+    [/^(\d+%)\. The weights change only when the rule changes the set\.(.*)$/, function(_,p,t){ return p+". Los pesos cambian solo cuando la regla cambia el grupo."+traza(t); }],
+    [/^(\d+%), $/, "$1, "],
+    [/^Proportional allocation across the active legs · rebalanced when the set changes( · a short takes the whole book)?$/, function(_,s){ return "Reparto proporcional entre las patas activas · se rebalancea cuando cambia el grupo"+(s?" · un corto toma toda la cartera":""); }],
+    [/^🔻 Short leg:$/, "🔻 Pata corta:"],
+    [/^Changed today · order fills at the next session open \(NYSE\)$/, "Cambió hoy · la orden se ejecuta en la apertura de la sesión siguiente (NYSE)"],
+    [/^Changed today · executes at the next candle open, right after the close \(24\/7 market\)$/, "Cambió hoy · se ejecuta en la apertura de la vela siguiente, justo después del cierre (mercado 24/7)"],
+    [/^(.+) — Strategya\.pro$/, "$1 — Strategya.pro"]
+  ];
+  /* Cola del relato (último tramo o último trade), que viene pegada en el mismo nodo de texto */
+  function traza(t){
+    if(!t) return "";
+    return t
+      .replace(/Its last stretch from cash back to cash began on (.+?) and ended on (.+?): it held (.+?) \((\d+) trades?(, each asset with its own weight)?\), and the whole portfolio ended$/, function(_,d1,d2,l,n,p){
+        return "Su último tramo de efectivo a efectivo empezó el "+d1+" y terminó el "+d2+": tuvo "+l.replace(/ and /," y ").replace("gold (PAXG)","oro (PAXG)")+" ("+n+(n==="1"?" trade":" trades")+(p?", cada activo con su propio peso":"")+"), y la cartera completa terminó"; })
+      .replace(/Its last stretch from cash back to cash began on (.+?) and ended on (.+?): (\d+) trades?/, "Su último tramo de efectivo a efectivo empezó el $1 y terminó el $2: $3 trades")
+      .replace(/ rotating between (.+?),$/, function(_,l){ return " rotando entre "+l.replace(/ and /," y ").replace("gold (PAXG)","oro (PAXG)")+","; })
+      .replace(/ in ([^,]+),$/, " en $1,")
+      .replace(/That change closed the previous trade, which/, "Ese cambio cerró el trade anterior, que")
+      .replace(/Its last trade/, "Su último trade")
+      .replace(/ (bought|shorted) (.+?)( at [\d.,]+)? on (.+?) and closed( at [\d.,]+)? on (.+?):$/, function(_,v,a,ep,d1,xp,d2){
+        return " "+(v==="bought"?"compró":"vendió en corto")+" "+a.replace("gold (PAXG)","oro (PAXG)")+(ep?ep.replace(" at "," a "):"")+" el "+d1+" y cerró"+(xp?xp.replace(" at "," a "):"")+" el "+d2+":"; });
+  }
+
+  function tr(s){
+    if(!s || !/[A-Za-z]/.test(s)) return s;
+    var m = s.match(/^(\s*)([\s\S]*?)(\s*)$/), a = m[1], core = m[2].replace(/\s+/g, " "), z = m[3];
+    var orig = core;
+    if(Object.prototype.hasOwnProperty.call(EXACT, core)) return a + EXACT[core] + z;
+    for(var i = 0; i < R.length; i++){
+      if(R[i][0].test(core)){ core = core.replace(R[i][0], R[i][1]); if(Object.prototype.hasOwnProperty.call(EXACT, core)) core = EXACT[core]; }
+    }
+    return core === orig ? s : a + core + z;
+  }
+  var ATTR = ["title","aria-label","alt","placeholder"];
+  function walk(root){
+    if(!root) return;
+    if(root.nodeType === 3){
+      /* «<span id=liveasset>BTC</span> price» → «Precio de BTC»: el activo lo cambia la ficha, así que va un nodo antes */
+      var pv = root.previousSibling;
+      if(pv && pv.nodeType === 1 && pv.id === "liveasset" && /^\s*price\s*$/.test(root.nodeValue)){
+        root.nodeValue = " ";
+        if(!(pv.previousSibling && pv.previousSibling.__esPre)){ var pre = document.createTextNode("Precio de "); pre.__esPre = true; pv.parentNode.insertBefore(pre, pv); }
+        return;
+      }
+      var t = tr(root.nodeValue); if(t !== root.nodeValue) root.nodeValue = t; return; }
+    if(root.nodeType !== 1 || root.tagName === "SCRIPT" || root.tagName === "STYLE") return;
+    for(var k = 0; k < ATTR.length; k++){ var v = root.getAttribute(ATTR[k]); if(v){ var w = tr(v); if(w !== v) root.setAttribute(ATTR[k], w); } }
+    for(var c = root.firstChild; c; c = c.nextSibling) walk(c);
+  }
+  window.__SG_ES_TR__ = tr;
+  function run(){
+    walk(document.body);
+    if(document.title) document.title = tr(document.title);
+    new MutationObserver(function(ms){
+      for(var i = 0; i < ms.length; i++){
+        var r = ms[i];
+        if(r.type === "characterData") walk(r.target);
+        else if(r.type === "attributes") walk(r.target);
+        else for(var j = 0; j < r.addedNodes.length; j++) walk(r.addedNodes[j]);
+      }
+    }).observe(document.body, {subtree:true, childList:true, characterData:true, attributes:true, attributeFilter:ATTR});
+  }
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", run); else run();
+})();
+})();
+/* IDIOMA-ES: fin */
+</script>
+<script>
 /* EMBED: modo iframe para strategya.pro/catalog (15-sep-2026) */
 /* Corre ANTES que <style> y el resto de la página para no parpadear: agrega
    la clase que usan las reglas de abajo, y dos banderas que el script
@@ -620,13 +1016,13 @@ html.embed .grid{display:block}
   <div id="stale" role="alert">
     <div class="when-refreshing">
       <span class="tag">⏳ Refreshing signal</span>
-      This page shows the run of <b>2026-11-19 00:06 UTC</b>, valid until <b>2026-11-20 00:45 UTC</b>.
+      This page shows the run of <b>2026-11-19 13:16 UTC</b>, valid until <b>2026-11-20 00:45 UTC</b>.
       The next run is being published (it usually takes under 10 minutes after the candle closes)
       and this page will reload by itself. Until then, the position above is the previous one.
     </div>
     <div class="when-expired">
       <span class="tag">⚠ Signal expired</span>
-    This page shows the run of <b>2026-11-19 00:06 UTC</b>, which was valid until
+    This page shows the run of <b>2026-11-19 13:16 UTC</b>, which was valid until
     <b>2026-11-20 00:45 UTC</b>. <b>The position above is no longer the current one.</b>
     If you are seeing this, the next run was not published: do not act on this page and tell the team.
     </div>
@@ -692,7 +1088,7 @@ html.embed .grid{display:block}
       <a href="https://strategya.pro/simulator?s=strategya-pro-line-btc">simulate it</a></p>
     <div class="runstamp">
       <span>product: strategya-pro-line-btc</span>
-      <span>run: 2026-11-19 00:06 UTC</span>
+      <span>run: 2026-11-19 13:16 UTC</span>
       <span>decision close: 2026-11-19 00:00 UTC</span>
       <span>valid until: 2026-11-20 00:45 UTC</span>
       <span>source: Strategya.pro Line (free indicator) · preset default settings</span>
@@ -729,7 +1125,7 @@ const PRODUCTO = {
   "acento": "#f7931a",
   "colorPalabra": "orange",
   "goLive": "2026-11-08",
-  "corrida": "2026-11-19 00:06 UTC"
+  "corrida": "2026-11-19 13:16 UTC"
 };
 
 /* derivados: se calculan, no se repiten */
@@ -737,7 +1133,9 @@ const P = PRODUCTO;
 const ES_LS    = P.lado === "LONG+SHORT";
 const ES_12H   = P.tf === "12H";
 const CADENCIA = ES_12H ? "two decisions a day (00:00 and 12:00 UTC)"
-                        : (P.mercado === "acciones" ? "one decision a day (NYSE close, 20:00 UTC in summer / 21:00 in winter)"
+                        // coin-1d (19-nov-2026): acción con RELOJ de Bitcoin; el descriptor lo dice con "reloj": "btc"
+                        : (P.reloj === "btc" ? "one decision a day (Bitcoin's daily close, 00:00 UTC · orders fill at the next NASDAQ open)"
+                        : P.mercado === "acciones" ? "one decision a day (NYSE close, 20:00 UTC in summer / 21:00 in winter)"
                                                      : "one decision a day (00:00 UTC)");   // acciones: reloj NYSE (9-oct-2026)
 
 /* ==================================================================
@@ -939,7 +1337,7 @@ const ymd = (t) => new Date(t).toISOString().slice(0,10);
 /* ======================================================================
    strategya-pro-line-btc — DATOS emitidos por el MOTOR DE BENCHMARKS (benchmarks/ficha-benchmark.py).
    Strategya.pro Line · BTC · velas diarias de Binance
-   Corrida 2026-11-19 00:06 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
+   Corrida 2026-11-19 13:16 UTC · capital $1.000 · comisión 0,1 % · slippage 0.
 
    ✅ VARA: el motor reproduce el resultado de TradingView con Δ 0.025 %.
    ====================================================================== */
@@ -1326,7 +1724,10 @@ function signalBox(v){
   /* Proportional (y Even Split): cada pata pesa una parte, así que el retorno de UNA pata no es el de la cartera.
      Se excluye por el preset, no por cuántas patas salieron: el 25-oct `rotation-1d-prop` salió de una sola (SUI) y
      mostró «LAST TRADE +19.64%», que era la pata y no la cartera. */
-  const esProp = ES_ROT && !/^Winner/.test(String(P.preset || ""));
+  /* Cascada (19-nov-2026, `btc-gold-*`): un activo a la vez por orden de prioridad, sin árbitro ni pesos. Lo dice el
+     descriptor con `"reparto": "cascada"`; no es Proportional aunque su preset no empiece con «Winner». */
+  const esCascada = ES_ROT && P.reparto === "cascada";
+  const esProp = ES_ROT && !esCascada && !/^Winner/.test(String(P.preset || ""));
   const cerrada = (s.lastChange && lcFrom && lcFrom !== "CASH" && !s.pending && !esProp)
     ? (v.trades || []).filter(t => t.exit && !t.open && t.asset === lcFrom
           && Math.abs(Date.parse(t.exit) - Date.parse(s.lastChange.date)) <= 5 * 864e5)
@@ -1370,10 +1771,12 @@ function signalBox(v){
      contradecirlo. La frase del movimiento desde el cambio la completa paintMove() en vivo (#expmove). No calcula
      retornos: el del trade sale de v.trades, igual que «LAST TRADE». */
   const fd = d => d ? new Date(String(d).slice(0, 10) + "T00:00:00Z")
-      .toLocaleDateString("en-US", {month:"short", day:"numeric", year:"numeric", timeZone:"UTC"}) : "";
+      .toLocaleDateString(window.__SG_ES__ ? "es-CL" : "en-US", {month:"short", day:"numeric", year:"numeric", timeZone:"UTC"}) : "";
   const nom = a => a === "PAXG" ? "gold (PAXG)" : a;
   const enCaja = !multi && s.alloc.length === 1 && s.alloc[0].asset === "CASH";
-  const regla = ES_ROT
+  const regla = esCascada
+    ? `This portfolio follows one fixed rule: it holds ${nom(P.universo[0].a)} while its signal says buy; if not, ${nom(P.universo[1].a)} while its own signal says buy; if not, cash. It makes ${CADENCIA}.`
+    : ES_ROT
     ? (esProp
         ? `This portfolio follows fixed rules that spread it across the strongest of ${P.universo.map(x => nom(x.a)).join(", ")}, each with its own weight, or hold cash. It makes ${CADENCIA}.`
         : `This portfolio follows fixed rules that compare ${P.universo.map(x => nom(x.a)).join(", ")} and hold the strongest one, or cash. It makes ${CADENCIA}.`)
@@ -1463,6 +1866,7 @@ const TERMS = {
   ranges:   "Time window \u2014 every figure on this card is measured over the window you pick here, and both curves are re-based to the same starting capital at its beginning. 6M / 1Y / 2Y are simply the last months up to today.\n\nWHY IT OPENS ON SINCE 2023. Every product on this board opens on the same window, deliberately. Each one used to open on its own \u2014 and, without anyone choosing it that way, each one opened on the window that happened to flatter it. Comparing them then meant reading eight years of one against three and a half of another, and the bigger number won for the wrong reason. SINCE 2023 is the one window all of them share, counted from the bottom of the previous bear market, and it is the regime most of these presets were tuned for.\n\nShort windows flatter almost any strategy, because they tend to hold no crash at all. That is exactly why the longer reading is not hidden behind this control: it sits under the cards, always visible, with its own result and its own worst drawdown. Use this control to explore; use that line to keep yourself honest.",
   hold2:    "Strategy vs buy & hold — the same $1,000, the same start date, two different decisions. GREEN is what the strategy would have turned it into by following every signal, compounding, after 0.1% commission on each side of every trade. Orange is what simply buying bitcoin on day one and never selling would have left you. Beating that orange number is the only reason to run a strategy instead of just holding — and the multiplier under each figure says by how much, while the drawdown chip says what you had to sit through to get there. Both are simulated on past prices, not money that was made.",
 };
+if(window.__SG_ES_TERMS__) window.__SG_ES_TERMS__(TERMS);   /* IDIOMA-ES: textos de ayuda */
 const hint = (k) => `<button class="hint" type="button" data-term="${k}" aria-label="What is this?">\u24D8</button>`;
 
 /* ---------- KPI grid ---------- */
