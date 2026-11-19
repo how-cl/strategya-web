@@ -1,0 +1,35 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "coin-1d",
+  "kind": "sovereign",
+  "timeframe": "1D",
+  "strategy": {
+    "file": "EVOL COIN 1D v0.4 2026-11-19.pine",
+    "preset": "U",
+    "symbol": "NASDAQ:COIN",
+    "md5": "fa2ca76145e4045f361c0c0de0f9b2f1"
+  },
+  "decision_bar_label": "2026-11-19T00:00Z",
+  "decision_close_utc": "2026-11-19T00:00:00Z",
+  "valid_until_utc": "2026-11-20T00:00:00Z",
+  "generated_at_utc": "2026-11-19T02:33:00Z",
+  "data_as_of": {
+    "COIN": "2026-11-19"
+  },
+  "cash_asset": "USD",
+  "reference_price": 110.56,
+  "action": "HOLD",
+  "positions": [],
+  "previous_positions": [],
+  "last_trade": {
+    "asset": "COIN",
+    "side": "long",
+    "entry_date": "2026-08-20",
+    "exit_date": "2026-10-13",
+    "days": 54,
+    "return_pct": 3.75
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:67233e08f05eb8da092e7459a2e5b2b8c30c799afb947189d2965a48f48d25e0"
+}
