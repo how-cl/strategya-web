@@ -1,0 +1,35 @@
+{
+  "schema": "strategya.signal/0.2",
+  "product": "btc-gold-12h",
+  "kind": "rotation",
+  "timeframe": "12H",
+  "strategy": {
+    "file": "EVOL BTC+Gold Cascade 12H-1D v0.1 2026-11-19.pine",
+    "preset": "A · 12H x 12H (btc-12h + paxg-12h)",
+    "symbol": "BINANCE:BTCUSDT",
+    "md5": "a3c7f53f0128ce064dfedbb3d8261e03"
+  },
+  "decision_bar_label": "2026-11-19T12:00Z",
+  "decision_close_utc": "2026-11-19T12:00:00Z",
+  "valid_until_utc": "2026-11-20T00:00:00Z",
+  "generated_at_utc": "2026-11-19T12:14:00Z",
+  "data_as_of": {
+    "BTC": "2026-11-19"
+  },
+  "cash_asset": "USDT",
+  "reference_price": null,
+  "action": "HOLD",
+  "positions": [],
+  "previous_positions": [],
+  "last_trade": {
+    "asset": "BTC",
+    "side": "long",
+    "entry_date": "2026-08-18",
+    "exit_date": "2026-10-24",
+    "days": 66,
+    "return_pct": 25.91
+  },
+  "status": "ok",
+  "notes": "",
+  "checksum": "sha256:08f00149a578e49e8259c14241ea697004cc9c7d99572dd127b87779241b1653"
+}
