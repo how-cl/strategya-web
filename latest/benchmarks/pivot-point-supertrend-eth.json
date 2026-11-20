@@ -11,9 +11,9 @@
  "rule": "Long when Pivot Point SuperTrend (pivot period 2, ATR 10, factor 3) flips up; cash when it flips down.",
  "credit": "Pivot Point SuperTrend by LonesomeTheBlue (MPL-2.0): https://www.tradingview.com/script/L0AIiLvH-Pivot-Point-Supertrend/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-19T13:15:00Z",
- "decision_bar": "2026-11-18",
- "valid_until_utc": "2026-11-20T00:45:00Z",
+ "generated_at_utc": "2026-11-20T00:05:00Z",
+ "decision_bar": "2026-11-19",
+ "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-12",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-18",
-   "until": "2026-11-18",
+   "since": "2026-05-19",
+   "until": "2026-11-19",
    "cagr_pct": 59.6,
    "max_dd_pct": 11.9,
    "mar": 4.99,
    "sharpe": 1.43,
    "hold": {
-    "cagr_pct": -30.2,
-    "max_dd_pct": 36.3,
+    "cagr_pct": -30.6,
+    "max_dd_pct": 36.7,
     "mar": -0.83,
-    "sharpe": -0.38,
-    "return_pct": -16.57
+    "sharpe": -0.39,
+    "return_pct": -16.79
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -45,18 +45,18 @@
    "return_pct": 26.54
   },
   "1y": {
-   "since": "2025-11-18",
-   "until": "2026-11-18",
+   "since": "2025-11-19",
+   "until": "2026-11-19",
    "cagr_pct": -3.3,
    "max_dd_pct": 29.3,
    "mar": -0.11,
    "sharpe": 0.07,
    "hold": {
-    "cagr_pct": -43.1,
+    "cagr_pct": -41.9,
     "max_dd_pct": 53.3,
-    "mar": -0.81,
-    "sharpe": -0.63,
-    "return_pct": -43.11
+    "mar": -0.79,
+    "sharpe": -0.6,
+    "return_pct": -41.92
    },
    "trades": 3,
    "win_rate_pct": 33.3,
@@ -64,37 +64,37 @@
    "return_pct": -3.32
   },
   "2y": {
-   "since": "2024-11-18",
-   "until": "2026-11-18",
-   "cagr_pct": 28.7,
+   "since": "2024-11-19",
+   "until": "2026-11-19",
+   "cagr_pct": 30.7,
    "max_dd_pct": 42.9,
-   "mar": 0.67,
-   "sharpe": 0.8,
+   "mar": 0.72,
+   "sharpe": 0.84,
    "hold": {
-    "cagr_pct": -25.6,
+    "cagr_pct": -24.8,
     "max_dd_pct": 67.6,
-    "mar": -0.38,
-    "sharpe": -0.09,
-    "return_pct": -44.6
+    "mar": -0.37,
+    "sharpe": -0.07,
+    "return_pct": -43.45
    },
    "trades": 4,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 48.4,
-   "return_pct": 65.47
+   "time_in_market_pct": 48.3,
+   "return_pct": 70.81
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-18",
+   "until": "2026-11-19",
    "cagr_pct": 28.0,
    "max_dd_pct": 42.9,
    "mar": 0.65,
    "sharpe": 0.78,
    "hold": {
-    "cagr_pct": 10.6,
+    "cagr_pct": 10.3,
     "max_dd_pct": 67.6,
-    "mar": 0.16,
+    "mar": 0.15,
     "sharpe": 0.47,
-    "return_pct": 48.06
+    "return_pct": 46.4
    },
    "trades": 10,
    "win_rate_pct": 50.0,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-18",
-   "cagr_pct": 7.0,
+   "until": "2026-11-19",
+   "cagr_pct": 6.9,
    "max_dd_pct": 62.2,
    "mar": 0.11,
    "sharpe": 0.38,
    "hold": {
-    "cagr_pct": -14.3,
+    "cagr_pct": -14.5,
     "max_dd_pct": 74.0,
-    "mar": -0.19,
-    "sharpe": 0.12,
-    "return_pct": -52.8
+    "mar": -0.2,
+    "sharpe": 0.11,
+    "return_pct": -53.33
    },
    "trades": 13,
    "win_rate_pct": 38.5,
@@ -122,24 +122,25 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-18",
-   "cagr_pct": 26.0,
+   "until": "2026-11-19",
+   "cagr_pct": 25.9,
    "max_dd_pct": 79.3,
    "mar": 0.33,
    "sharpe": 0.69,
    "hold": {
-    "cagr_pct": 10.1,
+    "cagr_pct": 10.0,
     "max_dd_pct": 94.0,
     "mar": 0.11,
     "sharpe": 0.54,
-    "return_pct": 135.39
+    "return_pct": 132.76
    },
    "trades": 22,
    "win_rate_pct": 40.9,
-   "time_in_market_pct": 55.1,
+   "time_in_market_pct": 55.0,
    "return_pct": 676.01
   }
  },
+ "history": null,
  "validation": {
   "tradingview_until": "2026-11-08",
   "tv_pnl_pct": 676.1,

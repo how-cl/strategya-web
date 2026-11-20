@@ -11,9 +11,9 @@
  "rule": "Long on the AlphaTrend BUY signal (multiplier 1, period 14, MFI); cash on its SELL signal.",
  "credit": "AlphaTrend by KivancOzbilgic, open source on TradingView: https://www.tradingview.com/script/o50NYLAZ-AlphaTrend/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-19T13:15:00Z",
- "decision_bar": "2026-11-18",
- "valid_until_utc": "2026-11-20T00:45:00Z",
+ "generated_at_utc": "2026-11-20T00:05:00Z",
+ "decision_bar": "2026-11-19",
+ "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-26",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-18",
-   "until": "2026-11-18",
-   "cagr_pct": 42.0,
+   "since": "2026-05-19",
+   "until": "2026-11-19",
+   "cagr_pct": 42.6,
    "max_dd_pct": 7.6,
-   "mar": 5.55,
-   "sharpe": 1.38,
+   "mar": 5.63,
+   "sharpe": 1.39,
    "hold": {
-    "cagr_pct": -32.7,
-    "max_dd_pct": 27.2,
-    "mar": -1.2,
-    "sharpe": -0.81,
-    "return_pct": -18.1
+    "cagr_pct": -34.7,
+    "max_dd_pct": 28.4,
+    "mar": -1.22,
+    "sharpe": -0.88,
+    "return_pct": -19.32
    },
    "trades": 1,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 61.1,
-   "return_pct": 19.31
+   "time_in_market_pct": 60.5,
+   "return_pct": 19.57
   },
   "1y": {
-   "since": "2025-11-18",
-   "until": "2026-11-18",
+   "since": "2025-11-19",
+   "until": "2026-11-19",
    "cagr_pct": 4.4,
    "max_dd_pct": 19.6,
    "mar": 0.23,
    "sharpe": 0.3,
    "hold": {
-    "cagr_pct": -32.2,
+    "cagr_pct": -32.3,
     "max_dd_pct": 39.5,
-    "mar": -0.81,
+    "mar": -0.82,
     "sharpe": -0.66,
-    "return_pct": -32.16
+    "return_pct": -32.3
    },
    "trades": 4,
    "win_rate_pct": 50.0,
@@ -64,37 +64,37 @@
    "return_pct": 4.41
   },
   "2y": {
-   "since": "2024-11-18",
-   "until": "2026-11-18",
-   "cagr_pct": 2.0,
+   "since": "2024-11-19",
+   "until": "2026-11-19",
+   "cagr_pct": 0.9,
    "max_dd_pct": 37.0,
-   "mar": 0.05,
-   "sharpe": 0.21,
+   "mar": 0.03,
+   "sharpe": 0.17,
    "hold": {
-    "cagr_pct": -16.5,
+    "cagr_pct": -18.1,
     "max_dd_pct": 53.0,
-    "mar": -0.31,
-    "sharpe": -0.2,
-    "return_pct": -30.28
+    "mar": -0.34,
+    "sharpe": -0.24,
+    "return_pct": -32.85
    },
    "trades": 8,
    "win_rate_pct": 37.5,
-   "time_in_market_pct": 55.0,
-   "return_pct": 3.96
+   "time_in_market_pct": 54.9,
+   "return_pct": 1.88
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-18",
+   "until": "2026-11-19",
    "cagr_pct": 28.7,
    "max_dd_pct": 37.0,
    "mar": 0.78,
    "sharpe": 0.91,
    "hold": {
-    "cagr_pct": 41.0,
+    "cagr_pct": 40.4,
     "max_dd_pct": 53.0,
-    "mar": 0.77,
-    "sharpe": 0.97,
-    "return_pct": 279.55
+    "mar": 0.76,
+    "sharpe": 0.96,
+    "return_pct": 273.04
    },
    "trades": 18,
    "win_rate_pct": 44.4,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-18",
+   "until": "2026-11-19",
    "cagr_pct": 12.1,
    "max_dd_pct": 39.4,
    "mar": 0.31,
    "sharpe": 0.51,
    "hold": {
-    "cagr_pct": 5.9,
+    "cagr_pct": 5.5,
     "max_dd_pct": 66.9,
-    "mar": 0.09,
-    "sharpe": 0.37,
-    "return_pct": 32.16
+    "mar": 0.08,
+    "sharpe": 0.36,
+    "return_pct": 29.89
    },
    "trades": 23,
    "win_rate_pct": 34.8,
@@ -122,22 +122,98 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-18",
+   "until": "2026-11-19",
    "cagr_pct": 38.9,
    "max_dd_pct": 47.0,
    "mar": 0.83,
    "sharpe": 0.99,
    "hold": {
-    "cagr_pct": 19.1,
+    "cagr_pct": 18.8,
     "max_dd_pct": 81.2,
-    "mar": 0.24,
-    "sharpe": 0.6,
-    "return_pct": 371.36
+    "mar": 0.23,
+    "sharpe": 0.59,
+    "return_pct": 363.28
    },
    "trades": 37,
    "win_rate_pct": 40.5,
    "time_in_market_pct": 53.3,
    "return_pct": 1754.23
+  }
+ },
+ "history": {
+  "facts": {
+   "closed_trades": 37,
+   "winning_trades": 15,
+   "win_rate_pct": 40.5,
+   "avg_trade_days": 46.7,
+   "best_trade": {
+    "entry_date": "2020-10-12",
+    "exit_date": "2021-03-01",
+    "return_pct": 296.5
+   },
+   "worst_trade": {
+    "entry_date": "2019-08-06",
+    "exit_date": "2019-08-23",
+    "return_pct": -14.81
+   },
+   "max_losing_streak": 5,
+   "return_without_top3_pct": 15.5,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -28.8,
+     "hold_pct": -72.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 87.7,
+     "hold_pct": 94.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 321.1,
+     "hold_pct": 302.0,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 88.5,
+     "hold_pct": 59.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -34.4,
+     "hold_pct": -64.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 91.9,
+     "hold_pct": 155.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 40.6,
+     "hold_pct": 121.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -5.4,
+     "hold_pct": -6.3,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2024
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 37 trades and won 15 (41%). A trade lasts about 7 weeks on average. Its best trade was +296% (October 2020 to March 2021) and its worst \u221215% (August 2019). Without its three best trades, the other 34 together still gain 15%. Its worst streak was 5 losses in a row. In 2018 it returned \u221229%; buying and holding Bitcoin returned \u221272%. In 2024 it returned +41%; buying and holding Bitcoin returned +121%.",
+   "es": "Desde 2018 esta regla cerr\u00f3 37 operaciones y gan\u00f3 en 15 (41\u00a0%). Una operaci\u00f3n dura en promedio unas 7 semanas. La mejor fue +296\u00a0% (octubre de 2020 a marzo de 2021) y la peor \u221215\u00a0% (agosto de 2019). Sin sus tres mejores operaciones, las otras 34 juntas igual ganan 15\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221229\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2024 rindi\u00f3 +41\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +121\u00a0%."
   }
  },
  "validation": {

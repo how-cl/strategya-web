@@ -11,9 +11,9 @@
  "rule": "Long when the close crosses above the 200-day SMA; cash when it crosses below.",
  "credit": "Classic trend filter (public domain)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-19T13:15:00Z",
- "decision_bar": "2026-11-18",
- "valid_until_utc": "2026-11-20T00:45:00Z",
+ "generated_at_utc": "2026-11-20T00:05:00Z",
+ "decision_bar": "2026-11-19",
+ "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-12",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-18",
-   "until": "2026-11-18",
+   "since": "2026-05-19",
+   "until": "2026-11-19",
    "cagr_pct": 5.8,
    "max_dd_pct": 17.6,
    "mar": 0.33,
    "sharpe": 0.34,
    "hold": {
-    "cagr_pct": -32.7,
-    "max_dd_pct": 27.2,
-    "mar": -1.2,
-    "sharpe": -0.81,
-    "return_pct": -18.1
+    "cagr_pct": -34.7,
+    "max_dd_pct": 28.4,
+    "mar": -1.22,
+    "sharpe": -0.88,
+    "return_pct": -19.32
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -45,18 +45,18 @@
    "return_pct": 2.86
   },
   "1y": {
-   "since": "2025-11-18",
-   "until": "2026-11-18",
+   "since": "2025-11-19",
+   "until": "2026-11-19",
    "cagr_pct": 2.9,
    "max_dd_pct": 17.6,
    "mar": 0.16,
    "sharpe": 0.24,
    "hold": {
-    "cagr_pct": -32.2,
+    "cagr_pct": -32.3,
     "max_dd_pct": 39.5,
-    "mar": -0.81,
+    "mar": -0.82,
     "sharpe": -0.66,
-    "return_pct": -32.16
+    "return_pct": -32.3
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -64,37 +64,37 @@
    "return_pct": 2.86
   },
   "2y": {
-   "since": "2024-11-18",
-   "until": "2026-11-18",
-   "cagr_pct": -6.0,
+   "since": "2024-11-19",
+   "until": "2026-11-19",
+   "cagr_pct": -7.0,
    "max_dd_pct": 31.7,
-   "mar": -0.19,
-   "sharpe": -0.06,
+   "mar": -0.22,
+   "sharpe": -0.1,
    "hold": {
-    "cagr_pct": -16.5,
+    "cagr_pct": -18.1,
     "max_dd_pct": 53.0,
-    "mar": -0.31,
-    "sharpe": -0.2,
-    "return_pct": -30.28
+    "mar": -0.34,
+    "sharpe": -0.24,
+    "return_pct": -32.85
    },
    "trades": 9,
    "win_rate_pct": 22.2,
-   "time_in_market_pct": 54.3,
-   "return_pct": -11.72
+   "time_in_market_pct": 54.2,
+   "return_pct": -13.48
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-18",
-   "cagr_pct": 32.9,
+   "until": "2026-11-19",
+   "cagr_pct": 32.8,
    "max_dd_pct": 31.7,
    "mar": 1.04,
    "sharpe": 0.94,
    "hold": {
-    "cagr_pct": 41.0,
+    "cagr_pct": 40.4,
     "max_dd_pct": 53.0,
-    "mar": 0.77,
-    "sharpe": 0.97,
-    "return_pct": 279.55
+    "mar": 0.76,
+    "sharpe": 0.96,
+    "return_pct": 273.04
    },
    "trades": 17,
    "win_rate_pct": 35.3,
@@ -103,41 +103,117 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-18",
-   "cagr_pct": 25.4,
+   "until": "2026-11-19",
+   "cagr_pct": 25.3,
    "max_dd_pct": 31.7,
    "mar": 0.8,
    "sharpe": 0.84,
    "hold": {
-    "cagr_pct": 5.9,
+    "cagr_pct": 5.5,
     "max_dd_pct": 66.9,
-    "mar": 0.09,
-    "sharpe": 0.37,
-    "return_pct": 32.16
+    "mar": 0.08,
+    "sharpe": 0.36,
+    "return_pct": 29.89
    },
    "trades": 17,
    "win_rate_pct": 35.3,
-   "time_in_market_pct": 52.7,
+   "time_in_market_pct": 52.6,
    "return_pct": 201.21
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-18",
+   "until": "2026-11-19",
    "cagr_pct": 30.0,
    "max_dd_pct": 64.0,
    "mar": 0.47,
    "sharpe": 0.83,
    "hold": {
-    "cagr_pct": 19.1,
+    "cagr_pct": 18.8,
     "max_dd_pct": 81.2,
-    "mar": 0.24,
-    "sharpe": 0.6,
-    "return_pct": 371.36
+    "mar": 0.23,
+    "sharpe": 0.59,
+    "return_pct": 363.28
    },
    "trades": 31,
    "win_rate_pct": 25.8,
    "time_in_market_pct": 51.5,
    "return_pct": 925.67
+  }
+ },
+ "history": {
+  "facts": {
+   "closed_trades": 31,
+   "winning_trades": 8,
+   "win_rate_pct": 25.8,
+   "avg_trade_days": 53.9,
+   "best_trade": {
+    "entry_date": "2020-04-30",
+    "exit_date": "2021-05-20",
+    "return_pct": 317.22
+   },
+   "worst_trade": {
+    "entry_date": "2020-03-03",
+    "exit_date": "2020-03-09",
+    "return_pct": -10.03
+   },
+   "max_losing_streak": 9,
+   "return_without_top3_pct": -25.7,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": 0.0,
+     "hold_pct": -72.3,
+     "in_cash_all_year": true
+    },
+    {
+     "year": 2019,
+     "rule_pct": 57.2,
+     "hold_pct": 94.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 174.0,
+     "hold_pct": 302.0,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": -20.9,
+     "hold_pct": 59.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": 0.0,
+     "hold_pct": -64.2,
+     "in_cash_all_year": true
+    },
+    {
+     "year": 2023,
+     "rule_pct": 94.2,
+     "hold_pct": 155.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 81.7,
+     "hold_pct": 121.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -17.0,
+     "hold_pct": -6.3,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2020
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 31 trades and won 8 (26%). A trade lasts about 8 weeks on average. Its best trade was +317% (April 2020 to May 2021) and its worst \u221210% (March 2020). Without its three best trades, the other 28 together lose 26%. Its worst streak was 9 losses in a row. It spent all of 2018 in cash, while buying and holding Bitcoin returned \u221272%. In 2020 it returned +174%; buying and holding Bitcoin returned +302%.",
+   "es": "Desde 2018 esta regla cerr\u00f3 31 operaciones y gan\u00f3 en 8 (26\u00a0%). Una operaci\u00f3n dura en promedio unas 8 semanas. La mejor fue +317\u00a0% (abril de 2020 a mayo de 2021) y la peor \u221210\u00a0% (marzo de 2020). Sin sus tres mejores operaciones, las otras 28 juntas pierden 26\u00a0%. Su peor racha fue de 9 p\u00e9rdidas seguidas. Pas\u00f3 todo 2018 en caja, mientras comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2020 rindi\u00f3 +174\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%."
   }
  },
  "validation": {

@@ -11,9 +11,9 @@
  "rule": "Long when Community MoneyLine (ATR 7, depth 3.5, Heikin Ashi) flips Bullish; cash when it flips Bearish.",
  "credit": "Community MoneyLine by rafstar_kaczmarek, open source on TradingView: https://www.tradingview.com/script/8PKjTIwv-Community-MoneyLine/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-19T13:15:00Z",
- "decision_bar": "2026-11-18",
- "valid_until_utc": "2026-11-20T00:45:00Z",
+ "generated_at_utc": "2026-11-20T00:05:00Z",
+ "decision_bar": "2026-11-19",
+ "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-08",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-18",
-   "until": "2026-11-18",
+   "since": "2026-05-19",
+   "until": "2026-11-19",
    "cagr_pct": 92.3,
    "max_dd_pct": 10.9,
    "mar": 8.44,
    "sharpe": 1.89,
    "hold": {
-    "cagr_pct": -30.2,
-    "max_dd_pct": 36.3,
+    "cagr_pct": -30.6,
+    "max_dd_pct": 36.7,
     "mar": -0.83,
-    "sharpe": -0.38,
-    "return_pct": -16.57
+    "sharpe": -0.39,
+    "return_pct": -16.79
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -45,18 +45,18 @@
    "return_pct": 39.02
   },
   "1y": {
-   "since": "2025-11-18",
-   "until": "2026-11-18",
+   "since": "2025-11-19",
+   "until": "2026-11-19",
    "cagr_pct": 23.7,
    "max_dd_pct": 20.4,
    "mar": 1.16,
    "sharpe": 0.75,
    "hold": {
-    "cagr_pct": -43.1,
+    "cagr_pct": -41.9,
     "max_dd_pct": 53.3,
-    "mar": -0.81,
-    "sharpe": -0.63,
-    "return_pct": -43.11
+    "mar": -0.79,
+    "sharpe": -0.6,
+    "return_pct": -41.92
    },
    "trades": 3,
    "win_rate_pct": 33.3,
@@ -64,56 +64,56 @@
    "return_pct": 23.69
   },
   "2y": {
-   "since": "2024-11-18",
-   "until": "2026-11-18",
-   "cagr_pct": 27.1,
+   "since": "2024-11-19",
+   "until": "2026-11-19",
+   "cagr_pct": 29.2,
    "max_dd_pct": 45.1,
-   "mar": 0.6,
-   "sharpe": 0.77,
+   "mar": 0.65,
+   "sharpe": 0.81,
    "hold": {
-    "cagr_pct": -25.6,
+    "cagr_pct": -24.8,
     "max_dd_pct": 67.6,
-    "mar": -0.38,
-    "sharpe": -0.09,
-    "return_pct": -44.6
+    "mar": -0.37,
+    "sharpe": -0.07,
+    "return_pct": -43.45
    },
    "trades": 6,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 45.7,
-   "return_pct": 61.53
+   "time_in_market_pct": 45.6,
+   "return_pct": 66.75
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-18",
+   "until": "2026-11-19",
    "cagr_pct": 19.1,
    "max_dd_pct": 51.6,
    "mar": 0.37,
    "sharpe": 0.63,
    "hold": {
-    "cagr_pct": 10.6,
+    "cagr_pct": 10.3,
     "max_dd_pct": 67.6,
-    "mar": 0.16,
+    "mar": 0.15,
     "sharpe": 0.47,
-    "return_pct": 48.06
+    "return_pct": 46.4
    },
    "trades": 16,
    "win_rate_pct": 43.8,
-   "time_in_market_pct": 50.8,
+   "time_in_market_pct": 50.7,
    "return_pct": 97.24
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-18",
+   "until": "2026-11-19",
    "cagr_pct": 15.2,
    "max_dd_pct": 51.6,
-   "mar": 0.3,
+   "mar": 0.29,
    "sharpe": 0.55,
    "hold": {
-    "cagr_pct": -14.3,
+    "cagr_pct": -14.5,
     "max_dd_pct": 74.0,
-    "mar": -0.19,
-    "sharpe": 0.12,
-    "return_pct": -52.8
+    "mar": -0.2,
+    "sharpe": 0.11,
+    "return_pct": -53.33
    },
    "trades": 19,
    "win_rate_pct": 42.1,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-18",
-   "cagr_pct": 57.9,
+   "until": "2026-11-19",
+   "cagr_pct": 57.8,
    "max_dd_pct": 51.6,
    "mar": 1.12,
-   "sharpe": 1.13,
+   "sharpe": 1.12,
    "hold": {
-    "cagr_pct": 10.1,
+    "cagr_pct": 10.0,
     "max_dd_pct": 94.0,
     "mar": 0.11,
     "sharpe": 0.54,
-    "return_pct": 135.39
+    "return_pct": 132.76
    },
    "trades": 33,
    "win_rate_pct": 54.5,
@@ -140,6 +140,7 @@
    "return_pct": 5662.57
   }
  },
+ "history": null,
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 5661.21,
