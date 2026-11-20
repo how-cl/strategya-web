@@ -1,6 +1,6 @@
 {
  "schema": "strategya.benchmark/0.1",
- "generated_at_utc": "2026-11-20T13:14:00Z",
+ "generated_at_utc": "2026-11-20T18:38:00Z",
  "base_url": "https://how-cl.github.io/strategya-web/latest/benchmarks/",
  "disclaimer": "Simulated backtests, not real performance. Not investment advice.",
  "items": [
@@ -419,6 +419,22 @@
    "hold_mar": 0.23,
    "position": "cash",
    "position_since": "2026-10-07"
+  },
+  {
+   "id": "smma-15-29-btc",
+   "benchmark": "smma-15-29",
+   "name": "SMMA 15/29",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "BTC",
+   "since": "2018-01-01",
+   "until": "2026-11-19",
+   "mar": 0.46,
+   "cagr_pct": 29.9,
+   "max_dd_pct": 64.7,
+   "hold_mar": 0.23,
+   "position": "cash",
+   "position_since": "2026-11-14"
   },
   {
    "id": "volumatic-vidya-btc",
@@ -869,6 +885,22 @@
    "position_since": "2026-10-07"
   },
   {
+   "id": "smma-15-29-eth",
+   "benchmark": "smma-15-29",
+   "name": "SMMA 15/29",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "ETH",
+   "since": "2018-01-01",
+   "until": "2026-11-19",
+   "mar": 0.43,
+   "cagr_pct": 28.8,
+   "max_dd_pct": 66.3,
+   "hold_mar": 0.11,
+   "position": "cash",
+   "position_since": "2026-11-08"
+  },
+  {
    "id": "volumatic-vidya-eth",
    "benchmark": "volumatic-vidya",
    "name": "Volumatic VIDYA",
@@ -1317,6 +1349,22 @@
    "position_since": "2026-10-07"
   },
   {
+   "id": "smma-15-29-sol",
+   "benchmark": "smma-15-29",
+   "name": "SMMA 15/29",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-19",
+   "mar": 1.56,
+   "cagr_pct": 104.0,
+   "max_dd_pct": 66.8,
+   "hold_mar": 0.66,
+   "position": "cash",
+   "position_since": "2026-11-08"
+  },
+  {
    "id": "volumatic-vidya-sol",
    "benchmark": "volumatic-vidya",
    "name": "Volumatic VIDYA",
@@ -1763,6 +1811,22 @@
    "hold_mar": -0.2,
    "position": "cash",
    "position_since": "2026-10-08"
+  },
+  {
+   "id": "smma-15-29-sui",
+   "benchmark": "smma-15-29",
+   "name": "SMMA 15/29",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "SUI",
+   "since": "2023-05-03",
+   "until": "2026-11-19",
+   "mar": 0.36,
+   "cagr_pct": 28.3,
+   "max_dd_pct": 77.6,
+   "hold_mar": -0.2,
+   "position": "cash",
+   "position_since": "2026-11-14"
   },
   {
    "id": "volumatic-vidya-sui",

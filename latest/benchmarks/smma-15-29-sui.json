@@ -1,0 +1,154 @@
+{
+ "schema": "strategya.benchmark/0.1",
+ "id": "smma-15-29-sui",
+ "benchmark": "smma-15-29",
+ "name": "SMMA 15/29",
+ "free_indicator": false,
+ "family": "classic",
+ "asset": "SUI",
+ "symbol": "BINANCE:SUIUSDT",
+ "timeframe": "1D",
+ "rule": "Long when four smoothed moving averages of hl2 (15, 19, 25, 29) line up bullish; cash on a bar where they line up bearish. A mixed bar changes nothing.",
+ "credit": "Smoothed moving averages (SMMA, Wilder's RMA; public domain). The four-average recipe is widely published as open source.",
+ "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
+ "generated_at_utc": "2026-11-20T18:38:00Z",
+ "decision_bar": "2026-11-19",
+ "valid_until_utc": "2026-11-21T00:45:00Z",
+ "position": {
+  "state": "cash",
+  "since": "2026-11-14",
+  "action": "STAY IN CASH"
+ },
+ "last_trade": {
+  "entry_date": "2026-09-22",
+  "exit_date": "2026-11-15",
+  "return_pct": -32.93
+ },
+ "kpis_by_window": {
+  "6m": {
+   "since": "2026-05-19",
+   "until": "2026-11-19",
+   "cagr_pct": -68.3,
+   "max_dd_pct": 47.6,
+   "mar": -1.44,
+   "sharpe": -1.95,
+   "hold": {
+    "cagr_pct": -54.1,
+    "max_dd_pct": 44.5,
+    "mar": -1.22,
+    "sharpe": -0.61,
+    "return_pct": -32.46
+   },
+   "trades": 1,
+   "win_rate_pct": 0.0,
+   "time_in_market_pct": 36.8,
+   "return_pct": -43.96
+  },
+  "1y": {
+   "since": "2025-11-19",
+   "until": "2026-11-19",
+   "cagr_pct": -44.5,
+   "max_dd_pct": 47.6,
+   "mar": -0.94,
+   "sharpe": -1.4,
+   "hold": {
+    "cagr_pct": -55.8,
+    "max_dd_pct": 65.8,
+    "mar": -0.85,
+    "sharpe": -0.53,
+    "return_pct": -55.78
+   },
+   "trades": 2,
+   "win_rate_pct": 0.0,
+   "time_in_market_pct": 19.1,
+   "return_pct": -44.49
+  },
+  "2y": {
+   "since": "2024-11-19",
+   "until": "2026-11-19",
+   "cagr_pct": -43.7,
+   "max_dd_pct": 77.6,
+   "mar": -0.56,
+   "sharpe": -0.71,
+   "hold": {
+    "cagr_pct": -56.3,
+    "max_dd_pct": 87.7,
+    "mar": -0.64,
+    "sharpe": -0.39,
+    "return_pct": -80.92
+   },
+   "trades": 4,
+   "win_rate_pct": 0.0,
+   "time_in_market_pct": 38.3,
+   "return_pct": -68.24
+  },
+  "since_2023": null,
+  "since_2022": null,
+  "full": {
+   "since": "2023-05-03",
+   "until": "2026-11-19",
+   "cagr_pct": 28.3,
+   "max_dd_pct": 77.6,
+   "mar": 0.36,
+   "sharpe": 0.7,
+   "hold": {
+    "cagr_pct": -17.4,
+    "max_dd_pct": 87.7,
+    "mar": -0.2,
+    "sharpe": 0.31,
+    "return_pct": -49.3
+   },
+   "trades": 6,
+   "win_rate_pct": 33.3,
+   "time_in_market_pct": 38.9,
+   "return_pct": 141.83
+  }
+ },
+ "history": {
+  "facts": {
+   "closed_trades": 6,
+   "winning_trades": 2,
+   "win_rate_pct": 33.3,
+   "avg_trade_days": 84.2,
+   "best_trade": {
+    "entry_date": "2024-09-15",
+    "exit_date": "2025-02-13",
+    "return_pct": 242.52
+   },
+   "worst_trade": {
+    "entry_date": "2026-09-22",
+    "exit_date": "2026-11-15",
+    "return_pct": -32.93
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": -60.1,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 573.9,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -48.3,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2024,
+   "worst_year_vs_hold": null
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 6 trades and won 2 (33%). A trade lasts about 3 months on average. Its best trade was +243% (September 2024 to February 2025) and its worst \u221233% (September 2026 to November 2026). Without its three best trades, the other 3 together lose 60%. Its worst streak was 4 losses in a row. In 2024 it returned +574%; buying and holding Sui returned +432%.",
+   "es": "Desde 2023 esta regla cerr\u00f3 6 operaciones y gan\u00f3 en 2 (33\u00a0%). Una operaci\u00f3n dura en promedio unos 3 meses. La mejor fue +243\u00a0% (septiembre de 2024 a febrero de 2025) y la peor \u221233\u00a0% (septiembre de 2026 a noviembre de 2026). Sin sus tres mejores operaciones, las otras 3 juntas pierden 60\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2024 rindi\u00f3 +574\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%."
+  }
+ },
+ "validation": {
+  "tradingview_until": "2026-11-15",
+  "tv_pnl_pct": 141.85,
+  "engine_pnl_pct": 141.83,
+  "deviation_pct": 0.008
+ },
+ "disclaimer": "Simulated backtest, not real performance. Not investment advice."
+}
