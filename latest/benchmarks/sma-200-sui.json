@@ -11,7 +11,7 @@
  "rule": "Long when the close crosses above the 200-day SMA; cash when it crosses below.",
  "credit": "Classic trend filter (public domain)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -104,7 +104,46 @@
    "return_pct": 100.88
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 11,
+   "winning_trades": 2,
+   "win_rate_pct": 18.2,
+   "avg_trade_days": 45.0,
+   "best_trade": {
+    "entry_date": "2024-09-18",
+    "exit_date": "2025-02-28",
+    "return_pct": 138.15
+   },
+   "worst_trade": {
+    "entry_date": "2025-09-29",
+    "exit_date": "2025-10-11",
+    "return_pct": -20.69
+   },
+   "max_losing_streak": 8,
+   "return_without_top3_pct": -53.1,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 408.8,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -64.1,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2025,
+   "worst_year_vs_hold": 2024
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 11 trades and won 2 (18%). A trade lasts about 6 weeks on average. Its best trade was +138% (September 2024 to February 2025) and its worst \u221221% (September 2025 to October 2025). Without its three best trades, the other 8 together lose 53%. Its worst streak was 8 losses in a row. In 2025 it returned \u221264%; buying and holding Sui returned \u221266%. In 2024 it returned +409%; buying and holding Sui returned +432%. A single long average: it wins few trades, because price crosses the average many times before moving away from it.",
+   "es": "Desde 2023 esta regla cerr\u00f3 11 operaciones y gan\u00f3 en 2 (18\u00a0%). Una operaci\u00f3n dura en promedio unas 6 semanas. La mejor fue +138\u00a0% (septiembre de 2024 a febrero de 2025) y la peor \u221221\u00a0% (septiembre de 2025 a octubre de 2025). Sin sus tres mejores operaciones, las otras 8 juntas pierden 53\u00a0%. Su peor racha fue de 8 p\u00e9rdidas seguidas. En 2025 rindi\u00f3 \u221264\u00a0%; comprar y mantener Sui rindi\u00f3 \u221266\u00a0%. En 2024 rindi\u00f3 +409\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Una sola media larga: gana en pocas operaciones, porque el precio cruza la media muchas veces antes de alejarse de ella."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-08",
   "tv_pnl_pct": 100.88,

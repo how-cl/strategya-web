@@ -11,7 +11,7 @@
  "rule": "Long when the close crosses above the upper band of Volumatic VIDYA (VIDYA 10, momentum 20, bands at 2 \u00d7 ATR 200); cash when it crosses below the lower band. Volume is only drawn, it does not change the signal.",
  "credit": "Volumatic Variable Index Dynamic Average by BigBeluga (CC BY-NC-SA 4.0): https://www.tradingview.com/script/llhVjhA5-Volumatic-Variable-Index-Dynamic-Average-BigBeluga/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2020
   },
   "text": {
-   "en": "Since 2018 this rule closed 23 trades and won 12 (52%). A trade lasts about 10 weeks on average. Its best trade was +159% (October 2020 to January 2021) and its worst \u221242% (July 2018 to November 2018). Without its three best trades, the other 20 together lose 49%. Its worst streak was 3 losses in a row. In 2022 it returned \u221222%; buying and holding Bitcoin returned \u221264%. In 2020 it returned +170%; buying and holding Bitcoin returned +302%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 23 operaciones y gan\u00f3 en 12 (52\u00a0%). Una operaci\u00f3n dura en promedio unas 10 semanas. La mejor fue +159\u00a0% (octubre de 2020 a enero de 2021) y la peor \u221242\u00a0% (julio de 2018 a noviembre de 2018). Sin sus tres mejores operaciones, las otras 20 juntas pierden 49\u00a0%. Su peor racha fue de 3 p\u00e9rdidas seguidas. En 2022 rindi\u00f3 \u221222\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221264\u00a0%. En 2020 rindi\u00f3 +170\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%."
+   "en": "Since 2018 this rule closed 23 trades and won 12 (52%). A trade lasts about 10 weeks on average. Its best trade was +159% (October 2020 to January 2021) and its worst \u221242% (July 2018 to November 2018). Without its three best trades, the other 20 together lose 49%. Its worst streak was 3 losses in a row. In 2022 it returned \u221222%; buying and holding Bitcoin returned \u221264%. In 2020 it returned +170%; buying and holding Bitcoin returned +302%. It uses wide bands around an adaptive average: it gives few signals and leaves a wide margin before exiting.",
+   "es": "Desde 2018 esta regla cerr\u00f3 23 operaciones y gan\u00f3 en 12 (52\u00a0%). Una operaci\u00f3n dura en promedio unas 10 semanas. La mejor fue +159\u00a0% (octubre de 2020 a enero de 2021) y la peor \u221242\u00a0% (julio de 2018 a noviembre de 2018). Sin sus tres mejores operaciones, las otras 20 juntas pierden 49\u00a0%. Su peor racha fue de 3 p\u00e9rdidas seguidas. En 2022 rindi\u00f3 \u221222\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221264\u00a0%. En 2020 rindi\u00f3 +170\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%. Usa bandas anchas alrededor de una media adaptable: da pocas se\u00f1ales y deja un margen grande antes de salir."
   }
  },
  "validation": {

@@ -11,7 +11,7 @@
  "rule": "Long when the close crosses above the 200-day SMA; cash when it crosses below.",
  "credit": "Classic trend filter (public domain)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,64 @@
    "return_pct": 168.68
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 21,
+   "winning_trades": 4,
+   "win_rate_pct": 19.0,
+   "avg_trade_days": 34.9,
+   "best_trade": {
+    "entry_date": "2023-10-01",
+    "exit_date": "2024-06-24",
+    "return_pct": 501.45
+   },
+   "worst_trade": {
+    "entry_date": "2023-04-12",
+    "exit_date": "2023-05-25",
+    "return_pct": -16.58
+   },
+   "max_losing_streak": 7,
+   "return_without_top3_pct": -61.7,
+   "years": [
+    {
+     "year": 2021,
+     "rule_pct": 0.0,
+     "hold_pct": 11177.8,
+     "in_cash_all_year": true
+    },
+    {
+     "year": 2022,
+     "rule_pct": 0.0,
+     "hold_pct": -94.1,
+     "in_cash_all_year": true
+    },
+    {
+     "year": 2023,
+     "rule_pct": 210.4,
+     "hold_pct": 920.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 1.0,
+     "hold_pct": 86.1,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -15.3,
+     "hold_pct": -34.2,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2022,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2020 this rule closed 21 trades and won 4 (19%). A trade lasts about 5 weeks on average. Its best trade was +501% (October 2023 to June 2024) and its worst \u221217% (April 2023 to May 2023). Without its three best trades, the other 18 together lose 62%. Its worst streak was 7 losses in a row. It spent all of 2022 in cash, while buying and holding Solana returned \u221294%. It spent all of 2021 in cash, while buying and holding Solana returned +11,178%. A single long average: it wins few trades, because price crosses the average many times before moving away from it.",
+   "es": "Desde 2020 esta regla cerr\u00f3 21 operaciones y gan\u00f3 en 4 (19\u00a0%). Una operaci\u00f3n dura en promedio unas 5 semanas. La mejor fue +501\u00a0% (octubre de 2023 a junio de 2024) y la peor \u221217\u00a0% (abril de 2023 a mayo de 2023). Sin sus tres mejores operaciones, las otras 18 juntas pierden 62\u00a0%. Su peor racha fue de 7 p\u00e9rdidas seguidas. Pas\u00f3 todo 2022 en caja, mientras comprar y mantener Solana rindi\u00f3 \u221294\u00a0%. Pas\u00f3 todo 2021 en caja, mientras comprar y mantener Solana rindi\u00f3 +11.178\u00a0%. Una sola media larga: gana en pocas operaciones, porque el precio cruza la media muchas veces antes de alejarse de ella."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-09",
   "tv_pnl_pct": 168.66,

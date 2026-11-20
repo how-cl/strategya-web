@@ -11,7 +11,7 @@
  "rule": "Long on the Range Filter buy signal (sampling period 100, multiplier 3); cash on its sell signal.",
  "credit": "Range Filter by DonovanWall, buy/sell version by guikroth: https://www.tradingview.com/script/J8GzFGfD-Range-Filter-Buy-and-Sell-5min-guikroth-version/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2019
   },
   "text": {
-   "en": "Since 2018 this rule closed 49 trades and won 21 (43%). A trade lasts about 4 weeks on average. Its best trade was +96% (December 2020 to January 2021) and its worst \u221222% (June 2021). Without its three best trades, the other 46 together still gain 129%. Its worst streak was 6 losses in a row. It spent all of 2018 in cash, while buying and holding Bitcoin returned \u221272%. In 2019 it returned 0%; buying and holding Bitcoin returned +94%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 49 operaciones y gan\u00f3 en 21 (43\u00a0%). Una operaci\u00f3n dura en promedio unas 4 semanas. La mejor fue +96\u00a0% (diciembre de 2020 a enero de 2021) y la peor \u221222\u00a0% (junio de 2021). Sin sus tres mejores operaciones, las otras 46 juntas igual ganan 129\u00a0%. Su peor racha fue de 6 p\u00e9rdidas seguidas. Pas\u00f3 todo 2018 en caja, mientras comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2019 rindi\u00f3 0\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +94\u00a0%."
+   "en": "Since 2018 this rule closed 49 trades and won 21 (43%). A trade lasts about 4 weeks on average. Its best trade was +96% (December 2020 to January 2021) and its worst \u221222% (June 2021). Without its three best trades, the other 46 together still gain 129%. Its worst streak was 6 losses in a row. It spent all of 2018 in cash, while buying and holding Bitcoin returned \u221272%. In 2019 it returned 0%; buying and holding Bitcoin returned +94%. It ignores moves smaller than its range: it trades less in quiet markets and can be slow to react to a sharp turn.",
+   "es": "Desde 2018 esta regla cerr\u00f3 49 operaciones y gan\u00f3 en 21 (43\u00a0%). Una operaci\u00f3n dura en promedio unas 4 semanas. La mejor fue +96\u00a0% (diciembre de 2020 a enero de 2021) y la peor \u221222\u00a0% (junio de 2021). Sin sus tres mejores operaciones, las otras 46 juntas igual ganan 129\u00a0%. Su peor racha fue de 6 p\u00e9rdidas seguidas. Pas\u00f3 todo 2018 en caja, mientras comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2019 rindi\u00f3 0\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +94\u00a0%. Ignora los movimientos m\u00e1s chicos que su rango: opera menos en mercados quietos y puede tardar en reaccionar a un giro brusco."
   }
  },
  "validation": {

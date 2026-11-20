@@ -11,7 +11,7 @@
  "rule": "Long when the close crosses above the upper band of Volumatic VIDYA (VIDYA 10, momentum 20, bands at 2 \u00d7 ATR 200); cash when it crosses below the lower band. Volume is only drawn, it does not change the signal.",
  "credit": "Volumatic Variable Index Dynamic Average by BigBeluga (CC BY-NC-SA 4.0): https://www.tradingview.com/script/llhVjhA5-Volumatic-Variable-Index-Dynamic-Average-BigBeluga/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 1476.03
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 17,
+   "winning_trades": 11,
+   "win_rate_pct": 64.7,
+   "avg_trade_days": 76.3,
+   "best_trade": {
+    "entry_date": "2020-10-23",
+    "exit_date": "2021-02-27",
+    "return_pct": 248.53
+   },
+   "worst_trade": {
+    "entry_date": "2022-07-29",
+    "exit_date": "2022-09-22",
+    "return_pct": -27.93
+   },
+   "max_losing_streak": 2,
+   "return_without_top3_pct": 44.8,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -17.2,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 4.1,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 271.4,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 198.5,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -38.7,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 34.4,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 45.5,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 37.7,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 17 trades and won 11 (65%). A trade lasts about 3 months on average. Its best trade was +249% (October 2020 to February 2021) and its worst \u221228% (July 2022 to September 2022). Without its three best trades, the other 14 together still gain 45%. In 2018 it returned \u221217%; buying and holding Ethereum returned \u221283%. In 2021 it returned +199%; buying and holding Ethereum returned +399%. It uses wide bands around an adaptive average: it gives few signals and leaves a wide margin before exiting.",
+   "es": "Desde 2018 esta regla cerr\u00f3 17 operaciones y gan\u00f3 en 11 (65\u00a0%). Una operaci\u00f3n dura en promedio unos 3 meses. La mejor fue +249\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221228\u00a0% (julio de 2022 a septiembre de 2022). Sin sus tres mejores operaciones, las otras 14 juntas igual ganan 45\u00a0%. En 2018 rindi\u00f3 \u221217\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2021 rindi\u00f3 +199\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%. Usa bandas anchas alrededor de una media adaptable: da pocas se\u00f1ales y deja un margen grande antes de salir."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-10-30",
   "tv_pnl_pct": 1476.16,

@@ -11,7 +11,7 @@
  "rule": "Long when our trend engine turns bullish and volume and money flow confirm; cash when the trend weakens or at a protective stop.",
  "credit": "Free indicator by Strategya.pro",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,64 @@
    "return_pct": -68.89
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 26,
+   "winning_trades": 4,
+   "win_rate_pct": 15.4,
+   "avg_trade_days": 13.6,
+   "best_trade": {
+    "entry_date": "2023-01-10",
+    "exit_date": "2023-03-02",
+    "return_pct": 38.22
+   },
+   "worst_trade": {
+    "entry_date": "2022-11-06",
+    "exit_date": "2022-11-07",
+    "return_pct": -11.81
+   },
+   "max_losing_streak": 8,
+   "return_without_top3_pct": -83.3,
+   "years": [
+    {
+     "year": 2021,
+     "rule_pct": -17.5,
+     "hold_pct": 11177.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -36.4,
+     "hold_pct": -94.1,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 5.2,
+     "hold_pct": 920.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": -30.3,
+     "hold_pct": 86.1,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -21.4,
+     "hold_pct": -34.2,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2022,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2020 this rule closed 26 trades and won 4 (15%). A trade lasts 14 days on average. Its best trade was +38% (January 2023 to March 2023) and its worst \u221212% (November 2022). Without its three best trades, the other 23 together lose 83%. Its worst streak was 8 losses in a row. In 2022 it returned \u221236%; buying and holding Solana returned \u221294%. In 2021 it returned \u221218%; buying and holding Solana returned +11,178%. It carries a loss limit on every trade: it cuts losers fast and spends a good part of the time in cash.",
+   "es": "Desde 2020 esta regla cerr\u00f3 26 operaciones y gan\u00f3 en 4 (15\u00a0%). Una operaci\u00f3n dura en promedio 14 d\u00edas. La mejor fue +38\u00a0% (enero de 2023 a marzo de 2023) y la peor \u221212\u00a0% (noviembre de 2022). Sin sus tres mejores operaciones, las otras 23 juntas pierden 83\u00a0%. Su peor racha fue de 8 p\u00e9rdidas seguidas. En 2022 rindi\u00f3 \u221236\u00a0%; comprar y mantener Solana rindi\u00f3 \u221294\u00a0%. En 2021 rindi\u00f3 \u221218\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%. Lleva un tope de p\u00e9rdida en cada operaci\u00f3n: corta r\u00e1pido lo que sale mal y pasa buena parte del tiempo en caja."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": -68.99,

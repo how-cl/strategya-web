@@ -11,7 +11,7 @@
  "rule": "Long when Pivot Point SuperTrend (pivot period 2, ATR 10, factor 3) flips up; cash when it flips down.",
  "credit": "Pivot Point SuperTrend by LonesomeTheBlue (MPL-2.0): https://www.tradingview.com/script/L0AIiLvH-Pivot-Point-Supertrend/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -104,7 +104,46 @@
    "return_pct": 337.26
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 7,
+   "winning_trades": 3,
+   "win_rate_pct": 42.9,
+   "avg_trade_days": 81.3,
+   "best_trade": {
+    "entry_date": "2024-08-11",
+    "exit_date": "2025-02-03",
+    "return_pct": 259.22
+   },
+   "worst_trade": {
+    "entry_date": "2026-01-06",
+    "exit_date": "2026-01-26",
+    "return_pct": -26.47
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": -51.6,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 615.4,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -29.9,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2024,
+   "worst_year_vs_hold": null
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 7 trades and won 3 (43%). A trade lasts about 3 months on average. Its best trade was +259% (August 2024 to February 2025) and its worst \u221226% (January 2026). Without its three best trades, the other 4 together lose 52%. Its worst streak was 4 losses in a row. In 2024 it returned +615%; buying and holding Sui returned +432%. It anchors its line on confirmed highs and lows: it gives few signals and is slow to recognise a change of trend.",
+   "es": "Desde 2023 esta regla cerr\u00f3 7 operaciones y gan\u00f3 en 3 (43\u00a0%). Una operaci\u00f3n dura en promedio unos 3 meses. La mejor fue +259\u00a0% (agosto de 2024 a febrero de 2025) y la peor \u221226\u00a0% (enero de 2026). Sin sus tres mejores operaciones, las otras 4 juntas pierden 52\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2024 rindi\u00f3 +615\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Ancla su l\u00ednea en m\u00e1ximos y m\u00ednimos ya confirmados: da pocas se\u00f1ales y tarda en reconocer un cambio de tendencia."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-10-30",
   "tv_pnl_pct": 337.23,

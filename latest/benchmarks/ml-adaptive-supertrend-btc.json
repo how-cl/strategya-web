@@ -11,7 +11,7 @@
  "rule": "Long when the Machine Learning Adaptive SuperTrend (ATR 10, factor 3, 100-bar k-means) turns bullish; cash when it turns bearish.",
  "credit": "Machine Learning Adaptive SuperTrend by AlgoAlpha (MPL-2.0): https://www.tradingview.com/script/CLk71Qgy-Machine-Learning-Adaptive-SuperTrend-AlgoAlpha/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2020
   },
   "text": {
-   "en": "Since 2018 this rule closed 41 trades and won 13 (32%). A trade lasts about 5 weeks on average. Its best trade was +178% (February 2019 to July 2019) and its worst \u221229% (March 2018). Without its three best trades, the other 38 together lose 76%. Its worst streak was 5 losses in a row. In 2018 it returned \u221254%; buying and holding Bitcoin returned \u221272%. In 2020 it returned +164%; buying and holding Bitcoin returned +302%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 41 operaciones y gan\u00f3 en 13 (32\u00a0%). Una operaci\u00f3n dura en promedio unas 5 semanas. La mejor fue +178\u00a0% (febrero de 2019 a julio de 2019) y la peor \u221229\u00a0% (marzo de 2018). Sin sus tres mejores operaciones, las otras 38 juntas pierden 76\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221254\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2020 rindi\u00f3 +164\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%."
+   "en": "Since 2018 this rule closed 41 trades and won 13 (32%). A trade lasts about 5 weeks on average. Its best trade was +178% (February 2019 to July 2019) and its worst \u221229% (March 2018). Without its three best trades, the other 38 together lose 76%. Its worst streak was 5 losses in a row. In 2018 it returned \u221254%; buying and holding Bitcoin returned \u221272%. In 2020 it returned +164%; buying and holding Bitcoin returned +302%. It adjusts its distance to recent volatility: the result changes a lot from one asset to another.",
+   "es": "Desde 2018 esta regla cerr\u00f3 41 operaciones y gan\u00f3 en 13 (32\u00a0%). Una operaci\u00f3n dura en promedio unas 5 semanas. La mejor fue +178\u00a0% (febrero de 2019 a julio de 2019) y la peor \u221229\u00a0% (marzo de 2018). Sin sus tres mejores operaciones, las otras 38 juntas pierden 76\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221254\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2020 rindi\u00f3 +164\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%. Ajusta su distancia seg\u00fan la volatilidad reciente: el resultado cambia mucho de un activo a otro."
   }
  },
  "validation": {

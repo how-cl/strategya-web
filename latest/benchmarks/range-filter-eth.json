@@ -11,7 +11,7 @@
  "rule": "Long on the Range Filter buy signal (sampling period 100, multiplier 3); cash on its sell signal.",
  "credit": "Range Filter by DonovanWall, buy/sell version by guikroth: https://www.tradingview.com/script/J8GzFGfD-Range-Filter-Buy-and-Sell-5min-guikroth-version/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 537.42
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 49,
+   "winning_trades": 21,
+   "win_rate_pct": 42.9,
+   "avg_trade_days": 29.0,
+   "best_trade": {
+    "entry_date": "2020-04-05",
+    "exit_date": "2020-08-22",
+    "return_pct": 168.84
+   },
+   "worst_trade": {
+    "entry_date": "2019-09-20",
+    "exit_date": "2019-09-25",
+    "return_pct": -24.94
+   },
+   "max_losing_streak": 5,
+   "return_without_top3_pct": -18.1,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": 0.0,
+     "hold_pct": -82.6,
+     "in_cash_all_year": true
+    },
+    {
+     "year": 2019,
+     "rule_pct": 36.9,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 311.2,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 133.1,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -37.9,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": -6.8,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 7.4,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -18.3,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 49 trades and won 21 (43%). A trade lasts about 4 weeks on average. Its best trade was +169% (April 2020 to August 2020) and its worst \u221225% (September 2019). Without its three best trades, the other 46 together lose 18%. Its worst streak was 5 losses in a row. It spent all of 2018 in cash, while buying and holding Ethereum returned \u221283%. In 2021 it returned +133%; buying and holding Ethereum returned +399%. It ignores moves smaller than its range: it trades less in quiet markets and can be slow to react to a sharp turn.",
+   "es": "Desde 2018 esta regla cerr\u00f3 49 operaciones y gan\u00f3 en 21 (43\u00a0%). Una operaci\u00f3n dura en promedio unas 4 semanas. La mejor fue +169\u00a0% (abril de 2020 a agosto de 2020) y la peor \u221225\u00a0% (septiembre de 2019). Sin sus tres mejores operaciones, las otras 46 juntas pierden 18\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. Pas\u00f3 todo 2018 en caja, mientras comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2021 rindi\u00f3 +133\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%. Ignora los movimientos m\u00e1s chicos que su rango: opera menos en mercados quietos y puede tardar en reaccionar a un giro brusco."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 537.32,

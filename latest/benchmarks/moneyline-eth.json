@@ -11,7 +11,7 @@
  "rule": "Long when Community MoneyLine (ATR 7, depth 3.5, Heikin Ashi) flips Bullish; cash when it flips Bearish.",
  "credit": "Community MoneyLine by rafstar_kaczmarek, open source on TradingView: https://www.tradingview.com/script/8PKjTIwv-Community-MoneyLine/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 5662.57
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 33,
+   "winning_trades": 18,
+   "win_rate_pct": 54.5,
+   "avg_trade_days": 44.2,
+   "best_trade": {
+    "entry_date": "2020-10-13",
+    "exit_date": "2021-02-24",
+    "return_pct": 307.71
+   },
+   "worst_trade": {
+    "entry_date": "2019-09-18",
+    "exit_date": "2019-09-25",
+    "return_pct": -20.45
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": 239.4,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": 18.6,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 6.8,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 609.6,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 221.4,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": 1.2,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 27.9,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 1.6,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 22.7,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2020,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 33 trades and won 18 (55%). A trade lasts about 6 weeks on average. Its best trade was +308% (October 2020 to February 2021) and its worst \u221220% (September 2019). Without its three best trades, the other 30 together still gain 239%. Its worst streak was 4 losses in a row. In 2020 it returned +610%; buying and holding Ethereum returned +470%. In 2021 it returned +221%; buying and holding Ethereum returned +399%. It decides on smoothed candles: it filters part of the daily noise and reacts with some delay in return.",
+   "es": "Desde 2018 esta regla cerr\u00f3 33 operaciones y gan\u00f3 en 18 (55\u00a0%). Una operaci\u00f3n dura en promedio unas 6 semanas. La mejor fue +308\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221220\u00a0% (septiembre de 2019). Sin sus tres mejores operaciones, las otras 30 juntas igual ganan 239\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2020 rindi\u00f3 +610\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%. En 2021 rindi\u00f3 +221\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%. Decide con velas suavizadas: filtra parte del ruido diario y a cambio reacciona con algo de retraso."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 5661.21,

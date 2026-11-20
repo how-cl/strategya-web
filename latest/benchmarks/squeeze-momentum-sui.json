@@ -11,7 +11,7 @@
  "rule": "Long when the squeeze momentum histogram crosses above zero; cash when it crosses below.",
  "credit": "Squeeze Momentum Indicator by LazyBear: https://www.tradingview.com/script/nqQ1DT5a-Squeeze-Momentum-Indicator-LazyBear/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -104,7 +104,46 @@
    "return_pct": 27.25
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 31,
+   "winning_trades": 8,
+   "win_rate_pct": 25.8,
+   "avg_trade_days": 19.1,
+   "best_trade": {
+    "entry_date": "2023-10-28",
+    "exit_date": "2024-02-26",
+    "return_pct": 281.48
+   },
+   "worst_trade": {
+    "entry_date": "2025-10-09",
+    "exit_date": "2025-10-19",
+    "return_pct": -29.42
+   },
+   "max_losing_streak": 9,
+   "return_without_top3_pct": -88.1,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 295.2,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -63.9,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2025,
+   "worst_year_vs_hold": 2024
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 31 trades and won 8 (26%). A trade lasts about 3 weeks on average. Its best trade was +281% (October 2023 to February 2024) and its worst \u221229% (October 2025). Without its three best trades, the other 28 together lose 88%. Its worst streak was 9 losses in a row. In 2025 it returned \u221264%; buying and holding Sui returned \u221266%. In 2024 it returned +295%; buying and holding Sui returned +432%. It measures whether momentum is positive or negative: it flips often when price has no direction.",
+   "es": "Desde 2023 esta regla cerr\u00f3 31 operaciones y gan\u00f3 en 8 (26\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +281\u00a0% (octubre de 2023 a febrero de 2024) y la peor \u221229\u00a0% (octubre de 2025). Sin sus tres mejores operaciones, las otras 28 juntas pierden 88\u00a0%. Su peor racha fue de 9 p\u00e9rdidas seguidas. En 2025 rindi\u00f3 \u221264\u00a0%; comprar y mantener Sui rindi\u00f3 \u221266\u00a0%. En 2024 rindi\u00f3 +295\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Mide si el impulso es positivo o negativo: cambia de lado seguido cuando el precio no tiene direcci\u00f3n."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-10-13",
   "tv_pnl_pct": 27.26,

@@ -11,7 +11,7 @@
  "rule": "Long when the zero-lag MA 15 crosses above its EMA 15; cash when it crosses below.",
  "credit": "Zero-Lag MA Trend Levels by ChartPrime (MPL-2.0): https://www.tradingview.com/script/pP2FhzAX-Zero-Lag-MA-Trend-Levels-ChartPrime/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 4491.25
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 48,
+   "winning_trades": 21,
+   "win_rate_pct": 43.8,
+   "avg_trade_days": 32.6,
+   "best_trade": {
+    "entry_date": "2020-10-12",
+    "exit_date": "2021-02-27",
+    "return_pct": 285.58
+   },
+   "worst_trade": {
+    "entry_date": "2022-10-26",
+    "exit_date": "2022-11-10",
+    "return_pct": -24.63
+   },
+   "max_losing_streak": 5,
+   "return_without_top3_pct": 329.6,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -6.1,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 52.6,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 459.9,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 221.0,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -37.2,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 31.9,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 15.1,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 48.5,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 48 trades and won 21 (44%). A trade lasts about 5 weeks on average. Its best trade was +286% (October 2020 to February 2021) and its worst \u221225% (October 2022 to November 2022). Without its three best trades, the other 45 together still gain 330%. Its worst streak was 5 losses in a row. In 2018 it returned \u22126%; buying and holding Ethereum returned \u221283%. In 2021 it returned +221%; buying and holding Ethereum returned +399%. It crosses a zero-lag average with a plain one: it reacts early and is therefore also wrong often.",
+   "es": "Desde 2018 esta regla cerr\u00f3 48 operaciones y gan\u00f3 en 21 (44\u00a0%). Una operaci\u00f3n dura en promedio unas 5 semanas. La mejor fue +286\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221225\u00a0% (octubre de 2022 a noviembre de 2022). Sin sus tres mejores operaciones, las otras 45 juntas igual ganan 330\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u22126\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2021 rindi\u00f3 +221\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%. Cruza una media sin retraso con una media com\u00fan: reacciona pronto y por eso tambi\u00e9n se equivoca seguido."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-08",
   "tv_pnl_pct": 4491.62,

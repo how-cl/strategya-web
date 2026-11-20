@@ -11,7 +11,7 @@
  "rule": "Long when the close crosses above the upper band of the Gaussian Channel (hlc3, 4 poles, period 144, multiplier 1.414); cash when it crosses back below.",
  "credit": "Gaussian Channel [DW] by DonovanWall (MPL-2.0): https://www.tradingview.com/script/WpVY7GKW-Gaussian-Channel-DW/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2020
   },
   "text": {
-   "en": "Since 2018 this rule closed 55 trades and won 18 (33%). A trade lasts about 3 weeks on average. Its best trade was +388% (October 2020 to April 2021) and its worst \u22129% (July 2018 to August 2018). Without its three best trades, the other 52 together still gain 108%. Its worst streak was 8 losses in a row. In 2021 it returned +119%; buying and holding Bitcoin returned +60%. In 2020 it returned +174%; buying and holding Bitcoin returned +302%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 55 operaciones y gan\u00f3 en 18 (33\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +388\u00a0% (octubre de 2020 a abril de 2021) y la peor \u22129\u00a0% (julio de 2018 a agosto de 2018). Sin sus tres mejores operaciones, las otras 52 juntas igual ganan 108\u00a0%. Su peor racha fue de 8 p\u00e9rdidas seguidas. En 2021 rindi\u00f3 +119\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +60\u00a0%. En 2020 rindi\u00f3 +174\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%."
+   "en": "Since 2018 this rule closed 55 trades and won 18 (33%). A trade lasts about 3 weeks on average. Its best trade was +388% (October 2020 to April 2021) and its worst \u22129% (July 2018 to August 2018). Without its three best trades, the other 52 together still gain 108%. Its worst streak was 8 losses in a row. In 2021 it returned +119%; buying and holding Bitcoin returned +60%. In 2020 it returned +174%; buying and holding Bitcoin returned +302%. It buys only while the channel is rising: it wins few trades and depends on those few being large.",
+   "es": "Desde 2018 esta regla cerr\u00f3 55 operaciones y gan\u00f3 en 18 (33\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +388\u00a0% (octubre de 2020 a abril de 2021) y la peor \u22129\u00a0% (julio de 2018 a agosto de 2018). Sin sus tres mejores operaciones, las otras 52 juntas igual ganan 108\u00a0%. Su peor racha fue de 8 p\u00e9rdidas seguidas. En 2021 rindi\u00f3 +119\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +60\u00a0%. En 2020 rindi\u00f3 +174\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%. Solo compra con el canal subiendo: gana en pocas operaciones y depende de que esas pocas sean grandes."
   }
  },
  "validation": {

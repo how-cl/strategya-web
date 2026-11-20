@@ -11,7 +11,7 @@
  "rule": "Long when the close crosses above the upper band of Volumatic VIDYA (VIDYA 10, momentum 20, bands at 2 \u00d7 ATR 200); cash when it crosses below the lower band. Volume is only drawn, it does not change the signal.",
  "credit": "Volumatic Variable Index Dynamic Average by BigBeluga (CC BY-NC-SA 4.0): https://www.tradingview.com/script/llhVjhA5-Volumatic-Variable-Index-Dynamic-Average-BigBeluga/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -104,7 +104,46 @@
    "return_pct": 61.36
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 6,
+   "winning_trades": 2,
+   "win_rate_pct": 33.3,
+   "avg_trade_days": 85.8,
+   "best_trade": {
+    "entry_date": "2024-08-13",
+    "exit_date": "2025-01-27",
+    "return_pct": 281.07
+   },
+   "worst_trade": {
+    "entry_date": "2026-05-11",
+    "exit_date": "2026-06-05",
+    "return_pct": -42.63
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": -74.3,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 548.6,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -45.3,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2024,
+   "worst_year_vs_hold": null
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 6 trades and won 2 (33%). A trade lasts about 3 months on average. Its best trade was +281% (August 2024 to January 2025) and its worst \u221243% (May 2026 to June 2026). Without its three best trades, the other 3 together lose 74%. Its worst streak was 4 losses in a row. In 2024 it returned +549%; buying and holding Sui returned +432%. It uses wide bands around an adaptive average: it gives few signals and leaves a wide margin before exiting.",
+   "es": "Desde 2023 esta regla cerr\u00f3 6 operaciones y gan\u00f3 en 2 (33\u00a0%). Una operaci\u00f3n dura en promedio unos 3 meses. La mejor fue +281\u00a0% (agosto de 2024 a enero de 2025) y la peor \u221243\u00a0% (mayo de 2026 a junio de 2026). Sin sus tres mejores operaciones, las otras 3 juntas pierden 74\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2024 rindi\u00f3 +549\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Usa bandas anchas alrededor de una media adaptable: da pocas se\u00f1ales y deja un margen grande antes de salir."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-15",
   "tv_pnl_pct": 61.38,

@@ -11,7 +11,7 @@
  "rule": "Long when Volumatic Trend (length 40) turns up: the smoothed 40-day EMA crosses under the plain 40-day EMA; cash when it turns down. Volume is only drawn, it does not change the signal.",
  "credit": "Volumatic Trend by ChartPrime (MPL-2.0): https://www.tradingview.com/script/4lVTa6J4-Volumatic-Trend-ChartPrime/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 1778.0
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 64,
+   "winning_trades": 21,
+   "win_rate_pct": 32.8,
+   "avg_trade_days": 24.8,
+   "best_trade": {
+    "entry_date": "2020-10-11",
+    "exit_date": "2021-02-27",
+    "return_pct": 289.39
+   },
+   "worst_trade": {
+    "entry_date": "2022-10-26",
+    "exit_date": "2022-11-10",
+    "return_pct": -24.63
+   },
+   "max_losing_streak": 7,
+   "return_without_top3_pct": 71.5,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -13.0,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 54.5,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 275.0,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 230.8,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -58.6,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 55.0,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 2.6,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 57.8,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2020
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 64 trades and won 21 (33%). A trade lasts about 4 weeks on average. Its best trade was +289% (October 2020 to February 2021) and its worst \u221225% (October 2022 to November 2022). Without its three best trades, the other 61 together still gain 71%. Its worst streak was 7 losses in a row. In 2018 it returned \u221213%; buying and holding Ethereum returned \u221283%. In 2020 it returned +275%; buying and holding Ethereum returned +470%. It compares two 40-day averages: it wins few trades and lets the ones that work run.",
+   "es": "Desde 2018 esta regla cerr\u00f3 64 operaciones y gan\u00f3 en 21 (33\u00a0%). Una operaci\u00f3n dura en promedio unas 4 semanas. La mejor fue +289\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221225\u00a0% (octubre de 2022 a noviembre de 2022). Sin sus tres mejores operaciones, las otras 61 juntas igual ganan 71\u00a0%. Su peor racha fue de 7 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221213\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2020 rindi\u00f3 +275\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%. Compara dos medias de 40 d\u00edas: gana en pocas operaciones y deja correr las que funcionan."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-10-10",
   "tv_pnl_pct": 1778.16,

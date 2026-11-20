@@ -11,7 +11,7 @@
  "rule": "Long when Chandelier Exit (ATR 22, multiplier 3, close extremes) turns to buy; cash when it turns to sell.",
  "credit": "Chandelier Exit by everget (GPL-3.0): https://www.tradingview.com/script/AqXxNS7j-Chandelier-Exit-everget/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2024
   },
   "text": {
-   "en": "Since 2018 this rule closed 44 trades and won 20 (45%). A trade lasts about 5 weeks on average. Its best trade was +173% (October 2020 to January 2021) and its worst \u221226% (February 2018 to March 2018). Without its three best trades, the other 41 together lose 3%. Its worst streak was 7 losses in a row. In 2021 it returned +100%; buying and holding Bitcoin returned +60%. In 2024 it returned +51%; buying and holding Bitcoin returned +121%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 44 operaciones y gan\u00f3 en 20 (45\u00a0%). Una operaci\u00f3n dura en promedio unas 5 semanas. La mejor fue +173\u00a0% (octubre de 2020 a enero de 2021) y la peor \u221226\u00a0% (febrero de 2018 a marzo de 2018). Sin sus tres mejores operaciones, las otras 41 juntas pierden 3\u00a0%. Su peor racha fue de 7 p\u00e9rdidas seguidas. En 2021 rindi\u00f3 +100\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +60\u00a0%. En 2024 rindi\u00f3 +51\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +121\u00a0%."
+   "en": "Since 2018 this rule closed 44 trades and won 20 (45%). A trade lasts about 5 weeks on average. Its best trade was +173% (October 2020 to January 2021) and its worst \u221226% (February 2018 to March 2018). Without its three best trades, the other 41 together lose 3%. Its worst streak was 7 losses in a row. In 2021 it returned +100%; buying and holding Bitcoin returned +60%. In 2024 it returned +51%; buying and holding Bitcoin returned +121%. It measures the exit from the recent high: it lets the trend run and leaves when price pulls back several times its normal move.",
+   "es": "Desde 2018 esta regla cerr\u00f3 44 operaciones y gan\u00f3 en 20 (45\u00a0%). Una operaci\u00f3n dura en promedio unas 5 semanas. La mejor fue +173\u00a0% (octubre de 2020 a enero de 2021) y la peor \u221226\u00a0% (febrero de 2018 a marzo de 2018). Sin sus tres mejores operaciones, las otras 41 juntas pierden 3\u00a0%. Su peor racha fue de 7 p\u00e9rdidas seguidas. En 2021 rindi\u00f3 +100\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +60\u00a0%. En 2024 rindi\u00f3 +51\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +121\u00a0%. Mide la salida desde el m\u00e1ximo reciente: deja correr la tendencia y sale cuando el precio retrocede varias veces su movimiento normal."
   }
  },
  "validation": {

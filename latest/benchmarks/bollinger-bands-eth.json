@@ -11,7 +11,7 @@
  "rule": "Long when the close crosses back above the lower band; cash when it crosses back below the upper band (default settings: 20-day SMA, 2 standard deviations).",
  "credit": "Bollinger Bands by John Bollinger; entry and exit rule of TradingView's built-in Bollinger Bands Strategy, long side only",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -142,7 +142,82 @@
    "return_pct": -86.41
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 32,
+   "winning_trades": 17,
+   "win_rate_pct": 53.1,
+   "avg_trade_days": 51.5,
+   "best_trade": {
+    "entry_date": "2019-04-27",
+    "exit_date": "2019-05-18",
+    "return_pct": 54.44
+   },
+   "worst_trade": {
+    "entry_date": "2018-05-25",
+    "exit_date": "2018-11-09",
+    "return_pct": -64.79
+   },
+   "max_losing_streak": 3,
+   "return_without_top3_pct": -93.3,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -83.6,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 46.6,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 72.2,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 42.4,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -49.5,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 34.8,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": -26.5,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -18.1,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2019,
+   "worst_year_vs_hold": 2020
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 32 trades and won 17 (53%). A trade lasts about 7 weeks on average. Its best trade was +54% (April 2019 to May 2019) and its worst \u221265% (May 2018 to November 2018). Without its three best trades, the other 29 together lose 93%. Its worst streak was 3 losses in a row. In 2019 it returned +47%; buying and holding Ethereum returned \u22122%. In 2020 it returned +72%; buying and holding Ethereum returned +470%. It buys dips and sells rallies, the opposite of the rest of the table: in a strongly trending asset it sells too early and buys falls that keep falling.",
+   "es": "Desde 2018 esta regla cerr\u00f3 32 operaciones y gan\u00f3 en 17 (53\u00a0%). Una operaci\u00f3n dura en promedio unas 7 semanas. La mejor fue +54\u00a0% (abril de 2019 a mayo de 2019) y la peor \u221265\u00a0% (mayo de 2018 a noviembre de 2018). Sin sus tres mejores operaciones, las otras 29 juntas pierden 93\u00a0%. Su peor racha fue de 3 p\u00e9rdidas seguidas. En 2019 rindi\u00f3 +47\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u22122\u00a0%. En 2020 rindi\u00f3 +72\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%. Compra las ca\u00eddas y vende las subidas, al rev\u00e9s que el resto de la tabla: en un activo con tendencia fuerte vende demasiado pronto y compra ca\u00eddas que siguen cayendo."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-08-24",
   "tv_pnl_pct": -80.61,

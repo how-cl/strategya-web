@@ -11,7 +11,7 @@
  "rule": "Long when the Hull MA 55 turns up (crosses above its value 2 bars ago); cash when it turns down.",
  "credit": "Hull Suite by InSilico, open source on TradingView: https://www.tradingview.com/script/hg92pFwS-Hull-Suite/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 1889.21
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 67,
+   "winning_trades": 27,
+   "win_rate_pct": 40.3,
+   "avg_trade_days": 22.8,
+   "best_trade": {
+    "entry_date": "2020-12-17",
+    "exit_date": "2021-02-26",
+    "return_pct": 132.27
+   },
+   "worst_trade": {
+    "entry_date": "2018-09-04",
+    "exit_date": "2018-09-07",
+    "return_pct": -20.71
+   },
+   "max_losing_streak": 5,
+   "return_without_top3_pct": 196.0,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -47.1,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 29.9,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 389.2,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 307.2,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -29.1,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 29.4,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": -4.5,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 68.0,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2025,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 67 trades and won 27 (40%). A trade lasts about 3 weeks on average. Its best trade was +132% (December 2020 to February 2021) and its worst \u221221% (September 2018). Without its three best trades, the other 64 together still gain 196%. Its worst streak was 5 losses in a row. In 2025 it returned +68%; buying and holding Ethereum returned \u221211%. In 2021 it returned +307%; buying and holding Ethereum returned +399%. It uses a very fast average: it reacts sooner than a plain moving average and flips more often in return.",
+   "es": "Desde 2018 esta regla cerr\u00f3 67 operaciones y gan\u00f3 en 27 (40\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +132\u00a0% (diciembre de 2020 a febrero de 2021) y la peor \u221221\u00a0% (septiembre de 2018). Sin sus tres mejores operaciones, las otras 64 juntas igual ganan 196\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2025 rindi\u00f3 +68\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221211\u00a0%. En 2021 rindi\u00f3 +307\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%. Usa una media muy r\u00e1pida: reacciona antes que una media com\u00fan y a cambio se da vuelta m\u00e1s veces."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-08",
   "tv_pnl_pct": 1888.14,

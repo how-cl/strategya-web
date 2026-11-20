@@ -11,7 +11,7 @@
  "rule": "Long when SuperTrend (ATR 10, factor 3) flips up; cash when it flips down.",
  "credit": "TradingView built-in ta.supertrend",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 2573.77
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 34,
+   "winning_trades": 19,
+   "win_rate_pct": 55.9,
+   "avg_trade_days": 44.5,
+   "best_trade": {
+    "entry_date": "2020-10-22",
+    "exit_date": "2021-02-26",
+    "return_pct": 279.24
+   },
+   "worst_trade": {
+    "entry_date": "2018-09-22",
+    "exit_date": "2018-11-15",
+    "return_pct": -24.5
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": 128.8,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": 11.0,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 1.0,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 419.1,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 285.1,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -16.2,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 24.0,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": -17.5,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 18.3,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 34 trades and won 19 (56%). A trade lasts about 6 weeks on average. Its best trade was +279% (October 2020 to February 2021) and its worst \u221224% (September 2018 to November 2018). Without its three best trades, the other 31 together still gain 129%. Its worst streak was 4 losses in a row. In 2018 it returned +11%; buying and holding Ethereum returned \u221283%. In 2021 it returned +285%; buying and holding Ethereum returned +399%. It trails price at a fixed volatility distance: it holds long trends well and gives gains back when price goes back and forth.",
+   "es": "Desde 2018 esta regla cerr\u00f3 34 operaciones y gan\u00f3 en 19 (56\u00a0%). Una operaci\u00f3n dura en promedio unas 6 semanas. La mejor fue +279\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221224\u00a0% (septiembre de 2018 a noviembre de 2018). Sin sus tres mejores operaciones, las otras 31 juntas igual ganan 129\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 +11\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2021 rindi\u00f3 +285\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%. Sigue el precio a una distancia fija de volatilidad: aguanta bien las tendencias largas y devuelve ganancias cuando el precio va y viene."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 2573.06,

@@ -11,7 +11,7 @@
  "rule": "Long when HalfTrend (amplitude 2, channel deviation 2) flips up; cash when it flips down.",
  "credit": "HalfTrend by everget (GPL-3.0): https://www.tradingview.com/script/U1SJ8ubc-HalfTrend-everget/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 352.75
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 70,
+   "winning_trades": 29,
+   "win_rate_pct": 41.4,
+   "avg_trade_days": 22.7,
+   "best_trade": {
+    "entry_date": "2020-12-17",
+    "exit_date": "2021-02-26",
+    "return_pct": 132.27
+   },
+   "worst_trade": {
+    "entry_date": "2022-10-26",
+    "exit_date": "2022-11-10",
+    "return_pct": -24.63
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": -20.1,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -0.4,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": -16.7,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 79.5,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 165.2,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -22.6,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 45.0,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 3.2,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -3.2,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2020
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 70 trades and won 29 (41%). A trade lasts about 3 weeks on average. Its best trade was +132% (December 2020 to February 2021) and its worst \u221225% (October 2022 to November 2022). Without its three best trades, the other 67 together lose 20%. Its worst streak was 4 losses in a row. In 2018 it returned 0%; buying and holding Ethereum returned \u221283%. In 2020 it returned +80%; buying and holding Ethereum returned +470%. It flips on short moves: it works in clean trends and piles up small losses when price goes nowhere.",
+   "es": "Desde 2018 esta regla cerr\u00f3 70 operaciones y gan\u00f3 en 29 (41\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +132\u00a0% (diciembre de 2020 a febrero de 2021) y la peor \u221225\u00a0% (octubre de 2022 a noviembre de 2022). Sin sus tres mejores operaciones, las otras 67 juntas pierden 20\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 0\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2020 rindi\u00f3 +80\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%. Cambia de lado con movimientos cortos: funciona en tendencias limpias y acumula p\u00e9rdidas chicas cuando el precio no avanza."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 352.85,

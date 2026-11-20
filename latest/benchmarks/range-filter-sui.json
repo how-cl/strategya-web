@@ -11,7 +11,7 @@
  "rule": "Long on the Range Filter buy signal (sampling period 100, multiplier 3); cash on its sell signal.",
  "credit": "Range Filter by DonovanWall, buy/sell version by guikroth: https://www.tradingview.com/script/J8GzFGfD-Range-Filter-Buy-and-Sell-5min-guikroth-version/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -104,7 +104,46 @@
    "return_pct": 122.71
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 13,
+   "winning_trades": 6,
+   "win_rate_pct": 46.2,
+   "avg_trade_days": 17.8,
+   "best_trade": {
+    "entry_date": "2024-09-13",
+    "exit_date": "2024-10-16",
+    "return_pct": 97.84
+   },
+   "worst_trade": {
+    "entry_date": "2026-05-11",
+    "exit_date": "2026-05-28",
+    "return_pct": -28.13
+   },
+   "max_losing_streak": 3,
+   "return_without_top3_pct": -41.2,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 163.4,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 1.6,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2025,
+   "worst_year_vs_hold": 2024
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 13 trades and won 6 (46%). A trade lasts about 3 weeks on average. Its best trade was +98% (September 2024 to October 2024) and its worst \u221228% (May 2026). Without its three best trades, the other 10 together lose 41%. Its worst streak was 3 losses in a row. In 2025 it returned +2%; buying and holding Sui returned \u221266%. In 2024 it returned +163%; buying and holding Sui returned +432%. It ignores moves smaller than its range: it trades less in quiet markets and can be slow to react to a sharp turn.",
+   "es": "Desde 2023 esta regla cerr\u00f3 13 operaciones y gan\u00f3 en 6 (46\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +98\u00a0% (septiembre de 2024 a octubre de 2024) y la peor \u221228\u00a0% (mayo de 2026). Sin sus tres mejores operaciones, las otras 10 juntas pierden 41\u00a0%. Su peor racha fue de 3 p\u00e9rdidas seguidas. En 2025 rindi\u00f3 +2\u00a0%; comprar y mantener Sui rindi\u00f3 \u221266\u00a0%. En 2024 rindi\u00f3 +163\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Ignora los movimientos m\u00e1s chicos que su rango: opera menos en mercados quietos y puede tardar en reaccionar a un giro brusco."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-10-09",
   "tv_pnl_pct": 122.66,

@@ -11,7 +11,7 @@
  "rule": "Long when our trend engine turns bullish and volume and money flow confirm; cash when the trend weakens or at a protective stop.",
  "credit": "Free indicator by Strategya.pro",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 2470.32
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 27,
+   "winning_trades": 13,
+   "win_rate_pct": 48.1,
+   "avg_trade_days": 37.6,
+   "best_trade": {
+    "entry_date": "2020-10-22",
+    "exit_date": "2021-02-27",
+    "return_pct": 269.64
+   },
+   "worst_trade": {
+    "entry_date": "2018-05-04",
+    "exit_date": "2018-05-07",
+    "return_pct": -9.19
+   },
+   "max_losing_streak": 3,
+   "return_without_top3_pct": 201.5,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -9.2,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 21.9,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 96.7,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 176.9,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": 1.5,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 76.7,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 37.2,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 45.7,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2020
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 27 trades and won 13 (48%). A trade lasts about 5 weeks on average. Its best trade was +270% (October 2020 to February 2021) and its worst \u22129% (May 2018). Without its three best trades, the other 24 together still gain 201%. Its worst streak was 3 losses in a row. In 2018 it returned \u22129%; buying and holding Ethereum returned \u221283%. In 2020 it returned +97%; buying and holding Ethereum returned +470%. It carries a loss limit on every trade: it cuts losers fast and spends a good part of the time in cash.",
+   "es": "Desde 2018 esta regla cerr\u00f3 27 operaciones y gan\u00f3 en 13 (48\u00a0%). Una operaci\u00f3n dura en promedio unas 5 semanas. La mejor fue +270\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u22129\u00a0% (mayo de 2018). Sin sus tres mejores operaciones, las otras 24 juntas igual ganan 201\u00a0%. Su peor racha fue de 3 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u22129\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2020 rindi\u00f3 +97\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%. Lleva un tope de p\u00e9rdida en cada operaci\u00f3n: corta r\u00e1pido lo que sale mal y pasa buena parte del tiempo en caja."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 2469.7,

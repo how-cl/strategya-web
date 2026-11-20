@@ -11,7 +11,7 @@
  "rule": "Long when SuperTrend (ATR 10, factor 3) flips up; cash when it flips down.",
  "credit": "TradingView built-in ta.supertrend",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -104,7 +104,46 @@
    "return_pct": 146.36
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 14,
+   "winning_trades": 5,
+   "win_rate_pct": 35.7,
+   "avg_trade_days": 38.6,
+   "best_trade": {
+    "entry_date": "2024-09-13",
+    "exit_date": "2025-01-27",
+    "return_pct": 271.83
+   },
+   "worst_trade": {
+    "entry_date": "2023-08-24",
+    "exit_date": "2023-09-12",
+    "return_pct": -29.32
+   },
+   "max_losing_streak": 3,
+   "return_without_top3_pct": -80.9,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 243.2,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -2.3,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2025,
+   "worst_year_vs_hold": 2024
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 14 trades and won 5 (36%). A trade lasts about 6 weeks on average. Its best trade was +272% (September 2024 to January 2025) and its worst \u221229% (August 2023 to September 2023). Without its three best trades, the other 11 together lose 81%. Its worst streak was 3 losses in a row. In 2025 it returned \u22122%; buying and holding Sui returned \u221266%. In 2024 it returned +243%; buying and holding Sui returned +432%. It trails price at a fixed volatility distance: it holds long trends well and gives gains back when price goes back and forth.",
+   "es": "Desde 2023 esta regla cerr\u00f3 14 operaciones y gan\u00f3 en 5 (36\u00a0%). Una operaci\u00f3n dura en promedio unas 6 semanas. La mejor fue +272\u00a0% (septiembre de 2024 a enero de 2025) y la peor \u221229\u00a0% (agosto de 2023 a septiembre de 2023). Sin sus tres mejores operaciones, las otras 11 juntas pierden 81\u00a0%. Su peor racha fue de 3 p\u00e9rdidas seguidas. En 2025 rindi\u00f3 \u22122\u00a0%; comprar y mantener Sui rindi\u00f3 \u221266\u00a0%. En 2024 rindi\u00f3 +243\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Sigue el precio a una distancia fija de volatilidad: aguanta bien las tendencias largas y devuelve ganancias cuando el precio va y viene."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-10-25",
   "tv_pnl_pct": 146.33,

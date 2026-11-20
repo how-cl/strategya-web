@@ -11,7 +11,7 @@
  "rule": "Long when the price closes above our volatility line; cash when it closes below it.",
  "credit": "Free indicator by Strategya.pro",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -104,7 +104,46 @@
    "return_pct": -22.63
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 46,
+   "winning_trades": 12,
+   "win_rate_pct": 26.1,
+   "avg_trade_days": 13.3,
+   "best_trade": {
+    "entry_date": "2024-10-30",
+    "exit_date": "2025-01-08",
+    "return_pct": 130.64
+   },
+   "worst_trade": {
+    "entry_date": "2023-06-22",
+    "exit_date": "2023-07-25",
+    "return_pct": -23.58
+   },
+   "max_losing_streak": 7,
+   "return_without_top3_pct": -88.9,
+   "years": [
+    {
+     "year": 2024,
+     "rule_pct": 216.9,
+     "hold_pct": 431.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -69.4,
+     "hold_pct": -65.9,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": null,
+   "worst_year_vs_hold": 2024
+  },
+  "text": {
+   "en": "Since 2023 this rule closed 46 trades and won 12 (26%). A trade lasts 13 days on average. Its best trade was +131% (October 2024 to January 2025) and its worst \u221224% (June 2023 to July 2023). Without its three best trades, the other 43 together lose 89%. Its worst streak was 7 losses in a row. In 2024 it returned +217%; buying and holding Sui returned +432%. It follows price closely: it switches sides often and pays more commission than a slow rule.",
+   "es": "Desde 2023 esta regla cerr\u00f3 46 operaciones y gan\u00f3 en 12 (26\u00a0%). Una operaci\u00f3n dura en promedio 13 d\u00edas. La mejor fue +131\u00a0% (octubre de 2024 a enero de 2025) y la peor \u221224\u00a0% (junio de 2023 a julio de 2023). Sin sus tres mejores operaciones, las otras 43 juntas pierden 89\u00a0%. Su peor racha fue de 7 p\u00e9rdidas seguidas. En 2024 rindi\u00f3 +217\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Sigue el precio de cerca: cambia de lado a menudo y paga m\u00e1s comisiones que una regla lenta."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-10-08",
   "tv_pnl_pct": -22.66,

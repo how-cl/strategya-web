@@ -11,7 +11,7 @@
  "rule": "Long when HalfTrend (amplitude 2, channel deviation 2) flips up; cash when it flips down.",
  "credit": "HalfTrend by everget (GPL-3.0): https://www.tradingview.com/script/U1SJ8ubc-HalfTrend-everget/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,64 @@
    "return_pct": 4186.53
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 52,
+   "winning_trades": 19,
+   "win_rate_pct": 36.5,
+   "avg_trade_days": 20.4,
+   "best_trade": {
+    "entry_date": "2021-01-02",
+    "exit_date": "2021-05-23",
+    "return_pct": 1593.12
+   },
+   "worst_trade": {
+    "entry_date": "2022-10-30",
+    "exit_date": "2022-11-10",
+    "return_pct": -57.31
+   },
+   "max_losing_streak": 9,
+   "return_without_top3_pct": -86.2,
+   "years": [
+    {
+     "year": 2021,
+     "rule_pct": 3771.8,
+     "hold_pct": 11177.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -79.5,
+     "hold_pct": -94.1,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 451.4,
+     "hold_pct": 920.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 58.5,
+     "hold_pct": 86.1,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": -31.9,
+     "hold_pct": -34.2,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2022,
+   "worst_year_vs_hold": 2021
+  },
+  "text": {
+   "en": "Since 2020 this rule closed 52 trades and won 19 (37%). A trade lasts about 3 weeks on average. Its best trade was +1,593% (January 2021 to May 2021) and its worst \u221257% (October 2022 to November 2022). Without its three best trades, the other 49 together lose 86%. Its worst streak was 9 losses in a row. In 2022 it returned \u221280%; buying and holding Solana returned \u221294%. In 2021 it returned +3,772%; buying and holding Solana returned +11,178%. It flips on short moves: it works in clean trends and piles up small losses when price goes nowhere.",
+   "es": "Desde 2020 esta regla cerr\u00f3 52 operaciones y gan\u00f3 en 19 (37\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +1.593\u00a0% (enero de 2021 a mayo de 2021) y la peor \u221257\u00a0% (octubre de 2022 a noviembre de 2022). Sin sus tres mejores operaciones, las otras 49 juntas pierden 86\u00a0%. Su peor racha fue de 9 p\u00e9rdidas seguidas. En 2022 rindi\u00f3 \u221280\u00a0%; comprar y mantener Solana rindi\u00f3 \u221294\u00a0%. En 2021 rindi\u00f3 +3.772\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%. Cambia de lado con movimientos cortos: funciona en tendencias limpias y acumula p\u00e9rdidas chicas cuando el precio no avanza."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 4189.89,

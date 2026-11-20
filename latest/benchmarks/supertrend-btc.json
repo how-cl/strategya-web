@@ -11,7 +11,7 @@
  "rule": "Long when SuperTrend (ATR 10, factor 3) flips up; cash when it flips down.",
  "credit": "TradingView built-in ta.supertrend",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2024
   },
   "text": {
-   "en": "Since 2018 this rule closed 38 trades and won 16 (42%). A trade lasts about 6 weeks on average. Its best trade was +167% (October 2020 to January 2021) and its worst \u221220% (March 2018). Without its three best trades, the other 35 together lose 42%. Its worst streak was 5 losses in a row. In 2018 it returned \u221237%; buying and holding Bitcoin returned \u221272%. In 2024 it returned +41%; buying and holding Bitcoin returned +121%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 38 operaciones y gan\u00f3 en 16 (42\u00a0%). Una operaci\u00f3n dura en promedio unas 6 semanas. La mejor fue +167\u00a0% (octubre de 2020 a enero de 2021) y la peor \u221220\u00a0% (marzo de 2018). Sin sus tres mejores operaciones, las otras 35 juntas pierden 42\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221237\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2024 rindi\u00f3 +41\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +121\u00a0%."
+   "en": "Since 2018 this rule closed 38 trades and won 16 (42%). A trade lasts about 6 weeks on average. Its best trade was +167% (October 2020 to January 2021) and its worst \u221220% (March 2018). Without its three best trades, the other 35 together lose 42%. Its worst streak was 5 losses in a row. In 2018 it returned \u221237%; buying and holding Bitcoin returned \u221272%. In 2024 it returned +41%; buying and holding Bitcoin returned +121%. It trails price at a fixed volatility distance: it holds long trends well and gives gains back when price goes back and forth.",
+   "es": "Desde 2018 esta regla cerr\u00f3 38 operaciones y gan\u00f3 en 16 (42\u00a0%). Una operaci\u00f3n dura en promedio unas 6 semanas. La mejor fue +167\u00a0% (octubre de 2020 a enero de 2021) y la peor \u221220\u00a0% (marzo de 2018). Sin sus tres mejores operaciones, las otras 35 juntas pierden 42\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221237\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2024 rindi\u00f3 +41\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +121\u00a0%. Sigue el precio a una distancia fija de volatilidad: aguanta bien las tendencias largas y devuelve ganancias cuando el precio va y viene."
   }
  },
  "validation": {

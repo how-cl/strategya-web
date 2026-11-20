@@ -11,7 +11,7 @@
  "rule": "Long when Chandelier Exit (ATR 22, multiplier 3, close extremes) turns to buy; cash when it turns to sell.",
  "credit": "Chandelier Exit by everget (GPL-3.0): https://www.tradingview.com/script/AqXxNS7j-Chandelier-Exit-everget/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 5709.07
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 37,
+   "winning_trades": 19,
+   "win_rate_pct": 51.4,
+   "avg_trade_days": 40.7,
+   "best_trade": {
+    "entry_date": "2020-10-13",
+    "exit_date": "2021-02-26",
+    "return_pct": 282.97
+   },
+   "worst_trade": {
+    "entry_date": "2019-09-18",
+    "exit_date": "2019-09-25",
+    "return_pct": -20.45
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": 272.1,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": 10.9,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": -0.0,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 555.7,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 373.3,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -38.4,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 51.1,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": 14.1,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 72.9,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2023
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 37 trades and won 19 (51%). A trade lasts about 6 weeks on average. Its best trade was +283% (October 2020 to February 2021) and its worst \u221220% (September 2019). Without its three best trades, the other 34 together still gain 272%. Its worst streak was 4 losses in a row. In 2018 it returned +11%; buying and holding Ethereum returned \u221283%. In 2023 it returned +51%; buying and holding Ethereum returned +91%. It measures the exit from the recent high: it lets the trend run and leaves when price pulls back several times its normal move.",
+   "es": "Desde 2018 esta regla cerr\u00f3 37 operaciones y gan\u00f3 en 19 (51\u00a0%). Una operaci\u00f3n dura en promedio unas 6 semanas. La mejor fue +283\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221220\u00a0% (septiembre de 2019). Sin sus tres mejores operaciones, las otras 34 juntas igual ganan 272\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 +11\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2023 rindi\u00f3 +51\u00a0%; comprar y mantener Ethereum rindi\u00f3 +91\u00a0%. Mide la salida desde el m\u00e1ximo reciente: deja correr la tendencia y sale cuando el precio retrocede varias veces su movimiento normal."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 5711.18,

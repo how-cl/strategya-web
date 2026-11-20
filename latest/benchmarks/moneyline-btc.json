@@ -11,7 +11,7 @@
  "rule": "Long when Community MoneyLine (ATR 7, depth 3.5, Heikin Ashi) flips Bullish; cash when it flips Bearish.",
  "credit": "Community MoneyLine by rafstar_kaczmarek, open source on TradingView: https://www.tradingview.com/script/8PKjTIwv-Community-MoneyLine/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2024
   },
   "text": {
-   "en": "Since 2018 this rule closed 35 trades and won 15 (43%). A trade lasts about 7 weeks on average. Its best trade was +309% (October 2020 to February 2021) and its worst \u221216% (February 2022). Without its three best trades, the other 32 together lose 30%. Its worst streak was 5 losses in a row. In 2018 it returned \u221223%; buying and holding Bitcoin returned \u221272%. In 2024 it returned +44%; buying and holding Bitcoin returned +121%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 35 operaciones y gan\u00f3 en 15 (43\u00a0%). Una operaci\u00f3n dura en promedio unas 7 semanas. La mejor fue +309\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221216\u00a0% (febrero de 2022). Sin sus tres mejores operaciones, las otras 32 juntas pierden 30\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221223\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2024 rindi\u00f3 +44\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +121\u00a0%."
+   "en": "Since 2018 this rule closed 35 trades and won 15 (43%). A trade lasts about 7 weeks on average. Its best trade was +309% (October 2020 to February 2021) and its worst \u221216% (February 2022). Without its three best trades, the other 32 together lose 30%. Its worst streak was 5 losses in a row. In 2018 it returned \u221223%; buying and holding Bitcoin returned \u221272%. In 2024 it returned +44%; buying and holding Bitcoin returned +121%. It decides on smoothed candles: it filters part of the daily noise and reacts with some delay in return.",
+   "es": "Desde 2018 esta regla cerr\u00f3 35 operaciones y gan\u00f3 en 15 (43\u00a0%). Una operaci\u00f3n dura en promedio unas 7 semanas. La mejor fue +309\u00a0% (octubre de 2020 a febrero de 2021) y la peor \u221216\u00a0% (febrero de 2022). Sin sus tres mejores operaciones, las otras 32 juntas pierden 30\u00a0%. Su peor racha fue de 5 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221223\u00a0%; comprar y mantener Bitcoin rindi\u00f3 \u221272\u00a0%. En 2024 rindi\u00f3 +44\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +121\u00a0%. Decide con velas suavizadas: filtra parte del ruido diario y a cambio reacciona con algo de retraso."
   }
  },
  "validation": {

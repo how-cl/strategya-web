@@ -11,7 +11,7 @@
  "rule": "Long when price closes above the cloud and Tenkan is above Kijun (9, 26, 52); cash when price closes below the cloud.",
  "credit": "Classic Ichimoku Kinko Hyo, 9 / 26 / 52, displacement 26",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -140,7 +140,82 @@
    "return_pct": 772.35
   }
  },
- "history": null,
+ "history": {
+  "facts": {
+   "closed_trades": 29,
+   "winning_trades": 14,
+   "win_rate_pct": 48.3,
+   "avg_trade_days": 55.3,
+   "best_trade": {
+    "entry_date": "2020-10-23",
+    "exit_date": "2021-05-24",
+    "return_pct": 405.9
+   },
+   "worst_trade": {
+    "entry_date": "2022-11-05",
+    "exit_date": "2022-11-10",
+    "return_pct": -33.12
+   },
+   "max_losing_streak": 4,
+   "return_without_top3_pct": -42.4,
+   "years": [
+    {
+     "year": 2018,
+     "rule_pct": -20.9,
+     "hold_pct": -82.6,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2019,
+     "rule_pct": 2.9,
+     "hold_pct": -1.7,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2020,
+     "rule_pct": 267.2,
+     "hold_pct": 470.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2021,
+     "rule_pct": 208.6,
+     "hold_pct": 399.2,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2022,
+     "rule_pct": -44.5,
+     "hold_pct": -67.5,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2023,
+     "rule_pct": 30.4,
+     "hold_pct": 90.8,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2024,
+     "rule_pct": -1.5,
+     "hold_pct": 46.3,
+     "in_cash_all_year": false
+    },
+    {
+     "year": 2025,
+     "rule_pct": 37.7,
+     "hold_pct": -11.0,
+     "in_cash_all_year": false
+    }
+   ],
+   "best_year_vs_hold": 2018,
+   "worst_year_vs_hold": 2020
+  },
+  "text": {
+   "en": "Since 2018 this rule closed 29 trades and won 14 (48%). A trade lasts about 8 weeks on average. Its best trade was +406% (October 2020 to May 2021) and its worst \u221233% (November 2022). Without its three best trades, the other 26 together lose 42%. Its worst streak was 4 losses in a row. In 2018 it returned \u221221%; buying and holding Ethereum returned \u221283%. In 2020 it returned +267%; buying and holding Ethereum returned +470%. It asks price to clear a wide zone before buying: it enters late and exits late.",
+   "es": "Desde 2018 esta regla cerr\u00f3 29 operaciones y gan\u00f3 en 14 (48\u00a0%). Una operaci\u00f3n dura en promedio unas 8 semanas. La mejor fue +406\u00a0% (octubre de 2020 a mayo de 2021) y la peor \u221233\u00a0% (noviembre de 2022). Sin sus tres mejores operaciones, las otras 26 juntas pierden 42\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2018 rindi\u00f3 \u221221\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2020 rindi\u00f3 +267\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%. Pide que el precio supere una zona amplia antes de comprar: entra tarde y sale tarde."
+  }
+ },
  "validation": {
   "tradingview_until": "2026-11-07",
   "tv_pnl_pct": 772.43,

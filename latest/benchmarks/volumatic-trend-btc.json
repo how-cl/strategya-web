@@ -11,7 +11,7 @@
  "rule": "Long when Volumatic Trend (length 40) turns up: the smoothed 40-day EMA crosses under the plain 40-day EMA; cash when it turns down. Volume is only drawn, it does not change the signal.",
  "credit": "Volumatic Trend by ChartPrime (MPL-2.0): https://www.tradingview.com/script/4lVTa6J4-Volumatic-Trend-ChartPrime/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T00:05:00Z",
+ "generated_at_utc": "2026-11-20T13:14:00Z",
  "decision_bar": "2026-11-19",
  "valid_until_utc": "2026-11-21T00:45:00Z",
  "position": {
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2020
   },
   "text": {
-   "en": "Since 2018 this rule closed 77 trades and won 20 (26%). A trade lasts about 3 weeks on average. Its best trade was +416% (October 2020 to April 2021) and its worst \u221215% (March 2018). Without its three best trades, the other 74 together lose 30%. Its worst streak was 8 losses in a row. In 2021 it returned +110%; buying and holding Bitcoin returned +60%. In 2020 it returned +226%; buying and holding Bitcoin returned +302%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 77 operaciones y gan\u00f3 en 20 (26\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +416\u00a0% (octubre de 2020 a abril de 2021) y la peor \u221215\u00a0% (marzo de 2018). Sin sus tres mejores operaciones, las otras 74 juntas pierden 30\u00a0%. Su peor racha fue de 8 p\u00e9rdidas seguidas. En 2021 rindi\u00f3 +110\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +60\u00a0%. En 2020 rindi\u00f3 +226\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%."
+   "en": "Since 2018 this rule closed 77 trades and won 20 (26%). A trade lasts about 3 weeks on average. Its best trade was +416% (October 2020 to April 2021) and its worst \u221215% (March 2018). Without its three best trades, the other 74 together lose 30%. Its worst streak was 8 losses in a row. In 2021 it returned +110%; buying and holding Bitcoin returned +60%. In 2020 it returned +226%; buying and holding Bitcoin returned +302%. It compares two 40-day averages: it wins few trades and lets the ones that work run.",
+   "es": "Desde 2018 esta regla cerr\u00f3 77 operaciones y gan\u00f3 en 20 (26\u00a0%). Una operaci\u00f3n dura en promedio unas 3 semanas. La mejor fue +416\u00a0% (octubre de 2020 a abril de 2021) y la peor \u221215\u00a0% (marzo de 2018). Sin sus tres mejores operaciones, las otras 74 juntas pierden 30\u00a0%. Su peor racha fue de 8 p\u00e9rdidas seguidas. En 2021 rindi\u00f3 +110\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +60\u00a0%. En 2020 rindi\u00f3 +226\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%. Compara dos medias de 40 d\u00edas: gana en pocas operaciones y deja correr las que funcionan."
   }
  },
  "validation": {
