@@ -11,9 +11,9 @@
  "rule": "Long when four smoothed moving averages of hl2 (15, 19, 25, 29) line up bullish; cash on a bar where they line up bearish. A mixed bar changes nothing.",
  "credit": "Smoothed moving averages (SMMA, Wilder's RMA; public domain). The four-average recipe is widely published as open source.",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-20T18:38:00Z",
- "decision_bar": "2026-11-19",
- "valid_until_utc": "2026-11-21T00:45:00Z",
+ "generated_at_utc": "2026-11-21T00:05:00Z",
+ "decision_bar": "2026-11-20",
+ "valid_until_utc": "2026-11-22T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-14",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-19",
-   "until": "2026-11-19",
-   "cagr_pct": -68.3,
+   "since": "2026-05-20",
+   "until": "2026-11-20",
+   "cagr_pct": -69.9,
    "max_dd_pct": 47.6,
-   "mar": -1.44,
-   "sharpe": -1.95,
+   "mar": -1.47,
+   "sharpe": -2.06,
    "hold": {
-    "cagr_pct": -54.1,
-    "max_dd_pct": 44.5,
-    "mar": -1.22,
-    "sharpe": -0.61,
-    "return_pct": -32.46
+    "cagr_pct": -63.3,
+    "max_dd_pct": 48.4,
+    "mar": -1.31,
+    "sharpe": -0.87,
+    "return_pct": -39.66
    },
    "trades": 1,
    "win_rate_pct": 0.0,
-   "time_in_market_pct": 36.8,
-   "return_pct": -43.96
+   "time_in_market_pct": 36.2,
+   "return_pct": -45.41
   },
   "1y": {
-   "since": "2025-11-19",
-   "until": "2026-11-19",
+   "since": "2025-11-20",
+   "until": "2026-11-20",
    "cagr_pct": -44.5,
    "max_dd_pct": 47.6,
    "mar": -0.94,
    "sharpe": -1.4,
    "hold": {
-    "cagr_pct": -55.8,
+    "cagr_pct": -56.5,
     "max_dd_pct": 65.8,
-    "mar": -0.85,
-    "sharpe": -0.53,
-    "return_pct": -55.78
+    "mar": -0.86,
+    "sharpe": -0.55,
+    "return_pct": -56.46
    },
    "trades": 2,
    "win_rate_pct": 0.0,
@@ -64,39 +64,39 @@
    "return_pct": -44.49
   },
   "2y": {
-   "since": "2024-11-19",
-   "until": "2026-11-19",
-   "cagr_pct": -43.7,
+   "since": "2024-11-20",
+   "until": "2026-11-20",
+   "cagr_pct": -42.1,
    "max_dd_pct": 77.6,
-   "mar": -0.56,
-   "sharpe": -0.71,
+   "mar": -0.54,
+   "sharpe": -0.66,
    "hold": {
-    "cagr_pct": -56.3,
+    "cagr_pct": -57.0,
     "max_dd_pct": 87.7,
-    "mar": -0.64,
-    "sharpe": -0.39,
-    "return_pct": -80.92
+    "mar": -0.65,
+    "sharpe": -0.4,
+    "return_pct": -81.51
    },
    "trades": 4,
    "win_rate_pct": 0.0,
-   "time_in_market_pct": 38.3,
-   "return_pct": -68.24
+   "time_in_market_pct": 38.2,
+   "return_pct": -66.45
   },
   "since_2023": null,
   "since_2022": null,
   "full": {
    "since": "2023-05-03",
-   "until": "2026-11-19",
-   "cagr_pct": 28.3,
+   "until": "2026-11-20",
+   "cagr_pct": 28.2,
    "max_dd_pct": 77.6,
    "mar": 0.36,
    "sharpe": 0.7,
    "hold": {
-    "cagr_pct": -17.4,
+    "cagr_pct": -19.4,
     "max_dd_pct": 87.7,
-    "mar": -0.2,
-    "sharpe": 0.31,
-    "return_pct": -49.3
+    "mar": -0.22,
+    "sharpe": 0.29,
+    "return_pct": -53.5
    },
    "trades": 6,
    "win_rate_pct": 33.3,
@@ -140,8 +140,8 @@
    "worst_year_vs_hold": null
   },
   "text": {
-   "en": "Since 2023 this rule closed 6 trades and won 2 (33%). A trade lasts about 3 months on average. Its best trade was +243% (September 2024 to February 2025) and its worst \u221233% (September 2026 to November 2026). Without its three best trades, the other 3 together lose 60%. Its worst streak was 4 losses in a row. In 2024 it returned +574%; buying and holding Sui returned +432%.",
-   "es": "Desde 2023 esta regla cerr\u00f3 6 operaciones y gan\u00f3 en 2 (33\u00a0%). Una operaci\u00f3n dura en promedio unos 3 meses. La mejor fue +243\u00a0% (septiembre de 2024 a febrero de 2025) y la peor \u221233\u00a0% (septiembre de 2026 a noviembre de 2026). Sin sus tres mejores operaciones, las otras 3 juntas pierden 60\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2024 rindi\u00f3 +574\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%."
+   "en": "Since 2023 this rule closed 6 trades and won 2 (33%). A trade lasts about 3 months on average. Its best trade was +243% (September 2024 to February 2025) and its worst \u221233% (September 2026 to November 2026). Without its three best trades, the other 3 together lose 60%. Its worst streak was 4 losses in a row. In 2024 it returned +574%; buying and holding Sui returned +432%. It asks four averages to line up before buying: it trades little and enters once the trend is already under way.",
+   "es": "Desde 2023 esta regla cerr\u00f3 6 operaciones y gan\u00f3 en 2 (33\u00a0%). Una operaci\u00f3n dura en promedio unos 3 meses. La mejor fue +243\u00a0% (septiembre de 2024 a febrero de 2025) y la peor \u221233\u00a0% (septiembre de 2026 a noviembre de 2026). Sin sus tres mejores operaciones, las otras 3 juntas pierden 60\u00a0%. Su peor racha fue de 4 p\u00e9rdidas seguidas. En 2024 rindi\u00f3 +574\u00a0%; comprar y mantener Sui rindi\u00f3 +432\u00a0%. Pide que cuatro medias se ordenen antes de comprar: opera poco y entra cuando la tendencia ya parti\u00f3."
   }
  },
  "validation": {

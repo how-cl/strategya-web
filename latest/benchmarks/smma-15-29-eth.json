@@ -11,9 +11,9 @@
  "rule": "Long when four smoothed moving averages of hl2 (15, 19, 25, 29) line up bullish; cash on a bar where they line up bearish. A mixed bar changes nothing.",
  "credit": "Smoothed moving averages (SMMA, Wilder's RMA; public domain). The four-average recipe is widely published as open source.",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-20T18:38:00Z",
- "decision_bar": "2026-11-19",
- "valid_until_utc": "2026-11-21T00:45:00Z",
+ "generated_at_utc": "2026-11-21T00:05:00Z",
+ "decision_bar": "2026-11-20",
+ "valid_until_utc": "2026-11-22T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-08",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-19",
-   "until": "2026-11-19",
-   "cagr_pct": -15.4,
+   "since": "2026-05-20",
+   "until": "2026-11-20",
+   "cagr_pct": -16.8,
    "max_dd_pct": 23.4,
-   "mar": -0.66,
-   "sharpe": -0.37,
+   "mar": -0.72,
+   "sharpe": -0.42,
    "hold": {
-    "cagr_pct": -30.6,
-    "max_dd_pct": 36.7,
-    "mar": -0.83,
-    "sharpe": -0.39,
-    "return_pct": -16.79
+    "cagr_pct": -41.7,
+    "max_dd_pct": 41.5,
+    "mar": -1.0,
+    "sharpe": -0.68,
+    "return_pct": -23.78
    },
    "trades": 1,
    "win_rate_pct": 0.0,
-   "time_in_market_pct": 44.3,
-   "return_pct": -8.09
+   "time_in_market_pct": 43.8,
+   "return_pct": -8.84
   },
   "1y": {
-   "since": "2025-11-19",
-   "until": "2026-11-19",
+   "since": "2025-11-20",
+   "until": "2026-11-20",
    "cagr_pct": -18.2,
    "max_dd_pct": 23.4,
    "mar": -0.78,
    "sharpe": -0.75,
    "hold": {
-    "cagr_pct": -41.9,
+    "cagr_pct": -42.8,
     "max_dd_pct": 53.3,
-    "mar": -0.79,
-    "sharpe": -0.6,
-    "return_pct": -41.92
+    "mar": -0.8,
+    "sharpe": -0.62,
+    "return_pct": -42.73
    },
    "trades": 2,
    "win_rate_pct": 0.0,
@@ -64,37 +64,37 @@
    "return_pct": -18.22
   },
   "2y": {
-   "since": "2024-11-19",
-   "until": "2026-11-19",
-   "cagr_pct": 8.1,
+   "since": "2024-11-20",
+   "until": "2026-11-20",
+   "cagr_pct": 8.7,
    "max_dd_pct": 36.8,
-   "mar": 0.22,
-   "sharpe": 0.39,
+   "mar": 0.24,
+   "sharpe": 0.41,
    "hold": {
-    "cagr_pct": -24.8,
+    "cagr_pct": -27.3,
     "max_dd_pct": 67.6,
-    "mar": -0.37,
-    "sharpe": -0.07,
-    "return_pct": -43.45
+    "mar": -0.4,
+    "sharpe": -0.12,
+    "return_pct": -47.13
    },
    "trades": 3,
    "win_rate_pct": 33.3,
-   "time_in_market_pct": 45.7,
-   "return_pct": 16.76
+   "time_in_market_pct": 45.6,
+   "return_pct": 18.19
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-19",
+   "until": "2026-11-20",
    "cagr_pct": 8.1,
    "max_dd_pct": 57.2,
    "mar": 0.14,
    "sharpe": 0.39,
    "hold": {
-    "cagr_pct": 10.3,
+    "cagr_pct": 8.1,
     "max_dd_pct": 67.6,
-    "mar": 0.15,
-    "sharpe": 0.47,
-    "return_pct": 46.4
+    "mar": 0.12,
+    "sharpe": 0.43,
+    "return_pct": 35.22
    },
    "trades": 8,
    "win_rate_pct": 37.5,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-19",
+   "until": "2026-11-20",
    "cagr_pct": -2.2,
    "max_dd_pct": 57.2,
    "mar": -0.04,
    "sharpe": 0.15,
    "hold": {
-    "cagr_pct": -14.5,
+    "cagr_pct": -15.8,
     "max_dd_pct": 74.0,
-    "mar": -0.2,
-    "sharpe": 0.11,
-    "return_pct": -53.33
+    "mar": -0.21,
+    "sharpe": 0.09,
+    "return_pct": -56.9
    },
    "trades": 10,
    "win_rate_pct": 30.0,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-19",
+   "until": "2026-11-20",
    "cagr_pct": 28.8,
    "max_dd_pct": 66.3,
    "mar": 0.43,
    "sharpe": 0.73,
    "hold": {
-    "cagr_pct": 10.0,
+    "cagr_pct": 9.0,
     "max_dd_pct": 94.0,
-    "mar": 0.11,
-    "sharpe": 0.54,
-    "return_pct": 132.76
+    "mar": 0.1,
+    "sharpe": 0.53,
+    "return_pct": 114.98
    },
    "trades": 15,
    "win_rate_pct": 40.0,
@@ -212,8 +212,8 @@
    "worst_year_vs_hold": 2020
   },
   "text": {
-   "en": "Since 2018 this rule closed 15 trades and won 6 (40%). A trade lasts about 4 months on average. Its best trade was +854% (May 2020 to June 2021) and its worst \u221232% (January 2020 to March 2020). Without its three best trades, the other 12 together lose 61%. In 2018 it returned \u221216%; buying and holding Ethereum returned \u221283%. In 2020 it returned +142%; buying and holding Ethereum returned +470%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 15 operaciones y gan\u00f3 en 6 (40\u00a0%). Una operaci\u00f3n dura en promedio unos 4 meses. La mejor fue +854\u00a0% (mayo de 2020 a junio de 2021) y la peor \u221232\u00a0% (enero de 2020 a marzo de 2020). Sin sus tres mejores operaciones, las otras 12 juntas pierden 61\u00a0%. En 2018 rindi\u00f3 \u221216\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2020 rindi\u00f3 +142\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%."
+   "en": "Since 2018 this rule closed 15 trades and won 6 (40%). A trade lasts about 4 months on average. Its best trade was +854% (May 2020 to June 2021) and its worst \u221232% (January 2020 to March 2020). Without its three best trades, the other 12 together lose 61%. In 2018 it returned \u221216%; buying and holding Ethereum returned \u221283%. In 2020 it returned +142%; buying and holding Ethereum returned +470%. It asks four averages to line up before buying: it trades little and enters once the trend is already under way.",
+   "es": "Desde 2018 esta regla cerr\u00f3 15 operaciones y gan\u00f3 en 6 (40\u00a0%). Una operaci\u00f3n dura en promedio unos 4 meses. La mejor fue +854\u00a0% (mayo de 2020 a junio de 2021) y la peor \u221232\u00a0% (enero de 2020 a marzo de 2020). Sin sus tres mejores operaciones, las otras 12 juntas pierden 61\u00a0%. En 2018 rindi\u00f3 \u221216\u00a0%; comprar y mantener Ethereum rindi\u00f3 \u221283\u00a0%. En 2020 rindi\u00f3 +142\u00a0%; comprar y mantener Ethereum rindi\u00f3 +470\u00a0%. Pide que cuatro medias se ordenen antes de comprar: opera poco y entra cuando la tendencia ya parti\u00f3."
   }
  },
  "validation": {

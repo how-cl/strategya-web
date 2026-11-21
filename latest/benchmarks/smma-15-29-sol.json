@@ -11,9 +11,9 @@
  "rule": "Long when four smoothed moving averages of hl2 (15, 19, 25, 29) line up bullish; cash on a bar where they line up bearish. A mixed bar changes nothing.",
  "credit": "Smoothed moving averages (SMMA, Wilder's RMA; public domain). The four-average recipe is widely published as open source.",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-20T18:38:00Z",
- "decision_bar": "2026-11-19",
- "valid_until_utc": "2026-11-21T00:45:00Z",
+ "generated_at_utc": "2026-11-21T00:05:00Z",
+ "decision_bar": "2026-11-20",
+ "valid_until_utc": "2026-11-22T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-08",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-19",
-   "until": "2026-11-19",
+   "since": "2026-05-20",
+   "until": "2026-11-20",
    "cagr_pct": -15.2,
    "max_dd_pct": 29.2,
    "mar": -0.52,
    "sharpe": -0.26,
    "hold": {
-    "cagr_pct": -24.5,
-    "max_dd_pct": 42.5,
-    "mar": -0.58,
-    "sharpe": -0.2,
-    "return_pct": -13.22
+    "cagr_pct": -35.9,
+    "max_dd_pct": 43.6,
+    "mar": -0.82,
+    "sharpe": -0.47,
+    "return_pct": -20.06
    },
    "trades": 1,
    "win_rate_pct": 0.0,
@@ -45,18 +45,18 @@
    "return_pct": -7.95
   },
   "1y": {
-   "since": "2025-11-19",
-   "until": "2026-11-19",
+   "since": "2025-11-20",
+   "until": "2026-11-20",
    "cagr_pct": -8.0,
    "max_dd_pct": 29.2,
    "mar": -0.27,
    "sharpe": -0.18,
    "hold": {
-    "cagr_pct": -46.7,
+    "cagr_pct": -48.5,
     "max_dd_pct": 57.6,
-    "mar": -0.81,
-    "sharpe": -0.7,
-    "return_pct": -46.63
+    "mar": -0.84,
+    "sharpe": -0.76,
+    "return_pct": -48.47
    },
    "trades": 1,
    "win_rate_pct": 0.0,
@@ -64,56 +64,56 @@
    "return_pct": -7.95
   },
   "2y": {
-   "since": "2024-11-19",
-   "until": "2026-11-19",
-   "cagr_pct": -22.2,
+   "since": "2024-11-20",
+   "until": "2026-11-20",
+   "cagr_pct": -21.8,
    "max_dd_pct": 49.4,
-   "mar": -0.45,
-   "sharpe": -0.27,
+   "mar": -0.44,
+   "sharpe": -0.26,
    "hold": {
-    "cagr_pct": -44.5,
+    "cagr_pct": -45.9,
     "max_dd_pct": 76.3,
-    "mar": -0.58,
-    "sharpe": -0.4,
-    "return_pct": -69.22
+    "mar": -0.6,
+    "sharpe": -0.43,
+    "return_pct": -70.75
    },
    "trades": 3,
    "win_rate_pct": 33.3,
-   "time_in_market_pct": 43.2,
-   "return_pct": -39.45
+   "time_in_market_pct": 43.1,
+   "return_pct": -38.9
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-19",
-   "cagr_pct": 27.0,
+   "until": "2026-11-20",
+   "cagr_pct": 26.9,
    "max_dd_pct": 56.0,
    "mar": 0.48,
    "sharpe": 0.69,
    "hold": {
-    "cagr_pct": 67.0,
+    "cagr_pct": 64.4,
     "max_dd_pct": 76.3,
-    "mar": 0.88,
-    "sharpe": 1.02,
-    "return_pct": 632.23
+    "mar": 0.84,
+    "sharpe": 1.0,
+    "return_pct": 589.49
    },
    "trades": 8,
    "win_rate_pct": 37.5,
-   "time_in_market_pct": 56.0,
+   "time_in_market_pct": 55.9,
    "return_pct": 152.54
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-19",
+   "until": "2026-11-20",
    "cagr_pct": 17.3,
    "max_dd_pct": 56.0,
    "mar": 0.31,
    "sharpe": 0.56,
    "hold": {
-    "cagr_pct": -16.8,
+    "cagr_pct": -17.8,
     "max_dd_pct": 94.6,
-    "mar": -0.18,
-    "sharpe": 0.27,
-    "return_pct": -59.15
+    "mar": -0.19,
+    "sharpe": 0.25,
+    "return_pct": -61.53
    },
    "trades": 8,
    "win_rate_pct": 37.5,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-19",
-   "cagr_pct": 104.0,
+   "until": "2026-11-20",
+   "cagr_pct": 103.9,
    "max_dd_pct": 66.8,
-   "mar": 1.56,
+   "mar": 1.55,
    "sharpe": 1.29,
    "hold": {
-    "cagr_pct": 63.9,
+    "cagr_pct": 62.3,
     "max_dd_pct": 96.3,
-    "mar": 0.66,
-    "sharpe": 1.0,
-    "return_pct": 2117.67
+    "mar": 0.65,
+    "sharpe": 0.99,
+    "return_pct": 1988.22
    },
    "trades": 10,
    "win_rate_pct": 50.0,
@@ -194,8 +194,8 @@
    "worst_year_vs_hold": 2021
   },
   "text": {
-   "en": "Since 2020 this rule closed 10 trades and won 5 (50%). A trade lasts about 4 months on average. Its best trade was +746% (January 2021 to July 2021) and its worst \u221227% (July 2023 to September 2023). Without its three best trades, the other 7 together lose 56%. In 2022 it returned \u22129%; buying and holding Solana returned \u221294%. In 2021 it returned +3,712%; buying and holding Solana returned +11,178%.",
-   "es": "Desde 2020 esta regla cerr\u00f3 10 operaciones y gan\u00f3 en 5 (50\u00a0%). Una operaci\u00f3n dura en promedio unos 4 meses. La mejor fue +746\u00a0% (enero de 2021 a julio de 2021) y la peor \u221227\u00a0% (julio de 2023 a septiembre de 2023). Sin sus tres mejores operaciones, las otras 7 juntas pierden 56\u00a0%. En 2022 rindi\u00f3 \u22129\u00a0%; comprar y mantener Solana rindi\u00f3 \u221294\u00a0%. En 2021 rindi\u00f3 +3.712\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%."
+   "en": "Since 2020 this rule closed 10 trades and won 5 (50%). A trade lasts about 4 months on average. Its best trade was +746% (January 2021 to July 2021) and its worst \u221227% (July 2023 to September 2023). Without its three best trades, the other 7 together lose 56%. In 2022 it returned \u22129%; buying and holding Solana returned \u221294%. In 2021 it returned +3,712%; buying and holding Solana returned +11,178%. It asks four averages to line up before buying: it trades little and enters once the trend is already under way.",
+   "es": "Desde 2020 esta regla cerr\u00f3 10 operaciones y gan\u00f3 en 5 (50\u00a0%). Una operaci\u00f3n dura en promedio unos 4 meses. La mejor fue +746\u00a0% (enero de 2021 a julio de 2021) y la peor \u221227\u00a0% (julio de 2023 a septiembre de 2023). Sin sus tres mejores operaciones, las otras 7 juntas pierden 56\u00a0%. En 2022 rindi\u00f3 \u22129\u00a0%; comprar y mantener Solana rindi\u00f3 \u221294\u00a0%. En 2021 rindi\u00f3 +3.712\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%. Pide que cuatro medias se ordenen antes de comprar: opera poco y entra cuando la tendencia ya parti\u00f3."
   }
  },
  "validation": {
