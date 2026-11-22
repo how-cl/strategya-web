@@ -1,0 +1,305 @@
+{
+ "schema": "strategya.seal/0.1",
+ "generated_at_utc": "2026-11-22T12:04:17Z",
+ "source": "https://github.com/how-cl/strategya-web/tree/45478acd2f2105b45a703f9e77e7e7dd45ebddd7/latest",
+ "web_commit": "45478acd2f2105b45a703f9e77e7e7dd45ebddd7",
+ "note": "Published signals as of this run. Proves publication date, not real profit. Simulated backtest plus published signals; not real performance, not investment advice.",
+ "content_sha256": "062a41e8862cba6016134a15ec8d792204aeb73f0a802d62907c17fb62cd7fbd",
+ "catalog_sha256": "ed9da13a4e2f426e6588bb4e1958c04bc900a5724ab1169f065b3b2d817f4dc4",
+ "previous": {
+  "file": "2026/2611220006.json",
+  "sha256": "1390cd92c8de632bcaf4163f3ffd0600b822723f5567067bb44573423cb489b8"
+ },
+ "signals": [
+  {
+   "slug": "btc-12h-ls",
+   "decision_bar_label": "2026-11-22T12:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 61062.74,
+   "status": "ok",
+   "checksum": "sha256:85493fe48036ad71f6f2e7c595793fc6e3bf0356eb23105a2da15921c8a1c812",
+   "sha256": "d11a78598f9b1b0ad657095793306c4563f97a7d2a9c900f396d72b22580f0f7"
+  },
+  {
+   "slug": "btc-12h",
+   "decision_bar_label": "2026-11-22T12:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 61062.74,
+   "status": "ok",
+   "checksum": "sha256:88d1e21d00baf7e1133d1f7ea16fdb1af6cb6934008a0f24bb82f65d973f1d84",
+   "sha256": "96e19aaad02ba747278ca401160f5bd8286984e3f3caadc3f00fb7792258a08a"
+  },
+  {
+   "slug": "btc-1d-ls",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 60215.77,
+   "status": "ok",
+   "checksum": "sha256:6a03a30fa2f15c71ef66412f013f6779989640e9036d36a47ca8a135561d3d15",
+   "sha256": "f8791e708702c168493dc1e96e3c2ec509e82a5be20240b65ea35b97b2c8af61"
+  },
+  {
+   "slug": "btc-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 60215.77,
+   "status": "ok",
+   "checksum": "sha256:0369d48f73908524f7d9eafd93bc8342839ab5df8cb4074e5f66e495f2710f76",
+   "sha256": "e358578fe7a05e3723d1efc2c2e7dcbd9d481859fac4122b2b2f0f5ef5146fd9"
+  },
+  {
+   "slug": "btc-gold-12h",
+   "decision_bar_label": "2026-11-22T12:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:6eef541ee7664183fdf4f6c1aabb76466bc3dc36e76fdb98fc8445ee1f8f2c6e",
+   "sha256": "37a9ae56fa3e600e5a6796b5b90530f99113df81f0f2994559ddb87ee17733ee"
+  },
+  {
+   "slug": "btc-gold-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:5e21b02b776d858121565170687596a8701f0afb34fb2c96a5339242bcefecf5",
+   "sha256": "2484220348fc213fa2d75e5731ea5c06b1155d2558b295dd9690c8132e566d4d"
+  },
+  {
+   "slug": "coin-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 101.98,
+   "status": "ok",
+   "checksum": "sha256:fdcb9b02b51907df2b97f7d167ddb920a4488bf65087f1a51058a7cac88b958e",
+   "sha256": "21b2c59021fff80f4878948b2a7d881b440124508e37c5b9703efb1c76fdb548"
+  },
+  {
+   "slug": "eth-1d-ls",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 1685.63,
+   "status": "ok",
+   "checksum": "sha256:1e253aa2c8b09c5e1a279a423573ebe2cc64f9a5bdfc7bb88f2f51bb2b627453",
+   "sha256": "60fa6a473dc2c44641b8b680fc16f15a5a3c7622cb891a83246c08e87a38c1f9"
+  },
+  {
+   "slug": "eth-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 1685.63,
+   "status": "ok",
+   "checksum": "sha256:3f8436508e2c71b3c638a589ea7d47f1a120254f74d46c579ccef1a593f5f1e9",
+   "sha256": "8834ddddee38556b668b5201a5a7eba7be22afec27af770dd528cc5d00341cf2"
+  },
+  {
+   "slug": "mstr-1d-ls",
+   "decision_bar_label": "2026-11-20T21:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 77.88,
+   "status": "ok",
+   "checksum": "sha256:cac1460d51147ea1d699622066e4a4049a2c327d9e5ed4e2de2ba8f6a42193f9",
+   "sha256": "eba07fa160e4b1f0ded0cc66a857d7af5327899512b276b58faa26b54e447e9e"
+  },
+  {
+   "slug": "mstr-1d",
+   "decision_bar_label": "2026-11-20T21:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 77.88,
+   "status": "ok",
+   "checksum": "sha256:7ffb9fc02d2c910e86a0b18cb103d2e80caecf96b986896f1f183b2957c72e63",
+   "sha256": "f628ac7d168c9fd4d0d8b0579e54d02cf400afca98e345b3e1f7cb106ef6ce5d"
+  },
+  {
+   "slug": "paxg-12h",
+   "decision_bar_label": "2026-11-22T12:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 3556.69,
+   "status": "ok",
+   "checksum": "sha256:3eda4fd3846363b0272e95f5199901cb055bd5283641ae4c661fb1aff4cdf0a6",
+   "sha256": "701fc9c2d87fd58c7631d8316637f656154da0912b21b0db50ad3331131ac9d8"
+  },
+  {
+   "slug": "paxg-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 3554.94,
+   "status": "ok",
+   "checksum": "sha256:7b6775ffd4fa94a81499a5f4c930045c14efc082ab329b298dd67e125d3bb5fa",
+   "sha256": "2ebe0b454bf9f4b8c64789497b0ef7b67c59d6b1fa43a4eda163dfa044ed83ae"
+  },
+  {
+   "slug": "rotation-12h-ls",
+   "decision_bar_label": "2026-11-22T12:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:65a4bc957bf14c0dbd2850f02e4756950926f9dcc2a548ba6be71c0790733892",
+   "sha256": "80bcb49bb6e0d3dc01a6f5a09e60d1885d44629eeac5749f48b17004eadaab33"
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar_label": "2026-11-22T12:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:aef39cefb610ace4f7c6f49085b160e0e02809040d2fd6390c466729b9ef2496",
+   "sha256": "bc1f5405634181f63c0418bc2dae50492b9da992c94c0b42abba067ca81ef0f2"
+  },
+  {
+   "slug": "rotation-1d-ls-stocks",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:9ec982348f0dcf746d2ace80b42163a825eaa80dfd8f52e290642d746b0da938",
+   "sha256": "bb84e0d5d72bf9e7922a8dc5a51045adb94d8d5a8c4c28aed2aff3b3828ee217"
+  },
+  {
+   "slug": "rotation-1d-ls-zec",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:03f38a30c7eeb19bc91857a2020d8c3a613bbfe39882693581a69004c181599c",
+   "sha256": "883276abe25bf7a8cfbad882c94b0751f428f330e8158eef71f3952573e992df"
+  },
+  {
+   "slug": "rotation-1d-ls",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:50a358a4a465dfe5e6c915b4092624f9bf9320f0a9aa5833d9ee8dc531191add",
+   "sha256": "1f1cb4afeb0ee8ef16c2dd0554afc22e6d27740a4f45f20b0ba491bbf8256019"
+  },
+  {
+   "slug": "rotation-1d-prop",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:b163cb2a14e9904c94695c4cc002f9c863600cb5a59485e77b4a5e020c410f9e",
+   "sha256": "392fdd25cea582b175b323bf3fbc1b76d4b547b5718f48db02693e7256f0d97a"
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:3a8e053571ea7028af546766e622f5ec57ca0b32651015392c1c97f5bb23ac89",
+   "sha256": "b1aed94a3ee016fd12fc54efd12e201c55ad6fd4721a9bcc76f9b7989638838d"
+  },
+  {
+   "slug": "rotation-1d-zec",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:6c7d00deddf102b162dcc7fe984609089ef9121c99d377c74515bab623ed129c",
+   "sha256": "dd01f8c7dfc17e7203977697670e64b18325033df5d6cc00d4659d8ad92296cc"
+  },
+  {
+   "slug": "rotation-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:4a189527031986ffe60587a847e157a993480d7c95423e11cf88b128bce115c9",
+   "sha256": "82faadb9d90f02918ea5ee6e4a8ec0ea3beeb017b7f32b9b9a8965ddcc17aeca"
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar_label": "2026-11-20T21:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": null,
+   "status": "ok",
+   "checksum": "sha256:21ee1b777e931cdbe2345b0983820e019fb20bbd6acdbdb9dfac1388f3af7ca8",
+   "sha256": "6546f5a36b149a1794090ce18128879210ebd3d2df48f59acd3b543a28f40f7f"
+  },
+  {
+   "slug": "sol-12h",
+   "decision_bar_label": "2026-11-22T12:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 70.65,
+   "status": "ok",
+   "checksum": "sha256:9c6fe3214a0a77806f65aa86b1c1c0f0c601bb3dee5e1f8d342128982c84ee3a",
+   "sha256": "1788ad9e6baa16f1a9847876749a70745e87c52f5dec3b739ba0df91682acbd4"
+  },
+  {
+   "slug": "sol-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 70.31,
+   "status": "ok",
+   "checksum": "sha256:27e7d68704aa833d3cfcc21a777a71173dedb91b88869f3cc1b66dc6c4b370c2",
+   "sha256": "9d79296978e11d11433e100e35fd8abaccdfe1f2061e9f11516b03ead15fab43"
+  },
+  {
+   "slug": "spy-1d",
+   "decision_bar_label": "2026-11-20T21:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 689.81,
+   "status": "ok",
+   "checksum": "sha256:615a669765f29a6a03400e584e021b16865302390a8bbae487cfddc26f1d9509",
+   "sha256": "97b56c1819b0952f675ffb09eb0889684bc8b4a86965e549d568925d79ea618c"
+  },
+  {
+   "slug": "sui-1d-ls",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 0.6487,
+   "status": "ok",
+   "checksum": "sha256:95459cd5268d01613c26c119627f8b5bac1ba1a8966b0046ccced22a3c3275ba",
+   "sha256": "a72f21738fac5e1aecdf0d3445a03f72de6e22b53f4be0c8edd15c1260b20f48"
+  },
+  {
+   "slug": "sui-1d",
+   "decision_bar_label": "2026-11-22T00:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 0.6487,
+   "status": "ok",
+   "checksum": "sha256:716b43ec019679e78ee9260499e1cabc01cd37c4ca7e73a4bbb6230f6a142df5",
+   "sha256": "2729c0fafcb9af2ec579659d16a14757b65d7aec1691f79709a44872106a662f"
+  },
+  {
+   "slug": "tsla-1d",
+   "decision_bar_label": "2026-11-20T21:00Z",
+   "action": "HOLD",
+   "positions": [],
+   "reference_price": 345.85,
+   "status": "ok",
+   "checksum": "sha256:3229fa4879f3210eb204b678d586249c444922836671effd77ee315517a2f07b",
+   "sha256": "f3a83347dfe5330e34303fdc004ea46a15744f45e3156bfa3898faf41ec1dd2a"
+  }
+ ]
+}
