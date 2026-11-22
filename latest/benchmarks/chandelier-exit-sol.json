@@ -11,9 +11,9 @@
  "rule": "Long when Chandelier Exit (ATR 22, multiplier 3, close extremes) turns to buy; cash when it turns to sell.",
  "credit": "Chandelier Exit by everget (GPL-3.0): https://www.tradingview.com/script/AqXxNS7j-Chandelier-Exit-everget/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-21T13:15:00Z",
- "decision_bar": "2026-11-20",
- "valid_until_utc": "2026-11-22T00:45:00Z",
+ "generated_at_utc": "2026-11-22T00:06:00Z",
+ "decision_bar": "2026-11-21",
+ "valid_until_utc": "2026-11-23T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-12",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-20",
-   "until": "2026-11-20",
+   "since": "2026-05-21",
+   "until": "2026-11-21",
    "cagr_pct": 31.4,
    "max_dd_pct": 13.5,
    "mar": 2.32,
    "sharpe": 0.89,
    "hold": {
-    "cagr_pct": -35.9,
+    "cagr_pct": -35.0,
     "max_dd_pct": 43.6,
-    "mar": -0.82,
-    "sharpe": -0.47,
-    "return_pct": -20.06
+    "mar": -0.8,
+    "sharpe": -0.44,
+    "return_pct": -19.52
    },
    "trades": 3,
    "win_rate_pct": 33.3,
@@ -45,18 +45,18 @@
    "return_pct": 14.74
   },
   "1y": {
-   "since": "2025-11-20",
-   "until": "2026-11-20",
+   "since": "2025-11-21",
+   "until": "2026-11-21",
    "cagr_pct": -21.5,
    "max_dd_pct": 38.9,
    "mar": -0.55,
    "sharpe": -0.58,
    "hold": {
-    "cagr_pct": -48.5,
+    "cagr_pct": -45.4,
     "max_dd_pct": 57.6,
-    "mar": -0.84,
-    "sharpe": -0.76,
-    "return_pct": -48.47
+    "mar": -0.79,
+    "sharpe": -0.66,
+    "return_pct": -45.36
    },
    "trades": 6,
    "win_rate_pct": 16.7,
@@ -64,37 +64,37 @@
    "return_pct": -21.5
   },
   "2y": {
-   "since": "2024-11-20",
-   "until": "2026-11-20",
-   "cagr_pct": -11.9,
+   "since": "2024-11-21",
+   "until": "2026-11-21",
+   "cagr_pct": -15.5,
    "max_dd_pct": 56.2,
-   "mar": -0.21,
-   "sharpe": -0.08,
+   "mar": -0.28,
+   "sharpe": -0.19,
    "hold": {
-    "cagr_pct": -45.9,
+    "cagr_pct": -47.7,
     "max_dd_pct": 76.3,
-    "mar": -0.6,
-    "sharpe": -0.43,
-    "return_pct": -70.75
+    "mar": -0.62,
+    "sharpe": -0.48,
+    "return_pct": -72.57
    },
    "trades": 11,
    "win_rate_pct": 36.4,
-   "time_in_market_pct": 38.2,
-   "return_pct": -22.28
+   "time_in_market_pct": 38.0,
+   "return_pct": -28.62
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-20",
-   "cagr_pct": 71.7,
+   "until": "2026-11-21",
+   "cagr_pct": 71.6,
    "max_dd_pct": 56.2,
-   "mar": 1.28,
-   "sharpe": 1.19,
+   "mar": 1.27,
+   "sharpe": 1.18,
    "hold": {
-    "cagr_pct": 64.4,
+    "cagr_pct": 65.2,
     "max_dd_pct": 76.3,
-    "mar": 0.84,
-    "sharpe": 1.0,
-    "return_pct": 589.49
+    "mar": 0.85,
+    "sharpe": 1.01,
+    "return_pct": 603.8
    },
    "trades": 21,
    "win_rate_pct": 42.9,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-20",
+   "until": "2026-11-21",
    "cagr_pct": 42.9,
    "max_dd_pct": 56.2,
    "mar": 0.76,
    "sharpe": 0.9,
    "hold": {
-    "cagr_pct": -17.8,
+    "cagr_pct": -17.4,
     "max_dd_pct": 94.6,
-    "mar": -0.19,
-    "sharpe": 0.25,
-    "return_pct": -61.53
+    "mar": -0.18,
+    "sharpe": 0.26,
+    "return_pct": -60.73
    },
    "trades": 24,
    "win_rate_pct": 37.5,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-20",
-   "cagr_pct": 147.9,
+   "until": "2026-11-21",
+   "cagr_pct": 147.8,
    "max_dd_pct": 56.2,
    "mar": 2.63,
    "sharpe": 1.57,
    "hold": {
-    "cagr_pct": 62.3,
+    "cagr_pct": 62.8,
     "max_dd_pct": 96.3,
     "mar": 0.65,
     "sharpe": 0.99,
-    "return_pct": 1988.22
+    "return_pct": 2031.57
    },
    "trades": 29,
    "win_rate_pct": 44.8,

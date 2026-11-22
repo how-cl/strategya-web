@@ -11,141 +11,141 @@
  "rule": "Long when the SAR dots flip below the price; cash when they flip above (0.02, 0.02, 0.2).",
  "credit": "Parabolic SAR by J. Welles Wilder (public domain), TradingView default settings",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-21T13:15:00Z",
- "decision_bar": "2026-11-20",
- "valid_until_utc": "2026-11-22T00:45:00Z",
+ "generated_at_utc": "2026-11-22T00:06:00Z",
+ "decision_bar": "2026-11-21",
+ "valid_until_utc": "2026-11-23T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-20",
-  "action": "SELL at next open"
+  "action": "STAY IN CASH"
  },
  "last_trade": {
-  "entry_date": "2026-10-22",
-  "exit_date": "2026-10-25",
-  "return_pct": -4.5
+  "entry_date": "2026-11-19",
+  "exit_date": "2026-11-21",
+  "return_pct": -6.66
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-20",
-   "until": "2026-11-20",
-   "cagr_pct": 33.4,
-   "max_dd_pct": 15.5,
-   "mar": 2.15,
-   "sharpe": 1.05,
+   "since": "2026-05-21",
+   "until": "2026-11-21",
+   "cagr_pct": 33.1,
+   "max_dd_pct": 15.6,
+   "mar": 2.12,
+   "sharpe": 1.04,
    "hold": {
-    "cagr_pct": -35.9,
+    "cagr_pct": -35.0,
     "max_dd_pct": 43.6,
-    "mar": -0.82,
-    "sharpe": -0.47,
-    "return_pct": -20.06
+    "mar": -0.8,
+    "sharpe": -0.44,
+    "return_pct": -19.52
    },
-   "trades": 6,
-   "win_rate_pct": 83.3,
+   "trades": 7,
+   "win_rate_pct": 71.4,
    "time_in_market_pct": 40.5,
-   "return_pct": 15.62
+   "return_pct": 15.48
   },
   "1y": {
-   "since": "2025-11-20",
-   "until": "2026-11-20",
-   "cagr_pct": -5.6,
+   "since": "2025-11-21",
+   "until": "2026-11-21",
+   "cagr_pct": -5.7,
    "max_dd_pct": 24.1,
-   "mar": -0.23,
-   "sharpe": 0.03,
+   "mar": -0.24,
+   "sharpe": 0.02,
    "hold": {
-    "cagr_pct": -48.5,
+    "cagr_pct": -45.4,
     "max_dd_pct": 57.6,
-    "mar": -0.84,
-    "sharpe": -0.76,
-    "return_pct": -48.47
+    "mar": -0.79,
+    "sharpe": -0.66,
+    "return_pct": -45.36
    },
-   "trades": 13,
-   "win_rate_pct": 46.2,
+   "trades": 14,
+   "win_rate_pct": 42.9,
    "time_in_market_pct": 48.9,
-   "return_pct": -5.58
+   "return_pct": -5.69
   },
   "2y": {
-   "since": "2024-11-20",
-   "until": "2026-11-20",
-   "cagr_pct": -21.0,
+   "since": "2024-11-21",
+   "until": "2026-11-21",
+   "cagr_pct": -24.3,
    "max_dd_pct": 53.3,
-   "mar": -0.39,
-   "sharpe": -0.24,
+   "mar": -0.46,
+   "sharpe": -0.33,
    "hold": {
-    "cagr_pct": -45.9,
+    "cagr_pct": -47.7,
     "max_dd_pct": 76.3,
-    "mar": -0.6,
-    "sharpe": -0.43,
-    "return_pct": -70.75
+    "mar": -0.62,
+    "sharpe": -0.48,
+    "return_pct": -72.57
    },
-   "trades": 27,
-   "win_rate_pct": 44.4,
-   "time_in_market_pct": 44.7,
-   "return_pct": -37.57
+   "trades": 28,
+   "win_rate_pct": 42.9,
+   "time_in_market_pct": 44.6,
+   "return_pct": -42.73
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-20",
-   "cagr_pct": 61.0,
+   "until": "2026-11-21",
+   "cagr_pct": 60.9,
    "max_dd_pct": 53.3,
    "mar": 1.14,
    "sharpe": 1.06,
    "hold": {
-    "cagr_pct": 64.4,
+    "cagr_pct": 65.2,
     "max_dd_pct": 76.3,
-    "mar": 0.84,
-    "sharpe": 1.0,
-    "return_pct": 589.49
+    "mar": 0.85,
+    "sharpe": 1.01,
+    "return_pct": 603.8
    },
-   "trades": 55,
-   "win_rate_pct": 50.9,
+   "trades": 56,
+   "win_rate_pct": 50.0,
    "time_in_market_pct": 48.8,
-   "return_pct": 535.86
+   "return_pct": 535.13
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-20",
+   "until": "2026-11-21",
    "cagr_pct": 28.3,
    "max_dd_pct": 53.3,
    "mar": 0.53,
    "sharpe": 0.7,
    "hold": {
-    "cagr_pct": -17.8,
+    "cagr_pct": -17.4,
     "max_dd_pct": 94.6,
-    "mar": -0.19,
-    "sharpe": 0.25,
-    "return_pct": -61.53
+    "mar": -0.18,
+    "sharpe": 0.26,
+    "return_pct": -60.73
    },
-   "trades": 68,
-   "win_rate_pct": 44.1,
+   "trades": 69,
+   "win_rate_pct": 43.5,
    "time_in_market_pct": 47.6,
-   "return_pct": 238.37
+   "return_pct": 237.98
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-20",
-   "cagr_pct": 98.1,
+   "until": "2026-11-21",
+   "cagr_pct": 98.0,
    "max_dd_pct": 66.4,
    "mar": 1.48,
    "sharpe": 1.25,
    "hold": {
-    "cagr_pct": 62.3,
+    "cagr_pct": 62.8,
     "max_dd_pct": 96.3,
     "mar": 0.65,
     "sharpe": 0.99,
-    "return_pct": 1988.22
+    "return_pct": 2031.57
    },
-   "trades": 89,
-   "win_rate_pct": 44.9,
+   "trades": 90,
+   "win_rate_pct": 44.4,
    "time_in_market_pct": 48.8,
-   "return_pct": 7200.52
+   "return_pct": 7192.17
   }
  },
  "history": {
   "facts": {
-   "closed_trades": 89,
+   "closed_trades": 90,
    "winning_trades": 40,
-   "win_rate_pct": 44.9,
-   "avg_trade_days": 12.6,
+   "win_rate_pct": 44.4,
+   "avg_trade_days": 12.4,
    "best_trade": {
     "entry_date": "2021-07-27",
     "exit_date": "2021-08-25",
@@ -157,7 +157,7 @@
     "return_pct": -26.33
    },
    "max_losing_streak": 6,
-   "return_without_top3_pct": 513.7,
+   "return_without_top3_pct": 472.8,
    "years": [
     {
      "year": 2021,
@@ -194,8 +194,8 @@
    "worst_year_vs_hold": 2021
   },
   "text": {
-   "en": "Since 2020 this rule closed 89 trades and won 40 (45%). A trade lasts 13 days on average. Its best trade was +150% (July 2021 to August 2021) and its worst \u221226% (May 2022). Without its three best trades, the other 86 together still gain 514%. Its worst streak was 6 losses in a row. In 2022 it returned \u221247%; buying and holding Solana returned \u221294%. In 2021 it returned +3,102%; buying and holding Solana returned +11,178%. Its line moves closer to price every day: it takes you out quickly and therefore switches sides many times.",
-   "es": "Desde 2020 esta regla cerr\u00f3 89 operaciones y gan\u00f3 en 40 (45\u00a0%). Una operaci\u00f3n dura en promedio 13 d\u00edas. La mejor fue +150\u00a0% (julio de 2021 a agosto de 2021) y la peor \u221226\u00a0% (mayo de 2022). Sin sus tres mejores operaciones, las otras 86 juntas igual ganan 514\u00a0%. Su peor racha fue de 6 p\u00e9rdidas seguidas. En 2022 rindi\u00f3 \u221247\u00a0%; comprar y mantener Solana rindi\u00f3 \u221294\u00a0%. En 2021 rindi\u00f3 +3.102\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%. Su l\u00ednea se acerca al precio cada d\u00eda: saca r\u00e1pido de la operaci\u00f3n y por eso cambia de lado muchas veces."
+   "en": "Since 2020 this rule closed 90 trades and won 40 (44%). A trade lasts 12 days on average. Its best trade was +150% (July 2021 to August 2021) and its worst \u221226% (May 2022). Without its three best trades, the other 87 together still gain 473%. Its worst streak was 6 losses in a row. In 2022 it returned \u221247%; buying and holding Solana returned \u221294%. In 2021 it returned +3,102%; buying and holding Solana returned +11,178%. Its line moves closer to price every day: it takes you out quickly and therefore switches sides many times.",
+   "es": "Desde 2020 esta regla cerr\u00f3 90 operaciones y gan\u00f3 en 40 (44\u00a0%). Una operaci\u00f3n dura en promedio 12 d\u00edas. La mejor fue +150\u00a0% (julio de 2021 a agosto de 2021) y la peor \u221226\u00a0% (mayo de 2022). Sin sus tres mejores operaciones, las otras 87 juntas igual ganan 473\u00a0%. Su peor racha fue de 6 p\u00e9rdidas seguidas. En 2022 rindi\u00f3 \u221247\u00a0%; comprar y mantener Solana rindi\u00f3 \u221294\u00a0%. En 2021 rindi\u00f3 +3.102\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%. Su l\u00ednea se acerca al precio cada d\u00eda: saca r\u00e1pido de la operaci\u00f3n y por eso cambia de lado muchas veces."
   }
  },
  "validation": {
