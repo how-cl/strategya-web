@@ -11,9 +11,9 @@
  "rule": "Long when the Hull MA 55 turns up (crosses above its value 2 bars ago); cash when it turns down.",
  "credit": "Hull Suite by InSilico, open source on TradingView: https://www.tradingview.com/script/hg92pFwS-Hull-Suite/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-22T00:06:00Z",
- "decision_bar": "2026-11-21",
- "valid_until_utc": "2026-11-23T00:45:00Z",
+ "generated_at_utc": "2026-11-23T00:06:00Z",
+ "decision_bar": "2026-11-22",
+ "valid_until_utc": "2026-11-24T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-11",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-21",
-   "until": "2026-11-21",
+   "since": "2026-05-22",
+   "until": "2026-11-22",
    "cagr_pct": 10.6,
    "max_dd_pct": 10.5,
    "mar": 1.01,
    "sharpe": 0.57,
    "hold": {
-    "cagr_pct": -39.6,
+    "cagr_pct": -34.0,
     "max_dd_pct": 31.9,
-    "mar": -1.24,
-    "sharpe": -1.06,
-    "return_pct": -22.42
+    "mar": -1.06,
+    "sharpe": -0.84,
+    "return_pct": -18.89
    },
    "trades": 4,
    "win_rate_pct": 50.0,
@@ -45,18 +45,18 @@
    "return_pct": 5.21
   },
   "1y": {
-   "since": "2025-11-21",
-   "until": "2026-11-21",
+   "since": "2025-11-22",
+   "until": "2026-11-22",
    "cagr_pct": 8.4,
    "max_dd_pct": 12.8,
    "mar": 0.65,
    "sharpe": 0.44,
    "hold": {
-    "cagr_pct": -29.3,
+    "cagr_pct": -27.7,
     "max_dd_pct": 39.5,
-    "mar": -0.74,
-    "sharpe": -0.56,
-    "return_pct": -29.27
+    "mar": -0.7,
+    "sharpe": -0.51,
+    "return_pct": -27.69
    },
    "trades": 9,
    "win_rate_pct": 44.4,
@@ -64,56 +64,56 @@
    "return_pct": 8.39
   },
   "2y": {
-   "since": "2024-11-21",
-   "until": "2026-11-21",
-   "cagr_pct": 4.3,
+   "since": "2024-11-22",
+   "until": "2026-11-22",
+   "cagr_pct": 4.0,
    "max_dd_pct": 24.0,
-   "mar": 0.18,
-   "sharpe": 0.29,
+   "mar": 0.17,
+   "sharpe": 0.28,
    "hold": {
-    "cagr_pct": -21.8,
+    "cagr_pct": -21.3,
     "max_dd_pct": 53.0,
-    "mar": -0.41,
-    "sharpe": -0.35,
-    "return_pct": -38.75
+    "mar": -0.4,
+    "sharpe": -0.34,
+    "return_pct": -38.04
    },
    "trades": 16,
    "win_rate_pct": 37.5,
-   "time_in_market_pct": 48.2,
-   "return_pct": 8.75
+   "time_in_market_pct": 48.0,
+   "return_pct": 8.11
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-21",
-   "cagr_pct": 39.3,
+   "until": "2026-11-22",
+   "cagr_pct": 39.2,
    "max_dd_pct": 33.8,
    "mar": 1.16,
    "sharpe": 1.19,
    "hold": {
-    "cagr_pct": 39.3,
+    "cagr_pct": 39.9,
     "max_dd_pct": 53.0,
-    "mar": 0.74,
+    "mar": 0.75,
     "sharpe": 0.95,
-    "return_pct": 262.38
+    "return_pct": 268.73
    },
    "trades": 32,
    "win_rate_pct": 46.9,
-   "time_in_market_pct": 52.1,
+   "time_in_market_pct": 52.0,
    "return_pct": 262.34
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-21",
+   "until": "2026-11-22",
    "cagr_pct": 5.4,
    "max_dd_pct": 65.6,
    "mar": 0.08,
    "sharpe": 0.32,
    "hold": {
-    "cagr_pct": 4.9,
+    "cagr_pct": 5.2,
     "max_dd_pct": 66.9,
-    "mar": 0.07,
+    "mar": 0.08,
     "sharpe": 0.35,
-    "return_pct": 26.18
+    "return_pct": 28.39
    },
    "trades": 42,
    "win_rate_pct": 38.1,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-21",
+   "until": "2026-11-22",
    "cagr_pct": 26.2,
    "max_dd_pct": 75.1,
    "mar": 0.35,
    "sharpe": 0.76,
    "hold": {
-    "cagr_pct": 18.4,
+    "cagr_pct": 18.7,
     "max_dd_pct": 81.2,
     "mar": 0.23,
     "sharpe": 0.59,
-    "return_pct": 350.04
+    "return_pct": 357.93
    },
    "trades": 75,
    "win_rate_pct": 38.7,
