@@ -11,9 +11,9 @@
  "rule": "Long when Zero Lag Trend Signals (ZLEMA 70, band multiplier 1.2) turns bullish; cash when it turns bearish.",
  "credit": "Zero Lag Trend Signals (MTF) by AlgoAlpha (MPL-2.0): https://www.tradingview.com/script/tHK4O1Fi-Zero-Lag-Trend-Signals-MTF-AlgoAlpha/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-23T00:06:00Z",
- "decision_bar": "2026-11-22",
- "valid_until_utc": "2026-11-24T00:45:00Z",
+ "generated_at_utc": "2026-11-24T00:05:00Z",
+ "decision_bar": "2026-11-23",
+ "valid_until_utc": "2026-11-25T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-08",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-22",
-   "until": "2026-11-22",
-   "cagr_pct": 0.1,
+   "since": "2026-05-23",
+   "until": "2026-11-23",
+   "cagr_pct": -3.0,
    "max_dd_pct": 35.3,
-   "mar": 0.0,
-   "sharpe": 0.22,
+   "mar": -0.08,
+   "sharpe": 0.15,
    "hold": {
-    "cagr_pct": -29.6,
+    "cagr_pct": -29.3,
     "max_dd_pct": 43.6,
-    "mar": -0.68,
-    "sharpe": -0.31,
-    "return_pct": -16.2
+    "mar": -0.67,
+    "sharpe": -0.3,
+    "return_pct": -16.0
    },
    "trades": 1,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 60.5,
-   "return_pct": 0.07
+   "time_in_market_pct": 60.0,
+   "return_pct": -1.5
   },
   "1y": {
-   "since": "2025-11-22",
-   "until": "2026-11-22",
+   "since": "2025-11-23",
+   "until": "2026-11-23",
    "cagr_pct": -29.1,
    "max_dd_pct": 56.1,
    "mar": -0.52,
    "sharpe": -0.57,
    "hold": {
-    "cagr_pct": -44.6,
+    "cagr_pct": -44.9,
     "max_dd_pct": 57.6,
-    "mar": -0.77,
-    "sharpe": -0.64,
-    "return_pct": -44.56
+    "mar": -0.78,
+    "sharpe": -0.65,
+    "return_pct": -44.84
    },
    "trades": 3,
    "win_rate_pct": 33.3,
@@ -64,79 +64,79 @@
    "return_pct": -29.05
   },
   "2y": {
-   "since": "2024-11-22",
-   "until": "2026-11-22",
-   "cagr_pct": -17.1,
+   "since": "2024-11-23",
+   "until": "2026-11-23",
+   "cagr_pct": -16.8,
    "max_dd_pct": 60.2,
    "mar": -0.28,
-   "sharpe": -0.13,
+   "sharpe": -0.12,
    "hold": {
-    "cagr_pct": -47.6,
+    "cagr_pct": -46.9,
     "max_dd_pct": 76.3,
-    "mar": -0.62,
-    "sharpe": -0.47,
-    "return_pct": -72.47
+    "mar": -0.61,
+    "sharpe": -0.46,
+    "return_pct": -71.74
    },
    "trades": 6,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 53.8,
-   "return_pct": -31.31
+   "time_in_market_pct": 53.6,
+   "return_pct": -30.77
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-22",
+   "until": "2026-11-23",
    "cagr_pct": 36.8,
    "max_dd_pct": 60.2,
    "mar": 0.61,
    "sharpe": 0.81,
    "hold": {
-    "cagr_pct": 65.4,
+    "cagr_pct": 66.1,
     "max_dd_pct": 76.3,
-    "mar": 0.86,
-    "sharpe": 1.01,
-    "return_pct": 608.01
+    "mar": 0.87,
+    "sharpe": 1.02,
+    "return_pct": 621.02
    },
    "trades": 14,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 58.8,
+   "time_in_market_pct": 58.7,
    "return_pct": 238.72
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-22",
+   "until": "2026-11-23",
    "cagr_pct": 23.4,
    "max_dd_pct": 63.5,
    "mar": 0.37,
    "sharpe": 0.65,
    "hold": {
-    "cagr_pct": -17.3,
+    "cagr_pct": -17.0,
     "max_dd_pct": 94.6,
     "mar": -0.18,
     "sharpe": 0.26,
-    "return_pct": -60.5
+    "return_pct": -59.77
    },
    "trades": 15,
    "win_rate_pct": 46.7,
-   "time_in_market_pct": 48.9,
+   "time_in_market_pct": 48.8,
    "return_pct": 179.6
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-22",
+   "until": "2026-11-23",
    "cagr_pct": 52.0,
    "max_dd_pct": 63.5,
    "mar": 0.82,
    "sharpe": 0.98,
    "hold": {
-    "cagr_pct": 62.9,
+    "cagr_pct": 63.4,
     "max_dd_pct": 96.3,
-    "mar": 0.65,
+    "mar": 0.66,
     "sharpe": 0.99,
-    "return_pct": 2044.31
+    "return_pct": 2083.72
    },
    "trades": 20,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 43.7,
+   "time_in_market_pct": 43.6,
    "return_pct": 1288.74
   }
  },
