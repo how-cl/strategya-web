@@ -11,9 +11,9 @@
  "rule": "Long when the close crosses above the upper band of Volumatic VIDYA (VIDYA 10, momentum 20, bands at 2 \u00d7 ATR 200); cash when it crosses below the lower band. Volume is only drawn, it does not change the signal.",
  "credit": "Volumatic Variable Index Dynamic Average by BigBeluga (CC BY-NC-SA 4.0): https://www.tradingview.com/script/llhVjhA5-Volumatic-Variable-Index-Dynamic-Average-BigBeluga/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-24T00:05:00Z",
- "decision_bar": "2026-11-23",
- "valid_until_utc": "2026-11-25T00:45:00Z",
+ "generated_at_utc": "2026-11-25T00:05:00Z",
+ "decision_bar": "2026-11-24",
+ "valid_until_utc": "2026-11-26T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-29",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-23",
-   "until": "2026-11-23",
+   "since": "2026-05-24",
+   "until": "2026-11-24",
    "cagr_pct": -0.4,
    "max_dd_pct": 18.9,
    "mar": -0.02,
    "sharpe": 0.12,
    "hold": {
-    "cagr_pct": -34.5,
+    "cagr_pct": -35.8,
     "max_dd_pct": 41.5,
-    "mar": -0.83,
-    "sharpe": -0.48,
-    "return_pct": -19.22
+    "mar": -0.86,
+    "sharpe": -0.51,
+    "return_pct": -19.99
    },
    "trades": 1,
    "win_rate_pct": 0.0,
@@ -45,18 +45,18 @@
    "return_pct": -0.19
   },
   "1y": {
-   "since": "2025-11-23",
-   "until": "2026-11-23",
+   "since": "2025-11-24",
+   "until": "2026-11-24",
    "cagr_pct": -0.2,
    "max_dd_pct": 18.9,
    "mar": -0.01,
    "sharpe": 0.09,
    "hold": {
-    "cagr_pct": -39.0,
+    "cagr_pct": -43.1,
     "max_dd_pct": 53.3,
-    "mar": -0.73,
-    "sharpe": -0.51,
-    "return_pct": -38.95
+    "mar": -0.81,
+    "sharpe": -0.63,
+    "return_pct": -43.11
    },
    "trades": 1,
    "win_rate_pct": 0.0,
@@ -64,37 +64,37 @@
    "return_pct": -0.19
   },
   "2y": {
-   "since": "2024-11-23",
-   "until": "2026-11-23",
-   "cagr_pct": 16.3,
+   "since": "2024-11-24",
+   "until": "2026-11-24",
+   "cagr_pct": 16.8,
    "max_dd_pct": 34.8,
-   "mar": 0.47,
-   "sharpe": 0.58,
+   "mar": 0.48,
+   "sharpe": 0.6,
    "hold": {
-    "cagr_pct": -29.0,
+    "cagr_pct": -29.3,
     "max_dd_pct": 67.6,
     "mar": -0.43,
     "sharpe": -0.16,
-    "return_pct": -49.6
+    "return_pct": -50.01
    },
    "trades": 3,
    "win_rate_pct": 33.3,
-   "time_in_market_pct": 36.0,
-   "return_pct": 35.19
+   "time_in_market_pct": 35.8,
+   "return_pct": 36.5
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 28.9,
    "max_dd_pct": 34.8,
    "mar": 0.83,
    "sharpe": 0.85,
    "hold": {
-    "cagr_pct": 9.5,
+    "cagr_pct": 9.0,
     "max_dd_pct": 67.6,
-    "mar": 0.14,
-    "sharpe": 0.46,
-    "return_pct": 42.51
+    "mar": 0.13,
+    "sharpe": 0.45,
+    "return_pct": 39.97
    },
    "trades": 7,
    "win_rate_pct": 57.1,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 10.8,
    "max_dd_pct": 47.2,
    "mar": 0.23,
    "sharpe": 0.46,
    "hold": {
-    "cagr_pct": -14.9,
+    "cagr_pct": -15.2,
     "max_dd_pct": 74.0,
-    "mar": -0.2,
-    "sharpe": 0.11,
-    "return_pct": -54.57
+    "mar": -0.21,
+    "sharpe": 0.1,
+    "return_pct": -55.38
    },
    "trades": 9,
    "win_rate_pct": 44.4,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-23",
-   "cagr_pct": 36.4,
+   "until": "2026-11-24",
+   "cagr_pct": 36.3,
    "max_dd_pct": 62.2,
    "mar": 0.58,
    "sharpe": 0.87,
    "hold": {
-    "cagr_pct": 9.6,
+    "cagr_pct": 9.4,
     "max_dd_pct": 94.0,
     "mar": 0.1,
-    "sharpe": 0.54,
-    "return_pct": 126.58
+    "sharpe": 0.53,
+    "return_pct": 122.53
    },
    "trades": 17,
    "win_rate_pct": 64.7,

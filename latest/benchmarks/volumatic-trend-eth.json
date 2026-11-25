@@ -11,9 +11,9 @@
  "rule": "Long when Volumatic Trend (length 40) turns up: the smoothed 40-day EMA crosses under the plain 40-day EMA; cash when it turns down. Volume is only drawn, it does not change the signal.",
  "credit": "Volumatic Trend by ChartPrime (MPL-2.0): https://www.tradingview.com/script/4lVTa6J4-Volumatic-Trend-ChartPrime/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-24T00:05:00Z",
- "decision_bar": "2026-11-23",
- "valid_until_utc": "2026-11-25T00:45:00Z",
+ "generated_at_utc": "2026-11-25T00:05:00Z",
+ "decision_bar": "2026-11-24",
+ "valid_until_utc": "2026-11-26T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-09",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-23",
-   "until": "2026-11-23",
+   "since": "2026-05-24",
+   "until": "2026-11-24",
    "cagr_pct": 82.3,
    "max_dd_pct": 10.9,
    "mar": 7.58,
    "sharpe": 1.74,
    "hold": {
-    "cagr_pct": -34.5,
+    "cagr_pct": -35.8,
     "max_dd_pct": 41.5,
-    "mar": -0.83,
-    "sharpe": -0.48,
-    "return_pct": -19.22
+    "mar": -0.86,
+    "sharpe": -0.51,
+    "return_pct": -19.99
    },
    "trades": 2,
    "win_rate_pct": 50.0,
@@ -45,18 +45,18 @@
    "return_pct": 35.33
   },
   "1y": {
-   "since": "2025-11-23",
-   "until": "2026-11-23",
+   "since": "2025-11-24",
+   "until": "2026-11-24",
    "cagr_pct": 0.3,
    "max_dd_pct": 28.8,
    "mar": 0.01,
    "sharpe": 0.18,
    "hold": {
-    "cagr_pct": -39.0,
+    "cagr_pct": -43.1,
     "max_dd_pct": 53.3,
-    "mar": -0.73,
-    "sharpe": -0.51,
-    "return_pct": -38.95
+    "mar": -0.81,
+    "sharpe": -0.63,
+    "return_pct": -43.11
    },
    "trades": 7,
    "win_rate_pct": 28.6,
@@ -64,56 +64,56 @@
    "return_pct": 0.29
   },
   "2y": {
-   "since": "2024-11-23",
-   "until": "2026-11-23",
-   "cagr_pct": 32.2,
+   "since": "2024-11-24",
+   "until": "2026-11-24",
+   "cagr_pct": 32.8,
    "max_dd_pct": 47.8,
-   "mar": 0.67,
-   "sharpe": 0.84,
+   "mar": 0.69,
+   "sharpe": 0.85,
    "hold": {
-    "cagr_pct": -29.0,
+    "cagr_pct": -29.3,
     "max_dd_pct": 67.6,
     "mar": -0.43,
     "sharpe": -0.16,
-    "return_pct": -49.6
+    "return_pct": -50.01
    },
    "trades": 11,
    "win_rate_pct": 36.4,
-   "time_in_market_pct": 45.4,
-   "return_pct": 74.59
+   "time_in_market_pct": 45.3,
+   "return_pct": 76.29
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 29.3,
    "max_dd_pct": 52.0,
    "mar": 0.56,
    "sharpe": 0.8,
    "hold": {
-    "cagr_pct": 9.5,
+    "cagr_pct": 9.0,
     "max_dd_pct": 67.6,
-    "mar": 0.14,
-    "sharpe": 0.46,
-    "return_pct": 42.51
+    "mar": 0.13,
+    "sharpe": 0.45,
+    "return_pct": 39.97
    },
    "trades": 29,
    "win_rate_pct": 34.5,
-   "time_in_market_pct": 50.7,
+   "time_in_market_pct": 50.6,
    "return_pct": 171.83
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 2.5,
    "max_dd_pct": 59.8,
    "mar": 0.04,
    "sharpe": 0.28,
    "hold": {
-    "cagr_pct": -14.9,
+    "cagr_pct": -15.2,
     "max_dd_pct": 74.0,
-    "mar": -0.2,
-    "sharpe": 0.11,
-    "return_pct": -54.57
+    "mar": -0.21,
+    "sharpe": 0.1,
+    "return_pct": -55.38
    },
    "trades": 38,
    "win_rate_pct": 28.9,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 39.1,
    "max_dd_pct": 73.6,
    "mar": 0.53,
    "sharpe": 0.87,
    "hold": {
-    "cagr_pct": 9.6,
+    "cagr_pct": 9.4,
     "max_dd_pct": 94.0,
     "mar": 0.1,
-    "sharpe": 0.54,
-    "return_pct": 126.58
+    "sharpe": 0.53,
+    "return_pct": 122.53
    },
    "trades": 64,
    "win_rate_pct": 32.8,

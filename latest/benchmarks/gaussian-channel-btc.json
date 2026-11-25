@@ -11,9 +11,9 @@
  "rule": "Long when the close crosses above the upper band of the Gaussian Channel (hlc3, 4 poles, period 144, multiplier 1.414); cash when it crosses back below.",
  "credit": "Gaussian Channel [DW] by DonovanWall (MPL-2.0): https://www.tradingview.com/script/WpVY7GKW-Gaussian-Channel-DW/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-24T00:05:00Z",
- "decision_bar": "2026-11-23",
- "valid_until_utc": "2026-11-25T00:45:00Z",
+ "generated_at_utc": "2026-11-25T00:05:00Z",
+ "decision_bar": "2026-11-24",
+ "valid_until_utc": "2026-11-26T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-22",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-23",
-   "until": "2026-11-23",
+   "since": "2026-05-24",
+   "until": "2026-11-24",
    "cagr_pct": 37.0,
    "max_dd_pct": 6.9,
    "mar": 5.35,
    "sharpe": 1.44,
    "hold": {
-    "cagr_pct": -36.1,
+    "cagr_pct": -39.5,
     "max_dd_pct": 31.9,
-    "mar": -1.13,
-    "sharpe": -0.92,
-    "return_pct": -20.17
+    "mar": -1.24,
+    "sharpe": -1.05,
+    "return_pct": -22.36
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -45,18 +45,18 @@
    "return_pct": 17.19
   },
   "1y": {
-   "since": "2025-11-23",
-   "until": "2026-11-23",
+   "since": "2025-11-24",
+   "until": "2026-11-24",
    "cagr_pct": 11.6,
    "max_dd_pct": 9.2,
    "mar": 1.26,
    "sharpe": 0.67,
    "hold": {
-    "cagr_pct": -29.5,
+    "cagr_pct": -32.3,
     "max_dd_pct": 39.5,
-    "mar": -0.75,
-    "sharpe": -0.57,
-    "return_pct": -29.44
+    "mar": -0.82,
+    "sharpe": -0.66,
+    "return_pct": -32.24
    },
    "trades": 5,
    "win_rate_pct": 40.0,
@@ -64,37 +64,37 @@
    "return_pct": 11.6
   },
   "2y": {
-   "since": "2024-11-23",
-   "until": "2026-11-23",
-   "cagr_pct": 4.3,
+   "since": "2024-11-24",
+   "until": "2026-11-24",
+   "cagr_pct": 4.2,
    "max_dd_pct": 17.8,
    "mar": 0.24,
-   "sharpe": 0.3,
+   "sharpe": 0.29,
    "hold": {
-    "cagr_pct": -20.8,
+    "cagr_pct": -21.8,
     "max_dd_pct": 53.0,
-    "mar": -0.39,
-    "sharpe": -0.32,
-    "return_pct": -37.27
+    "mar": -0.41,
+    "sharpe": -0.35,
+    "return_pct": -38.88
    },
    "trades": 14,
    "win_rate_pct": 35.7,
-   "time_in_market_pct": 38.0,
-   "return_pct": 8.8
+   "time_in_market_pct": 37.9,
+   "return_pct": 8.54
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 39.5,
    "max_dd_pct": 28.6,
    "mar": 1.38,
    "sharpe": 1.24,
    "hold": {
-    "cagr_pct": 39.8,
+    "cagr_pct": 38.9,
     "max_dd_pct": 53.0,
-    "mar": 0.75,
-    "sharpe": 0.95,
-    "return_pct": 268.73
+    "mar": 0.74,
+    "sharpe": 0.94,
+    "return_pct": 260.07
    },
    "trades": 31,
    "win_rate_pct": 32.3,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 28.8,
    "max_dd_pct": 28.6,
    "mar": 1.01,
    "sharpe": 1.05,
    "hold": {
-    "cagr_pct": 5.2,
+    "cagr_pct": 4.7,
     "max_dd_pct": 66.9,
-    "mar": 0.08,
-    "sharpe": 0.35,
-    "return_pct": 28.39
+    "mar": 0.07,
+    "sharpe": 0.34,
+    "return_pct": 25.37
    },
    "trades": 34,
    "win_rate_pct": 29.4,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-23",
+   "until": "2026-11-24",
    "cagr_pct": 49.7,
    "max_dd_pct": 36.5,
    "mar": 1.36,
    "sharpe": 1.27,
    "hold": {
-    "cagr_pct": 18.7,
+    "cagr_pct": 18.3,
     "max_dd_pct": 81.2,
     "mar": 0.23,
     "sharpe": 0.59,
-    "return_pct": 357.93
+    "return_pct": 347.17
    },
    "trades": 55,
    "win_rate_pct": 32.7,
