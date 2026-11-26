@@ -11,15 +11,15 @@
  "rule": "Long when the 50-day SMA crosses above the 200-day SMA; cash when it crosses below.",
  "credit": "Classic moving-average crossover (public domain)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-25T00:05:00Z",
- "decision_bar": "2026-11-24",
- "valid_until_utc": "2026-11-26T00:45:00Z",
+ "generated_at_utc": "2026-11-26T00:05:00Z",
+ "decision_bar": "2026-11-25",
+ "valid_until_utc": "2026-11-27T00:45:00Z",
  "position": {
   "state": "long",
   "since": "2026-10-03",
   "action": "HOLD",
   "entry_price": 1.184,
-  "open_return_pct": -45.23
+  "open_return_pct": -43.62
  },
  "last_trade": {
   "entry_date": "2025-07-27",
@@ -28,82 +28,82 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-24",
-   "until": "2026-11-24",
-   "cagr_pct": -69.8,
+   "since": "2026-05-25",
+   "until": "2026-11-25",
+   "cagr_pct": -68.0,
    "max_dd_pct": 46.6,
-   "mar": -1.5,
-   "sharpe": -2.78,
+   "mar": -1.46,
+   "sharpe": -2.62,
    "hold": {
-    "cagr_pct": -60.3,
+    "cagr_pct": -58.8,
     "max_dd_pct": 48.7,
-    "mar": -1.24,
-    "sharpe": -0.79,
-    "return_pct": -37.21
+    "mar": -1.21,
+    "sharpe": -0.74,
+    "return_pct": -36.0
    },
    "trades": 0,
    "win_rate_pct": null,
-   "time_in_market_pct": 28.1,
-   "return_pct": -45.28
+   "time_in_market_pct": 28.6,
+   "return_pct": -43.68
   },
   "1y": {
-   "since": "2025-11-24",
-   "until": "2026-11-24",
-   "cagr_pct": -45.3,
+   "since": "2025-11-25",
+   "until": "2026-11-25",
+   "cagr_pct": -43.7,
    "max_dd_pct": 46.6,
-   "mar": -0.97,
-   "sharpe": -1.96,
+   "mar": -0.94,
+   "sharpe": -1.85,
    "hold": {
-    "cagr_pct": -57.6,
+    "cagr_pct": -57.3,
     "max_dd_pct": 65.9,
     "mar": -0.87,
     "sharpe": -0.59,
-    "return_pct": -57.54
+    "return_pct": -57.31
    },
    "trades": 0,
    "win_rate_pct": null,
-   "time_in_market_pct": 14.2,
-   "return_pct": -45.28
+   "time_in_market_pct": 14.5,
+   "return_pct": -43.68
   },
   "2y": {
-   "since": "2024-11-24",
-   "until": "2026-11-24",
-   "cagr_pct": -56.4,
+   "since": "2024-11-25",
+   "until": "2026-11-25",
+   "cagr_pct": -54.4,
    "max_dd_pct": 87.8,
-   "mar": -0.64,
-   "sharpe": -1.02,
+   "mar": -0.62,
+   "sharpe": -0.95,
    "hold": {
-    "cagr_pct": -56.3,
+    "cagr_pct": -54.3,
     "max_dd_pct": 87.7,
-    "mar": -0.64,
-    "sharpe": -0.38,
-    "return_pct": -80.9
+    "mar": -0.62,
+    "sharpe": -0.34,
+    "return_pct": -79.09
    },
    "trades": 2,
    "win_rate_pct": 0.0,
    "time_in_market_pct": 37.5,
-   "return_pct": -80.96
+   "return_pct": -79.15
   },
   "since_2023": null,
   "since_2022": null,
   "full": {
    "since": "2023-05-03",
-   "until": "2026-11-24",
-   "cagr_pct": -13.2,
+   "until": "2026-11-25",
+   "cagr_pct": -12.5,
    "max_dd_pct": 87.8,
-   "mar": -0.15,
-   "sharpe": 0.13,
+   "mar": -0.14,
+   "sharpe": 0.14,
    "hold": {
-    "cagr_pct": -19.5,
+    "cagr_pct": -18.8,
     "max_dd_pct": 87.7,
-    "mar": -0.22,
+    "mar": -0.21,
     "sharpe": 0.29,
-    "return_pct": -53.73
+    "return_pct": -52.38
    },
    "trades": 4,
    "win_rate_pct": 50.0,
    "time_in_market_pct": 37.6,
-   "return_pct": -39.53
+   "return_pct": -37.76
   }
  },
  "history": {
