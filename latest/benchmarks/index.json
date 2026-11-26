@@ -1,6 +1,6 @@
 {
  "schema": "strategya.benchmark/0.1",
- "generated_at_utc": "2026-11-26T20:39:00Z",
+ "generated_at_utc": "2026-11-26T22:54:00Z",
  "base_url": "https://how-cl.github.io/strategya-web/latest/benchmarks/",
  "disclaimer": "Simulated backtests, not real performance. Not investment advice.",
  "items": [
@@ -469,6 +469,22 @@
    "position_since": "2026-10-24"
   },
   {
+   "id": "fear-and-greed-btc",
+   "benchmark": "fear-and-greed",
+   "name": "Fear & Greed Index",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "BTC",
+   "since": "2018-02-01",
+   "until": "2026-11-25",
+   "mar": -0.04,
+   "cagr_pct": -3.2,
+   "max_dd_pct": 77.8,
+   "hold_mar": 0.31,
+   "position": "long",
+   "position_since": "2026-11-07"
+  },
+  {
    "id": "supertrend-eth",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -931,6 +947,22 @@
    "hold_mar": 0.1,
    "position": "cash",
    "position_since": "2026-10-09"
+  },
+  {
+   "id": "fear-and-greed-eth",
+   "benchmark": "fear-and-greed",
+   "name": "Fear & Greed Index",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "ETH",
+   "since": "2018-02-01",
+   "until": "2026-11-25",
+   "mar": -0.27,
+   "cagr_pct": -25.6,
+   "max_dd_pct": 94.7,
+   "hold_mar": 0.06,
+   "position": "long",
+   "position_since": "2026-11-07"
   },
   {
    "id": "supertrend-sol",
@@ -1397,6 +1429,22 @@
    "position_since": "2026-10-12"
   },
   {
+   "id": "fear-and-greed-sol",
+   "benchmark": "fear-and-greed",
+   "name": "Fear & Greed Index",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "SOL",
+   "since": "2020-08-11",
+   "until": "2026-11-25",
+   "mar": -0.16,
+   "cagr_pct": -15.1,
+   "max_dd_pct": 95.9,
+   "hold_mar": 0.65,
+   "position": "long",
+   "position_since": "2026-11-07"
+  },
+  {
    "id": "supertrend-sui",
    "benchmark": "supertrend",
    "name": "SuperTrend",
@@ -1859,6 +1907,22 @@
    "hold_mar": -0.21,
    "position": "cash",
    "position_since": "2026-10-22"
+  },
+  {
+   "id": "fear-and-greed-sui",
+   "benchmark": "fear-and-greed",
+   "name": "Fear & Greed Index",
+   "free_indicator": false,
+   "family": "classic",
+   "asset": "SUI",
+   "since": "2023-05-03",
+   "until": "2026-11-25",
+   "mar": -0.02,
+   "cagr_pct": -1.4,
+   "max_dd_pct": 79.9,
+   "hold_mar": -0.21,
+   "position": "long",
+   "position_since": "2026-11-07"
   }
  ]
 }
