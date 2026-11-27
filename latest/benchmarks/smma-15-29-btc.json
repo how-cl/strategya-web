@@ -11,9 +11,9 @@
  "rule": "Long when four smoothed moving averages of hl2 (15, 19, 25, 29) line up bullish; cash on a bar where they line up bearish. A mixed bar changes nothing.",
  "credit": "Smoothed moving averages (SMMA, Wilder's RMA; public domain). The four-average recipe is widely published as open source.",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-26T22:54:00Z",
- "decision_bar": "2026-11-25",
- "valid_until_utc": "2026-11-27T00:45:00Z",
+ "generated_at_utc": "2026-11-27T00:05:00Z",
+ "decision_bar": "2026-11-26",
+ "valid_until_utc": "2026-11-28T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-14",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-25",
-   "until": "2026-11-25",
-   "cagr_pct": -53.5,
-   "max_dd_pct": 32.0,
-   "mar": -1.67,
-   "sharpe": -2.51,
+   "since": "2026-05-26",
+   "until": "2026-11-26",
+   "cagr_pct": -51.8,
+   "max_dd_pct": 30.8,
+   "mar": -1.68,
+   "sharpe": -2.39,
    "hold": {
-    "cagr_pct": -38.6,
+    "cagr_pct": -36.1,
     "max_dd_pct": 31.9,
-    "mar": -1.21,
-    "sharpe": -1.02,
-    "return_pct": -21.81
+    "mar": -1.13,
+    "sharpe": -0.92,
+    "return_pct": -20.22
    },
    "trades": 1,
    "win_rate_pct": 0.0,
-   "time_in_market_pct": 50.8,
-   "return_pct": -32.02
+   "time_in_market_pct": 50.3,
+   "return_pct": -30.77
   },
   "1y": {
-   "since": "2025-11-25",
-   "until": "2026-11-25",
+   "since": "2025-11-26",
+   "until": "2026-11-26",
    "cagr_pct": -31.2,
    "max_dd_pct": 36.1,
    "mar": -0.87,
    "sharpe": -1.62,
    "hold": {
-    "cagr_pct": -30.8,
+    "cagr_pct": -33.1,
     "max_dd_pct": 39.5,
-    "mar": -0.78,
-    "sharpe": -0.61,
-    "return_pct": -30.8
+    "mar": -0.84,
+    "sharpe": -0.69,
+    "return_pct": -33.05
    },
    "trades": 2,
    "win_rate_pct": 0.0,
@@ -64,27 +64,27 @@
    "return_pct": -31.22
   },
   "2y": {
-   "since": "2024-11-25",
-   "until": "2026-11-25",
-   "cagr_pct": -15.8,
+   "since": "2024-11-26",
+   "until": "2026-11-26",
+   "cagr_pct": -15.3,
    "max_dd_pct": 40.3,
-   "mar": -0.39,
-   "sharpe": -0.5,
+   "mar": -0.38,
+   "sharpe": -0.48,
    "hold": {
-    "cagr_pct": -19.4,
+    "cagr_pct": -18.9,
     "max_dd_pct": 53.0,
-    "mar": -0.37,
-    "sharpe": -0.28,
-    "return_pct": -35.0
+    "mar": -0.36,
+    "sharpe": -0.27,
+    "return_pct": -34.13
    },
    "trades": 3,
    "win_rate_pct": 33.3,
-   "time_in_market_pct": 52.9,
-   "return_pct": -29.07
+   "time_in_market_pct": 52.8,
+   "return_pct": -28.27
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-25",
+   "until": "2026-11-26",
    "cagr_pct": 15.1,
    "max_dd_pct": 40.3,
    "mar": 0.37,
@@ -94,7 +94,7 @@
     "max_dd_pct": 53.0,
     "mar": 0.74,
     "sharpe": 0.95,
-    "return_pct": 263.84
+    "return_pct": 264.55
    },
    "trades": 8,
    "win_rate_pct": 50.0,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-25",
+   "until": "2026-11-26",
    "cagr_pct": 8.6,
    "max_dd_pct": 40.3,
    "mar": 0.21,
    "sharpe": 0.41,
    "hold": {
-    "cagr_pct": 4.9,
+    "cagr_pct": 5.0,
     "max_dd_pct": 66.9,
     "mar": 0.07,
     "sharpe": 0.35,
-    "return_pct": 26.69
+    "return_pct": 26.94
    },
    "trades": 9,
    "win_rate_pct": 44.4,
@@ -122,7 +122,7 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-25",
+   "until": "2026-11-26",
    "cagr_pct": 29.8,
    "max_dd_pct": 64.7,
    "mar": 0.46,
@@ -132,7 +132,7 @@
     "max_dd_pct": 81.2,
     "mar": 0.23,
     "sharpe": 0.59,
-    "return_pct": 351.85
+    "return_pct": 352.74
    },
    "trades": 13,
    "win_rate_pct": 53.8,

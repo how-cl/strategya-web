@@ -11,15 +11,15 @@
  "rule": "Long when the Crypto Fear & Greed Index reads Extreme Fear (25 or below); cash when it reads Extreme Greed (76 or above). The index is published once a day; the rule uses the value already published at each daily close.",
  "credit": "Crypto Fear & Greed Index by Alternative.me, used with attribution: https://alternative.me/crypto/fear-and-greed-index/ (not a TradingView script: this rule is not cross-checked against TradingView)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-02-01.",
- "generated_at_utc": "2026-11-26T22:54:00Z",
- "decision_bar": "2026-11-25",
- "valid_until_utc": "2026-11-27T00:45:00Z",
+ "generated_at_utc": "2026-11-27T00:05:00Z",
+ "decision_bar": "2026-11-26",
+ "valid_until_utc": "2026-11-28T00:45:00Z",
  "position": {
   "state": "long",
   "since": "2026-11-07",
   "action": "HOLD",
   "entry_price": 75867.58,
-  "open_return_pct": -20.31
+  "open_return_pct": -20.15
  },
  "last_trade": {
   "entry_date": "2025-10-13",
@@ -28,66 +28,66 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-25",
-   "until": "2026-11-25",
-   "cagr_pct": -21.2,
-   "max_dd_pct": 24.2,
-   "mar": -0.88,
-   "sharpe": -0.46,
+   "since": "2026-05-26",
+   "until": "2026-11-26",
+   "cagr_pct": -18.0,
+   "max_dd_pct": 22.8,
+   "mar": -0.79,
+   "sharpe": -0.35,
    "hold": {
-    "cagr_pct": -38.6,
+    "cagr_pct": -36.1,
     "max_dd_pct": 31.9,
-    "mar": -1.21,
-    "sharpe": -1.02,
-    "return_pct": -21.81
+    "mar": -1.13,
+    "sharpe": -0.92,
+    "return_pct": -20.22
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 75.1,
-   "return_pct": -11.33
+   "return_pct": -9.53
   },
   "1y": {
-   "since": "2025-11-25",
-   "until": "2026-11-25",
-   "cagr_pct": -21.5,
+   "since": "2025-11-26",
+   "until": "2026-11-26",
+   "cagr_pct": -24.1,
    "max_dd_pct": 39.5,
-   "mar": -0.54,
-   "sharpe": -0.35,
+   "mar": -0.61,
+   "sharpe": -0.43,
    "hold": {
-    "cagr_pct": -30.8,
+    "cagr_pct": -33.1,
     "max_dd_pct": 39.5,
-    "mar": -0.78,
-    "sharpe": -0.61,
-    "return_pct": -30.8
+    "mar": -0.84,
+    "sharpe": -0.69,
+    "return_pct": -33.05
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 87.4,
-   "return_pct": -21.53
+   "return_pct": -24.08
   },
   "2y": {
-   "since": "2024-11-25",
-   "until": "2026-11-25",
-   "cagr_pct": -15.2,
+   "since": "2024-11-26",
+   "until": "2026-11-26",
+   "cagr_pct": -15.1,
    "max_dd_pct": 51.1,
    "mar": -0.3,
-   "sharpe": -0.26,
+   "sharpe": -0.25,
    "hold": {
-    "cagr_pct": -19.4,
+    "cagr_pct": -18.9,
     "max_dd_pct": 53.0,
-    "mar": -0.37,
-    "sharpe": -0.28,
-    "return_pct": -35.0
+    "mar": -0.36,
+    "sharpe": -0.27,
+    "return_pct": -34.13
    },
    "trades": 2,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 61.6,
-   "return_pct": -28.04
+   "time_in_market_pct": 61.7,
+   "return_pct": -27.9
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-25",
-   "cagr_pct": 26.3,
+   "until": "2026-11-26",
+   "cagr_pct": 26.4,
    "max_dd_pct": 51.1,
    "mar": 0.52,
    "sharpe": 0.81,
@@ -96,36 +96,36 @@
     "max_dd_pct": 53.0,
     "mar": 0.74,
     "sharpe": 0.95,
-    "return_pct": 263.84
+    "return_pct": 264.55
    },
    "trades": 3,
    "win_rate_pct": 66.7,
-   "time_in_market_pct": 65.5,
-   "return_pct": 148.79
+   "time_in_market_pct": 65.6,
+   "return_pct": 149.28
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-25",
-   "cagr_pct": -2.9,
+   "until": "2026-11-26",
+   "cagr_pct": -2.8,
    "max_dd_pct": 66.9,
    "mar": -0.04,
    "sharpe": 0.16,
    "hold": {
-    "cagr_pct": 4.9,
+    "cagr_pct": 5.0,
     "max_dd_pct": 66.9,
     "mar": 0.07,
     "sharpe": 0.35,
-    "return_pct": 26.69
+    "return_pct": 26.94
    },
    "trades": 3,
    "win_rate_pct": 66.7,
    "time_in_market_pct": 72.6,
-   "return_pct": -13.37
+   "return_pct": -13.2
   },
   "full": {
    "since": "2018-02-01",
-   "until": "2026-11-25",
-   "cagr_pct": -3.2,
+   "until": "2026-11-26",
+   "cagr_pct": -3.1,
    "max_dd_pct": 77.8,
    "mar": -0.04,
    "sharpe": 0.21,
@@ -134,12 +134,12 @@
     "max_dd_pct": 76.6,
     "mar": 0.31,
     "sharpe": 0.66,
-    "return_pct": 555.41
+    "return_pct": 556.7
    },
    "trades": 8,
    "win_rate_pct": 62.5,
    "time_in_market_pct": 70.8,
-   "return_pct": -24.72
+   "return_pct": -24.58
   }
  },
  "history": {
@@ -208,8 +208,8 @@
    "worst_year_vs_hold": 2020
   },
   "text": {
-   "en": "Since 2018 this rule closed 8 trades and won 5 (63%). A trade lasts about 9 months on average. Its best trade was +25% (July 2024 to October 2024) and its worst \u221225% (October 2025 to September 2026). Without its three best trades, the other 5 together lose 49%. In 2020 it returned +51%; buying and holding Bitcoin returned +302%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 8 operaciones y gan\u00f3 en 5 (63\u00a0%). Una operaci\u00f3n dura en promedio unos 9 meses. La mejor fue +25\u00a0% (julio de 2024 a octubre de 2024) y la peor \u221225\u00a0% (octubre de 2025 a septiembre de 2026). Sin sus tres mejores operaciones, las otras 5 juntas pierden 49\u00a0%. En 2020 rindi\u00f3 +51\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%."
+   "en": "Since 2018 this rule closed 8 trades and won 5 (63%). A trade lasts about 9 months on average. Its best trade was +25% (July 2024 to October 2024) and its worst \u221225% (October 2025 to September 2026). Without its three best trades, the other 5 together lose 49%. In 2020 it returned +51%; buying and holding Bitcoin returned +302%. It buys fear and sells euphoria, the opposite of a trend rule: in long rallies it sells early and waits months for a fear that does not come.",
+   "es": "Desde 2018 esta regla cerr\u00f3 8 operaciones y gan\u00f3 en 5 (63\u00a0%). Una operaci\u00f3n dura en promedio unos 9 meses. La mejor fue +25\u00a0% (julio de 2024 a octubre de 2024) y la peor \u221225\u00a0% (octubre de 2025 a septiembre de 2026). Sin sus tres mejores operaciones, las otras 5 juntas pierden 49\u00a0%. En 2020 rindi\u00f3 +51\u00a0%; comprar y mantener Bitcoin rindi\u00f3 +302\u00a0%. Compra con miedo y vende con euforia, al rev\u00e9s que una regla de tendencia: en las subidas largas vende temprano y espera meses un miedo que no llega."
   }
  },
  "validation": null,

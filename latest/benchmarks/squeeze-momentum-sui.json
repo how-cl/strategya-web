@@ -11,9 +11,9 @@
  "rule": "Long when the squeeze momentum histogram crosses above zero; cash when it crosses below.",
  "credit": "Squeeze Momentum Indicator by LazyBear: https://www.tradingview.com/script/nqQ1DT5a-Squeeze-Momentum-Indicator-LazyBear/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-26T22:54:00Z",
- "decision_bar": "2026-11-25",
- "valid_until_utc": "2026-11-27T00:45:00Z",
+ "generated_at_utc": "2026-11-27T00:05:00Z",
+ "decision_bar": "2026-11-26",
+ "valid_until_utc": "2026-11-28T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-12",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-25",
-   "until": "2026-11-25",
+   "since": "2026-05-26",
+   "until": "2026-11-26",
    "cagr_pct": 1.7,
    "max_dd_pct": 18.7,
    "mar": 0.09,
    "sharpe": 0.29,
    "hold": {
-    "cagr_pct": -58.8,
+    "cagr_pct": -55.1,
     "max_dd_pct": 48.7,
-    "mar": -1.21,
-    "sharpe": -0.74,
-    "return_pct": -36.0
+    "mar": -1.13,
+    "sharpe": -0.63,
+    "return_pct": -33.2
    },
    "trades": 3,
    "win_rate_pct": 33.3,
@@ -45,18 +45,18 @@
    "return_pct": 0.87
   },
   "1y": {
-   "since": "2025-11-25",
-   "until": "2026-11-25",
+   "since": "2025-11-26",
+   "until": "2026-11-26",
    "cagr_pct": -30.8,
    "max_dd_pct": 44.0,
    "mar": -0.7,
    "sharpe": -0.38,
    "hold": {
-    "cagr_pct": -57.3,
+    "cagr_pct": -56.7,
     "max_dd_pct": 65.9,
-    "mar": -0.87,
-    "sharpe": -0.59,
-    "return_pct": -57.31
+    "mar": -0.86,
+    "sharpe": -0.57,
+    "return_pct": -56.69
    },
    "trades": 9,
    "win_rate_pct": 22.2,
@@ -64,39 +64,39 @@
    "return_pct": -30.78
   },
   "2y": {
-   "since": "2024-11-25",
-   "until": "2026-11-25",
-   "cagr_pct": -44.8,
+   "since": "2024-11-26",
+   "until": "2026-11-26",
+   "cagr_pct": -47.2,
    "max_dd_pct": 78.7,
-   "mar": -0.57,
-   "sharpe": -0.61,
+   "mar": -0.6,
+   "sharpe": -0.69,
    "hold": {
-    "cagr_pct": -54.3,
+    "cagr_pct": -56.3,
     "max_dd_pct": 87.7,
-    "mar": -0.62,
-    "sharpe": -0.34,
-    "return_pct": -79.09
+    "mar": -0.64,
+    "sharpe": -0.39,
+    "return_pct": -80.87
    },
    "trades": 19,
    "win_rate_pct": 21.1,
-   "time_in_market_pct": 41.3,
-   "return_pct": -69.49
+   "time_in_market_pct": 41.2,
+   "return_pct": -72.12
   },
   "since_2023": null,
   "since_2022": null,
   "full": {
    "since": "2023-05-03",
-   "until": "2026-11-25",
+   "until": "2026-11-26",
    "cagr_pct": 7.0,
    "max_dd_pct": 78.7,
    "mar": 0.09,
    "sharpe": 0.44,
    "hold": {
-    "cagr_pct": -18.8,
+    "cagr_pct": -18.7,
     "max_dd_pct": 87.7,
     "mar": -0.21,
     "sharpe": 0.29,
-    "return_pct": -52.38
+    "return_pct": -52.3
    },
    "trades": 31,
    "win_rate_pct": 25.8,

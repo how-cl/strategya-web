@@ -11,15 +11,15 @@
  "rule": "Long when the Crypto Fear & Greed Index reads Extreme Fear (25 or below); cash when it reads Extreme Greed (76 or above). The index is published once a day; the rule uses the value already published at each daily close.",
  "credit": "Crypto Fear & Greed Index by Alternative.me, used with attribution: https://alternative.me/crypto/fear-and-greed-index/ (not a TradingView script: this rule is not cross-checked against TradingView)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2020-08-11.",
- "generated_at_utc": "2026-11-26T22:54:00Z",
- "decision_bar": "2026-11-25",
- "valid_until_utc": "2026-11-27T00:45:00Z",
+ "generated_at_utc": "2026-11-27T00:05:00Z",
+ "decision_bar": "2026-11-26",
+ "valid_until_utc": "2026-11-28T00:45:00Z",
  "position": {
   "state": "long",
   "since": "2026-11-07",
   "action": "HOLD",
   "entry_price": 89.82,
-  "open_return_pct": -21.54
+  "open_return_pct": -20.92
  },
  "last_trade": {
   "entry_date": "2025-10-13",
@@ -28,118 +28,118 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-25",
-   "until": "2026-11-25",
-   "cagr_pct": 19.0,
-   "max_dd_pct": 26.9,
-   "mar": 0.71,
-   "sharpe": 0.59,
+   "since": "2026-05-26",
+   "until": "2026-11-26",
+   "cagr_pct": 24.7,
+   "max_dd_pct": 25.7,
+   "mar": 0.96,
+   "sharpe": 0.68,
    "hold": {
-    "cagr_pct": -31.2,
+    "cagr_pct": -27.8,
     "max_dd_pct": 43.6,
-    "mar": -0.71,
-    "sharpe": -0.35,
-    "return_pct": -17.15
+    "mar": -0.64,
+    "sharpe": -0.27,
+    "return_pct": -15.16
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 75.1,
-   "return_pct": 9.15
+   "return_pct": 11.78
   },
   "1y": {
-   "since": "2025-11-25",
-   "until": "2026-11-25",
-   "cagr_pct": -33.2,
+   "since": "2025-11-26",
+   "until": "2026-11-26",
+   "cagr_pct": -34.6,
    "max_dd_pct": 57.6,
-   "mar": -0.58,
-   "sharpe": -0.38,
+   "mar": -0.6,
+   "sharpe": -0.41,
    "hold": {
-    "cagr_pct": -49.3,
+    "cagr_pct": -50.4,
     "max_dd_pct": 57.6,
-    "mar": -0.86,
-    "sharpe": -0.79,
-    "return_pct": -49.29
+    "mar": -0.87,
+    "sharpe": -0.82,
+    "return_pct": -50.34
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 87.4,
-   "return_pct": -33.19
+   "return_pct": -34.57
   },
   "2y": {
-   "since": "2024-11-25",
-   "until": "2026-11-25",
-   "cagr_pct": -24.7,
+   "since": "2024-11-26",
+   "until": "2026-11-26",
+   "cagr_pct": -24.5,
    "max_dd_pct": 70.2,
    "mar": -0.35,
-   "sharpe": -0.19,
+   "sharpe": -0.18,
    "hold": {
-    "cagr_pct": -45.2,
+    "cagr_pct": -44.5,
     "max_dd_pct": 76.3,
-    "mar": -0.59,
-    "sharpe": -0.42,
-    "return_pct": -69.91
+    "mar": -0.58,
+    "sharpe": -0.4,
+    "return_pct": -69.21
    },
    "trades": 2,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 61.6,
-   "return_pct": -43.35
+   "time_in_market_pct": 61.7,
+   "return_pct": -42.9
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-25",
-   "cagr_pct": 65.0,
+   "until": "2026-11-26",
+   "cagr_pct": 65.3,
    "max_dd_pct": 70.2,
    "mar": 0.93,
    "sharpe": 1.06,
    "hold": {
-    "cagr_pct": 65.1,
+    "cagr_pct": 65.3,
     "max_dd_pct": 76.3,
-    "mar": 0.85,
+    "mar": 0.86,
     "sharpe": 1.01,
-    "return_pct": 605.41
+    "return_pct": 611.01
    },
    "trades": 3,
    "win_rate_pct": 66.7,
-   "time_in_market_pct": 65.5,
-   "return_pct": 604.31
+   "time_in_market_pct": 65.6,
+   "return_pct": 609.9
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-25",
-   "cagr_pct": -17.4,
+   "until": "2026-11-26",
+   "cagr_pct": -17.2,
    "max_dd_pct": 94.6,
    "mar": -0.18,
    "sharpe": 0.18,
    "hold": {
-    "cagr_pct": -17.3,
+    "cagr_pct": -17.2,
     "max_dd_pct": 94.6,
     "mar": -0.18,
     "sharpe": 0.26,
-    "return_pct": -60.64
+    "return_pct": -60.33
    },
    "trades": 3,
    "win_rate_pct": 66.7,
    "time_in_market_pct": 72.6,
-   "return_pct": -60.71
+   "return_pct": -60.39
   },
   "full": {
    "since": "2020-08-11",
-   "until": "2026-11-25",
-   "cagr_pct": -15.1,
+   "until": "2026-11-26",
+   "cagr_pct": -15.0,
    "max_dd_pct": 95.9,
    "mar": -0.16,
    "sharpe": 0.22,
    "hold": {
-    "cagr_pct": 62.7,
+    "cagr_pct": 62.9,
     "max_dd_pct": 96.3,
     "mar": 0.65,
     "sharpe": 0.99,
-    "return_pct": 2036.43
+    "return_pct": 2053.4
    },
    "trades": 6,
    "win_rate_pct": 50.0,
    "time_in_market_pct": 62.6,
-   "return_pct": -64.35
+   "return_pct": -64.06
   }
  },
  "history": {
@@ -196,8 +196,8 @@
    "worst_year_vs_hold": 2021
   },
   "text": {
-   "en": "Since 2020 this rule closed 6 trades and won 3 (50%). A trade lasts about 8 months on average. Its best trade was +25% (July 2024 to October 2024) and its worst \u221249% (November 2021 to January 2024). Without its three best trades, the other 3 together lose 71%. In 2025 it returned \u221224%; buying and holding Solana returned \u221234%. In 2021 it returned \u221214%; buying and holding Solana returned +11,178%.",
-   "es": "Desde 2020 esta regla cerr\u00f3 6 operaciones y gan\u00f3 en 3 (50\u00a0%). Una operaci\u00f3n dura en promedio unos 8 meses. La mejor fue +25\u00a0% (julio de 2024 a octubre de 2024) y la peor \u221249\u00a0% (noviembre de 2021 a enero de 2024). Sin sus tres mejores operaciones, las otras 3 juntas pierden 71\u00a0%. En 2025 rindi\u00f3 \u221224\u00a0%; comprar y mantener Solana rindi\u00f3 \u221234\u00a0%. En 2021 rindi\u00f3 \u221214\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%."
+   "en": "Since 2020 this rule closed 6 trades and won 3 (50%). A trade lasts about 8 months on average. Its best trade was +25% (July 2024 to October 2024) and its worst \u221249% (November 2021 to January 2024). Without its three best trades, the other 3 together lose 71%. In 2025 it returned \u221224%; buying and holding Solana returned \u221234%. In 2021 it returned \u221214%; buying and holding Solana returned +11,178%. It buys fear and sells euphoria, the opposite of a trend rule: in long rallies it sells early and waits months for a fear that does not come.",
+   "es": "Desde 2020 esta regla cerr\u00f3 6 operaciones y gan\u00f3 en 3 (50\u00a0%). Una operaci\u00f3n dura en promedio unos 8 meses. La mejor fue +25\u00a0% (julio de 2024 a octubre de 2024) y la peor \u221249\u00a0% (noviembre de 2021 a enero de 2024). Sin sus tres mejores operaciones, las otras 3 juntas pierden 71\u00a0%. En 2025 rindi\u00f3 \u221224\u00a0%; comprar y mantener Solana rindi\u00f3 \u221234\u00a0%. En 2021 rindi\u00f3 \u221214\u00a0%; comprar y mantener Solana rindi\u00f3 +11.178\u00a0%. Compra con miedo y vende con euforia, al rev\u00e9s que una regla de tendencia: en las subidas largas vende temprano y espera meses un miedo que no llega."
   }
  },
  "validation": null,

@@ -11,15 +11,15 @@
  "rule": "Long when the Crypto Fear & Greed Index reads Extreme Fear (25 or below); cash when it reads Extreme Greed (76 or above). The index is published once a day; the rule uses the value already published at each daily close.",
  "credit": "Crypto Fear & Greed Index by Alternative.me, used with attribution: https://alternative.me/crypto/fear-and-greed-index/ (not a TradingView script: this rule is not cross-checked against TradingView)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-02-01.",
- "generated_at_utc": "2026-11-26T22:54:00Z",
- "decision_bar": "2026-11-25",
- "valid_until_utc": "2026-11-27T00:45:00Z",
+ "generated_at_utc": "2026-11-27T00:05:00Z",
+ "decision_bar": "2026-11-26",
+ "valid_until_utc": "2026-11-28T00:45:00Z",
  "position": {
   "state": "long",
   "since": "2026-11-07",
   "action": "HOLD",
   "entry_price": 2240.24,
-  "open_return_pct": -24.44
+  "open_return_pct": -24.57
  },
  "last_trade": {
   "entry_date": "2025-10-13",
@@ -28,65 +28,65 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-25",
-   "until": "2026-11-25",
-   "cagr_pct": -3.4,
+   "since": "2026-05-26",
+   "until": "2026-11-26",
+   "cagr_pct": -0.1,
    "max_dd_pct": 28.3,
-   "mar": -0.12,
-   "sharpe": 0.19,
+   "mar": -0.0,
+   "sharpe": 0.25,
    "hold": {
-    "cagr_pct": -35.6,
+    "cagr_pct": -33.4,
     "max_dd_pct": 41.5,
-    "mar": -0.86,
-    "sharpe": -0.51,
-    "return_pct": -19.89
+    "mar": -0.8,
+    "sharpe": -0.45,
+    "return_pct": -18.51
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 75.1,
-   "return_pct": -1.73
+   "return_pct": -0.04
   },
   "1y": {
-   "since": "2025-11-25",
-   "until": "2026-11-25",
-   "cagr_pct": -29.9,
+   "since": "2025-11-26",
+   "until": "2026-11-26",
+   "cagr_pct": -31.5,
    "max_dd_pct": 53.3,
-   "mar": -0.56,
-   "sharpe": -0.31,
+   "mar": -0.59,
+   "sharpe": -0.35,
    "hold": {
-    "cagr_pct": -42.8,
+    "cagr_pct": -44.2,
     "max_dd_pct": 53.3,
-    "mar": -0.8,
-    "sharpe": -0.62,
-    "return_pct": -42.8
+    "mar": -0.83,
+    "sharpe": -0.66,
+    "return_pct": -44.17
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 87.4,
-   "return_pct": -29.84
+   "return_pct": -31.51
   },
   "2y": {
-   "since": "2024-11-25",
-   "until": "2026-11-25",
+   "since": "2024-11-26",
+   "until": "2026-11-26",
    "cagr_pct": -29.0,
    "max_dd_pct": 64.5,
    "mar": -0.45,
    "sharpe": -0.34,
    "hold": {
-    "cagr_pct": -29.6,
+    "cagr_pct": -28.7,
     "max_dd_pct": 67.6,
-    "mar": -0.44,
-    "sharpe": -0.17,
-    "return_pct": -50.43
+    "mar": -0.43,
+    "sharpe": -0.15,
+    "return_pct": -49.17
    },
    "trades": 2,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 61.6,
-   "return_pct": -49.53
+   "time_in_market_pct": 61.7,
+   "return_pct": -49.61
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-25",
+   "until": "2026-11-26",
    "cagr_pct": -4.6,
    "max_dd_pct": 71.4,
    "mar": -0.06,
@@ -96,16 +96,16 @@
     "max_dd_pct": 67.6,
     "mar": 0.14,
     "sharpe": 0.45,
-    "return_pct": 41.01
+    "return_pct": 40.78
    },
    "trades": 3,
    "win_rate_pct": 33.3,
-   "time_in_market_pct": 65.5,
-   "return_pct": -16.61
+   "time_in_market_pct": 65.6,
+   "return_pct": -16.75
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-25",
+   "until": "2026-11-26",
    "cagr_pct": -23.7,
    "max_dd_pct": 80.3,
    "mar": -0.3,
@@ -115,31 +115,31 @@
     "max_dd_pct": 74.0,
     "mar": -0.2,
     "sharpe": 0.1,
-    "return_pct": -55.05
+    "return_pct": -55.12
    },
    "trades": 3,
    "win_rate_pct": 33.3,
    "time_in_market_pct": 72.6,
-   "return_pct": -73.42
+   "return_pct": -73.46
   },
   "full": {
    "since": "2018-02-01",
-   "until": "2026-11-25",
+   "until": "2026-11-26",
    "cagr_pct": -25.6,
    "max_dd_pct": 94.7,
    "mar": -0.27,
    "sharpe": -0.06,
    "hold": {
-    "cagr_pct": 5.7,
+    "cagr_pct": 5.6,
     "max_dd_pct": 92.0,
     "mar": 0.06,
     "sharpe": 0.49,
-    "return_pct": 62.45
+    "return_pct": 62.18
    },
    "trades": 8,
    "win_rate_pct": 37.5,
    "time_in_market_pct": 70.8,
-   "return_pct": -92.65
+   "return_pct": -92.66
   }
  },
  "history": {
@@ -208,8 +208,8 @@
    "worst_year_vs_hold": 2021
   },
   "text": {
-   "en": "Since 2018 this rule closed 8 trades and won 3 (38%). A trade lasts about 9 months on average. Its best trade was +39% (July 2019 to July 2020) and its worst \u221280% (February 2018 to May 2019). Without its three best trades, the other 5 together lose 94%. In 2021 it returned \u22125%; buying and holding Ethereum returned +399%.",
-   "es": "Desde 2018 esta regla cerr\u00f3 8 operaciones y gan\u00f3 en 3 (38\u00a0%). Una operaci\u00f3n dura en promedio unos 9 meses. La mejor fue +39\u00a0% (julio de 2019 a julio de 2020) y la peor \u221280\u00a0% (febrero de 2018 a mayo de 2019). Sin sus tres mejores operaciones, las otras 5 juntas pierden 94\u00a0%. En 2021 rindi\u00f3 \u22125\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%."
+   "en": "Since 2018 this rule closed 8 trades and won 3 (38%). A trade lasts about 9 months on average. Its best trade was +39% (July 2019 to July 2020) and its worst \u221280% (February 2018 to May 2019). Without its three best trades, the other 5 together lose 94%. In 2021 it returned \u22125%; buying and holding Ethereum returned +399%. It buys fear and sells euphoria, the opposite of a trend rule: in long rallies it sells early and waits months for a fear that does not come.",
+   "es": "Desde 2018 esta regla cerr\u00f3 8 operaciones y gan\u00f3 en 3 (38\u00a0%). Una operaci\u00f3n dura en promedio unos 9 meses. La mejor fue +39\u00a0% (julio de 2019 a julio de 2020) y la peor \u221280\u00a0% (febrero de 2018 a mayo de 2019). Sin sus tres mejores operaciones, las otras 5 juntas pierden 94\u00a0%. En 2021 rindi\u00f3 \u22125\u00a0%; comprar y mantener Ethereum rindi\u00f3 +399\u00a0%. Compra con miedo y vende con euforia, al rev\u00e9s que una regla de tendencia: en las subidas largas vende temprano y espera meses un miedo que no llega."
   }
  },
  "validation": null,
