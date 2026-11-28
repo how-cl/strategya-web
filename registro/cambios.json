@@ -1,0 +1,2500 @@
+{
+ "schema": "strategya.changes/0.1",
+ "generated_at_utc": "2026-11-28T10:59:50Z",
+ "since": "2026-08-30",
+ "sealed_since": "2026-11-20",
+ "note": "Every buy and sell exactly as it was published, before the outcome was known. Never recalculated; losses included. Rows before 2026-11-20 are dated by the public GitHub history; from 2026-11-20 each row is also sealed in the Bitcoin blockchain (OpenTimestamps). The first seal covers the whole history published until that day. Published signals, not executed trades: not real performance and not investment advice.",
+ "products": {
+  "btc-1d": {
+   "name": "BTC 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "BTC"
+   ]
+  },
+  "btc-12h": {
+   "name": "BTC 12H",
+   "kind": "sovereign",
+   "timeframe": "12H",
+   "assets": [
+    "BTC"
+   ]
+  },
+  "eth-1d": {
+   "name": "ETH 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "ETH"
+   ]
+  },
+  "sol-1d": {
+   "name": "SOL 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "SOL"
+   ]
+  },
+  "sol-12h": {
+   "name": "SOL 12H",
+   "kind": "sovereign",
+   "timeframe": "12H",
+   "assets": [
+    "SOL"
+   ]
+  },
+  "sui-1d": {
+   "name": "SUI 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "SUI"
+   ]
+  },
+  "rotation-1d": {
+   "name": "Rotation 1D",
+   "kind": "rotation",
+   "timeframe": "1D",
+   "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "SUI",
+    "PAXG"
+   ]
+  },
+  "rotation-1d-prop": {
+   "name": "Rotation 1D Proportional",
+   "kind": "rotation",
+   "timeframe": "1D",
+   "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "SUI",
+    "PAXG"
+   ]
+  },
+  "btc-gold-12h": {
+   "name": "BTC + Gold 12H",
+   "kind": "rotation",
+   "timeframe": "12H",
+   "assets": [
+    "BTC",
+    "PAXG"
+   ]
+  },
+  "btc-gold-1d": {
+   "name": "BTC + Gold 1D",
+   "kind": "rotation",
+   "timeframe": "1D",
+   "assets": [
+    "BTC",
+    "PAXG"
+   ]
+  },
+  "paxg-12h": {
+   "name": "PAXG 12H",
+   "kind": "sovereign",
+   "timeframe": "12H",
+   "assets": [
+    "PAXG"
+   ]
+  },
+  "paxg-1d": {
+   "name": "PAXG 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "PAXG"
+   ]
+  },
+  "rotation-12h": {
+   "name": "Rotation 12H",
+   "kind": "rotation",
+   "timeframe": "12H",
+   "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "SUI",
+    "PAXG"
+   ]
+  },
+  "tsla-1d": {
+   "name": "TSLA 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "TSLA"
+   ]
+  },
+  "mstr-1d": {
+   "name": "MSTR 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "MSTR"
+   ]
+  },
+  "coin-1d": {
+   "name": "COIN 1D",
+   "kind": "sovereign",
+   "timeframe": "1D",
+   "assets": [
+    "COIN"
+   ]
+  },
+  "rotation-1d-stocks": {
+   "name": "Rotation 1D L +Stocks",
+   "kind": "rotation",
+   "timeframe": "1D",
+   "assets": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "SUI",
+    "PAXG",
+    "MSTR",
+    "TSLA"
+   ]
+  },
+  "rotation-stocks-1d": {
+   "name": "Portfolio 1D Stocks",
+   "kind": "rotation",
+   "timeframe": "1D",
+   "assets": [
+    "MSTR",
+    "TSLA",
+    "GLD"
+   ]
+  }
+ },
+ "excluded": "Long/Short products (preliminary) and products in testing.",
+ "changes": [
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-11-06T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": {
+    "asset": "TSLA",
+    "entry_date": "2026-10-22",
+    "exit_date": "2026-11-05",
+    "days": 14,
+    "return_pct": -0.25,
+    "settled": true,
+    "return_pct_at_signal": -0.25,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-11-06T00:06:24Z",
+   "commit": "dc915331a2f8a69e7fd28b6d10ae7295579867e0",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/dc915331a2f8a69e7fd28b6d10ae7295579867e0",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/dc915331a2f8a69e7fd28b6d10ae7295579867e0/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-11-05T21:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": {
+    "asset": "TSLA",
+    "entry_date": "2026-10-22",
+    "exit_date": "2026-11-05",
+    "days": 14,
+    "return_pct": -0.25,
+    "settled": true,
+    "return_pct_at_signal": -0.25,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-11-05T21:03:44Z",
+   "commit": "3868bd8606db36b15d6b6cd5fbc08b5b7e628686",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/3868bd8606db36b15d6b6cd5fbc08b5b7e628686",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/3868bd8606db36b15d6b6cd5fbc08b5b7e628686/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-11-05T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": null,
+   "published_at_utc": "2026-11-05T00:05:45Z",
+   "commit": "6b16869d32c4e29c84ac5d016b500821eba3b646",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6b16869d32c4e29c84ac5d016b500821eba3b646",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6b16869d32c4e29c84ac5d016b500821eba3b646/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "tsla-1d",
+   "decision_bar": "2026-11-04T21:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 385.28,
+   "closed_trade": {
+    "asset": "TSLA",
+    "entry_date": "2026-10-22",
+    "exit_date": "2026-11-05",
+    "days": 14,
+    "return_pct": -0.25,
+    "settled": true,
+    "return_pct_at_signal": 2.73,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-11-04T21:04:37Z",
+   "commit": "9bfeb98beb9e2266f30545fc1ea37eb17958bc06",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/9bfeb98beb9e2266f30545fc1ea37eb17958bc06",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/9bfeb98beb9e2266f30545fc1ea37eb17958bc06/latest/tsla-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL TSLA 1D v5.0 Modern Core 2026-09-03.pine",
+    "md5": "61367bb98ff726c01ac10b6c078e2955"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-11-04T21:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": null,
+   "published_at_utc": "2026-11-04T21:04:37Z",
+   "commit": "9bfeb98beb9e2266f30545fc1ea37eb17958bc06",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/9bfeb98beb9e2266f30545fc1ea37eb17958bc06",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/9bfeb98beb9e2266f30545fc1ea37eb17958bc06/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-10-24T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": {
+    "asset": "BTC",
+    "entry_date": "2026-10-08",
+    "exit_date": "2026-10-24",
+    "days": 15,
+    "return_pct": -1.79,
+    "settled": true,
+    "return_pct_at_signal": -1.79,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-10-24T00:05:29Z",
+   "commit": "17044064b759e98cfa9643da8dc3b9e2119c9e53",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/17044064b759e98cfa9643da8dc3b9e2119c9e53",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/17044064b759e98cfa9643da8dc3b9e2119c9e53/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "btc-12h",
+   "decision_bar": "2026-10-24T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 81189.43,
+   "closed_trade": {
+    "asset": "BTC",
+    "entry_date": "2026-08-18",
+    "exit_date": "2026-10-24",
+    "days": 66,
+    "return_pct": 25.91,
+    "settled": true,
+    "return_pct_at_signal": 25.91,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-10-24T00:05:29Z",
+   "commit": "17044064b759e98cfa9643da8dc3b9e2119c9e53",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/17044064b759e98cfa9643da8dc3b9e2119c9e53",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/17044064b759e98cfa9643da8dc3b9e2119c9e53/latest/btc-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL BTC 12H Short v4.1 2026-08-30.pine",
+    "md5": "4036e3887d393d4f586e6e1ef6dea0d3"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-23T00:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 374.67,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-23T00:05:00Z",
+   "commit": "fcf06caf562986464c0cc422bef7d5ec1e879968",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/fcf06caf562986464c0cc422bef7d5ec1e879968",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/fcf06caf562986464c0cc422bef7d5ec1e879968/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-10-22T20:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 374.67,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-22T20:02:09Z",
+   "commit": "655809800215728838b64529f25a018e7499c84f",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/655809800215728838b64529f25a018e7499c84f",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/655809800215728838b64529f25a018e7499c84f/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-22T00:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 386.48,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-22T00:04:26Z",
+   "commit": "a9cf9aec2b09ac32458122e3445f7043bf59ba22",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/a9cf9aec2b09ac32458122e3445f7043bf59ba22",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/a9cf9aec2b09ac32458122e3445f7043bf59ba22/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "tsla-1d",
+   "decision_bar": "2026-10-21T20:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 386.48,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-21T20:01:58Z",
+   "commit": "e76c95c4a0f7ee52e5fc1c984ea658672ff516ab",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/e76c95c4a0f7ee52e5fc1c984ea658672ff516ab",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/e76c95c4a0f7ee52e5fc1c984ea658672ff516ab/latest/tsla-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL TSLA 1D v5.0 Modern Core 2026-09-03.pine",
+    "md5": "61367bb98ff726c01ac10b6c078e2955"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-10-21T20:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 386.48,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-21T20:01:58Z",
+   "commit": "e76c95c4a0f7ee52e5fc1c984ea658672ff516ab",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/e76c95c4a0f7ee52e5fc1c984ea658672ff516ab",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/e76c95c4a0f7ee52e5fc1c984ea658672ff516ab/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-19T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-19T00:06:10Z",
+   "commit": "0d59bfa83b56c2f0260b3ff0b6bb7841f44eab6c",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/0d59bfa83b56c2f0260b3ff0b6bb7841f44eab6c",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/0d59bfa83b56c2f0260b3ff0b6bb7841f44eab6c/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-1d-prop",
+   "decision_bar": "2026-10-19T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-19T00:06:10Z",
+   "commit": "0d59bfa83b56c2f0260b3ff0b6bb7841f44eab6c",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/0d59bfa83b56c2f0260b3ff0b6bb7841f44eab6c",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/0d59bfa83b56c2f0260b3ff0b6bb7841f44eab6c/latest/rotation-1d-prop.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.4 Strategy.pro USDT 2026-08-25.pine",
+    "md5": "4778fd3286119255561f38aada88ec57"
+   }
+  },
+  {
+   "slug": "sui-1d",
+   "decision_bar": "2026-10-18T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 0.9764,
+   "closed_trade": {
+    "asset": "SUI",
+    "entry_date": "2026-09-19",
+    "exit_date": "2026-10-18",
+    "days": 29,
+    "return_pct": 19.64,
+    "settled": true,
+    "return_pct_at_signal": 19.65,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-10-18T00:05:08Z",
+   "commit": "6449fabe1887999391ebfa83e111e8883511aa9e",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6449fabe1887999391ebfa83e111e8883511aa9e",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6449fabe1887999391ebfa83e111e8883511aa9e/latest/sui-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
+    "md5": "6b9b741033369002ffa690ad9c8c537f"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-18T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-18T00:05:08Z",
+   "commit": "6449fabe1887999391ebfa83e111e8883511aa9e",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6449fabe1887999391ebfa83e111e8883511aa9e",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6449fabe1887999391ebfa83e111e8883511aa9e/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-1d-prop",
+   "decision_bar": "2026-10-18T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-18T00:05:08Z",
+   "commit": "6449fabe1887999391ebfa83e111e8883511aa9e",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6449fabe1887999391ebfa83e111e8883511aa9e",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6449fabe1887999391ebfa83e111e8883511aa9e/latest/rotation-1d-prop.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.4 Strategy.pro USDT 2026-08-25.pine",
+    "md5": "4778fd3286119255561f38aada88ec57"
+   }
+  },
+  {
+   "slug": "rotation-1d",
+   "decision_bar": "2026-10-18T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": {
+    "asset": "SUI",
+    "entry_date": "2026-09-20",
+    "exit_date": "2026-10-18",
+    "days": 28,
+    "return_pct": 13.64,
+    "settled": true,
+    "return_pct_at_signal": 13.65,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-10-18T00:05:08Z",
+   "commit": "6449fabe1887999391ebfa83e111e8883511aa9e",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6449fabe1887999391ebfa83e111e8883511aa9e",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6449fabe1887999391ebfa83e111e8883511aa9e/latest/rotation-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
+    "md5": "2a2ef862631f531cba99f3a86bf626d1"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-16T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.683
+    },
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.317
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 1.0369,
+   "closed_trade": {
+    "asset": "TSLA",
+    "entry_date": "2026-10-06",
+    "exit_date": "2026-10-15",
+    "days": 9,
+    "return_pct": -5.79,
+    "settled": true,
+    "return_pct_at_signal": -5.79,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-10-16T00:05:11Z",
+   "commit": "bacb23a99ed166d966b8ede29920a8429a5f76a6",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/bacb23a99ed166d966b8ede29920a8429a5f76a6",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/bacb23a99ed166d966b8ede29920a8429a5f76a6/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-10-15T20:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": {
+    "asset": "TSLA",
+    "entry_date": "2026-10-06",
+    "exit_date": "2026-10-15",
+    "days": 9,
+    "return_pct": -5.79,
+    "settled": true,
+    "return_pct_at_signal": -5.79,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-10-15T20:01:55Z",
+   "commit": "ca25ce7314e6fd5201932ac04ef29b074baae063",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/ca25ce7314e6fd5201932ac04ef29b074baae063",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/ca25ce7314e6fd5201932ac04ef29b074baae063/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-15T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.683
+    },
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.317
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 1.0227,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-15T00:04:31Z",
+   "commit": "0975039ebefe71de98c657d3568ac7597e141787",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/0975039ebefe71de98c657d3568ac7597e141787",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/0975039ebefe71de98c657d3568ac7597e141787/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "tsla-1d",
+   "decision_bar": "2026-10-14T20:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 367.35,
+   "closed_trade": {
+    "asset": "TSLA",
+    "entry_date": "2026-10-06",
+    "exit_date": "2026-10-15",
+    "days": 9,
+    "return_pct": -5.79,
+    "settled": true,
+    "return_pct_at_signal": -4.02,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-10-14T20:01:54Z",
+   "commit": "7403a4ba93af6b0d9f8a7de41b7bb83b2f14e786",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/7403a4ba93af6b0d9f8a7de41b7bb83b2f14e786",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/7403a4ba93af6b0d9f8a7de41b7bb83b2f14e786/latest/tsla-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL TSLA 1D v5.0 Modern Core 2026-09-03.pine",
+    "md5": "61367bb98ff726c01ac10b6c078e2955"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-10-14T20:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": null,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-14T20:01:54Z",
+   "commit": "7403a4ba93af6b0d9f8a7de41b7bb83b2f14e786",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/7403a4ba93af6b0d9f8a7de41b7bb83b2f14e786",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/7403a4ba93af6b0d9f8a7de41b7bb83b2f14e786/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-13T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.537
+    },
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.262
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.201
+    }
+   ],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.688
+    },
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.312
+    }
+   ],
+   "reference_price": 378.08,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-13T00:04:23Z",
+   "commit": "9872679396d180f53351ebad0728b47300fdf6b4",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/9872679396d180f53351ebad0728b47300fdf6b4",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/9872679396d180f53351ebad0728b47300fdf6b4/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "btc-1d",
+   "decision_bar": "2026-10-13T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 81850.0,
+   "closed_trade": {
+    "asset": "BTC",
+    "entry_date": "2026-08-20",
+    "exit_date": "2026-10-13",
+    "days": 54,
+    "return_pct": 17.81,
+    "settled": true,
+    "return_pct_at_signal": 17.81,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-10-13T00:04:23Z",
+   "commit": "9872679396d180f53351ebad0728b47300fdf6b4",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/9872679396d180f53351ebad0728b47300fdf6b4",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/9872679396d180f53351ebad0728b47300fdf6b4/latest/btc-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL BTC 1D Short v3.8 2026-08-28.pine",
+    "md5": "5ca30525240bf7ca2c40217fceb5fba0"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-10-12T20:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.518
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.482
+    }
+   ],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 378.08,
+   "closed_trade": {
+    "asset": "MSTR",
+    "entry_date": "2026-08-31",
+    "exit_date": "2026-10-12",
+    "days": 42,
+    "return_pct": 19.08,
+    "settled": true,
+    "return_pct_at_signal": 19.08,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-10-12T20:22:05Z",
+   "commit": "ac9dfbeb2b91a27cc6f25de61d9a50fed1f83c9f",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/ac9dfbeb2b91a27cc6f25de61d9a50fed1f83c9f",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/ac9dfbeb2b91a27cc6f25de61d9a50fed1f83c9f/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-12T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.537
+    },
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.262
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.201
+    }
+   ],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.67
+    },
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.33
+    }
+   ],
+   "reference_price": 382.72,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-12T00:05:05Z",
+   "commit": "e74fc8a61d2722dcc813425f84cdb83f8652e1c5",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/e74fc8a61d2722dcc813425f84cdb83f8652e1c5",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/e74fc8a61d2722dcc813425f84cdb83f8652e1c5/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-stocks-1d",
+   "decision_bar": "2026-10-09T20:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.518
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.482
+    }
+   ],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 382.72,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-09T20:22:16Z",
+   "commit": "330f38d3ec28f3e52bc586b95ccd8941f9a74c98",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/330f38d3ec28f3e52bc586b95ccd8941f9a74c98",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/330f38d3ec28f3e52bc586b95ccd8941f9a74c98/latest/rotation-stocks-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation Stocks 1D v0.2 2026-10-07.pine",
+    "md5": "f755b9c103ddc8c73e89df367155154f"
+   }
+  },
+  {
+   "slug": "mstr-1d",
+   "decision_bar": "2026-10-09T20:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 154.31,
+   "closed_trade": {
+    "asset": "MSTR",
+    "entry_date": "2026-08-31",
+    "exit_date": "2026-10-12",
+    "days": 42,
+    "return_pct": 19.1,
+    "settled": true,
+    "return_pct_at_signal": 19.78,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-10-09T20:01:56Z",
+   "commit": "f215ae86d74ea3312c5158cf12258dc2d8098df1",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/f215ae86d74ea3312c5158cf12258dc2d8098df1",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/f215ae86d74ea3312c5158cf12258dc2d8098df1/latest/mstr-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL MacroMomentum MSTR 1D v4.7 2026-09-03.pine",
+    "md5": "2ac78c144187b7cfc0a9336718e9b9e7"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-09T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.637
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.114
+    },
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.107
+    },
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.073
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.069
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.521
+    },
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.271
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.208
+    }
+   ],
+   "reference_price": 1.0408,
+   "closed_trade": {
+    "asset": "SOL",
+    "entry_date": "2026-09-19",
+    "exit_date": "2026-10-08",
+    "days": 19,
+    "return_pct": 2.97,
+    "settled": true,
+    "return_pct_at_signal": 2.97,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-10-09T00:06:09Z",
+   "commit": "090392c828617a432ff05b61f31a5446c113b226",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/090392c828617a432ff05b61f31a5446c113b226",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/090392c828617a432ff05b61f31a5446c113b226/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-1d-prop",
+   "decision_bar": "2026-10-09T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.424
+    },
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.334
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.242
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 1.0408,
+   "closed_trade": {
+    "asset": "SOL",
+    "entry_date": "2026-09-19",
+    "exit_date": "2026-10-08",
+    "days": 19,
+    "return_pct": 2.97,
+    "settled": true,
+    "return_pct_at_signal": 2.97,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-10-09T00:06:09Z",
+   "commit": "090392c828617a432ff05b61f31a5446c113b226",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/090392c828617a432ff05b61f31a5446c113b226",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/090392c828617a432ff05b61f31a5446c113b226/latest/rotation-1d-prop.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.4 Strategy.pro USDT 2026-08-25.pine",
+    "md5": "4778fd3286119255561f38aada88ec57"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-10-08T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 82506.01,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-08T12:03:42Z",
+   "commit": "bbfc2d578a25a8bf5d9e238890d1d2835d65ea75",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/bbfc2d578a25a8bf5d9e238890d1d2835d65ea75",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/bbfc2d578a25a8bf5d9e238890d1d2835d65ea75/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "sol-1d",
+   "decision_bar": "2026-10-08T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 116.3,
+   "closed_trade": {
+    "asset": "SOL",
+    "entry_date": "2026-09-19",
+    "exit_date": "2026-10-08",
+    "days": 19,
+    "return_pct": 2.97,
+    "settled": true,
+    "return_pct_at_signal": 2.97,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-10-08T00:04:32Z",
+   "commit": "4e4a3de72f456ca39d50631e27dddcb75419bbe4",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/4e4a3de72f456ca39d50631e27dddcb75419bbe4",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/4e4a3de72f456ca39d50631e27dddcb75419bbe4/latest/sol-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SOL 1D Short v3.9 2026-08-25.pine",
+    "md5": "063575ef09167bd7fee1ded0e84e4503"
+   }
+  },
+  {
+   "slug": "eth-1d",
+   "decision_bar": "2026-10-08T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 2574.14,
+   "closed_trade": {
+    "asset": "ETH",
+    "entry_date": "2026-07-05",
+    "exit_date": "2026-10-08",
+    "days": 95,
+    "return_pct": 44.27,
+    "settled": true,
+    "return_pct_at_signal": 44.27,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-10-08T00:04:32Z",
+   "commit": "4e4a3de72f456ca39d50631e27dddcb75419bbe4",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/4e4a3de72f456ca39d50631e27dddcb75419bbe4",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/4e4a3de72f456ca39d50631e27dddcb75419bbe4/latest/eth-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL ETH 1D Short v4.8 2026-08-30.pine",
+    "md5": "c57cd11178bbe74bbf0420c0e564c153"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-10-07T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.491
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.301
+    },
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.133
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.075
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.637
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.117
+    },
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.106
+    },
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 0.071
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.069
+    }
+   ],
+   "reference_price": 1.1781,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-07T00:04:33Z",
+   "commit": "11affa97e61baf2742167ea761a3122656aa9a5e",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/11affa97e61baf2742167ea761a3122656aa9a5e",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/11affa97e61baf2742167ea761a3122656aa9a5e/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "tsla-1d",
+   "decision_bar": "2026-10-05T20:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "TSLA",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 378.9,
+   "closed_trade": null,
+   "published_at_utc": "2026-10-06T00:47:55Z",
+   "commit": "e9218e3e6b57e57bfb75c1a6a5d5b3df792078ef",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/e9218e3e6b57e57bfb75c1a6a5d5b3df792078ef",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/e9218e3e6b57e57bfb75c1a6a5d5b3df792078ef/latest/tsla-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL TSLA 1D v5.0 Modern Core 2026-09-03.pine",
+    "md5": "61367bb98ff726c01ac10b6c078e2955"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-09-20T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.611
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.389
+    }
+   ],
+   "to": [
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.387
+    },
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.271
+    },
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.169
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.165
+    }
+   ],
+   "reference_price": 153.91,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-20T00:04:27Z",
+   "commit": "b6f3513de5525e9f6c1e76b76826b0104ab9a4c4",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/b6f3513de5525e9f6c1e76b76826b0104ab9a4c4",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/b6f3513de5525e9f6c1e76b76826b0104ab9a4c4/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-1d",
+   "decision_bar": "2026-09-20T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.8575,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-20T00:04:27Z",
+   "commit": "b6f3513de5525e9f6c1e76b76826b0104ab9a4c4",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/b6f3513de5525e9f6c1e76b76826b0104ab9a4c4",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/b6f3513de5525e9f6c1e76b76826b0104ab9a4c4/latest/rotation-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
+    "md5": "2a2ef862631f531cba99f3a86bf626d1"
+   }
+  },
+  {
+   "slug": "sui-1d",
+   "decision_bar": "2026-09-19T00:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.8144,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-19T00:04:19Z",
+   "commit": "41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/41e74fd1ba4543e696091ea30aecf40294a8edf3/latest/sui-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
+    "md5": "6b9b741033369002ffa690ad9c8c537f"
+   }
+  },
+  {
+   "slug": "sol-1d",
+   "decision_bar": "2026-09-19T00:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 112.72,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-19T00:04:19Z",
+   "commit": "41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/41e74fd1ba4543e696091ea30aecf40294a8edf3/latest/sol-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SOL 1D Short v3.9 2026-08-25.pine",
+    "md5": "063575ef09167bd7fee1ded0e84e4503"
+   }
+  },
+  {
+   "slug": "rotation-1d",
+   "decision_bar": "2026-09-19T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 112.72,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-19T00:04:19Z",
+   "commit": "41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/41e74fd1ba4543e696091ea30aecf40294a8edf3/latest/rotation-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
+    "md5": "2a2ef862631f531cba99f3a86bf626d1"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-19T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.8144,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-19T00:04:19Z",
+   "commit": "41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/41e74fd1ba4543e696091ea30aecf40294a8edf3",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/41e74fd1ba4543e696091ea30aecf40294a8edf3/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-16T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 76250.0,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-16T12:03:45Z",
+   "commit": "2f396351fad97b5fac59a82b00eb909f0396a181",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/2f396351fad97b5fac59a82b00eb909f0396a181",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/2f396351fad97b5fac59a82b00eb909f0396a181/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-09-15T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.375
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.342
+    },
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.283
+    }
+   ],
+   "to": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.63
+    },
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.37
+    }
+   ],
+   "reference_price": 2515.75,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-15T00:07:27Z",
+   "commit": "e2f2a4632e895fc34ac6ef0bc12bd1ea7459d20b",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/e2f2a4632e895fc34ac6ef0bc12bd1ea7459d20b",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/e2f2a4632e895fc34ac6ef0bc12bd1ea7459d20b/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-1d-stocks",
+   "decision_bar": "2026-09-12T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.592
+    },
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.217
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.132
+    },
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 0.058
+    }
+   ],
+   "to": [
+    {
+     "asset": "MSTR",
+     "side": "long",
+     "weight": 0.369
+    },
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 0.343
+    },
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 0.288
+    }
+   ],
+   "reference_price": 130.98,
+   "closed_trade": {
+    "asset": "SUI",
+    "entry_date": "2026-09-04",
+    "exit_date": "2026-09-11",
+    "days": 7,
+    "return_pct": -7.3,
+    "settled": true,
+    "return_pct_at_signal": -7.3,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-09-12T00:07:40Z",
+   "commit": "6f512bc733777245526595d6e48a7fba94527e0a",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6f512bc733777245526595d6e48a7fba94527e0a",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6f512bc733777245526595d6e48a7fba94527e0a/latest/rotation-1d-stocks.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.9.1 Strategy.pro USDT LS +MSTR+TSLA +Guard 2026-09-05.pine",
+    "md5": "84353e3d225fb9936ad25bb1cfef2f71"
+   }
+  },
+  {
+   "slug": "rotation-1d",
+   "decision_bar": "2026-09-12T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 2516.43,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-12T00:07:40Z",
+   "commit": "6f512bc733777245526595d6e48a7fba94527e0a",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6f512bc733777245526595d6e48a7fba94527e0a",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6f512bc733777245526595d6e48a7fba94527e0a/latest/rotation-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
+    "md5": "2a2ef862631f531cba99f3a86bf626d1"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-12T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 2516.43,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-12T00:07:40Z",
+   "commit": "6f512bc733777245526595d6e48a7fba94527e0a",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6f512bc733777245526595d6e48a7fba94527e0a",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6f512bc733777245526595d6e48a7fba94527e0a/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-11T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 2458.27,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-11T12:06:08Z",
+   "commit": "496db68764989d2cf3e07984501942256ebedd1e",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/496db68764989d2cf3e07984501942256ebedd1e",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/496db68764989d2cf3e07984501942256ebedd1e/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "sui-1d",
+   "decision_bar": "2026-09-11T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 0.7276,
+   "closed_trade": {
+    "asset": "SUI",
+    "entry_date": "2026-09-04",
+    "exit_date": "2026-09-11",
+    "days": 7,
+    "return_pct": -7.3,
+    "settled": true,
+    "return_pct_at_signal": -7.28,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-09-11T00:07:37Z",
+   "commit": "99309fb15c51f82e9658ec6184405af9b355d2be",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/99309fb15c51f82e9658ec6184405af9b355d2be",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/99309fb15c51f82e9658ec6184405af9b355d2be/latest/sui-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
+    "md5": "6b9b741033369002ffa690ad9c8c537f"
+   }
+  },
+  {
+   "slug": "sol-1d",
+   "decision_bar": "2026-09-11T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 98.67,
+   "closed_trade": {
+    "asset": "SOL",
+    "entry_date": "2026-09-04",
+    "exit_date": "2026-09-11",
+    "days": 7,
+    "return_pct": -5.27,
+    "settled": true,
+    "return_pct_at_signal": -5.27,
+    "entry_in_record": true
+   },
+   "published_at_utc": "2026-09-11T00:07:37Z",
+   "commit": "99309fb15c51f82e9658ec6184405af9b355d2be",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/99309fb15c51f82e9658ec6184405af9b355d2be",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/99309fb15c51f82e9658ec6184405af9b355d2be/latest/sol-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SOL 1D Short v3.9 2026-08-25.pine",
+    "md5": "063575ef09167bd7fee1ded0e84e4503"
+   }
+  },
+  {
+   "slug": "paxg-12h",
+   "decision_bar": "2026-09-10T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "PAXG",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 4395.04,
+   "closed_trade": {
+    "asset": "PAXG",
+    "entry_date": "2026-08-05",
+    "exit_date": "2026-09-10",
+    "days": 35,
+    "return_pct": 4.88,
+    "settled": true,
+    "return_pct_at_signal": 4.9,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-09-10T00:07:40Z",
+   "commit": "f9ccaadc96e313599ed08c58b281d65b033d6da2",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/f9ccaadc96e313599ed08c58b281d65b033d6da2",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/f9ccaadc96e313599ed08c58b281d65b033d6da2/latest/paxg-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL PAXG 12H v4.1 2026-08-07.pine",
+    "md5": "b4e43fcb183d970a660c7b4f39872d0c"
+   }
+  },
+  {
+   "slug": "rotation-1d",
+   "decision_bar": "2026-09-09T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.8113,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-09T00:07:28Z",
+   "commit": "9fe66e31828ec1d6fc08962126ec888ad6d8266d",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/9fe66e31828ec1d6fc08962126ec888ad6d8266d",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/9fe66e31828ec1d6fc08962126ec888ad6d8266d/latest/rotation-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
+    "md5": "2a2ef862631f531cba99f3a86bf626d1"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-07T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.8118,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-07T00:06:09Z",
+   "commit": "527ff9b14864c27433532b1b93714f3601be06cc",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/527ff9b14864c27433532b1b93714f3601be06cc",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/527ff9b14864c27433532b1b93714f3601be06cc/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-06T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.805,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-06T12:06:04Z",
+   "commit": "f9b372fc49cb45092c54c67615afe3ea2391935b",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/f9b372fc49cb45092c54c67615afe3ea2391935b",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/f9b372fc49cb45092c54c67615afe3ea2391935b/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-06T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 79831.75,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-06T00:05:55Z",
+   "commit": "c643ce962647b933d1ec5f5cde1587afbe27a0d5",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/c643ce962647b933d1ec5f5cde1587afbe27a0d5",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/c643ce962647b933d1ec5f5cde1587afbe27a0d5/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "e3f1ac3dde7e030ef8d998d902bf9c30"
+   }
+  },
+  {
+   "slug": "sui-1d",
+   "decision_bar": "2026-09-05T00:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.7555,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-05T00:05:57Z",
+   "commit": "7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21/latest/sui-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
+    "md5": "bbf216851d2c1cf8a9e175966ed523fb"
+   }
+  },
+  {
+   "slug": "sol-1d",
+   "decision_bar": "2026-09-05T00:00Z",
+   "action": "BUY",
+   "from": [],
+   "to": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 101.93,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-05T00:05:57Z",
+   "commit": "7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21/latest/sol-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SOL 1D Short v3.9 2026-08-25.pine",
+    "md5": "9646381ca23f29ca9641178c57fc5bd1"
+   }
+  },
+  {
+   "slug": "rotation-1d",
+   "decision_bar": "2026-09-05T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SOL",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 101.93,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-05T00:05:57Z",
+   "commit": "7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21/latest/rotation-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 1D v1.5 Strategy.pro USDT LS 2026-08-28.pine",
+    "md5": "cb7f941d20b2614f00d7fe605563165a"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-05T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.7555,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-05T00:05:57Z",
+   "commit": "7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/7bbe0b178b925dea3c68d7f5cf3a20ae8554ca21/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-04T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 0.7766,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-04T12:05:59Z",
+   "commit": "761bb2c0bf8d6a840bedd6c19741c374b1093246",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/761bb2c0bf8d6a840bedd6c19741c374b1093246",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/761bb2c0bf8d6a840bedd6c19741c374b1093246/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-04T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 81270.37,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-04T00:06:10Z",
+   "commit": "d4b0526217469dc7ce56dd87267a6746bd7ef9f0",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/d4b0526217469dc7ce56dd87267a6746bd7ef9f0",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/d4b0526217469dc7ce56dd87267a6746bd7ef9f0/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-03T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 77948.39,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-03T12:05:53Z",
+   "commit": "ff13d57cf007dce3ad20b6907f8b14a3895ac7cc",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/ff13d57cf007dce3ad20b6907f8b14a3895ac7cc",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/ff13d57cf007dce3ad20b6907f8b14a3895ac7cc/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-03T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 2391.92,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-03T00:05:54Z",
+   "commit": "f22e516f22bfdcc3e6527db7efff3ab714b09d60",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/f22e516f22bfdcc3e6527db7efff3ab714b09d60",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/f22e516f22bfdcc3e6527db7efff3ab714b09d60/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-02T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 76828.76,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-02T12:05:49Z",
+   "commit": "83e5e0a9bf0c684cf66fcd288ddfb3bec28d7363",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/83e5e0a9bf0c684cf66fcd288ddfb3bec28d7363",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/83e5e0a9bf0c684cf66fcd288ddfb3bec28d7363/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-02T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 2418.57,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-02T00:06:04Z",
+   "commit": "84694eb631375901584be2ff52627344d9d40698",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/84694eb631375901584be2ff52627344d9d40698",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/84694eb631375901584be2ff52627344d9d40698/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "sui-1d",
+   "decision_bar": "2026-09-01T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "SUI",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 0.727,
+   "closed_trade": {
+    "asset": "SUI",
+    "entry_date": "2026-08-21",
+    "exit_date": "2026-08-31",
+    "days": 10,
+    "return_pct": -3.26,
+    "settled": true,
+    "return_pct_at_signal": -3.26,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-09-01T19:27:19Z",
+   "commit": "921d51c35b3d87e84d09a81087495194915f5032",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/921d51c35b3d87e84d09a81087495194915f5032",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/921d51c35b3d87e84d09a81087495194915f5032/latest/sui-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL SUI 1D Short v3.5 2026-08-30.pine",
+    "md5": "bbf216851d2c1cf8a9e175966ed523fb"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-09-01T00:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 78581.29,
+   "closed_trade": null,
+   "published_at_utc": "2026-09-01T00:17:11Z",
+   "commit": "af11cb5b8ac2587b7b94aeef166068b4bebb3333",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/af11cb5b8ac2587b7b94aeef166068b4bebb3333",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/af11cb5b8ac2587b7b94aeef166068b4bebb3333/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  },
+  {
+   "slug": "paxg-1d",
+   "decision_bar": "2026-09-01T00:00Z",
+   "action": "SELL",
+   "from": [
+    {
+     "asset": "PAXG",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [],
+   "reference_price": 4451.13,
+   "closed_trade": {
+    "asset": "PAXG",
+    "entry_date": "2026-08-20",
+    "exit_date": "2026-08-31",
+    "days": 11,
+    "return_pct": -2.2,
+    "settled": true,
+    "return_pct_at_signal": -2.2,
+    "entry_in_record": false
+   },
+   "published_at_utc": "2026-09-01T19:27:19Z",
+   "commit": "921d51c35b3d87e84d09a81087495194915f5032",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/921d51c35b3d87e84d09a81087495194915f5032",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/921d51c35b3d87e84d09a81087495194915f5032/latest/paxg-1d.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL PAXG 1D from-2023 v4.1 2026-08-07.pine",
+    "md5": "02597d3888fb1cfb1e5686afb78d6706"
+   }
+  },
+  {
+   "slug": "rotation-12h",
+   "decision_bar": "2026-08-31T12:00Z",
+   "action": "BUY",
+   "from": [
+    {
+     "asset": "ETH",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "to": [
+    {
+     "asset": "BTC",
+     "side": "long",
+     "weight": 1.0
+    }
+   ],
+   "reference_price": 78315.43,
+   "closed_trade": null,
+   "published_at_utc": "2026-08-31T18:13:19Z",
+   "commit": "6310bab179bb6c5cf858599a804fdbd00f536e9e",
+   "commit_url": "https://github.com/how-cl/strategya-web/commit/6310bab179bb6c5cf858599a804fdbd00f536e9e",
+   "file_url": "https://raw.githubusercontent.com/how-cl/strategya-web/6310bab179bb6c5cf858599a804fdbd00f536e9e/latest/rotation-12h.signal.json",
+   "proof": "github",
+   "seal": null,
+   "strategy": {
+    "file": "EVOL Rotation 12H v0.5 Strategy.pro USDT LS 2026-08-24.pine",
+    "md5": "b5cea50750735c62c2138cddb488f1f2"
+   }
+  }
+ ],
+ "open": []
+}
