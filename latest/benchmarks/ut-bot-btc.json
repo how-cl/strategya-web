@@ -11,9 +11,9 @@
  "rule": "Long on the UT Bot buy signal (ATR 10, key value 1); cash on its sell signal.",
  "credit": "UT Bot Alerts by QuantNomad, open source on TradingView: https://www.tradingview.com/script/n8ss8BID-UT-Bot-Alerts/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-27T00:05:00Z",
- "decision_bar": "2026-11-26",
- "valid_until_utc": "2026-11-28T00:45:00Z",
+ "generated_at_utc": "2026-11-28T00:05:00Z",
+ "decision_bar": "2026-11-27",
+ "valid_until_utc": "2026-11-29T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-05",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-26",
-   "until": "2026-11-26",
+   "since": "2026-05-27",
+   "until": "2026-11-27",
    "cagr_pct": 10.7,
    "max_dd_pct": 15.9,
    "mar": 0.67,
    "sharpe": 0.52,
    "hold": {
-    "cagr_pct": -36.1,
+    "cagr_pct": -35.0,
     "max_dd_pct": 31.9,
-    "mar": -1.13,
-    "sharpe": -0.92,
-    "return_pct": -20.22
+    "mar": -1.1,
+    "sharpe": -0.88,
+    "return_pct": -19.51
    },
    "trades": 9,
    "win_rate_pct": 33.3,
@@ -45,37 +45,37 @@
    "return_pct": 5.27
   },
   "1y": {
-   "since": "2025-11-26",
-   "until": "2026-11-26",
-   "cagr_pct": -14.0,
+   "since": "2025-11-27",
+   "until": "2026-11-27",
+   "cagr_pct": -14.7,
    "max_dd_pct": 25.0,
-   "mar": -0.56,
-   "sharpe": -0.42,
+   "mar": -0.59,
+   "sharpe": -0.45,
    "hold": {
-    "cagr_pct": -33.1,
+    "cagr_pct": -34.4,
     "max_dd_pct": 39.5,
-    "mar": -0.84,
-    "sharpe": -0.69,
-    "return_pct": -33.05
+    "mar": -0.87,
+    "sharpe": -0.74,
+    "return_pct": -34.39
    },
    "trades": 21,
    "win_rate_pct": 33.3,
    "time_in_market_pct": 43.4,
-   "return_pct": -13.95
+   "return_pct": -14.67
   },
   "2y": {
-   "since": "2024-11-26",
-   "until": "2026-11-26",
+   "since": "2024-11-27",
+   "until": "2026-11-27",
    "cagr_pct": 1.6,
    "max_dd_pct": 30.8,
    "mar": 0.05,
    "sharpe": 0.2,
    "hold": {
-    "cagr_pct": -18.9,
+    "cagr_pct": -21.0,
     "max_dd_pct": 53.0,
-    "mar": -0.36,
-    "sharpe": -0.27,
-    "return_pct": -34.13
+    "mar": -0.4,
+    "sharpe": -0.33,
+    "return_pct": -37.49
    },
    "trades": 38,
    "win_rate_pct": 39.5,
@@ -84,36 +84,36 @@
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 27.3,
    "max_dd_pct": 30.8,
    "mar": 0.88,
    "sharpe": 0.91,
    "hold": {
-    "cagr_pct": 39.3,
+    "cagr_pct": 38.9,
     "max_dd_pct": 53.0,
-    "mar": 0.74,
-    "sharpe": 0.95,
-    "return_pct": 264.55
+    "mar": 0.73,
+    "sharpe": 0.94,
+    "return_pct": 260.62
    },
    "trades": 76,
    "win_rate_pct": 36.8,
-   "time_in_market_pct": 52.2,
+   "time_in_market_pct": 52.1,
    "return_pct": 156.3
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 6.4,
    "max_dd_pct": 52.6,
    "mar": 0.12,
    "sharpe": 0.35,
    "hold": {
-    "cagr_pct": 5.0,
+    "cagr_pct": 4.8,
     "max_dd_pct": 66.9,
     "mar": 0.07,
-    "sharpe": 0.35,
-    "return_pct": 26.94
+    "sharpe": 0.34,
+    "return_pct": 25.57
    },
    "trades": 96,
    "win_rate_pct": 34.4,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 19.3,
    "max_dd_pct": 56.4,
    "mar": 0.34,
    "sharpe": 0.62,
    "hold": {
-    "cagr_pct": 18.5,
+    "cagr_pct": 18.3,
     "max_dd_pct": 81.2,
     "mar": 0.23,
     "sharpe": 0.59,
-    "return_pct": 352.74
+    "return_pct": 347.86
    },
    "trades": 174,
    "win_rate_pct": 37.4,

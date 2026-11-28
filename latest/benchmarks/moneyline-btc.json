@@ -11,9 +11,9 @@
  "rule": "Long when Community MoneyLine (ATR 7, depth 3.5, Heikin Ashi) flips Bullish; cash when it flips Bearish.",
  "credit": "Community MoneyLine by rafstar_kaczmarek, open source on TradingView: https://www.tradingview.com/script/8PKjTIwv-Community-MoneyLine/",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-27T00:05:00Z",
- "decision_bar": "2026-11-26",
- "valid_until_utc": "2026-11-28T00:45:00Z",
+ "generated_at_utc": "2026-11-28T00:05:00Z",
+ "decision_bar": "2026-11-27",
+ "valid_until_utc": "2026-11-29T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-10-29",
@@ -26,18 +26,18 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-26",
-   "until": "2026-11-26",
+   "since": "2026-05-27",
+   "until": "2026-11-27",
    "cagr_pct": 36.4,
    "max_dd_pct": 10.1,
    "mar": 3.63,
    "sharpe": 1.25,
    "hold": {
-    "cagr_pct": -36.1,
+    "cagr_pct": -35.0,
     "max_dd_pct": 31.9,
-    "mar": -1.13,
-    "sharpe": -0.92,
-    "return_pct": -20.22
+    "mar": -1.1,
+    "sharpe": -0.88,
+    "return_pct": -19.51
    },
    "trades": 1,
    "win_rate_pct": 100.0,
@@ -45,18 +45,18 @@
    "return_pct": 16.95
   },
   "1y": {
-   "since": "2025-11-26",
-   "until": "2026-11-26",
+   "since": "2025-11-27",
+   "until": "2026-11-27",
    "cagr_pct": 2.1,
    "max_dd_pct": 18.9,
    "mar": 0.11,
    "sharpe": 0.21,
    "hold": {
-    "cagr_pct": -33.1,
+    "cagr_pct": -34.4,
     "max_dd_pct": 39.5,
-    "mar": -0.84,
-    "sharpe": -0.69,
-    "return_pct": -33.05
+    "mar": -0.87,
+    "sharpe": -0.74,
+    "return_pct": -34.39
    },
    "trades": 4,
    "win_rate_pct": 50.0,
@@ -64,37 +64,37 @@
    "return_pct": 2.11
   },
   "2y": {
-   "since": "2024-11-26",
-   "until": "2026-11-26",
-   "cagr_pct": -4.0,
+   "since": "2024-11-27",
+   "until": "2026-11-27",
+   "cagr_pct": -6.0,
    "max_dd_pct": 35.6,
-   "mar": -0.11,
-   "sharpe": -0.04,
+   "mar": -0.17,
+   "sharpe": -0.12,
    "hold": {
-    "cagr_pct": -18.9,
+    "cagr_pct": -21.0,
     "max_dd_pct": 53.0,
-    "mar": -0.36,
-    "sharpe": -0.27,
-    "return_pct": -34.13
+    "mar": -0.4,
+    "sharpe": -0.33,
+    "return_pct": -37.49
    },
    "trades": 8,
    "win_rate_pct": 37.5,
-   "time_in_market_pct": 48.2,
-   "return_pct": -7.83
+   "time_in_market_pct": 48.0,
+   "return_pct": -11.57
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 24.1,
    "max_dd_pct": 35.6,
    "mar": 0.68,
    "sharpe": 0.81,
    "hold": {
-    "cagr_pct": 39.3,
+    "cagr_pct": 38.9,
     "max_dd_pct": 53.0,
-    "mar": 0.74,
-    "sharpe": 0.95,
-    "return_pct": 264.55
+    "mar": 0.73,
+    "sharpe": 0.94,
+    "return_pct": 260.62
    },
    "trades": 16,
    "win_rate_pct": 43.8,
@@ -103,17 +103,17 @@
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 2.3,
    "max_dd_pct": 53.1,
    "mar": 0.04,
    "sharpe": 0.23,
    "hold": {
-    "cagr_pct": 5.0,
+    "cagr_pct": 4.8,
     "max_dd_pct": 66.9,
     "mar": 0.07,
-    "sharpe": 0.35,
-    "return_pct": 26.94
+    "sharpe": 0.34,
+    "return_pct": 25.57
    },
    "trades": 22,
    "win_rate_pct": 36.4,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 30.4,
    "max_dd_pct": 60.0,
    "mar": 0.51,
    "sharpe": 0.85,
    "hold": {
-    "cagr_pct": 18.5,
+    "cagr_pct": 18.3,
     "max_dd_pct": 81.2,
     "mar": 0.23,
     "sharpe": 0.59,
-    "return_pct": 352.74
+    "return_pct": 347.86
    },
    "trades": 35,
    "win_rate_pct": 42.9,

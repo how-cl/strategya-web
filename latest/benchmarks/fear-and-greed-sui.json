@@ -11,15 +11,15 @@
  "rule": "Long when the Crypto Fear & Greed Index reads Extreme Fear (25 or below); cash when it reads Extreme Greed (76 or above). The index is published once a day; the rule uses the value already published at each daily close.",
  "credit": "Crypto Fear & Greed Index by Alternative.me, used with attribution: https://alternative.me/crypto/fear-and-greed-index/ (not a TradingView script: this rule is not cross-checked against TradingView)",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2023-05-03.",
- "generated_at_utc": "2026-11-27T00:05:00Z",
- "decision_bar": "2026-11-26",
- "valid_until_utc": "2026-11-28T00:45:00Z",
+ "generated_at_utc": "2026-11-28T00:05:00Z",
+ "decision_bar": "2026-11-27",
+ "valid_until_utc": "2026-11-29T00:45:00Z",
  "position": {
   "state": "long",
   "since": "2026-11-07",
   "action": "HOLD",
   "entry_price": 0.8568,
-  "open_return_pct": -21.98
+  "open_return_pct": -21.41
  },
  "last_trade": {
   "entry_date": "2025-10-13",
@@ -28,82 +28,82 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-26",
-   "until": "2026-11-26",
-   "cagr_pct": -36.3,
-   "max_dd_pct": 34.9,
-   "mar": -1.04,
-   "sharpe": -0.39,
+   "since": "2026-05-27",
+   "until": "2026-11-27",
+   "cagr_pct": -29.9,
+   "max_dd_pct": 32.1,
+   "mar": -0.93,
+   "sharpe": -0.24,
    "hold": {
-    "cagr_pct": -55.1,
+    "cagr_pct": -50.5,
     "max_dd_pct": 48.7,
-    "mar": -1.13,
-    "sharpe": -0.63,
-    "return_pct": -33.2
+    "mar": -1.04,
+    "sharpe": -0.51,
+    "return_pct": -29.85
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 75.1,
-   "return_pct": -20.34
+   "return_pct": -16.36
   },
   "1y": {
-   "since": "2025-11-26",
-   "until": "2026-11-26",
-   "cagr_pct": -48.4,
+   "since": "2025-11-27",
+   "until": "2026-11-27",
+   "cagr_pct": -48.0,
    "max_dd_pct": 65.8,
-   "mar": -0.74,
-   "sharpe": -0.46,
+   "mar": -0.73,
+   "sharpe": -0.45,
    "hold": {
-    "cagr_pct": -56.7,
+    "cagr_pct": -56.4,
     "max_dd_pct": 65.9,
     "mar": -0.86,
-    "sharpe": -0.57,
-    "return_pct": -56.69
+    "sharpe": -0.56,
+    "return_pct": -56.36
    },
    "trades": 0,
    "win_rate_pct": null,
    "time_in_market_pct": 87.4,
-   "return_pct": -48.35
+   "return_pct": -47.96
   },
   "2y": {
-   "since": "2024-11-26",
-   "until": "2026-11-26",
-   "cagr_pct": -41.5,
+   "since": "2024-11-27",
+   "until": "2026-11-27",
+   "cagr_pct": -41.3,
    "max_dd_pct": 79.9,
    "mar": -0.52,
    "sharpe": -0.37,
    "hold": {
-    "cagr_pct": -56.3,
+    "cagr_pct": -55.7,
     "max_dd_pct": 87.7,
     "mar": -0.64,
-    "sharpe": -0.39,
-    "return_pct": -80.87
+    "sharpe": -0.37,
+    "return_pct": -80.39
    },
    "trades": 2,
    "win_rate_pct": 50.0,
-   "time_in_market_pct": 61.7,
-   "return_pct": -65.73
+   "time_in_market_pct": 61.8,
+   "return_pct": -65.48
   },
   "since_2023": null,
   "since_2022": null,
   "full": {
    "since": "2023-05-03",
-   "until": "2026-11-26",
-   "cagr_pct": -1.4,
+   "until": "2026-11-27",
+   "cagr_pct": -1.2,
    "max_dd_pct": 79.9,
-   "mar": -0.02,
+   "mar": -0.01,
    "sharpe": 0.3,
    "hold": {
-    "cagr_pct": -18.7,
+    "cagr_pct": -18.6,
     "max_dd_pct": 87.7,
     "mar": -0.21,
-    "sharpe": 0.29,
-    "return_pct": -52.3
+    "sharpe": 0.3,
+    "return_pct": -51.95
    },
    "trades": 3,
    "win_rate_pct": 66.7,
-   "time_in_market_pct": 43.0,
-   "return_pct": -4.84
+   "time_in_market_pct": 43.1,
+   "return_pct": -4.14
   }
  },
  "history": null,

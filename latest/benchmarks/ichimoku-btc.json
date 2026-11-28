@@ -11,9 +11,9 @@
  "rule": "Long when price closes above the cloud and Tenkan is above Kijun (9, 26, 52); cash when price closes below the cloud.",
  "credit": "Classic Ichimoku Kinko Hyo, 9 / 26 / 52, displacement 26",
  "conditions": "Long only, 100% of equity, 0.1% commission per side, no slippage, fills at next open, default settings, trading from 2018-01-01.",
- "generated_at_utc": "2026-11-27T00:05:00Z",
- "decision_bar": "2026-11-26",
- "valid_until_utc": "2026-11-28T00:45:00Z",
+ "generated_at_utc": "2026-11-28T00:05:00Z",
+ "decision_bar": "2026-11-27",
+ "valid_until_utc": "2026-11-29T00:45:00Z",
  "position": {
   "state": "cash",
   "since": "2026-11-05",
@@ -26,37 +26,37 @@
  },
  "kpis_by_window": {
   "6m": {
-   "since": "2026-05-26",
-   "until": "2026-11-26",
-   "cagr_pct": 12.6,
+   "since": "2026-05-27",
+   "until": "2026-11-27",
+   "cagr_pct": 17.1,
    "max_dd_pct": 12.2,
-   "mar": 1.03,
-   "sharpe": 0.57,
+   "mar": 1.4,
+   "sharpe": 0.72,
    "hold": {
-    "cagr_pct": -36.1,
+    "cagr_pct": -35.0,
     "max_dd_pct": 31.9,
-    "mar": -1.13,
-    "sharpe": -0.92,
-    "return_pct": -20.22
+    "mar": -1.1,
+    "sharpe": -0.88,
+    "return_pct": -19.51
    },
    "trades": 1,
    "win_rate_pct": 100.0,
-   "time_in_market_pct": 45.4,
-   "return_pct": 6.16
+   "time_in_market_pct": 44.9,
+   "return_pct": 8.27
   },
   "1y": {
-   "since": "2025-11-26",
-   "until": "2026-11-26",
+   "since": "2025-11-27",
+   "until": "2026-11-27",
    "cagr_pct": -4.0,
    "max_dd_pct": 12.5,
    "mar": -0.32,
    "sharpe": -0.07,
    "hold": {
-    "cagr_pct": -33.1,
+    "cagr_pct": -34.4,
     "max_dd_pct": 39.5,
-    "mar": -0.84,
-    "sharpe": -0.69,
-    "return_pct": -33.05
+    "mar": -0.87,
+    "sharpe": -0.74,
+    "return_pct": -34.39
    },
    "trades": 3,
    "win_rate_pct": 33.3,
@@ -64,56 +64,56 @@
    "return_pct": -3.96
   },
   "2y": {
-   "since": "2024-11-26",
-   "until": "2026-11-26",
-   "cagr_pct": 2.4,
+   "since": "2024-11-27",
+   "until": "2026-11-27",
+   "cagr_pct": 0.3,
    "max_dd_pct": 31.7,
-   "mar": 0.08,
-   "sharpe": 0.22,
+   "mar": 0.01,
+   "sharpe": 0.14,
    "hold": {
-    "cagr_pct": -18.9,
+    "cagr_pct": -21.0,
     "max_dd_pct": 53.0,
-    "mar": -0.36,
-    "sharpe": -0.27,
-    "return_pct": -34.13
+    "mar": -0.4,
+    "sharpe": -0.33,
+    "return_pct": -37.49
    },
    "trades": 6,
    "win_rate_pct": 33.3,
-   "time_in_market_pct": 46.2,
-   "return_pct": 4.91
+   "time_in_market_pct": 46.1,
+   "return_pct": 0.65
   },
   "since_2023": {
    "since": "2023-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 21.9,
    "max_dd_pct": 34.6,
    "mar": 0.63,
    "sharpe": 0.76,
    "hold": {
-    "cagr_pct": 39.3,
+    "cagr_pct": 38.9,
     "max_dd_pct": 53.0,
-    "mar": 0.74,
-    "sharpe": 0.95,
-    "return_pct": 264.55
+    "mar": 0.73,
+    "sharpe": 0.94,
+    "return_pct": 260.62
    },
    "trades": 14,
    "win_rate_pct": 42.9,
-   "time_in_market_pct": 58.6,
+   "time_in_market_pct": 58.5,
    "return_pct": 116.56
   },
   "since_2022": {
    "since": "2022-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 12.6,
    "max_dd_pct": 37.3,
    "mar": 0.34,
    "sharpe": 0.54,
    "hold": {
-    "cagr_pct": 5.0,
+    "cagr_pct": 4.8,
     "max_dd_pct": 66.9,
     "mar": 0.07,
-    "sharpe": 0.35,
-    "return_pct": 26.94
+    "sharpe": 0.34,
+    "return_pct": 25.57
    },
    "trades": 16,
    "win_rate_pct": 37.5,
@@ -122,17 +122,17 @@
   },
   "full": {
    "since": "2018-01-01",
-   "until": "2026-11-26",
+   "until": "2026-11-27",
    "cagr_pct": 34.1,
    "max_dd_pct": 51.1,
    "mar": 0.67,
    "sharpe": 0.91,
    "hold": {
-    "cagr_pct": 18.5,
+    "cagr_pct": 18.3,
     "max_dd_pct": 81.2,
     "mar": 0.23,
     "sharpe": 0.59,
-    "return_pct": 352.74
+    "return_pct": 347.86
    },
    "trades": 28,
    "win_rate_pct": 39.3,
